@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Copernico", "Copernico\Cope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{560C4CC6-FDA4-4149-863B-03AC8802D7A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocios", "Negocios\Negocios.csproj", "{262862DA-35C6-451B-8374-CC044CB0F0C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vistas", "Vistas\Vistas.csproj", "{5F34CCE5-18AF-4B93-96CE-59834D17037E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{560C4CC6-FDA4-4149-863B-03AC8802D7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{560C4CC6-FDA4-4149-863B-03AC8802D7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{560C4CC6-FDA4-4149-863B-03AC8802D7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262862DA-35C6-451B-8374-CC044CB0F0C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262862DA-35C6-451B-8374-CC044CB0F0C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262862DA-35C6-451B-8374-CC044CB0F0C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262862DA-35C6-451B-8374-CC044CB0F0C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F34CCE5-18AF-4B93-96CE-59834D17037E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F34CCE5-18AF-4B93-96CE-59834D17037E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F34CCE5-18AF-4B93-96CE-59834D17037E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F34CCE5-18AF-4B93-96CE-59834D17037E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
