@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    public class Class1
+    public class Conexion
     {
+
     }
 }
