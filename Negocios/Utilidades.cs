@@ -8,5 +8,6 @@ namespace Negocios
 {
     public class Utilidades
     {
+
     }
 }
