@@ -73,6 +73,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Imagenes\" />
     <Folder Include="Informes\" />
   </ItemGroup>
   <ItemGroup>
