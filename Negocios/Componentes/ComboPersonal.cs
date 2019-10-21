@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Negocios.Componentes
 {
-    public partial class ComboPersonal : UserControl
+    public partial class ComboPersonal : Guna.UI.WinForms.GunaComboBox
     {
         public ComboPersonal()
         {

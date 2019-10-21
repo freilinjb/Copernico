@@ -28,50 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dataViewManager1 = new System.Data.DataViewManager();
-            this.gunaContextMenuStrip1 = new Guna.UI.WinForms.GunaContextMenuStrip();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dfadfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fdsafsdfasdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataViewManager1
+            // menuStrip1
             // 
-            this.dataViewManager1.DataViewSettingCollectionString = "";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dfadfToolStripMenuItem,
+            this.fdsafsdfasdfToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // gunaContextMenuStrip1
+            // dfadfToolStripMenuItem
             // 
-            this.gunaContextMenuStrip1.Name = "gunaContextMenuStrip1";
-            this.gunaContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaContextMenuStrip1.RenderStyle.ColorTable = null;
-            this.gunaContextMenuStrip1.RenderStyle.RoundedEdges = true;
-            this.gunaContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.gunaContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.gunaContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.gunaContextMenuStrip1.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
-            this.gunaContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.dfadfToolStripMenuItem.Name = "dfadfToolStripMenuItem";
+            this.dfadfToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.dfadfToolStripMenuItem.Text = "dfadf";
             // 
-            // gunaDragControl1
+            // fdsafsdfasdfToolStripMenuItem
             // 
-            this.gunaDragControl1.TargetControl = null;
+            this.fdsafsdfasdfToolStripMenuItem.Name = "fdsafsdfasdfToolStripMenuItem";
+            this.fdsafsdfasdfToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
+            this.fdsafsdfasdfToolStripMenuItem.Text = "fdsafsdfasdf";
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.KeyPreview = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Data.DataViewManager dataViewManager1;
-        private Guna.UI.WinForms.GunaContextMenuStrip gunaContextMenuStrip1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dfadfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fdsafsdfasdfToolStripMenuItem;
     }
 }

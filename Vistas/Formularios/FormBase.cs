@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class MenuPrincipal : Form
+    public partial class FormBase : Form
     {
-        public MenuPrincipal()
+        public FormBase()
         {
             InitializeComponent();
-        }
-
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-            Centro instancia = Centro.ObtenerInstancia();
-            instancia.Show();
         }
     }
 }
