@@ -1,6 +1,6 @@
-﻿namespace Vistas.Formularios
+﻿namespace Vistas.Informes
 {
-    partial class FormBase
+    partial class Informe
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // FormBase
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(137, 130);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // Informe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormBase";
-            this.Text = "FormBase";
-            this.Load += new System.EventHandler(this.FormBase_Load);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "Informe";
+            this.Text = "Formulario";
+            this.Load += new System.EventHandler(this.Informe_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

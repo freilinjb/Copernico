@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vistas.Formularios
+namespace Vistas.Informes
 {
-    public partial class FormBase : Form
+    public partial class Informe : Form
     {
-        public FormBase()
+        public Informe()
         {
             InitializeComponent();
         }
 
-        private void FormBase_Load(object sender, EventArgs e)
+        private void Informe_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();

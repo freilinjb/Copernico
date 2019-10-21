@@ -31,6 +31,7 @@
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.comboPersonal1 = new Negocios.Componentes.ComboPersonal();
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // gunaTextBox1
@@ -91,6 +92,14 @@
             this.textPersonal1.Text = "textPersonal1";
             this.textPersonal1.Validar = false;
             // 
+            // reportViewer1
+            // 
+            //this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            //this.reportViewer1.Name = "ReportViewer";
+            ////this.reportViewer1.ServerReport.BearerToken = null;
+            //this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            //this.reportViewer1.TabIndex = 0;
+            // 
             // Centro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,5 +119,6 @@
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Negocios.Componentes.TextPersonal textPersonal1;
         private Negocios.Componentes.ComboPersonal comboPersonal1;
+        //private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
