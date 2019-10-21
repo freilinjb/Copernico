@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.comboPersonal1 = new Negocios.Componentes.ComboPersonal();
+            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.SuspendLayout();
             // 
             // gunaTextBox1
@@ -48,26 +48,6 @@
             this.gunaTextBox1.Size = new System.Drawing.Size(160, 30);
             this.gunaTextBox1.TabIndex = 0;
             this.gunaTextBox1.Text = "gunaTextBox1";
-            // 
-            // textPersonal1
-            // 
-            this.textPersonal1.BaseColor = System.Drawing.Color.White;
-            this.textPersonal1.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textPersonal1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textPersonal1.Limpiar = false;
-            this.textPersonal1.Location = new System.Drawing.Point(283, 166);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.PasswordChar = '\0';
-            this.textPersonal1.Size = new System.Drawing.Size(160, 30);
-            this.textPersonal1.TabIndex = 1;
-            this.textPersonal1.Text = "textPersonal1";
-            this.textPersonal1.Validar = false;
             // 
             // comboPersonal1
             // 
@@ -90,6 +70,26 @@
             this.comboPersonal1.Size = new System.Drawing.Size(121, 26);
             this.comboPersonal1.TabIndex = 2;
             this.comboPersonal1.Validar = false;
+            // 
+            // textPersonal1
+            // 
+            this.textPersonal1.BaseColor = System.Drawing.Color.White;
+            this.textPersonal1.BorderColor = System.Drawing.Color.Silver;
+            this.textPersonal1.Correo = false;
+            this.textPersonal1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal1.FocusedBaseColor = System.Drawing.Color.White;
+            this.textPersonal1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.textPersonal1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.textPersonal1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textPersonal1.Limpiar = false;
+            this.textPersonal1.Location = new System.Drawing.Point(283, 166);
+            this.textPersonal1.Name = "textPersonal1";
+            this.textPersonal1.PasswordChar = '\0';
+            this.textPersonal1.Size = new System.Drawing.Size(160, 30);
+            this.textPersonal1.TabIndex = 1;
+            this.textPersonal1.Text = "textPersonal1";
+            this.textPersonal1.Validar = false;
             // 
             // Centro
             // 
