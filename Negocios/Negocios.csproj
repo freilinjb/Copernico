@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -44,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\ComboPersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\ComboPersonal.Designer.cs">
+      <DependentUpon>ComboPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\TextPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\TextPersonal.Designer.cs">
+      <DependentUpon>TextPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,8 +68,6 @@
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Componentes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

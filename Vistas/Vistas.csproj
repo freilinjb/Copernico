@@ -85,6 +85,9 @@
     <Folder Include="Informes\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Centro.resx">
+      <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
