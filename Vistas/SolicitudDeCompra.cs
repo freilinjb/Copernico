@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vistas.Formularios
+namespace Vistas
 {
-    public partial class FormBase : Form
+    public partial class SolicitudDeCompra : Form
     {
-        public FormBase()
+        public SolicitudDeCompra()
         {
             InitializeComponent();
-        }
-
-        private void FormBase_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

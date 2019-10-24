@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class FormBase : Form
+    public partial class Contacto : Form
     {
-        public FormBase()
+        private static Contacto Instancia;
+
+        public Contacto()
         {
             InitializeComponent();
         }
 
-        private void FormBase_Load(object sender, EventArgs e)
+        private void Contacto_Load(object sender, EventArgs e)
         {
-
+            Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
         }
     }
 }

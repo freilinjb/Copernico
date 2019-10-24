@@ -17,7 +17,6 @@ namespace Vistas.Formularios
             InitializeComponent();
 
             Guna.UI.Lib.GraphicsHelper.ShadowForm(this);
-            //Guna.UI.Lib.GraphicsHelper.DrawBorder(,);
         }
 
         private Cliente(int n)
@@ -32,9 +31,18 @@ namespace Vistas.Formularios
 
         private void Cliente_Load(object sender, EventArgs e)
         {
-            dataContacto.Rows.Add("soluciones@rtcocoa.com","849-847-99984", "Raul martes","FACTURACION");
-            dataContacto.Rows.Add("raulrt@hotmail.com","847-963-8525", "Endy Metralla","CUENTAS POR COBRAR");
-            dataContacto.Rows.Add("freilinjb@mail.com","741-958-9654", "Freilin Jose","ELECTRICIDAD");
+            dataContacto.Rows.Add("soluciones@rtcocoa.com","849-847-99984", "Raul martes","Despacho","FACTURACION");
+            dataContacto.Rows.Add("raulrt@hotmail.com","847-963-8525", "Endy Metralla","Asistente","CUENTAS POR COBRAR");
+            dataContacto.Rows.Add("freilinjb@mail.com","741-958-9654", "Freilin Jose","Electrcistas","MANTENIMIENTO");
+        }
+
+        private void lbAgregarContacto_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Contacto contacto = new Contacto();
+            if(contacto.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

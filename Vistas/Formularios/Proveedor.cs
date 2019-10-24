@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class FormBase : Form
+    public partial class Proveedor : FormBase
     {
-        public FormBase()
+        public Proveedor()
         {
             InitializeComponent();
-        }
-
-        private void FormBase_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

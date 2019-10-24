@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -59,6 +59,11 @@
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.dataContacto = new Guna.UI.WinForms.GunaDataGridView();
             this.lbAgregarContacto = new Guna.UI.WinForms.GunaLinkLabel();
+            this.Contacto = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textPersonal7 = new Negocios.Componentes.TextPersonal();
             this.textPersonal6 = new Negocios.Componentes.TextPersonal();
             this.comboPersonal6 = new Negocios.Componentes.ComboPersonal();
@@ -71,10 +76,7 @@
             this.textPersonal3 = new Negocios.Componentes.TextPersonal();
             this.textPersonal2 = new Negocios.Componentes.TextPersonal();
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
-            this.Contacto = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
@@ -236,6 +238,7 @@
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.label1);
             this.gunaGradient2Panel1.Controls.Add(this.gunaControlBox1);
             this.gunaGradient2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
@@ -311,7 +314,7 @@
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Size = new System.Drawing.Size(146, 36);
             this.gunaButton1.TabIndex = 0;
-            this.gunaButton1.Text = "Guardar";
+            this.gunaButton1.Text = "Cancelar";
             // 
             // gunaButton2
             // 
@@ -357,7 +360,7 @@
             this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton4.Size = new System.Drawing.Size(149, 36);
             this.gunaButton4.TabIndex = 3;
-            this.gunaButton4.Text = "Aceptar";
+            this.gunaButton4.Text = "Guardar";
             // 
             // gunaDragControl2
             // 
@@ -367,34 +370,36 @@
             // 
             this.dataContacto.AllowUserToAddRows = false;
             this.dataContacto.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dataContacto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dataContacto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataContacto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataContacto.BackgroundColor = System.Drawing.Color.White;
             this.dataContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataContacto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataContacto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataContacto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataContacto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataContacto.ColumnHeadersHeight = 20;
             this.dataContacto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Contacto,
             this.Telefono,
             this.Nombre,
+            this.Cargo,
             this.Departamento});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataContacto.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataContacto.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataContacto.EnableHeadersVisualStyles = false;
             this.dataContacto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.dataContacto.Location = new System.Drawing.Point(0, 35);
@@ -438,6 +443,37 @@
             this.lbAgregarContacto.TabIndex = 1;
             this.lbAgregarContacto.TabStop = true;
             this.lbAgregarContacto.Text = "Ingresar Contacto";
+            this.lbAgregarContacto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAgregarContacto_LinkClicked);
+            // 
+            // Contacto
+            // 
+            this.Contacto.HeaderText = "Correo";
+            this.Contacto.Name = "Contacto";
+            this.Contacto.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Cargo
+            // 
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
             // 
             // textPersonal7
             // 
@@ -683,7 +719,7 @@
             // 
             // textPersonal1
             // 
-            this.textPersonal1.BaseColor = System.Drawing.Color.White;
+            this.textPersonal1.BaseColor = System.Drawing.Color.Gainsboro;
             this.textPersonal1.BorderColor = System.Drawing.Color.Silver;
             this.textPersonal1.Correo = false;
             this.textPersonal1.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -701,29 +737,15 @@
             this.textPersonal1.Text = "0001";
             this.textPersonal1.Validar = false;
             // 
-            // Contacto
+            // label1
             // 
-            this.Contacto.HeaderText = "Correo";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.ReadOnly = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Registro de cliente::..";
             // 
             // Cliente
             // 
@@ -769,6 +791,7 @@
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.gunaGradient2Panel1.ResumeLayout(false);
+            this.gunaGradient2Panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).EndInit();
             this.ResumeLayout(false);
@@ -819,6 +842,8 @@
         private System.Windows.Forms.DataGridViewLinkColumn Contacto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -89,6 +89,12 @@
     <Compile Include="Formularios\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Contacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contacto.Designer.cs">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     <Compile Include="Formularios\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informes\Informe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolicitudDeCompra.Designer.cs">
+      <DependentUpon>SolicitudDeCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
@@ -130,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contacto.resx">
+      <DependentUpon>Contacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
