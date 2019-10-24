@@ -11,6 +11,5 @@ namespace Datos
     public class Conexion
     {
         public static SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-0GJ4POO\SQLEXPRESS;Initial Catalog=PrestaFlex;Persist Security Info=True;User ID=freilinjb;Password=fre123i4");
-
     }
 }

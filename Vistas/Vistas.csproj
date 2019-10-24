@@ -83,6 +83,12 @@
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Formularios\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
