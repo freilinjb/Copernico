@@ -8,19 +8,44 @@ namespace Negocios
 {
     class Cliente
     {
-        public int IdCliente { get; set; }
-        public string Nombre { get; set; }
-        public string RazonSocial { get; set; }
+        public int idcliente;
+        public string nombre;
+        public string razonSocial;
+        public int idTipoIdentificacion;
+        public string identificacion;
+        public string telefono;
+        public string correo;
+        public int idMunicipio;
+        public int idProvincia;
+        public int idSector;
+        public string direccion;
+        public int idCentro;
+        public bool estado;
+
+        public Cliente()
+        {
+
+        }
+        public Cliente(int idcliente, string nombre, string razonSocial, int idTipoIdentificacion, string identificacion, string telefono, string correo, int idMunicipio, int idProvincia, int idSector, string direccion, int idCentro, bool estado)
+        {
+            this.idcliente = idcliente;
+            this.nombre = nombre;
+            this.razonSocial = razonSocial;
+            this.idTipoIdentificacion = idTipoIdentificacion;
+            this.identificacion = identificacion;
+            this.telefono = telefono;
+            this.correo = correo;
+            this.idMunicipio = idMunicipio;
+            this.idProvincia = idProvincia;
+            this.idSector = idSector;
+            this.direccion = direccion;
+            this.idCentro = idCentro;
+            this.estado = estado;
+        }
 
         public string getGuardar()
         {
-            return ("EXEC RegistrarCliente");
-        }
-        public Cliente(int idCliente, string nombre, string razonSocial)
-        {
-            IdCliente = idCliente;
-            Nombre = nombre;
-            RazonSocial = razonSocial;
+            return ($"EXEC RegistrarCliente {idcliente},'{nombre}','{razonSocial}',{idTipoIdentificacion},'{identificacion}','{telefono}','{correo}',{idMunicipio},{idProvincia},{idSector},'{direccion}',{idCentro},{estado}");
         }
     }
 }
