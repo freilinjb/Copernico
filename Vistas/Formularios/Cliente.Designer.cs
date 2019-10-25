@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -46,42 +46,54 @@
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
-            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.dataContacto = new Guna.UI.WinForms.GunaDataGridView();
             this.lbAgregarContacto = new Guna.UI.WinForms.GunaLinkLabel();
+            this.dataContacto = new Guna.UI.WinForms.GunaDataGridView();
             this.Contacto = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textPersonal7 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal6 = new Negocios.Componentes.TextPersonal();
-            this.comboPersonal6 = new Negocios.Componentes.ComboPersonal();
-            this.textPersonal5 = new Negocios.Componentes.TextPersonal();
-            this.comboPersonal4 = new Negocios.Componentes.ComboPersonal();
-            this.comboPersonal3 = new Negocios.Componentes.ComboPersonal();
-            this.comboPersonal2 = new Negocios.Componentes.ComboPersonal();
-            this.comboPersonal1 = new Negocios.Componentes.ComboPersonal();
-            this.textPersonal4 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal3 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal2 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btGuardar = new Guna.UI.WinForms.GunaButton();
+            this.btAyuda = new Guna.UI.WinForms.GunaButton();
+            this.btCancelar = new Guna.UI.WinForms.GunaButton();
+            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.txtTelefono = new Negocios.Componentes.TextPersonal();
+            this.txtCorreo = new Negocios.Componentes.TextPersonal();
+            this.cbbEstado = new Negocios.Componentes.ComboPersonal();
+            this.txtDireccion = new Negocios.Componentes.TextPersonal();
+            this.cbbSector = new Negocios.Componentes.ComboPersonal();
+            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.cbbMunicipio = new Negocios.Componentes.ComboPersonal();
+            this.cbbProvincia = new Negocios.Componentes.ComboPersonal();
+            this.cbbID = new Negocios.Componentes.ComboPersonal();
+            this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
+            this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
+            this.txtNombre = new Negocios.Componentes.TextPersonal();
+            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
+            this.tipoIdentificacionTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoIdentificacionTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).BeginInit();
             this.gunaGradient2Panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -219,6 +231,115 @@
             this.gunaGroupBox1.Text = "DATOS DE CONTACTOS DE LA EMPRESA";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
+            // lbAgregarContacto
+            // 
+            this.lbAgregarContacto.ActiveLinkColor = System.Drawing.Color.Transparent;
+            this.lbAgregarContacto.AutoSize = true;
+            this.lbAgregarContacto.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lbAgregarContacto.Location = new System.Drawing.Point(485, 8);
+            this.lbAgregarContacto.Name = "lbAgregarContacto";
+            this.lbAgregarContacto.Size = new System.Drawing.Size(119, 19);
+            this.lbAgregarContacto.TabIndex = 1;
+            this.lbAgregarContacto.TabStop = true;
+            this.lbAgregarContacto.Text = "Ingresar Contacto";
+            this.lbAgregarContacto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAgregarContacto_LinkClicked);
+            // 
+            // dataContacto
+            // 
+            this.dataContacto.AllowUserToAddRows = false;
+            this.dataContacto.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataContacto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataContacto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataContacto.BackgroundColor = System.Drawing.Color.White;
+            this.dataContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataContacto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataContacto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataContacto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataContacto.ColumnHeadersHeight = 20;
+            this.dataContacto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Contacto,
+            this.Telefono,
+            this.Nombre,
+            this.Cargo,
+            this.Departamento});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataContacto.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataContacto.EnableHeadersVisualStyles = false;
+            this.dataContacto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dataContacto.Location = new System.Drawing.Point(0, 35);
+            this.dataContacto.Name = "dataContacto";
+            this.dataContacto.ReadOnly = true;
+            this.dataContacto.RowHeadersVisible = false;
+            this.dataContacto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataContacto.Size = new System.Drawing.Size(607, 137);
+            this.dataContacto.TabIndex = 0;
+            this.dataContacto.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.LightGrid;
+            this.dataContacto.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataContacto.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataContacto.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataContacto.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataContacto.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataContacto.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataContacto.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dataContacto.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
+            this.dataContacto.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataContacto.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataContacto.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataContacto.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataContacto.ThemeStyle.HeaderStyle.Height = 20;
+            this.dataContacto.ThemeStyle.ReadOnly = true;
+            this.dataContacto.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataContacto.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataContacto.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataContacto.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataContacto.ThemeStyle.RowsStyle.Height = 22;
+            this.dataContacto.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.dataContacto.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // Contacto
+            // 
+            this.Contacto.HeaderText = "Correo";
+            this.Contacto.Name = "Contacto";
+            this.Contacto.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Cargo
+            // 
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
+            // 
+            // Departamento
+            // 
+            this.Departamento.HeaderText = "Departamento";
+            this.Departamento.Name = "Departamento";
+            this.Departamento.ReadOnly = true;
+            // 
             // gunaControlBox1
             // 
             this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -247,6 +368,16 @@
             this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
             this.gunaGradient2Panel1.Size = new System.Drawing.Size(635, 32);
             this.gunaGradient2Panel1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Registro de cliente::..";
             // 
             // gunaDragControl1
             // 
@@ -283,9 +414,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btGuardar, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btAyuda, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btCancelar, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 478);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -293,429 +424,342 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(611, 42);
             this.tableLayoutPanel1.TabIndex = 25;
             // 
-            // gunaButton1
+            // btGuardar
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Gray;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(307, 3);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.DimGray;
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(146, 36);
-            this.gunaButton1.TabIndex = 0;
-            this.gunaButton1.Text = "Cancelar";
+            this.btGuardar.AnimationHoverSpeed = 0.07F;
+            this.btGuardar.AnimationSpeed = 0.03F;
+            this.btGuardar.BaseColor = System.Drawing.Color.Gray;
+            this.btGuardar.BorderColor = System.Drawing.Color.Black;
+            this.btGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btGuardar.FocusedColor = System.Drawing.Color.Empty;
+            this.btGuardar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btGuardar.ForeColor = System.Drawing.Color.White;
+            this.btGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btGuardar.Image")));
+            this.btGuardar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btGuardar.Location = new System.Drawing.Point(459, 3);
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btGuardar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btGuardar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btGuardar.OnHoverImage = null;
+            this.btGuardar.OnPressedColor = System.Drawing.Color.Black;
+            this.btGuardar.Size = new System.Drawing.Size(149, 36);
+            this.btGuardar.TabIndex = 3;
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
-            // gunaButton2
+            // btAyuda
             // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.Gray;
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton2.Image")));
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(3, 3);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.DimGray;
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Size = new System.Drawing.Size(146, 36);
-            this.gunaButton2.TabIndex = 1;
-            this.gunaButton2.Text = "Ayuda";
+            this.btAyuda.AnimationHoverSpeed = 0.07F;
+            this.btAyuda.AnimationSpeed = 0.03F;
+            this.btAyuda.BaseColor = System.Drawing.Color.Gray;
+            this.btAyuda.BorderColor = System.Drawing.Color.Black;
+            this.btAyuda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btAyuda.FocusedColor = System.Drawing.Color.Empty;
+            this.btAyuda.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btAyuda.ForeColor = System.Drawing.Color.White;
+            this.btAyuda.Image = ((System.Drawing.Image)(resources.GetObject("btAyuda.Image")));
+            this.btAyuda.ImageSize = new System.Drawing.Size(20, 20);
+            this.btAyuda.Location = new System.Drawing.Point(3, 3);
+            this.btAyuda.Name = "btAyuda";
+            this.btAyuda.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btAyuda.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btAyuda.OnHoverForeColor = System.Drawing.Color.White;
+            this.btAyuda.OnHoverImage = null;
+            this.btAyuda.OnPressedColor = System.Drawing.Color.Black;
+            this.btAyuda.Size = new System.Drawing.Size(146, 36);
+            this.btAyuda.TabIndex = 1;
+            this.btAyuda.Text = "Ayuda";
             // 
-            // gunaButton4
+            // btCancelar
             // 
-            this.gunaButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaButton4.AnimationSpeed = 0.03F;
-            this.gunaButton4.BaseColor = System.Drawing.Color.Gray;
-            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton4.Image")));
-            this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(459, 3);
-            this.gunaButton4.Name = "gunaButton4";
-            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.DimGray;
-            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton4.OnHoverImage = null;
-            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton4.Size = new System.Drawing.Size(149, 36);
-            this.gunaButton4.TabIndex = 3;
-            this.gunaButton4.Text = "Guardar";
+            this.btCancelar.AnimationHoverSpeed = 0.07F;
+            this.btCancelar.AnimationSpeed = 0.03F;
+            this.btCancelar.BaseColor = System.Drawing.Color.Gray;
+            this.btCancelar.BorderColor = System.Drawing.Color.Black;
+            this.btCancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btCancelar.FocusedColor = System.Drawing.Color.Empty;
+            this.btCancelar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btCancelar.ForeColor = System.Drawing.Color.White;
+            this.btCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btCancelar.Image")));
+            this.btCancelar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btCancelar.Location = new System.Drawing.Point(307, 3);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btCancelar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btCancelar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btCancelar.OnHoverImage = null;
+            this.btCancelar.OnPressedColor = System.Drawing.Color.Black;
+            this.btCancelar.Size = new System.Drawing.Size(146, 36);
+            this.btCancelar.TabIndex = 0;
+            this.btCancelar.Text = "Cancelar";
             // 
             // gunaDragControl2
             // 
             this.gunaDragControl2.TargetControl = this.gunaGradient2Panel1;
             // 
-            // dataContacto
+            // txtTelefono
             // 
-            this.dataContacto.AllowUserToAddRows = false;
-            this.dataContacto.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dataContacto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dataContacto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataContacto.BackgroundColor = System.Drawing.Color.White;
-            this.dataContacto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataContacto.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataContacto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataContacto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataContacto.ColumnHeadersHeight = 20;
-            this.dataContacto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Contacto,
-            this.Telefono,
-            this.Nombre,
-            this.Cargo,
-            this.Departamento});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataContacto.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dataContacto.EnableHeadersVisualStyles = false;
-            this.dataContacto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dataContacto.Location = new System.Drawing.Point(0, 35);
-            this.dataContacto.Name = "dataContacto";
-            this.dataContacto.ReadOnly = true;
-            this.dataContacto.RowHeadersVisible = false;
-            this.dataContacto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataContacto.Size = new System.Drawing.Size(607, 137);
-            this.dataContacto.TabIndex = 0;
-            this.dataContacto.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.LightGrid;
-            this.dataContacto.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataContacto.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataContacto.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataContacto.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataContacto.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataContacto.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataContacto.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dataContacto.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(237)))));
-            this.dataContacto.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataContacto.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataContacto.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataContacto.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataContacto.ThemeStyle.HeaderStyle.Height = 20;
-            this.dataContacto.ThemeStyle.ReadOnly = true;
-            this.dataContacto.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataContacto.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataContacto.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataContacto.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataContacto.ThemeStyle.RowsStyle.Height = 22;
-            this.dataContacto.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.dataContacto.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.txtTelefono.BaseColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderColor = System.Drawing.Color.Silver;
+            this.txtTelefono.Correo = false;
+            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTelefono.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtTelefono.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTelefono.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtTelefono.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtTelefono.Limpiar = false;
+            this.txtTelefono.Location = new System.Drawing.Point(107, 249);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.PasswordChar = '\0';
+            this.txtTelefono.Size = new System.Drawing.Size(121, 30);
+            this.txtTelefono.TabIndex = 24;
+            this.txtTelefono.Text = "849-966-8555";
+            this.txtTelefono.Validar = false;
             // 
-            // lbAgregarContacto
+            // txtCorreo
             // 
-            this.lbAgregarContacto.ActiveLinkColor = System.Drawing.Color.Transparent;
-            this.lbAgregarContacto.AutoSize = true;
-            this.lbAgregarContacto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lbAgregarContacto.Location = new System.Drawing.Point(485, 8);
-            this.lbAgregarContacto.Name = "lbAgregarContacto";
-            this.lbAgregarContacto.Size = new System.Drawing.Size(119, 19);
-            this.lbAgregarContacto.TabIndex = 1;
-            this.lbAgregarContacto.TabStop = true;
-            this.lbAgregarContacto.Text = "Ingresar Contacto";
-            this.lbAgregarContacto.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbAgregarContacto_LinkClicked);
+            this.txtCorreo.BaseColor = System.Drawing.Color.White;
+            this.txtCorreo.BorderColor = System.Drawing.Color.Silver;
+            this.txtCorreo.Correo = false;
+            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCorreo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCorreo.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtCorreo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtCorreo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtCorreo.Limpiar = false;
+            this.txtCorreo.Location = new System.Drawing.Point(107, 213);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.PasswordChar = '\0';
+            this.txtCorreo.Size = new System.Drawing.Size(121, 30);
+            this.txtCorreo.TabIndex = 22;
+            this.txtCorreo.Text = "solucionesmt@gonzalo.com";
+            this.txtCorreo.Validar = false;
             // 
-            // Contacto
+            // cbbEstado
             // 
-            this.Contacto.HeaderText = "Correo";
-            this.Contacto.Name = "Contacto";
-            this.Contacto.ReadOnly = true;
+            this.cbbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cbbEstado.BaseColor = System.Drawing.Color.White;
+            this.cbbEstado.BorderColor = System.Drawing.Color.Silver;
+            this.cbbEstado.Correo = false;
+            this.cbbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbEstado.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
+            this.cbbEstado.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbEstado.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbEstado.ForeColor = System.Drawing.Color.Black;
+            this.cbbEstado.FormattingEnabled = true;
+            this.cbbEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cbbEstado.Limpiar = false;
+            this.cbbEstado.Location = new System.Drawing.Point(332, 213);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.cbbEstado.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbEstado.Size = new System.Drawing.Size(121, 26);
+            this.cbbEstado.TabIndex = 17;
+            this.cbbEstado.Validar = false;
             // 
-            // Telefono
+            // txtDireccion
             // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
+            this.txtDireccion.BaseColor = System.Drawing.Color.White;
+            this.txtDireccion.BorderColor = System.Drawing.Color.Silver;
+            this.txtDireccion.Correo = false;
+            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtDireccion.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDireccion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtDireccion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtDireccion.Limpiar = false;
+            this.txtDireccion.Location = new System.Drawing.Point(332, 245);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.PasswordChar = '\0';
+            this.txtDireccion.Size = new System.Drawing.Size(291, 30);
+            this.txtDireccion.TabIndex = 11;
+            this.txtDireccion.Text = "Al lado de la casa de Juan de los palote";
+            this.txtDireccion.Validar = false;
             // 
-            // Nombre
+            // cbbSector
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
+            this.cbbSector.BackColor = System.Drawing.Color.Transparent;
+            this.cbbSector.BaseColor = System.Drawing.Color.White;
+            this.cbbSector.BorderColor = System.Drawing.Color.Silver;
+            this.cbbSector.Correo = false;
+            this.cbbSector.DataSource = this.sectorBindingSource;
+            this.cbbSector.DisplayMember = "Descripcion";
+            this.cbbSector.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbSector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSector.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
+            this.cbbSector.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbSector.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbSector.ForeColor = System.Drawing.Color.Black;
+            this.cbbSector.FormattingEnabled = true;
+            this.cbbSector.Limpiar = false;
+            this.cbbSector.Location = new System.Drawing.Point(332, 181);
+            this.cbbSector.Name = "cbbSector";
+            this.cbbSector.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.cbbSector.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbSector.Size = new System.Drawing.Size(121, 26);
+            this.cbbSector.TabIndex = 9;
+            this.cbbSector.Validar = false;
+            this.cbbSector.ValueMember = "IdSector";
             // 
-            // Cargo
+            // sectorBindingSource
             // 
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            this.Cargo.ReadOnly = true;
+            this.sectorBindingSource.DataMember = "Sector";
+            this.sectorBindingSource.DataSource = this.matrizDataSetBindingSource;
             // 
-            // Departamento
+            // matrizDataSetBindingSource
             // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.ReadOnly = true;
+            this.matrizDataSetBindingSource.DataSource = this.matrizDataSet;
+            this.matrizDataSetBindingSource.Position = 0;
             // 
-            // textPersonal7
+            // matrizDataSet
             // 
-            this.textPersonal7.BaseColor = System.Drawing.Color.White;
-            this.textPersonal7.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal7.Correo = false;
-            this.textPersonal7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal7.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal7.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal7.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal7.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal7.Limpiar = false;
-            this.textPersonal7.Location = new System.Drawing.Point(107, 249);
-            this.textPersonal7.Name = "textPersonal7";
-            this.textPersonal7.PasswordChar = '\0';
-            this.textPersonal7.Size = new System.Drawing.Size(121, 30);
-            this.textPersonal7.TabIndex = 24;
-            this.textPersonal7.Text = "849-966-8555";
-            this.textPersonal7.Validar = false;
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textPersonal6
+            // cbbMunicipio
             // 
-            this.textPersonal6.BaseColor = System.Drawing.Color.White;
-            this.textPersonal6.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal6.Correo = false;
-            this.textPersonal6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal6.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal6.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal6.Limpiar = false;
-            this.textPersonal6.Location = new System.Drawing.Point(107, 213);
-            this.textPersonal6.Name = "textPersonal6";
-            this.textPersonal6.PasswordChar = '\0';
-            this.textPersonal6.Size = new System.Drawing.Size(121, 30);
-            this.textPersonal6.TabIndex = 22;
-            this.textPersonal6.Text = "solucionesmt@gonzalo.com";
-            this.textPersonal6.Validar = false;
+            this.cbbMunicipio.BackColor = System.Drawing.Color.Transparent;
+            this.cbbMunicipio.BaseColor = System.Drawing.Color.White;
+            this.cbbMunicipio.BorderColor = System.Drawing.Color.Silver;
+            this.cbbMunicipio.Correo = false;
+            this.cbbMunicipio.DataSource = this.matrizDataSetBindingSource;
+            this.cbbMunicipio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMunicipio.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
+            this.cbbMunicipio.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbMunicipio.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbMunicipio.ForeColor = System.Drawing.Color.Black;
+            this.cbbMunicipio.FormattingEnabled = true;
+            this.cbbMunicipio.Limpiar = false;
+            this.cbbMunicipio.Location = new System.Drawing.Point(332, 149);
+            this.cbbMunicipio.Name = "cbbMunicipio";
+            this.cbbMunicipio.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.cbbMunicipio.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbMunicipio.Size = new System.Drawing.Size(121, 26);
+            this.cbbMunicipio.TabIndex = 7;
+            this.cbbMunicipio.Validar = false;
             // 
-            // comboPersonal6
+            // cbbProvincia
             // 
-            this.comboPersonal6.BackColor = System.Drawing.Color.Transparent;
-            this.comboPersonal6.BaseColor = System.Drawing.Color.White;
-            this.comboPersonal6.BorderColor = System.Drawing.Color.Silver;
-            this.comboPersonal6.Correo = false;
-            this.comboPersonal6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPersonal6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPersonal6.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
-            this.comboPersonal6.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPersonal6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPersonal6.ForeColor = System.Drawing.Color.Black;
-            this.comboPersonal6.FormattingEnabled = true;
-            this.comboPersonal6.Items.AddRange(new object[] {
-            "Activo"});
-            this.comboPersonal6.Limpiar = false;
-            this.comboPersonal6.Location = new System.Drawing.Point(332, 213);
-            this.comboPersonal6.Name = "comboPersonal6";
-            this.comboPersonal6.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.comboPersonal6.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPersonal6.Size = new System.Drawing.Size(121, 26);
-            this.comboPersonal6.TabIndex = 17;
-            this.comboPersonal6.Validar = false;
-            // 
-            // textPersonal5
-            // 
-            this.textPersonal5.BaseColor = System.Drawing.Color.White;
-            this.textPersonal5.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal5.Correo = false;
-            this.textPersonal5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal5.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal5.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal5.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal5.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal5.Limpiar = false;
-            this.textPersonal5.Location = new System.Drawing.Point(332, 245);
-            this.textPersonal5.Name = "textPersonal5";
-            this.textPersonal5.PasswordChar = '\0';
-            this.textPersonal5.Size = new System.Drawing.Size(291, 30);
-            this.textPersonal5.TabIndex = 11;
-            this.textPersonal5.Text = "Al lado de la casa de Juan de los palote";
-            this.textPersonal5.Validar = false;
-            // 
-            // comboPersonal4
-            // 
-            this.comboPersonal4.BackColor = System.Drawing.Color.Transparent;
-            this.comboPersonal4.BaseColor = System.Drawing.Color.White;
-            this.comboPersonal4.BorderColor = System.Drawing.Color.Silver;
-            this.comboPersonal4.Correo = false;
-            this.comboPersonal4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPersonal4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPersonal4.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
-            this.comboPersonal4.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPersonal4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPersonal4.ForeColor = System.Drawing.Color.Black;
-            this.comboPersonal4.FormattingEnabled = true;
-            this.comboPersonal4.Items.AddRange(new object[] {
-            "La Herradura"});
-            this.comboPersonal4.Limpiar = false;
-            this.comboPersonal4.Location = new System.Drawing.Point(332, 181);
-            this.comboPersonal4.Name = "comboPersonal4";
-            this.comboPersonal4.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.comboPersonal4.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPersonal4.Size = new System.Drawing.Size(121, 26);
-            this.comboPersonal4.TabIndex = 9;
-            this.comboPersonal4.Validar = false;
-            // 
-            // comboPersonal3
-            // 
-            this.comboPersonal3.BackColor = System.Drawing.Color.Transparent;
-            this.comboPersonal3.BaseColor = System.Drawing.Color.White;
-            this.comboPersonal3.BorderColor = System.Drawing.Color.Silver;
-            this.comboPersonal3.Correo = false;
-            this.comboPersonal3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPersonal3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPersonal3.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
-            this.comboPersonal3.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPersonal3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPersonal3.ForeColor = System.Drawing.Color.Black;
-            this.comboPersonal3.FormattingEnabled = true;
-            this.comboPersonal3.Items.AddRange(new object[] {
-            "Santiago de los caballeros"});
-            this.comboPersonal3.Limpiar = false;
-            this.comboPersonal3.Location = new System.Drawing.Point(332, 149);
-            this.comboPersonal3.Name = "comboPersonal3";
-            this.comboPersonal3.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.comboPersonal3.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPersonal3.Size = new System.Drawing.Size(121, 26);
-            this.comboPersonal3.TabIndex = 7;
-            this.comboPersonal3.Validar = false;
-            // 
-            // comboPersonal2
-            // 
-            this.comboPersonal2.BackColor = System.Drawing.Color.Transparent;
-            this.comboPersonal2.BaseColor = System.Drawing.Color.White;
-            this.comboPersonal2.BorderColor = System.Drawing.Color.Silver;
-            this.comboPersonal2.Correo = false;
-            this.comboPersonal2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPersonal2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPersonal2.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
-            this.comboPersonal2.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPersonal2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPersonal2.ForeColor = System.Drawing.Color.Black;
-            this.comboPersonal2.FormattingEnabled = true;
-            this.comboPersonal2.Items.AddRange(new object[] {
+            this.cbbProvincia.BackColor = System.Drawing.Color.Transparent;
+            this.cbbProvincia.BaseColor = System.Drawing.Color.White;
+            this.cbbProvincia.BorderColor = System.Drawing.Color.Silver;
+            this.cbbProvincia.Correo = false;
+            this.cbbProvincia.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbProvincia.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
+            this.cbbProvincia.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbProvincia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbProvincia.ForeColor = System.Drawing.Color.Black;
+            this.cbbProvincia.FormattingEnabled = true;
+            this.cbbProvincia.Items.AddRange(new object[] {
             "Santiago"});
-            this.comboPersonal2.Limpiar = false;
-            this.comboPersonal2.Location = new System.Drawing.Point(332, 117);
-            this.comboPersonal2.Name = "comboPersonal2";
-            this.comboPersonal2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.comboPersonal2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPersonal2.Size = new System.Drawing.Size(121, 26);
-            this.comboPersonal2.TabIndex = 5;
-            this.comboPersonal2.Validar = false;
+            this.cbbProvincia.Limpiar = false;
+            this.cbbProvincia.Location = new System.Drawing.Point(332, 117);
+            this.cbbProvincia.Name = "cbbProvincia";
+            this.cbbProvincia.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.cbbProvincia.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbProvincia.Size = new System.Drawing.Size(121, 26);
+            this.cbbProvincia.TabIndex = 5;
+            this.cbbProvincia.Validar = false;
             // 
-            // comboPersonal1
+            // cbbID
             // 
-            this.comboPersonal1.BackColor = System.Drawing.Color.Transparent;
-            this.comboPersonal1.BaseColor = System.Drawing.Color.White;
-            this.comboPersonal1.BorderColor = System.Drawing.Color.Silver;
-            this.comboPersonal1.Correo = false;
-            this.comboPersonal1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPersonal1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPersonal1.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
-            this.comboPersonal1.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPersonal1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPersonal1.ForeColor = System.Drawing.Color.Black;
-            this.comboPersonal1.FormattingEnabled = true;
-            this.comboPersonal1.Items.AddRange(new object[] {
-            "RNC",
-            "CEDULA"});
-            this.comboPersonal1.Limpiar = false;
-            this.comboPersonal1.Location = new System.Drawing.Point(107, 145);
-            this.comboPersonal1.Name = "comboPersonal1";
-            this.comboPersonal1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.comboPersonal1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPersonal1.Size = new System.Drawing.Size(121, 26);
-            this.comboPersonal1.TabIndex = 2;
-            this.comboPersonal1.Validar = false;
-            this.comboPersonal1.SelectedIndexChanged += new System.EventHandler(this.comboPersonal1_SelectedIndexChanged);
+            this.cbbID.BackColor = System.Drawing.Color.Transparent;
+            this.cbbID.BaseColor = System.Drawing.Color.White;
+            this.cbbID.BorderColor = System.Drawing.Color.Silver;
+            this.cbbID.Correo = false;
+            this.cbbID.DataSource = this.tipoIdentificacionBindingSource;
+            this.cbbID.DisplayMember = "Descripcion";
+            this.cbbID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbID.estados = Negocios.Componentes.ComboPersonal.Estados.Default;
+            this.cbbID.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbID.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbID.ForeColor = System.Drawing.Color.Black;
+            this.cbbID.FormattingEnabled = true;
+            this.cbbID.Limpiar = false;
+            this.cbbID.Location = new System.Drawing.Point(107, 145);
+            this.cbbID.Name = "cbbID";
+            this.cbbID.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.cbbID.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbID.Size = new System.Drawing.Size(121, 26);
+            this.cbbID.TabIndex = 2;
+            this.cbbID.Validar = false;
+            this.cbbID.ValueMember = "IdTipoIdentificacion";
+            this.cbbID.SelectedIndexChanged += new System.EventHandler(this.comboPersonal1_SelectedIndexChanged);
             // 
-            // textPersonal4
+            // tipoIdentificacionBindingSource
             // 
-            this.textPersonal4.BaseColor = System.Drawing.Color.White;
-            this.textPersonal4.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal4.Correo = false;
-            this.textPersonal4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal4.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal4.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal4.Limpiar = false;
-            this.textPersonal4.Location = new System.Drawing.Point(107, 177);
-            this.textPersonal4.Name = "textPersonal4";
-            this.textPersonal4.PasswordChar = '\0';
-            this.textPersonal4.Size = new System.Drawing.Size(121, 30);
-            this.textPersonal4.TabIndex = 1;
-            this.textPersonal4.Text = "031-0598455-9";
-            this.textPersonal4.Validar = false;
+            this.tipoIdentificacionBindingSource.DataMember = "TipoIdentificacion";
+            this.tipoIdentificacionBindingSource.DataSource = this.matrizDataSetBindingSource;
             // 
-            // textPersonal3
+            // txtIdentificacion
             // 
-            this.textPersonal3.BaseColor = System.Drawing.Color.White;
-            this.textPersonal3.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal3.Correo = false;
-            this.textPersonal3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal3.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal3.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal3.Limpiar = false;
-            this.textPersonal3.Location = new System.Drawing.Point(107, 109);
-            this.textPersonal3.Name = "textPersonal3";
-            this.textPersonal3.PasswordChar = '\0';
-            this.textPersonal3.Size = new System.Drawing.Size(121, 30);
-            this.textPersonal3.TabIndex = 1;
-            this.textPersonal3.Text = "Soluciones Gonsalo";
-            this.textPersonal3.Validar = false;
+            this.txtIdentificacion.BaseColor = System.Drawing.Color.White;
+            this.txtIdentificacion.BorderColor = System.Drawing.Color.Silver;
+            this.txtIdentificacion.Correo = false;
+            this.txtIdentificacion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdentificacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtIdentificacion.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtIdentificacion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtIdentificacion.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtIdentificacion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtIdentificacion.Limpiar = false;
+            this.txtIdentificacion.Location = new System.Drawing.Point(107, 177);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.PasswordChar = '\0';
+            this.txtIdentificacion.Size = new System.Drawing.Size(121, 30);
+            this.txtIdentificacion.TabIndex = 1;
+            this.txtIdentificacion.Text = "031-0598455-9";
+            this.txtIdentificacion.Validar = false;
             // 
-            // textPersonal2
+            // txtRasonSocial
             // 
-            this.textPersonal2.BaseColor = System.Drawing.Color.White;
-            this.textPersonal2.BorderColor = System.Drawing.Color.Silver;
-            this.textPersonal2.Correo = false;
-            this.textPersonal2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textPersonal2.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal2.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
-            this.textPersonal2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.textPersonal2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.textPersonal2.Limpiar = false;
-            this.textPersonal2.Location = new System.Drawing.Point(107, 73);
-            this.textPersonal2.Name = "textPersonal2";
-            this.textPersonal2.PasswordChar = '\0';
-            this.textPersonal2.Size = new System.Drawing.Size(121, 30);
-            this.textPersonal2.TabIndex = 1;
-            this.textPersonal2.Text = "Juan Gonzales";
-            this.textPersonal2.Validar = false;
+            this.txtRasonSocial.BaseColor = System.Drawing.Color.White;
+            this.txtRasonSocial.BorderColor = System.Drawing.Color.Silver;
+            this.txtRasonSocial.Correo = false;
+            this.txtRasonSocial.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRasonSocial.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtRasonSocial.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtRasonSocial.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtRasonSocial.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtRasonSocial.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtRasonSocial.Limpiar = false;
+            this.txtRasonSocial.Location = new System.Drawing.Point(107, 109);
+            this.txtRasonSocial.Name = "txtRasonSocial";
+            this.txtRasonSocial.PasswordChar = '\0';
+            this.txtRasonSocial.Size = new System.Drawing.Size(121, 30);
+            this.txtRasonSocial.TabIndex = 1;
+            this.txtRasonSocial.Text = "Soluciones Gonsalo";
+            this.txtRasonSocial.Validar = false;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BaseColor = System.Drawing.Color.White;
+            this.txtNombre.BorderColor = System.Drawing.Color.Silver;
+            this.txtNombre.Correo = false;
+            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtNombre.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(35)))));
+            this.txtNombre.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNombre.Limpiar = false;
+            this.txtNombre.Location = new System.Drawing.Point(107, 73);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.PasswordChar = '\0';
+            this.txtNombre.Size = new System.Drawing.Size(121, 30);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.Text = "Juan Gonzales";
+            this.txtNombre.Validar = false;
             // 
             // textPersonal1
             // 
@@ -737,15 +781,17 @@
             this.textPersonal1.Text = "0001";
             this.textPersonal1.Validar = false;
             // 
-            // label1
+            // sectorTableAdapter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 20);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Registro de cliente::..";
+            this.sectorTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoIdentificacionTableAdapter
+            // 
+            this.tipoIdentificacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Cliente
             // 
@@ -754,28 +800,28 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(635, 532);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.textPersonal7);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.gunaLabel13);
-            this.Controls.Add(this.textPersonal6);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.gunaLabel12);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.gunaGroupBox1);
-            this.Controls.Add(this.comboPersonal6);
+            this.Controls.Add(this.cbbEstado);
             this.Controls.Add(this.gunaLabel11);
             this.Controls.Add(this.gunaPictureBox1);
-            this.Controls.Add(this.textPersonal5);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.gunaLabel9);
-            this.Controls.Add(this.comboPersonal4);
+            this.Controls.Add(this.cbbSector);
             this.Controls.Add(this.gunaLabel8);
-            this.Controls.Add(this.comboPersonal3);
+            this.Controls.Add(this.cbbMunicipio);
             this.Controls.Add(this.gunaLabel7);
-            this.Controls.Add(this.comboPersonal2);
+            this.Controls.Add(this.cbbProvincia);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.gunaSeparator1);
-            this.Controls.Add(this.comboPersonal1);
-            this.Controls.Add(this.textPersonal4);
-            this.Controls.Add(this.textPersonal3);
-            this.Controls.Add(this.textPersonal2);
+            this.Controls.Add(this.cbbID);
+            this.Controls.Add(this.txtIdentificacion);
+            this.Controls.Add(this.txtRasonSocial);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.textPersonal1);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaLabel4);
@@ -790,10 +836,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).EndInit();
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,38 +855,38 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Negocios.Componentes.TextPersonal textPersonal1;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Negocios.Componentes.TextPersonal textPersonal2;
+        private Negocios.Componentes.TextPersonal txtNombre;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Negocios.Componentes.TextPersonal textPersonal3;
-        private Negocios.Componentes.ComboPersonal comboPersonal1;
+        private Negocios.Componentes.TextPersonal txtRasonSocial;
+        private Negocios.Componentes.ComboPersonal cbbID;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Negocios.Componentes.TextPersonal textPersonal4;
+        private Negocios.Componentes.TextPersonal txtIdentificacion;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
-        private Negocios.Componentes.ComboPersonal comboPersonal2;
+        private Negocios.Componentes.ComboPersonal cbbProvincia;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Negocios.Componentes.ComboPersonal comboPersonal3;
+        private Negocios.Componentes.ComboPersonal cbbMunicipio;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
-        private Negocios.Componentes.ComboPersonal comboPersonal4;
+        private Negocios.Componentes.ComboPersonal cbbSector;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
-        private Negocios.Componentes.TextPersonal textPersonal5;
+        private Negocios.Componentes.TextPersonal txtDireccion;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
-        private Negocios.Componentes.ComboPersonal comboPersonal6;
+        private Negocios.Componentes.ComboPersonal cbbEstado;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Negocios.Componentes.TextPersonal textPersonal7;
+        private Negocios.Componentes.TextPersonal txtTelefono;
         private Guna.UI.WinForms.GunaLabel gunaLabel13;
-        private Negocios.Componentes.TextPersonal textPersonal6;
+        private Negocios.Componentes.TextPersonal txtCorreo;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI.WinForms.GunaButton gunaButton4;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btGuardar;
+        private Guna.UI.WinForms.GunaButton btAyuda;
+        private Guna.UI.WinForms.GunaButton btCancelar;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl2;
         private Guna.UI.WinForms.GunaDataGridView dataContacto;
         private Guna.UI.WinForms.GunaLinkLabel lbAgregarContacto;
@@ -845,5 +896,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource matrizDataSetBindingSource;
+        private MatrizDataSet matrizDataSet;
+        private System.Windows.Forms.BindingSource sectorBindingSource;
+        private MatrizDataSetTableAdapters.SectorTableAdapter sectorTableAdapter;
+        private System.Windows.Forms.BindingSource tipoIdentificacionBindingSource;
+        private MatrizDataSetTableAdapters.TipoIdentificacionTableAdapter tipoIdentificacionTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

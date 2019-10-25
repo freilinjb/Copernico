@@ -27,5 +27,138 @@ namespace Negocios
                 }
             }
         }
+
+        public static Boolean Limpiar(Control control, ErrorProvider error)
+        {
+            error.Clear();
+            bool bien = true;
+            foreach (Control obj in control.Controls)
+            {
+                if (obj.Controls.Count > 0)
+                {
+                    if (Limpiar(obj, error))
+                        bien = false;
+                }
+                foreach (Control item in control.Controls)
+                {
+                    if (item is Componentes.TextPersonal txt)
+                    {
+                        if (txt.Limpiar)
+                            txt.Text = null;
+                    }
+
+                    else if (item is ComboBox cbb)
+                    {
+                        if (cbb.Enabled)
+                            cbb.SelectedIndex = -1;
+                    }
+                    else if (item is Componentes.ComboPersonal cbb2)
+                    {
+                        if (cbb2.Limpiar)
+                            cbb2.SelectedIndex = -1;
+                    }
+                }
+            }
+            return bien;
+        }
+        public static Boolean Validar2(Control control, ErrorProvider error)
+        {
+            bool hayerror = false;
+            foreach (Control obj in control.Controls)
+            {
+                if (obj.Controls.Count > 0)
+                {
+                    if (Validar2(obj, error))
+                    {
+                        hayerror = true;
+                    }
+                    if (obj is Componentes.TextPersonal txt)
+                    {
+                        if (txt.Validar)
+                        {
+                            if (string.IsNullOrEmpty(txt.Text.Trim()) || string.IsNullOrWhiteSpace(txt.Text.Trim()))
+                            {
+                                error.SetError(txt, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                    }
+                    if (obj is Componentes.ComboPersonal cbb)
+                    {
+
+                        if (cbb.Validar)
+                        {
+                            if (string.IsNullOrEmpty(cbb.Text) || string.IsNullOrWhiteSpace(cbb.Text))
+                            {
+                                MessageBox.Show("verdadero");
+                                error.SetError(cbb, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                        if (cbb.SelectedIndex == -1)
+                        {
+                            error.SetError(cbb, "Compo obligatorio");
+                            hayerror = true;
+                        }
+                    }
+                }
+            }
+            return hayerror;
+        }
+        public static Boolean Validar(Control control, ErrorProvider error)
+        {
+            bool hayerror = false;
+            foreach (Control obj in control.Controls)
+            {
+                if (obj.Controls.Count > 0)
+                {
+                    if (Validar(obj, error))
+                    {
+                        hayerror = true;
+                    }
+                    if (obj is Componentes.TextPersonal txt)
+                    {
+                        if (txt.Validar == true)
+                        {
+                            if (string.IsNullOrEmpty(txt.Text.Trim()) || string.IsNullOrWhiteSpace(txt.Text.Trim()))
+                            {
+                                error.SetError(txt, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                    }
+                    if (obj is ComboBox cbb)
+                    {
+
+                        if (cbb.Enabled)
+                        {
+                            if (string.IsNullOrEmpty(cbb.Text.Trim()) || string.IsNullOrWhiteSpace(cbb.Text.Trim()))
+                            {
+                                error.SetError(cbb, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                        if (cbb.SelectedIndex == -1)
+                        {
+                            error.SetError(cbb, "Compo obligatorio");
+                            hayerror = true;
+                        }
+                    }
+                    if (obj is Componentes.ComboPersonal cbb2)
+                    {
+
+                        if (cbb2.Validar)
+                        {
+                            if (string.IsNullOrEmpty(cbb2.Text.Trim()) || string.IsNullOrWhiteSpace(cbb2.Text.Trim()))
+                            {
+                                error.SetError(cbb2, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                    }
+                }
+            }
+            return hayerror;
+        }
     }
 }

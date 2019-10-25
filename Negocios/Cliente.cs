@@ -42,7 +42,6 @@ namespace Negocios
             this.idCentro = idCentro;
             this.estado = estado;
         }
-
         public string getGuardar()
         {
             return ($"EXEC RegistrarCliente {idcliente},'{nombre}','{razonSocial}',{idTipoIdentificacion},'{identificacion}','{telefono}','{correo}',{idMunicipio},{idProvincia},{idSector},'{direccion}',{idCentro},{estado}");
