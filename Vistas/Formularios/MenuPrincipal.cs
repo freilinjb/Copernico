@@ -22,5 +22,11 @@ namespace Vistas.Formularios
             Centro instancia = Centro.ObtenerInstancia();
             instancia.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ((FormBase)this.ActiveMdiChild).Guardar();
+
+        }
     }
 }

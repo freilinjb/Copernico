@@ -1,6 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
-    partial class FormBase
+    partial class Obra
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // FormBase
+            // Obra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 478);
-            this.Name = "FormBase";
-            // 
-            // 
-            // 
-            this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FormBase";
-            this.ThemeName = "VisualStudio2012Light";
+            this.Name = "Obra";
+            this.Text = "Obra";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }

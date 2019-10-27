@@ -15,5 +15,29 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        public bool guardar;
+        public bool imprimir;
+        public bool desactivar;
+        public bool cancelar;
+
+        public virtual bool Guardar()
+        {
+            return true;
+        }
+
+        public virtual bool Imprimir()
+        {
+            return true;
+        }
+        public virtual bool Desactivar()
+        {
+            return true;
+        }
+
+        public virtual bool Cancelar()
+        {
+            return true;
+        }
     }
 }
