@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Negocios.Componentes
 {
-    public partial class TextPersonal : Guna.UI.WinForms.GunaTextBox
+    public partial class TextPersonal : Telerik.WinControls.UI.RadTextBox
     {
         public TextPersonal()
         {

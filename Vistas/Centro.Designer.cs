@@ -74,14 +74,14 @@
             // 
             // textPersonal1
             // 
-            this.textPersonal1.BaseColor = System.Drawing.Color.White;
-            this.textPersonal1.BorderColor = System.Drawing.Color.Silver;
+            //this.textPersonal1.BaseColor = System.Drawing.Color.White;
+            //this.textPersonal1.BorderColor = System.Drawing.Color.Silver;
             this.textPersonal1.Correo = false;
             this.textPersonal1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.FocusedBaseColor = System.Drawing.Color.White;
-            this.textPersonal1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.textPersonal1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            //this.textPersonal1.FocusedBaseColor = System.Drawing.Color.White;
+            //this.textPersonal1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            //this.textPersonal1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.textPersonal1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textPersonal1.Limpiar = false;
             this.textPersonal1.Location = new System.Drawing.Point(283, 166);
