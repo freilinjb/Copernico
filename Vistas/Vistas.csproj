@@ -161,12 +161,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="SolicitudDeCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SolicitudDeCompra.Designer.cs">
-      <DependentUpon>SolicitudDeCompra.cs</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
