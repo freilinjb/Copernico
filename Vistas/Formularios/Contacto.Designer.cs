@@ -32,11 +32,13 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
-            this.cbbDepartamento = new Negocios.Componentes.cbbPersonal();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbbPuesto = new Negocios.Componentes.cbbPersonal();
+            this.puestoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.cbbDepartamento = new Negocios.Componentes.cbbPersonal();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.cbbTipoTelefono = new Negocios.Componentes.cbbPersonal();
+            this.tipoTelefonoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.txtCorreo = new Negocios.Componentes.TextPersonal();
             this.txtTelefono = new Negocios.Componentes.TextPersonal();
@@ -46,17 +48,21 @@
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.puestoTableAdapter = new Vistas.MatrizDataSetTableAdapters.PuestoTableAdapter();
+            this.tipoTelefonoTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoTelefonoTableAdapter();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departamentoTableAdapter = new Vistas.MatrizDataSetTableAdapters.DepartamentoTableAdapter();
-            this.cbbPuesto = new Negocios.Componentes.cbbPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoTelefonoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
@@ -66,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,12 +120,40 @@
             this.chEstado.ThemeName = "VisualStudio2012Light";
             this.chEstado.ThumbTickness = 15;
             // 
+            // cbbPuesto
+            // 
+            this.cbbPuesto.BackColor = System.Drawing.Color.White;
+            this.cbbPuesto.Correo = false;
+            this.cbbPuesto.DataSource = this.puestoBindingSource;
+            this.cbbPuesto.DisplayMember = "Descripcion";
+            this.cbbPuesto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPuesto.Limpiar = true;
+            this.cbbPuesto.Location = new System.Drawing.Point(106, 82);
+            this.cbbPuesto.Name = "cbbPuesto";
+            this.cbbPuesto.NullText = "Tipo de Identificacion";
+            this.cbbPuesto.Size = new System.Drawing.Size(230, 25);
+            this.cbbPuesto.TabIndex = 9;
+            this.cbbPuesto.ThemeName = "VisualStudio2012Light";
+            this.cbbPuesto.Validar = true;
+            this.cbbPuesto.ValueMember = "IdPuesto";
+            // 
+            // puestoBindingSource
+            // 
+            this.puestoBindingSource.DataMember = "Puesto";
+            this.puestoBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbbDepartamento
             // 
             this.cbbDepartamento.BackColor = System.Drawing.Color.White;
             this.cbbDepartamento.Correo = false;
             this.cbbDepartamento.DataSource = this.departamentoBindingSource;
-            this.cbbDepartamento.DisplayMember = "Descripcion";
+            this.cbbDepartamento.DisplayMember = "Departamento";
             this.cbbDepartamento.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbDepartamento.Limpiar = true;
@@ -131,16 +165,6 @@
             this.cbbDepartamento.ThemeName = "VisualStudio2012Light";
             this.cbbDepartamento.Validar = true;
             this.cbbDepartamento.ValueMember = "IdDepartamento";
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radLabel6
             // 
@@ -154,6 +178,7 @@
             // 
             this.cbbTipoTelefono.BackColor = System.Drawing.Color.White;
             this.cbbTipoTelefono.Correo = false;
+            this.cbbTipoTelefono.DataSource = this.tipoTelefonoBindingSource;
             this.cbbTipoTelefono.DisplayMember = "Descripcion";
             this.cbbTipoTelefono.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbTipoTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +190,12 @@
             this.cbbTipoTelefono.TabIndex = 9;
             this.cbbTipoTelefono.ThemeName = "VisualStudio2012Light";
             this.cbbTipoTelefono.Validar = true;
-            this.cbbTipoTelefono.ValueMember = "IdTipoIdentificacion";
+            this.cbbTipoTelefono.ValueMember = "IdTipoTelefono";
+            // 
+            // tipoTelefonoBindingSource
+            // 
+            this.tipoTelefonoBindingSource.DataMember = "TipoTelefono";
+            this.tipoTelefonoBindingSource.DataSource = this.matrizDataSet;
             // 
             // radLabel2
             // 
@@ -247,26 +277,22 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // puestoTableAdapter
+            // 
+            this.puestoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tipoTelefonoTableAdapter
+            // 
+            this.tipoTelefonoTableAdapter.ClearBeforeFill = true;
+            // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.matrizDataSet;
+            // 
             // departamentoTableAdapter
             // 
             this.departamentoTableAdapter.ClearBeforeFill = true;
-            // 
-            // cbbPuesto
-            // 
-            this.cbbPuesto.BackColor = System.Drawing.Color.White;
-            this.cbbPuesto.Correo = false;
-            this.cbbPuesto.DisplayMember = "Descripcion";
-            this.cbbPuesto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPuesto.Limpiar = true;
-            this.cbbPuesto.Location = new System.Drawing.Point(106, 82);
-            this.cbbPuesto.Name = "cbbPuesto";
-            this.cbbPuesto.NullText = "Tipo de Identificacion";
-            this.cbbPuesto.Size = new System.Drawing.Size(230, 25);
-            this.cbbPuesto.TabIndex = 9;
-            this.cbbPuesto.ThemeName = "VisualStudio2012Light";
-            this.cbbPuesto.Validar = true;
-            this.cbbPuesto.ValueMember = "IdDepartamento";
             // 
             // Contacto
             // 
@@ -288,11 +314,13 @@
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.puestoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoTelefonoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
@@ -302,7 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -312,22 +340,26 @@
 
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Negocios.Componentes.cbbPersonal cbbTipoTelefono;
-        private Negocios.Componentes.TextPersonal txtCorreo;
-        private Negocios.Componentes.TextPersonal txtTelefono;
         private Telerik.WinControls.UI.RadLabel radLabel4;
-        private Negocios.Componentes.TextPersonal txtNombre;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Negocios.Componentes.cbbPersonal cbbDepartamento;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadToggleSwitch chEstado;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private MatrizDataSet matrizDataSet;
+        public Negocios.Componentes.TextPersonal txtCorreo;
+        public Negocios.Componentes.TextPersonal txtTelefono;
+        public Negocios.Componentes.TextPersonal txtNombre;
+        public Negocios.Componentes.cbbPersonal cbbDepartamento;
+        public Negocios.Componentes.cbbPersonal cbbPuesto;
+        private System.Windows.Forms.BindingSource puestoBindingSource;
+        private MatrizDataSetTableAdapters.PuestoTableAdapter puestoTableAdapter;
+        private System.Windows.Forms.BindingSource tipoTelefonoBindingSource;
+        private MatrizDataSetTableAdapters.TipoTelefonoTableAdapter tipoTelefonoTableAdapter;
         private System.Windows.Forms.BindingSource departamentoBindingSource;
         private MatrizDataSetTableAdapters.DepartamentoTableAdapter departamentoTableAdapter;
-        private Negocios.Componentes.cbbPersonal cbbPuesto;
     }
 }

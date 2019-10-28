@@ -27,13 +27,14 @@ namespace Vistas.Formularios
         public Cliente()
         {
             InitializeComponent();
+            
         }
 
         public Cliente(int IdCliente)
         {
             InitializeComponent();
 
-            Clientes_Load(this, null);
+            //Clientes_Load(this, null);
 
             ds = Utilidades.Ejecutar($"SELECT * FROM VistaCliente WHERE IdCliente = {IdCliente}");
             IdCliente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdCliente"].ToString());
@@ -68,6 +69,7 @@ namespace Vistas.Formularios
         {
             RadMessageBox.SetThemeName("VisualStudio2012Light");
 
+
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Provincia' Puede moverla o quitarla según sea necesario.
             this.provinciaTableAdapter.Fill(this.matrizDataSet.Provincia);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Sector' Puede moverla o quitarla según sea necesario.
@@ -77,6 +79,11 @@ namespace Vistas.Formularios
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.TipoIdentificacion' Puede moverla o quitarla según sea necesario.
             this.tipoIdentificacionTableAdapter.Fill(this.matrizDataSet.TipoIdentificacion);
 
+
+            cbbProvincia.SelectedIndex = -1;
+            cbbMunicipio.SelectedIndex = -1;
+            cbbSector.SelectedIndex = -1;
+            cbbTipoIdentificacion.SelectedIndex = -1;
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
@@ -114,12 +121,16 @@ namespace Vistas.Formularios
                             ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
                             Debug.WriteLine("Registro Cliente");
                             Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
+
                         }
                     }
 
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                     Utilidades.Limpiar(this, errorProvider1);
+                    dataContacto.Rows.Clear();
+
+                    IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
                     this.Text = "Cliente \t\t Codigo:" + Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS IdCliente FROM Cliente").Tables[0].Rows[0]["IdCliente"].ToString().Trim();
                     this.DialogResult = DialogResult.OK;
                 }
@@ -138,6 +149,13 @@ namespace Vistas.Formularios
             {
                 contacto.ct.IdContacto = 0;
                 ContactoGuardar.Add(contacto.ct);
+                dataContacto.Rows.Add(
+                    0,
+                    contacto.txtNombre.Text.Trim(),
+                    contacto.cbbDepartamento.Text.Trim(),
+                    contacto.cbbPuesto.Text.Trim(),
+                    contacto.txtCorreo.Text.Trim(),
+                    contacto.txtTelefono.Text.Trim());
             }
         }
 

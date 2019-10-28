@@ -345,23 +345,23 @@
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.HeaderText = "Nombre";
             gridViewTextBoxColumn2.Name = "Nombre";
-            gridViewTextBoxColumn2.Width = 115;
+            gridViewTextBoxColumn2.Width = 114;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.HeaderText = "Telefono";
             gridViewTextBoxColumn3.Name = "Telefono";
-            gridViewTextBoxColumn3.Width = 126;
+            gridViewTextBoxColumn3.Width = 125;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.HeaderText = "Correo";
             gridViewTextBoxColumn4.Name = "Correo";
-            gridViewTextBoxColumn4.Width = 112;
+            gridViewTextBoxColumn4.Width = 111;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.HeaderText = "Departamento";
             gridViewTextBoxColumn5.Name = "Departamento";
-            gridViewTextBoxColumn5.Width = 78;
+            gridViewTextBoxColumn5.Width = 77;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.HeaderText = "Puesto";
             gridViewTextBoxColumn6.Name = "Puesto";
-            gridViewTextBoxColumn6.Width = 64;
+            gridViewTextBoxColumn6.Width = 63;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -454,7 +454,7 @@
             this.txtNota.Size = new System.Drawing.Size(490, 164);
             this.txtNota.TabIndex = 2;
             this.txtNota.ThemeName = "VisualStudio2012Light";
-            this.txtNota.Validar = false;
+            this.txtNota.Validar = true;
             // 
             // cbbProvincia
             // 

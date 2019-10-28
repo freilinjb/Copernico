@@ -17,6 +17,11 @@ namespace Negocios
             return Datos.Consultar.Ejecutar(cmd);
         }
 
+        public static Task<DataSet> EjecutarAsync(string cmd)
+        {
+            return Datos.Consultar.EjecutarAsync(cmd);
+        }
+
         private static Font fuente = new Font(new FontFamily("Arial"), 11.0f);
         public static void dataFormatoCelda(object sender, DataGridViewCellFormattingEventArgs e)
         {
