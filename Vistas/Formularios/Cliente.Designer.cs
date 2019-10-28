@@ -61,15 +61,6 @@
             this.dataContacto = new Telerik.WinControls.UI.RadGridView();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoIdentificacionTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoIdentificacionTableAdapter();
-            this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
-            this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
-            this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
             this.txtNota = new Negocios.Componentes.TextPersonal();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
@@ -83,6 +74,15 @@
             this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
             this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
+            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoIdentificacionTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoIdentificacionTableAdapter();
+            this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
+            this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
+            this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,11 +108,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
@@ -126,6 +121,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -397,47 +397,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // provinciaBindingSource
-            // 
-            this.provinciaBindingSource.DataMember = "Provincia";
-            this.provinciaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // municipioBindingSource
-            // 
-            this.municipioBindingSource.DataMember = "Municipio";
-            this.municipioBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // sectorBindingSource
-            // 
-            this.sectorBindingSource.DataMember = "Sector";
-            this.sectorBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // tipoIdentificacionBindingSource
-            // 
-            this.tipoIdentificacionBindingSource.DataMember = "TipoIdentificacion";
-            this.tipoIdentificacionBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // tipoIdentificacionTableAdapter
-            // 
-            this.tipoIdentificacionTableAdapter.ClearBeforeFill = true;
-            // 
-            // municipioTableAdapter
-            // 
-            this.municipioTableAdapter.ClearBeforeFill = true;
-            // 
-            // sectorTableAdapter
-            // 
-            this.sectorTableAdapter.ClearBeforeFill = true;
-            // 
-            // provinciaTableAdapter
-            // 
-            this.provinciaTableAdapter.ClearBeforeFill = true;
-            // 
             // txtNota
             // 
             this.txtNota.Correo = false;
@@ -625,6 +584,47 @@
             this.txtNombre.ThemeName = "VisualStudio2012Light";
             this.txtNombre.Validar = true;
             // 
+            // provinciaBindingSource
+            // 
+            this.provinciaBindingSource.DataMember = "Provincia";
+            this.provinciaBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // municipioBindingSource
+            // 
+            this.municipioBindingSource.DataMember = "Municipio";
+            this.municipioBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // sectorBindingSource
+            // 
+            this.sectorBindingSource.DataMember = "Sector";
+            this.sectorBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // tipoIdentificacionBindingSource
+            // 
+            this.tipoIdentificacionBindingSource.DataMember = "TipoIdentificacion";
+            this.tipoIdentificacionBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // tipoIdentificacionTableAdapter
+            // 
+            this.tipoIdentificacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // municipioTableAdapter
+            // 
+            this.municipioTableAdapter.ClearBeforeFill = true;
+            // 
+            // sectorTableAdapter
+            // 
+            this.sectorTableAdapter.ClearBeforeFill = true;
+            // 
+            // provinciaTableAdapter
+            // 
+            this.provinciaTableAdapter.ClearBeforeFill = true;
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -639,7 +639,9 @@
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(928, 518);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(928, 518);
             this.Name = "Cliente";
             // 
@@ -680,11 +682,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
@@ -698,6 +695,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -96,7 +96,6 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Formularios\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Contacto.resx">
       <DependentUpon>Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>

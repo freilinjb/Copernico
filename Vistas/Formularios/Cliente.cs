@@ -27,7 +27,7 @@ namespace Vistas.Formularios
         public Cliente()
         {
             InitializeComponent();
-            
+            IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
         }
 
         public Cliente(int IdCliente)

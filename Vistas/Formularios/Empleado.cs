@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class Empleado : Form
+    public partial class Empleado : FormBase
     {
         public Empleado()
         {
