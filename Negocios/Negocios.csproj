@@ -70,6 +70,7 @@
     <Compile Include="Componentes\TextPersonal.Designer.cs">
       <DependentUpon>TextPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,8 +101,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entidades\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

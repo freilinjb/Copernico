@@ -19,7 +19,11 @@ namespace Vistas.Formularios
     public partial class Cliente : Telerik.WinControls.UI.RadForm
     {
         private int IdCliente;
+        private int IdTercero;
         private DataSet ds;
+
+        private List<Negocios.Entidades.Contacto> ContactoGuardar = new List<Negocios.Entidades.Contacto>();
+
         public Cliente()
         {
             InitializeComponent();
@@ -34,7 +38,7 @@ namespace Vistas.Formularios
             ds = Utilidades.Ejecutar($"SELECT * FROM VistaCliente WHERE IdCliente = {IdCliente}");
             IdCliente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdCliente"].ToString());
             this.IdCliente = IdCliente;
-
+            IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
             txtNombre.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
             txtRasonSocial.Text = ds.Tables[0].Rows[0]["RazonSocial"].ToString();
             txtNota.Text = ds.Tables[0].Rows[0]["Observacion"].ToString();
@@ -47,7 +51,16 @@ namespace Vistas.Formularios
             cbbProvincia.Text = ds.Tables[0].Rows[0]["Provincia"].ToString();
             cbbSector.Text = ds.Tables[0].Rows[0]["Sector"].ToString();
 
+            ds = Negocios.Utilidades.Ejecutar($"SELECT CV.IdContacto,CV.IdTercero,CV.Nombre,CV.Departamento,CV.Puesto,CV.Telefono,CV.Correo,CV.Estado FROM VistaContacto CV INNER JOIN Contacto_vs_Tercero CT ON CT.IdContacto = CV.IdContacto INNER JOIN Tercero T ON T.IdTercero = CT.IdTercero WHERE T.IdTercero = {IdTercero}");
+
+            foreach(DataRow x in ds.Tables[0].Rows)
+            {
+                dataContacto.Rows.Add(x[0].ToString(), x[2].ToString(), x[3].ToString(), x[4].ToString(), x[5].ToString(), x[6].ToString());
+            }
+
             this.Text += $"\t\t::.. Codigo:{IdCliente} \t {txtRasonSocial.Text.Trim()}  ..::";
+
+
         }
 
 
@@ -89,11 +102,26 @@ namespace Vistas.Formularios
                 Debug.WriteLine(cliente.getGuardar());
 
                 ds = Utilidades.Ejecutar(cliente.getGuardar());
+
                 if(ds.Tables[0].Rows.Count > 0)
                 {
+                    IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
+
+                    if(ContactoGuardar.Count > 0)
+                    {
+                        for (int i = 0; i < ContactoGuardar.Count; i++)
+                        {
+                            ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
+                            Debug.WriteLine("Registro Cliente");
+                            Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
+                        }
+                    }
+
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
                     Utilidades.Limpiar(this, errorProvider1);
                     this.Text = "Cliente \t\t Codigo:" + Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS IdCliente FROM Cliente").Tables[0].Rows[0]["IdCliente"].ToString().Trim();
+                    this.DialogResult = DialogResult.OK;
                 }
             }
         }
@@ -105,7 +133,20 @@ namespace Vistas.Formularios
 
         private void lbIngresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            Contacto contacto = new Contacto(IdTercero);
+            if(contacto.ShowDialog() == DialogResult.OK)
+            {
+                contacto.ct.IdContacto = 0;
+                ContactoGuardar.Add(contacto.ct);
+            }
+        }
+
+        private void Cliente_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                btGuardar_Click(this, null);
+            }
         }
     }
 }

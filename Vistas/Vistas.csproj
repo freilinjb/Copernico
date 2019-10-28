@@ -103,12 +103,6 @@
     <Compile Include="Formularios\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Conduce.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Conduce.Designer.cs">
-      <DependentUpon>Conduce.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Contacto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +151,9 @@
     <Compile Include="Informes\Informe.Designer.cs">
       <DependentUpon>Informe.cs</DependentUpon>
     </Compile>
+    <Compile Include="MatrizDataSet.cs">
+      <DependentUpon>MatrizDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MatrizDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,9 +187,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Conduce.resx">
-      <DependentUpon>Conduce.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Contacto.resx">
       <DependentUpon>Contacto.cs</DependentUpon>
