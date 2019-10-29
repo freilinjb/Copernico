@@ -40,18 +40,35 @@
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.cbbTipoIdentificacion = new Negocios.Componentes.cbbPersonal();
+            this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
+            this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.txtExtencion = new Negocios.Componentes.TextPersonal();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.txtSkype = new Negocios.Componentes.TextPersonal();
+            this.txtCorreo = new Negocios.Componentes.TextPersonal();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.txtTelefono = new Negocios.Componentes.TextPersonal();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
+            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
+            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbbSector = new Negocios.Componentes.cbbPersonal();
+            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radMarkupDialog1 = new Telerik.WinControls.UI.RadMarkupDialog();
@@ -62,43 +79,43 @@
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtNota = new Negocios.Componentes.TextPersonal();
-            this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
-            this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
-            this.cbbSector = new Negocios.Componentes.cbbPersonal();
-            this.txtDireccion = new Negocios.Componentes.TextPersonal();
-            this.txtExtencion = new Negocios.Componentes.TextPersonal();
-            this.txtSkype = new Negocios.Componentes.TextPersonal();
-            this.txtCorreo = new Negocios.Componentes.TextPersonal();
-            this.txtTelefono = new Negocios.Componentes.TextPersonal();
-            this.cbbTipoIdentificacion = new Negocios.Componentes.cbbPersonal();
-            this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
-            this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
-            this.txtNombre = new Negocios.Componentes.TextPersonal();
-            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoIdentificacionTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoIdentificacionTableAdapter();
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExtencion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSkype)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
@@ -109,23 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExtencion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSkype)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +150,34 @@
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
             this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
+            // cbbTipoIdentificacion
+            // 
+            this.cbbTipoIdentificacion.BackColor = System.Drawing.Color.White;
+            this.cbbTipoIdentificacion.Correo = false;
+            this.cbbTipoIdentificacion.DataSource = this.tipoIdentificacionBindingSource;
+            this.cbbTipoIdentificacion.DisplayMember = "Descripcion";
+            this.cbbTipoIdentificacion.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoIdentificacion.Limpiar = true;
+            this.cbbTipoIdentificacion.Location = new System.Drawing.Point(88, 90);
+            this.cbbTipoIdentificacion.Name = "cbbTipoIdentificacion";
+            this.cbbTipoIdentificacion.NullText = "Tipo de Identificacion";
+            this.cbbTipoIdentificacion.Size = new System.Drawing.Size(142, 25);
+            this.cbbTipoIdentificacion.TabIndex = 9;
+            this.cbbTipoIdentificacion.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoIdentificacion.Validar = true;
+            this.cbbTipoIdentificacion.ValueMember = "IdTipoIdentificacion";
+            // 
+            // tipoIdentificacionBindingSource
+            // 
+            this.tipoIdentificacionBindingSource.DataMember = "TipoIdentificacion";
+            this.tipoIdentificacionBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(272, 30);
@@ -158,6 +186,30 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.Correo = false;
+            this.txtIdentificacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtIdentificacion.Limpiar = true;
+            this.txtIdentificacion.Location = new System.Drawing.Point(88, 120);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(142, 24);
+            this.txtIdentificacion.TabIndex = 1;
+            this.txtIdentificacion.ThemeName = "VisualStudio2012Light";
+            this.txtIdentificacion.Validar = true;
+            // 
+            // txtRasonSocial
+            // 
+            this.txtRasonSocial.Correo = false;
+            this.txtRasonSocial.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtRasonSocial.Limpiar = true;
+            this.txtRasonSocial.Location = new System.Drawing.Point(88, 60);
+            this.txtRasonSocial.Name = "txtRasonSocial";
+            this.txtRasonSocial.Size = new System.Drawing.Size(142, 24);
+            this.txtRasonSocial.TabIndex = 1;
+            this.txtRasonSocial.ThemeName = "VisualStudio2012Light";
+            this.txtRasonSocial.Validar = true;
+            // 
             // radLabel4
             // 
             this.radLabel4.Location = new System.Drawing.Point(9, 126);
@@ -165,6 +217,18 @@
             this.radLabel4.Size = new System.Drawing.Size(73, 18);
             this.radLabel4.TabIndex = 0;
             this.radLabel4.Text = "Identificación";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Correo = false;
+            this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtNombre.Limpiar = true;
+            this.txtNombre.Location = new System.Drawing.Point(88, 30);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(142, 24);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.ThemeName = "VisualStudio2012Light";
+            this.txtNombre.Validar = true;
             // 
             // radLabel3
             // 
@@ -208,6 +272,20 @@
             this.radGroupBox2.Text = "Contacto";
             this.radGroupBox2.ThemeName = "VisualStudio2012Light";
             // 
+            // txtExtencion
+            // 
+            this.txtExtencion.Correo = false;
+            this.txtExtencion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtExtencion.Limpiar = false;
+            this.txtExtencion.Location = new System.Drawing.Point(267, 21);
+            this.txtExtencion.Name = "txtExtencion";
+            this.txtExtencion.NullText = "Extensión";
+            this.txtExtencion.ShowNullText = true;
+            this.txtExtencion.Size = new System.Drawing.Size(106, 24);
+            this.txtExtencion.TabIndex = 4;
+            this.txtExtencion.ThemeName = "VisualStudio2012Light";
+            this.txtExtencion.Validar = false;
+            // 
             // radLabel7
             // 
             this.radLabel7.Location = new System.Drawing.Point(29, 87);
@@ -216,6 +294,31 @@
             this.radLabel7.TabIndex = 5;
             this.radLabel7.Text = "Skype";
             // 
+            // txtSkype
+            // 
+            this.txtSkype.Correo = false;
+            this.txtSkype.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtSkype.Limpiar = true;
+            this.txtSkype.Location = new System.Drawing.Point(75, 81);
+            this.txtSkype.Name = "txtSkype";
+            this.txtSkype.Size = new System.Drawing.Size(298, 24);
+            this.txtSkype.TabIndex = 6;
+            this.txtSkype.ThemeName = "VisualStudio2012Light";
+            this.txtSkype.Validar = false;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Correo = false;
+            this.txtCorreo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCorreo.Limpiar = true;
+            this.txtCorreo.Location = new System.Drawing.Point(75, 51);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.NullText = "ejemplo: soluciones@negocios.com";
+            this.txtCorreo.Size = new System.Drawing.Size(298, 24);
+            this.txtCorreo.TabIndex = 5;
+            this.txtCorreo.ThemeName = "VisualStudio2012Light";
+            this.txtCorreo.Validar = true;
+            // 
             // radLabel6
             // 
             this.radLabel6.Location = new System.Drawing.Point(21, 57);
@@ -223,6 +326,19 @@
             this.radLabel6.Size = new System.Drawing.Size(40, 18);
             this.radLabel6.TabIndex = 4;
             this.radLabel6.Text = "Correo";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Correo = false;
+            this.txtTelefono.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtTelefono.Limpiar = true;
+            this.txtTelefono.Location = new System.Drawing.Point(75, 21);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.NullText = "Ejemplo: 809-111-9999";
+            this.txtTelefono.Size = new System.Drawing.Size(186, 24);
+            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.ThemeName = "VisualStudio2012Light";
+            this.txtTelefono.Validar = true;
             // 
             // radLabel5
             // 
@@ -251,6 +367,72 @@
             this.radGroupBox3.Text = "Localidad";
             this.radGroupBox3.ThemeName = "VisualStudio2012Light";
             // 
+            // cbbProvincia
+            // 
+            this.cbbProvincia.BackColor = System.Drawing.Color.White;
+            this.cbbProvincia.Correo = false;
+            this.cbbProvincia.DataSource = this.provinciaBindingSource;
+            this.cbbProvincia.DisplayMember = "Descripcion";
+            this.cbbProvincia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbProvincia.Limpiar = true;
+            this.cbbProvincia.Location = new System.Drawing.Point(75, 18);
+            this.cbbProvincia.Name = "cbbProvincia";
+            this.cbbProvincia.Size = new System.Drawing.Size(311, 25);
+            this.cbbProvincia.TabIndex = 8;
+            this.cbbProvincia.ThemeName = "VisualStudio2012Light";
+            this.cbbProvincia.Validar = true;
+            this.cbbProvincia.ValueMember = "IdProvincia";
+            // 
+            // provinciaBindingSource
+            // 
+            this.provinciaBindingSource.DataMember = "Provincia";
+            this.provinciaBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // cbbMunicipio
+            // 
+            this.cbbMunicipio.BackColor = System.Drawing.Color.White;
+            this.cbbMunicipio.Correo = false;
+            this.cbbMunicipio.DataSource = this.municipioBindingSource;
+            this.cbbMunicipio.DisplayMember = "Descripcion";
+            this.cbbMunicipio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMunicipio.Limpiar = true;
+            this.cbbMunicipio.Location = new System.Drawing.Point(75, 49);
+            this.cbbMunicipio.Name = "cbbMunicipio";
+            this.cbbMunicipio.Size = new System.Drawing.Size(311, 25);
+            this.cbbMunicipio.TabIndex = 8;
+            this.cbbMunicipio.ThemeName = "VisualStudio2012Light";
+            this.cbbMunicipio.Validar = true;
+            this.cbbMunicipio.ValueMember = "IdMunicipio";
+            // 
+            // municipioBindingSource
+            // 
+            this.municipioBindingSource.DataMember = "Municipio";
+            this.municipioBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // cbbSector
+            // 
+            this.cbbSector.BackColor = System.Drawing.Color.White;
+            this.cbbSector.Correo = false;
+            this.cbbSector.DataSource = this.sectorBindingSource;
+            this.cbbSector.DisplayMember = "Descripcion";
+            this.cbbSector.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSector.Limpiar = true;
+            this.cbbSector.Location = new System.Drawing.Point(75, 80);
+            this.cbbSector.Name = "cbbSector";
+            this.cbbSector.Size = new System.Drawing.Size(311, 25);
+            this.cbbSector.TabIndex = 8;
+            this.cbbSector.ThemeName = "VisualStudio2012Light";
+            this.cbbSector.Validar = true;
+            this.cbbSector.ValueMember = "IdSector";
+            // 
+            // sectorBindingSource
+            // 
+            this.sectorBindingSource.DataMember = "Sector";
+            this.sectorBindingSource.DataSource = this.matrizDataSet;
+            // 
             // radLabel11
             // 
             this.radLabel11.Location = new System.Drawing.Point(16, 117);
@@ -266,6 +448,18 @@
             this.radLabel8.Size = new System.Drawing.Size(38, 18);
             this.radLabel8.TabIndex = 5;
             this.radLabel8.Text = "Sector";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Correo = false;
+            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtDireccion.Limpiar = true;
+            this.txtDireccion.Location = new System.Drawing.Point(75, 111);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(816, 24);
+            this.txtDireccion.TabIndex = 6;
+            this.txtDireccion.ThemeName = "VisualStudio2012Light";
+            this.txtDireccion.Validar = true;
             // 
             // radLabel9
             // 
@@ -345,23 +539,23 @@
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.HeaderText = "Nombre";
             gridViewTextBoxColumn2.Name = "Nombre";
-            gridViewTextBoxColumn2.Width = 114;
+            gridViewTextBoxColumn2.Width = 115;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.HeaderText = "Telefono";
             gridViewTextBoxColumn3.Name = "Telefono";
-            gridViewTextBoxColumn3.Width = 125;
+            gridViewTextBoxColumn3.Width = 126;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.HeaderText = "Correo";
             gridViewTextBoxColumn4.Name = "Correo";
-            gridViewTextBoxColumn4.Width = 111;
+            gridViewTextBoxColumn4.Width = 112;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.HeaderText = "Departamento";
             gridViewTextBoxColumn5.Name = "Departamento";
-            gridViewTextBoxColumn5.Width = 77;
+            gridViewTextBoxColumn5.Width = 78;
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.HeaderText = "Puesto";
             gridViewTextBoxColumn6.Name = "Puesto";
-            gridViewTextBoxColumn6.Width = 63;
+            gridViewTextBoxColumn6.Width = 64;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -415,200 +609,6 @@
             this.txtNota.ThemeName = "VisualStudio2012Light";
             this.txtNota.Validar = true;
             // 
-            // cbbProvincia
-            // 
-            this.cbbProvincia.BackColor = System.Drawing.Color.White;
-            this.cbbProvincia.Correo = false;
-            this.cbbProvincia.DataSource = this.provinciaBindingSource;
-            this.cbbProvincia.DisplayMember = "Descripcion";
-            this.cbbProvincia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbProvincia.Limpiar = true;
-            this.cbbProvincia.Location = new System.Drawing.Point(75, 18);
-            this.cbbProvincia.Name = "cbbProvincia";
-            this.cbbProvincia.Size = new System.Drawing.Size(311, 25);
-            this.cbbProvincia.TabIndex = 8;
-            this.cbbProvincia.ThemeName = "VisualStudio2012Light";
-            this.cbbProvincia.Validar = true;
-            this.cbbProvincia.ValueMember = "IdProvincia";
-            // 
-            // cbbMunicipio
-            // 
-            this.cbbMunicipio.BackColor = System.Drawing.Color.White;
-            this.cbbMunicipio.Correo = false;
-            this.cbbMunicipio.DataSource = this.municipioBindingSource;
-            this.cbbMunicipio.DisplayMember = "Descripcion";
-            this.cbbMunicipio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMunicipio.Limpiar = true;
-            this.cbbMunicipio.Location = new System.Drawing.Point(75, 49);
-            this.cbbMunicipio.Name = "cbbMunicipio";
-            this.cbbMunicipio.Size = new System.Drawing.Size(311, 25);
-            this.cbbMunicipio.TabIndex = 8;
-            this.cbbMunicipio.ThemeName = "VisualStudio2012Light";
-            this.cbbMunicipio.Validar = true;
-            this.cbbMunicipio.ValueMember = "IdMunicipio";
-            // 
-            // cbbSector
-            // 
-            this.cbbSector.BackColor = System.Drawing.Color.White;
-            this.cbbSector.Correo = false;
-            this.cbbSector.DataSource = this.sectorBindingSource;
-            this.cbbSector.DisplayMember = "Descripcion";
-            this.cbbSector.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSector.Limpiar = true;
-            this.cbbSector.Location = new System.Drawing.Point(75, 80);
-            this.cbbSector.Name = "cbbSector";
-            this.cbbSector.Size = new System.Drawing.Size(311, 25);
-            this.cbbSector.TabIndex = 8;
-            this.cbbSector.ThemeName = "VisualStudio2012Light";
-            this.cbbSector.Validar = true;
-            this.cbbSector.ValueMember = "IdSector";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Correo = false;
-            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtDireccion.Limpiar = true;
-            this.txtDireccion.Location = new System.Drawing.Point(75, 111);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(816, 24);
-            this.txtDireccion.TabIndex = 6;
-            this.txtDireccion.ThemeName = "VisualStudio2012Light";
-            this.txtDireccion.Validar = true;
-            // 
-            // txtExtencion
-            // 
-            this.txtExtencion.Correo = false;
-            this.txtExtencion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtExtencion.Limpiar = false;
-            this.txtExtencion.Location = new System.Drawing.Point(267, 21);
-            this.txtExtencion.Name = "txtExtencion";
-            this.txtExtencion.NullText = "Extensión";
-            this.txtExtencion.ShowNullText = true;
-            this.txtExtencion.Size = new System.Drawing.Size(106, 24);
-            this.txtExtencion.TabIndex = 4;
-            this.txtExtencion.ThemeName = "VisualStudio2012Light";
-            this.txtExtencion.Validar = false;
-            // 
-            // txtSkype
-            // 
-            this.txtSkype.Correo = false;
-            this.txtSkype.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtSkype.Limpiar = true;
-            this.txtSkype.Location = new System.Drawing.Point(75, 81);
-            this.txtSkype.Name = "txtSkype";
-            this.txtSkype.Size = new System.Drawing.Size(298, 24);
-            this.txtSkype.TabIndex = 6;
-            this.txtSkype.ThemeName = "VisualStudio2012Light";
-            this.txtSkype.Validar = false;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Correo = false;
-            this.txtCorreo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtCorreo.Limpiar = true;
-            this.txtCorreo.Location = new System.Drawing.Point(75, 51);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.NullText = "ejemplo: soluciones@negocios.com";
-            this.txtCorreo.Size = new System.Drawing.Size(298, 24);
-            this.txtCorreo.TabIndex = 5;
-            this.txtCorreo.ThemeName = "VisualStudio2012Light";
-            this.txtCorreo.Validar = true;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Correo = false;
-            this.txtTelefono.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtTelefono.Limpiar = true;
-            this.txtTelefono.Location = new System.Drawing.Point(75, 21);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.NullText = "Ejemplo: 809-111-9999";
-            this.txtTelefono.Size = new System.Drawing.Size(186, 24);
-            this.txtTelefono.TabIndex = 3;
-            this.txtTelefono.ThemeName = "VisualStudio2012Light";
-            this.txtTelefono.Validar = true;
-            // 
-            // cbbTipoIdentificacion
-            // 
-            this.cbbTipoIdentificacion.BackColor = System.Drawing.Color.White;
-            this.cbbTipoIdentificacion.Correo = false;
-            this.cbbTipoIdentificacion.DataSource = this.tipoIdentificacionBindingSource;
-            this.cbbTipoIdentificacion.DisplayMember = "Descripcion";
-            this.cbbTipoIdentificacion.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbTipoIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoIdentificacion.Limpiar = true;
-            this.cbbTipoIdentificacion.Location = new System.Drawing.Point(88, 90);
-            this.cbbTipoIdentificacion.Name = "cbbTipoIdentificacion";
-            this.cbbTipoIdentificacion.NullText = "Tipo de Identificacion";
-            this.cbbTipoIdentificacion.Size = new System.Drawing.Size(142, 25);
-            this.cbbTipoIdentificacion.TabIndex = 9;
-            this.cbbTipoIdentificacion.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoIdentificacion.Validar = true;
-            this.cbbTipoIdentificacion.ValueMember = "IdTipoIdentificacion";
-            // 
-            // txtIdentificacion
-            // 
-            this.txtIdentificacion.Correo = false;
-            this.txtIdentificacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtIdentificacion.Limpiar = true;
-            this.txtIdentificacion.Location = new System.Drawing.Point(88, 120);
-            this.txtIdentificacion.Name = "txtIdentificacion";
-            this.txtIdentificacion.Size = new System.Drawing.Size(142, 24);
-            this.txtIdentificacion.TabIndex = 1;
-            this.txtIdentificacion.ThemeName = "VisualStudio2012Light";
-            this.txtIdentificacion.Validar = true;
-            // 
-            // txtRasonSocial
-            // 
-            this.txtRasonSocial.Correo = false;
-            this.txtRasonSocial.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtRasonSocial.Limpiar = true;
-            this.txtRasonSocial.Location = new System.Drawing.Point(88, 60);
-            this.txtRasonSocial.Name = "txtRasonSocial";
-            this.txtRasonSocial.Size = new System.Drawing.Size(142, 24);
-            this.txtRasonSocial.TabIndex = 1;
-            this.txtRasonSocial.ThemeName = "VisualStudio2012Light";
-            this.txtRasonSocial.Validar = true;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Correo = false;
-            this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtNombre.Limpiar = true;
-            this.txtNombre.Location = new System.Drawing.Point(88, 30);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(142, 24);
-            this.txtNombre.TabIndex = 1;
-            this.txtNombre.ThemeName = "VisualStudio2012Light";
-            this.txtNombre.Validar = true;
-            // 
-            // provinciaBindingSource
-            // 
-            this.provinciaBindingSource.DataMember = "Provincia";
-            this.provinciaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // municipioBindingSource
-            // 
-            this.municipioBindingSource.DataMember = "Municipio";
-            this.municipioBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // sectorBindingSource
-            // 
-            this.sectorBindingSource.DataMember = "Sector";
-            this.sectorBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // tipoIdentificacionBindingSource
-            // 
-            this.tipoIdentificacionBindingSource.DataMember = "TipoIdentificacion";
-            this.tipoIdentificacionBindingSource.DataSource = this.matrizDataSet;
-            // 
             // tipoIdentificacionTableAdapter
             // 
             this.tipoIdentificacionTableAdapter.ClearBeforeFill = true;
@@ -656,22 +656,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExtencion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSkype)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
@@ -683,23 +700,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExtencion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSkype)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
