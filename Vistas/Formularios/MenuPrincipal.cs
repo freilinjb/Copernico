@@ -26,7 +26,13 @@ namespace Vistas.Formularios
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ((FormBase)this.ActiveMdiChild).Guardar();
+        }
 
+        private void radMenuItem1_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = Cliente.ObtenerInstancia();
+            cliente.MdiParent = this;
+            cliente.Show();
         }
     }
 }

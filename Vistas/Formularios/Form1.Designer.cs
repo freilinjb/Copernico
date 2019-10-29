@@ -1,6 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
-    partial class FormBase
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // FormBase
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 564);
-            this.Name = "FormBase";
-            // 
-            // 
-            // 
-            this.RootElement.ApplyShapeToControl = true;
-            this.Text = "FormBase";
-            this.ThemeName = "VisualStudio2012Light";
-            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }
