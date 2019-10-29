@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleado));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
+            this.Foto = new System.Windows.Forms.PictureBox();
+            this.txtApellido = new Negocios.Componentes.TextPersonal();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -40,36 +40,38 @@
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radPageViewPage3 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal2 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal3 = new Negocios.Componentes.TextPersonal();
-            this.textPersonal4 = new Negocios.Componentes.TextPersonal();
+            this.txtApodo = new Negocios.Componentes.TextPersonal();
+            this.c = new Negocios.Componentes.TextPersonal();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal5 = new Negocios.Componentes.TextPersonal();
+            this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.txtNota = new Negocios.Componentes.TextPersonal();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
+            this.txtCorreo = new Negocios.Componentes.TextPersonal();
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
+            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.txtDireccion = new Negocios.Componentes.TextPersonal();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
-            this.txtCorreo = new Negocios.Componentes.TextPersonal();
-            this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
-            this.txtTelefono = new Negocios.Componentes.TextPersonal();
-            this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
             this.textPersonal6 = new Negocios.Componentes.TextPersonal();
-            this.txtNota = new Negocios.Componentes.TextPersonal();
+            this.txtDireccion = new Negocios.Componentes.TextPersonal();
+            this.txtTelefono = new Negocios.Componentes.TextPersonal();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).BeginInit();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.cbbEstadoCivil = new Negocios.Componentes.cbbPersonal();
+            this.cbbSexo = new Negocios.Componentes.cbbPersonal();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -77,57 +79,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApodo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Foto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(5, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 207);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.Foto.Location = new System.Drawing.Point(8, 47);
+            this.Foto.Name = "Foto";
+            this.Foto.Size = new System.Drawing.Size(201, 207);
+            this.Foto.TabIndex = 2;
+            this.Foto.TabStop = false;
             // 
-            // txtRasonSocial
+            // txtApellido
             // 
-            this.txtRasonSocial.Correo = false;
-            this.txtRasonSocial.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtRasonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRasonSocial.Limpiar = true;
-            this.txtRasonSocial.Location = new System.Drawing.Point(354, 77);
-            this.txtRasonSocial.Name = "txtRasonSocial";
-            this.txtRasonSocial.Size = new System.Drawing.Size(186, 24);
-            this.txtRasonSocial.TabIndex = 1;
-            this.txtRasonSocial.ThemeName = "VisualStudio2012Light";
-            this.txtRasonSocial.Validar = true;
+            this.txtApellido.Correo = false;
+            this.txtApellido.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Limpiar = true;
+            this.txtApellido.Location = new System.Drawing.Point(354, 77);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(186, 24);
+            this.txtApellido.TabIndex = 1;
+            this.txtApellido.ThemeName = "VisualStudio2012Light";
+            this.txtApellido.Validar = true;
             // 
             // txtNombre
             // 
@@ -218,57 +220,31 @@
             this.radPageViewPage3.Size = new System.Drawing.Size(1053, 354);
             this.radPageViewPage3.Text = "radPageViewPage3";
             // 
-            // textPersonal1
+            // txtApodo
             // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal1.Limpiar = true;
-            this.textPersonal1.Location = new System.Drawing.Point(354, 107);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal1.TabIndex = 1;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = true;
+            this.txtApodo.Correo = false;
+            this.txtApodo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtApodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApodo.Limpiar = true;
+            this.txtApodo.Location = new System.Drawing.Point(354, 107);
+            this.txtApodo.Name = "txtApodo";
+            this.txtApodo.Size = new System.Drawing.Size(186, 24);
+            this.txtApodo.TabIndex = 1;
+            this.txtApodo.ThemeName = "VisualStudio2012Light";
+            this.txtApodo.Validar = true;
             // 
-            // textPersonal2
+            // c
             // 
-            this.textPersonal2.Correo = false;
-            this.textPersonal2.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal2.Limpiar = true;
-            this.textPersonal2.Location = new System.Drawing.Point(354, 137);
-            this.textPersonal2.Name = "textPersonal2";
-            this.textPersonal2.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal2.TabIndex = 1;
-            this.textPersonal2.ThemeName = "VisualStudio2012Light";
-            this.textPersonal2.Validar = true;
-            // 
-            // textPersonal3
-            // 
-            this.textPersonal3.Correo = false;
-            this.textPersonal3.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal3.Limpiar = true;
-            this.textPersonal3.Location = new System.Drawing.Point(354, 167);
-            this.textPersonal3.Name = "textPersonal3";
-            this.textPersonal3.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal3.TabIndex = 1;
-            this.textPersonal3.ThemeName = "VisualStudio2012Light";
-            this.textPersonal3.Validar = true;
-            // 
-            // textPersonal4
-            // 
-            this.textPersonal4.Correo = false;
-            this.textPersonal4.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal4.Limpiar = true;
-            this.textPersonal4.Location = new System.Drawing.Point(354, 197);
-            this.textPersonal4.Name = "textPersonal4";
-            this.textPersonal4.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal4.TabIndex = 1;
-            this.textPersonal4.ThemeName = "VisualStudio2012Light";
-            this.textPersonal4.Validar = true;
+            this.c.Correo = false;
+            this.c.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.c.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c.Limpiar = true;
+            this.c.Location = new System.Drawing.Point(354, 197);
+            this.c.Name = "c";
+            this.c.Size = new System.Drawing.Size(186, 24);
+            this.c.TabIndex = 1;
+            this.c.ThemeName = "VisualStudio2012Light";
+            this.c.Validar = true;
             // 
             // radLabel6
             // 
@@ -306,23 +282,27 @@
             this.radLabel9.TabIndex = 0;
             this.radLabel9.Text = "Identificacion";
             // 
-            // textPersonal5
+            // txtIdentificacion
             // 
-            this.textPersonal5.Correo = false;
-            this.textPersonal5.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal5.Limpiar = true;
-            this.textPersonal5.Location = new System.Drawing.Point(354, 227);
-            this.textPersonal5.Name = "textPersonal5";
-            this.textPersonal5.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal5.TabIndex = 1;
-            this.textPersonal5.ThemeName = "VisualStudio2012Light";
-            this.textPersonal5.Validar = true;
+            this.txtIdentificacion.Correo = false;
+            this.txtIdentificacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.Limpiar = true;
+            this.txtIdentificacion.Location = new System.Drawing.Point(354, 227);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(186, 24);
+            this.txtIdentificacion.TabIndex = 1;
+            this.txtIdentificacion.ThemeName = "VisualStudio2012Light";
+            this.txtIdentificacion.Validar = true;
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.linkLabel2);
+            this.radPanel1.Controls.Add(this.linkLabel1);
             this.radPanel1.Controls.Add(this.txtNota);
+            this.radPanel1.Controls.Add(this.cbbSexo);
             this.radPanel1.Controls.Add(this.cbbProvincia);
+            this.radPanel1.Controls.Add(this.cbbEstadoCivil);
             this.radPanel1.Controls.Add(this.txtCorreo);
             this.radPanel1.Controls.Add(this.cbbMunicipio);
             this.radPanel1.Controls.Add(this.radLabel5);
@@ -339,24 +319,41 @@
             this.radPanel1.Controls.Add(this.radLabel12);
             this.radPanel1.Controls.Add(this.radLabel2);
             this.radPanel1.Controls.Add(this.radLabel15);
-            this.radPanel1.Controls.Add(this.pictureBox1);
+            this.radPanel1.Controls.Add(this.Foto);
             this.radPanel1.Controls.Add(this.radLabel3);
             this.radPanel1.Controls.Add(this.radLabel6);
             this.radPanel1.Controls.Add(this.radLabel7);
             this.radPanel1.Controls.Add(this.radLabel8);
             this.radPanel1.Controls.Add(this.radLabel9);
-            this.radPanel1.Controls.Add(this.textPersonal5);
-            this.radPanel1.Controls.Add(this.textPersonal4);
-            this.radPanel1.Controls.Add(this.textPersonal3);
-            this.radPanel1.Controls.Add(this.textPersonal2);
+            this.radPanel1.Controls.Add(this.txtIdentificacion);
+            this.radPanel1.Controls.Add(this.c);
             this.radPanel1.Controls.Add(this.txtNombre);
-            this.radPanel1.Controls.Add(this.textPersonal1);
-            this.radPanel1.Controls.Add(this.txtRasonSocial);
+            this.radPanel1.Controls.Add(this.txtApodo);
+            this.radPanel1.Controls.Add(this.txtApellido);
             this.radPanel1.Location = new System.Drawing.Point(0, 28);
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Size = new System.Drawing.Size(1063, 294);
             this.radPanel1.TabIndex = 12;
             this.radPanel1.ThemeName = "VisualStudio2012Light";
+            // 
+            // txtNota
+            // 
+            this.txtNota.Correo = false;
+            this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNota.Limpiar = false;
+            this.txtNota.Location = new System.Drawing.Point(883, 45);
+            this.txtNota.Multiline = true;
+            this.txtNota.Name = "txtNota";
+            this.txtNota.NullText = "Nota";
+            // 
+            // 
+            // 
+            this.txtNota.RootElement.StretchVertically = true;
+            this.txtNota.Size = new System.Drawing.Size(174, 209);
+            this.txtNota.TabIndex = 15;
+            this.txtNota.ThemeName = "VisualStudio2012Light";
+            this.txtNota.Validar = true;
             // 
             // cbbProvincia
             // 
@@ -373,6 +370,20 @@
             this.cbbProvincia.ThemeName = "VisualStudio2012Light";
             this.cbbProvincia.Validar = true;
             this.cbbProvincia.ValueMember = "IdProvincia";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Correo = false;
+            this.txtCorreo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Limpiar = true;
+            this.txtCorreo.Location = new System.Drawing.Point(691, 107);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.NullText = "ejemplo: soluciones@negocios.com";
+            this.txtCorreo.Size = new System.Drawing.Size(186, 24);
+            this.txtCorreo.TabIndex = 14;
+            this.txtCorreo.ThemeName = "VisualStudio2012Light";
+            this.txtCorreo.Validar = true;
             // 
             // cbbMunicipio
             // 
@@ -406,6 +417,15 @@
             this.cbbSector.Validar = true;
             this.cbbSector.ValueMember = "IdSector";
             // 
+            // radLabel14
+            // 
+            this.radLabel14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel14.Location = new System.Drawing.Point(608, 109);
+            this.radLabel14.Name = "radLabel14";
+            this.radLabel14.Size = new System.Drawing.Size(44, 19);
+            this.radLabel14.TabIndex = 12;
+            this.radLabel14.Text = "Correo";
+            // 
             // radLabel11
             // 
             this.radLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,6 +444,20 @@
             this.radLabel4.TabIndex = 5;
             this.radLabel4.Text = "Sector";
             // 
+            // textPersonal6
+            // 
+            this.textPersonal6.Correo = false;
+            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal6.Limpiar = true;
+            this.textPersonal6.Location = new System.Drawing.Point(691, 77);
+            this.textPersonal6.Name = "textPersonal6";
+            this.textPersonal6.NullText = "Ejemplo: 809-111-9999";
+            this.textPersonal6.Size = new System.Drawing.Size(186, 24);
+            this.textPersonal6.TabIndex = 11;
+            this.textPersonal6.ThemeName = "VisualStudio2012Light";
+            this.textPersonal6.Validar = true;
+            // 
             // txtDireccion
             // 
             this.txtDireccion.Correo = false;
@@ -436,47 +470,6 @@
             this.txtDireccion.TabIndex = 6;
             this.txtDireccion.ThemeName = "VisualStudio2012Light";
             this.txtDireccion.Validar = true;
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(608, 171);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(59, 17);
-            this.radLabel10.TabIndex = 4;
-            this.radLabel10.Text = "Municipio";
-            // 
-            // radLabel12
-            // 
-            this.radLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel12.Location = new System.Drawing.Point(608, 143);
-            this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(57, 17);
-            this.radLabel12.TabIndex = 2;
-            this.radLabel12.Text = "Provincia";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Correo = false;
-            this.txtCorreo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtCorreo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.Limpiar = true;
-            this.txtCorreo.Location = new System.Drawing.Point(691, 107);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.NullText = "ejemplo: soluciones@negocios.com";
-            this.txtCorreo.Size = new System.Drawing.Size(186, 24);
-            this.txtCorreo.TabIndex = 14;
-            this.txtCorreo.ThemeName = "VisualStudio2012Light";
-            this.txtCorreo.Validar = true;
-            // 
-            // radLabel14
-            // 
-            this.radLabel14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel14.Location = new System.Drawing.Point(608, 109);
-            this.radLabel14.Name = "radLabel14";
-            this.radLabel14.Size = new System.Drawing.Size(44, 19);
-            this.radLabel14.TabIndex = 12;
-            this.radLabel14.Text = "Correo";
             // 
             // txtTelefono
             // 
@@ -492,14 +485,14 @@
             this.txtTelefono.ThemeName = "VisualStudio2012Light";
             this.txtTelefono.Validar = true;
             // 
-            // radLabel15
+            // radLabel10
             // 
-            this.radLabel15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel15.Location = new System.Drawing.Point(608, 49);
-            this.radLabel15.Name = "radLabel15";
-            this.radLabel15.Size = new System.Drawing.Size(77, 19);
-            this.radLabel15.TabIndex = 10;
-            this.radLabel15.Text = "Telefono Fijo";
+            this.radLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel10.Location = new System.Drawing.Point(608, 171);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(59, 17);
+            this.radLabel10.TabIndex = 4;
+            this.radLabel10.Text = "Municipio";
             // 
             // radLabel16
             // 
@@ -510,38 +503,23 @@
             this.radLabel16.TabIndex = 10;
             this.radLabel16.Text = "Celular";
             // 
-            // textPersonal6
+            // radLabel12
             // 
-            this.textPersonal6.Correo = false;
-            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal6.Limpiar = true;
-            this.textPersonal6.Location = new System.Drawing.Point(691, 77);
-            this.textPersonal6.Name = "textPersonal6";
-            this.textPersonal6.NullText = "Ejemplo: 809-111-9999";
-            this.textPersonal6.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal6.TabIndex = 11;
-            this.textPersonal6.ThemeName = "VisualStudio2012Light";
-            this.textPersonal6.Validar = true;
+            this.radLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel12.Location = new System.Drawing.Point(608, 143);
+            this.radLabel12.Name = "radLabel12";
+            this.radLabel12.Size = new System.Drawing.Size(57, 17);
+            this.radLabel12.TabIndex = 2;
+            this.radLabel12.Text = "Provincia";
             // 
-            // txtNota
+            // radLabel15
             // 
-            this.txtNota.Correo = false;
-            this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNota.Limpiar = false;
-            this.txtNota.Location = new System.Drawing.Point(883, 45);
-            this.txtNota.Multiline = true;
-            this.txtNota.Name = "txtNota";
-            this.txtNota.NullText = "Nota";
-            // 
-            // 
-            // 
-            this.txtNota.RootElement.StretchVertically = true;
-            this.txtNota.Size = new System.Drawing.Size(174, 209);
-            this.txtNota.TabIndex = 15;
-            this.txtNota.ThemeName = "VisualStudio2012Light";
-            this.txtNota.Validar = true;
+            this.radLabel15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel15.Location = new System.Drawing.Point(608, 49);
+            this.radLabel15.Name = "radLabel15";
+            this.radLabel15.Size = new System.Drawing.Size(77, 19);
+            this.radLabel15.TabIndex = 10;
+            this.radLabel15.Text = "Telefono Fijo";
             // 
             // toolStrip1
             // 
@@ -570,6 +548,60 @@
             this.radSeparator2.TabIndex = 14;
             this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.linkLabel1.Location = new System.Drawing.Point(998, 257);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(49, 15);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.linkLabel2.Location = new System.Drawing.Point(952, 257);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(40, 15);
+            this.linkLabel2.TabIndex = 17;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Quitar";
+            // 
+            // cbbEstadoCivil
+            // 
+            this.cbbEstadoCivil.BackColor = System.Drawing.Color.White;
+            this.cbbEstadoCivil.Correo = false;
+            this.cbbEstadoCivil.DisplayMember = "Descripcion";
+            this.cbbEstadoCivil.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEstadoCivil.Limpiar = true;
+            this.cbbEstadoCivil.Location = new System.Drawing.Point(354, 168);
+            this.cbbEstadoCivil.Name = "cbbEstadoCivil";
+            this.cbbEstadoCivil.Size = new System.Drawing.Size(186, 23);
+            this.cbbEstadoCivil.TabIndex = 8;
+            this.cbbEstadoCivil.ThemeName = "VisualStudio2012Light";
+            this.cbbEstadoCivil.Validar = true;
+            this.cbbEstadoCivil.ValueMember = "IdMunicipio";
+            // 
+            // cbbSexo
+            // 
+            this.cbbSexo.BackColor = System.Drawing.Color.White;
+            this.cbbSexo.Correo = false;
+            this.cbbSexo.DisplayMember = "Descripcion";
+            this.cbbSexo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.Limpiar = true;
+            this.cbbSexo.Location = new System.Drawing.Point(354, 137);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(186, 23);
+            this.cbbSexo.TabIndex = 8;
+            this.cbbSexo.ThemeName = "VisualStudio2012Light";
+            this.cbbSexo.Validar = true;
+            this.cbbSexo.ValueMember = "IdProvincia";
+            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,8 +617,8 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Empleado";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -594,36 +626,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).EndInit();
             this.radPageView1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApodo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.c)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -631,8 +663,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Negocios.Componentes.TextPersonal txtRasonSocial;
+        private System.Windows.Forms.PictureBox Foto;
+        private Negocios.Componentes.TextPersonal txtApellido;
         private Negocios.Componentes.TextPersonal txtNombre;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
@@ -642,14 +674,12 @@
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage3;
-        private Negocios.Componentes.TextPersonal textPersonal4;
-        private Negocios.Componentes.TextPersonal textPersonal3;
-        private Negocios.Componentes.TextPersonal textPersonal2;
-        private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.TextPersonal c;
+        private Negocios.Componentes.TextPersonal txtApodo;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadLabel radLabel8;
-        private Negocios.Componentes.TextPersonal textPersonal5;
+        private Negocios.Componentes.TextPersonal txtIdentificacion;
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private Telerik.WinControls.UI.RadPanel radPanel1;
         private Negocios.Componentes.cbbPersonal cbbProvincia;
@@ -670,5 +700,9 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Telerik.WinControls.UI.RadSeparator radSeparator2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private Negocios.Componentes.cbbPersonal cbbSexo;
+        private Negocios.Componentes.cbbPersonal cbbEstadoCivil;
     }
 }

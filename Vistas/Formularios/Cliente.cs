@@ -144,11 +144,14 @@ namespace Vistas.Formularios
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.TipoIdentificacion' Puede moverla o quitarla según sea necesario.
             this.tipoIdentificacionTableAdapter.Fill(this.matrizDataSet.TipoIdentificacion);
 
+            if(IdCliente != 0)
+            {
 
-            cbbProvincia.SelectedIndex = -1;
-            cbbMunicipio.SelectedIndex = -1;
-            cbbSector.SelectedIndex = -1;
-            cbbTipoIdentificacion.SelectedIndex = -1;
+                //cbbProvincia.SelectedIndex = -1;
+                //cbbMunicipio.SelectedIndex = -1;
+                //cbbSector.SelectedIndex = -1;
+                //cbbTipoIdentificacion.SelectedIndex = -1;
+            }
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
