@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -60,6 +60,7 @@
             this.txtTelefono = new Negocios.Componentes.TextPersonal();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
             this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
@@ -82,7 +83,6 @@
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
-            this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
@@ -107,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
@@ -125,7 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -382,6 +382,17 @@
             this.radGroupBox3.Text = "Localidad";
             this.radGroupBox3.ThemeName = "VisualStudio2012Light";
             // 
+            // radToggleSwitch1
+            // 
+            this.radToggleSwitch1.Location = new System.Drawing.Point(820, 141);
+            this.radToggleSwitch1.Name = "radToggleSwitch1";
+            this.radToggleSwitch1.OffText = "Inactivo";
+            this.radToggleSwitch1.OnText = "Activo";
+            this.radToggleSwitch1.Size = new System.Drawing.Size(71, 20);
+            this.radToggleSwitch1.TabIndex = 9;
+            this.radToggleSwitch1.ThemeName = "VisualStudio2012Light";
+            this.radToggleSwitch1.ThumbTickness = 15;
+            // 
             // cbbProvincia
             // 
             this.cbbProvincia.BackColor = System.Drawing.Color.White;
@@ -540,46 +551,46 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.HeaderText = "IdContacto";
-            gridViewTextBoxColumn7.IsVisible = false;
-            gridViewTextBoxColumn7.Name = "IdContacto";
-            gridViewTextBoxColumn7.Width = 56;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.HeaderText = "Nombre";
-            gridViewTextBoxColumn8.Name = "Nombre";
-            gridViewTextBoxColumn8.Width = 115;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.HeaderText = "Telefono";
-            gridViewTextBoxColumn9.Name = "Telefono";
-            gridViewTextBoxColumn9.Width = 126;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.HeaderText = "Correo";
-            gridViewTextBoxColumn10.Name = "Correo";
-            gridViewTextBoxColumn10.Width = 112;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.HeaderText = "Departamento";
-            gridViewTextBoxColumn11.Name = "Departamento";
-            gridViewTextBoxColumn11.Width = 78;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.HeaderText = "Puesto";
-            gridViewTextBoxColumn12.Name = "Puesto";
-            gridViewTextBoxColumn12.Width = 64;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.HeaderText = "IdContacto";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "IdContacto";
+            gridViewTextBoxColumn1.Width = 56;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.HeaderText = "Nombre";
+            gridViewTextBoxColumn2.Name = "Nombre";
+            gridViewTextBoxColumn2.Width = 115;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.HeaderText = "Telefono";
+            gridViewTextBoxColumn3.Name = "Telefono";
+            gridViewTextBoxColumn3.Width = 126;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.HeaderText = "Correo";
+            gridViewTextBoxColumn4.Name = "Correo";
+            gridViewTextBoxColumn4.Width = 112;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.HeaderText = "Departamento";
+            gridViewTextBoxColumn5.Name = "Departamento";
+            gridViewTextBoxColumn5.Width = 78;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.HeaderText = "Puesto";
+            gridViewTextBoxColumn6.Name = "Puesto";
+            gridViewTextBoxColumn6.Width = 64;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor2.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor2.PropertyName = "column3";
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor1});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -635,17 +646,6 @@
             // 
             this.provinciaTableAdapter.ClearBeforeFill = true;
             // 
-            // radToggleSwitch1
-            // 
-            this.radToggleSwitch1.Location = new System.Drawing.Point(820, 141);
-            this.radToggleSwitch1.Name = "radToggleSwitch1";
-            this.radToggleSwitch1.OffText = "Inactivo";
-            this.radToggleSwitch1.OnText = "Activo";
-            this.radToggleSwitch1.Size = new System.Drawing.Size(71, 20);
-            this.radToggleSwitch1.TabIndex = 9;
-            this.radToggleSwitch1.ThemeName = "VisualStudio2012Light";
-            this.radToggleSwitch1.ThumbTickness = 15;
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,6 +698,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
@@ -717,7 +718,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -98,6 +98,12 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,12 +152,6 @@
     <Compile Include="Formularios\Obra.Designer.cs">
       <DependentUpon>Obra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Proveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Proveedor.Designer.cs">
-      <DependentUpon>Proveedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Informes\Informe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +191,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
