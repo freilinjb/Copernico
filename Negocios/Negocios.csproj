@@ -71,6 +71,7 @@
       <DependentUpon>TextPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Contacto.cs" />
+    <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>

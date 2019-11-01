@@ -36,12 +36,13 @@ namespace Vistas.Formularios
 
         private List<Negocios.Entidades.Contacto> ContactoGuardar = new List<Negocios.Entidades.Contacto>();
 
-
         //Acuerdate de prueba cambialo a privado
         public Proveedor()
         {
             InitializeComponent();
-            IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
+            IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
+
+            
         }
 
         public Proveedor(int IdCliente)
@@ -50,12 +51,12 @@ namespace Vistas.Formularios
 
             //Clientes_Load(this, null);
 
-            ds = Utilidades.Ejecutar($"SELECT * FROM VistaCliente WHERE IdCliente = {IdCliente}");
-            IdCliente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdCliente"].ToString());
+            ds = Utilidades.Ejecutar($"SELECT * FROM VistaProveedor WHERE IdProveedor = {IdCliente}");
+            IdCliente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdProveedor"].ToString());
             this.IdCliente = IdCliente;
             IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
             txtNombre.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
-            txtRasonSocial.Text = ds.Tables[0].Rows[0]["RazonSocial"].ToString();
+            txtRasonSocial.Text = ds.Tables[0].Rows[0]["'Razón Social"].ToString();
             txtNota.Text = ds.Tables[0].Rows[0]["Observacion"].ToString();
             cbbTipoIdentificacion.Text = ds.Tables[0].Rows[0]["TipoIdentificacion"].ToString();
             txtIdentificacion.Text = ds.Tables[0].Rows[0]["Identificacion"].ToString();
@@ -74,8 +75,6 @@ namespace Vistas.Formularios
             }
 
             this.Text += $"\t\t::.. Codigo:{IdCliente} \t {txtRasonSocial.Text.Trim()}  ..::";
-
-
         }
 
         public override bool Guardar()
@@ -97,7 +96,7 @@ namespace Vistas.Formularios
                     txtDireccion.Text.Trim(),
                     1,
                     1);
-                Debug.WriteLine("Creacion del cliente");
+                Debug.WriteLine("Creacion del Proveedor");
                 Debug.WriteLine(cliente.getGuardar());
 
                 ds = Utilidades.Ejecutar(cliente.getGuardar());
@@ -111,7 +110,7 @@ namespace Vistas.Formularios
                         for (int i = 0; i < ContactoGuardar.Count; i++)
                         {
                             ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
-                            Debug.WriteLine("Registro Cliente");
+                            Debug.WriteLine("Registro Proveedor");
                             Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
 
                         }
@@ -122,8 +121,8 @@ namespace Vistas.Formularios
                     Utilidades.Limpiar(this, errorProvider1);
                     dataContacto.Rows.Clear();
 
-                    IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
-                    this.Text = "Cliente \t\t Codigo:" + Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS IdCliente FROM Cliente").Tables[0].Rows[0]["IdCliente"].ToString().Trim();
+                    IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
+                    this.Text = "Cliente \t\t Codigo:" + IdCliente;
                     this.DialogResult = DialogResult.OK;
                 }
             }

@@ -646,7 +646,7 @@
             // 
             this.provinciaTableAdapter.ClearBeforeFill = true;
             // 
-            // Cliente
+            // Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -662,13 +662,13 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(928, 518);
-            this.Name = "Cliente";
+            this.Name = "Proveedor";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(0, 0);
-            this.Text = "Cliente";
+            this.Text = "Proveedor";
             this.Load += new System.EventHandler(this.Clientes_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Cliente_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
