@@ -48,8 +48,12 @@
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtNota = new Negocios.Componentes.TextPersonal();
+            this.cbbSexo = new Negocios.Componentes.cbbPersonal();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
+            this.cbbEstadoCivil = new Negocios.Componentes.cbbPersonal();
             this.txtCorreo = new Negocios.Componentes.TextPersonal();
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
@@ -66,10 +70,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.cbbEstadoCivil = new Negocios.Componentes.cbbPersonal();
-            this.cbbSexo = new Negocios.Componentes.cbbPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
@@ -89,7 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
@@ -105,8 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -189,7 +189,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.radPageView1.Location = new System.Drawing.Point(12, 342);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage1;
+            this.radPageView1.SelectedPage = this.radPageViewPage2;
             this.radPageView1.Size = new System.Drawing.Size(1063, 390);
             this.radPageView1.TabIndex = 2;
             this.radPageView1.ThemeName = "VisualStudio2012Light";
@@ -336,6 +336,28 @@
             this.radPanel1.TabIndex = 12;
             this.radPanel1.ThemeName = "VisualStudio2012Light";
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.linkLabel2.Location = new System.Drawing.Point(952, 257);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(40, 15);
+            this.linkLabel2.TabIndex = 17;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Quitar";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.linkLabel1.Location = new System.Drawing.Point(998, 257);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(49, 15);
+            this.linkLabel1.TabIndex = 16;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar";
+            // 
             // txtNota
             // 
             this.txtNota.Correo = false;
@@ -355,6 +377,22 @@
             this.txtNota.ThemeName = "VisualStudio2012Light";
             this.txtNota.Validar = true;
             // 
+            // cbbSexo
+            // 
+            this.cbbSexo.BackColor = System.Drawing.Color.White;
+            this.cbbSexo.Correo = false;
+            this.cbbSexo.DisplayMember = "Descripcion";
+            this.cbbSexo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.Limpiar = true;
+            this.cbbSexo.Location = new System.Drawing.Point(354, 137);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(186, 23);
+            this.cbbSexo.TabIndex = 8;
+            this.cbbSexo.ThemeName = "VisualStudio2012Light";
+            this.cbbSexo.Validar = true;
+            this.cbbSexo.ValueMember = "IdProvincia";
+            // 
             // cbbProvincia
             // 
             this.cbbProvincia.BackColor = System.Drawing.Color.White;
@@ -370,6 +408,22 @@
             this.cbbProvincia.ThemeName = "VisualStudio2012Light";
             this.cbbProvincia.Validar = true;
             this.cbbProvincia.ValueMember = "IdProvincia";
+            // 
+            // cbbEstadoCivil
+            // 
+            this.cbbEstadoCivil.BackColor = System.Drawing.Color.White;
+            this.cbbEstadoCivil.Correo = false;
+            this.cbbEstadoCivil.DisplayMember = "Descripcion";
+            this.cbbEstadoCivil.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEstadoCivil.Limpiar = true;
+            this.cbbEstadoCivil.Location = new System.Drawing.Point(354, 168);
+            this.cbbEstadoCivil.Name = "cbbEstadoCivil";
+            this.cbbEstadoCivil.Size = new System.Drawing.Size(186, 23);
+            this.cbbEstadoCivil.TabIndex = 8;
+            this.cbbEstadoCivil.ThemeName = "VisualStudio2012Light";
+            this.cbbEstadoCivil.Validar = true;
+            this.cbbEstadoCivil.ValueMember = "IdMunicipio";
             // 
             // txtCorreo
             // 
@@ -548,60 +602,6 @@
             this.radSeparator2.TabIndex = 14;
             this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.linkLabel1.Location = new System.Drawing.Point(998, 257);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(49, 15);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Agregar";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.linkLabel2.Location = new System.Drawing.Point(952, 257);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(40, 15);
-            this.linkLabel2.TabIndex = 17;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Quitar";
-            // 
-            // cbbEstadoCivil
-            // 
-            this.cbbEstadoCivil.BackColor = System.Drawing.Color.White;
-            this.cbbEstadoCivil.Correo = false;
-            this.cbbEstadoCivil.DisplayMember = "Descripcion";
-            this.cbbEstadoCivil.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbEstadoCivil.Limpiar = true;
-            this.cbbEstadoCivil.Location = new System.Drawing.Point(354, 168);
-            this.cbbEstadoCivil.Name = "cbbEstadoCivil";
-            this.cbbEstadoCivil.Size = new System.Drawing.Size(186, 23);
-            this.cbbEstadoCivil.TabIndex = 8;
-            this.cbbEstadoCivil.ThemeName = "VisualStudio2012Light";
-            this.cbbEstadoCivil.Validar = true;
-            this.cbbEstadoCivil.ValueMember = "IdMunicipio";
-            // 
-            // cbbSexo
-            // 
-            this.cbbSexo.BackColor = System.Drawing.Color.White;
-            this.cbbSexo.Correo = false;
-            this.cbbSexo.DisplayMember = "Descripcion";
-            this.cbbSexo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSexo.Limpiar = true;
-            this.cbbSexo.Location = new System.Drawing.Point(354, 137);
-            this.cbbSexo.Name = "cbbSexo";
-            this.cbbSexo.Size = new System.Drawing.Size(186, 23);
-            this.cbbSexo.TabIndex = 8;
-            this.cbbSexo.ThemeName = "VisualStudio2012Light";
-            this.cbbSexo.Validar = true;
-            this.cbbSexo.ValueMember = "IdProvincia";
-            // 
             // Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,7 +637,9 @@
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
@@ -654,8 +656,6 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

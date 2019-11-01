@@ -56,7 +56,7 @@ namespace Vistas.Formularios
             this.IdCliente = IdCliente;
             IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
             txtNombre.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
-            txtRasonSocial.Text = ds.Tables[0].Rows[0]["'Razón Social"].ToString();
+            txtRasonSocial.Text = ds.Tables[0].Rows[0]["'RazónSocial"].ToString();
             txtNota.Text = ds.Tables[0].Rows[0]["Observacion"].ToString();
             cbbTipoIdentificacion.Text = ds.Tables[0].Rows[0]["TipoIdentificacion"].ToString();
             txtIdentificacion.Text = ds.Tables[0].Rows[0]["Identificacion"].ToString();
