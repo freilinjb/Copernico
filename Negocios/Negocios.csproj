@@ -77,6 +77,8 @@
     <Compile Include="Componentes\TextPersonal.Designer.cs">
       <DependentUpon>TextPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\ActivoFijoGeneral.cs" />
+    <Compile Include="Entidades\ActivoFijoMaquinaria.cs" />
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Usuario.cs" />

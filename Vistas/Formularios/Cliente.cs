@@ -80,54 +80,65 @@ namespace Vistas.Formularios
 
         public override bool Guardar()
         {
-            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+            bool bien = true;
+
+            try
             {
-                Negocios.Cliente cliente = new Negocios.Cliente(
-                    IdCliente,
-                    txtNombre.Text.Trim(),
-                    txtRasonSocial.Text.Trim(),
-                    txtNota.Text.Trim(),
-                    Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
-                    txtIdentificacion.Text.Trim(),
-                    txtTelefono.Text.Trim(),
-                    txtCorreo.Text.Trim(),
-                    Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
-                    Convert.ToInt32(cbbProvincia.SelectedValue.ToString()),
-                    Convert.ToInt32(cbbSector.SelectedValue.ToString()),
-                    txtDireccion.Text.Trim(),
-                    1,
-                    1);
-                Debug.WriteLine("Creacion del cliente");
-                Debug.WriteLine(cliente.getGuardar());
-
-                ds = Utilidades.Ejecutar(cliente.getGuardar());
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
+                    Negocios.Cliente cliente = new Negocios.Cliente(
+                        IdCliente,
+                        txtNombre.Text.Trim(),
+                        txtRasonSocial.Text.Trim(),
+                        txtNota.Text.Trim(),
+                        Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
+                        txtIdentificacion.Text.Trim(),
+                        txtTelefono.Text.Trim(),
+                        txtCorreo.Text.Trim(),
+                        Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
+                        Convert.ToInt32(cbbProvincia.SelectedValue.ToString()),
+                        Convert.ToInt32(cbbSector.SelectedValue.ToString()),
+                        txtDireccion.Text.Trim(),
+                        1,
+                        1);
+                    Debug.WriteLine("Creacion del cliente");
+                    Debug.WriteLine(cliente.getGuardar());
 
-                    if (ContactoGuardar.Count > 0)
+                    ds = Utilidades.Ejecutar(cliente.getGuardar());
+
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        for (int i = 0; i < ContactoGuardar.Count; i++)
+                        IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
+
+                        if (ContactoGuardar.Count > 0)
                         {
-                            ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
-                            Debug.WriteLine("Registro Cliente");
-                            Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
+                            for (int i = 0; i < ContactoGuardar.Count; i++)
+                            {
+                                ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
+                                Debug.WriteLine("Registro Cliente");
+                                Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
 
+                            }
                         }
+
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        Utilidades.Limpiar(this, errorProvider1);
+                        dataContacto.Rows.Clear();
+
+                        IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
+                        this.Text = "Cliente \t\t Codigo:" + Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS IdCliente FROM Cliente").Tables[0].Rows[0]["IdCliente"].ToString().Trim();
+                        this.DialogResult = DialogResult.OK;
                     }
-
-                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-
-                    Utilidades.Limpiar(this, errorProvider1);
-                    dataContacto.Rows.Clear();
-
-                    IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
-                    this.Text = "Cliente \t\t Codigo:" + Utilidades.Ejecutar("SELECT MAX(IdCliente)+1 AS IdCliente FROM Cliente").Tables[0].Rows[0]["IdCliente"].ToString().Trim();
-                    this.DialogResult = DialogResult.OK;
                 }
             }
-            return true;
+            catch(Exception ex)
+            {
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                bien = false;
+            }
+            
+            return bien;
         }
 
         private void Clientes_Load(object sender, EventArgs e)
