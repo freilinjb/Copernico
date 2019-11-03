@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn193 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn194 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn195 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn196 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn197 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn198 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor33 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition33 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn223 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn224 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn225 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn226 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn227 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn228 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor38 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition38 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radTabbedFormControl1 = new Telerik.WinControls.UI.RadTabbedFormControl();
             this.tabInformacionGeneral = new Telerik.WinControls.UI.RadTabbedFormControlTab();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
@@ -98,6 +98,31 @@
             this.radPanel3 = new Telerik.WinControls.UI.RadPanel();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
+            this.maskPersonal1 = new Negocios.Componentes.maskPersonal();
+            this.radPanel4 = new Telerik.WinControls.UI.RadPanel();
+            this.textPersonal16 = new Negocios.Componentes.TextPersonal();
+            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal17 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal18 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal19 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal20 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal21 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal22 = new Negocios.Componentes.TextPersonal();
+            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal23 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal24 = new Negocios.Componentes.TextPersonal();
+            this.radLabel24 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal25 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal26 = new Negocios.Componentes.TextPersonal();
+            this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel27 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal27 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal28 = new Negocios.Componentes.TextPersonal();
+            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel29 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal29 = new Negocios.Componentes.TextPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radTabbedFormControl1)).BeginInit();
             this.radTabbedFormControl1.SuspendLayout();
             this.tabInformacionGeneral.SuspendLayout();
@@ -162,7 +187,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
             this.radPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maskPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).BeginInit();
+            this.radPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,6 +273,7 @@
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.radPanel4);
             this.radGroupBox1.Controls.Add(this.radSeparator3);
             this.radGroupBox1.Controls.Add(this.radGroupBox2);
             this.radGroupBox1.Controls.Add(this.cbbPersonal7);
@@ -790,45 +843,45 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn193.EnableExpressionEditor = false;
-            gridViewTextBoxColumn193.HeaderText = "Fecha";
-            gridViewTextBoxColumn193.Name = "Fecha";
-            gridViewTextBoxColumn193.Width = 119;
-            gridViewTextBoxColumn194.EnableExpressionEditor = false;
-            gridViewTextBoxColumn194.HeaderText = "Largo";
-            gridViewTextBoxColumn194.Name = "Largo";
-            gridViewTextBoxColumn194.Width = 121;
-            gridViewTextBoxColumn195.EnableExpressionEditor = false;
-            gridViewTextBoxColumn195.HeaderText = "Ancho";
-            gridViewTextBoxColumn195.Name = "Ancho";
-            gridViewTextBoxColumn195.Width = 124;
-            gridViewTextBoxColumn196.EnableExpressionEditor = false;
-            gridViewTextBoxColumn196.HeaderText = "Alto";
-            gridViewTextBoxColumn196.Name = "Alto";
-            gridViewTextBoxColumn196.Width = 128;
-            gridViewTextBoxColumn197.EnableExpressionEditor = false;
-            gridViewTextBoxColumn197.HeaderText = "Calculada";
-            gridViewTextBoxColumn197.Name = "Calculada";
-            gridViewTextBoxColumn197.Width = 139;
-            gridViewTextBoxColumn198.EnableExpressionEditor = false;
-            gridViewTextBoxColumn198.HeaderText = "Facturar";
-            gridViewTextBoxColumn198.Name = "Facturar";
-            gridViewTextBoxColumn198.Width = 143;
+            gridViewTextBoxColumn223.EnableExpressionEditor = false;
+            gridViewTextBoxColumn223.HeaderText = "Fecha";
+            gridViewTextBoxColumn223.Name = "Fecha";
+            gridViewTextBoxColumn223.Width = 119;
+            gridViewTextBoxColumn224.EnableExpressionEditor = false;
+            gridViewTextBoxColumn224.HeaderText = "Largo";
+            gridViewTextBoxColumn224.Name = "Largo";
+            gridViewTextBoxColumn224.Width = 121;
+            gridViewTextBoxColumn225.EnableExpressionEditor = false;
+            gridViewTextBoxColumn225.HeaderText = "Ancho";
+            gridViewTextBoxColumn225.Name = "Ancho";
+            gridViewTextBoxColumn225.Width = 124;
+            gridViewTextBoxColumn226.EnableExpressionEditor = false;
+            gridViewTextBoxColumn226.HeaderText = "Alto";
+            gridViewTextBoxColumn226.Name = "Alto";
+            gridViewTextBoxColumn226.Width = 128;
+            gridViewTextBoxColumn227.EnableExpressionEditor = false;
+            gridViewTextBoxColumn227.HeaderText = "Calculada";
+            gridViewTextBoxColumn227.Name = "Calculada";
+            gridViewTextBoxColumn227.Width = 139;
+            gridViewTextBoxColumn228.EnableExpressionEditor = false;
+            gridViewTextBoxColumn228.HeaderText = "Facturar";
+            gridViewTextBoxColumn228.Name = "Facturar";
+            gridViewTextBoxColumn228.Width = 143;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn193,
-            gridViewTextBoxColumn194,
-            gridViewTextBoxColumn195,
-            gridViewTextBoxColumn196,
-            gridViewTextBoxColumn197,
-            gridViewTextBoxColumn198});
+            gridViewTextBoxColumn223,
+            gridViewTextBoxColumn224,
+            gridViewTextBoxColumn225,
+            gridViewTextBoxColumn226,
+            gridViewTextBoxColumn227,
+            gridViewTextBoxColumn228});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor33.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor33.PropertyName = "column3";
+            sortDescriptor38.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor38.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor33});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition33;
+            sortDescriptor38});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition38;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -991,11 +1044,12 @@
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.radGroupBox2.Controls.Add(this.maskPersonal1);
             this.radGroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.radGroupBox2.HeaderText = "Datos Iniciales";
-            this.radGroupBox2.Location = new System.Drawing.Point(9, 351);
+            this.radGroupBox2.Location = new System.Drawing.Point(9, 333);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(756, 100);
+            this.radGroupBox2.Size = new System.Drawing.Size(767, 100);
             this.radGroupBox2.TabIndex = 1;
             this.radGroupBox2.Text = "Datos Iniciales";
             this.radGroupBox2.ThemeName = "VisualStudio2012Light";
@@ -1007,6 +1061,336 @@
             this.radSeparator3.Size = new System.Drawing.Size(779, 10);
             this.radSeparator3.TabIndex = 10;
             this.radSeparator3.ThemeName = "VisualStudio2012Light";
+            // 
+            // maskPersonal1
+            // 
+            this.maskPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskPersonal1.Limpiar = false;
+            this.maskPersonal1.Location = new System.Drawing.Point(6, 21);
+            this.maskPersonal1.Mask = "00/00/0000";
+            this.maskPersonal1.MaskType = Telerik.WinControls.UI.MaskType.Standard;
+            this.maskPersonal1.Name = "maskPersonal1";
+            this.maskPersonal1.Size = new System.Drawing.Size(125, 24);
+            this.maskPersonal1.TabIndex = 0;
+            this.maskPersonal1.TabStop = false;
+            this.maskPersonal1.Text = "__/__/____";
+            this.maskPersonal1.ThemeName = "VisualStudio2012Light";
+            this.maskPersonal1.Validar = false;
+            // 
+            // radPanel4
+            // 
+            this.radPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.radPanel4.Controls.Add(this.textPersonal16);
+            this.radPanel4.Controls.Add(this.radLabel20);
+            this.radPanel4.Controls.Add(this.radLabel21);
+            this.radPanel4.Controls.Add(this.textPersonal17);
+            this.radPanel4.Controls.Add(this.textPersonal18);
+            this.radPanel4.Controls.Add(this.textPersonal19);
+            this.radPanel4.Controls.Add(this.textPersonal20);
+            this.radPanel4.Controls.Add(this.textPersonal21);
+            this.radPanel4.Controls.Add(this.textPersonal22);
+            this.radPanel4.Controls.Add(this.radLabel23);
+            this.radPanel4.Controls.Add(this.textPersonal23);
+            this.radPanel4.Controls.Add(this.textPersonal24);
+            this.radPanel4.Controls.Add(this.radLabel24);
+            this.radPanel4.Controls.Add(this.radLabel25);
+            this.radPanel4.Controls.Add(this.textPersonal25);
+            this.radPanel4.Controls.Add(this.textPersonal26);
+            this.radPanel4.Controls.Add(this.radLabel26);
+            this.radPanel4.Controls.Add(this.radLabel27);
+            this.radPanel4.Controls.Add(this.textPersonal27);
+            this.radPanel4.Controls.Add(this.textPersonal28);
+            this.radPanel4.Controls.Add(this.radLabel28);
+            this.radPanel4.Controls.Add(this.radLabel29);
+            this.radPanel4.Controls.Add(this.textPersonal29);
+            this.radPanel4.Location = new System.Drawing.Point(435, 55);
+            this.radPanel4.Name = "radPanel4";
+            this.radPanel4.Size = new System.Drawing.Size(341, 181);
+            this.radPanel4.TabIndex = 11;
+            this.radPanel4.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal16
+            // 
+            this.textPersonal16.Correo = false;
+            this.textPersonal16.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal16.Limpiar = true;
+            this.textPersonal16.Location = new System.Drawing.Point(103, 88);
+            this.textPersonal16.Name = "textPersonal16";
+            this.textPersonal16.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal16.TabIndex = 2;
+            this.textPersonal16.Text = "10.50";
+            this.textPersonal16.ThemeName = "VisualStudio2012Light";
+            this.textPersonal16.Validar = true;
+            // 
+            // radLabel20
+            // 
+            this.radLabel20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel20.Location = new System.Drawing.Point(3, 33);
+            this.radLabel20.Name = "radLabel20";
+            this.radLabel20.Size = new System.Drawing.Size(94, 19);
+            this.radLabel20.TabIndex = 0;
+            this.radLabel20.Text = "Cajon Principal";
+            this.radLabel20.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel21
+            // 
+            this.radLabel21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel21.Location = new System.Drawing.Point(103, 3);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(44, 19);
+            this.radLabel21.TabIndex = 0;
+            this.radLabel21.Text = "Ancho";
+            this.radLabel21.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal17
+            // 
+            this.textPersonal17.Correo = false;
+            this.textPersonal17.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal17.Limpiar = true;
+            this.textPersonal17.Location = new System.Drawing.Point(268, 58);
+            this.textPersonal17.Name = "textPersonal17";
+            this.textPersonal17.Size = new System.Drawing.Size(59, 24);
+            this.textPersonal17.TabIndex = 2;
+            this.textPersonal17.ThemeName = "VisualStudio2012Light";
+            this.textPersonal17.Validar = true;
+            // 
+            // textPersonal18
+            // 
+            this.textPersonal18.Correo = false;
+            this.textPersonal18.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal18.Limpiar = true;
+            this.textPersonal18.Location = new System.Drawing.Point(156, 88);
+            this.textPersonal18.Name = "textPersonal18";
+            this.textPersonal18.Size = new System.Drawing.Size(46, 24);
+            this.textPersonal18.TabIndex = 2;
+            this.textPersonal18.Text = "10.50";
+            this.textPersonal18.ThemeName = "VisualStudio2012Light";
+            this.textPersonal18.Validar = true;
+            // 
+            // textPersonal19
+            // 
+            this.textPersonal19.Correo = false;
+            this.textPersonal19.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal19.Limpiar = true;
+            this.textPersonal19.Location = new System.Drawing.Point(208, 28);
+            this.textPersonal19.Name = "textPersonal19";
+            this.textPersonal19.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal19.TabIndex = 2;
+            this.textPersonal19.Text = "10.50";
+            this.textPersonal19.ThemeName = "VisualStudio2012Light";
+            this.textPersonal19.Validar = true;
+            // 
+            // textPersonal20
+            // 
+            this.textPersonal20.Correo = false;
+            this.textPersonal20.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal20.Limpiar = true;
+            this.textPersonal20.Location = new System.Drawing.Point(156, 28);
+            this.textPersonal20.Name = "textPersonal20";
+            this.textPersonal20.Size = new System.Drawing.Size(46, 24);
+            this.textPersonal20.TabIndex = 2;
+            this.textPersonal20.Text = "10.50";
+            this.textPersonal20.ThemeName = "VisualStudio2012Light";
+            this.textPersonal20.Validar = true;
+            // 
+            // textPersonal21
+            // 
+            this.textPersonal21.Correo = false;
+            this.textPersonal21.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal21.Limpiar = true;
+            this.textPersonal21.Location = new System.Drawing.Point(103, 58);
+            this.textPersonal21.Name = "textPersonal21";
+            this.textPersonal21.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal21.TabIndex = 2;
+            this.textPersonal21.Text = "10.50";
+            this.textPersonal21.ThemeName = "VisualStudio2012Light";
+            this.textPersonal21.Validar = true;
+            // 
+            // textPersonal22
+            // 
+            this.textPersonal22.Correo = false;
+            this.textPersonal22.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal22.Limpiar = true;
+            this.textPersonal22.Location = new System.Drawing.Point(268, 28);
+            this.textPersonal22.Name = "textPersonal22";
+            this.textPersonal22.Size = new System.Drawing.Size(59, 24);
+            this.textPersonal22.TabIndex = 2;
+            this.textPersonal22.ThemeName = "VisualStudio2012Light";
+            this.textPersonal22.Validar = true;
+            // 
+            // radLabel23
+            // 
+            this.radLabel23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel23.Location = new System.Drawing.Point(153, 3);
+            this.radLabel23.Name = "radLabel23";
+            this.radLabel23.Size = new System.Drawing.Size(40, 19);
+            this.radLabel23.TabIndex = 0;
+            this.radLabel23.Text = "Largo";
+            this.radLabel23.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal23
+            // 
+            this.textPersonal23.Correo = false;
+            this.textPersonal23.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal23.Limpiar = true;
+            this.textPersonal23.Location = new System.Drawing.Point(268, 88);
+            this.textPersonal23.Name = "textPersonal23";
+            this.textPersonal23.Size = new System.Drawing.Size(59, 24);
+            this.textPersonal23.TabIndex = 2;
+            this.textPersonal23.ThemeName = "VisualStudio2012Light";
+            this.textPersonal23.Validar = true;
+            // 
+            // textPersonal24
+            // 
+            this.textPersonal24.Correo = false;
+            this.textPersonal24.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal24.Limpiar = true;
+            this.textPersonal24.Location = new System.Drawing.Point(156, 58);
+            this.textPersonal24.Name = "textPersonal24";
+            this.textPersonal24.Size = new System.Drawing.Size(46, 24);
+            this.textPersonal24.TabIndex = 2;
+            this.textPersonal24.Text = "10.50";
+            this.textPersonal24.ThemeName = "VisualStudio2012Light";
+            this.textPersonal24.Validar = true;
+            // 
+            // radLabel24
+            // 
+            this.radLabel24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel24.Location = new System.Drawing.Point(268, 3);
+            this.radLabel24.Name = "radLabel24";
+            this.radLabel24.Size = new System.Drawing.Size(59, 19);
+            this.radLabel24.TabIndex = 0;
+            this.radLabel24.Text = "Volumen";
+            this.radLabel24.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel25
+            // 
+            this.radLabel25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel25.Location = new System.Drawing.Point(50, 63);
+            this.radLabel25.Name = "radLabel25";
+            this.radLabel25.Size = new System.Drawing.Size(47, 19);
+            this.radLabel25.TabIndex = 0;
+            this.radLabel25.Text = "Tablon";
+            this.radLabel25.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal25
+            // 
+            this.textPersonal25.Correo = false;
+            this.textPersonal25.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal25.Limpiar = true;
+            this.textPersonal25.Location = new System.Drawing.Point(268, 118);
+            this.textPersonal25.Name = "textPersonal25";
+            this.textPersonal25.Size = new System.Drawing.Size(59, 24);
+            this.textPersonal25.TabIndex = 2;
+            this.textPersonal25.ThemeName = "VisualStudio2012Light";
+            this.textPersonal25.Validar = true;
+            // 
+            // textPersonal26
+            // 
+            this.textPersonal26.Correo = false;
+            this.textPersonal26.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal26.Limpiar = true;
+            this.textPersonal26.Location = new System.Drawing.Point(208, 88);
+            this.textPersonal26.Name = "textPersonal26";
+            this.textPersonal26.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal26.TabIndex = 2;
+            this.textPersonal26.Text = "10.50";
+            this.textPersonal26.ThemeName = "VisualStudio2012Light";
+            this.textPersonal26.Validar = true;
+            // 
+            // radLabel26
+            // 
+            this.radLabel26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.radLabel26.Location = new System.Drawing.Point(96, 153);
+            this.radLabel26.Name = "radLabel26";
+            this.radLabel26.Size = new System.Drawing.Size(166, 19);
+            this.radLabel26.TabIndex = 0;
+            this.radLabel26.Text = "Capacidad/Mts3  a Facturar";
+            this.radLabel26.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel27
+            // 
+            this.radLabel27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel27.Location = new System.Drawing.Point(208, 3);
+            this.radLabel27.Name = "radLabel27";
+            this.radLabel27.Size = new System.Drawing.Size(31, 19);
+            this.radLabel27.TabIndex = 0;
+            this.radLabel27.Text = "Alto";
+            this.radLabel27.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal27
+            // 
+            this.textPersonal27.Correo = false;
+            this.textPersonal27.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal27.Limpiar = true;
+            this.textPersonal27.Location = new System.Drawing.Point(268, 148);
+            this.textPersonal27.Name = "textPersonal27";
+            this.textPersonal27.Size = new System.Drawing.Size(59, 24);
+            this.textPersonal27.TabIndex = 2;
+            this.textPersonal27.ThemeName = "VisualStudio2012Light";
+            this.textPersonal27.Validar = true;
+            // 
+            // textPersonal28
+            // 
+            this.textPersonal28.Correo = false;
+            this.textPersonal28.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal28.Limpiar = true;
+            this.textPersonal28.Location = new System.Drawing.Point(103, 28);
+            this.textPersonal28.Name = "textPersonal28";
+            this.textPersonal28.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal28.TabIndex = 2;
+            this.textPersonal28.Text = "10.50";
+            this.textPersonal28.ThemeName = "VisualStudio2012Light";
+            this.textPersonal28.Validar = true;
+            // 
+            // radLabel28
+            // 
+            this.radLabel28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.radLabel28.Location = new System.Drawing.Point(98, 123);
+            this.radLabel28.Name = "radLabel28";
+            this.radLabel28.Size = new System.Drawing.Size(164, 19);
+            this.radLabel28.TabIndex = 0;
+            this.radLabel28.Text = "Capacidad/Mts3  Calculada";
+            this.radLabel28.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel29
+            // 
+            this.radLabel29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.radLabel29.Location = new System.Drawing.Point(50, 93);
+            this.radLabel29.Name = "radLabel29";
+            this.radLabel29.Size = new System.Drawing.Size(47, 19);
+            this.radLabel29.TabIndex = 0;
+            this.radLabel29.Text = "Botella";
+            this.radLabel29.ThemeName = "VisualStudio2012Light";
+            // 
+            // textPersonal29
+            // 
+            this.textPersonal29.Correo = false;
+            this.textPersonal29.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal29.Limpiar = true;
+            this.textPersonal29.Location = new System.Drawing.Point(208, 58);
+            this.textPersonal29.Name = "textPersonal29";
+            this.textPersonal29.Size = new System.Drawing.Size(44, 24);
+            this.textPersonal29.TabIndex = 2;
+            this.textPersonal29.Text = "10.50";
+            this.textPersonal29.ThemeName = "VisualStudio2012Light";
+            this.textPersonal29.Validar = true;
             // 
             // ActivoFijo
             // 
@@ -1088,7 +1472,36 @@
             this.radPanel3.ResumeLayout(false);
             this.radPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maskPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).EndInit();
+            this.radPanel4.ResumeLayout(false);
+            this.radPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1158,5 +1571,30 @@
         private Telerik.WinControls.UI.RadPanel radPanel3;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
+        private Negocios.Componentes.maskPersonal maskPersonal1;
+        private Telerik.WinControls.UI.RadPanel radPanel4;
+        private Negocios.Componentes.TextPersonal textPersonal16;
+        private Telerik.WinControls.UI.RadLabel radLabel20;
+        private Telerik.WinControls.UI.RadLabel radLabel21;
+        private Negocios.Componentes.TextPersonal textPersonal17;
+        private Negocios.Componentes.TextPersonal textPersonal18;
+        private Negocios.Componentes.TextPersonal textPersonal19;
+        private Negocios.Componentes.TextPersonal textPersonal20;
+        private Negocios.Componentes.TextPersonal textPersonal21;
+        private Negocios.Componentes.TextPersonal textPersonal22;
+        private Telerik.WinControls.UI.RadLabel radLabel23;
+        private Negocios.Componentes.TextPersonal textPersonal23;
+        private Negocios.Componentes.TextPersonal textPersonal24;
+        private Telerik.WinControls.UI.RadLabel radLabel24;
+        private Telerik.WinControls.UI.RadLabel radLabel25;
+        private Negocios.Componentes.TextPersonal textPersonal25;
+        private Negocios.Componentes.TextPersonal textPersonal26;
+        private Telerik.WinControls.UI.RadLabel radLabel26;
+        private Telerik.WinControls.UI.RadLabel radLabel27;
+        private Negocios.Componentes.TextPersonal textPersonal27;
+        private Negocios.Componentes.TextPersonal textPersonal28;
+        private Telerik.WinControls.UI.RadLabel radLabel28;
+        private Telerik.WinControls.UI.RadLabel radLabel29;
+        private Negocios.Componentes.TextPersonal textPersonal29;
     }
 }

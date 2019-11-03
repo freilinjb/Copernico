@@ -16,7 +16,8 @@ namespace Negocios.Componentes
         {
             InitializeComponent();
         }
-        public Boolean Validar { set; get; }
-        public Boolean Correo { set; get; }
+
+        public Boolean Limpiar { get; set; }
+        public Boolean Validar { get; set; }
     }
 }
