@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vistas.Formularios
+namespace Negocios.Componentes
 {
-    public partial class Form1 : Form
+    public partial class maskPersonal : Telerik.WinControls.UI.RadMaskedEditBox
     {
-        public Form1()
+        public maskPersonal()
         {
             InitializeComponent();
         }
+        public Boolean Validar { set; get; }
+        public Boolean Correo { set; get; }
     }
 }

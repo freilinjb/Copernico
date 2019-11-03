@@ -87,6 +87,8 @@
             this.cbbRubro = new Negocios.Componentes.cbbPersonal();
             this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
@@ -612,7 +614,7 @@
             this.txtNota.Correo = false;
             this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNota.Limpiar = false;
+            this.txtNota.Limpiar = true;
             this.txtNota.Location = new System.Drawing.Point(413, 22);
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
@@ -688,12 +690,38 @@
             // 
             this.rubroTableAdapter.ClearBeforeFill = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.Location = new System.Drawing.Point(350, 159);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(48, 13);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Agregar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbIngresar_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel2.Location = new System.Drawing.Point(281, 159);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(51, 13);
+            this.linkLabel2.TabIndex = 1;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Remover";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbIngresar_LinkClicked);
+            // 
             // Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(920, 485);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.chEstado);
             this.Controls.Add(this.radSeparator1);
             this.Controls.Add(this.cbbRubro);
@@ -823,5 +851,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel12;
         private System.Windows.Forms.BindingSource rubroBindingSource;
         private MatrizDataSetTableAdapters.RubroTableAdapter rubroTableAdapter;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

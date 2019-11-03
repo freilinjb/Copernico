@@ -1,6 +1,6 @@
 ﻿namespace Negocios.Componentes
 {
-    partial class TextPersonal
+    partial class maskPersonal
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -32,10 +32,9 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // TextPersonal
+            // maskPersonal
             // 
-            this.Size = new System.Drawing.Size(100, 24);
-            this.ThemeName = "VisualStudio2012Light";
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

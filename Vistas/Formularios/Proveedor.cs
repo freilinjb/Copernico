@@ -191,7 +191,6 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.F1)
             {
                 Guardar();
-                MessageBox.Show("preciosd f1");
             }
         }
     }

@@ -64,6 +64,12 @@
     <Compile Include="Componentes\ComboPersonal.Designer.cs">
       <DependentUpon>ComboPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\maskPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\maskPersonal.Designer.cs">
+      <DependentUpon>maskPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\TextPersonal.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,6 +78,7 @@
     </Compile>
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +100,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Componentes\cbbPersonal.resx">
       <DependentUpon>cbbPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\maskPersonal.resx">
+      <DependentUpon>maskPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\TextPersonal.resx">
       <DependentUpon>TextPersonal.cs</DependentUpon>
