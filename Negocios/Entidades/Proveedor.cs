@@ -14,6 +14,7 @@ namespace Negocios.Entidades
         public string RazonSocial;
         public string Identificacion;
         public int IdTipoIdentificacion;
+        public int IdRubro;
         public string Telefono;
         public string Correo;
         public int IdProvincia;
@@ -21,6 +22,7 @@ namespace Negocios.Entidades
         public int IdSector;
         public string Direccion;
         public string Observacion;
+        public int IdCentro;
         public int Estado;
 
         public Proveedor()
@@ -28,7 +30,7 @@ namespace Negocios.Entidades
 
         }
 
-        public Proveedor(int idProveedor, int idTercero, string nombre, string razonSocial, string identificacion, int idTipoIdentificacion, string telefono, string correo, int idProvincia, int idMunicipio, int idSector, string direccion, string observacion, int estado)
+        public Proveedor(int idProveedor, int idTercero, string nombre, string razonSocial, string identificacion, int idTipoIdentificacion,int idRubro, string telefono, string correo, int idProvincia, int idMunicipio, int idSector, string direccion, string observacion, int idCentro, int estado)
         {
             IdProveedor = idProveedor;
             IdTercero = idTercero;
@@ -36,6 +38,7 @@ namespace Negocios.Entidades
             RazonSocial = razonSocial;
             Identificacion = identificacion;
             IdTipoIdentificacion = idTipoIdentificacion;
+            IdRubro = idRubro;
             Telefono = telefono;
             Correo = correo;
             IdProvincia = idProvincia;
@@ -43,12 +46,13 @@ namespace Negocios.Entidades
             IdSector = idSector;
             Direccion = direccion;
             Observacion = observacion;
+            IdCentro = idCentro;
             Estado = estado;
         }
 
         public string getGuardar()
         {
-            return $"EXEC RegistrarProveedor {IdProveedor},{IdTercero},'{Nombre}','{RazonSocial}','{Identificacion}',{IdTipoIdentificacion},'{Telefono}','{Correo}',{IdProvincia},{IdMunicipio},{IdSector},'{Direccion}','{Observacion}',{Estado}";
+            return $"EXEC RegistrarProveedor {IdProveedor},'{Nombre}','{RazonSocial}','{Correo}',{Telefono},'{IdTipoIdentificacion}','{Identificacion}',{IdRubro},{IdMunicipio},{IdProvincia},'{IdSector}','{Direccion}','{Observacion}',{IdCentro},{Estado}";
         }
     }
 }

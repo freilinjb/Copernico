@@ -18,7 +18,7 @@ namespace Vistas.Formularios
 {
     public partial class Proveedor : FormBase
     {
-        private int IdCliente;
+        private int IdProveedor;
         private int IdTercero;
         private DataSet ds;
 
@@ -40,25 +40,26 @@ namespace Vistas.Formularios
         public Proveedor()
         {
             InitializeComponent();
-            IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
+            IdProveedor = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
 
             
         }
 
-        public Proveedor(int IdCliente)
+        public Proveedor(int IdProveedor)
         {
             InitializeComponent();
 
             //Clientes_Load(this, null);
 
-            ds = Utilidades.Ejecutar($"SELECT * FROM VistaProveedor WHERE IdProveedor = {IdCliente}");
-            IdCliente = Convert.ToInt32(ds.Tables[0].Rows[0]["IdProveedor"].ToString());
-            this.IdCliente = IdCliente;
+            ds = Utilidades.Ejecutar($"SELECT * FROM VistaProveedor WHERE IdProveedor = {IdProveedor}");
+            IdProveedor = Convert.ToInt32(ds.Tables[0].Rows[0]["IdProveedor"].ToString());
+            this.IdProveedor = IdProveedor;
             IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
             txtNombre.Text = ds.Tables[0].Rows[0]["Nombre"].ToString();
-            txtRasonSocial.Text = ds.Tables[0].Rows[0]["'RazónSocial"].ToString();
+            txtRasonSocial.Text = ds.Tables[0].Rows[0]["RazonSocial"].ToString();
             txtNota.Text = ds.Tables[0].Rows[0]["Observacion"].ToString();
-            cbbTipoIdentificacion.Text = ds.Tables[0].Rows[0]["TipoIdentificacion"].ToString();
+            cbbRubro.Text = ds.Tables[0].Rows[0]["Rubro"].ToString();
+            cbbTipoIdentificacion.Text = ds.Tables[0].Rows[0]["Tipo de Identificaion"].ToString();
             txtIdentificacion.Text = ds.Tables[0].Rows[0]["Identificacion"].ToString();
             txtCorreo.Text = ds.Tables[0].Rows[0]["Correo"].ToString();
             txtTelefono.Text = ds.Tables[0].Rows[0]["Telefono"].ToString();
@@ -74,32 +75,36 @@ namespace Vistas.Formularios
                 dataContacto.Rows.Add(x[0].ToString(), x[2].ToString(), x[3].ToString(), x[4].ToString(), x[5].ToString(), x[6].ToString());
             }
 
-            this.Text += $"\t\t::.. Codigo:{IdCliente} \t {txtRasonSocial.Text.Trim()}  ..::";
+            this.Text += $"\t\t::.. Codigo:{IdProveedor} \t {txtRasonSocial.Text.Trim()}  ..::";
         }
 
         public override bool Guardar()
         {
+            bool bien = true;
             if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
             {
-                Negocios.Cliente cliente = new Negocios.Cliente(
-                    IdCliente,
+                Negocios.Entidades.Proveedor proveedor = new Negocios.Entidades.Proveedor(
+                    IdProveedor,
+                    IdTercero,
                     txtNombre.Text.Trim(),
                     txtRasonSocial.Text.Trim(),
-                    txtNota.Text.Trim(),
-                    Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
                     txtIdentificacion.Text.Trim(),
+                    Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
+                    Convert.ToInt32(cbbRubro.SelectedValue.ToString()),
                     txtTelefono.Text.Trim(),
                     txtCorreo.Text.Trim(),
-                    Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
                     Convert.ToInt32(cbbProvincia.SelectedValue.ToString()),
+                    Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
                     Convert.ToInt32(cbbSector.SelectedValue.ToString()),
                     txtDireccion.Text.Trim(),
+                    txtNota.Text.Trim(),
                     1,
-                    1);
-                Debug.WriteLine("Creacion del Proveedor");
-                Debug.WriteLine(cliente.getGuardar());
+                    chEstado.ToggleStateMode == ToggleStateMode.Click ? 1 : 0);
 
-                ds = Utilidades.Ejecutar(cliente.getGuardar());
+                Debug.WriteLine("Creacion del Proveedor");
+                Debug.WriteLine(proveedor.getGuardar());
+
+                ds = Utilidades.Ejecutar(proveedor.getGuardar());
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -115,22 +120,28 @@ namespace Vistas.Formularios
 
                         }
                     }
+                    else
+                    {
+                        bien = false;
+                    }
 
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                     Utilidades.Limpiar(this, errorProvider1);
                     dataContacto.Rows.Clear();
 
-                    IdCliente = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
-                    this.Text = "Cliente \t\t Codigo:" + IdCliente;
+                    IdProveedor = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
+                    this.Text = "Cliente \t\t Codigo:" + IdProveedor;
                     this.DialogResult = DialogResult.OK;
                 }
             }
-            return true;
+            return bien;
         }
 
-        private void Clientes_Load(object sender, EventArgs e)
+        private void Proveedor_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Rubro' Puede moverla o quitarla según sea necesario.
+            this.rubroTableAdapter.Fill(this.matrizDataSet.Rubro);
             RadMessageBox.SetThemeName("VisualStudio2012Light");
 
 
@@ -143,7 +154,7 @@ namespace Vistas.Formularios
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.TipoIdentificacion' Puede moverla o quitarla según sea necesario.
             this.tipoIdentificacionTableAdapter.Fill(this.matrizDataSet.TipoIdentificacion);
 
-            if(IdCliente != 0)
+            if(IdProveedor != 0)
             {
 
                 //cbbProvincia.SelectedIndex = -1;
@@ -151,11 +162,6 @@ namespace Vistas.Formularios
                 //cbbSector.SelectedIndex = -1;
                 //cbbTipoIdentificacion.SelectedIndex = -1;
             }
-        }
-
-        private void btGuardar_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void radGroupBox1_Click(object sender, EventArgs e)
@@ -180,11 +186,12 @@ namespace Vistas.Formularios
             }
         }
 
-        private void Cliente_KeyUp(object sender, KeyEventArgs e)
+        private void Proveedor_KeyUp(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.F1)
             {
-                btGuardar_Click(this, null);
+                Guardar();
+                MessageBox.Show("preciosd f1");
             }
         }
     }

@@ -60,7 +60,6 @@
             this.txtTelefono = new Negocios.Componentes.TextPersonal();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
             this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
@@ -83,6 +82,11 @@
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
+            this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbRubro = new Negocios.Componentes.cbbPersonal();
+            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
@@ -107,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
@@ -126,6 +129,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,6 +313,7 @@
             // txtSkype
             // 
             this.txtSkype.Correo = false;
+            this.txtSkype.Enabled = false;
             this.txtSkype.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtSkype.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSkype.Limpiar = true;
@@ -365,7 +373,6 @@
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.radToggleSwitch1);
             this.radGroupBox3.Controls.Add(this.cbbProvincia);
             this.radGroupBox3.Controls.Add(this.cbbMunicipio);
             this.radGroupBox3.Controls.Add(this.cbbSector);
@@ -377,21 +384,10 @@
             this.radGroupBox3.HeaderText = "Localidad";
             this.radGroupBox3.Location = new System.Drawing.Point(12, 294);
             this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(896, 169);
+            this.radGroupBox3.Size = new System.Drawing.Size(896, 144);
             this.radGroupBox3.TabIndex = 1;
             this.radGroupBox3.Text = "Localidad";
             this.radGroupBox3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radToggleSwitch1
-            // 
-            this.radToggleSwitch1.Location = new System.Drawing.Point(820, 141);
-            this.radToggleSwitch1.Name = "radToggleSwitch1";
-            this.radToggleSwitch1.OffText = "Inactivo";
-            this.radToggleSwitch1.OnText = "Activo";
-            this.radToggleSwitch1.Size = new System.Drawing.Size(71, 20);
-            this.radToggleSwitch1.TabIndex = 9;
-            this.radToggleSwitch1.ThemeName = "VisualStudio2012Light";
-            this.radToggleSwitch1.ThumbTickness = 15;
             // 
             // cbbProvincia
             // 
@@ -646,14 +642,63 @@
             // 
             this.provinciaTableAdapter.ClearBeforeFill = true;
             // 
+            // chEstado
+            // 
+            this.chEstado.Location = new System.Drawing.Point(832, 444);
+            this.chEstado.Name = "chEstado";
+            this.chEstado.OffText = "Inactivo";
+            this.chEstado.OnText = "Activo";
+            this.chEstado.Size = new System.Drawing.Size(71, 20);
+            this.chEstado.TabIndex = 10;
+            this.chEstado.ThemeName = "VisualStudio2012Light";
+            this.chEstado.ThumbTickness = 15;
+            // 
+            // radLabel12
+            // 
+            this.radLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel12.Location = new System.Drawing.Point(39, 450);
+            this.radLabel12.Name = "radLabel12";
+            this.radLabel12.Size = new System.Drawing.Size(40, 17);
+            this.radLabel12.TabIndex = 5;
+            this.radLabel12.Text = "Rubro";
+            // 
+            // cbbRubro
+            // 
+            this.cbbRubro.BackColor = System.Drawing.Color.White;
+            this.cbbRubro.Correo = false;
+            this.cbbRubro.DataSource = this.rubroBindingSource;
+            this.cbbRubro.DisplayMember = "Descripcion";
+            this.cbbRubro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbRubro.Limpiar = true;
+            this.cbbRubro.Location = new System.Drawing.Point(87, 444);
+            this.cbbRubro.Name = "cbbRubro";
+            this.cbbRubro.Size = new System.Drawing.Size(311, 23);
+            this.cbbRubro.TabIndex = 8;
+            this.cbbRubro.ThemeName = "VisualStudio2012Light";
+            this.cbbRubro.Validar = true;
+            this.cbbRubro.ValueMember = "IdRubro";
+            // 
+            // rubroBindingSource
+            // 
+            this.rubroBindingSource.DataMember = "Rubro";
+            this.rubroBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // rubroTableAdapter
+            // 
+            this.rubroTableAdapter.ClearBeforeFill = true;
+            // 
             // Proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(920, 485);
+            this.Controls.Add(this.chEstado);
             this.Controls.Add(this.radSeparator1);
+            this.Controls.Add(this.cbbRubro);
             this.Controls.Add(this.radGroupBox4);
+            this.Controls.Add(this.radLabel12);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.radGroupBox3);
             this.Controls.Add(this.radGroupBox2);
@@ -669,8 +714,8 @@
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.MaxSize = new System.Drawing.Size(0, 0);
             this.Text = "Proveedor";
-            this.Load += new System.EventHandler(this.Clientes_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Cliente_KeyUp);
+            this.Load += new System.EventHandler(this.Proveedor_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Proveedor_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
@@ -698,7 +743,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
@@ -718,6 +762,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -770,6 +818,10 @@
         private MatrizDataSetTableAdapters.SectorTableAdapter sectorTableAdapter;
         private System.Windows.Forms.BindingSource provinciaBindingSource;
         private MatrizDataSetTableAdapters.ProvinciaTableAdapter provinciaTableAdapter;
-        private Telerik.WinControls.UI.RadToggleSwitch radToggleSwitch1;
+        private Telerik.WinControls.UI.RadToggleSwitch chEstado;
+        private Negocios.Componentes.cbbPersonal cbbRubro;
+        private Telerik.WinControls.UI.RadLabel radLabel12;
+        private System.Windows.Forms.BindingSource rubroBindingSource;
+        private MatrizDataSetTableAdapters.RubroTableAdapter rubroTableAdapter;
     }
 }
