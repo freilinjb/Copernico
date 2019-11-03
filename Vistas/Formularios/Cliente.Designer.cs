@@ -71,7 +71,6 @@
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.radMarkupDialog1 = new Telerik.WinControls.UI.RadMarkupDialog();
             this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
             this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
             this.lbIngresar = new System.Windows.Forms.LinkLabel();
@@ -736,7 +735,6 @@
         private Negocios.Componentes.cbbPersonal cbbProvincia;
         private Negocios.Componentes.cbbPersonal cbbMunicipio;
         private Negocios.Componentes.cbbPersonal cbbSector;
-        private Telerik.WinControls.UI.RadMarkupDialog radMarkupDialog1;
         private Telerik.WinControls.UI.RadToggleSwitch radToggleSwitch1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox4;
         private Telerik.WinControls.UI.RadGridView dataContacto;

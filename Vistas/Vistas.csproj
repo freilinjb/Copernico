@@ -78,6 +78,12 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ActivoFijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActivoFijo.Designer.cs">
+      <DependentUpon>ActivoFijo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ActivoFijo.resx">
+      <DependentUpon>ActivoFijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
