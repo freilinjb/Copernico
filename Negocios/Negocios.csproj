@@ -46,6 +46,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Telerik.WinControls, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="Componentes\maskPersonal.Designer.cs">
       <DependentUpon>maskPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\MultiCbbPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\MultiCbbPersonal.Designer.cs">
+      <DependentUpon>MultiCbbPersonal.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\TextPersonal.cs">
       <SubType>Component</SubType>
@@ -106,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\maskPersonal.resx">
       <DependentUpon>maskPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\MultiCbbPersonal.resx">
+      <DependentUpon>MultiCbbPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\TextPersonal.resx">
       <DependentUpon>TextPersonal.cs</DependentUpon>

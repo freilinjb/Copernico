@@ -9,16 +9,20 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Activo : FormBase
+    public partial class ActivoFijoMaquinaria : FormBase
     {
-        public Activo()
+        public ActivoFijoMaquinaria()
         {
             InitializeComponent();
         }
 
         private void Activo_Load(object sender, EventArgs e)
         {
-            for (int i = DateTime.Today.Year; i >= 1950; i--)
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.SubGrupoActivoFijo' Puede moverla o quitarla según sea necesario.
+            this.subGrupoActivoFijoTableAdapter.Fill(this.matrizDataSet.SubGrupoActivoFijo);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.GrupoActivoFijo' Puede moverla o quitarla según sea necesario.
+            this.grupoActivoFijoTableAdapter.Fill(this.matrizDataSet.GrupoActivoFijo);
+            for (int i = DateTime.Today.Year; i >= 1985; i--)
                 cbbAnio.Items.Add(i.ToString());
         }
 
@@ -34,7 +38,7 @@ namespace Vistas.Formularios
                 }
                 catch(Exception ex)
                 {
-                    
+                    RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
                 }
             }
 

@@ -90,6 +90,7 @@
     <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.RichTextEditor, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Scheduler, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.Windows.Documents.Core, Version=2019.2.612.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" />
@@ -106,17 +107,11 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Activo.cs">
+    <Compile Include="Formularios\ActivoFijoMaquinaria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Activo.Designer.cs">
-      <DependentUpon>Activo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\ActivoFijo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\ActivoFijo.Designer.cs">
-      <DependentUpon>ActivoFijo.cs</DependentUpon>
+    <Compile Include="Formularios\ActivoFijoMaquinaria.Designer.cs">
+      <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cotizacion.cs">
       <SubType>Form</SubType>
@@ -230,11 +225,8 @@
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Activo.resx">
-      <DependentUpon>Activo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ActivoFijo.resx">
-      <DependentUpon>ActivoFijo.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\ActivoFijoMaquinaria.resx">
+      <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ordenes.resx">
       <DependentUpon>Ordenes.cs</DependentUpon>
