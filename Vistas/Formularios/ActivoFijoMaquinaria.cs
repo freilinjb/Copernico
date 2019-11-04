@@ -18,6 +18,16 @@ namespace Vistas.Formularios
 
         private void Activo_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Departamento' Puede moverla o quitarla según sea necesario.
+            this.departamentoTableAdapter.Fill(this.matrizDataSet.Departamento);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaPropietario' Puede moverla o quitarla según sea necesario.
+            this.vistaPropietarioTableAdapter.Fill(this.matrizDataSet.VistaPropietario);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Color' Puede moverla o quitarla según sea necesario.
+            this.colorTableAdapter.Fill(this.matrizDataSet.Color);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Modelo' Puede moverla o quitarla según sea necesario.
+            this.modeloTableAdapter.Fill(this.matrizDataSet.Modelo);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Marca' Puede moverla o quitarla según sea necesario.
+            this.marcaTableAdapter.Fill(this.matrizDataSet.Marca);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.SubGrupoActivoFijo' Puede moverla o quitarla según sea necesario.
             this.subGrupoActivoFijoTableAdapter.Fill(this.matrizDataSet.SubGrupoActivoFijo);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.GrupoActivoFijo' Puede moverla o quitarla según sea necesario.
