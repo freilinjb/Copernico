@@ -7,6 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using Telerik.WinControls.UI;
+using Telerik.WinControls.UI.Map.Bing;
+using Telerik.WinControls.UI.Map;
+using Telerik.WinControls;
+using Negocios;
+
 
 namespace Vistas.Formularios
 {
