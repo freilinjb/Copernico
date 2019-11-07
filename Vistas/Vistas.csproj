@@ -78,11 +78,11 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\ActivoFijo.cs">
+    <Compile Include="Formularios\Orden.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\ActivoFijo.Designer.cs">
-      <DependentUpon>ActivoFijo.cs</DependentUpon>
+    <Compile Include="Formularios\Orden.Designer.cs">
+      <DependentUpon>Orden.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cliente.cs">
       <SubType>Form</SubType>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ActivoFijo.resx">
-      <DependentUpon>ActivoFijo.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Orden.resx">
+      <DependentUpon>Orden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
