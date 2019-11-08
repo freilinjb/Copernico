@@ -64,6 +64,8 @@ namespace Vistas {
         
         private VistaClienteDataTable tableVistaCliente;
         
+        private QRCodeDataTable tableQRCode;
+        
         private global::System.Data.DataRelation relationFK_Municipio_Provincia;
         
         private global::System.Data.DataRelation relationFK_SubGrupoActivo_GrupoActivo;
@@ -157,6 +159,9 @@ namespace Vistas {
                 }
                 if ((ds.Tables["VistaCliente"] != null)) {
                     base.Tables.Add(new VistaClienteDataTable(ds.Tables["VistaCliente"]));
+                }
+                if ((ds.Tables["QRCode"] != null)) {
+                    base.Tables.Add(new QRCodeDataTable(ds.Tables["QRCode"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -378,6 +383,16 @@ namespace Vistas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public QRCodeDataTable QRCode {
+            get {
+                return this.tableQRCode;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -502,6 +517,9 @@ namespace Vistas {
                 }
                 if ((ds.Tables["VistaCliente"] != null)) {
                     base.Tables.Add(new VistaClienteDataTable(ds.Tables["VistaCliente"]));
+                }
+                if ((ds.Tables["QRCode"] != null)) {
+                    base.Tables.Add(new QRCodeDataTable(ds.Tables["QRCode"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -656,6 +674,12 @@ namespace Vistas {
                     this.tableVistaCliente.InitVars();
                 }
             }
+            this.tableQRCode = ((QRCodeDataTable)(base.Tables["QRCode"]));
+            if ((initTable == true)) {
+                if ((this.tableQRCode != null)) {
+                    this.tableQRCode.InitVars();
+                }
+            }
             this.relationFK_Municipio_Provincia = this.Relations["FK_Municipio_Provincia"];
             this.relationFK_SubGrupoActivo_GrupoActivo = this.Relations["FK_SubGrupoActivo_GrupoActivo"];
             this.relationFK_Modelo_Marca = this.Relations["FK_Modelo_Marca"];
@@ -709,6 +733,8 @@ namespace Vistas {
             base.Tables.Add(this.tableVistaPropietario);
             this.tableVistaCliente = new VistaClienteDataTable();
             base.Tables.Add(this.tableVistaCliente);
+            this.tableQRCode = new QRCodeDataTable();
+            base.Tables.Add(this.tableQRCode);
             this.relationFK_Municipio_Provincia = new global::System.Data.DataRelation("FK_Municipio_Provincia", new global::System.Data.DataColumn[] {
                         this.tableProvincia.IdProvinciaColumn}, new global::System.Data.DataColumn[] {
                         this.tableMunicipio.IdProvinciaColumn}, false);
@@ -845,6 +871,12 @@ namespace Vistas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeQRCode() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -957,6 +989,9 @@ namespace Vistas {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void VistaClienteRowChangeEventHandler(object sender, VistaClienteRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void QRCodeRowChangeEventHandler(object sender, QRCodeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -6906,6 +6941,253 @@ namespace Vistas {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class QRCodeDataTable : global::System.Data.TypedTableBase<QRCodeRow> {
+            
+            private global::System.Data.DataColumn columnImagen;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeDataTable() {
+                this.TableName = "QRCode";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal QRCodeDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected QRCodeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ImagenColumn {
+                get {
+                    return this.columnImagen;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeRow this[int index] {
+                get {
+                    return ((QRCodeRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event QRCodeRowChangeEventHandler QRCodeRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event QRCodeRowChangeEventHandler QRCodeRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event QRCodeRowChangeEventHandler QRCodeRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event QRCodeRowChangeEventHandler QRCodeRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddQRCodeRow(QRCodeRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeRow AddQRCodeRow(byte[] Imagen) {
+                QRCodeRow rowQRCodeRow = ((QRCodeRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Imagen};
+                rowQRCodeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowQRCodeRow);
+                return rowQRCodeRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                QRCodeDataTable cln = ((QRCodeDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new QRCodeDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnImagen = base.Columns["Imagen"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnImagen = new global::System.Data.DataColumn("Imagen", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnImagen);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeRow NewQRCodeRow() {
+                return ((QRCodeRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new QRCodeRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(QRCodeRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.QRCodeRowChanged != null)) {
+                    this.QRCodeRowChanged(this, new QRCodeRowChangeEvent(((QRCodeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.QRCodeRowChanging != null)) {
+                    this.QRCodeRowChanging(this, new QRCodeRowChangeEvent(((QRCodeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.QRCodeRowDeleted != null)) {
+                    this.QRCodeRowDeleted(this, new QRCodeRowChangeEvent(((QRCodeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.QRCodeRowDeleting != null)) {
+                    this.QRCodeRowDeleting(this, new QRCodeRowChangeEvent(((QRCodeRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveQRCodeRow(QRCodeRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MatrizDataSet ds = new MatrizDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "QRCodeDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class EstadoCivilRow : global::System.Data.DataRow {
@@ -8122,6 +8404,49 @@ namespace Vistas {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class QRCodeRow : global::System.Data.DataRow {
+            
+            private QRCodeDataTable tableQRCode;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal QRCodeRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableQRCode = ((QRCodeDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public byte[] Imagen {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableQRCode.ImagenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Imagen\' de la tabla \'QRCode\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableQRCode.ImagenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsImagenNull() {
+                return this.IsNull(this.tableQRCode.ImagenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetImagenNull() {
+                this[this.tableQRCode.ImagenColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -8787,6 +9112,40 @@ namespace Vistas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public VistaClienteRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class QRCodeRowChangeEvent : global::System.EventArgs {
+            
+            private QRCodeRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeRowChangeEvent(QRCodeRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public QRCodeRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15086,12 +15445,12 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(MatrizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._marcaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._grupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._marcaTableAdapter.Update(updatedRows));
+                    result = (result + this._grupoActivoFijoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15104,21 +15463,12 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._grupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._marcaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._grupoActivoFijoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._estadoCivilTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._estadoCivilTableAdapter.Update(updatedRows));
+                    result = (result + this._marcaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15164,6 +15514,15 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._subGrupoActivoFijoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._estadoCivilTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._estadoCivilTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15240,11 +15599,11 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(MatrizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._marcaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._grupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._marcaTableAdapter.Update(addedRows));
+                    result = (result + this._grupoActivoFijoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15256,19 +15615,11 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._grupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._marcaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._grupoActivoFijoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._estadoCivilTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._estadoCivilTableAdapter.Update(addedRows));
+                    result = (result + this._marcaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15309,6 +15660,14 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._subGrupoActivoFijoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._estadoCivilTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._estadoCivilTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15434,6 +15793,14 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._estadoCivilTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._estadoCivilTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._subGrupoActivoFijoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -15474,19 +15841,11 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._estadoCivilTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.EstadoCivil.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._marcaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._estadoCivilTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._grupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._grupoActivoFijoTableAdapter.Update(deletedRows));
+                    result = (result + this._marcaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15498,11 +15857,11 @@ SELECT IdModelo, IdMarca, Descripcion FROM Modelo WHERE (IdModelo = @IdModelo)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._marcaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Marca.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._grupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.GrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._marcaTableAdapter.Update(deletedRows));
+                    result = (result + this._grupoActivoFijoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

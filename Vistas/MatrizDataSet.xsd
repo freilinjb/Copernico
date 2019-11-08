@@ -1326,6 +1326,13 @@ FROM            VistaCliente</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="QRCode" msprop:Generator_TableClassName="QRCodeDataTable" msprop:Generator_TableVarName="tableQRCode" msprop:Generator_TablePropName="QRCode" msprop:Generator_RowDeletingName="QRCodeRowDeleting" msprop:Generator_RowChangingName="QRCodeRowChanging" msprop:Generator_RowEvHandlerName="QRCodeRowChangeEventHandler" msprop:Generator_RowDeletedName="QRCodeRowDeleted" msprop:Generator_UserTableName="QRCode" msprop:Generator_RowChangedName="QRCodeRowChanged" msprop:Generator_RowEvArgName="QRCodeRowChangeEvent" msprop:Generator_RowClassName="QRCodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Imagen" msprop:Generator_ColumnVarNameInTable="columnImagen" msprop:Generator_ColumnPropNameInRow="Imagen" msprop:Generator_ColumnPropNameInTable="ImagenColumn" msprop:Generator_UserColumnName="Imagen" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
