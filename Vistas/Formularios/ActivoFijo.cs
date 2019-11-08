@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class OrdenDeCompra : FormBase
+    public partial class ActivoFijo : Form
     {
-        public OrdenDeCompra()
+        public ActivoFijo()
         {
             InitializeComponent();
         }

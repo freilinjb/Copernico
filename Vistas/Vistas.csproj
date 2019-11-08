@@ -113,6 +113,12 @@
     <Compile Include="Formularios\ActivoFijoMaquinaria.Designer.cs">
       <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Conduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Conduce.Designer.cs">
+      <DependentUpon>Conduce.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Cotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActivoFijoMaquinaria.resx">
       <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Conduce.resx">
+      <DependentUpon>Conduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OrdenDeCompra.resx">
+      <DependentUpon>OrdenDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OrdenDeVenta.resx">
+      <DependentUpon>OrdenDeVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ordenes.resx">
       <DependentUpon>Ordenes.cs</DependentUpon>

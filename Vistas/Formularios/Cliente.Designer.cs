@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor3 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -60,16 +61,13 @@
             this.txtTelefono = new Negocios.Componentes.TextPersonal();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
             this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
             this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
             this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radMarkupDialog1 = new Telerik.WinControls.UI.RadMarkupDialog();
@@ -83,6 +81,15 @@
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
+            this.radToggleSwitch1 = new Telerik.WinControls.UI.RadToggleSwitch();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
+            this.txtDireccion = new Negocios.Componentes.TextPersonal();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
@@ -107,16 +114,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
@@ -126,6 +130,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,7 +150,7 @@
             this.radGroupBox1.Controls.Add(this.radLabel2);
             this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.HeaderText = "Datos del Cliente";
-            this.radGroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.radGroupBox1.Location = new System.Drawing.Point(12, 70);
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Size = new System.Drawing.Size(395, 154);
             this.radGroupBox1.TabIndex = 0;
@@ -272,7 +280,7 @@
             this.radGroupBox2.Controls.Add(this.txtTelefono);
             this.radGroupBox2.Controls.Add(this.radLabel5);
             this.radGroupBox2.HeaderText = "Contacto";
-            this.radGroupBox2.Location = new System.Drawing.Point(25, 173);
+            this.radGroupBox2.Location = new System.Drawing.Point(25, 231);
             this.radGroupBox2.Name = "radGroupBox2";
             this.radGroupBox2.Size = new System.Drawing.Size(382, 115);
             this.radGroupBox2.TabIndex = 1;
@@ -365,33 +373,19 @@
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.radToggleSwitch1);
             this.radGroupBox3.Controls.Add(this.cbbProvincia);
             this.radGroupBox3.Controls.Add(this.cbbMunicipio);
             this.radGroupBox3.Controls.Add(this.cbbSector);
-            this.radGroupBox3.Controls.Add(this.radLabel11);
             this.radGroupBox3.Controls.Add(this.radLabel8);
-            this.radGroupBox3.Controls.Add(this.txtDireccion);
             this.radGroupBox3.Controls.Add(this.radLabel9);
             this.radGroupBox3.Controls.Add(this.radLabel10);
             this.radGroupBox3.HeaderText = "Localidad";
-            this.radGroupBox3.Location = new System.Drawing.Point(12, 294);
+            this.radGroupBox3.Location = new System.Drawing.Point(12, 352);
             this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(896, 169);
+            this.radGroupBox3.Size = new System.Drawing.Size(395, 105);
             this.radGroupBox3.TabIndex = 1;
             this.radGroupBox3.Text = "Localidad";
             this.radGroupBox3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radToggleSwitch1
-            // 
-            this.radToggleSwitch1.Location = new System.Drawing.Point(820, 141);
-            this.radToggleSwitch1.Name = "radToggleSwitch1";
-            this.radToggleSwitch1.OffText = "Inactivo";
-            this.radToggleSwitch1.OnText = "Activo";
-            this.radToggleSwitch1.Size = new System.Drawing.Size(71, 20);
-            this.radToggleSwitch1.TabIndex = 9;
-            this.radToggleSwitch1.ThemeName = "VisualStudio2012Light";
-            this.radToggleSwitch1.ThumbTickness = 15;
             // 
             // cbbProvincia
             // 
@@ -459,15 +453,6 @@
             this.sectorBindingSource.DataMember = "Sector";
             this.sectorBindingSource.DataSource = this.matrizDataSet;
             // 
-            // radLabel11
-            // 
-            this.radLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel11.Location = new System.Drawing.Point(11, 118);
-            this.radLabel11.Name = "radLabel11";
-            this.radLabel11.Size = new System.Drawing.Size(58, 17);
-            this.radLabel11.TabIndex = 5;
-            this.radLabel11.Text = "Dirección";
-            // 
             // radLabel8
             // 
             this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -476,19 +461,6 @@
             this.radLabel8.Size = new System.Drawing.Size(42, 17);
             this.radLabel8.TabIndex = 5;
             this.radLabel8.Text = "Sector";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Correo = false;
-            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Limpiar = true;
-            this.txtDireccion.Location = new System.Drawing.Point(75, 111);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(816, 24);
-            this.txtDireccion.TabIndex = 6;
-            this.txtDireccion.ThemeName = "VisualStudio2012Light";
-            this.txtDireccion.Validar = true;
             // 
             // radLabel9
             // 
@@ -514,7 +486,7 @@
             this.radGroupBox4.Controls.Add(this.lbIngresar);
             this.radGroupBox4.Controls.Add(this.dataContacto);
             this.radGroupBox4.HeaderText = "Lista de contactos de la empresa";
-            this.radGroupBox4.Location = new System.Drawing.Point(413, 194);
+            this.radGroupBox4.Location = new System.Drawing.Point(413, 252);
             this.radGroupBox4.Name = "radGroupBox4";
             this.radGroupBox4.Size = new System.Drawing.Size(495, 205);
             this.radGroupBox4.TabIndex = 4;
@@ -551,46 +523,46 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.HeaderText = "IdContacto";
-            gridViewTextBoxColumn1.IsVisible = false;
-            gridViewTextBoxColumn1.Name = "IdContacto";
-            gridViewTextBoxColumn1.Width = 56;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.HeaderText = "Nombre";
-            gridViewTextBoxColumn2.Name = "Nombre";
-            gridViewTextBoxColumn2.Width = 115;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.HeaderText = "Telefono";
-            gridViewTextBoxColumn3.Name = "Telefono";
-            gridViewTextBoxColumn3.Width = 126;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.HeaderText = "Correo";
-            gridViewTextBoxColumn4.Name = "Correo";
-            gridViewTextBoxColumn4.Width = 112;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.HeaderText = "Departamento";
-            gridViewTextBoxColumn5.Name = "Departamento";
-            gridViewTextBoxColumn5.Width = 78;
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.HeaderText = "Puesto";
-            gridViewTextBoxColumn6.Name = "Puesto";
-            gridViewTextBoxColumn6.Width = 64;
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.HeaderText = "IdContacto";
+            gridViewTextBoxColumn13.IsVisible = false;
+            gridViewTextBoxColumn13.Name = "IdContacto";
+            gridViewTextBoxColumn13.Width = 56;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.HeaderText = "Nombre";
+            gridViewTextBoxColumn14.Name = "Nombre";
+            gridViewTextBoxColumn14.Width = 115;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.HeaderText = "Telefono";
+            gridViewTextBoxColumn15.Name = "Telefono";
+            gridViewTextBoxColumn15.Width = 126;
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.HeaderText = "Correo";
+            gridViewTextBoxColumn16.Name = "Correo";
+            gridViewTextBoxColumn16.Width = 112;
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.HeaderText = "Departamento";
+            gridViewTextBoxColumn17.Name = "Departamento";
+            gridViewTextBoxColumn17.Width = 78;
+            gridViewTextBoxColumn18.EnableExpressionEditor = false;
+            gridViewTextBoxColumn18.HeaderText = "Puesto";
+            gridViewTextBoxColumn18.Name = "Puesto";
+            gridViewTextBoxColumn18.Width = 64;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor1.PropertyName = "column3";
+            sortDescriptor3.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor3.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor1});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            sortDescriptor3});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -601,7 +573,7 @@
             // 
             // radSeparator1
             // 
-            this.radSeparator1.Location = new System.Drawing.Point(12, 469);
+            this.radSeparator1.Location = new System.Drawing.Point(12, 527);
             this.radSeparator1.Name = "radSeparator1";
             this.radSeparator1.Size = new System.Drawing.Size(891, 11);
             this.radSeparator1.TabIndex = 5;
@@ -617,7 +589,7 @@
             this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtNota.Limpiar = false;
-            this.txtNota.Location = new System.Drawing.Point(413, 22);
+            this.txtNota.Location = new System.Drawing.Point(413, 80);
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.NullText = "Nota";
@@ -646,12 +618,108 @@
             // 
             this.provinciaTableAdapter.ClearBeforeFill = true;
             // 
+            // radToggleSwitch1
+            // 
+            this.radToggleSwitch1.Location = new System.Drawing.Point(832, 493);
+            this.radToggleSwitch1.Name = "radToggleSwitch1";
+            this.radToggleSwitch1.OffText = "Inactivo";
+            this.radToggleSwitch1.OnText = "Activo";
+            this.radToggleSwitch1.Size = new System.Drawing.Size(71, 20);
+            this.radToggleSwitch1.TabIndex = 12;
+            this.radToggleSwitch1.ThemeName = "VisualStudio2012Light";
+            this.radToggleSwitch1.ThumbTickness = 15;
+            // 
+            // radLabel11
+            // 
+            this.radLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel11.Location = new System.Drawing.Point(23, 470);
+            this.radLabel11.Name = "radLabel11";
+            this.radLabel11.Size = new System.Drawing.Size(58, 17);
+            this.radLabel11.TabIndex = 10;
+            this.radLabel11.Text = "Dirección";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Correo = false;
+            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Limpiar = true;
+            this.txtDireccion.Location = new System.Drawing.Point(87, 463);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(816, 24);
+            this.txtDireccion.TabIndex = 11;
+            this.txtDireccion.ThemeName = "VisualStudio2012Light";
+            this.txtDireccion.Validar = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(920, 25);
+            this.toolStrip1.TabIndex = 13;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton3";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "toolStripButton4";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "toolStripButton5";
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(920, 485);
+            this.ClientSize = new System.Drawing.Size(920, 566);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.radToggleSwitch1);
+            this.Controls.Add(this.radLabel11);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.radSeparator1);
             this.Controls.Add(this.radGroupBox4);
             this.Controls.Add(this.txtNota);
@@ -698,16 +766,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).EndInit();
@@ -718,6 +783,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radToggleSwitch1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -748,8 +818,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private Telerik.WinControls.UI.RadLabel radLabel10;
         private Negocios.Componentes.TextPersonal txtExtencion;
-        private Telerik.WinControls.UI.RadLabel radLabel11;
-        private Negocios.Componentes.TextPersonal txtDireccion;
         private Negocios.Componentes.TextPersonal txtNota;
         private Negocios.Componentes.cbbPersonal cbbProvincia;
         private Negocios.Componentes.cbbPersonal cbbMunicipio;
@@ -771,5 +839,13 @@
         private System.Windows.Forms.BindingSource provinciaBindingSource;
         private MatrizDataSetTableAdapters.ProvinciaTableAdapter provinciaTableAdapter;
         private Telerik.WinControls.UI.RadToggleSwitch radToggleSwitch1;
+        private Telerik.WinControls.UI.RadLabel radLabel11;
+        private Negocios.Componentes.TextPersonal txtDireccion;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
     }
 }
