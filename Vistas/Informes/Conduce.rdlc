@@ -7,8 +7,8 @@
         <Value>=First(Fields!Imagen.Value, "DataSet1")</Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>0.68474cm</Top>
-        <Left>2.77495cm</Left>
+        <Top>3.14537cm</Top>
+        <Left>12.07312cm</Left>
         <Height>3.52213cm</Height>
         <Width>4.43687cm</Width>
         <Style>
@@ -17,11 +17,41 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>CENTRO DE PRODUCCION DE MAQUINARIA</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Height>2.10813cm</Height>
+        <Width>21.65583cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>3.13542in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>9.61458in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

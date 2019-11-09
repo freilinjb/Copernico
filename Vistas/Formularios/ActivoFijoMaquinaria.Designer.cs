@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn21 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn22 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn23 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn24 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor4 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn25 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn26 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn27 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn28 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn29 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn30 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor5 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition9 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition10 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.maskPersonal1 = new Negocios.Componentes.maskPersonal();
@@ -45,7 +45,6 @@
             this.textPersonal6 = new Negocios.Componentes.TextPersonal();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbbDepartamento = new Negocios.Componentes.cbbPersonal();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
@@ -160,7 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
@@ -292,7 +290,6 @@
             this.radPageViewPage1.Controls.Add(this.textPersonal6);
             this.radPageViewPage1.Controls.Add(this.linkLabel2);
             this.radPageViewPage1.Controls.Add(this.linkLabel1);
-            this.radPageViewPage1.Controls.Add(this.pictureBox1);
             this.radPageViewPage1.Controls.Add(this.cbbDepartamento);
             this.radPageViewPage1.Controls.Add(this.radLabel22);
             this.radPageViewPage1.Controls.Add(this.cbbCentro);
@@ -361,7 +358,7 @@
             // 
             // 
             this.textPersonal6.RootElement.StretchVertically = true;
-            this.textPersonal6.Size = new System.Drawing.Size(650, 127);
+            this.textPersonal6.Size = new System.Drawing.Size(651, 127);
             this.textPersonal6.TabIndex = 58;
             this.textPersonal6.ThemeName = "VisualStudio2012Light";
             this.textPersonal6.Validar = true;
@@ -387,14 +384,6 @@
             this.linkLabel1.TabIndex = 57;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Agregar";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(425, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 224);
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
             // 
             // cbbDepartamento
             // 
@@ -441,7 +430,7 @@
             this.cbbCentro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbCentro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCentro.Limpiar = true;
-            this.cbbCentro.Location = new System.Drawing.Point(425, 266);
+            this.cbbCentro.Location = new System.Drawing.Point(426, 266);
             this.cbbCentro.Name = "cbbCentro";
             this.cbbCentro.NullText = "Tipo de Identificacion";
             this.cbbCentro.Size = new System.Drawing.Size(228, 23);
@@ -845,45 +834,45 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.HeaderText = "Fecha";
-            gridViewTextBoxColumn19.Name = "Fecha";
-            gridViewTextBoxColumn19.Width = 103;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.HeaderText = "Largo";
-            gridViewTextBoxColumn20.Name = "Largo";
-            gridViewTextBoxColumn20.Width = 104;
-            gridViewTextBoxColumn21.EnableExpressionEditor = false;
-            gridViewTextBoxColumn21.HeaderText = "Ancho";
-            gridViewTextBoxColumn21.Name = "Ancho";
-            gridViewTextBoxColumn21.Width = 107;
-            gridViewTextBoxColumn22.EnableExpressionEditor = false;
-            gridViewTextBoxColumn22.HeaderText = "Alto";
-            gridViewTextBoxColumn22.Name = "Alto";
-            gridViewTextBoxColumn22.Width = 110;
-            gridViewTextBoxColumn23.EnableExpressionEditor = false;
-            gridViewTextBoxColumn23.HeaderText = "Calculada";
-            gridViewTextBoxColumn23.Name = "Calculada";
-            gridViewTextBoxColumn23.Width = 120;
-            gridViewTextBoxColumn24.EnableExpressionEditor = false;
-            gridViewTextBoxColumn24.HeaderText = "Facturar";
-            gridViewTextBoxColumn24.Name = "Facturar";
-            gridViewTextBoxColumn24.Width = 124;
+            gridViewTextBoxColumn25.EnableExpressionEditor = false;
+            gridViewTextBoxColumn25.HeaderText = "Fecha";
+            gridViewTextBoxColumn25.Name = "Fecha";
+            gridViewTextBoxColumn25.Width = 103;
+            gridViewTextBoxColumn26.EnableExpressionEditor = false;
+            gridViewTextBoxColumn26.HeaderText = "Largo";
+            gridViewTextBoxColumn26.Name = "Largo";
+            gridViewTextBoxColumn26.Width = 104;
+            gridViewTextBoxColumn27.EnableExpressionEditor = false;
+            gridViewTextBoxColumn27.HeaderText = "Ancho";
+            gridViewTextBoxColumn27.Name = "Ancho";
+            gridViewTextBoxColumn27.Width = 107;
+            gridViewTextBoxColumn28.EnableExpressionEditor = false;
+            gridViewTextBoxColumn28.HeaderText = "Alto";
+            gridViewTextBoxColumn28.Name = "Alto";
+            gridViewTextBoxColumn28.Width = 110;
+            gridViewTextBoxColumn29.EnableExpressionEditor = false;
+            gridViewTextBoxColumn29.HeaderText = "Calculada";
+            gridViewTextBoxColumn29.Name = "Calculada";
+            gridViewTextBoxColumn29.Width = 120;
+            gridViewTextBoxColumn30.EnableExpressionEditor = false;
+            gridViewTextBoxColumn30.HeaderText = "Facturar";
+            gridViewTextBoxColumn30.Name = "Facturar";
+            gridViewTextBoxColumn30.Width = 124;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20,
-            gridViewTextBoxColumn21,
-            gridViewTextBoxColumn22,
-            gridViewTextBoxColumn23,
-            gridViewTextBoxColumn24});
+            gridViewTextBoxColumn25,
+            gridViewTextBoxColumn26,
+            gridViewTextBoxColumn27,
+            gridViewTextBoxColumn28,
+            gridViewTextBoxColumn29,
+            gridViewTextBoxColumn30});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor4.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor4.PropertyName = "column3";
+            sortDescriptor5.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor5.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor4});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            sortDescriptor5});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition9;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1541,7 +1530,7 @@
             this.multiCbbPersonal1.EditorControl.MasterTemplate.AllowColumnChooser = false;
             this.multiCbbPersonal1.EditorControl.MasterTemplate.EnableGrouping = false;
             this.multiCbbPersonal1.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.multiCbbPersonal1.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition8;
+            this.multiCbbPersonal1.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition10;
             this.multiCbbPersonal1.EditorControl.Name = "NestedRadGridView";
             this.multiCbbPersonal1.EditorControl.ReadOnly = true;
             this.multiCbbPersonal1.EditorControl.ShowGroupPanel = false;
@@ -1727,7 +1716,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 570);
+            this.ClientSize = new System.Drawing.Size(713, 634);
             this.Controls.Add(this.radPageView1);
             this.Controls.Add(this.txtActivoFijo);
             this.Controls.Add(this.radLabel1);
@@ -1745,7 +1734,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.maskPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
@@ -1916,7 +1904,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel22;
         private Negocios.Componentes.cbbPersonal cbbCentro;
         private Telerik.WinControls.UI.RadLabel radLabel5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private Telerik.WinControls.UI.RadGridView dataContacto;
         private Negocios.Componentes.cbbPersonal cbbCubicado;
