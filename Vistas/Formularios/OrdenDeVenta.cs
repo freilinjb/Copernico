@@ -19,6 +19,8 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
+            this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCliente' Puede moverla o quitarla según sea necesario.
             this.vistaClienteTableAdapter.Fill(this.matrizDataSet.VistaCliente);
 

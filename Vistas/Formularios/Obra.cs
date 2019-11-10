@@ -15,5 +15,19 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        public override bool Guardar()
+        {
+            
+        }
+
+        private void Obra_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Municipio' Puede moverla o quitarla según sea necesario.
+            this.municipioTableAdapter.Fill(this.matrizDataSet.Municipio);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Provincia' Puede moverla o quitarla según sea necesario.
+            this.provinciaTableAdapter.Fill(this.matrizDataSet.Provincia);
+
+        }
     }
 }
