@@ -17,7 +17,7 @@ using Negocios;
 
 namespace Vistas.Formularios
 {
-    public partial class Orden : Telerik.WinControls.UI.RadForm
+    public partial class Orden : FormBase
     {
         private int NumOrden;
         private int IdUsuario;
