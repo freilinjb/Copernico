@@ -35,6 +35,11 @@ namespace Negocios.Entidades
             Estado = estado;
         }
 
+        public Obra()
+        {
+
+        }
+
         public string getGuardar()
         {
             return $"EXEC [RegistrarObra] {IdObra},{IdCliente},'{Nombre}',{IdContacto},{IdProvincia},{IdCiudad},{IdMunicipio},{IdSector},'{Direccion}','{Observacion}',{(Estado ? 1 : 0)}";

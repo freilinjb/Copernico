@@ -19,8 +19,8 @@ namespace Vistas.Formularios
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            Centro instancia = Centro.ObtenerInstancia();
-            instancia.Show();
+            //Centro instancia = Centro.ObtenerInstancia();
+            //instancia.Show();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -30,9 +30,56 @@ namespace Vistas.Formularios
 
         private void radMenuItem1_Click(object sender, EventArgs e)
         {
-            Cliente cliente = Cliente.ObtenerInstancia();
-            cliente.MdiParent = this;
-            cliente.Show();
+           
+        }
+
+        private void radMenuItem2_Click(object sender, EventArgs e)
+        {
+            Obra obra = new Obra();
+            obra.MdiParent = this;
+            obra.Show();
+        }
+
+        private void toolButton_Click(object sender, EventArgs e)
+        {
+            //((FormBase)this.ActiveMdiChild).Guardar();
+
+
+        }
+
+        private void cbbPersonal1_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            MessageBox.Show(((FormBase)this.ActiveMdiChild).Text);
+            if(cbbPersonal1.SelectedIndex == 1)
+            {
+                if (((FormBase)this.ActiveMdiChild).guardar)
+                    toolButton.Enabled = true;
+
+            }
+            else
+                toolButton.Enabled = false;
+        }
+
+        private void radMenuItem4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void horizontalToolStrip_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void vertocalTooltrip_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+
+        }
+
+        private void cascadaToolTrip_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        
         }
     }
 }

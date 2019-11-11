@@ -21,6 +21,8 @@ namespace Vistas.Formularios
         public bool desactivar;
         public bool cancelar;
 
+
+
         public virtual bool Guardar()
         {
             return true;

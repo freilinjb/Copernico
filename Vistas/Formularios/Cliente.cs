@@ -13,6 +13,7 @@ using Telerik.WinControls.UI.Map.Bing;
 using Telerik.WinControls.UI.Map;
 using Telerik.WinControls;
 using Negocios;
+using System.Threading;
 
 namespace Vistas.Formularios
 {
@@ -66,6 +67,7 @@ namespace Vistas.Formularios
             cbbProvincia.Text = ds.Tables[0].Rows[0]["Provincia"].ToString();
             cbbSector.Text = ds.Tables[0].Rows[0]["Sector"].ToString();
 
+
             ds = Negocios.Utilidades.Ejecutar($"SELECT CV.IdContacto,CV.IdTercero,CV.Nombre,CV.Departamento,CV.Puesto,CV.Telefono,CV.Correo,CV.Estado FROM VistaContacto CV INNER JOIN Contacto_vs_Tercero CT ON CT.IdContacto = CV.IdContacto INNER JOIN Tercero T ON T.IdTercero = CT.IdTercero WHERE T.IdTercero = {IdTercero}");
 
             foreach(DataRow x in ds.Tables[0].Rows)
@@ -100,7 +102,7 @@ namespace Vistas.Formularios
                         Convert.ToInt32(cbbSector.SelectedValue.ToString()),
                         txtDireccion.Text.Trim(),
                         1,
-                        1);
+                        (chEstado.ToggleStateMode == ToggleStateMode.Click)? 1 : 0);
                     Debug.WriteLine("Creacion del cliente");
                     Debug.WriteLine(cliente.getGuardar());
 
@@ -198,6 +200,7 @@ namespace Vistas.Formularios
             {
                 btGuardar_Click(this, null);
             }
+            new Thread(Guardar).Start();
         }
     }
 }
