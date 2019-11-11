@@ -200,7 +200,6 @@ namespace Vistas.Formularios
             {
                 btGuardar_Click(this, null);
             }
-            new Thread(Guardar).Start();
         }
     }
 }

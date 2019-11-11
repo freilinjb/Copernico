@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using Negocios;
 using Telerik.WinControls.UI;
+using Telerik.WinControls.Data;
+
 namespace Vistas.Formularios
 {
     public partial class Obra : FormBase
@@ -28,27 +30,64 @@ namespace Vistas.Formularios
         }
         public override bool Guardar()
         {
-            if(Utilidades.Validar(this,errorProvider1) == false)
+            bool bien = true;
+
+            try
             {
-                Negocios.Entidades.Obra obra = new Negocios.Entidades.Obra(
-                    IdObra,
-                    Convert.ToInt32(cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[0].Value.ToString()),
-                    txtObra.Text.Trim(),
-                    (int)cbbEncargado.SelectedValue,
-                    (int)cbbProvincia.SelectedValue,
-                    (int)cbbCiudad.SelectedValue,
-                    (int)cbbMunicipio.SelectedValue,
-                    (int)cbbSector.SelectedValue,
-                    txtDireccion.Text.Trim(),
-                    txtNota.Text.Trim(),
-                    chEstado.ToggleStateMode == ToggleStateMode.Click ? true : false);
-                ds = Utilidades.Ejecutar(obra.getGuardar());
+                if (Utilidades.Validar(this, errorProvider1) == false)
+                {
+                    Negocios.Entidades.Obra obra = new Negocios.Entidades.Obra(
+                        IdObra,
+                        Convert.ToInt32(cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[0].Value.ToString()),
+                        txtObra.Text.Trim(),
+                        (int)cbbEncargado.SelectedValue,
+                        (int)cbbProvincia.SelectedValue,
+                        (int)cbbCiudad.SelectedValue,
+                        (int)cbbMunicipio.SelectedValue,
+                        (int)cbbSector.SelectedValue,
+                        txtDireccion.Text.Trim(),
+                        txtNota.Text.Trim(),
+                        chEstado.ToggleStateMode == ToggleStateMode.Click ? true : false);
+
+                    ds = Utilidades.Ejecutar(obra.getGuardar());
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    }
+                    else
+                    {
+                        RadMessageBox.Show("Algo ha pasado", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+                }
             }
-            return true;
+            catch(Exception ex)
+            {
+                bien = false;
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+            }
+            return bien;
         }
 
         private void Obra_Load(object sender, EventArgs e)
         {
+
+
+            //this.cbbCliente.AutoFilter = true;
+
+            //FilterDescriptor filter = new FilterDescriptor();
+            //filter.PropertyName = this.cbbCliente.DisplayMember;
+            //filter.Operator = FilterOperator.Contains;
+            //this.cbbCliente.EditorControl.MasterTemplate.FilterDescriptors.Add(filter);
+            //cbbCliente.MultiColumnComboBoxElement.EditorControl.EnableCustomFiltering = true;
+
+
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaContactoEncargado' Puede moverla o quitarla según sea necesario.
+            this.vistaContactoEncargadoTableAdapter.Fill(this.matrizDataSet.VistaContactoEncargado);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCliente' Puede moverla o quitarla según sea necesario.
+            this.vistaClienteTableAdapter.Fill(this.matrizDataSet.VistaCliente);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaContactoEncargado' Puede moverla o quitarla según sea necesario.
+            this.vistaContactoEncargadoTableAdapter.Fill(this.matrizDataSet.VistaContactoEncargado);
 
             imprimir = false;
 
@@ -62,6 +101,31 @@ namespace Vistas.Formularios
             this.municipioTableAdapter.Fill(this.matrizDataSet.Municipio);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Provincia' Puede moverla o quitarla según sea necesario.
             this.provinciaTableAdapter.Fill(this.matrizDataSet.Provincia);
+
+            Utilidades.Limpiar(this, errorProvider1);
+        }
+
+        private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbbCliente.SelectedIndex >= 0)
+            {
+                if (cbbCliente.EditorControl.Rows.Count > 0)
+                {
+                    if (cbbCliente.Text != null)
+                        lbCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
+
+                    else
+                        cbbCliente.Text = null;
+                }
+            }
+        }
+
+        private void Obra_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                Guardar();
+            }
         }
     }
 }
