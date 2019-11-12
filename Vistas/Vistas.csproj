@@ -78,11 +78,11 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Orden.cs">
+    <Compile Include="Formularios\Ordenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Orden.Designer.cs">
-      <DependentUpon>Orden.cs</DependentUpon>
+    <Compile Include="Formularios\Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Cliente.cs">
       <SubType>Form</SubType>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Orden.resx">
-      <DependentUpon>Orden.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>

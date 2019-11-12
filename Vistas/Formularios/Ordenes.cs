@@ -17,14 +17,14 @@ using Negocios;
 
 namespace Vistas.Formularios
 {
-    public partial class Orden : FormBase
+    public partial class Ordenes : FormBase
     {
         private int NumOrden;
         private int IdUsuario;
         private int IdTercero;
         private DataSet ds;
 
-        public Orden()
+        public Ordenes()
         {
             InitializeComponent();
             NumOrden = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM Cliente").Tables[0].Rows[0]["Mayor"].ToString());
