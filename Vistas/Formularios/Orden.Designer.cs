@@ -36,51 +36,49 @@
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal6 = new Negocios.Componentes.TextPersonal();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal5 = new Negocios.Componentes.TextPersonal();
+            this.textPersonal4 = new Negocios.Componentes.TextPersonal();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.textPersonal3 = new Negocios.Componentes.TextPersonal();
+            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.cbbPersonal1 = new Negocios.Componentes.cbbPersonal();
             this.dataContacto = new Telerik.WinControls.UI.RadGridView();
             this.textPersonal2 = new Negocios.Componentes.TextPersonal();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.cbbCentro = new Negocios.Componentes.cbbPersonal();
             this.txttipoOrden = new Negocios.Componentes.TextPersonal();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal3 = new Negocios.Componentes.TextPersonal();
-            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal4 = new Negocios.Componentes.TextPersonal();
-            this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal5 = new Negocios.Componentes.TextPersonal();
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal6 = new Negocios.Componentes.TextPersonal();
-            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttipoOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +99,6 @@
             this.radGroupBox1.Controls.Add(this.cbbPersonal1);
             this.radGroupBox1.Controls.Add(this.dataContacto);
             this.radGroupBox1.Controls.Add(this.textPersonal2);
-            this.radGroupBox1.Controls.Add(this.radLabel4);
             this.radGroupBox1.Controls.Add(this.textPersonal1);
             this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.Controls.Add(this.cbbCentro);
@@ -115,6 +112,94 @@
             this.radGroupBox1.TabIndex = 1;
             this.radGroupBox1.Text = "Datos de las Orden";
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Location = new System.Drawing.Point(272, 136);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(68, 18);
+            this.radLabel10.TabIndex = 5;
+            this.radLabel10.Text = "Observacion";
+            // 
+            // textPersonal6
+            // 
+            this.textPersonal6.Correo = false;
+            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal6.Limpiar = true;
+            this.textPersonal6.Location = new System.Drawing.Point(346, 21);
+            this.textPersonal6.Name = "textPersonal6";
+            this.textPersonal6.Size = new System.Drawing.Size(142, 24);
+            this.textPersonal6.TabIndex = 5;
+            this.textPersonal6.ThemeName = "VisualStudio2012Light";
+            this.textPersonal6.Validar = true;
+            // 
+            // radLabel9
+            // 
+            this.radLabel9.Location = new System.Drawing.Point(272, 26);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(68, 18);
+            this.radLabel9.TabIndex = 4;
+            this.radLabel9.Text = "Cotizacion #";
+            // 
+            // textPersonal5
+            // 
+            this.textPersonal5.Correo = false;
+            this.textPersonal5.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal5.Limpiar = true;
+            this.textPersonal5.Location = new System.Drawing.Point(663, 388);
+            this.textPersonal5.Name = "textPersonal5";
+            this.textPersonal5.Size = new System.Drawing.Size(142, 24);
+            this.textPersonal5.TabIndex = 17;
+            this.textPersonal5.ThemeName = "VisualStudio2012Light";
+            this.textPersonal5.Validar = true;
+            // 
+            // textPersonal4
+            // 
+            this.textPersonal4.Correo = false;
+            this.textPersonal4.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal4.Limpiar = true;
+            this.textPersonal4.Location = new System.Drawing.Point(663, 353);
+            this.textPersonal4.Name = "textPersonal4";
+            this.textPersonal4.Size = new System.Drawing.Size(142, 24);
+            this.textPersonal4.TabIndex = 17;
+            this.textPersonal4.ThemeName = "VisualStudio2012Light";
+            this.textPersonal4.Validar = true;
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Location = new System.Drawing.Point(618, 394);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(39, 18);
+            this.radLabel8.TabIndex = 16;
+            this.radLabel8.Text = "TOTAL";
+            // 
+            // textPersonal3
+            // 
+            this.textPersonal3.Correo = false;
+            this.textPersonal3.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal3.Limpiar = true;
+            this.textPersonal3.Location = new System.Drawing.Point(663, 318);
+            this.textPersonal3.Name = "textPersonal3";
+            this.textPersonal3.Size = new System.Drawing.Size(142, 24);
+            this.textPersonal3.TabIndex = 15;
+            this.textPersonal3.ThemeName = "VisualStudio2012Light";
+            this.textPersonal3.Validar = true;
+            // 
+            // radLabel7
+            // 
+            this.radLabel7.Location = new System.Drawing.Point(608, 359);
+            this.radLabel7.Name = "radLabel7";
+            this.radLabel7.Size = new System.Drawing.Size(55, 18);
+            this.radLabel7.TabIndex = 16;
+            this.radLabel7.Text = "ITBIS 18%";
+            // 
+            // radLabel6
+            // 
+            this.radLabel6.Location = new System.Drawing.Point(608, 324);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(63, 18);
+            this.radLabel6.TabIndex = 14;
+            this.radLabel6.Text = "SUB TOTAL";
             // 
             // radDateTimePicker1
             // 
@@ -221,14 +306,6 @@
             this.textPersonal2.ThemeName = "VisualStudio2012Light";
             this.textPersonal2.Validar = true;
             // 
-            // radLabel4
-            // 
-            this.radLabel4.Location = new System.Drawing.Point(25, 98);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(47, 18);
-            this.radLabel4.TabIndex = 2;
-            this.radLabel4.Text = "Usuario ";
-            // 
             // textPersonal1
             // 
             this.textPersonal1.Correo = false;
@@ -294,94 +371,6 @@
             this.radLabel2.TabIndex = 0;
             this.radLabel2.Text = "Tipo Orden";
             // 
-            // textPersonal3
-            // 
-            this.textPersonal3.Correo = false;
-            this.textPersonal3.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal3.Limpiar = true;
-            this.textPersonal3.Location = new System.Drawing.Point(663, 318);
-            this.textPersonal3.Name = "textPersonal3";
-            this.textPersonal3.Size = new System.Drawing.Size(142, 24);
-            this.textPersonal3.TabIndex = 15;
-            this.textPersonal3.ThemeName = "VisualStudio2012Light";
-            this.textPersonal3.Validar = true;
-            // 
-            // radLabel6
-            // 
-            this.radLabel6.Location = new System.Drawing.Point(608, 324);
-            this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(63, 18);
-            this.radLabel6.TabIndex = 14;
-            this.radLabel6.Text = "SUB TOTAL";
-            // 
-            // textPersonal4
-            // 
-            this.textPersonal4.Correo = false;
-            this.textPersonal4.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal4.Limpiar = true;
-            this.textPersonal4.Location = new System.Drawing.Point(663, 353);
-            this.textPersonal4.Name = "textPersonal4";
-            this.textPersonal4.Size = new System.Drawing.Size(142, 24);
-            this.textPersonal4.TabIndex = 17;
-            this.textPersonal4.ThemeName = "VisualStudio2012Light";
-            this.textPersonal4.Validar = true;
-            // 
-            // radLabel7
-            // 
-            this.radLabel7.Location = new System.Drawing.Point(608, 359);
-            this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(55, 18);
-            this.radLabel7.TabIndex = 16;
-            this.radLabel7.Text = "ITBIS 18%";
-            // 
-            // textPersonal5
-            // 
-            this.textPersonal5.Correo = false;
-            this.textPersonal5.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal5.Limpiar = true;
-            this.textPersonal5.Location = new System.Drawing.Point(663, 388);
-            this.textPersonal5.Name = "textPersonal5";
-            this.textPersonal5.Size = new System.Drawing.Size(142, 24);
-            this.textPersonal5.TabIndex = 17;
-            this.textPersonal5.ThemeName = "VisualStudio2012Light";
-            this.textPersonal5.Validar = true;
-            // 
-            // radLabel8
-            // 
-            this.radLabel8.Location = new System.Drawing.Point(618, 394);
-            this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(39, 18);
-            this.radLabel8.TabIndex = 16;
-            this.radLabel8.Text = "TOTAL";
-            // 
-            // textPersonal6
-            // 
-            this.textPersonal6.Correo = false;
-            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal6.Limpiar = true;
-            this.textPersonal6.Location = new System.Drawing.Point(346, 21);
-            this.textPersonal6.Name = "textPersonal6";
-            this.textPersonal6.Size = new System.Drawing.Size(142, 24);
-            this.textPersonal6.TabIndex = 5;
-            this.textPersonal6.ThemeName = "VisualStudio2012Light";
-            this.textPersonal6.Validar = true;
-            // 
-            // radLabel9
-            // 
-            this.radLabel9.Location = new System.Drawing.Point(272, 26);
-            this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(68, 18);
-            this.radLabel9.TabIndex = 4;
-            this.radLabel9.Text = "Cotizacion #";
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Location = new System.Drawing.Point(272, 136);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(68, 18);
-            this.radLabel10.TabIndex = 5;
-            this.radLabel10.Text = "Observacion";
-            // 
             // Orden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,28 +386,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataContacto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttipoOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -432,7 +420,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Negocios.Componentes.TextPersonal textPersonal2;
-        private Telerik.WinControls.UI.RadLabel radLabel4;
         private Negocios.Componentes.TextPersonal textPersonal1;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.UI.RadGridView dataContacto;
