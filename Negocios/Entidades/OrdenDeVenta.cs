@@ -31,6 +31,11 @@ namespace Negocios.Entidades
             IdEstadoCompra = idEstadoCompra;
         }
 
+        public OrdenDeVenta(int NumOrden)
+        {
+
+        }
+
         public string getGuardar()
         {
             return $"EXEC RegistrarOrdenVenta {NumOrden},{IdTipoVenta},{IdUsuario},{IdCentro},{IdProveedor},{IdContacto},'{NumCotizacion}','{Nota}',{IdEstadoCompra}";
