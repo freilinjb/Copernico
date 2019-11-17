@@ -30,7 +30,7 @@ namespace Vistas.Formularios
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
-            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT COUNT(NumCotizacion)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
+            //txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT COUNT(NumCotizacion)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
             
         }
 
@@ -47,6 +47,37 @@ namespace Vistas.Formularios
         private void cbbPersonal1_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
 
+        }
+
+        private void radSeparator4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbObra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radLabel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbbCliente.EditorControl.Rows.Count > 0)
+            {
+                if(cbbCliente.SelectedIndex >= 0  || !string.IsNullOrEmpty(cbbCliente.Text))
+                {
+
+                }
+            }
         }
     }
 }
