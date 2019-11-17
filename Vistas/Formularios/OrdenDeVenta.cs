@@ -23,6 +23,8 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.FormaDePago' Puede moverla o quitarla según sea necesario.
+            this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
             this.estadoOrdenTableAdapter.Fill(this.matrizDataSet.EstadoOrden);
             this.tipoVentaTableAdapter.Fill(this.matrizDataSet.TipoVenta);
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
@@ -30,8 +32,8 @@ namespace Vistas.Formularios
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
-            //txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT COUNT(NumCotizacion)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
-            
+            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
+
         }
 
         public override bool Guardar()
@@ -76,6 +78,41 @@ namespace Vistas.Formularios
                 if(cbbCliente.SelectedIndex >= 0  || !string.IsNullOrEmpty(cbbCliente.Text))
                 {
 
+                }
+            }
+        }
+
+        private void OrdenDeVenta_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                Guardar();
+            }
+        }
+
+        private void cbbTipoCredito_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            
+        }
+
+        private void cbbTipoVenta_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (cbbTipoVenta.SelectedIndex >= 0)
+            {
+                if (cbbTipoVenta.Text.Trim() == "Credito")
+                {
+                    cbbFormaPago.SelectedIndex = -1;
+                    cbbFormaPago.Enabled = false;
+
+                    cbbTipoCredito.Enabled = true;
+
+                }
+                else if(cbbTipoVenta.Text.Trim() == "Contado")
+                {
+                    cbbTipoCredito.SelectedIndex = -1;
+                    cbbTipoCredito.Enabled = false;
+
+                    cbbFormaPago.Enabled = true;
                 }
             }
         }
