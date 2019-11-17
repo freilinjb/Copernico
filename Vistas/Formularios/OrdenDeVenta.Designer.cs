@@ -79,9 +79,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.estadoOrdenTableAdapter = new Vistas.MatrizDataSetTableAdapters.EstadoOrdenTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.estadoVentaTableAdapter = new Vistas.MatrizDataSetTableAdapters.EstadoVentaTableAdapter();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
@@ -108,6 +105,9 @@
             this.txtEncargado = new Negocios.Componentes.TextPersonal();
             this.cbbPersonal3 = new Negocios.Componentes.cbbPersonal();
             this.cbbCliente = new Negocios.Componentes.MultiCbbPersonal();
+            this.txtSubTotal = new Negocios.Componentes.TextPersonal();
+            this.txtItbis = new Negocios.Componentes.TextPersonal();
+            this.txtTotal = new Negocios.Componentes.TextPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.estadoVentaBindingSource)).BeginInit();
@@ -160,6 +160,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItbis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -336,7 +339,7 @@
             // 
             this.radSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator1.Location = new System.Drawing.Point(10, 607);
+            this.radSeparator1.Location = new System.Drawing.Point(14, 558);
             this.radSeparator1.Name = "radSeparator1";
             this.radSeparator1.Size = new System.Drawing.Size(880, 10);
             this.radSeparator1.TabIndex = 22;
@@ -399,27 +402,27 @@
             this.dataProducto.Name = "dataProducto";
             this.dataProducto.ReadOnly = true;
             this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataProducto.Size = new System.Drawing.Size(881, 253);
+            this.dataProducto.Size = new System.Drawing.Size(881, 207);
             this.dataProducto.TabIndex = 16;
             this.dataProducto.ThemeName = "VisualStudio2012Light";
             // 
             // radLabel6
             // 
             this.radLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.radLabel6.Location = new System.Drawing.Point(667, 624);
+            this.radLabel6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.radLabel6.Location = new System.Drawing.Point(756, 610);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(32, 19);
+            this.radLabel6.Size = new System.Drawing.Size(35, 21);
             this.radLabel6.TabIndex = 13;
             this.radLabel6.Text = "Itbis";
             // 
             // radLabel7
             // 
             this.radLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.radLabel7.Location = new System.Drawing.Point(528, 623);
+            this.radLabel7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.radLabel7.Location = new System.Drawing.Point(726, 580);
             this.radLabel7.Name = "radLabel7";
-            this.radLabel7.Size = new System.Drawing.Size(58, 19);
+            this.radLabel7.Size = new System.Drawing.Size(65, 21);
             this.radLabel7.TabIndex = 14;
             this.radLabel7.Text = "SubTotal";
             // 
@@ -449,10 +452,10 @@
             // radLabel10
             // 
             this.radLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.radLabel10.Location = new System.Drawing.Point(781, 621);
+            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.radLabel10.Location = new System.Drawing.Point(751, 640);
             this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(36, 19);
+            this.radLabel10.Size = new System.Drawing.Size(40, 21);
             this.radLabel10.TabIndex = 14;
             this.radLabel10.Text = "Total";
             // 
@@ -476,39 +479,6 @@
             // estadoOrdenTableAdapter
             // 
             this.estadoOrdenTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(705, 619);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
-            this.label1.TabIndex = 10;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.LightGray;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(592, 619);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 10;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BackColor = System.Drawing.Color.LightGray;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.Location = new System.Drawing.Point(823, 620);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
-            this.label3.TabIndex = 10;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // estadoVentaTableAdapter
             // 
@@ -929,12 +899,57 @@
             this.cbbCliente.ValueMember = "IdCliente";
             this.cbbCliente.SelectedIndexChanged += new System.EventHandler(this.cbbCliente_SelectedIndexChanged);
             // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Correo = false;
+            this.txtSubTotal.Enabled = false;
+            this.txtSubTotal.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSubTotal.Limpiar = false;
+            this.txtSubTotal.Location = new System.Drawing.Point(797, 574);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(97, 27);
+            this.txtSubTotal.TabIndex = 24;
+            this.txtSubTotal.ThemeName = "VisualStudio2012Light";
+            this.txtSubTotal.Validar = false;
+            // 
+            // txtItbis
+            // 
+            this.txtItbis.Correo = false;
+            this.txtItbis.Enabled = false;
+            this.txtItbis.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtItbis.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtItbis.Limpiar = false;
+            this.txtItbis.Location = new System.Drawing.Point(797, 604);
+            this.txtItbis.Name = "txtItbis";
+            this.txtItbis.Size = new System.Drawing.Size(97, 27);
+            this.txtItbis.TabIndex = 24;
+            this.txtItbis.ThemeName = "VisualStudio2012Light";
+            this.txtItbis.Validar = false;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Correo = false;
+            this.txtTotal.Enabled = false;
+            this.txtTotal.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTotal.Limpiar = false;
+            this.txtTotal.Location = new System.Drawing.Point(797, 634);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(97, 27);
+            this.txtTotal.TabIndex = 24;
+            this.txtTotal.ThemeName = "VisualStudio2012Light";
+            this.txtTotal.Validar = false;
+            // 
             // OrdenDeVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 836);
+            this.ClientSize = new System.Drawing.Size(904, 673);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtItbis);
+            this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
             this.Controls.Add(this.radSeparator2);
@@ -943,14 +958,10 @@
             this.Controls.Add(this.radLabel8);
             this.Controls.Add(this.dataProducto);
             this.Controls.Add(this.radSeparator5);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.radLabel6);
             this.Controls.Add(this.radLabel10);
             this.Controls.Add(this.radLabel7);
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(764, 847);
             this.Name = "OrdenDeVenta";
             // 
             // 
@@ -1012,6 +1023,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItbis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1046,9 +1060,6 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator4;
         private System.Windows.Forms.BindingSource estadoOrdenBindingSource;
         private MatrizDataSetTableAdapters.EstadoOrdenTableAdapter estadoOrdenTableAdapter;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private Negocios.Componentes.cbbPersonal cbbCentro;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.BindingSource estadoVentaBindingSource;
@@ -1077,5 +1088,8 @@
         private Negocios.Componentes.TextPersonal txtCliente;
         private Negocios.Componentes.cbbPersonal cbbPersonal3;
         private Negocios.Componentes.MultiCbbPersonal cbbCliente;
+        private Negocios.Componentes.TextPersonal txtTotal;
+        private Negocios.Componentes.TextPersonal txtItbis;
+        private Negocios.Componentes.TextPersonal txtSubTotal;
     }
 }

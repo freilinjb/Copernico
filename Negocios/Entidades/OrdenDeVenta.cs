@@ -9,36 +9,43 @@ namespace Negocios.Entidades
     public class OrdenDeVenta
     {
         public int NumOrden;
-        public int IdTipoVenta;
         public int IdUsuario;
         public int IdCentro;
-        public int IdProveedor;
+        public int IdTipoOrden;
+        public int IdTipoVenta;
+        public int IdCliente;
+        public int IdObra;
         public int IdContacto;
         public string NumCotizacion;
+        public int IdFormaDePago;
         public string Nota;
-        public int IdEstadoCompra;
+        public int IdEstadoVenta;
 
-        public OrdenDeVenta(int numOrden, int idTipoVenta, int idUsuario, int idCentro, int idProveedor, int idContacto, string numCotizacion, string nota, int idEstadoCompra)
-        {
-            NumOrden = numOrden;
-            IdTipoVenta = idTipoVenta;
-            IdUsuario = idUsuario;
-            IdCentro = idCentro;
-            IdProveedor = idProveedor;
-            IdContacto = idContacto;
-            NumCotizacion = numCotizacion;
-            Nota = nota;
-            IdEstadoCompra = idEstadoCompra;
-        }
-
+        
         public OrdenDeVenta(int NumOrden)
         {
 
         }
 
+        public OrdenDeVenta(int numOrden, int idUsuario, int idCentro, int idTipoOrden, int idTipoVenta, int idCliente, int idObra, int idContacto, string numCotizacion, int idFormaDePago, string nota, int idEstadoVenta)
+        {
+            NumOrden = numOrden;
+            IdUsuario = idUsuario;
+            IdCentro = idCentro;
+            IdTipoOrden = idTipoOrden;
+            IdTipoVenta = idTipoVenta;
+            IdCliente = idCliente;
+            IdObra = idObra;
+            IdContacto = idContacto;
+            NumCotizacion = numCotizacion;
+            IdFormaDePago = idFormaDePago;
+            Nota = nota;
+            IdEstadoVenta = idEstadoVenta;
+        }
+
         public string getGuardar()
         {
-            return $"EXEC RegistrarOrdenVenta {NumOrden},{IdTipoVenta},{IdUsuario},{IdCentro},{IdProveedor},{IdContacto},'{NumCotizacion}','{Nota}',{IdEstadoCompra}";
+            return $"EXEC [RegistrarOrdenVenta] {NumOrden},{IdUsuario},{IdCentro},{IdTipoOrden},{IdTipoVenta},{IdCliente},{IdObra},{IdContacto},'{NumCotizacion}',{IdFormaDePago},{Nota},{IdEstadoVenta}";
         }
     }
 }
