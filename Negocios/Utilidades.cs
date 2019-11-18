@@ -67,6 +67,12 @@ namespace Negocios
                         if (cbb2.Limpiar)
                             cbb2.SelectedIndex = -1;
                     }
+
+                    else if (item is Componentes.MultiCbbPersonal cbbM)
+                    {
+                        if (cbbM.Limpiar)
+                            cbbM.SelectedIndex = -1;
+                    }
                 }
             }
             return bien;
@@ -89,6 +95,18 @@ namespace Negocios
                             if (string.IsNullOrEmpty(txt.Text.Trim()) || string.IsNullOrWhiteSpace(txt.Text.Trim()))
                             {
                                 error.SetError(txt, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                    }
+
+                    if (obj is Componentes.MultiCbbPersonal cbbM)
+                    {
+                        if (cbbM.Validar)
+                        {
+                            if (string.IsNullOrEmpty(cbbM.Text.Trim()) || string.IsNullOrWhiteSpace(cbbM.Text.Trim()))
+                            {
+                                error.SetError(cbbM, "Compo obligatorio");
                                 hayerror = true;
                             }
                         }
@@ -180,6 +198,19 @@ namespace Negocios
                             if (string.IsNullOrEmpty(cbb2.Text.Trim()) || string.IsNullOrWhiteSpace(cbb2.Text.Trim()))
                             {
                                 error.SetError(cbb2, "Compo obligatorio");
+                                hayerror = true;
+                            }
+                        }
+                    }
+
+                    if (obj is Componentes.MultiCbbPersonal cbbM)
+                    {
+
+                        if (cbbM.Validar)
+                        {
+                            if (string.IsNullOrEmpty(cbbM.Text.Trim()) || string.IsNullOrWhiteSpace(cbbM.Text.Trim()))
+                            {
+                                error.SetError(cbbM, "Compo obligatorio");
                                 hayerror = true;
                             }
                         }

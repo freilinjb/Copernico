@@ -34,6 +34,8 @@ namespace Vistas.Formularios
 
             txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
 
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
+
         }
 
         public override bool Guardar()
@@ -75,9 +77,24 @@ namespace Vistas.Formularios
         {
             if(cbbCliente.EditorControl.Rows.Count > 0)
             {
-                if(cbbCliente.SelectedIndex >= 0  || !string.IsNullOrEmpty(cbbCliente.Text))
+                if(cbbCliente.SelectedIndex >= 0  && !string.IsNullOrEmpty(cbbCliente.Text))
                 {
+                    if(cbbCliente.EditorControl.CurrentRow.Index >= 0)
+                    {
+                        txtCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
+                        cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
 
+                        cbbObra.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdObra,IdCliente,Obra FROM VistaObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1").Tables[0];
+                        if (cbbObra.Items.Count > 0)
+                        {
+                            cbbObra.DisplayMember = "IdObra";
+                            cbbObra.ValueMember = "Obra";
+
+                            cbbObra.Text = string.Format("{0:0000}", Convert.ToInt32(cbbObra.Text.Trim()));
+
+                            txtObra.Text = cbbObra.SelectedValue.ToString();
+                        }
+                    }
                 }
             }
         }
