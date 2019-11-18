@@ -88,6 +88,7 @@
     <Compile Include="Entidades\ActivoFijoMaquinaria.cs" />
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Obra.cs" />
+    <Compile Include="Entidades\Orden.cs" />
     <Compile Include="Entidades\OrdenDeVenta.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Usuario.cs" />
