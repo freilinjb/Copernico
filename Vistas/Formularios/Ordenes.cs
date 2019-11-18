@@ -9,7 +9,7 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Ordenes : Telerik.WinControls.UI.RadForm
+    public partial class Ordenes : FormBase
     {
         public Ordenes()
         {
