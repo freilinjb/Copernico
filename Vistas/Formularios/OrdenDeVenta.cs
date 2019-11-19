@@ -8,12 +8,14 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
     public partial class OrdenDeVenta : FormBase
     {
         private DataSet ds;
+        private int IdContactoEncargado;
         public OrdenDeVenta()
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
+
             //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
             this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
             this.tipoVentaTableAdapter.Fill(this.matrizDataSet.TipoVenta);
@@ -47,6 +51,35 @@ namespace Vistas.Formularios
             errorProvider1.Clear();
             if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
+                RadMessageBox.Show("Validado");
+
+                Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
+                    Convert.ToInt32(txtNumOrden.Text.Trim()),
+                    (int)cbbCentro.SelectedValue,
+                    1,
+                    (int)cbbTipoVenta.SelectedValue,
+                    (int)cbbCliente.SelectedValue,
+                    (int)cbbObra.SelectedIndex,
+                    (int)IdContactoEncargado,
+                    txtNota.Text,
+                    (int)cbbFormaPago.SelectedValue,
+                    txtNota.Text.Trim(),
+                    (int)cbbEstado.SelectedValue);
+
+
+                ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
+
+                if(ds.Tables[0].Rows.Count > 0)
+                {
+                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                    cbbCliente.Focus();
+                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                }
+            }
+            else
+            {
+                RadMessageBox.Show("No valido");
 
             }
             return bien;
@@ -102,7 +135,7 @@ namespace Vistas.Formularios
 
         private void cbbTipoVenta_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if (cbbTipoVenta.SelectedIndex != -1)
+            if (cbbTipoVenta.SelectedIndex >= 0)
             {
                 if (cbbTipoVenta.SelectedIndex == 0)
                 {
@@ -139,6 +172,9 @@ namespace Vistas.Formularios
                     txtEncargado.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[5].Value.ToString();
                     txtTelefono.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[6].Value.ToString();
                     txtCorreo.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[7].Value.ToString();
+
+                    IdContactoEncargado = Convert.ToInt32(cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[4].Value.ToString());
+
                     errorProvider1.Clear();
                 }
             }

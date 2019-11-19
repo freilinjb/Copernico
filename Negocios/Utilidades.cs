@@ -176,7 +176,7 @@ namespace Negocios
                     if (obj is Componentes.cbbPersonal cbb)
                     {
 
-                        if (cbb.Enabled)
+                        if (cbb.Validar)
                         {
                             if (string.IsNullOrEmpty(cbb.Text.Trim()) || string.IsNullOrWhiteSpace(cbb.Text.Trim()))
                             {
@@ -184,11 +184,11 @@ namespace Negocios
                                 hayerror = true;
                             }
                         }
-                        if (cbb.SelectedIndex == -1)
-                        {
-                            error.SetError(cbb, "Compo obligatorio");
-                            hayerror = true;
-                        }
+                        //if (cbb.SelectedIndex == -1)
+                        //{
+                        //    error.SetError(cbb, "Compo obligatorio");
+                        //    hayerror = true;
+                        //}
                     }
                     if (obj is Componentes.ComboPersonal cbb2)
                     {
