@@ -23,9 +23,8 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.FormaDePago' Puede moverla o quitarla según sea necesario.
+            //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
             this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
-            this.estadoOrdenTableAdapter.Fill(this.matrizDataSet.EstadoOrden);
             this.tipoVentaTableAdapter.Fill(this.matrizDataSet.TipoVenta);
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             this.vistaClienteTableAdapter.Fill(this.matrizDataSet.VistaCliente);
@@ -34,6 +33,10 @@ namespace Vistas.Formularios
 
             txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
 
+            cbbTipoCredito.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM TipoCredito").Tables[0];
+            cbbTipoCredito.DisplayMember = "Descripcion";
+            cbbTipoCredito.ValueMember = "IdTipoCredito";
+
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
         }
@@ -41,63 +44,48 @@ namespace Vistas.Formularios
         public override bool Guardar()
         {
             bool bien = false;
+            errorProvider1.Clear();
             if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
 
             }
             return bien;
         }
-
-        private void cbbPersonal1_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
-
-        }
-
-        private void radSeparator4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbObra_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radLabel13_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbbCliente.EditorControl.Rows.Count > 0)
+            if (cbbCliente.SelectedIndex != -1)
             {
-                if(cbbCliente.SelectedIndex >= 0  && !string.IsNullOrEmpty(cbbCliente.Text))
+                txtCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
+                cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
+
+                ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaMantenimientoObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1");
+
+                if(ds.Tables[0].Rows.Count > 0)
                 {
-                    if(cbbCliente.EditorControl.CurrentRow.Index >= 0)
-                    {
-                        txtCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
-                        cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
-
-                        cbbObra.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdObra,IdCliente,Obra FROM VistaObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1").Tables[0];
-                        if (cbbObra.Items.Count > 0)
-                        {
-                            cbbObra.DisplayMember = "IdObra";
-                            cbbObra.ValueMember = "Obra";
-
-                            cbbObra.Text = string.Format("{0:0000}", Convert.ToInt32(cbbObra.Text.Trim()));
-
-                            txtObra.Text = cbbObra.SelectedValue.ToString();
-                        }
-                    }
+                    cbbObra.Enabled = true;
+                    cbbObra.DataSource = ds.Tables[0];
+                }
+                else
+                {
+                    cbbObra.Enabled = false;
+                    errorProvider1.SetError(cbbObra, "El cliente no contiene ningun proyecto registrado a su nombre");
+                    txtObra.Text = null;
+                    txtTelefono.Text = null;
+                    txtCorreo.Text = null;
                 }
             }
+
+            if (string.IsNullOrEmpty(cbbCliente.Text.Trim()))
+            {
+                txtCliente.Text = null;
+
+                txtTelefono.Text = null;
+                txtCorreo.Text = null;
+            }
         }
+
 
         private void OrdenDeVenta_KeyUp(object sender, KeyEventArgs e)
         {
@@ -114,23 +102,52 @@ namespace Vistas.Formularios
 
         private void cbbTipoVenta_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if (cbbTipoVenta.SelectedIndex >= 0)
+            if (cbbTipoVenta.SelectedIndex != -1)
             {
-                if (cbbTipoVenta.Text.Trim() == "Credito")
+                if (cbbTipoVenta.SelectedIndex == 0)
                 {
                     cbbFormaPago.SelectedIndex = -1;
                     cbbFormaPago.Enabled = false;
+                    cbbFormaPago.Validar = false;
 
                     cbbTipoCredito.Enabled = true;
+                    cbbTipoCredito.Validar = true;
+
+
 
                 }
-                else if(cbbTipoVenta.Text.Trim() == "Contado")
+                else
                 {
                     cbbTipoCredito.SelectedIndex = -1;
                     cbbTipoCredito.Enabled = false;
+                    cbbTipoCredito.Validar = false;
 
                     cbbFormaPago.Enabled = true;
+                    cbbFormaPago.Validar = true;
                 }
+            }
+        }
+
+        private void cbbObra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbObra.SelectedIndex != -1)
+            {
+                if (cbbObra.EditorControl.Rows.Count > 0)
+                {
+                    cbbObra.Enabled = true;
+                    txtObra.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[1].Value.ToString();
+                    txtEncargado.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[5].Value.ToString();
+                    txtTelefono.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[6].Value.ToString();
+                    txtCorreo.Text = cbbObra.EditorControl.Rows[cbbObra.EditorControl.CurrentRow.Index].Cells[7].Value.ToString();
+                    errorProvider1.Clear();
+                }
+            }
+            else
+            {
+                txtObra.Text = null;
+                txtTelefono.Text = null;
+                txtCorreo.Text = null;
+                txtEncargado.Text = null;
             }
         }
     }
