@@ -276,7 +276,7 @@
             this.radPageView1.Controls.Add(this.radPageViewPage3);
             this.radPageView1.Location = new System.Drawing.Point(21, 47);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage2;
+            this.radPageView1.SelectedPage = this.radPageViewPage1;
             this.radPageView1.Size = new System.Drawing.Size(675, 511);
             this.radPageView1.TabIndex = 0;
             this.radPageView1.ThemeName = "VisualStudio2012Light";

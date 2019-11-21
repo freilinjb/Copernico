@@ -69,12 +69,14 @@ namespace Vistas.Formularios
 
                 ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
 
+
                 if(ds.Tables[0].Rows.Count > 0)
                 {
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                     cbbCliente.Focus();
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
+
                 }
             }
             else
