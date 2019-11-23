@@ -51,37 +51,47 @@ namespace Vistas.Formularios
             errorProvider1.Clear();
             if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
-                RadMessageBox.Show("Validado");
-
-                Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
-                    Convert.ToInt32(txtNumOrden.Text.Trim()),
-                    (int)cbbCentro.SelectedValue,
-                    1,
-                    (int)cbbTipoVenta.SelectedValue,
-                    (int)cbbCliente.SelectedValue,
-                    (int)cbbObra.SelectedIndex,
-                    (int)IdContactoEncargado,
-                    txtNota.Text,
-                    (int)cbbFormaPago.SelectedValue,
-                    txtNota.Text.Trim(),
-                    (int)cbbEstado.SelectedValue);
-
-
-                ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
-
-
-                if(ds.Tables[0].Rows.Count > 0)
+                if(dataProducto.Rows.Count > 0)
                 {
-                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    RadMessageBox.Show("Validado");
 
-                    cbbCliente.Focus();
-                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
+                        Convert.ToInt32(txtNumOrden.Text.Trim()),
+                        (int)cbbCentro.SelectedValue,
+                        1,
+                        (int)cbbTipoVenta.SelectedValue,
+                        (int)cbbCliente.SelectedValue,
+                        (int)cbbObra.SelectedIndex,
+                        (int)IdContactoEncargado,
+                        txtNota.Text,
+                        (int)cbbFormaPago.SelectedValue,
+                        txtNota.Text.Trim(),
+                        (int)cbbEstado.SelectedValue);
+
+
+                    ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
+
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        cbbCliente.Focus();
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+                    }
+                }
+
+                else
+                {
+                    RadMessageBox.Show("Aun no ha registrado productos");
+
+                    //cbbProducto.Focus();
 
                 }
             }
             else
             {
-                RadMessageBox.Show("No valido");
 
             }
             return bien;
@@ -101,6 +111,8 @@ namespace Vistas.Formularios
                 {
                     cbbObra.Enabled = true;
                     cbbObra.DataSource = ds.Tables[0];
+
+                    //cbbProducto
                 }
                 else
                 {
@@ -132,7 +144,7 @@ namespace Vistas.Formularios
 
         private void cbbTipoCredito_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            
+
         }
 
         private void cbbTipoVenta_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
