@@ -20,11 +20,14 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
 
-            
+
         }
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             RadMessageBox.ThemeName = this.ThemeName;
 
             //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
@@ -49,9 +52,9 @@ namespace Vistas.Formularios
         {
             bool bien = false;
             errorProvider1.Clear();
-            if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
+            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
             {
-                if(dataProducto.Rows.Count > 0)
+                if (dataProducto.Rows.Count > 0)
                 {
                     RadMessageBox.Show("Validado");
 
@@ -96,7 +99,7 @@ namespace Vistas.Formularios
             }
             return bien;
         }
-        
+
 
         private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -107,12 +110,11 @@ namespace Vistas.Formularios
 
                 ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaMantenimientoObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1");
 
-                if(ds.Tables[0].Rows.Count > 0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     cbbObra.Enabled = true;
                     cbbObra.DataSource = ds.Tables[0];
 
-                    //cbbProducto
                 }
                 else
                 {
@@ -136,7 +138,7 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.F1)
+            if (e.KeyCode == Keys.F1)
             {
                 Guardar();
             }
@@ -198,6 +200,76 @@ namespace Vistas.Formularios
                 txtTelefono.Text = null;
                 txtCorreo.Text = null;
                 txtEncargado.Text = null;
+            }
+        }
+
+        private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int cont_fila = 0;
+                int num_fila = 0;
+                bool existe = false;
+
+                if (cbbProducto.EditorControl.Rows.Count > 0 && cbbProducto.SelectedIndex != -1)
+                {
+
+
+                    if (cont_fila == 0)
+                    {
+                        dataProducto.Rows.Add(
+                        cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
+                        cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
+                        cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                        cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
+                        Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
+                        Convert.ToInt32(txtCantidad.Text.Trim()),
+                        Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Importe"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim())
+                        );
+
+                        cont_fila++;
+                    }
+                }
+                else
+                {
+                    foreach (var Fila in dataProducto.Rows)
+                    {
+                        if (Fila.Cells[0].Value.ToString() == cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString())
+                        {
+                            existe = true;
+                            num_fila = Fila.Index;
+                        }
+                    }
+                    if (existe == true)
+                    {
+                        dataProducto.Rows[num_fila].Cells["Cantidad"].Value = Convert.ToInt32(txtCantidad.Text.Trim());
+                        dataProducto.Rows[num_fila].Cells["Importe"].Value = Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim());
+
+                    }
+                    //else
+                    //{
+                    //    dataArticulos.Rows.Add(codigo, articulo, precio, itbis, cantidad, importe);
+                    //    cont_fila++;
+                    //}
+                    //cbbArticulo.Text = null;
+                }
+
+
+
+                cbbProducto.Focus();
+                txtCantidad.Text = null;
+            }
+
+            ///
+        }
+
+        private void cbbCentro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (cbbCentro.SelectedIndex != -1)
+            {
+                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdTercero = (SELECT IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
+
+                cbbProducto.EditorControl.ShowColumnHeaders = (cbbProducto.EditorControl.Rows.Count > 0) ? true : false;
             }
         }
     }
