@@ -16,6 +16,11 @@ namespace Vistas.Formularios
     {
         private DataSet ds;
         private int IdContactoEncargado;
+
+        private int cont_fila = 0;
+        private int num_fila = 0;
+        private bool existe = false;
+
         public OrdenDeVenta()
         {
             InitializeComponent();
@@ -207,9 +212,6 @@ namespace Vistas.Formularios
         {
             if (e.KeyCode == Keys.Enter)
             {
-                int cont_fila = 0;
-                int num_fila = 0;
-                bool existe = false;
 
                 if (cbbProducto.EditorControl.Rows.Count > 0 && cbbProducto.SelectedIndex != -1)
                 {
@@ -222,45 +224,50 @@ namespace Vistas.Formularios
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
-                        Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
                         Convert.ToInt32(txtCantidad.Text.Trim()),
-                        Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Importe"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim())
+                        Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
+                        (Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 1.18)
                         );
 
                         cont_fila++;
                     }
-                }
-                else
-                {
-                    foreach (var Fila in dataProducto.Rows)
+
+                    else
                     {
-                        if (Fila.Cells[0].Value.ToString() == cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString())
+                        foreach (var Fila in dataProducto.Rows)
                         {
-                            existe = true;
-                            num_fila = Fila.Index;
+                            if (Fila.Cells[0].Value.ToString() == cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString())
+                            {
+                                existe = true;
+                                num_fila = Fila.Index;
+                            }
+                        }
+                        if (existe == true)
+                        {
+                            Debug.WriteLine("Igual");
+                            dataProducto.Rows[num_fila].Cells["Cantidad"].Value = Convert.ToInt32(txtCantidad.Text.Trim());
+                            dataProducto.Rows[num_fila].Cells["Importe"].Value = Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim());
+
+                        }
+                        else
+                        {
+                            dataProducto.Rows.Add(
+                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
+                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
+                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
+                                                    Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
+                                                    Convert.ToInt32(txtCantidad.Text.Trim()),
+                                                    Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Importe"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim())
+                                                    );
+                            cont_fila++;
                         }
                     }
-                    if (existe == true)
-                    {
-                        dataProducto.Rows[num_fila].Cells["Cantidad"].Value = Convert.ToInt32(txtCantidad.Text.Trim());
-                        dataProducto.Rows[num_fila].Cells["Importe"].Value = Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim());
-
-                    }
-                    //else
-                    //{
-                    //    dataArticulos.Rows.Add(codigo, articulo, precio, itbis, cantidad, importe);
-                    //    cont_fila++;
-                    //}
-                    //cbbArticulo.Text = null;
+                    cbbProducto.Focus();
+                    txtCantidad.Text = null;
+                    cbbProducto.SelectedIndex = -1;
                 }
-
-
-
-                cbbProducto.Focus();
-                txtCantidad.Text = null;
             }
-
-            ///
         }
 
         private void cbbCentro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
