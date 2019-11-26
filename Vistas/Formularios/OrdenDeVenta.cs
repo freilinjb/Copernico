@@ -82,6 +82,14 @@ namespace Vistas.Formularios
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
+
+                        foreach (var Fila in dataProducto.Rows)
+                        {
+                            int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
+                            Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},{Fila.Cells["Descripcion"].Value.ToString()},{Fila.Cells["Unidad"].Value.ToString()},{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                            //Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},{Fila.Cells["Descripcion"].Value.ToString()},{Fila.Cells["Unidad"].Value.ToString()},{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                            
+                        }
                         RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                         cbbCliente.Focus();
@@ -212,6 +220,7 @@ namespace Vistas.Formularios
         {
             if (e.KeyCode == Keys.Enter)
             {
+                existe = false;
 
                 if (cbbProducto.EditorControl.Rows.Count > 0 && cbbProducto.SelectedIndex != -1)
                 {
@@ -247,19 +256,20 @@ namespace Vistas.Formularios
                             Debug.WriteLine("Igual");
                             dataProducto.Rows[num_fila].Cells["Cantidad"].Value = Convert.ToInt32(txtCantidad.Text.Trim());
                             dataProducto.Rows[num_fila].Cells["Importe"].Value = Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim());
-
+                            
                         }
                         else
                         {
                             dataProducto.Rows.Add(
-                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
-                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
-                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
-                                                    cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
-                                                    Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
-                                                    Convert.ToInt32(txtCantidad.Text.Trim()),
-                                                    Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Importe"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim())
-                                                    );
+                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
+                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
+                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
+                                Convert.ToInt32(txtCantidad.Text.Trim()),
+                                Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
+                                (Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 1.18)
+                            );
+
                             cont_fila++;
                         }
                     }
@@ -274,7 +284,7 @@ namespace Vistas.Formularios
         {
             if (cbbCentro.SelectedIndex != -1)
             {
-                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdTercero = (SELECT IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
+                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT DISTINCT * FROM VistaProducto WHERE IdTercero = (SELECT TOP 1 IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
 
                 cbbProducto.EditorControl.ShowColumnHeaders = (cbbProducto.EditorControl.Rows.Count > 0) ? true : false;
             }
