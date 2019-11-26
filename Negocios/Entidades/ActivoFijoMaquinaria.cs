@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vistas
+namespace Negocios.Entidades
 {
-    public class Class1
+    public class ActivoFijoMaquinaria
     {
+
     }
 }

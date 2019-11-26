@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,8 +45,58 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Componentes\cbbPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\cbbPersonal.Designer.cs">
+      <DependentUpon>cbbPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\ComboPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ComboPersonal.Designer.cs">
+      <DependentUpon>ComboPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\maskPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\maskPersonal.Designer.cs">
+      <DependentUpon>maskPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\MultiCbbPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\MultiCbbPersonal.Designer.cs">
+      <DependentUpon>MultiCbbPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\TextPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\TextPersonal.Designer.cs">
+      <DependentUpon>TextPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ActivoFijoGeneral.cs" />
+    <Compile Include="Entidades\ActivoFijoMaquinaria.cs" />
+    <Compile Include="Entidades\Contacto.cs" />
+    <Compile Include="Entidades\Obra.cs" />
+    <Compile Include="Entidades\OrdenDeVenta.cs" />
+    <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,7 +107,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Componentes\" />
+    <None Include="app.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Componentes\cbbPersonal.resx">
+      <DependentUpon>cbbPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\maskPersonal.resx">
+      <DependentUpon>maskPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\MultiCbbPersonal.resx">
+      <DependentUpon>MultiCbbPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\TextPersonal.resx">
+      <DependentUpon>TextPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
