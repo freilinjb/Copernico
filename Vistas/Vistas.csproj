@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,16 +32,44 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Guna.UI-Framework-Lib\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="MultiColumnComboBox">
+      <HintPath>..\..\..\..\..\Desktop\MultiColumnComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadMap, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Centro.cs">
@@ -49,14 +78,79 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Formularios\Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contacto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contacto.Designer.cs">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleado.Designer.cs">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturacion.Designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Obra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Obra.Designer.cs">
+      <DependentUpon>Obra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatrizDataSet.cs">
+      <DependentUpon>MatrizDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MatrizDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MatrizDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocios\Negocios.csproj">
@@ -65,7 +159,57 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Imagenes\" />
     <Folder Include="Informes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Centro.resx">
+      <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contacto.resx">
+      <DependentUpon>Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleado.resx">
+      <DependentUpon>Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Obra.resx">
+      <DependentUpon>Obra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="MatrizDataSet.xsc">
+      <DependentUpon>MatrizDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MatrizDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MatrizDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MatrizDataSet.xss">
+      <DependentUpon>MatrizDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

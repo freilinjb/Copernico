@@ -44,7 +44,11 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Consultar.cs" />
+    <Compile Include="Copernico\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

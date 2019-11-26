@@ -16,5 +16,17 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+            Centro instancia = Centro.ObtenerInstancia();
+            instancia.Show();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ((FormBase)this.ActiveMdiChild).Guardar();
+
+        }
     }
 }
