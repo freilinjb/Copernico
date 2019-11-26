@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+       //     Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+         //   this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.matrizDataSet = new Vistas.MatrizDataSet();
             this.qRCodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
@@ -43,15 +43,15 @@
             // 
             // reportViewer1
             // 
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.qRCodeBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Vistas.Informes.Conduce.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(80, 107);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(573, 354);
-            this.reportViewer1.TabIndex = 0;
+         //   reportDataSource4.Name = "DataSet1";
+        //    reportDataSource4.Value = this.qRCodeBindingSource;
+        //    this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+         //   this.reportViewer1.LocalReport.ReportEmbeddedResource = "Vistas.Informes.Conduce.rdlc";
+        //    this.reportViewer1.Location = new System.Drawing.Point(80, 107);
+        //    this.reportViewer1.Name = "reportViewer1";
+        //    this.reportViewer1.ServerReport.BearerToken = null;
+        //    this.reportViewer1.Size = new System.Drawing.Size(573, 354);
+          //  this.reportViewer1.TabIndex = 0;
             // 
             // matrizDataSet
             // 
@@ -92,7 +92,7 @@
             this.ClientSize = new System.Drawing.Size(767, 570);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textPersonal1);
-            this.Controls.Add(this.reportViewer1);
+         //   this.Controls.Add(this.reportViewer1);
             this.Name = "Conduce";
             // 
             // 
@@ -111,7 +111,7 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+       // private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource qRCodeBindingSource;
         private MatrizDataSet matrizDataSet;
         private Negocios.Componentes.TextPersonal textPersonal1;

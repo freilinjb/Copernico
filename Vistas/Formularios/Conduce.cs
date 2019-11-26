@@ -1,4 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +22,8 @@ namespace Vistas.Formularios
         private void Conduce_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.LocalReport.EnableExternalImages = true;
+         //   this.reportViewer1.RefreshReport();
+          //  this.reportViewer1.LocalReport.EnableExternalImages = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,12 +41,12 @@ namespace Vistas.Formularios
                 qRCodeRow.Imagen = ms.ToArray();
                 reportData.QRCode.AddQRCodeRow(qRCodeRow);
 
-                ReportDataSource reportDataSource = new ReportDataSource();
-                reportDataSource.Name = "DataSet1";
-                reportDataSource.Value = reportData.QRCode;
-                reportViewer1.LocalReport.DataSources.Clear();
-                reportViewer1.LocalReport.DataSources.Add(reportDataSource);
-                reportViewer1.RefreshReport();
+               // ReportDataSource reportDataSource = new ReportDataSource();
+             //   reportDataSource.Name = "DataSet1";
+             //   reportDataSource.Value = reportData.QRCode;
+              //  reportViewer1.LocalReport.DataSources.Clear();
+              //  reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+             //   reportViewer1.RefreshReport();
 
             }
         }

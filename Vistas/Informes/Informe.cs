@@ -20,7 +20,7 @@ namespace Vistas.Informes
         private void Informe_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+         //   this.reportViewer1.RefreshReport();
         }
     }
 }
