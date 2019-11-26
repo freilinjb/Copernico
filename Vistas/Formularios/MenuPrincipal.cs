@@ -81,5 +81,15 @@ namespace Vistas.Formularios
             this.LayoutMdi(MdiLayout.Cascade);
         
         }
+
+        private void menuExploradorProducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radMenuItem11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

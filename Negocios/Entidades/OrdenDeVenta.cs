@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Negocios.Entidades
 {
     public class OrdenDeVenta
     {
         public int NumOrden;
-        public int IdUsuario;
         public int IdCentro;
         public int IdTipoOrden;
         public int IdTipoVenta;
@@ -21,16 +21,16 @@ namespace Negocios.Entidades
         public string Nota;
         public int IdEstadoVenta;
 
-        
+        private DataSet ds;
+
         public OrdenDeVenta(int NumOrden)
         {
-
+            ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM ");
         }
 
-        public OrdenDeVenta(int numOrden, int idUsuario, int idCentro, int idTipoOrden, int idTipoVenta, int idCliente, int idObra, int idContacto, string numCotizacion, int idFormaDePago, string nota, int idEstadoVenta)
+        public OrdenDeVenta(int numOrden, int idCentro, int idTipoOrden, int idTipoVenta, int idCliente, int idObra, int idContacto, string numCotizacion, int idFormaDePago, string nota, int idEstadoVenta)
         {
             NumOrden = numOrden;
-            IdUsuario = idUsuario;
             IdCentro = idCentro;
             IdTipoOrden = idTipoOrden;
             IdTipoVenta = idTipoVenta;
@@ -45,7 +45,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarOrdenVenta] {NumOrden},{IdUsuario},{IdCentro},{IdTipoOrden},{IdTipoVenta},{IdCliente},{IdObra},{IdContacto},'{NumCotizacion}',{IdFormaDePago},{Nota},{IdEstadoVenta}";
+            return $"EXEC [RegistrarOrdenVenta] {NumOrden},{IdCentro},{IdTipoOrden},{IdTipoVenta},{IdCliente},{IdObra},{IdContacto},'{NumCotizacion}',{IdFormaDePago},'{Nota}',{IdEstadoVenta}";
         }
     }
 }

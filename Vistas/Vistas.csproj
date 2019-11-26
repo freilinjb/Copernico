@@ -117,6 +117,12 @@
     <Compile Include="Formularios\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Imprimir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Imprimir.Designer.cs">
+      <DependentUpon>Imprimir.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\OrdenDeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     </Compile>
     <Compile Include="Formularios\Ordenes.Designer.cs">
       <DependentUpon>Ordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto.Designer.cs">
+      <DependentUpon>Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Proveedor.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Imprimir.resx">
+      <DependentUpon>Imprimir.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\OrdenDeCompra.resx">
       <DependentUpon>OrdenDeCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ordenes.resx">
       <DependentUpon>Ordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Producto.resx">
+      <DependentUpon>Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Proveedor.resx">
       <DependentUpon>Proveedor.cs</DependentUpon>
@@ -286,6 +304,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
