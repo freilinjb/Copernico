@@ -10,6 +10,6 @@ namespace Datos
 {
     public class Conexion
     {
-        public static SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DTRN4IK\endy2;Initial Catalog=Matriz;Integrated Security=True");
+        public static SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-DTRN4IK;Initial Catalog=Matriz;Integrated Security=True");
     }
 }
