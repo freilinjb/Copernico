@@ -37,16 +37,19 @@ namespace Vistas.Formularios
 
         private void Ordenes_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
+            this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaProducto' Puede moverla o quitarla según sea necesario.
+            this.vistaProductoTableAdapter.Fill(this.matrizDataSet.VistaProducto);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCliente' Puede moverla o quitarla según sea necesario.
+            this.vistaClienteTableAdapter.Fill(this.matrizDataSet.VistaCliente);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             RadMessageBox.ThemeName = this.ThemeName;
 
             //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
-            //this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
-            //this.tipoVentaTableAdapter.Fill(this.matrizDataSet.TipoVenta);
-            this.vistaCentroTableAdapter1.Fill(this.matrizDataSet1.VistaCentro);
-            this.vistaClienteTableAdapter1.Fill(this.matrizDataSet1.VistaCliente);
+          
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
