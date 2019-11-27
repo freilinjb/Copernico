@@ -32,8 +32,13 @@ namespace Vistas.Formularios
             this.subGrupoActivoFijoTableAdapter.Fill(this.matrizDataSet.SubGrupoActivoFijo);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.GrupoActivoFijo' Puede moverla o quitarla según sea necesario.
             this.grupoActivoFijoTableAdapter.Fill(this.matrizDataSet.GrupoActivoFijo);
+
+            txtActivoFijo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdActivoFijo)+1 AS Mayor FROM ActivoFijo").Tables[0].Rows[0]["Mayor"].ToString();
+
             for (int i = DateTime.Today.Year; i >= 1985; i--)
                 cbbAnio.Items.Add(i.ToString());
+
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
 
         public override bool Guardar()
@@ -53,6 +58,18 @@ namespace Vistas.Formularios
             }
 
             return bien;
+        }
+
+        private void ActivoFijoMaquinaria_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                Guardar();
+            }
+            if(e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
     }
 }
