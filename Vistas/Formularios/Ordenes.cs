@@ -24,8 +24,18 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+      
+        private void Ordenes_KeyUp(object sender, KeyEventArgs e)
+        {
+            {
+                if (e.KeyCode == Keys.F1)
+                {
+                    Guardar();
+                }
+            }
+        }
 
-        private void OrdenDeVenta_Load(object sender, EventArgs e)
+        private void Ordenes_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
@@ -104,6 +114,7 @@ namespace Vistas.Formularios
             }
             return bien;
         }
+
         private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbbCliente.SelectedIndex != -1)
@@ -113,12 +124,10 @@ namespace Vistas.Formularios
 
                 ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaMantenimientoObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1");
 
-               
+
             }
-            
         }
 
-      
         private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -190,16 +199,6 @@ namespace Vistas.Formularios
                 cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT DISTINCT * FROM VistaProducto WHERE IdTercero = (SELECT TOP 1 IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
 
                 cbbProducto.EditorControl.ShowColumnHeaders = (cbbProducto.EditorControl.Rows.Count > 0) ? true : false;
-            }
-        }
-
-        private void Ordenes_KeyUp(object sender, KeyEventArgs e)
-        {
-            {
-                if (e.KeyCode == Keys.F1)
-                {
-                    Guardar();
-                }
             }
         }
     }
