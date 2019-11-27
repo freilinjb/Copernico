@@ -8,6 +8,12 @@ namespace Negocios.Entidades
 {
     public class ActivoFijoMaquinaria
     {
+        public int IdActivoFijo;
+        public int IdMaquinaria;
+        public string Nombre;
+        public int IdMarca;
+        public int IdModelo;
+        public int IdMotor;
 
     }
 }

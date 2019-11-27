@@ -49,7 +49,17 @@ namespace Vistas.Formularios
             {
                 try
                 {
-                    
+                    Negocios.Entidades.Maquinaria vehiculo = new Negocios.Entidades.Maquinaria(
+                        Convert.ToInt32(txtActivoFijo.Text),
+                        txtDescripcion.Text.Trim(),
+                        (int)cbbMarca.SelectedValue,
+                        (int)cbbModelo.SelectedValue,
+                        (int)cbbMotor.SelectedValue,
+                       (int)cbbColor.SelectedValue,
+                        Convert.ToInt32(cbbAnio.Text),
+                        txtPlaca.Text,
+                        (int)cbbPropietario.SelectedValue,
+                        (int)cbbEstatus.SelectedValue);
                 }
                 catch(Exception ex)
                 {
