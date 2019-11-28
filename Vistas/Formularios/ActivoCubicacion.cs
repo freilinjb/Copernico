@@ -9,9 +9,9 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class ActivoFijoMaquinaria : FormBase
+    public partial class ActivoCubicacion : FormBase
     {
-        public ActivoFijoMaquinaria()
+        public ActivoCubicacion()
         {
             InitializeComponent();
         }
@@ -34,6 +34,9 @@ namespace Vistas.Formularios
             this.grupoActivoFijoTableAdapter.Fill(this.matrizDataSet.GrupoActivoFijo);
 
             txtActivoFijo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdActivoFijo)+1 AS Mayor FROM ActivoFijo").Tables[0].Rows[0]["Mayor"].ToString();
+            cbbEstatus.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoActivoFijo,Descripcion AS Estado FROM EstadoActivoFijo").Tables[0];
+            cbbEstatus.ValueMember = "IdEstadoActivoFijo";
+            cbbEstatus.DisplayMember = "Estado";
 
             for (int i = DateTime.Today.Year; i >= 1985; i--)
                 cbbAnio.Items.Add(i.ToString());
@@ -44,11 +47,14 @@ namespace Vistas.Formularios
         public override bool Guardar()
         {
             bool bien = true;
+            validarComponentes();
 
-            if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
+            if (Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
                 try
                 {
+                    
+
                     Negocios.Entidades.Maquinaria vehiculo = new Negocios.Entidades.Maquinaria(
                         Convert.ToInt32(txtActivoFijo.Text),
                         txtDescripcion.Text.Trim(),
@@ -66,6 +72,20 @@ namespace Vistas.Formularios
                     RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
                 }
             }
+
+            return bien;
+        }
+
+        private bool validarComponentes()
+        {
+            bool bien = true;
+            if((string.IsNullOrEmpty(txtTablonAlto.Text) && string.IsNullOrEmpty(txtTablonAncho.Text) && string.IsNullOrEmpty(txtTablonLargo.Text)) || (!string.IsNullOrEmpty(txtTablonAlto.Text) && !string.IsNullOrEmpty(txtTablonAncho.Text) && !string.IsNullOrEmpty(txtTablonLargo.Text)))
+            {
+                //errorProvider1.SetError(txtTablon, "Todo esta bien");
+            }
+
+            else
+                errorProvider1.SetError(txtTablon, "Todo no esta bien");
 
             return bien;
         }

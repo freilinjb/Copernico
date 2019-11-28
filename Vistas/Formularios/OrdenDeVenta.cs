@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using System.Globalization;
 
 namespace Vistas.Formularios
 {
@@ -49,6 +50,11 @@ namespace Vistas.Formularios
             cbbTipoCredito.DisplayMember = "Descripcion";
             cbbTipoCredito.ValueMember = "IdTipoCredito";
 
+            cbbEstado.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoVenta,Descripcion FROM EstadoVenta").Tables[0];
+            cbbEstado.ValueMember = "IdEstadoVenta";
+            cbbEstado.DisplayMember = "Descripcion";
+
+
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
         }
@@ -63,16 +69,20 @@ namespace Vistas.Formularios
                 {
                     RadMessageBox.Show("Validado");
 
+                    string IdFormaDePago = (cbbFormaPago.SelectedValue == null) ? "null" : cbbFormaPago.SelectedValue.ToString(); 
+
+
                     Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
                         Convert.ToInt32(txtNumOrden.Text.Trim()),
+                        1,
                         (int)cbbCentro.SelectedValue,
                         1,
                         (int)cbbTipoVenta.SelectedValue,
                         (int)cbbCliente.SelectedValue,
-                        (int)cbbObra.SelectedIndex,
+                        (int)cbbObra.SelectedValue,
                         (int)IdContactoEncargado,
-                        txtNota.Text,
-                        (int)cbbFormaPago.SelectedValue,
+                        txtNumOrdenCompra.Text,
+                        IdFormaDePago,
                         txtNota.Text.Trim(),
                         (int)cbbEstado.SelectedValue);
 
@@ -82,34 +92,47 @@ namespace Vistas.Formularios
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-
+                        float subtotal = 0,itbis = 0;
                         foreach (var Fila in dataProducto.Rows)
                         {
                             int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
-                            Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},{Fila.Cells["Descripcion"].Value.ToString()},{Fila.Cells["Unidad"].Value.ToString()},{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
-                            //Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},{Fila.Cells["Descripcion"].Value.ToString()},{Fila.Cells["Unidad"].Value.ToString()},{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
-                            
+                            subtotal += Convert.ToSingle(Convert.ToSingle(Fila.Cells["Cantidad"].Value.ToString()) * Convert.ToSingle(Fila.Cells["Precio"].Value.ToString()));
+                            itbis += Convert.ToSingle(Fila.Cells["Itbis"].Value.ToString());
+                            //Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                            Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+
                         }
+
+                        //total += subtotal + itbis;
+
+                        //txtItbis.Text = itbis.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
+                        //txtSubTotal.Text = subtotal.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
+                        //txtItbis.Text = total.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
+
                         RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                         cbbCliente.Focus();
                         Negocios.Utilidades.Limpiar(this, errorProvider1);
-
+                        //cbbProducto.EditorControl.Rows.Clear();
+                        if (dataProducto.Rows.Count > 0)
+                        {
+                            for (int i = dataProducto.Rows.Count - 1; i >= 0; i--)
+                            {
+                                dataProducto.Rows.RemoveAt(i);
+                            }
+                        }
                     }
                 }
 
                 else
                 {
                     RadMessageBox.Show("Aun no ha registrado productos");
-
-                    //cbbProducto.Focus();
+                    cbbProducto.Focus();
 
                 }
             }
-            else
-            {
+            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
 
-            }
             return bien;
         }
 
@@ -119,7 +142,7 @@ namespace Vistas.Formularios
             if (cbbCliente.SelectedIndex != -1)
             {
                 txtCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
-                cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
+                //cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
 
                 ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaMantenimientoObra WHERE IdCliente = {cbbCliente.Text.Trim()} AND Estado = 1");
 
@@ -277,6 +300,24 @@ namespace Vistas.Formularios
                     txtCantidad.Text = null;
                     cbbProducto.SelectedIndex = -1;
                 }
+
+                float total = 0, subtotal = 0, itbis = 0;
+
+                foreach (var Fila in dataProducto.Rows)
+                {
+                    int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
+                    subtotal += Convert.ToSingle(Convert.ToSingle(Fila.Cells["Cantidad"].Value.ToString()) * Convert.ToSingle(Fila.Cells["Precio"].Value.ToString()));
+                    itbis += Convert.ToSingle(Fila.Cells["Itbis"].Value.ToString());
+                    //Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                    //Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},{Fila.Cells["Descripcion"].Value.ToString()},{Fila.Cells["Unidad"].Value.ToString()},{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+
+                }
+
+                total += subtotal + itbis;
+
+                txtItbis.Text = itbis.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
+                txtSubTotal.Text = subtotal.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
+                txtTotal.Text = total.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
             }
         }
 

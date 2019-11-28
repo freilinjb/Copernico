@@ -117,11 +117,11 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\ActivoFijoMaquinaria.cs">
+    <Compile Include="Formularios\ActivoCubicacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\ActivoFijoMaquinaria.Designer.cs">
-      <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
+    <Compile Include="Formularios\ActivoCubicacion.Designer.cs">
+      <DependentUpon>ActivoCubicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Conduce.cs">
       <SubType>Form</SubType>
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ActivoFijoMaquinaria.resx">
-      <DependentUpon>ActivoFijoMaquinaria.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\ActivoCubicacion.resx">
+      <DependentUpon>ActivoCubicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
@@ -299,6 +299,7 @@
     <EmbeddedResource Include="Informes\Informe.resx">
       <DependentUpon>Informe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\OrdenDeVenta.rdlc" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
