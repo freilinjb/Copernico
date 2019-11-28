@@ -1362,6 +1362,26 @@ FROM            Control AS C INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TamizTableAdapter" GeneratorDataComponentClassName="TamizTableAdapter" Name="Tamiz" UserDataComponentName="TamizTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CopernicoConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select  NumMalla,Apertura,U.Descripcion AS Unidad from Tamiz T INNER JOIN
+	Unidad U ON U.IdUnidad = T.IdUnidad
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NumMalla" DataSetColumn="NumMalla" />
+              <Mapping SourceColumn="Apertura" DataSetColumn="Apertura" />
+              <Mapping SourceColumn="Unidad" DataSetColumn="Unidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2182,6 +2202,21 @@ FROM            Control AS C INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Tamiz" msprop:Generator_TableClassName="TamizDataTable" msprop:Generator_TableVarName="tableTamiz" msprop:Generator_TablePropName="Tamiz" msprop:Generator_RowDeletingName="TamizRowDeleting" msprop:Generator_RowChangingName="TamizRowChanging" msprop:Generator_RowEvHandlerName="TamizRowChangeEventHandler" msprop:Generator_RowDeletedName="TamizRowDeleted" msprop:Generator_UserTableName="Tamiz" msprop:Generator_RowChangedName="TamizRowChanged" msprop:Generator_RowEvArgName="TamizRowChangeEvent" msprop:Generator_RowClassName="TamizRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumMalla" msprop:Generator_ColumnVarNameInTable="columnNumMalla" msprop:Generator_ColumnPropNameInRow="NumMalla" msprop:Generator_ColumnPropNameInTable="NumMallaColumn" msprop:Generator_UserColumnName="NumMalla" type="xs:double" />
+              <xs:element name="Apertura" msprop:Generator_ColumnVarNameInTable="columnApertura" msprop:Generator_ColumnPropNameInRow="Apertura" msprop:Generator_ColumnPropNameInTable="AperturaColumn" msprop:Generator_UserColumnName="Apertura" type="xs:double" />
+              <xs:element name="Unidad" msprop:Generator_ColumnVarNameInTable="columnUnidad" msprop:Generator_ColumnPropNameInRow="Unidad" msprop:Generator_ColumnPropNameInTable="UnidadColumn" msprop:Generator_UserColumnName="Unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -2283,6 +2318,10 @@ FROM            Control AS C INNER JOIN
     <xs:unique name="FormaDePago_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:FormaDePago" />
       <xs:field xpath="mstns:IdFormaDePago" />
+    </xs:unique>
+    <xs:unique name="Tamiz_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tamiz" />
+      <xs:field xpath="mstns:NumMalla" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

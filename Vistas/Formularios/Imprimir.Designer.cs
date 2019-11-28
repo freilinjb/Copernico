@@ -217,6 +217,8 @@
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.radGroupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Imprimir";
             // 
             // 
