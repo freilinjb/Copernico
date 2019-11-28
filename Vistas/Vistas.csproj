@@ -135,6 +135,12 @@
     <Compile Include="Formularios\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Filtro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Filtro.Designer.cs">
+      <DependentUpon>Filtro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Imprimir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Filtro.resx">
+      <DependentUpon>Filtro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
