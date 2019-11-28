@@ -32,17 +32,6 @@ namespace Vistas.Formularios
 
         }
 
-        //public void EnviarA(string NombreDataSetInforme,string NombreInforme,DataSet ds)
-        //{
-        //    ReportDataSource reportDat = new ReportDataSource(NombreDataSetInforme, ds.Tables[0]);
-
-        //    informe = new Informes.Informe();
-
-        //    informe.reportViewer.LocalReport.ReportEmbeddedResource = $"Vistas.Informes.{NombreInforme}.rdlc";
-        //    informe.reportViewer.LocalReport.DataSources.Add(reportDat);
-        //    informe.reportViewer.LocalReport.Refresh();
-        //}
-
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Abort;

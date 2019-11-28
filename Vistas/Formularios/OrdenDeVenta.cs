@@ -173,16 +173,11 @@ namespace Vistas.Formularios
 
         public void ValidarImpresion()
         {
-            Imprimir imprimir = new Imprimir();
+            Imprimir imprimir = new Imprimir("ControlDataSet", "OrdenDeVenta", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaControl"));
             DialogResult dialog = RadMessageBox.Show("Si para Imprimir Directo a la impresora No para Visualizar Directo", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNoCancel, RadMessageIcon.Question, MessageBoxDefaultButton.Button1);
             if (imprimir.ShowDialog() == DialogResult.OK)
             {
-                //Negocios. impresor = new Impresor();
-                //impresor.Imprime(reporte.reportViewer.LocalReport);
-            }
-            else if (DialogResult.No == dialog)
-            {
-                //reporte.ShowDialog();
+                
             }
         }
 
@@ -192,7 +187,12 @@ namespace Vistas.Formularios
             {
                 Guardar();
             }
+            if(e.KeyCode == Keys.F2)
+            {
+                ValidarImpresion();
+            }
         }
+
 
         private void cbbTipoCredito_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
