@@ -9,7 +9,7 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Filtro : Telerik.WinControls.UI.RadForm
+    public partial class Filtro : FormBase
     {
         public Filtro()
         {

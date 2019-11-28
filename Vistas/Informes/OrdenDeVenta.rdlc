@@ -279,7 +279,7 @@
   <Width>6.63901in</Width>
   <Page>
     <PageHeader>
-      <Height>3.38667cm</Height>
+      <Height>6.65078cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -341,8 +341,8 @@
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
-              <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Color>White</Color>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -372,8 +372,8 @@
           <ZIndex>2</ZIndex>
           <Style>
             <Border>
-              <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Color>White</Color>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -403,8 +403,8 @@
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
-              <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Color>White</Color>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -434,8 +434,8 @@
           <ZIndex>4</ZIndex>
           <Style>
             <Border>
-              <Color>LightGrey</Color>
-              <Style>Solid</Style>
+              <Color>White</Color>
+              <Style>None</Style>
             </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
@@ -473,6 +473,18 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Rectangle Name="Rectangle1">
+          <KeepTogether>true</KeepTogether>
+          <Top>3.2512cm</Top>
+          <Height>2.5cm</Height>
+          <Width>10.715cm</Width>
+          <ZIndex>6</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Rectangle>
       </ReportItems>
       <Style>
         <Border>
