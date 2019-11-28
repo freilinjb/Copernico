@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,9 @@ namespace Vistas.Informes
 
         private void Informe_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            this.reportViewer.ZoomMode = ZoomMode.FullPage;
+            this.reportViewer.SetDisplayMode(DisplayMode.PrintLayout);
+            this.reportViewer.RefreshReport();
         }
     }
 }

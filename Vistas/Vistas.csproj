@@ -213,6 +213,7 @@
     <Compile Include="Formularios\Obra.Designer.cs">
       <DependentUpon>Obra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Impresor.cs" />
     <Compile Include="Informes\Informe.cs">
       <SubType>Form</SubType>
     </Compile>

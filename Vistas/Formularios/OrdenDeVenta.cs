@@ -171,6 +171,20 @@ namespace Vistas.Formularios
             }
         }
 
+        public void ValidarImpresion()
+        {
+            Imprimir imprimir = new Imprimir();
+            DialogResult dialog = RadMessageBox.Show("Si para Imprimir Directo a la impresora No para Visualizar Directo", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNoCancel, RadMessageIcon.Question, MessageBoxDefaultButton.Button1);
+            if (imprimir.ShowDialog() == DialogResult.OK)
+            {
+                //Negocios. impresor = new Impresor();
+                //impresor.Imprime(reporte.reportViewer.LocalReport);
+            }
+            else if (DialogResult.No == dialog)
+            {
+                //reporte.ShowDialog();
+            }
+        }
 
         private void OrdenDeVenta_KeyUp(object sender, KeyEventArgs e)
         {

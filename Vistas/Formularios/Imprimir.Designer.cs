@@ -31,34 +31,34 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Imprimir));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.btAceptar = new Telerik.WinControls.UI.RadButton();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.radRadioButton1 = new Telerik.WinControls.UI.RadRadioButton();
-            this.radRadioButton2 = new Telerik.WinControls.UI.RadRadioButton();
-            this.radRadioButton3 = new Telerik.WinControls.UI.RadRadioButton();
-            this.radRadioButton4 = new Telerik.WinControls.UI.RadRadioButton();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.radRadioButton5 = new Telerik.WinControls.UI.RadRadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
+            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
+            this.rdHojaExcel = new Telerik.WinControls.UI.RadRadioButton();
             this.radRadioButton6 = new Telerik.WinControls.UI.RadRadioButton();
+            this.rdCorreoElectronico = new Telerik.WinControls.UI.RadRadioButton();
+            this.rdArchivoPdf = new Telerik.WinControls.UI.RadRadioButton();
+            this.rdImpresora = new Telerik.WinControls.UI.RadRadioButton();
+            this.rdVisualizar = new Telerik.WinControls.UI.RadRadioButton();
+            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.btAceptar = new Telerik.WinControls.UI.RadButton();
             this.btCancelar = new Telerik.WinControls.UI.RadButton();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btAceptar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdHojaExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdCorreoElectronico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdArchivoPdf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdImpresora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdVisualizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btAceptar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,12 +68,12 @@
             this.radGroupBox1.Controls.Add(this.pictureBox1);
             this.radGroupBox1.Controls.Add(this.radSeparator3);
             this.radGroupBox1.Controls.Add(this.radSeparator2);
-            this.radGroupBox1.Controls.Add(this.radRadioButton5);
+            this.radGroupBox1.Controls.Add(this.rdHojaExcel);
             this.radGroupBox1.Controls.Add(this.radRadioButton6);
-            this.radGroupBox1.Controls.Add(this.radRadioButton4);
-            this.radGroupBox1.Controls.Add(this.radRadioButton3);
-            this.radGroupBox1.Controls.Add(this.radRadioButton2);
-            this.radGroupBox1.Controls.Add(this.radRadioButton1);
+            this.radGroupBox1.Controls.Add(this.rdCorreoElectronico);
+            this.radGroupBox1.Controls.Add(this.rdArchivoPdf);
+            this.radGroupBox1.Controls.Add(this.rdImpresora);
+            this.radGroupBox1.Controls.Add(this.rdVisualizar);
             this.radGroupBox1.Controls.Add(this.radSeparator1);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radGroupBox1.HeaderText = "Destino";
@@ -83,116 +83,6 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "Destino";
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
-            // 
-            // btAceptar
-            // 
-            this.btAceptar.Location = new System.Drawing.Point(12, 226);
-            this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(73, 24);
-            this.btAceptar.TabIndex = 1;
-            this.btAceptar.Text = "Aceptar";
-            this.btAceptar.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator1
-            // 
-            this.radSeparator1.Location = new System.Drawing.Point(0, 314);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(309, 10);
-            this.radSeparator1.TabIndex = 2;
-            this.radSeparator1.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton1
-            // 
-            this.radRadioButton1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton1.Location = new System.Drawing.Point(26, 21);
-            this.radRadioButton1.Name = "radRadioButton1";
-            this.radRadioButton1.Size = new System.Drawing.Size(72, 21);
-            this.radRadioButton1.TabIndex = 2;
-            this.radRadioButton1.Text = "Pantalla";
-            this.radRadioButton1.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton2
-            // 
-            this.radRadioButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton2.Location = new System.Drawing.Point(26, 48);
-            this.radRadioButton2.Name = "radRadioButton2";
-            this.radRadioButton2.Size = new System.Drawing.Size(85, 21);
-            this.radRadioButton2.TabIndex = 2;
-            this.radRadioButton2.Text = "Impresora";
-            this.radRadioButton2.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton3
-            // 
-            this.radRadioButton3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton3.Location = new System.Drawing.Point(26, 112);
-            this.radRadioButton3.Name = "radRadioButton3";
-            this.radRadioButton3.Size = new System.Drawing.Size(97, 21);
-            this.radRadioButton3.TabIndex = 2;
-            this.radRadioButton3.Text = "Archivo PDF";
-            this.radRadioButton3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton4
-            // 
-            this.radRadioButton4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton4.Location = new System.Drawing.Point(26, 149);
-            this.radRadioButton4.Name = "radRadioButton4";
-            this.radRadioButton4.Size = new System.Drawing.Size(136, 21);
-            this.radRadioButton4.TabIndex = 2;
-            this.radRadioButton4.Text = "Correo electronico";
-            this.radRadioButton4.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator2
-            // 
-            this.radSeparator2.Location = new System.Drawing.Point(26, 75);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(200, 4);
-            this.radSeparator2.TabIndex = 3;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton5
-            // 
-            this.radRadioButton5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton5.Location = new System.Drawing.Point(26, 85);
-            this.radRadioButton5.Name = "radRadioButton5";
-            this.radRadioButton5.Size = new System.Drawing.Size(117, 21);
-            this.radRadioButton5.TabIndex = 2;
-            this.radRadioButton5.Text = "Hoja de calculo";
-            this.radRadioButton5.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator3
-            // 
-            this.radSeparator3.Location = new System.Drawing.Point(26, 139);
-            this.radSeparator3.Name = "radSeparator3";
-            this.radSeparator3.Size = new System.Drawing.Size(200, 4);
-            this.radSeparator3.TabIndex = 3;
-            this.radSeparator3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radRadioButton6
-            // 
-            this.radRadioButton6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radRadioButton6.Location = new System.Drawing.Point(26, 176);
-            this.radRadioButton6.Name = "radRadioButton6";
-            this.radRadioButton6.Size = new System.Drawing.Size(123, 21);
-            this.radRadioButton6.TabIndex = 2;
-            this.radRadioButton6.Text = "Archivo de texto";
-            this.radRadioButton6.ThemeName = "VisualStudio2012Light";
-            // 
-            // btCancelar
-            // 
-            this.btCancelar.Location = new System.Drawing.Point(91, 226);
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(73, 24);
-            this.btCancelar.TabIndex = 1;
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator4
-            // 
-            this.radSeparator4.Location = new System.Drawing.Point(12, 210);
-            this.radSeparator4.Name = "radSeparator4";
-            this.radSeparator4.Size = new System.Drawing.Size(277, 10);
-            this.radSeparator4.TabIndex = 3;
-            this.radSeparator4.ThemeName = "VisualStudio2012Light";
             // 
             // pictureBox1
             // 
@@ -204,10 +94,124 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // radSeparator3
+            // 
+            this.radSeparator3.Location = new System.Drawing.Point(26, 139);
+            this.radSeparator3.Name = "radSeparator3";
+            this.radSeparator3.Size = new System.Drawing.Size(200, 4);
+            this.radSeparator3.TabIndex = 3;
+            this.radSeparator3.ThemeName = "VisualStudio2012Light";
+            // 
+            // radSeparator2
+            // 
+            this.radSeparator2.Location = new System.Drawing.Point(26, 75);
+            this.radSeparator2.Name = "radSeparator2";
+            this.radSeparator2.Size = new System.Drawing.Size(200, 4);
+            this.radSeparator2.TabIndex = 3;
+            this.radSeparator2.ThemeName = "VisualStudio2012Light";
+            // 
+            // rdHojaExcel
+            // 
+            this.rdHojaExcel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdHojaExcel.Location = new System.Drawing.Point(26, 85);
+            this.rdHojaExcel.Name = "rdHojaExcel";
+            this.rdHojaExcel.Size = new System.Drawing.Size(117, 21);
+            this.rdHojaExcel.TabIndex = 2;
+            this.rdHojaExcel.Text = "Hoja de calculo";
+            this.rdHojaExcel.ThemeName = "VisualStudio2012Light";
+            // 
+            // radRadioButton6
+            // 
+            this.radRadioButton6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radRadioButton6.Location = new System.Drawing.Point(26, 176);
+            this.radRadioButton6.Name = "radRadioButton6";
+            this.radRadioButton6.Size = new System.Drawing.Size(123, 21);
+            this.radRadioButton6.TabIndex = 2;
+            this.radRadioButton6.Text = "Archivo de texto";
+            this.radRadioButton6.ThemeName = "VisualStudio2012Light";
+            // 
+            // rdCorreoElectronico
+            // 
+            this.rdCorreoElectronico.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdCorreoElectronico.Location = new System.Drawing.Point(26, 149);
+            this.rdCorreoElectronico.Name = "rdCorreoElectronico";
+            this.rdCorreoElectronico.Size = new System.Drawing.Size(136, 21);
+            this.rdCorreoElectronico.TabIndex = 2;
+            this.rdCorreoElectronico.Text = "Correo electronico";
+            this.rdCorreoElectronico.ThemeName = "VisualStudio2012Light";
+            // 
+            // rdArchivoPdf
+            // 
+            this.rdArchivoPdf.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdArchivoPdf.Location = new System.Drawing.Point(26, 112);
+            this.rdArchivoPdf.Name = "rdArchivoPdf";
+            this.rdArchivoPdf.Size = new System.Drawing.Size(97, 21);
+            this.rdArchivoPdf.TabIndex = 2;
+            this.rdArchivoPdf.Text = "Archivo PDF";
+            this.rdArchivoPdf.ThemeName = "VisualStudio2012Light";
+            // 
+            // rdImpresora
+            // 
+            this.rdImpresora.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdImpresora.Location = new System.Drawing.Point(26, 48);
+            this.rdImpresora.Name = "rdImpresora";
+            this.rdImpresora.Size = new System.Drawing.Size(85, 21);
+            this.rdImpresora.TabIndex = 2;
+            this.rdImpresora.Text = "Impresora";
+            this.rdImpresora.ThemeName = "VisualStudio2012Light";
+            // 
+            // rdVisualizar
+            // 
+            this.rdVisualizar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdVisualizar.Location = new System.Drawing.Point(26, 21);
+            this.rdVisualizar.Name = "rdVisualizar";
+            this.rdVisualizar.Size = new System.Drawing.Size(72, 21);
+            this.rdVisualizar.TabIndex = 2;
+            this.rdVisualizar.Text = "Pantalla";
+            this.rdVisualizar.ThemeName = "VisualStudio2012Light";
+            // 
+            // radSeparator1
+            // 
+            this.radSeparator1.Location = new System.Drawing.Point(0, 314);
+            this.radSeparator1.Name = "radSeparator1";
+            this.radSeparator1.Size = new System.Drawing.Size(309, 10);
+            this.radSeparator1.TabIndex = 2;
+            this.radSeparator1.ThemeName = "VisualStudio2012Light";
+            // 
+            // btAceptar
+            // 
+            this.btAceptar.Location = new System.Drawing.Point(12, 226);
+            this.btAceptar.Name = "btAceptar";
+            this.btAceptar.Size = new System.Drawing.Size(73, 24);
+            this.btAceptar.TabIndex = 1;
+            this.btAceptar.Text = "Aceptar";
+            this.btAceptar.ThemeName = "VisualStudio2012Light";
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btCancelar.Location = new System.Drawing.Point(91, 226);
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(73, 24);
+            this.btCancelar.TabIndex = 1;
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.ThemeName = "VisualStudio2012Light";
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
+            // radSeparator4
+            // 
+            this.radSeparator4.Location = new System.Drawing.Point(12, 210);
+            this.radSeparator4.Name = "radSeparator4";
+            this.radSeparator4.Size = new System.Drawing.Size(277, 10);
+            this.radSeparator4.TabIndex = 3;
+            this.radSeparator4.ThemeName = "VisualStudio2012Light";
+            // 
             // Imprimir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(298, 255);
             this.Controls.Add(this.radSeparator4);
             this.Controls.Add(this.btCancelar);
@@ -223,19 +227,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btAceptar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRadioButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdHojaExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRadioButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdCorreoElectronico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdArchivoPdf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdImpresora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rdVisualizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btAceptar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -249,14 +253,14 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
         private Telerik.WinControls.UI.RadSeparator radSeparator2;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton5;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton6;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton4;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton3;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton2;
-        private Telerik.WinControls.UI.RadRadioButton radRadioButton1;
         private Telerik.WinControls.UI.RadButton btCancelar;
         private Telerik.WinControls.UI.RadSeparator radSeparator4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public Telerik.WinControls.UI.RadRadioButton rdHojaExcel;
+        public Telerik.WinControls.UI.RadRadioButton radRadioButton6;
+        public Telerik.WinControls.UI.RadRadioButton rdCorreoElectronico;
+        public Telerik.WinControls.UI.RadRadioButton rdArchivoPdf;
+        public Telerik.WinControls.UI.RadRadioButton rdImpresora;
+        public Telerik.WinControls.UI.RadRadioButton rdVisualizar;
     }
 }
