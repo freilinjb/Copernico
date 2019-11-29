@@ -377,6 +377,7 @@
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
+            this.MdiChildActivate += new System.EventHandler(this.MenuPrincipal_MdiChildActivate);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).EndInit();

@@ -100,9 +100,16 @@ namespace Vistas.Formularios
         private void menuCliente_Click(object sender, EventArgs e)
         {
             Cliente cliente = new Cliente();
+
+
         }
 
         private void menuFiltro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuPrincipal_MdiChildActivate(object sender, EventArgs e)
         {
 
         }
