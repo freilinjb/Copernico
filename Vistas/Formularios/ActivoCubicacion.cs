@@ -12,7 +12,19 @@ namespace Vistas.Formularios
     public partial class ActivoCubicacion : FormBase
     {
         private DataSet ds;
-        public ActivoCubicacion()
+        private static ActivoCubicacion Instancia;
+
+        public static ActivoCubicacion ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new ActivoCubicacion();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+        private ActivoCubicacion()
         {
             InitializeComponent();
         }

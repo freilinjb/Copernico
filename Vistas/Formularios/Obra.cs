@@ -17,7 +17,19 @@ namespace Vistas.Formularios
         private int IdObra;
         private DataSet ds;
 
-        public Obra()
+        private static Obra Instancia;
+
+        public static Obra ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Obra();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+        private Obra()
         {
             InitializeComponent();
 

@@ -14,8 +14,19 @@ namespace Vistas.Formularios
     public partial class Filtro : FormBase
     {
         private DataSet ds;
+        private static Filtro Instancia;
 
-        public Filtro()
+        public static Filtro ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Filtro();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+        private Filtro()
         {
             InitializeComponent();
         }

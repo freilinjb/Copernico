@@ -31,6 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.menuArchivo = new Telerik.WinControls.UI.RadMenuItem();
             this.menuCliente = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuObra = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuProveedor = new Telerik.WinControls.UI.RadMenuItem();
+            this.menProveedorMina = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuSeparatorItem5 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
+            this.menProveedorServicio = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuProveedorProducto = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuSeparatorItem4 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
+            this.menuActivoFijo = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem14 = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuCubicacion = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem12 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem15 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem13 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
@@ -52,24 +67,9 @@
             this.radMenuSeparatorItem3 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
             this.radMenuItem7 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenu1 = new Telerik.WinControls.UI.RadMenu();
-            this.menuProveedor = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuSeparatorItem4 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
-            this.menuObra = new Telerik.WinControls.UI.RadMenuItem();
-            this.menProveedorMina = new Telerik.WinControls.UI.RadMenuItem();
-            this.menProveedorServicio = new Telerik.WinControls.UI.RadMenuItem();
-            this.menuProveedorProducto = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuSeparatorItem5 = new Telerik.WinControls.UI.RadMenuSeparatorItem();
-            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
-            this.menuActivoFijo = new Telerik.WinControls.UI.RadMenuItem();
-            this.menuCubicacion = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem13 = new Telerik.WinControls.UI.RadMenuItem();
             this.menuAyuda = new Telerik.WinControls.UI.RadMenuItem();
             this.menuProduccion = new Telerik.WinControls.UI.RadMenuItem();
             this.menuFiltro = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem14 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem12 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem15 = new Telerik.WinControls.UI.RadMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,96 @@
             this.menuCliente.Name = "menuCliente";
             this.menuCliente.Text = "Cliente";
             this.menuCliente.Click += new System.EventHandler(this.menuCliente_Click);
+            // 
+            // menuObra
+            // 
+            this.menuObra.Name = "menuObra";
+            this.menuObra.Text = "Obra/Proyecto";
+            this.menuObra.Click += new System.EventHandler(this.menuObra_Click);
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "radMenuItem1";
+            // 
+            // menuProveedor
+            // 
+            this.menuProveedor.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.menProveedorMina,
+            this.radMenuSeparatorItem5,
+            this.menProveedorServicio,
+            this.menuProveedorProducto});
+            this.menuProveedor.Name = "menuProveedor";
+            this.menuProveedor.Text = "Proveedor";
+            // 
+            // menProveedorMina
+            // 
+            this.menProveedorMina.Name = "menProveedorMina";
+            this.menProveedorMina.Text = "Mina";
+            // 
+            // radMenuSeparatorItem5
+            // 
+            this.radMenuSeparatorItem5.Name = "radMenuSeparatorItem5";
+            this.radMenuSeparatorItem5.Text = "radMenuSeparatorItem5";
+            this.radMenuSeparatorItem5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // menProveedorServicio
+            // 
+            this.menProveedorServicio.Name = "menProveedorServicio";
+            this.menProveedorServicio.Text = "Servicio";
+            // 
+            // menuProveedorProducto
+            // 
+            this.menuProveedorProducto.Name = "menuProveedorProducto";
+            this.menuProveedorProducto.Text = "Producto";
+            // 
+            // radMenuSeparatorItem4
+            // 
+            this.radMenuSeparatorItem4.Name = "radMenuSeparatorItem4";
+            this.radMenuSeparatorItem4.Text = "radMenuSeparatorItem4";
+            this.radMenuSeparatorItem4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // menuActivoFijo
+            // 
+            this.menuActivoFijo.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem2,
+            this.radMenuItem14});
+            this.menuActivoFijo.Name = "menuActivoFijo";
+            this.menuActivoFijo.Text = "ActivoFijo";
+            this.menuActivoFijo.Click += new System.EventHandler(this.menuActivoFijo_Click);
+            // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Text = "radMenuItem2";
+            // 
+            // radMenuItem14
+            // 
+            this.radMenuItem14.Name = "radMenuItem14";
+            this.radMenuItem14.Text = "radMenuItem14";
+            // 
+            // menuCubicacion
+            // 
+            this.menuCubicacion.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem12,
+            this.radMenuItem15});
+            this.menuCubicacion.Name = "menuCubicacion";
+            this.menuCubicacion.Text = "Cubicacion";
+            // 
+            // radMenuItem12
+            // 
+            this.radMenuItem12.Name = "radMenuItem12";
+            this.radMenuItem12.Text = "Internos";
+            // 
+            // radMenuItem15
+            // 
+            this.radMenuItem15.Name = "radMenuItem15";
+            this.radMenuItem15.Text = "Externo";
+            // 
+            // radMenuItem13
+            // 
+            this.radMenuItem13.Name = "radMenuItem13";
+            this.radMenuItem13.Text = "radMenuItem13";
             // 
             // radMenuItem3
             // 
@@ -258,75 +348,6 @@
             this.radMenu1.TabIndex = 5;
             this.radMenu1.ThemeName = "VisualStudio2012Light";
             // 
-            // menuProveedor
-            // 
-            this.menuProveedor.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.menProveedorMina,
-            this.radMenuSeparatorItem5,
-            this.menProveedorServicio,
-            this.menuProveedorProducto});
-            this.menuProveedor.Name = "menuProveedor";
-            this.menuProveedor.Text = "Proveedor";
-            // 
-            // radMenuSeparatorItem4
-            // 
-            this.radMenuSeparatorItem4.Name = "radMenuSeparatorItem4";
-            this.radMenuSeparatorItem4.Text = "radMenuSeparatorItem4";
-            this.radMenuSeparatorItem4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // menuObra
-            // 
-            this.menuObra.Name = "menuObra";
-            this.menuObra.Text = "Obra/Proyecto";
-            this.menuObra.Click += new System.EventHandler(this.menuObra_Click);
-            // 
-            // menProveedorMina
-            // 
-            this.menProveedorMina.Name = "menProveedorMina";
-            this.menProveedorMina.Text = "Mina";
-            // 
-            // menProveedorServicio
-            // 
-            this.menProveedorServicio.Name = "menProveedorServicio";
-            this.menProveedorServicio.Text = "Servicio";
-            // 
-            // menuProveedorProducto
-            // 
-            this.menuProveedorProducto.Name = "menuProveedorProducto";
-            this.menuProveedorProducto.Text = "Producto";
-            // 
-            // radMenuSeparatorItem5
-            // 
-            this.radMenuSeparatorItem5.Name = "radMenuSeparatorItem5";
-            this.radMenuSeparatorItem5.Text = "radMenuSeparatorItem5";
-            this.radMenuSeparatorItem5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // radMenuItem1
-            // 
-            this.radMenuItem1.Name = "radMenuItem1";
-            this.radMenuItem1.Text = "radMenuItem1";
-            // 
-            // menuActivoFijo
-            // 
-            this.menuActivoFijo.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem2,
-            this.radMenuItem14});
-            this.menuActivoFijo.Name = "menuActivoFijo";
-            this.menuActivoFijo.Text = "ActivoFijo";
-            // 
-            // menuCubicacion
-            // 
-            this.menuCubicacion.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem12,
-            this.radMenuItem15});
-            this.menuCubicacion.Name = "menuCubicacion";
-            this.menuCubicacion.Text = "Cubicacion";
-            // 
-            // radMenuItem13
-            // 
-            this.radMenuItem13.Name = "radMenuItem13";
-            this.radMenuItem13.Text = "radMenuItem13";
-            // 
             // menuAyuda
             // 
             this.menuAyuda.Name = "menuAyuda";
@@ -344,26 +365,6 @@
             this.menuFiltro.Name = "menuFiltro";
             this.menuFiltro.Text = "Control de Filtros y Tamiz";
             this.menuFiltro.Click += new System.EventHandler(this.menuFiltro_Click);
-            // 
-            // radMenuItem2
-            // 
-            this.radMenuItem2.Name = "radMenuItem2";
-            this.radMenuItem2.Text = "radMenuItem2";
-            // 
-            // radMenuItem14
-            // 
-            this.radMenuItem14.Name = "radMenuItem14";
-            this.radMenuItem14.Text = "radMenuItem14";
-            // 
-            // radMenuItem12
-            // 
-            this.radMenuItem12.Name = "radMenuItem12";
-            this.radMenuItem12.Text = "Internos";
-            // 
-            // radMenuItem15
-            // 
-            this.radMenuItem15.Name = "radMenuItem15";
-            this.radMenuItem15.Text = "Externo";
             // 
             // MenuPrincipal
             // 

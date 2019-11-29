@@ -35,7 +35,7 @@ namespace Vistas.Formularios
 
         private void radMenuItem2_Click(object sender, EventArgs e)
         {
-            Obra obra = new Obra();
+            Obra obra = Obra.ObtenerInstancia();
             obra.MdiParent = this;
             obra.Show();
         }
@@ -94,24 +94,33 @@ namespace Vistas.Formularios
 
         private void menuObra_Click(object sender, EventArgs e)
         {
-
+            Obra instancia = Obra.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
         }
 
         private void menuCliente_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
-
-
+            Cliente instancia = Cliente.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
         }
 
         private void menuFiltro_Click(object sender, EventArgs e)
         {
-
+            Filtro instancia = Filtro.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
         }
 
         private void MenuPrincipal_MdiChildActivate(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuActivoFijo_Click(object sender, EventArgs e)
+        {
+            ActivoCubicacion instancia = ActivoCubicacion
         }
     }
 }
