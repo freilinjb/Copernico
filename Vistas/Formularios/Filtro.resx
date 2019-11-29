@@ -123,9 +123,6 @@
   <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>232, 17</value>
   </metadata>
-  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cbbTamizInicial.NestedRadGridView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
@@ -137,13 +134,13 @@
   <data name="cbbTamizInicial.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="gridViewDecimalColumn45.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn12.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn46.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn13.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="cbbTamizInicial.NestedRadGridView.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -186,19 +183,22 @@
   <data name="&gt;&gt;cbbTamizInicial.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 17</value>
+  </metadata>
   <data name="cbbTamizFinal.NestedRadGridView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="cbbTamizFinal.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="gridViewDecimalColumn47.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn14.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn48.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn15.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="cbbTamizFinal.NestedRadGridView.Size" type="System.Drawing.Size, System.Drawing">
@@ -627,22 +627,22 @@
   <data name="dataProducto.Location" type="System.Drawing.Point, System.Drawing">
     <value>-6, 21</value>
   </data>
-  <data name="gridViewDecimalColumn49.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn16.HeaderText" xml:space="preserve">
     <value>Codigo</value>
   </data>
-  <data name="gridViewDecimalColumn50.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn17.HeaderText" xml:space="preserve">
     <value>NumMallaInicial</value>
   </data>
-  <data name="gridViewDecimalColumn51.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn18.HeaderText" xml:space="preserve">
     <value>AperturaInicial</value>
   </data>
-  <data name="gridViewDecimalColumn52.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn19.HeaderText" xml:space="preserve">
     <value>NumMallaFinal</value>
   </data>
-  <data name="gridViewDecimalColumn53.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn20.HeaderText" xml:space="preserve">
     <value>AperturaFinal</value>
   </data>
-  <data name="gridViewTextBoxColumn19.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
     <value>Filtro</value>
   </data>
   <metadata name="vistaFiltroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -972,13 +972,13 @@
   <data name="radGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 21</value>
   </data>
-  <data name="gridViewDecimalColumn54.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn21.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn55.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn22.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn20.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="radGridView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -1068,6 +1068,12 @@
   <data name="&gt;&gt;matrizDataSet.Type" xml:space="preserve">
     <value>Vistas.MatrizDataSet, MatrizDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;vistaFiltroBindingSource.Name" xml:space="preserve">
+    <value>vistaFiltroBindingSource</value>
+  </data>
+  <data name="&gt;&gt;vistaFiltroBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;visualStudio2012LightTheme1.Name" xml:space="preserve">
     <value>visualStudio2012LightTheme1</value>
   </data>
@@ -1085,12 +1091,6 @@
   </data>
   <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;vistaFiltroBindingSource.Name" xml:space="preserve">
-    <value>vistaFiltroBindingSource</value>
-  </data>
-  <data name="&gt;&gt;vistaFiltroBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;vistaFiltroTableAdapter.Name" xml:space="preserve">
     <value>vistaFiltroTableAdapter</value>

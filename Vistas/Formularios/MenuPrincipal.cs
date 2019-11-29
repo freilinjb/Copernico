@@ -50,14 +50,14 @@ namespace Vistas.Formularios
         private void cbbPersonal1_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
             MessageBox.Show(((FormBase)this.ActiveMdiChild).Text);
-            if(cbbPersonal1.SelectedIndex == 1)
-            {
-                if (((FormBase)this.ActiveMdiChild).guardar)
-                    toolButton.Enabled = true;
+            //if(cbbPersonal1.SelectedIndex == 1)
+            //{
+            //    if (((FormBase)this.ActiveMdiChild).guardar)
+            //        toolButton.Enabled = true;
 
-            }
-            else
-                toolButton.Enabled = false;
+            //}
+            //else
+            //    toolButton.Enabled = false;
         }
 
         private void radMenuItem4_Click(object sender, EventArgs e)
@@ -88,6 +88,21 @@ namespace Vistas.Formularios
         }
 
         private void radMenuItem11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuObra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuCliente_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+        }
+
+        private void menuFiltro_Click(object sender, EventArgs e)
         {
 
         }
