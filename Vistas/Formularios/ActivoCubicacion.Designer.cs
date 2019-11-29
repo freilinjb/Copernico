@@ -29,14 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor3 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.pageGeneral = new Telerik.WinControls.UI.RadPageViewPage();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
@@ -107,10 +114,9 @@
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.cbbTipoEmbrague = new Negocios.Componentes.cbbPersonal();
             this.cbbTransmision = new Negocios.Componentes.cbbPersonal();
-            this.cbbMotor = new Negocios.Componentes.cbbPersonal();
+            this.cbbTipoMotor = new Negocios.Componentes.cbbPersonal();
             this.cbbEmbrague = new Negocios.Componentes.cbbPersonal();
             this.cbbCilindrado = new Negocios.Componentes.cbbPersonal();
-            this.cbbTipoMotor = new Negocios.Componentes.cbbPersonal();
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
@@ -131,6 +137,11 @@
             this.colorTableAdapter = new Vistas.MatrizDataSetTableAdapters.ColorTableAdapter();
             this.vistaPropietarioTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaPropietarioTableAdapter();
             this.departamentoTableAdapter = new Vistas.MatrizDataSetTableAdapters.DepartamentoTableAdapter();
+            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.cbbMotor = new Negocios.Componentes.MultiCbbPersonal();
+            this.vistaMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vistaMotorTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaMotorTableAdapter();
+            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.pageGeneral.SuspendLayout();
@@ -205,10 +216,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoEmbrague)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTransmision)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMotor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEmbrague)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCilindrado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMotor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
@@ -221,6 +231,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtActivoFijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -240,6 +256,7 @@
             // 
             // pageGeneral
             // 
+            this.pageGeneral.Controls.Add(this.cbbMotor);
             this.pageGeneral.Controls.Add(this.radSeparator4);
             this.pageGeneral.Controls.Add(this.radPanel2);
             this.pageGeneral.Controls.Add(this.txtPlaca);
@@ -253,6 +270,7 @@
             this.pageGeneral.Controls.Add(this.cbbModelo);
             this.pageGeneral.Controls.Add(this.radLabel18);
             this.pageGeneral.Controls.Add(this.cbbMarca);
+            this.pageGeneral.Controls.Add(this.radLabel20);
             this.pageGeneral.Controls.Add(this.radLabel17);
             this.pageGeneral.Controls.Add(this.cbbSubGrupo);
             this.pageGeneral.Controls.Add(this.radLabel16);
@@ -260,11 +278,9 @@
             this.pageGeneral.Controls.Add(this.radLabel15);
             this.pageGeneral.Controls.Add(this.radLabel14);
             this.pageGeneral.Controls.Add(this.txtChasis);
-            this.pageGeneral.Controls.Add(this.txtDescripcion);
             this.pageGeneral.Controls.Add(this.radLabel4);
             this.pageGeneral.Controls.Add(this.radLabel33);
             this.pageGeneral.Controls.Add(this.radLabel3);
-            this.pageGeneral.Controls.Add(this.radLabel2);
             this.pageGeneral.ItemSize = new System.Drawing.SizeF(242F, 24F);
             this.pageGeneral.Location = new System.Drawing.Point(5, 30);
             this.pageGeneral.Name = "pageGeneral";
@@ -691,7 +707,7 @@
             this.cbbAnio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbAnio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbAnio.Limpiar = true;
-            this.cbbAnio.Location = new System.Drawing.Point(94, 208);
+            this.cbbAnio.Location = new System.Drawing.Point(94, 178);
             this.cbbAnio.Name = "cbbAnio";
             this.cbbAnio.NullText = "Tipo de Identificacion";
             this.cbbAnio.Size = new System.Drawing.Size(227, 23);
@@ -709,7 +725,7 @@
             this.cbbColor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbColor.Limpiar = true;
-            this.cbbColor.Location = new System.Drawing.Point(94, 179);
+            this.cbbColor.Location = new System.Drawing.Point(94, 149);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.NullText = "Tipo de Identificacion";
             this.cbbColor.Size = new System.Drawing.Size(227, 23);
@@ -750,7 +766,7 @@
             this.cbbModelo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbModelo.Limpiar = true;
-            this.cbbModelo.Location = new System.Drawing.Point(94, 150);
+            this.cbbModelo.Location = new System.Drawing.Point(94, 120);
             this.cbbModelo.Name = "cbbModelo";
             this.cbbModelo.NullText = "Tipo de Identificacion";
             this.cbbModelo.Size = new System.Drawing.Size(227, 23);
@@ -780,10 +796,9 @@
             this.cbbMarca.DataSource = this.marcaBindingSource;
             this.cbbMarca.DisplayMember = "Descripcion";
             this.cbbMarca.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbMarca.Enabled = false;
             this.cbbMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbMarca.Limpiar = true;
-            this.cbbMarca.Location = new System.Drawing.Point(94, 121);
+            this.cbbMarca.Location = new System.Drawing.Point(94, 91);
             this.cbbMarca.Name = "cbbMarca";
             this.cbbMarca.NullText = "Tipo de Identificacion";
             this.cbbMarca.Size = new System.Drawing.Size(227, 23);
@@ -800,7 +815,7 @@
             // radLabel17
             // 
             this.radLabel17.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel17.Location = new System.Drawing.Point(59, 212);
+            this.radLabel17.Location = new System.Drawing.Point(59, 182);
             this.radLabel17.Name = "radLabel17";
             this.radLabel17.Size = new System.Drawing.Size(29, 19);
             this.radLabel17.TabIndex = 31;
@@ -815,7 +830,7 @@
             this.cbbSubGrupo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbSubGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSubGrupo.Limpiar = true;
-            this.cbbSubGrupo.Location = new System.Drawing.Point(94, 92);
+            this.cbbSubGrupo.Location = new System.Drawing.Point(94, 62);
             this.cbbSubGrupo.Name = "cbbSubGrupo";
             this.cbbSubGrupo.NullText = "Tipo de Identificacion";
             this.cbbSubGrupo.Size = new System.Drawing.Size(227, 23);
@@ -832,7 +847,7 @@
             // radLabel16
             // 
             this.radLabel16.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel16.Location = new System.Drawing.Point(52, 183);
+            this.radLabel16.Location = new System.Drawing.Point(52, 153);
             this.radLabel16.Name = "radLabel16";
             this.radLabel16.Size = new System.Drawing.Size(36, 19);
             this.radLabel16.TabIndex = 35;
@@ -848,7 +863,7 @@
             this.cbbGrupo.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbGrupo.Limpiar = true;
-            this.cbbGrupo.Location = new System.Drawing.Point(94, 63);
+            this.cbbGrupo.Location = new System.Drawing.Point(94, 33);
             this.cbbGrupo.Name = "cbbGrupo";
             this.cbbGrupo.NullText = "Tipo de Identificacion";
             this.cbbGrupo.Size = new System.Drawing.Size(227, 23);
@@ -865,7 +880,7 @@
             // radLabel15
             // 
             this.radLabel15.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel15.Location = new System.Drawing.Point(39, 154);
+            this.radLabel15.Location = new System.Drawing.Point(39, 124);
             this.radLabel15.Name = "radLabel15";
             this.radLabel15.Size = new System.Drawing.Size(49, 19);
             this.radLabel15.TabIndex = 34;
@@ -874,7 +889,7 @@
             // radLabel14
             // 
             this.radLabel14.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel14.Location = new System.Drawing.Point(48, 125);
+            this.radLabel14.Location = new System.Drawing.Point(48, 95);
             this.radLabel14.Name = "radLabel14";
             this.radLabel14.Size = new System.Drawing.Size(40, 19);
             this.radLabel14.TabIndex = 33;
@@ -887,12 +902,12 @@
             this.txtChasis.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtChasis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChasis.Limpiar = true;
-            this.txtChasis.Location = new System.Drawing.Point(94, 33);
+            this.txtChasis.Location = new System.Drawing.Point(94, 3);
             this.txtChasis.Name = "txtChasis";
             this.txtChasis.Size = new System.Drawing.Size(227, 24);
             this.txtChasis.TabIndex = 1;
             this.txtChasis.ThemeName = "VisualStudio2012Light";
-            this.txtChasis.Validar = true;
+            this.txtChasis.Validar = false;
             // 
             // txtDescripcion
             // 
@@ -900,9 +915,9 @@
             this.txtDescripcion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Limpiar = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(94, 3);
+            this.txtDescripcion.Location = new System.Drawing.Point(317, 9);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(227, 24);
+            this.txtDescripcion.Size = new System.Drawing.Size(393, 24);
             this.txtDescripcion.TabIndex = 0;
             this.txtDescripcion.ThemeName = "VisualStudio2012Light";
             this.txtDescripcion.Validar = true;
@@ -910,7 +925,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel4.Location = new System.Drawing.Point(26, 96);
+            this.radLabel4.Location = new System.Drawing.Point(26, 66);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(62, 19);
             this.radLabel4.TabIndex = 32;
@@ -919,7 +934,7 @@
             // radLabel33
             // 
             this.radLabel33.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel33.Location = new System.Drawing.Point(47, 38);
+            this.radLabel33.Location = new System.Drawing.Point(47, 8);
             this.radLabel33.Name = "radLabel33";
             this.radLabel33.Size = new System.Drawing.Size(41, 19);
             this.radLabel33.TabIndex = 38;
@@ -929,7 +944,7 @@
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel3.Location = new System.Drawing.Point(47, 67);
+            this.radLabel3.Location = new System.Drawing.Point(47, 37);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(41, 19);
             this.radLabel3.TabIndex = 36;
@@ -938,7 +953,7 @@
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel2.Location = new System.Drawing.Point(18, 8);
+            this.radLabel2.Location = new System.Drawing.Point(241, 14);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(70, 19);
             this.radLabel2.TabIndex = 38;
@@ -1013,45 +1028,45 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.HeaderText = "Fecha";
-            gridViewTextBoxColumn13.Name = "Fecha";
-            gridViewTextBoxColumn13.Width = 103;
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.HeaderText = "Largo";
-            gridViewTextBoxColumn14.Name = "Largo";
-            gridViewTextBoxColumn14.Width = 104;
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.HeaderText = "Ancho";
-            gridViewTextBoxColumn15.Name = "Ancho";
-            gridViewTextBoxColumn15.Width = 107;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.HeaderText = "Alto";
-            gridViewTextBoxColumn16.Name = "Alto";
-            gridViewTextBoxColumn16.Width = 110;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.HeaderText = "Calculada";
-            gridViewTextBoxColumn17.Name = "Calculada";
-            gridViewTextBoxColumn17.Width = 120;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.HeaderText = "Facturar";
-            gridViewTextBoxColumn18.Name = "Facturar";
-            gridViewTextBoxColumn18.Width = 124;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.HeaderText = "Fecha";
+            gridViewTextBoxColumn6.Name = "Fecha";
+            gridViewTextBoxColumn6.Width = 103;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.HeaderText = "Largo";
+            gridViewTextBoxColumn7.Name = "Largo";
+            gridViewTextBoxColumn7.Width = 104;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.HeaderText = "Ancho";
+            gridViewTextBoxColumn8.Name = "Ancho";
+            gridViewTextBoxColumn8.Width = 107;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.HeaderText = "Alto";
+            gridViewTextBoxColumn9.Name = "Alto";
+            gridViewTextBoxColumn9.Width = 110;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.HeaderText = "Calculada";
+            gridViewTextBoxColumn10.Name = "Calculada";
+            gridViewTextBoxColumn10.Width = 120;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.HeaderText = "Facturar";
+            gridViewTextBoxColumn11.Name = "Facturar";
+            gridViewTextBoxColumn11.Width = 124;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16,
-            gridViewTextBoxColumn17,
-            gridViewTextBoxColumn18});
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor3.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor3.PropertyName = "column3";
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor3});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            sortDescriptor1});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1086,14 +1101,14 @@
             // 
             this.radGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox4.Controls.Add(this.txtTanqueCombustible);
+            this.radGroupBox4.Controls.Add(this.textPersonal1);
             this.radGroupBox4.Controls.Add(this.cbbTipoDeTransmicion);
             this.radGroupBox4.Controls.Add(this.radLabel9);
             this.radGroupBox4.Controls.Add(this.cbbTipoEmbrague);
             this.radGroupBox4.Controls.Add(this.cbbTransmision);
-            this.radGroupBox4.Controls.Add(this.cbbMotor);
+            this.radGroupBox4.Controls.Add(this.cbbTipoMotor);
             this.radGroupBox4.Controls.Add(this.cbbEmbrague);
             this.radGroupBox4.Controls.Add(this.cbbCilindrado);
-            this.radGroupBox4.Controls.Add(this.cbbTipoMotor);
             this.radGroupBox4.Controls.Add(this.radLabel12);
             this.radGroupBox4.Controls.Add(this.radSeparator1);
             this.radGroupBox4.Controls.Add(this.radLabel13);
@@ -1185,22 +1200,22 @@
             this.cbbTransmision.Validar = false;
             this.cbbTransmision.ValueMember = "IdTipoIdentificacion";
             // 
-            // cbbMotor
+            // cbbTipoMotor
             // 
-            this.cbbMotor.BackColor = System.Drawing.Color.White;
-            this.cbbMotor.Correo = false;
-            this.cbbMotor.DisplayMember = "Descripcion";
-            this.cbbMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMotor.Limpiar = false;
-            this.cbbMotor.Location = new System.Drawing.Point(115, 50);
-            this.cbbMotor.Name = "cbbMotor";
-            this.cbbMotor.NullText = "Tipo de Identificacion";
-            this.cbbMotor.Size = new System.Drawing.Size(208, 23);
-            this.cbbMotor.TabIndex = 44;
-            this.cbbMotor.ThemeName = "VisualStudio2012Light";
-            this.cbbMotor.Validar = false;
-            this.cbbMotor.ValueMember = "IdTipoIdentificacion";
+            this.cbbTipoMotor.BackColor = System.Drawing.Color.White;
+            this.cbbTipoMotor.Correo = false;
+            this.cbbTipoMotor.DisplayMember = "Descripcion";
+            this.cbbTipoMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoMotor.Limpiar = false;
+            this.cbbTipoMotor.Location = new System.Drawing.Point(115, 50);
+            this.cbbTipoMotor.Name = "cbbTipoMotor";
+            this.cbbTipoMotor.NullText = "Tipo de Identificacion";
+            this.cbbTipoMotor.Size = new System.Drawing.Size(208, 23);
+            this.cbbTipoMotor.TabIndex = 44;
+            this.cbbTipoMotor.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoMotor.Validar = false;
+            this.cbbTipoMotor.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbEmbrague
             // 
@@ -1235,23 +1250,6 @@
             this.cbbCilindrado.ThemeName = "VisualStudio2012Light";
             this.cbbCilindrado.Validar = false;
             this.cbbCilindrado.ValueMember = "IdTipoIdentificacion";
-            // 
-            // cbbTipoMotor
-            // 
-            this.cbbTipoMotor.BackColor = System.Drawing.Color.White;
-            this.cbbTipoMotor.Correo = false;
-            this.cbbTipoMotor.DisplayMember = "Descripcion";
-            this.cbbTipoMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbTipoMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoMotor.Limpiar = false;
-            this.cbbTipoMotor.Location = new System.Drawing.Point(116, 21);
-            this.cbbTipoMotor.Name = "cbbTipoMotor";
-            this.cbbTipoMotor.NullText = "Tipo de Identificacion";
-            this.cbbTipoMotor.Size = new System.Drawing.Size(208, 23);
-            this.cbbTipoMotor.TabIndex = 44;
-            this.cbbTipoMotor.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoMotor.Validar = false;
-            this.cbbTipoMotor.ValueMember = "IdTipoIdentificacion";
             // 
             // radLabel12
             // 
@@ -1391,6 +1389,125 @@
             // 
             this.departamentoTableAdapter.ClearBeforeFill = true;
             // 
+            // textPersonal1
+            // 
+            this.textPersonal1.Correo = false;
+            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal1.Limpiar = false;
+            this.textPersonal1.Location = new System.Drawing.Point(116, 21);
+            this.textPersonal1.Name = "textPersonal1";
+            this.textPersonal1.Size = new System.Drawing.Size(206, 24);
+            this.textPersonal1.TabIndex = 5;
+            this.textPersonal1.ThemeName = "VisualStudio2012Light";
+            this.textPersonal1.Validar = false;
+            // 
+            // cbbMotor
+            // 
+            this.cbbMotor.AutoFilter = true;
+            this.cbbMotor.AutoSizeDropDownToBestFit = true;
+            this.cbbMotor.DataSource = this.vistaMotorBindingSource;
+            this.cbbMotor.DisplayMember = "Motor";
+            this.cbbMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            // 
+            // cbbMotor.NestedRadGridView
+            // 
+            this.cbbMotor.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.cbbMotor.EditorControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbbMotor.EditorControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cbbMotor.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbbMotor.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbMotor.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.cbbMotor.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.cbbMotor.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.cbbMotor.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "IdMotor";
+            gridViewDecimalColumn1.HeaderText = "Codigo";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "IdMotor";
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Motor";
+            gridViewTextBoxColumn1.HeaderText = "Motor";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "Motor";
+            gridViewTextBoxColumn1.Width = 185;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "TipoMotor";
+            gridViewTextBoxColumn2.HeaderText = "TipoMotor";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "TipoMotor";
+            gridViewTextBoxColumn2.Width = 88;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Marca";
+            gridViewTextBoxColumn3.HeaderText = "Marca";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Marca";
+            gridViewTextBoxColumn3.Width = 91;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Modelo";
+            gridViewTextBoxColumn4.HeaderText = "Modelo";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "Modelo";
+            gridViewTextBoxColumn4.Width = 66;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Cilindrado";
+            gridViewTextBoxColumn5.HeaderText = "Cilindrado";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "Cilindrado";
+            gridViewTextBoxColumn5.Width = 192;
+            this.cbbMotor.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
+            this.cbbMotor.EditorControl.MasterTemplate.DataSource = this.vistaMotorBindingSource;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableAlternatingRowColor = true;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableFiltering = true;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.cbbMotor.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.cbbMotor.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.cbbMotor.EditorControl.Name = "NestedRadGridView";
+            this.cbbMotor.EditorControl.ReadOnly = true;
+            this.cbbMotor.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbbMotor.EditorControl.ShowGroupPanel = false;
+            this.cbbMotor.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.cbbMotor.EditorControl.TabIndex = 0;
+            this.cbbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMotor.Limpiar = true;
+            this.cbbMotor.Location = new System.Drawing.Point(94, 208);
+            this.cbbMotor.Name = "cbbMotor";
+            this.cbbMotor.Size = new System.Drawing.Size(227, 23);
+            this.cbbMotor.TabIndex = 63;
+            this.cbbMotor.TabStop = false;
+            this.cbbMotor.ThemeName = "VisualStudio2012Light";
+            this.cbbMotor.Validar = true;
+            this.cbbMotor.ValueMember = "IdMotor";
+            // 
+            // vistaMotorBindingSource
+            // 
+            this.vistaMotorBindingSource.DataMember = "VistaMotor";
+            this.vistaMotorBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // vistaMotorTableAdapter
+            // 
+            this.vistaMotorTableAdapter.ClearBeforeFill = true;
+            // 
+            // radLabel20
+            // 
+            this.radLabel20.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.radLabel20.Location = new System.Drawing.Point(47, 212);
+            this.radLabel20.Name = "radLabel20";
+            this.radLabel20.Size = new System.Drawing.Size(41, 19);
+            this.radLabel20.TabIndex = 31;
+            this.radLabel20.Text = "Motor";
+            // 
             // ActivoCubicacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1399,6 +1516,8 @@
             this.Controls.Add(this.radPageView1);
             this.Controls.Add(this.txtActivoFijo);
             this.Controls.Add(this.radLabel1);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.radLabel2);
             this.KeyPreview = true;
             this.Name = "ActivoCubicacion";
             // 
@@ -1486,10 +1605,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoEmbrague)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTransmision)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMotor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEmbrague)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCilindrado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMotor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
@@ -1502,6 +1620,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtActivoFijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1555,9 +1679,8 @@
         private Telerik.WinControls.UI.RadLabel radLabel13;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Negocios.Componentes.cbbPersonal cbbTransmision;
-        private Negocios.Componentes.cbbPersonal cbbMotor;
-        private Negocios.Componentes.cbbPersonal cbbCilindrado;
         private Negocios.Componentes.cbbPersonal cbbTipoMotor;
+        private Negocios.Componentes.cbbPersonal cbbCilindrado;
         private Negocios.Componentes.cbbPersonal cbbTipoDeTransmicion;
         private Telerik.WinControls.UI.RadLabel radLabel31;
         private Negocios.Componentes.cbbPersonal cbbTipoEmbrague;
@@ -1604,5 +1727,10 @@
         private Telerik.WinControls.UI.RadLabel radLabel40;
         private Negocios.Componentes.TextPersonal txtTablonAlto;
         private Telerik.WinControls.UI.RadSeparator radSeparator4;
+        private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.MultiCbbPersonal cbbMotor;
+        private System.Windows.Forms.BindingSource vistaMotorBindingSource;
+        private MatrizDataSetTableAdapters.VistaMotorTableAdapter vistaMotorTableAdapter;
+        private Telerik.WinControls.UI.RadLabel radLabel20;
     }
 }

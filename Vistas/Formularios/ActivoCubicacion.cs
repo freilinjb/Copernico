@@ -19,6 +19,9 @@ namespace Vistas.Formularios
 
         private void Activo_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaMotor' Puede moverla o quitarla según sea necesario.
+            this.vistaMotorTableAdapter.Fill(this.matrizDataSet.VistaMotor);
+            RadMessageBox.ThemeName = this.ThemeName;
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Departamento' Puede moverla o quitarla según sea necesario.
             this.departamentoTableAdapter.Fill(this.matrizDataSet.Departamento);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaPropietario' Puede moverla o quitarla según sea necesario.
@@ -50,6 +53,7 @@ namespace Vistas.Formularios
             bool bien = true;
             validarComponentes();
             errorProvider1.Clear();
+            validarComponentes();
             if (Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
                 try
@@ -69,7 +73,9 @@ namespace Vistas.Formularios
                         (int)cbbPropietario.SelectedValue,
                         txtPlaca.Text.Trim(),
                         1,
-                        (int)cbbEstatus.SelectedValue);
+                        (int)cbbEstatus.SelectedValue,
+                        (int)cbbGrupo.SelectedValue,
+                        (int)cbbSubGrupo.SelectedValue);
 
                     ds = Negocios.Utilidades.Ejecutar(vehiculo.getGuardar());
 
@@ -94,13 +100,20 @@ namespace Vistas.Formularios
         private bool validarComponentes()
         {
             bool bien = true;
-            if(((string.IsNullOrEmpty(txtTablonAlto.Text) && string.IsNullOrEmpty(txtTablonAncho.Text)) && string.IsNullOrEmpty(txtTablonLargo.Text)) && (!string.IsNullOrEmpty(txtTablonAlto.Text) && (!string.IsNullOrEmpty(txtTablonAncho.Text) && !string.IsNullOrEmpty(txtTablonLargo.Text))))
+            if(((string.IsNullOrEmpty(txtCajonAlto.Text) && string.IsNullOrEmpty(txtCajonAncho.Text)) && string.IsNullOrEmpty(txtCajonLargo.Text)) && (!string.IsNullOrEmpty(txtCajonAlto.Text) && (!string.IsNullOrEmpty(txtCajonAncho.Text) && !string.IsNullOrEmpty(txtCajonLargo.Text))))
             {
-                errorProvider1.SetError(txtTablon, "Todo esta bien");
+                errorProvider1.SetError(txtCajon, "Datos incompletos");
             }
 
-            else
-                errorProvider1.SetError(txtTablon, "Todo no esta bien");
+            if (((string.IsNullOrEmpty(txtTablonAlto.Text) && string.IsNullOrEmpty(txtTablonAncho.Text)) && string.IsNullOrEmpty(txtTablonLargo.Text)) && (!string.IsNullOrEmpty(txtTablonAlto.Text) && (!string.IsNullOrEmpty(txtTablonAncho.Text) && !string.IsNullOrEmpty(txtTablonLargo.Text))))
+            {
+                errorProvider1.SetError(txtTablon, "Datos incompletos");
+            }
+
+            if (((string.IsNullOrEmpty(txtBotellaAlto.Text) && string.IsNullOrEmpty(txtBotellaAncho.Text)) && string.IsNullOrEmpty(txtBotellaLargo.Text)) && (!string.IsNullOrEmpty(txtBotellaAlto.Text) && (!string.IsNullOrEmpty(txtBotellaAncho.Text) && !string.IsNullOrEmpty(txtBotellaLargo.Text))))
+            {
+                errorProvider1.SetError(txtBotella, "Datos incompletos");
+            }
 
             return bien;
         }
@@ -143,6 +156,25 @@ namespace Vistas.Formularios
 
         private void VericarStatusCalculado()
         {
+            float botella = 0, tablon = 0;
+
+            if (!string.IsNullOrEmpty(txtCajonAlto.Text.Trim()) && !string.IsNullOrEmpty(txtCajonAncho.Text.Trim()) && !string.IsNullOrEmpty(txtCajonLargo.Text.Trim()))
+            {
+                if(!string.IsNullOrEmpty(txtTablonAlto.Text.Trim()) && !string.IsNullOrEmpty(txtTablonAncho.Text.Trim()) && !string.IsNullOrEmpty(txtTablonLargo.Text.Trim()))
+                {
+                   tablon = Convert.ToSingle(Convert.ToSingle(txtTablonAlto.Text.Trim()) * Convert.ToSingle(txtTablonAncho.Text.Trim()) * Convert.ToSingle(txtTablonLargo.Text.Trim()));
+                   txtTablon.Text = tablon.ToString();
+                }
+
+                if (!string.IsNullOrEmpty(txtBotellaAlto.Text.Trim()) && !string.IsNullOrEmpty(txtBotellaAncho.Text.Trim()) && !string.IsNullOrEmpty(txtBotellaLargo.Text.Trim()))
+                {
+                    botella = Convert.ToSingle(Convert.ToSingle(txtBotellaAlto.Text.Trim()) * Convert.ToSingle(txtBotellaAncho.Text.Trim()) * Convert.ToSingle(txtBotellaLargo.Text.Trim()));
+                    txtBotella.Text = botella.ToString();
+                }
+
+                txtCapacidad.Text = Convert.ToSingle((Convert.ToSingle(txtCajonAlto.Text.Trim()) * Convert.ToSingle(txtCajonAncho.Text.Trim()) * Convert.ToSingle(txtCajonLargo.Text.Trim()))+tablon-botella).ToString();
+            }
+
             if (!string.IsNullOrEmpty(txtCajon.Text.Trim()) && !string.IsNullOrEmpty(txtTablon.Text.Trim()) && !string.IsNullOrEmpty(txtBotella.Text.Trim()))
             {
                 txtCapacidad.Text = (Convert.ToSingle(Convert.ToSingle(txtCajon.Text.Trim()) + Convert.ToSingle(txtTablon.Text.Trim()) - Convert.ToSingle(txtBotella.Text.Trim())).ToString()).ToString();              

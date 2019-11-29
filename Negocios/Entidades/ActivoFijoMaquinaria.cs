@@ -23,7 +23,7 @@ namespace Negocios.Entidades
         public int IdGrupoActivoFijo;
         public int IdSubGrupoActivoFijo;
 
-        public ActivoFijoMaquinaria(int idActivoFijo, int idMaquinaria, string nombre, int idMarca, int idModelo, int idMotor, int idColor, int anio, int idPropietario, string placa, int idEstadoMaquinaria, int idEstadoActivoFijo)
+        public ActivoFijoMaquinaria(int idActivoFijo, int idMaquinaria, string nombre, int idMarca, int idModelo, int idMotor, int idColor, int anio, int idPropietario, string placa, int idEstadoMaquinaria, int idEstadoActivoFijo,int idGrupoActivoFijo, int idSubGrupoActivoFijo)
         {
             IdActivoFijo = idActivoFijo;
             IdMaquinaria = idMaquinaria;
@@ -37,11 +37,13 @@ namespace Negocios.Entidades
             Placa = placa;
             IdEstadoMaquinaria = idEstadoMaquinaria;
             IdEstadoActivoFijo = idEstadoActivoFijo;
+            IdGrupoActivoFijo = idGrupoActivoFijo;
+            IdSubGrupoActivoFijo = idSubGrupoActivoFijo;
         }
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarActivoFijo] {IdActivoFijo},{IdMaquinaria},'{Nombre}',{IdMarca},{IdModelo},{IdMotor},{IdColor},{Anio},{IdPropietario},{Placa},{IdEstadoMaquinaria},{IdEstadoActivoFijo},{IdGrupoActivoFijo},{IdSubGrupoActivoFijo}";
+            return $"EXEC [RegistrarActivoFijo] {IdActivoFijo},{IdMaquinaria},'{Nombre}',{IdMarca},{IdModelo},{IdMotor},{IdColor},{Anio},{IdPropietario},'{Placa}',{IdEstadoMaquinaria},{IdEstadoActivoFijo},{IdGrupoActivoFijo},{IdSubGrupoActivoFijo}";
         }
     }
 }
