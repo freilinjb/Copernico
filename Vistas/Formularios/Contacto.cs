@@ -68,12 +68,12 @@ namespace Vistas.Formularios
                     ct.Estado = (chEstado.ToggleStateMode == Telerik.WinControls.UI.ToggleStateMode.Click) ? 1 : 0;
                     try
                     {
-                        //if (Utilidades.Ejecutar(ct.getGuardar()).Tables[0].Rows.Count > 0)
-                        //{
-                        //    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-                        //    Utilidades.Limpiar(this, errorProvider1);
-                        //    this.DialogResult = DialogResult.OK;
-                        //}
+                        if (Utilidades.Ejecutar(ct.getGuardar()).Tables[0].Rows.Count > 0)
+                        {
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                            Utilidades.Limpiar(this, errorProvider1);
+                            this.DialogResult = DialogResult.OK;
+                        }
                         this.DialogResult = DialogResult.OK;
                     }
                     catch(Exception ex)

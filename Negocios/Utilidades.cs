@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Telerik.WinControls.UI;
 
 namespace Negocios
 {
@@ -28,6 +29,16 @@ namespace Negocios
             e.CellStyle.Font =  fuente;
         }
         public static void LimpiarDataGridView(DataGridView dataGrid)
+        {
+            if (dataGrid.Rows.Count > 0)
+            {
+                for (int i = dataGrid.Rows.Count - 1; i >= 0; i--)
+                {
+                    dataGrid.Rows.RemoveAt(i);
+                }
+            }
+        }
+        public static void LimpiarRadDataGridView(RadGridView dataGrid)
         {
             if (dataGrid.Rows.Count > 0)
             {

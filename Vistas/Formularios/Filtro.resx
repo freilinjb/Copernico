@@ -117,6 +117,126 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tamizBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>360, 17</value>
+  </metadata>
+  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 17</value>
+  </metadata>
+  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>232, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbbTamizInicial.NestedRadGridView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbbTamizInicial.NestedRadGridView.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbbTamizInicial.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridViewDecimalColumn45.HeaderText" xml:space="preserve">
+    <value>NumMalla</value>
+  </data>
+  <data name="gridViewDecimalColumn46.HeaderText" xml:space="preserve">
+    <value>Apertura</value>
+  </data>
+  <data name="gridViewTextBoxColumn17.HeaderText" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="cbbTamizInicial.NestedRadGridView.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="cbbTamizInicial.NestedRadGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 150</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbbTamizInicial.NestedRadGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.NestedRadGridView.Name" xml:space="preserve">
+    <value>cbbTamizInicial.NestedRadGridView</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.NestedRadGridView.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.MultiColumnComboGridView, Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="cbbTamizInicial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="cbbTamizInicial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 67</value>
+  </data>
+  <data name="cbbTamizInicial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="cbbTamizInicial.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.Name" xml:space="preserve">
+    <value>cbbTamizInicial</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.Type" xml:space="preserve">
+    <value>Negocios.Componentes.MultiCbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizInicial.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbbTamizFinal.NestedRadGridView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="cbbTamizFinal.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gridViewDecimalColumn47.HeaderText" xml:space="preserve">
+    <value>NumMalla</value>
+  </data>
+  <data name="gridViewDecimalColumn48.HeaderText" xml:space="preserve">
+    <value>Apertura</value>
+  </data>
+  <data name="gridViewTextBoxColumn18.HeaderText" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="cbbTamizFinal.NestedRadGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 150</value>
+  </data>
+  <data name="cbbTamizFinal.NestedRadGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.NestedRadGridView.Name" xml:space="preserve">
+    <value>cbbTamizFinal.NestedRadGridView</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.NestedRadGridView.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.MultiColumnComboGridView, Telerik.WinControls.GridView, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="cbbTamizFinal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt</value>
+  </data>
+  <data name="cbbTamizFinal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 97</value>
+  </data>
+  <data name="cbbTamizFinal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="cbbTamizFinal.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.Name" xml:space="preserve">
+    <value>cbbTamizFinal</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.Type" xml:space="preserve">
+    <value>Negocios.Componentes.MultiCbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbbTamizFinal.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;radSeparator1.Name" xml:space="preserve">
     <value>radSeparator1</value>
   </data>
@@ -153,7 +273,6 @@
   <data name="&gt;&gt;radGroupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="radPageViewPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 30</value>
   </data>
@@ -226,7 +345,6 @@
   <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
     <value>593, 464</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -242,11 +360,77 @@
   <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="radSeparator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 188</value>
+  </data>
+  <data name="radSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 10</value>
+  </data>
+  <data name="radSeparator1.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;radSeparator1.Name" xml:space="preserve">
+    <value>radSeparator1</value>
+  </data>
+  <data name="&gt;&gt;radSeparator1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radSeparator1.Parent" xml:space="preserve">
+    <value>radPageViewPage1</value>
+  </data>
+  <data name="&gt;&gt;radSeparator1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbbUnd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="cbbUnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 126</value>
+  </data>
+  <data name="cbbUnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
+  </data>
+  <data name="cbbUnd.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cbbUnd.Name" xml:space="preserve">
+    <value>cbbUnd</value>
+  </data>
+  <data name="&gt;&gt;cbbUnd.Type" xml:space="preserve">
+    <value>Negocios.Componentes.cbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbbUnd.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbbUnd.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 155</value>
+  </data>
+  <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>354, 24</value>
+  </data>
+  <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcion.Name" xml:space="preserve">
+    <value>txtDescripcion</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcion.Type" xml:space="preserve">
+    <value>Negocios.Componentes.TextPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcion.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;txtDescripcion.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="radLabel10.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="radLabel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 133</value>
+    <value>31, 156</value>
   </data>
   <data name="radLabel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 21</value>
@@ -267,49 +451,76 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel10.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
-  <data name="lbtami.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="radLabel9.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
-  <data name="lbtami.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 102</value>
+  <data name="radLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 67</value>
   </data>
-  <data name="lbtami.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 21</value>
+  <data name="radLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 21</value>
   </data>
-  <data name="lbtami.TabIndex" type="System.Int32, mscorlib">
+  <data name="radLabel9.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="lbtami.Text" xml:space="preserve">
-    <value>Tamiz Final</value>
+  <data name="radLabel9.Text" xml:space="preserve">
+    <value>Apertura Inicial</value>
   </data>
-  <data name="&gt;&gt;lbtami.Name" xml:space="preserve">
-    <value>lbtami</value>
+  <data name="&gt;&gt;radLabel9.Name" xml:space="preserve">
+    <value>radLabel9</value>
   </data>
-  <data name="&gt;&gt;lbtami.Type" xml:space="preserve">
+  <data name="&gt;&gt;radLabel9.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;lbtami.Parent" xml:space="preserve">
+  <data name="&gt;&gt;radLabel9.Parent" xml:space="preserve">
     <value>radGroupBox2</value>
   </data>
-  <data name="&gt;&gt;lbtami.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;radLabel9.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="radLabel11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="radLabel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 130</value>
+  </data>
+  <data name="radLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 21</value>
+  </data>
+  <data name="radLabel11.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="radLabel11.Text" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Name" xml:space="preserve">
+    <value>radLabel11</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;radLabel11.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="radLabel7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
   </data>
   <data name="radLabel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 71</value>
+    <value>10, 97</value>
   </data>
   <data name="radLabel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>92, 21</value>
   </data>
   <data name="radLabel7.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="radLabel7.Text" xml:space="preserve">
-    <value>Tamiz inicual</value>
+    <value>Apertura Final</value>
   </data>
   <data name="&gt;&gt;radLabel7.Name" xml:space="preserve">
     <value>radLabel7</value>
@@ -321,7 +532,7 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="radLabel8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -348,100 +559,31 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;radLabel8.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
-  <data name="txtDescripcion.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
+  <data name="txtNumFiltro.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 129</value>
-  </data>
-  <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>325, 25</value>
-  </data>
-  <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Name" xml:space="preserve">
-    <value>txtDescripcion</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Type" xml:space="preserve">
-    <value>Negocios.Componentes.cbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cbbTamizFinal.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="cbbTamizFinal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 98</value>
-  </data>
-  <data name="cbbTamizFinal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="cbbTamizFinal.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizFinal.Name" xml:space="preserve">
-    <value>cbbTamizFinal</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizFinal.Type" xml:space="preserve">
-    <value>Negocios.Componentes.cbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizFinal.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizFinal.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cbbTamizInicial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="cbbTamizInicial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 67</value>
-  </data>
-  <data name="cbbTamizInicial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
-  </data>
-  <data name="cbbTamizInicial.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizInicial.Name" xml:space="preserve">
-    <value>cbbTamizInicial</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizInicial.Type" xml:space="preserve">
-    <value>Negocios.Componentes.cbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizInicial.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbbTamizInicial.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="textPersonal1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="txtNumFiltro.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 37</value>
   </data>
-  <data name="textPersonal1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="txtNumFiltro.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 24</value>
   </data>
-  <data name="textPersonal1.TabIndex" type="System.Int32, mscorlib">
+  <data name="txtNumFiltro.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;textPersonal1.Name" xml:space="preserve">
-    <value>textPersonal1</value>
+  <data name="&gt;&gt;txtNumFiltro.Name" xml:space="preserve">
+    <value>txtNumFiltro</value>
   </data>
-  <data name="&gt;&gt;textPersonal1.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtNumFiltro.Type" xml:space="preserve">
     <value>Negocios.Componentes.TextPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;textPersonal1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;txtNumFiltro.Parent" xml:space="preserve">
     <value>radGroupBox2</value>
   </data>
-  <data name="&gt;&gt;textPersonal1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;txtNumFiltro.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="radGroupBox2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt</value>
@@ -473,7 +615,6 @@
   <data name="&gt;&gt;radGroupBox2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataProducto.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -486,6 +627,27 @@
   <data name="dataProducto.Location" type="System.Drawing.Point, System.Drawing">
     <value>-6, 21</value>
   </data>
+  <data name="gridViewDecimalColumn49.HeaderText" xml:space="preserve">
+    <value>Codigo</value>
+  </data>
+  <data name="gridViewDecimalColumn50.HeaderText" xml:space="preserve">
+    <value>NumMallaInicial</value>
+  </data>
+  <data name="gridViewDecimalColumn51.HeaderText" xml:space="preserve">
+    <value>AperturaInicial</value>
+  </data>
+  <data name="gridViewDecimalColumn52.HeaderText" xml:space="preserve">
+    <value>NumMallaFinal</value>
+  </data>
+  <data name="gridViewDecimalColumn53.HeaderText" xml:space="preserve">
+    <value>AperturaFinal</value>
+  </data>
+  <data name="gridViewTextBoxColumn19.HeaderText" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <metadata name="vistaFiltroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>804, 17</value>
+  </metadata>
   <data name="dataProducto.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -810,21 +972,15 @@
   <data name="radGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 21</value>
   </data>
-  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn54.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn55.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn20.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
-  <metadata name="tamizBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>360, 17</value>
-  </metadata>
-  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 17</value>
-  </metadata>
   <data name="radGridView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -879,33 +1035,12 @@
   <metadata name="visualStudio2012LightTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 17</value>
-  </metadata>
   <metadata name="tamizTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>520, 17</value>
   </metadata>
-  <data name="radSeparator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 188</value>
-  </data>
-  <data name="radSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 10</value>
-  </data>
-  <data name="radSeparator1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.Name" xml:space="preserve">
-    <value>radSeparator1</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.Parent" xml:space="preserve">
-    <value>radPageViewPage1</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>674, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -921,11 +1056,11 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Filtro</value>
   </data>
-  <data name="&gt;&gt;visualStudio2012LightTheme1.Name" xml:space="preserve">
-    <value>visualStudio2012LightTheme1</value>
+  <data name="&gt;&gt;tamizBindingSource.Name" xml:space="preserve">
+    <value>tamizBindingSource</value>
   </data>
-  <data name="&gt;&gt;visualStudio2012LightTheme1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.Themes.VisualStudio2012LightTheme, Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;tamizBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;matrizDataSet.Name" xml:space="preserve">
     <value>matrizDataSet</value>
@@ -933,11 +1068,11 @@
   <data name="&gt;&gt;matrizDataSet.Type" xml:space="preserve">
     <value>Vistas.MatrizDataSet, MatrizDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;tamizBindingSource.Name" xml:space="preserve">
-    <value>tamizBindingSource</value>
+  <data name="&gt;&gt;visualStudio2012LightTheme1.Name" xml:space="preserve">
+    <value>visualStudio2012LightTheme1</value>
   </data>
-  <data name="&gt;&gt;tamizBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;visualStudio2012LightTheme1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.Themes.VisualStudio2012LightTheme, Telerik.WinControls.Themes.VisualStudio2012Light, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;tamizTableAdapter.Name" xml:space="preserve">
     <value>tamizTableAdapter</value>
@@ -945,10 +1080,31 @@
   <data name="&gt;&gt;tamizTableAdapter.Type" xml:space="preserve">
     <value>Vistas.MatrizDataSetTableAdapters.TamizTableAdapter, MatrizDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vistaFiltroBindingSource.Name" xml:space="preserve">
+    <value>vistaFiltroBindingSource</value>
+  </data>
+  <data name="&gt;&gt;vistaFiltroBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vistaFiltroTableAdapter.Name" xml:space="preserve">
+    <value>vistaFiltroTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;vistaFiltroTableAdapter.Type" xml:space="preserve">
+    <value>Vistas.MatrizDataSetTableAdapters.VistaFiltroTableAdapter, MatrizDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Filtro</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>Vistas.Formularios.FormBase, Vistas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <metadata name="vistaFiltroTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>987, 17</value>
+  </metadata>
 </root>

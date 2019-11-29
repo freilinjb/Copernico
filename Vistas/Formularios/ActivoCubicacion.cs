@@ -11,6 +11,7 @@ namespace Vistas.Formularios
 {
     public partial class ActivoCubicacion : FormBase
     {
+        private DataSet ds;
         public ActivoCubicacion()
         {
             InitializeComponent();
@@ -48,24 +49,38 @@ namespace Vistas.Formularios
         {
             bool bien = true;
             validarComponentes();
-
+            errorProvider1.Clear();
             if (Negocios.Utilidades.Validar(this,errorProvider1) == false)
             {
                 try
                 {
-                    
 
-                    Negocios.Entidades.Maquinaria vehiculo = new Negocios.Entidades.Maquinaria(
+                    int IdMaquinaria = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdMaquinaria)+1 AS Mayor FROM Maquinaria").Tables[0].Rows[0]["Mayor"].ToString());
+
+                    Negocios.Entidades.ActivoFijoMaquinaria vehiculo = new Negocios.Entidades.ActivoFijoMaquinaria(
                         Convert.ToInt32(txtActivoFijo.Text),
+                        IdMaquinaria,
                         txtDescripcion.Text.Trim(),
                         (int)cbbMarca.SelectedValue,
                         (int)cbbModelo.SelectedValue,
                         (int)cbbMotor.SelectedValue,
-                       (int)cbbColor.SelectedValue,
+                        (int)cbbColor.SelectedValue,
                         Convert.ToInt32(cbbAnio.Text),
-                        txtPlaca.Text,
                         (int)cbbPropietario.SelectedValue,
+                        txtPlaca.Text.Trim(),
+                        1,
                         (int)cbbEstatus.SelectedValue);
+
+                    ds = Negocios.Utilidades.Ejecutar(vehiculo.getGuardar());
+
+                    if(ds.Tables[0].Rows.Count > 0)
+                    {
+
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
+                        txtActivoFijo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdActivoFijo)+1 AS Mayor FROM ActivoFijo").Tables[0].Rows[0]["Mayor"].ToString();
+                    }
                 }
                 catch(Exception ex)
                 {
@@ -79,9 +94,9 @@ namespace Vistas.Formularios
         private bool validarComponentes()
         {
             bool bien = true;
-            if((string.IsNullOrEmpty(txtTablonAlto.Text) && string.IsNullOrEmpty(txtTablonAncho.Text) && string.IsNullOrEmpty(txtTablonLargo.Text)) || (!string.IsNullOrEmpty(txtTablonAlto.Text) && !string.IsNullOrEmpty(txtTablonAncho.Text) && !string.IsNullOrEmpty(txtTablonLargo.Text)))
+            if(((string.IsNullOrEmpty(txtTablonAlto.Text) && string.IsNullOrEmpty(txtTablonAncho.Text)) && string.IsNullOrEmpty(txtTablonLargo.Text)) && (!string.IsNullOrEmpty(txtTablonAlto.Text) && (!string.IsNullOrEmpty(txtTablonAncho.Text) && !string.IsNullOrEmpty(txtTablonLargo.Text))))
             {
-                //errorProvider1.SetError(txtTablon, "Todo esta bien");
+                errorProvider1.SetError(txtTablon, "Todo esta bien");
             }
 
             else
@@ -99,6 +114,50 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.Escape)
             {
                 this.Close();
+            }
+        }
+
+        private void txtBotellaAlto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) || (e.KeyCode == Keys.Tab))
+            {
+                if (!string.IsNullOrEmpty(txtBotellaAlto.Text.Trim()) && !string.IsNullOrEmpty(txtBotellaAncho.Text.Trim()) && !string.IsNullOrEmpty(txtBotellaLargo.Text.Trim()))
+                {
+                    txtBotella.Text = Convert.ToSingle(Convert.ToSingle(txtBotellaLargo.Text.Trim()) * Convert.ToSingle(txtBotellaAncho.Text.Trim()) * Convert.ToSingle(txtBotellaAlto.Text.Trim())).ToString();
+                    VericarStatusCalculado();
+                }
+            }
+        }
+
+        private void txtTablonAlto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) || (e.KeyCode == Keys.Tab))
+            {
+                if (!string.IsNullOrEmpty(txtTablonAlto.Text.Trim()) && !string.IsNullOrEmpty(txtTablonAncho.Text.Trim()) && !string.IsNullOrEmpty(txtTablonLargo.Text.Trim()))
+                {
+                    txtTablon.Text = Convert.ToSingle(Convert.ToSingle(txtTablonAlto.Text.Trim()) * Convert.ToSingle(txtTablonAncho.Text.Trim()) * Convert.ToSingle(txtTablonLargo.Text.Trim())).ToString();
+                    VericarStatusCalculado();
+                }
+            }
+        }
+
+        private void VericarStatusCalculado()
+        {
+            if (!string.IsNullOrEmpty(txtCajon.Text.Trim()) && !string.IsNullOrEmpty(txtTablon.Text.Trim()) && !string.IsNullOrEmpty(txtBotella.Text.Trim()))
+            {
+                txtCapacidad.Text = (Convert.ToSingle(Convert.ToSingle(txtCajon.Text.Trim()) + Convert.ToSingle(txtTablon.Text.Trim()) - Convert.ToSingle(txtBotella.Text.Trim())).ToString()).ToString();              
+            }
+        }
+
+        private void txtCajonAlto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter) || (e.KeyCode == Keys.Tab))
+            {
+                if (!string.IsNullOrEmpty(txtCajonAlto.Text.Trim()) && !string.IsNullOrEmpty(txtCajonAncho.Text.Trim()) && !string.IsNullOrEmpty(txtCajonLargo.Text.Trim()))
+                {
+                    txtCajon.Text = Convert.ToSingle(Convert.ToSingle(txtCajonAlto.Text.Trim()) * Convert.ToSingle(txtCajonAncho.Text.Trim()) * Convert.ToSingle(txtCajonLargo.Text.Trim())).ToString();
+                    VericarStatusCalculado();
+                }
             }
         }
     }

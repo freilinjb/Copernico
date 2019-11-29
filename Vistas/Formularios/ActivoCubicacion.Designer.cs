@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor3 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.pageGeneral = new Telerik.WinControls.UI.RadPageViewPage();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
@@ -47,7 +47,7 @@
             this.txtTablon = new Negocios.Componentes.TextPersonal();
             this.txtBotellaAncho = new Negocios.Componentes.TextPersonal();
             this.txtCajonAlto = new Negocios.Componentes.TextPersonal();
-            this.txtCajonPrincipal = new Negocios.Componentes.TextPersonal();
+            this.txtCajonAncho = new Negocios.Componentes.TextPersonal();
             this.txtTablonLargo = new Negocios.Componentes.TextPersonal();
             this.txtCajon = new Negocios.Componentes.TextPersonal();
             this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
@@ -88,7 +88,7 @@
             this.grupoActivoFijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.txtChasis = new Negocios.Componentes.TextPersonal();
             this.txtDescripcion = new Negocios.Componentes.TextPersonal();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
@@ -143,7 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTablon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBotellaAncho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCajonAlto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCajonPrincipal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCajonAncho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTablonLargo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCajon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
@@ -184,7 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grupoActivoFijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChasis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
@@ -259,7 +259,7 @@
             this.pageGeneral.Controls.Add(this.cbbGrupo);
             this.pageGeneral.Controls.Add(this.radLabel15);
             this.pageGeneral.Controls.Add(this.radLabel14);
-            this.pageGeneral.Controls.Add(this.textPersonal1);
+            this.pageGeneral.Controls.Add(this.txtChasis);
             this.pageGeneral.Controls.Add(this.txtDescripcion);
             this.pageGeneral.Controls.Add(this.radLabel4);
             this.pageGeneral.Controls.Add(this.radLabel33);
@@ -288,7 +288,7 @@
             this.radPanel2.Controls.Add(this.txtTablon);
             this.radPanel2.Controls.Add(this.txtBotellaAncho);
             this.radPanel2.Controls.Add(this.txtCajonAlto);
-            this.radPanel2.Controls.Add(this.txtCajonPrincipal);
+            this.radPanel2.Controls.Add(this.txtCajonAncho);
             this.radPanel2.Controls.Add(this.txtTablonLargo);
             this.radPanel2.Controls.Add(this.txtCajon);
             this.radPanel2.Controls.Add(this.radLabel34);
@@ -318,6 +318,7 @@
             this.txtBotellaLargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBotellaLargo.Limpiar = true;
             this.txtBotellaLargo.Location = new System.Drawing.Point(103, 88);
+            this.txtBotellaLargo.MaxLength = 5;
             this.txtBotellaLargo.Name = "txtBotellaLargo";
             this.txtBotellaLargo.Size = new System.Drawing.Size(44, 24);
             this.txtBotellaLargo.TabIndex = 18;
@@ -348,10 +349,12 @@
             // txtTablon
             // 
             this.txtTablon.Correo = false;
+            this.txtTablon.Enabled = false;
             this.txtTablon.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtTablon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTablon.Limpiar = true;
             this.txtTablon.Location = new System.Drawing.Point(268, 58);
+            this.txtTablon.MaxLength = 7;
             this.txtTablon.Name = "txtTablon";
             this.txtTablon.Size = new System.Drawing.Size(59, 24);
             this.txtTablon.TabIndex = 2;
@@ -365,6 +368,7 @@
             this.txtBotellaAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBotellaAncho.Limpiar = true;
             this.txtBotellaAncho.Location = new System.Drawing.Point(156, 88);
+            this.txtBotellaAncho.MaxLength = 5;
             this.txtBotellaAncho.Name = "txtBotellaAncho";
             this.txtBotellaAncho.Size = new System.Drawing.Size(46, 24);
             this.txtBotellaAncho.TabIndex = 19;
@@ -379,26 +383,29 @@
             this.txtCajonAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCajonAlto.Limpiar = true;
             this.txtCajonAlto.Location = new System.Drawing.Point(208, 28);
+            this.txtCajonAlto.MaxLength = 5;
             this.txtCajonAlto.Name = "txtCajonAlto";
             this.txtCajonAlto.Size = new System.Drawing.Size(44, 24);
             this.txtCajonAlto.TabIndex = 14;
             this.txtCajonAlto.Text = "10.50";
             this.txtCajonAlto.ThemeName = "VisualStudio2012Light";
             this.txtCajonAlto.Validar = true;
+            this.txtCajonAlto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtCajonAlto_KeyUp);
             // 
-            // txtCajonPrincipal
+            // txtCajonAncho
             // 
-            this.txtCajonPrincipal.Correo = false;
-            this.txtCajonPrincipal.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtCajonPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCajonPrincipal.Limpiar = true;
-            this.txtCajonPrincipal.Location = new System.Drawing.Point(156, 28);
-            this.txtCajonPrincipal.Name = "txtCajonPrincipal";
-            this.txtCajonPrincipal.Size = new System.Drawing.Size(46, 24);
-            this.txtCajonPrincipal.TabIndex = 13;
-            this.txtCajonPrincipal.Text = "10.50";
-            this.txtCajonPrincipal.ThemeName = "VisualStudio2012Light";
-            this.txtCajonPrincipal.Validar = true;
+            this.txtCajonAncho.Correo = false;
+            this.txtCajonAncho.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCajonAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCajonAncho.Limpiar = true;
+            this.txtCajonAncho.Location = new System.Drawing.Point(156, 28);
+            this.txtCajonAncho.MaxLength = 5;
+            this.txtCajonAncho.Name = "txtCajonAncho";
+            this.txtCajonAncho.Size = new System.Drawing.Size(46, 24);
+            this.txtCajonAncho.TabIndex = 13;
+            this.txtCajonAncho.Text = "10.50";
+            this.txtCajonAncho.ThemeName = "VisualStudio2012Light";
+            this.txtCajonAncho.Validar = true;
             // 
             // txtTablonLargo
             // 
@@ -407,6 +414,7 @@
             this.txtTablonLargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTablonLargo.Limpiar = true;
             this.txtTablonLargo.Location = new System.Drawing.Point(103, 58);
+            this.txtTablonLargo.MaxLength = 5;
             this.txtTablonLargo.Name = "txtTablonLargo";
             this.txtTablonLargo.Size = new System.Drawing.Size(44, 24);
             this.txtTablonLargo.TabIndex = 15;
@@ -417,10 +425,12 @@
             // txtCajon
             // 
             this.txtCajon.Correo = false;
+            this.txtCajon.Enabled = false;
             this.txtCajon.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtCajon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCajon.Limpiar = true;
             this.txtCajon.Location = new System.Drawing.Point(268, 28);
+            this.txtCajon.MaxLength = 7;
             this.txtCajon.Name = "txtCajon";
             this.txtCajon.Size = new System.Drawing.Size(59, 24);
             this.txtCajon.TabIndex = 2;
@@ -440,10 +450,12 @@
             // txtBotella
             // 
             this.txtBotella.Correo = false;
+            this.txtBotella.Enabled = false;
             this.txtBotella.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtBotella.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBotella.Limpiar = true;
             this.txtBotella.Location = new System.Drawing.Point(268, 88);
+            this.txtBotella.MaxLength = 7;
             this.txtBotella.Name = "txtBotella";
             this.txtBotella.Size = new System.Drawing.Size(59, 24);
             this.txtBotella.TabIndex = 2;
@@ -457,6 +469,7 @@
             this.txtTablonAncho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTablonAncho.Limpiar = true;
             this.txtTablonAncho.Location = new System.Drawing.Point(156, 58);
+            this.txtTablonAncho.MaxLength = 5;
             this.txtTablonAncho.Name = "txtTablonAncho";
             this.txtTablonAncho.Size = new System.Drawing.Size(46, 24);
             this.txtTablonAncho.TabIndex = 16;
@@ -487,10 +500,12 @@
             // txtCapacidad
             // 
             this.txtCapacidad.Correo = false;
+            this.txtCapacidad.Enabled = false;
             this.txtCapacidad.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtCapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCapacidad.Limpiar = true;
             this.txtCapacidad.Location = new System.Drawing.Point(268, 118);
+            this.txtCapacidad.MaxLength = 7;
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(59, 24);
             this.txtCapacidad.TabIndex = 2;
@@ -504,12 +519,14 @@
             this.txtBotellaAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBotellaAlto.Limpiar = true;
             this.txtBotellaAlto.Location = new System.Drawing.Point(208, 88);
+            this.txtBotellaAlto.MaxLength = 5;
             this.txtBotellaAlto.Name = "txtBotellaAlto";
             this.txtBotellaAlto.Size = new System.Drawing.Size(44, 24);
             this.txtBotellaAlto.TabIndex = 20;
             this.txtBotellaAlto.Text = "10.50";
             this.txtBotellaAlto.ThemeName = "VisualStudio2012Light";
             this.txtBotellaAlto.Validar = false;
+            this.txtBotellaAlto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBotellaAlto_KeyUp);
             // 
             // radLabel37
             // 
@@ -539,6 +556,7 @@
             this.txtCapacidadFacturar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCapacidadFacturar.Limpiar = true;
             this.txtCapacidadFacturar.Location = new System.Drawing.Point(268, 148);
+            this.txtCapacidadFacturar.MaxLength = 7;
             this.txtCapacidadFacturar.Name = "txtCapacidadFacturar";
             this.txtCapacidadFacturar.Size = new System.Drawing.Size(59, 24);
             this.txtCapacidadFacturar.TabIndex = 21;
@@ -552,6 +570,7 @@
             this.txtCajonLargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCajonLargo.Limpiar = true;
             this.txtCajonLargo.Location = new System.Drawing.Point(103, 28);
+            this.txtCajonLargo.MaxLength = 5;
             this.txtCajonLargo.Name = "txtCajonLargo";
             this.txtCajonLargo.Size = new System.Drawing.Size(44, 24);
             this.txtCajonLargo.TabIndex = 12;
@@ -587,12 +606,14 @@
             this.txtTablonAlto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTablonAlto.Limpiar = true;
             this.txtTablonAlto.Location = new System.Drawing.Point(208, 58);
+            this.txtTablonAlto.MaxLength = 5;
             this.txtTablonAlto.Name = "txtTablonAlto";
             this.txtTablonAlto.Size = new System.Drawing.Size(44, 24);
             this.txtTablonAlto.TabIndex = 17;
             this.txtTablonAlto.Text = "10.50";
             this.txtTablonAlto.ThemeName = "VisualStudio2012Light";
             this.txtTablonAlto.Validar = false;
+            this.txtTablonAlto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTablonAlto_KeyUp);
             // 
             // txtPlaca
             // 
@@ -859,19 +880,19 @@
             this.radLabel14.TabIndex = 33;
             this.radLabel14.Text = "Marca";
             // 
-            // textPersonal1
+            // txtChasis
             // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.Enabled = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal1.Limpiar = true;
-            this.textPersonal1.Location = new System.Drawing.Point(94, 33);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.Size = new System.Drawing.Size(227, 24);
-            this.textPersonal1.TabIndex = 1;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = true;
+            this.txtChasis.Correo = false;
+            this.txtChasis.Enabled = false;
+            this.txtChasis.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtChasis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChasis.Limpiar = true;
+            this.txtChasis.Location = new System.Drawing.Point(94, 33);
+            this.txtChasis.Name = "txtChasis";
+            this.txtChasis.Size = new System.Drawing.Size(227, 24);
+            this.txtChasis.TabIndex = 1;
+            this.txtChasis.ThemeName = "VisualStudio2012Light";
+            this.txtChasis.Validar = true;
             // 
             // txtDescripcion
             // 
@@ -972,7 +993,7 @@
             this.txtNota.Size = new System.Drawing.Size(673, 108);
             this.txtNota.TabIndex = 33;
             this.txtNota.ThemeName = "VisualStudio2012Light";
-            this.txtNota.Validar = true;
+            this.txtNota.Validar = false;
             // 
             // dataContacto
             // 
@@ -992,45 +1013,45 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.HeaderText = "Fecha";
-            gridViewTextBoxColumn7.Name = "Fecha";
-            gridViewTextBoxColumn7.Width = 103;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.HeaderText = "Largo";
-            gridViewTextBoxColumn8.Name = "Largo";
-            gridViewTextBoxColumn8.Width = 104;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.HeaderText = "Ancho";
-            gridViewTextBoxColumn9.Name = "Ancho";
-            gridViewTextBoxColumn9.Width = 107;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.HeaderText = "Alto";
-            gridViewTextBoxColumn10.Name = "Alto";
-            gridViewTextBoxColumn10.Width = 110;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.HeaderText = "Calculada";
-            gridViewTextBoxColumn11.Name = "Calculada";
-            gridViewTextBoxColumn11.Width = 120;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.HeaderText = "Facturar";
-            gridViewTextBoxColumn12.Name = "Facturar";
-            gridViewTextBoxColumn12.Width = 124;
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.HeaderText = "Fecha";
+            gridViewTextBoxColumn13.Name = "Fecha";
+            gridViewTextBoxColumn13.Width = 103;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.HeaderText = "Largo";
+            gridViewTextBoxColumn14.Name = "Largo";
+            gridViewTextBoxColumn14.Width = 104;
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.HeaderText = "Ancho";
+            gridViewTextBoxColumn15.Name = "Ancho";
+            gridViewTextBoxColumn15.Width = 107;
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.HeaderText = "Alto";
+            gridViewTextBoxColumn16.Name = "Alto";
+            gridViewTextBoxColumn16.Width = 110;
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.HeaderText = "Calculada";
+            gridViewTextBoxColumn17.Name = "Calculada";
+            gridViewTextBoxColumn17.Width = 120;
+            gridViewTextBoxColumn18.EnableExpressionEditor = false;
+            gridViewTextBoxColumn18.HeaderText = "Facturar";
+            gridViewTextBoxColumn18.Name = "Facturar";
+            gridViewTextBoxColumn18.Width = 124;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15,
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor2.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor2.PropertyName = "column3";
+            sortDescriptor3.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor3.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor3});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1095,13 +1116,13 @@
             this.txtTanqueCombustible.Correo = false;
             this.txtTanqueCombustible.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtTanqueCombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTanqueCombustible.Limpiar = true;
+            this.txtTanqueCombustible.Limpiar = false;
             this.txtTanqueCombustible.Location = new System.Drawing.Point(485, 78);
             this.txtTanqueCombustible.Name = "txtTanqueCombustible";
             this.txtTanqueCombustible.Size = new System.Drawing.Size(155, 24);
             this.txtTanqueCombustible.TabIndex = 5;
             this.txtTanqueCombustible.ThemeName = "VisualStudio2012Light";
-            this.txtTanqueCombustible.Validar = true;
+            this.txtTanqueCombustible.Validar = false;
             // 
             // cbbTipoDeTransmicion
             // 
@@ -1110,14 +1131,14 @@
             this.cbbTipoDeTransmicion.DisplayMember = "Descripcion";
             this.cbbTipoDeTransmicion.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbTipoDeTransmicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoDeTransmicion.Limpiar = true;
+            this.cbbTipoDeTransmicion.Limpiar = false;
             this.cbbTipoDeTransmicion.Location = new System.Drawing.Point(114, 137);
             this.cbbTipoDeTransmicion.Name = "cbbTipoDeTransmicion";
             this.cbbTipoDeTransmicion.NullText = "Tipo de Identificacion";
             this.cbbTipoDeTransmicion.Size = new System.Drawing.Size(208, 23);
             this.cbbTipoDeTransmicion.TabIndex = 44;
             this.cbbTipoDeTransmicion.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoDeTransmicion.Validar = true;
+            this.cbbTipoDeTransmicion.Validar = false;
             this.cbbTipoDeTransmicion.ValueMember = "IdTipoIdentificacion";
             // 
             // radLabel9
@@ -1137,14 +1158,14 @@
             this.cbbTipoEmbrague.DisplayMember = "Descripcion";
             this.cbbTipoEmbrague.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbTipoEmbrague.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoEmbrague.Limpiar = true;
+            this.cbbTipoEmbrague.Limpiar = false;
             this.cbbTipoEmbrague.Location = new System.Drawing.Point(423, 50);
             this.cbbTipoEmbrague.Name = "cbbTipoEmbrague";
             this.cbbTipoEmbrague.NullText = "Tipo de Identificacion";
             this.cbbTipoEmbrague.Size = new System.Drawing.Size(217, 23);
             this.cbbTipoEmbrague.TabIndex = 44;
             this.cbbTipoEmbrague.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoEmbrague.Validar = true;
+            this.cbbTipoEmbrague.Validar = false;
             this.cbbTipoEmbrague.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbTransmision
@@ -1154,14 +1175,14 @@
             this.cbbTransmision.DisplayMember = "Descripcion";
             this.cbbTransmision.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbTransmision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTransmision.Limpiar = true;
+            this.cbbTransmision.Limpiar = false;
             this.cbbTransmision.Location = new System.Drawing.Point(114, 108);
             this.cbbTransmision.Name = "cbbTransmision";
             this.cbbTransmision.NullText = "Tipo de Identificacion";
             this.cbbTransmision.Size = new System.Drawing.Size(208, 23);
             this.cbbTransmision.TabIndex = 44;
             this.cbbTransmision.ThemeName = "VisualStudio2012Light";
-            this.cbbTransmision.Validar = true;
+            this.cbbTransmision.Validar = false;
             this.cbbTransmision.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbMotor
@@ -1171,14 +1192,14 @@
             this.cbbMotor.DisplayMember = "Descripcion";
             this.cbbMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMotor.Limpiar = true;
+            this.cbbMotor.Limpiar = false;
             this.cbbMotor.Location = new System.Drawing.Point(115, 50);
             this.cbbMotor.Name = "cbbMotor";
             this.cbbMotor.NullText = "Tipo de Identificacion";
             this.cbbMotor.Size = new System.Drawing.Size(208, 23);
             this.cbbMotor.TabIndex = 44;
             this.cbbMotor.ThemeName = "VisualStudio2012Light";
-            this.cbbMotor.Validar = true;
+            this.cbbMotor.Validar = false;
             this.cbbMotor.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbEmbrague
@@ -1188,14 +1209,14 @@
             this.cbbEmbrague.DisplayMember = "Descripcion";
             this.cbbEmbrague.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbEmbrague.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbEmbrague.Limpiar = true;
+            this.cbbEmbrague.Limpiar = false;
             this.cbbEmbrague.Location = new System.Drawing.Point(424, 21);
             this.cbbEmbrague.Name = "cbbEmbrague";
             this.cbbEmbrague.NullText = "Tipo de Identificacion";
             this.cbbEmbrague.Size = new System.Drawing.Size(217, 23);
             this.cbbEmbrague.TabIndex = 44;
             this.cbbEmbrague.ThemeName = "VisualStudio2012Light";
-            this.cbbEmbrague.Validar = true;
+            this.cbbEmbrague.Validar = false;
             this.cbbEmbrague.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbCilindrado
@@ -1205,14 +1226,14 @@
             this.cbbCilindrado.DisplayMember = "Descripcion";
             this.cbbCilindrado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbCilindrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCilindrado.Limpiar = true;
+            this.cbbCilindrado.Limpiar = false;
             this.cbbCilindrado.Location = new System.Drawing.Point(115, 79);
             this.cbbCilindrado.Name = "cbbCilindrado";
             this.cbbCilindrado.NullText = "Tipo de Identificacion";
             this.cbbCilindrado.Size = new System.Drawing.Size(208, 23);
             this.cbbCilindrado.TabIndex = 44;
             this.cbbCilindrado.ThemeName = "VisualStudio2012Light";
-            this.cbbCilindrado.Validar = true;
+            this.cbbCilindrado.Validar = false;
             this.cbbCilindrado.ValueMember = "IdTipoIdentificacion";
             // 
             // cbbTipoMotor
@@ -1222,14 +1243,14 @@
             this.cbbTipoMotor.DisplayMember = "Descripcion";
             this.cbbTipoMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbTipoMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoMotor.Limpiar = true;
+            this.cbbTipoMotor.Limpiar = false;
             this.cbbTipoMotor.Location = new System.Drawing.Point(116, 21);
             this.cbbTipoMotor.Name = "cbbTipoMotor";
             this.cbbTipoMotor.NullText = "Tipo de Identificacion";
             this.cbbTipoMotor.Size = new System.Drawing.Size(208, 23);
             this.cbbTipoMotor.TabIndex = 44;
             this.cbbTipoMotor.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoMotor.Validar = true;
+            this.cbbTipoMotor.Validar = false;
             this.cbbTipoMotor.ValueMember = "IdTipoIdentificacion";
             // 
             // radLabel12
@@ -1401,7 +1422,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTablon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBotellaAncho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCajonAlto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCajonPrincipal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCajonAncho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTablonLargo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCajon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
@@ -1442,7 +1463,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grupoActivoFijoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChasis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
@@ -1543,7 +1564,7 @@
         private Negocios.Componentes.cbbPersonal cbbEmbrague;
         private Telerik.WinControls.UI.RadLabel radLabel32;
         private Negocios.Componentes.TextPersonal txtTanqueCombustible;
-        private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.TextPersonal txtChasis;
         private Telerik.WinControls.UI.RadLabel radLabel33;
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
         private System.Windows.Forms.BindingSource marcaBindingSource;
@@ -1565,7 +1586,7 @@
         private Negocios.Componentes.TextPersonal txtTablon;
         private Negocios.Componentes.TextPersonal txtBotellaAncho;
         private Negocios.Componentes.TextPersonal txtCajonAlto;
-        private Negocios.Componentes.TextPersonal txtCajonPrincipal;
+        private Negocios.Componentes.TextPersonal txtCajonAncho;
         private Negocios.Componentes.TextPersonal txtTablonLargo;
         private Negocios.Componentes.TextPersonal txtCajon;
         private Telerik.WinControls.UI.RadLabel radLabel34;
