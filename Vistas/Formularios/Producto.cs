@@ -22,6 +22,8 @@ namespace Vistas.Formularios
 
         private void Producto_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
+            this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
@@ -45,44 +47,73 @@ namespace Vistas.Formularios
         {
             bool bien = true;
 
-            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+            if(pagePrincipal.SelectedPage.Name == "pageProducto")
             {
-                try
+                if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    Negocios.Entidades.Producto producto = new Negocios.Entidades.Producto(
-                    Convert.ToInt32(txtIdProducto.Text.Trim()),
-                    (int)cbbTipoProducto.SelectedValue,
-                    (int)cbbFamilia.SelectedValue,
-                    txtNombre.Text.Trim(),
-                    (chItbis.ToggleStateMode == Telerik.WinControls.UI.ToggleStateMode.Click ? true : false),
-                    txtNota.Text.Trim(),
-                    (int)cbbEstado.SelectedIndex+1);
-
-                    ds = Negocios.Utilidades.Ejecutar(producto.getGuardar());
-
-                    if (ds.Tables[0].Rows.Count > 0)
+                    try
                     {
-                        foreach (RadCheckedListDataItem item in cbbUnidades.CheckedItems)
-                        {
-                            //("VALOR: = " + item.Value.ToString() + " DATO = " + item.Text);
-                            ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarProductoPorUnidad {txtIdProducto.Text.Trim()}, {item.Value.ToString()}");
-                        }
+                        Negocios.Entidades.Producto producto = new Negocios.Entidades.Producto(
+                        Convert.ToInt32(txtIdProducto.Text.Trim()),
+                        (int)cbbTipoProducto.SelectedValue,
+                        (int)cbbFamilia.SelectedValue,
+                        txtNombre.Text.Trim(),
+                        (chItbis.ToggleStateMode == Telerik.WinControls.UI.ToggleStateMode.Click ? true : false),
+                        txtNota.Text.Trim(),
+                        (int)cbbEstado.SelectedIndex + 1);
+
+                        ds = Negocios.Utilidades.Ejecutar(producto.getGuardar());
 
                         if (ds.Tables[0].Rows.Count > 0)
                         {
-                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                            foreach (RadCheckedListDataItem item in cbbUnidades.CheckedItems)
+                            {
+                                //("VALOR: = " + item.Value.ToString() + " DATO = " + item.Text);
+                                ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarProductoPorUnidad {txtIdProducto.Text.Trim()}, {item.Value.ToString()}");
+                            }
 
-                            Negocios.Utilidades.Limpiar(this, errorProvider1);
-                            txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
-                            txtNombre.Focus();
-                            cbbUnidades.CheckedItems.Clear();
+                            if (ds.Tables[0].Rows.Count > 0)
+                            {
+                                RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                                Negocios.Utilidades.Limpiar(this, errorProvider1);
+                                txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
+                                txtNombre.Focus();
+                                cbbUnidades.CheckedItems.Clear();
+                            }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        bien = false;
+                        RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                    }
                 }
-                catch(Exception ex)
+            }
+
+            else if(pagePrincipal.SelectedPage.Name == "pagePrecio")
+            {
+                if(cbbCentro.SelectedIndex != -1 && !string.IsNullOrEmpty(txtPrecioVenta.Text.Trim()))
                 {
-                    bien = false;
-                    RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                    ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarPrecioDeProducto {cbbCentro.SelectedValue.ToString()}, {txtIdProducto.Text.Trim()}, {txtPrecioVenta.Text.Trim()}");
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
+                        txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
+                        txtPrecioVenta.Focus();
+                    }
+                }
+                else
+                {
+                    if (cbbCentro.SelectedIndex == -1)
+                        errorProvider1.SetError(cbbCentro, "No puede estar vacio");
+
+                    if(string.IsNullOrEmpty(txtPrecioVenta.Text.Trim()))
+                        errorProvider1.SetError(txtPrecioVenta, "No puede estar vacio");
+
                 }
             }
             return bien;
@@ -112,8 +143,9 @@ namespace Vistas.Formularios
                 if(RadMessageBox.Show($"Desea editar el Producto {dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Descripcion"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation,MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     txtIdProducto.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["IdProducto"].Value.ToString();
+                    lbNombrer.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Descripcion"].Value.ToString();
 
-                    if (pagePrincipal.SelectedPage.Name == "pageProductio")
+                    if (pagePrincipal.SelectedPage.Name == "pageProducto")
                     {
                         cbbEstado.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Estado"].Value.ToString();
                         cbbTipoProducto.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["TipoProducto"].Value.ToString();
@@ -128,7 +160,13 @@ namespace Vistas.Formularios
                     {
                         if(cbbCentro.SelectedIndex != -1)
                         {
-                            ds = Negocios.Utilidades.Ejecutar($"SELECT IdCentro,IdProducto FROM Precio WHERE IdProducto = {} AND IdCentro = {cbbCentro.Text}");
+                            ds = Negocios.Utilidades.Ejecutar($"SELECT IdCentro,IdProducto,Precio FROM Precio WHERE IdProducto = {dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["IdProducto"].Value.ToString()} AND IdCentro = {cbbCentro.SelectedValue}");
+                            if (ds.Tables[0].Rows.Count > 0)
+                            {
+                                txtPrecioVenta.Text = ds.Tables[0].Rows[0]["Precio"].ToString();
+                            }
+                            else
+                                txtPrecioVenta.Text = null;
                         }
                     }
                 }
