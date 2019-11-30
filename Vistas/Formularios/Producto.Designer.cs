@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageProductio = new Telerik.WinControls.UI.RadPageViewPage();
@@ -177,8 +177,8 @@
             this.cbbEstado.Correo = false;
             this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem2.Text = "Disponible";
-            this.cbbEstado.Items.Add(radListDataItem2);
+            radListDataItem1.Text = "Disponible";
+            this.cbbEstado.Items.Add(radListDataItem1);
             this.cbbEstado.Limpiar = false;
             this.cbbEstado.Location = new System.Drawing.Point(120, 154);
             this.cbbEstado.Name = "cbbEstado";
@@ -203,7 +203,7 @@
             this.cbbFamilia.DisplayMember = "Descripcion";
             this.cbbFamilia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbFamilia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbFamilia.Limpiar = false;
+            this.cbbFamilia.Limpiar = true;
             this.cbbFamilia.Location = new System.Drawing.Point(120, 94);
             this.cbbFamilia.Name = "cbbFamilia";
             this.cbbFamilia.Size = new System.Drawing.Size(142, 25);
@@ -439,7 +439,6 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Producto";
-            this.ThemeName = "VisualStudio2012Light";
             this.Load += new System.EventHandler(this.Producto_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Producto_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).EndInit();

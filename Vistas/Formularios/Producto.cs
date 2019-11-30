@@ -11,7 +11,7 @@ using System.Diagnostics;
 
 namespace Vistas.Formularios
 {
-    public partial class Producto : Telerik.WinControls.UI.RadForm
+    public partial class Producto : FormBase
     {
         private DataSet ds;
 
@@ -30,43 +30,63 @@ namespace Vistas.Formularios
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Unidad' Puede moverla o quitarla según sea necesario.
             this.unidadTableAdapter.Fill(this.matrizDataSet.Unidad);
 
+
+            cbbEstado.SelectedIndex = 0;
             txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
         }
 
-        //public override 
-
-        private void Producto_KeyUp(object sender, KeyEventArgs e)
+        public override bool Guardar()
         {
-            if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
+            bool bien = true;
+
+            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
             {
-                Negocios.Entidades.Producto producto = new Negocios.Entidades.Producto(
+                try
+                {
+                    Negocios.Entidades.Producto producto = new Negocios.Entidades.Producto(
                     Convert.ToInt32(txtIdProducto.Text.Trim()),
                     (int)cbbTipoProducto.SelectedValue,
                     (int)cbbFamilia.SelectedValue,
                     txtNombre.Text.Trim(),
                     (chItbis.ToggleStateMode == Telerik.WinControls.UI.ToggleStateMode.Click ? true : false),
                     txtNota.Text.Trim(),
-                    (int)cbbEstado.SelectedIndex);
+                    (int)cbbEstado.SelectedIndex+1);
 
-                ds = Negocios.Utilidades.Ejecutar(producto.getGuardar());
-
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    foreach (RadCheckedListDataItem item in cbbUnidades.CheckedItems)
-                    {
-                        //("VALOR: = " + item.Value.ToString() + " DATO = " + item.Text);
-                        ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarProductoPorUnidad {txtIdProducto.Text.Trim()}, {item.Value.ToString()}");
-                    }
+                    ds = Negocios.Utilidades.Ejecutar(producto.getGuardar());
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                        foreach (RadCheckedListDataItem item in cbbUnidades.CheckedItems)
+                        {
+                            //("VALOR: = " + item.Value.ToString() + " DATO = " + item.Text);
+                            ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarProductoPorUnidad {txtIdProducto.Text.Trim()}, {item.Value.ToString()}");
+                        }
 
-                        Negocios.Utilidades.Limpiar(this, errorProvider1);
-                        txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
-                        txtNombre.Focus();
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                            Negocios.Utilidades.Limpiar(this, errorProvider1);
+                            txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
+                            txtNombre.Focus();
+                            cbbUnidades.CheckedItems.Clear();
+                        }
                     }
                 }
+                catch(Exception ex)
+                {
+                    bien = false;
+                    RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                }
+            }
+            return bien;
+        }
+
+        private void Producto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                Guardar();
             }
         }
     }

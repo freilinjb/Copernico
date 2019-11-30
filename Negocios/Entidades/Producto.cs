@@ -29,7 +29,7 @@ namespace Negocios.Entidades
         }
         public string getGuardar()
         {
-            return $"EXEC [RegistrarProducto] {IdProducto},{IdTipoProducto},{IdFamilia},'{Nombre}',{Itbis},'{Nota}',{IdEstado}";
+            return $"EXEC [RegistrarProducto] {IdProducto},{IdTipoProducto},{IdFamilia},'{Nombre}',{(Itbis ? 1 : 0)},'{Nota}',{IdEstado}";
         }
     }
 }
