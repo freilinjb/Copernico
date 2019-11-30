@@ -120,7 +120,10 @@ namespace Vistas.Formularios
 
         private void menuActivoFijo_Click(object sender, EventArgs e)
         {
-            ActivoCubicacion instancia = ActivoCubicacion
+            ActivoCubicacion instancia = ActivoCubicacion.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
+            
         }
     }
 }

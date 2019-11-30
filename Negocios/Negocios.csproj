@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="Componentes\cbbCheckPersonal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\cbbCheckPersonal.Designer.cs">
+      <DependentUpon>cbbCheckPersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Componentes\cbbPersonal.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -91,6 +97,7 @@
     <Compile Include="Entidades\Maquinaria.cs" />
     <Compile Include="Entidades\Obra.cs" />
     <Compile Include="Entidades\OrdenDeVenta.cs" />
+    <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Form2.cs">
@@ -112,6 +119,9 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Componentes\cbbCheckPersonal.resx">
+      <DependentUpon>cbbCheckPersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\cbbPersonal.resx">
       <DependentUpon>cbbPersonal.cs</DependentUpon>
     </EmbeddedResource>

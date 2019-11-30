@@ -70,6 +70,7 @@
             this.menuAyuda = new Telerik.WinControls.UI.RadMenuItem();
             this.menuProduccion = new Telerik.WinControls.UI.RadMenuItem();
             this.menuFiltro = new Telerik.WinControls.UI.RadMenuItem();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.SuspendLayout();
@@ -281,7 +282,7 @@
             this.radMenuSeparatorItem3,
             this.radMenuItem7});
             this.menuProducto.Name = "menuProducto";
-            this.menuProducto.Text = "Explorador de Rubros";
+            this.menuProducto.Text = "Explorador de Producto";
             // 
             // menuExploradorProducto
             // 
@@ -429,5 +430,6 @@
         private Telerik.WinControls.UI.RadMenuItem radMenuItem14;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem12;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem15;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }
