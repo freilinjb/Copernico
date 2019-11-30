@@ -22,6 +22,10 @@ namespace Vistas.Formularios
 
         private void Producto_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             RadMessageBox.ThemeName = this.ThemeName;
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.TipoProducto' Puede moverla o quitarla según sea necesario.
             this.tipoProductoTableAdapter.Fill(this.matrizDataSet.TipoProducto);
@@ -33,6 +37,8 @@ namespace Vistas.Formularios
 
             cbbEstado.SelectedIndex = 0;
             txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
+
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
 
         public override bool Guardar()
@@ -88,6 +94,50 @@ namespace Vistas.Formularios
             {
                 Guardar();
             }
+            if(e.KeyCode == Keys.F2)
+            {
+                txtNombre.Focus();
+                Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+                txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
+                cbbFamilia.SelectedIndex = -1;
+                cbbTipoProducto.SelectedIndex = -1;
+            }
+        }
+
+        private void dataProducto_CellDoubleClick(object sender, GridViewCellEventArgs e)
+        {
+            if(dataProducto.Rows.Count > 0)
+            {
+                if(RadMessageBox.Show($"Desea editar el Producto {dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Descripcion"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation,MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    txtIdProducto.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["IdProducto"].Value.ToString();
+
+                    if (pagePrincipal.SelectedPage.Name == "pageProductio")
+                    {
+                        cbbEstado.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Estado"].Value.ToString();
+                        cbbTipoProducto.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["TipoProducto"].Value.ToString();
+                        cbbFamilia.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Familia"].Value.ToString();
+                        txtNombre.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Descripcion"].Value.ToString();
+
+                        txtNota.Text = Negocios.Utilidades.Ejecutar($"SELECT Nota FROM Producto WHERE IdProducto = {txtIdProducto.Text}").Tables[0].Rows[0]["Nota"].ToString();
+
+                    }
+
+                    else if(pagePrincipal.SelectedPage.Name == "pagePrecio")
+                    {
+                        if(cbbCentro.SelectedIndex != -1)
+                        {
+                            ds = Negocios.Utilidades.Ejecutar($"SELECT IdCentro,IdProducto FROM Precio WHERE IdProducto = {} AND IdCentro = {cbbCentro.Text}");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            lbNombrer.Text = txtNombre.Text;
         }
     }
 }

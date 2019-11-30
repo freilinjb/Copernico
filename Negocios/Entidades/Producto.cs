@@ -16,7 +16,6 @@ namespace Negocios.Entidades
         public string Nota;
         public int IdEstado;
 
-
         public Producto(int idProducto,int idTipoProducto, int idFamilia, string nombre, bool itbis, string nota, int idEstado)
         {
             IdProducto = idProducto;
@@ -27,6 +26,9 @@ namespace Negocios.Entidades
             Nota = nota;
             IdEstado = idEstado;
         }
+
+
+
         public string getGuardar()
         {
             return $"EXEC [RegistrarProducto] {IdProducto},{IdTipoProducto},{IdFamilia},'{Nombre}',{(Itbis ? 1 : 0)},'{Nota}',{IdEstado}";
