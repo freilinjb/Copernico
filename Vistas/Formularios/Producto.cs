@@ -13,19 +13,28 @@ namespace Vistas.Formularios
 {
     public partial class Producto : FormBase
     {
+        private static Producto Instancia;
         private DataSet ds;
 
-        public Producto()
+        private Producto()
         {
             InitializeComponent();
+        }
+
+        public static Producto ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Producto();
+
+            Instancia.BringToFront();
+
+            return Instancia;
         }
 
         private void Producto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
-            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             RadMessageBox.ThemeName = this.ThemeName;
@@ -58,7 +67,7 @@ namespace Vistas.Formularios
                         (int)cbbTipoProducto.SelectedValue,
                         (int)cbbFamilia.SelectedValue,
                         txtNombre.Text.Trim(),
-                        (chItbis.ToggleStateMode == Telerik.WinControls.UI.ToggleStateMode.Click ? true : false),
+                        chItbis.Value,
                         txtNota.Text.Trim(),
                         (int)cbbEstado.SelectedIndex + 1);
 
@@ -75,6 +84,7 @@ namespace Vistas.Formularios
                             if (ds.Tables[0].Rows.Count > 0)
                             {
                                 RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                                this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
 
                                 Negocios.Utilidades.Limpiar(this, errorProvider1);
                                 txtIdProducto.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdProducto)+1 AS Mayor FROM Producto").Tables[0].Rows[0]["Mayor"].ToString();
@@ -151,9 +161,9 @@ namespace Vistas.Formularios
                         cbbTipoProducto.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["TipoProducto"].Value.ToString();
                         cbbFamilia.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Familia"].Value.ToString();
                         txtNombre.Text = dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Descripcion"].Value.ToString();
-
+                        chItbis.Value = (Convert.ToBoolean(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["IncluirItbis"].Value.ToString()));
                         txtNota.Text = Negocios.Utilidades.Ejecutar($"SELECT Nota FROM Producto WHERE IdProducto = {txtIdProducto.Text}").Tables[0].Rows[0]["Nota"].ToString();
-
+                        
                     }
 
                     else if(pagePrincipal.SelectedPage.Name == "pagePrecio")

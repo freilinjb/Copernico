@@ -15,6 +15,8 @@ namespace Vistas.Formularios
 {
     public partial class OrdenDeVenta : FormBase
     {
+        private static OrdenDeVenta Instancia;
+
         private DataSet ds;
         private int IdContactoEncargado;
 
@@ -22,15 +24,28 @@ namespace Vistas.Formularios
         private int num_fila = 0;
         private bool existe = false;
 
-        public OrdenDeVenta()
+        private OrdenDeVenta()
         {
             InitializeComponent();
+        }
 
 
+        public static OrdenDeVenta ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new OrdenDeVenta();
+
+            Instancia.BringToFront();
+
+            return Instancia;
         }
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.UnidadProducto' Puede moverla o quitarla según sea necesario.
+            this.unidadProductoTableAdapter.Fill(this.matrizDataSet.UnidadProducto);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaProductoCentro' Puede moverla o quitarla según sea necesario.
+            //this.vistaProductoCentroTableAdapter.Fill(this.matrizDataSet.VistaProductoCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
@@ -69,7 +84,7 @@ namespace Vistas.Formularios
                 {
                     RadMessageBox.Show("Validado");
 
-                    string IdFormaDePago = (cbbFormaPago.SelectedValue == null) ? "null" : cbbFormaPago.SelectedValue.ToString(); 
+                    string IdFormaDePago = (cbbFormaPago.SelectedValue == null) ? "null" : cbbFormaPago.SelectedValue.ToString();
 
 
                     Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
@@ -92,7 +107,7 @@ namespace Vistas.Formularios
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        float subtotal = 0,itbis = 0;
+                        float subtotal = 0, itbis = 0;
                         foreach (var Fila in dataProducto.Rows)
                         {
                             int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
@@ -177,7 +192,7 @@ namespace Vistas.Formularios
             DialogResult dialog = RadMessageBox.Show("Si para Imprimir Directo a la impresora No para Visualizar Directo", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNoCancel, RadMessageIcon.Question, MessageBoxDefaultButton.Button1);
             if (imprimir.ShowDialog() == DialogResult.OK)
             {
-                
+
             }
         }
 
@@ -187,7 +202,7 @@ namespace Vistas.Formularios
             {
                 Guardar();
             }
-            if(e.KeyCode == Keys.F2)
+            if (e.KeyCode == Keys.F2)
             {
                 ValidarImpresion();
             }
@@ -268,7 +283,8 @@ namespace Vistas.Formularios
                         dataProducto.Rows.Add(
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
-                        cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                        //cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                        cbbUnidad.Text,
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
                         Convert.ToInt32(txtCantidad.Text.Trim()),
                         Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
@@ -293,14 +309,15 @@ namespace Vistas.Formularios
                             Debug.WriteLine("Igual");
                             dataProducto.Rows[num_fila].Cells["Cantidad"].Value = Convert.ToInt32(txtCantidad.Text.Trim());
                             dataProducto.Rows[num_fila].Cells["Importe"].Value = Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim());
-                            
+
                         }
                         else
                         {
                             dataProducto.Rows.Add(
                                 cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
                                 cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Producto"].Value.ToString(),
-                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                                //cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Unidad"].Value.ToString(),
+                                cbbUnidad.Text,
                                 cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString(),
                                 Convert.ToInt32(txtCantidad.Text.Trim()),
                                 Convert.ToSingle(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Precio"].Value.ToString()) * Convert.ToSingle(txtCantidad.Text.Trim()) * 0.18,
@@ -339,9 +356,19 @@ namespace Vistas.Formularios
         {
             if (cbbCentro.SelectedIndex != -1)
             {
-                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT DISTINCT * FROM VistaProducto WHERE IdTercero = (SELECT TOP 1 IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
+                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT DISTINCT * FROM VistaProducto WHERE IdCentro = {cbbCentro.SelectedValue}").Tables[0];
 
                 cbbProducto.EditorControl.ShowColumnHeaders = (cbbProducto.EditorControl.Rows.Count > 0) ? true : false;
+            }
+        }
+
+        private void cbbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbProducto.SelectedIndex != -1)
+            {
+                int IdProducto = Convert.ToInt32(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString());
+                cbbUnidad.DataSource = Negocios.Utilidades.Ejecutar($"SELECT P.IdProducto, U.IdUnidad,U.Descripcion AS Unidad FROM Unidad U INNER JOIN Producto_VS_Unidad PU ON PU.IdUnidad = U.IdUnidad INNER JOIN Producto P ON P.IdProducto = PU.IdProducto WHERE P.IdProducto = {IdProducto}").Tables[0];
+                //cbbUnidad.DataSource = matrizDataSet.UnidadProducto.DataSet.Tables[0];
             }
         }
     }

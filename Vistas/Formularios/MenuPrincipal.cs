@@ -84,7 +84,9 @@ namespace Vistas.Formularios
 
         private void menuExploradorProducto_Click(object sender, EventArgs e)
         {
-
+            Producto instancia = Producto.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
         }
 
         private void radMenuItem11_Click(object sender, EventArgs e)
@@ -124,6 +126,13 @@ namespace Vistas.Formularios
             instancia.MdiParent = this;
             instancia.Show();
             
+        }
+
+        private void menOrdenVenta_Click(object sender, EventArgs e)
+        {
+            OrdenDeVenta instancia = OrdenDeVenta.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
         }
     }
 }

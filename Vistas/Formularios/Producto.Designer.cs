@@ -29,22 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn5 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn19 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn20 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn3 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageProducto = new Telerik.WinControls.UI.RadPageViewPage();
-            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.cbbUnidades = new Negocios.Componentes.cbbCheckPersonal();
             this.unidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.chItbis = new Telerik.WinControls.UI.RadToggleSwitch();
             this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
@@ -61,12 +59,17 @@
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.pagePrecio = new Telerik.WinControls.UI.RadPageViewPage();
+            this.txtPrecioVenta = new Negocios.Componentes.TextPersonal();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             this.cbbCentro = new Negocios.Componentes.cbbPersonal();
+            this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.pageInventario = new Telerik.WinControls.UI.RadPageViewPage();
             this.pageCentro = new Telerik.WinControls.UI.RadPageViewPage();
+            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btSiguiente = new Telerik.WinControls.UI.RadButton();
             this.btRegresar = new Telerik.WinControls.UI.RadButton();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -76,20 +79,14 @@
             this.tipoProductoTableAdapter = new Vistas.MatrizDataSetTableAdapters.TipoProductoTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.productoTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProductoTableAdapter();
-            this.txtPrecioVenta = new Negocios.Componentes.TextPersonal();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.lbNombrer = new Negocios.Componentes.TextPersonal();
-            this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
             this.pageProducto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chItbis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
@@ -106,18 +103,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             this.pagePrecio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSiguiente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRegresar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecioVenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +133,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 40);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pagePrecio;
+            this.pagePrincipal.SelectedPage = this.pageProducto;
             this.pagePrincipal.Size = new System.Drawing.Size(713, 232);
             this.pagePrincipal.TabIndex = 0;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -163,97 +163,6 @@
             this.pageProducto.Size = new System.Drawing.Size(703, 194);
             this.pageProducto.Text = "Informacion general";
             // 
-            // dataProducto
-            // 
-            this.dataProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataProducto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dataProducto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataProducto.Location = new System.Drawing.Point(12, 274);
-            // 
-            // 
-            // 
-            this.dataProducto.MasterTemplate.AllowAddNewRow = false;
-            this.dataProducto.MasterTemplate.AllowColumnChooser = false;
-            this.dataProducto.MasterTemplate.AllowColumnReorder = false;
-            this.dataProducto.MasterTemplate.AllowDragToGroup = false;
-            this.dataProducto.MasterTemplate.AllowRowResize = false;
-            this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn5.DataType = typeof(int);
-            gridViewDecimalColumn5.EnableExpressionEditor = false;
-            gridViewDecimalColumn5.FieldName = "IdProducto";
-            gridViewDecimalColumn5.HeaderText = "Codigo";
-            gridViewDecimalColumn5.IsAutoGenerated = true;
-            gridViewDecimalColumn5.Name = "IdProducto";
-            gridViewDecimalColumn5.ReadOnly = true;
-            gridViewDecimalColumn5.Width = 78;
-            gridViewTextBoxColumn17.EnableExpressionEditor = false;
-            gridViewTextBoxColumn17.FieldName = "Descripcion";
-            gridViewTextBoxColumn17.HeaderText = "Descripcion";
-            gridViewTextBoxColumn17.IsAutoGenerated = true;
-            gridViewTextBoxColumn17.Name = "Descripcion";
-            gridViewTextBoxColumn17.Width = 270;
-            gridViewCheckBoxColumn5.EnableExpressionEditor = false;
-            gridViewCheckBoxColumn5.FieldName = "IncluirItbis";
-            gridViewCheckBoxColumn5.HeaderText = "IncluirItbis";
-            gridViewCheckBoxColumn5.IsAutoGenerated = true;
-            gridViewCheckBoxColumn5.MinWidth = 20;
-            gridViewCheckBoxColumn5.Name = "IncluirItbis";
-            gridViewCheckBoxColumn5.Width = 117;
-            gridViewTextBoxColumn18.EnableExpressionEditor = false;
-            gridViewTextBoxColumn18.FieldName = "TipoProducto";
-            gridViewTextBoxColumn18.HeaderText = "TipoProducto";
-            gridViewTextBoxColumn18.IsAutoGenerated = true;
-            gridViewTextBoxColumn18.Name = "TipoProducto";
-            gridViewTextBoxColumn18.Width = 86;
-            gridViewTextBoxColumn19.EnableExpressionEditor = false;
-            gridViewTextBoxColumn19.FieldName = "Familia";
-            gridViewTextBoxColumn19.HeaderText = "Familia";
-            gridViewTextBoxColumn19.IsAutoGenerated = true;
-            gridViewTextBoxColumn19.Name = "Familia";
-            gridViewTextBoxColumn19.Width = 82;
-            gridViewTextBoxColumn20.EnableExpressionEditor = false;
-            gridViewTextBoxColumn20.FieldName = "Estado";
-            gridViewTextBoxColumn20.HeaderText = "Estado";
-            gridViewTextBoxColumn20.IsAutoGenerated = true;
-            gridViewTextBoxColumn20.Name = "Estado";
-            gridViewTextBoxColumn20.Width = 86;
-            this.dataProducto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn5,
-            gridViewTextBoxColumn17,
-            gridViewCheckBoxColumn5,
-            gridViewTextBoxColumn18,
-            gridViewTextBoxColumn19,
-            gridViewTextBoxColumn20});
-            this.dataProducto.MasterTemplate.DataSource = this.productoBindingSource;
-            this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataProducto.MasterTemplate.EnableGrouping = false;
-            this.dataProducto.MasterTemplate.EnableSorting = false;
-            this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition5;
-            this.dataProducto.Name = "dataProducto";
-            this.dataProducto.ReadOnly = true;
-            this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataProducto.ShowGroupPanel = false;
-            this.dataProducto.Size = new System.Drawing.Size(713, 253);
-            this.dataProducto.TabIndex = 18;
-            this.dataProducto.ThemeName = "VisualStudio2012Light";
-            this.dataProducto.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataProducto_CellDoubleClick);
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cbbUnidades
             // 
             this.cbbUnidades.DataSource = this.unidadBindingSource;
@@ -273,6 +182,11 @@
             this.unidadBindingSource.DataMember = "Unidad";
             this.unidadBindingSource.DataSource = this.matrizDataSet;
             // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // chItbis
             // 
             this.chItbis.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -284,6 +198,7 @@
             this.chItbis.TabIndex = 13;
             this.chItbis.ThemeName = "VisualStudio2012Light";
             this.chItbis.ThumbTickness = 15;
+            this.chItbis.ToggleStateMode = Telerik.WinControls.UI.ToggleStateMode.Click;
             // 
             // cbbEstado
             // 
@@ -455,6 +370,28 @@
             this.pagePrecio.Size = new System.Drawing.Size(703, 194);
             this.pagePrecio.Text = "Precios";
             // 
+            // txtPrecioVenta
+            // 
+            this.txtPrecioVenta.Correo = false;
+            this.txtPrecioVenta.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioVenta.Limpiar = true;
+            this.txtPrecioVenta.Location = new System.Drawing.Point(110, 48);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(65, 24);
+            this.txtPrecioVenta.TabIndex = 3;
+            this.txtPrecioVenta.ThemeName = "VisualStudio2012Light";
+            this.txtPrecioVenta.Validar = false;
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radLabel10.Location = new System.Drawing.Point(4, 51);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(100, 21);
+            this.radLabel10.TabIndex = 2;
+            this.radLabel10.Text = "Precio de venta";
+            // 
             // radSeparator2
             // 
             this.radSeparator2.Location = new System.Drawing.Point(4, 35);
@@ -479,6 +416,11 @@
             this.cbbCentro.ThemeName = "VisualStudio2012Light";
             this.cbbCentro.Validar = false;
             this.cbbCentro.ValueMember = "IdCentro";
+            // 
+            // vistaCentroBindingSource
+            // 
+            this.vistaCentroBindingSource.DataMember = "VistaCentro";
+            this.vistaCentroBindingSource.DataSource = this.matrizDataSet;
             // 
             // radLabel8
             // 
@@ -512,6 +454,92 @@
             this.pageCentro.Name = "pageCentro";
             this.pageCentro.Size = new System.Drawing.Size(703, 194);
             this.pageCentro.Text = "Asignacion";
+            // 
+            // dataProducto
+            // 
+            this.dataProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataProducto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataProducto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataProducto.Location = new System.Drawing.Point(12, 274);
+            // 
+            // 
+            // 
+            this.dataProducto.MasterTemplate.AllowAddNewRow = false;
+            this.dataProducto.MasterTemplate.AllowColumnChooser = false;
+            this.dataProducto.MasterTemplate.AllowColumnReorder = false;
+            this.dataProducto.MasterTemplate.AllowDragToGroup = false;
+            this.dataProducto.MasterTemplate.AllowRowResize = false;
+            this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewDecimalColumn3.DataType = typeof(int);
+            gridViewDecimalColumn3.EnableExpressionEditor = false;
+            gridViewDecimalColumn3.FieldName = "IdProducto";
+            gridViewDecimalColumn3.HeaderText = "Codigo";
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.Name = "IdProducto";
+            gridViewDecimalColumn3.ReadOnly = true;
+            gridViewDecimalColumn3.Width = 78;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "Descripcion";
+            gridViewTextBoxColumn9.HeaderText = "Descripcion";
+            gridViewTextBoxColumn9.IsAutoGenerated = true;
+            gridViewTextBoxColumn9.Name = "Descripcion";
+            gridViewTextBoxColumn9.Width = 270;
+            gridViewCheckBoxColumn3.EnableExpressionEditor = false;
+            gridViewCheckBoxColumn3.FieldName = "IncluirItbis";
+            gridViewCheckBoxColumn3.HeaderText = "IncluirItbis";
+            gridViewCheckBoxColumn3.IsAutoGenerated = true;
+            gridViewCheckBoxColumn3.MinWidth = 20;
+            gridViewCheckBoxColumn3.Name = "IncluirItbis";
+            gridViewCheckBoxColumn3.Width = 117;
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FieldName = "TipoProducto";
+            gridViewTextBoxColumn10.HeaderText = "TipoProducto";
+            gridViewTextBoxColumn10.IsAutoGenerated = true;
+            gridViewTextBoxColumn10.Name = "TipoProducto";
+            gridViewTextBoxColumn10.Width = 86;
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FieldName = "Familia";
+            gridViewTextBoxColumn11.HeaderText = "Familia";
+            gridViewTextBoxColumn11.IsAutoGenerated = true;
+            gridViewTextBoxColumn11.Name = "Familia";
+            gridViewTextBoxColumn11.Width = 82;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.FieldName = "Estado";
+            gridViewTextBoxColumn12.HeaderText = "Estado";
+            gridViewTextBoxColumn12.IsAutoGenerated = true;
+            gridViewTextBoxColumn12.Name = "Estado";
+            gridViewTextBoxColumn12.Width = 86;
+            this.dataProducto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn3,
+            gridViewTextBoxColumn9,
+            gridViewCheckBoxColumn3,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12});
+            this.dataProducto.MasterTemplate.DataSource = this.productoBindingSource;
+            this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataProducto.MasterTemplate.EnableGrouping = false;
+            this.dataProducto.MasterTemplate.EnableSorting = false;
+            this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dataProducto.Name = "dataProducto";
+            this.dataProducto.ReadOnly = true;
+            this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataProducto.ShowGroupPanel = false;
+            this.dataProducto.Size = new System.Drawing.Size(713, 253);
+            this.dataProducto.TabIndex = 18;
+            this.dataProducto.ThemeName = "VisualStudio2012Light";
+            this.dataProducto.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataProducto_CellDoubleClick);
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.matrizDataSet;
             // 
             // btSiguiente
             // 
@@ -579,28 +607,6 @@
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
             // 
-            // txtPrecioVenta
-            // 
-            this.txtPrecioVenta.Correo = false;
-            this.txtPrecioVenta.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.txtPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioVenta.Limpiar = true;
-            this.txtPrecioVenta.Location = new System.Drawing.Point(110, 48);
-            this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(65, 24);
-            this.txtPrecioVenta.TabIndex = 3;
-            this.txtPrecioVenta.ThemeName = "VisualStudio2012Light";
-            this.txtPrecioVenta.Validar = false;
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radLabel10.Location = new System.Drawing.Point(4, 51);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(100, 21);
-            this.radLabel10.TabIndex = 2;
-            this.radLabel10.Text = "Precio de venta";
-            // 
             // lbNombrer
             // 
             this.lbNombrer.Correo = false;
@@ -614,11 +620,6 @@
             this.lbNombrer.TabIndex = 3;
             this.lbNombrer.ThemeName = "VisualStudio2012Light";
             this.lbNombrer.Validar = true;
-            // 
-            // vistaCentroBindingSource
-            // 
-            this.vistaCentroBindingSource.DataMember = "VistaCentro";
-            this.vistaCentroBindingSource.DataSource = this.matrizDataSet;
             // 
             // vistaCentroTableAdapter
             // 
@@ -652,12 +653,9 @@
             this.pagePrincipal.ResumeLayout(false);
             this.pageProducto.ResumeLayout(false);
             this.pageProducto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidades)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chItbis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
@@ -675,18 +673,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             this.pagePrecio.ResumeLayout(false);
             this.pagePrecio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btSiguiente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRegresar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecioVenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

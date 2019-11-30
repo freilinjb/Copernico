@@ -71,6 +71,8 @@
             this.menuProduccion = new Telerik.WinControls.UI.RadMenuItem();
             this.menuFiltro = new Telerik.WinControls.UI.RadMenuItem();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.radMenuItem16 = new Telerik.WinControls.UI.RadMenuItem();
+            this.menOrdenVenta = new Telerik.WinControls.UI.RadMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.SuspendLayout();
@@ -342,7 +344,8 @@
             this.radMenuItem3,
             this.menuProducto,
             this.menuAyuda,
-            this.menuProduccion});
+            this.menuProduccion,
+            this.radMenuItem16});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
             this.radMenu1.Size = new System.Drawing.Size(800, 23);
@@ -366,6 +369,19 @@
             this.menuFiltro.Name = "menuFiltro";
             this.menuFiltro.Text = "Control de Filtros y Tamiz";
             this.menuFiltro.Click += new System.EventHandler(this.menuFiltro_Click);
+            // 
+            // radMenuItem16
+            // 
+            this.radMenuItem16.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.menOrdenVenta});
+            this.radMenuItem16.Name = "radMenuItem16";
+            this.radMenuItem16.Text = "Ventas";
+            // 
+            // menOrdenVenta
+            // 
+            this.menOrdenVenta.Name = "menOrdenVenta";
+            this.menOrdenVenta.Text = "Orden de Venta";
+            this.menOrdenVenta.Click += new System.EventHandler(this.menOrdenVenta_Click);
             // 
             // MenuPrincipal
             // 
@@ -431,5 +447,7 @@
         private Telerik.WinControls.UI.RadMenuItem radMenuItem12;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem15;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem16;
+        private Telerik.WinControls.UI.RadMenuItem menOrdenVenta;
     }
 }
