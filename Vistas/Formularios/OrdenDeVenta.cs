@@ -118,12 +118,6 @@ namespace Vistas.Formularios
 
                         }
 
-                        //total += subtotal + itbis;
-
-                        //txtItbis.Text = itbis.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
-                        //txtSubTotal.Text = subtotal.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
-                        //txtItbis.Text = total.ToString("C2", CultureInfo.CreateSpecificCulture("es-DO"));
-
                         RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                         cbbCliente.Focus();
