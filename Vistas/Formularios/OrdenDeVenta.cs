@@ -129,6 +129,11 @@ namespace Vistas.Formularios
                         cbbCliente.Focus();
                         Negocios.Utilidades.Limpiar(this, errorProvider1);
                         //cbbProducto.EditorControl.Rows.Clear();
+
+                        Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "OrdenDeVenta",Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
+                        ImprimirForm.Show();
+
+
                         if (dataProducto.Rows.Count > 0)
                         {
                             for (int i = dataProducto.Rows.Count - 1; i >= 0; i--)
@@ -205,6 +210,11 @@ namespace Vistas.Formularios
             if (e.KeyCode == Keys.F2)
             {
                 ValidarImpresion();
+            }
+            if(e.KeyCode == Keys.F3)
+            {
+                Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "OrdenDeVenta", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
+                ImprimirForm.Show();
             }
         }
 

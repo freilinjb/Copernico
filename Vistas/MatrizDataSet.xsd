@@ -1627,6 +1627,33 @@ FROM            Unidad AS U INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaOrdenVentaTableAdapter" GeneratorDataComponentClassName="VistaOrdenVentaTableAdapter" Name="VistaOrdenVenta" UserDataComponentName="VistaOrdenVentaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CopernicoConnectionString (Settings)" DbObjectName="Matriz.dbo.VistaOrdenVenta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        NumOrden, Usuario, IdCentro, Centro, Correo, Telefono, DireccionCentro, Cliente, Obra, DireccionObra, Encargado
+FROM            VistaOrdenVenta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NumOrden" DataSetColumn="NumOrden" />
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="IdCentro" DataSetColumn="IdCentro" />
+              <Mapping SourceColumn="Centro" DataSetColumn="Centro" />
+              <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
+              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
+              <Mapping SourceColumn="DireccionCentro" DataSetColumn="DireccionCentro" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Obra" DataSetColumn="Obra" />
+              <Mapping SourceColumn="DireccionObra" DataSetColumn="DireccionObra" />
+              <Mapping SourceColumn="Encargado" DataSetColumn="Encargado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2603,6 +2630,77 @@ FROM            Unidad AS U INNER JOIN
               <xs:element name="IdProducto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdProducto" msprop:Generator_ColumnPropNameInRow="IdProducto" msprop:Generator_ColumnPropNameInTable="IdProductoColumn" msprop:Generator_UserColumnName="IdProducto" type="xs:int" />
               <xs:element name="IdUnidad" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdUnidad" msprop:Generator_ColumnPropNameInRow="IdUnidad" msprop:Generator_ColumnPropNameInTable="IdUnidadColumn" msprop:Generator_UserColumnName="IdUnidad" type="xs:int" />
               <xs:element name="Unidad" msprop:Generator_ColumnVarNameInTable="columnUnidad" msprop:Generator_ColumnPropNameInRow="Unidad" msprop:Generator_ColumnPropNameInTable="UnidadColumn" msprop:Generator_UserColumnName="Unidad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VistaOrdenVenta" msprop:Generator_TableClassName="VistaOrdenVentaDataTable" msprop:Generator_TableVarName="tableVistaOrdenVenta" msprop:Generator_TablePropName="VistaOrdenVenta" msprop:Generator_RowDeletingName="VistaOrdenVentaRowDeleting" msprop:Generator_RowChangingName="VistaOrdenVentaRowChanging" msprop:Generator_RowEvHandlerName="VistaOrdenVentaRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaOrdenVentaRowDeleted" msprop:Generator_UserTableName="VistaOrdenVenta" msprop:Generator_RowChangedName="VistaOrdenVentaRowChanged" msprop:Generator_RowEvArgName="VistaOrdenVentaRowChangeEvent" msprop:Generator_RowClassName="VistaOrdenVentaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumOrden" msprop:Generator_ColumnVarNameInTable="columnNumOrden" msprop:Generator_ColumnPropNameInRow="NumOrden" msprop:Generator_ColumnPropNameInTable="NumOrdenColumn" msprop:Generator_UserColumnName="NumOrden" type="xs:int" />
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCentro" msprop:Generator_ColumnVarNameInTable="columnIdCentro" msprop:Generator_ColumnPropNameInRow="IdCentro" msprop:Generator_ColumnPropNameInTable="IdCentroColumn" msprop:Generator_UserColumnName="IdCentro" type="xs:int" />
+              <xs:element name="Centro" msprop:Generator_ColumnVarNameInTable="columnCentro" msprop:Generator_ColumnPropNameInRow="Centro" msprop:Generator_ColumnPropNameInTable="CentroColumn" msprop:Generator_UserColumnName="Centro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DireccionCentro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDireccionCentro" msprop:Generator_ColumnPropNameInRow="DireccionCentro" msprop:Generator_ColumnPropNameInTable="DireccionCentroColumn" msprop:Generator_UserColumnName="DireccionCentro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="354" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Obra" msprop:Generator_ColumnVarNameInTable="columnObra" msprop:Generator_ColumnPropNameInRow="Obra" msprop:Generator_ColumnPropNameInTable="ObraColumn" msprop:Generator_UserColumnName="Obra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DireccionObra" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDireccionObra" msprop:Generator_ColumnPropNameInRow="DireccionObra" msprop:Generator_ColumnPropNameInTable="DireccionObraColumn" msprop:Generator_UserColumnName="DireccionObra" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="354" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Encargado" msprop:Generator_ColumnVarNameInTable="columnEncargado" msprop:Generator_ColumnPropNameInRow="Encargado" msprop:Generator_ColumnPropNameInTable="EncargadoColumn" msprop:Generator_UserColumnName="Encargado" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

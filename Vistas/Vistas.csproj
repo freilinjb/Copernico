@@ -312,6 +312,7 @@
     <EmbeddedResource Include="Informes\Informe.resx">
       <DependentUpon>Informe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Orden.rdlc" />
     <EmbeddedResource Include="Informes\OrdenDeVenta.rdlc" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

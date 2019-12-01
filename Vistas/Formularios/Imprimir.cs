@@ -22,12 +22,15 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
 
-            ReportDataSource reportDat = new ReportDataSource(NombreDataSetInforme, ds.Tables[0]);
+            ReportDataSource reportDat = new ReportDataSource("ControlDataSet", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaControl").Tables[0]);
 
             Informe = new Informes.Informe();
-
             Informe.reportViewer.LocalReport.ReportEmbeddedResource = $"Vistas.Informes.{NombreInforme}.rdlc";
             Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
+
+            reportDat = new ReportDataSource(NombreDataSetInforme, ds.Tables[0]);
+            Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
+
             Informe.reportViewer.LocalReport.Refresh();
 
         }
