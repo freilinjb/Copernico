@@ -123,6 +123,12 @@
     <Compile Include="Formularios\ActivoCubicacion.Designer.cs">
       <DependentUpon>ActivoCubicacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Centro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Centro.Designer.cs">
+      <DependentUpon>Centro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Conduce.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActivoCubicacion.resx">
       <DependentUpon>ActivoCubicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Centro.resx">
+      <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>

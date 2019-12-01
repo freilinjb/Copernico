@@ -70,9 +70,11 @@
             this.menuAyuda = new Telerik.WinControls.UI.RadMenuItem();
             this.menuProduccion = new Telerik.WinControls.UI.RadMenuItem();
             this.menuFiltro = new Telerik.WinControls.UI.RadMenuItem();
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radMenuItem16 = new Telerik.WinControls.UI.RadMenuItem();
             this.menOrdenVenta = new Telerik.WinControls.UI.RadMenuItem();
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.menuOperacionesPorCentro = new Telerik.WinControls.UI.RadMenuItem();
+            this.menCentro = new Telerik.WinControls.UI.RadMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radMenu1)).BeginInit();
             this.SuspendLayout();
@@ -345,6 +347,7 @@
             this.menuProducto,
             this.menuAyuda,
             this.menuProduccion,
+            this.menuOperacionesPorCentro,
             this.radMenuItem16});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
@@ -382,6 +385,20 @@
             this.menOrdenVenta.Name = "menOrdenVenta";
             this.menOrdenVenta.Text = "Orden de Venta";
             this.menOrdenVenta.Click += new System.EventHandler(this.menOrdenVenta_Click);
+            // 
+            // menuOperacionesPorCentro
+            // 
+            this.menuOperacionesPorCentro.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.menCentro});
+            this.menuOperacionesPorCentro.Name = "menuOperacionesPorCentro";
+            this.menuOperacionesPorCentro.Text = "Operaciones por Centro";
+            // 
+            // menCentro
+            // 
+            this.menCentro.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menCentro.Name = "menCentro";
+            this.menCentro.Text = "Centro";
+            this.menCentro.Click += new System.EventHandler(this.menCentro_Click);
             // 
             // MenuPrincipal
             // 
@@ -449,5 +466,7 @@
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem16;
         private Telerik.WinControls.UI.RadMenuItem menOrdenVenta;
+        private Telerik.WinControls.UI.RadMenuItem menuOperacionesPorCentro;
+        private Telerik.WinControls.UI.RadMenuItem menCentro;
     }
 }

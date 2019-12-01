@@ -106,6 +106,8 @@ namespace Vistas {
         
         private VistaOrdenVentaDataTable tableVistaOrdenVenta;
         
+        private VistaCentroMantenimientoDataTable tableVistaCentroMantenimiento;
+        
         private QRCodeDataTable tableQRCode;
         
         private global::System.Data.DataRelation relationFK_Municipio_Provincia;
@@ -266,6 +268,9 @@ namespace Vistas {
                 }
                 if ((ds.Tables["VistaOrdenVenta"] != null)) {
                     base.Tables.Add(new VistaOrdenVentaDataTable(ds.Tables["VistaOrdenVenta"]));
+                }
+                if ((ds.Tables["VistaCentroMantenimiento"] != null)) {
+                    base.Tables.Add(new VistaCentroMantenimientoDataTable(ds.Tables["VistaCentroMantenimiento"]));
                 }
                 if ((ds.Tables["QRCode"] != null)) {
                     base.Tables.Add(new QRCodeDataTable(ds.Tables["QRCode"]));
@@ -702,6 +707,16 @@ namespace Vistas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VistaCentroMantenimientoDataTable VistaCentroMantenimiento {
+            get {
+                return this.tableVistaCentroMantenimiento;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public QRCodeDataTable QRCode {
             get {
                 return this.tableQRCode;
@@ -897,6 +912,9 @@ namespace Vistas {
                 }
                 if ((ds.Tables["VistaOrdenVenta"] != null)) {
                     base.Tables.Add(new VistaOrdenVentaDataTable(ds.Tables["VistaOrdenVenta"]));
+                }
+                if ((ds.Tables["VistaCentroMantenimiento"] != null)) {
+                    base.Tables.Add(new VistaCentroMantenimientoDataTable(ds.Tables["VistaCentroMantenimiento"]));
                 }
                 if ((ds.Tables["QRCode"] != null)) {
                     base.Tables.Add(new QRCodeDataTable(ds.Tables["QRCode"]));
@@ -1180,6 +1198,12 @@ namespace Vistas {
                     this.tableVistaOrdenVenta.InitVars();
                 }
             }
+            this.tableVistaCentroMantenimiento = ((VistaCentroMantenimientoDataTable)(base.Tables["VistaCentroMantenimiento"]));
+            if ((initTable == true)) {
+                if ((this.tableVistaCentroMantenimiento != null)) {
+                    this.tableVistaCentroMantenimiento.InitVars();
+                }
+            }
             this.tableQRCode = ((QRCodeDataTable)(base.Tables["QRCode"]));
             if ((initTable == true)) {
                 if ((this.tableQRCode != null)) {
@@ -1282,6 +1306,8 @@ namespace Vistas {
             base.Tables.Add(this.tableUnidadProducto);
             this.tableVistaOrdenVenta = new VistaOrdenVentaDataTable();
             base.Tables.Add(this.tableVistaOrdenVenta);
+            this.tableVistaCentroMantenimiento = new VistaCentroMantenimientoDataTable();
+            base.Tables.Add(this.tableVistaCentroMantenimiento);
             this.tableQRCode = new QRCodeDataTable();
             base.Tables.Add(this.tableQRCode);
             this.relationFK_Municipio_Provincia = new global::System.Data.DataRelation("FK_Municipio_Provincia", new global::System.Data.DataColumn[] {
@@ -1550,6 +1576,12 @@ namespace Vistas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeVistaCentroMantenimiento() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeQRCode() {
             return false;
         }
@@ -1731,6 +1763,9 @@ namespace Vistas {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void VistaOrdenVentaRowChangeEventHandler(object sender, VistaOrdenVentaRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void VistaCentroMantenimientoRowChangeEventHandler(object sender, VistaCentroMantenimientoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void QRCodeRowChangeEventHandler(object sender, QRCodeRowChangeEvent e);
@@ -14070,15 +14105,25 @@ namespace Vistas {
             
             private global::System.Data.DataColumn columnNumOrden;
             
+            private global::System.Data.DataColumn columnFecha;
+            
             private global::System.Data.DataColumn columnUsuario;
             
             private global::System.Data.DataColumn columnIdCentro;
             
             private global::System.Data.DataColumn columnCentro;
             
+            private global::System.Data.DataColumn columnCorreoCentro;
+            
+            private global::System.Data.DataColumn columnTelefonoCentro;
+            
             private global::System.Data.DataColumn columnDireccionCentro;
             
             private global::System.Data.DataColumn columnCliente;
+            
+            private global::System.Data.DataColumn columnTelefonoCliente;
+            
+            private global::System.Data.DataColumn columnCorreoCliente;
             
             private global::System.Data.DataColumn columnObra;
             
@@ -14086,9 +14131,9 @@ namespace Vistas {
             
             private global::System.Data.DataColumn columnEncargado;
             
-            private global::System.Data.DataColumn columnCorreoCentro;
+            private global::System.Data.DataColumn columnTelefonoEncargado;
             
-            private global::System.Data.DataColumn columnTelefonoCentro;
+            private global::System.Data.DataColumn columnCorreoEncargado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -14133,6 +14178,14 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn FechaColumn {
+                get {
+                    return this.columnFecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn UsuarioColumn {
                 get {
                     return this.columnUsuario;
@@ -14157,6 +14210,22 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CorreoCentroColumn {
+                get {
+                    return this.columnCorreoCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TelefonoCentroColumn {
+                get {
+                    return this.columnTelefonoCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DireccionCentroColumn {
                 get {
                     return this.columnDireccionCentro;
@@ -14168,6 +14237,22 @@ namespace Vistas {
             public global::System.Data.DataColumn ClienteColumn {
                 get {
                     return this.columnCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TelefonoClienteColumn {
+                get {
+                    return this.columnTelefonoCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CorreoClienteColumn {
+                get {
+                    return this.columnCorreoCliente;
                 }
             }
             
@@ -14197,17 +14282,17 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CorreoCentroColumn {
+            public global::System.Data.DataColumn TelefonoEncargadoColumn {
                 get {
-                    return this.columnCorreoCentro;
+                    return this.columnTelefonoEncargado;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TelefonoCentroColumn {
+            public global::System.Data.DataColumn CorreoEncargadoColumn {
                 get {
-                    return this.columnTelefonoCentro;
+                    return this.columnCorreoEncargado;
                 }
             }
             
@@ -14248,20 +14333,41 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VistaOrdenVentaRow AddVistaOrdenVentaRow(int NumOrden, string Usuario, int IdCentro, string Centro, string DireccionCentro, string Cliente, string Obra, string DireccionObra, string Encargado, string CorreoCentro, string TelefonoCentro) {
+            public VistaOrdenVentaRow AddVistaOrdenVentaRow(
+                        int NumOrden, 
+                        System.DateTime Fecha, 
+                        string Usuario, 
+                        int IdCentro, 
+                        string Centro, 
+                        string CorreoCentro, 
+                        string TelefonoCentro, 
+                        string DireccionCentro, 
+                        string Cliente, 
+                        string TelefonoCliente, 
+                        string CorreoCliente, 
+                        string Obra, 
+                        string DireccionObra, 
+                        string Encargado, 
+                        string TelefonoEncargado, 
+                        string CorreoEncargado) {
                 VistaOrdenVentaRow rowVistaOrdenVentaRow = ((VistaOrdenVentaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NumOrden,
+                        Fecha,
                         Usuario,
                         IdCentro,
                         Centro,
+                        CorreoCentro,
+                        TelefonoCentro,
                         DireccionCentro,
                         Cliente,
+                        TelefonoCliente,
+                        CorreoCliente,
                         Obra,
                         DireccionObra,
                         Encargado,
-                        CorreoCentro,
-                        TelefonoCentro};
+                        TelefonoEncargado,
+                        CorreoEncargado};
                 rowVistaOrdenVentaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVistaOrdenVentaRow);
                 return rowVistaOrdenVentaRow;
@@ -14285,16 +14391,21 @@ namespace Vistas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnNumOrden = base.Columns["NumOrden"];
+                this.columnFecha = base.Columns["Fecha"];
                 this.columnUsuario = base.Columns["Usuario"];
                 this.columnIdCentro = base.Columns["IdCentro"];
                 this.columnCentro = base.Columns["Centro"];
+                this.columnCorreoCentro = base.Columns["CorreoCentro"];
+                this.columnTelefonoCentro = base.Columns["TelefonoCentro"];
                 this.columnDireccionCentro = base.Columns["DireccionCentro"];
                 this.columnCliente = base.Columns["Cliente"];
+                this.columnTelefonoCliente = base.Columns["TelefonoCliente"];
+                this.columnCorreoCliente = base.Columns["CorreoCliente"];
                 this.columnObra = base.Columns["Obra"];
                 this.columnDireccionObra = base.Columns["DireccionObra"];
                 this.columnEncargado = base.Columns["Encargado"];
-                this.columnCorreoCentro = base.Columns["CorreoCentro"];
-                this.columnTelefonoCentro = base.Columns["TelefonoCentro"];
+                this.columnTelefonoEncargado = base.Columns["TelefonoEncargado"];
+                this.columnCorreoEncargado = base.Columns["CorreoEncargado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14302,42 +14413,61 @@ namespace Vistas {
             private void InitClass() {
                 this.columnNumOrden = new global::System.Data.DataColumn("NumOrden", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumOrden);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
                 this.columnUsuario = new global::System.Data.DataColumn("Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUsuario);
                 this.columnIdCentro = new global::System.Data.DataColumn("IdCentro", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCentro);
                 this.columnCentro = new global::System.Data.DataColumn("Centro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCentro);
+                this.columnCorreoCentro = new global::System.Data.DataColumn("CorreoCentro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreoCentro);
+                this.columnTelefonoCentro = new global::System.Data.DataColumn("TelefonoCentro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefonoCentro);
                 this.columnDireccionCentro = new global::System.Data.DataColumn("DireccionCentro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDireccionCentro);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCliente);
+                this.columnTelefonoCliente = new global::System.Data.DataColumn("TelefonoCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefonoCliente);
+                this.columnCorreoCliente = new global::System.Data.DataColumn("CorreoCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreoCliente);
                 this.columnObra = new global::System.Data.DataColumn("Obra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnObra);
                 this.columnDireccionObra = new global::System.Data.DataColumn("DireccionObra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDireccionObra);
                 this.columnEncargado = new global::System.Data.DataColumn("Encargado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEncargado);
-                this.columnCorreoCentro = new global::System.Data.DataColumn("CorreoCentro", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCorreoCentro);
-                this.columnTelefonoCentro = new global::System.Data.DataColumn("TelefonoCentro", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTelefonoCentro);
+                this.columnTelefonoEncargado = new global::System.Data.DataColumn("TelefonoEncargado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefonoEncargado);
+                this.columnCorreoEncargado = new global::System.Data.DataColumn("CorreoEncargado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreoEncargado);
                 this.columnNumOrden.AllowDBNull = false;
+                this.columnFecha.AllowDBNull = false;
                 this.columnUsuario.AllowDBNull = false;
                 this.columnUsuario.MaxLength = 50;
                 this.columnIdCentro.AllowDBNull = false;
                 this.columnCentro.MaxLength = 50;
-                this.columnDireccionCentro.ReadOnly = true;
-                this.columnDireccionCentro.MaxLength = 354;
-                this.columnCliente.MaxLength = 50;
-                this.columnObra.MaxLength = 50;
-                this.columnDireccionObra.ReadOnly = true;
-                this.columnDireccionObra.MaxLength = 354;
-                this.columnEncargado.MaxLength = 50;
                 this.columnCorreoCentro.AllowDBNull = false;
                 this.columnCorreoCentro.MaxLength = 50;
                 this.columnTelefonoCentro.AllowDBNull = false;
                 this.columnTelefonoCentro.MaxLength = 50;
+                this.columnDireccionCentro.ReadOnly = true;
+                this.columnDireccionCentro.MaxLength = 354;
+                this.columnCliente.MaxLength = 50;
+                this.columnTelefonoCliente.AllowDBNull = false;
+                this.columnTelefonoCliente.MaxLength = 50;
+                this.columnCorreoCliente.AllowDBNull = false;
+                this.columnCorreoCliente.MaxLength = 50;
+                this.columnObra.MaxLength = 50;
+                this.columnDireccionObra.ReadOnly = true;
+                this.columnDireccionObra.MaxLength = 354;
+                this.columnEncargado.MaxLength = 50;
+                this.columnTelefonoEncargado.AllowDBNull = false;
+                this.columnTelefonoEncargado.MaxLength = 50;
+                this.columnCorreoEncargado.AllowDBNull = false;
+                this.columnCorreoEncargado.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14424,6 +14554,427 @@ namespace Vistas {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "VistaOrdenVentaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VistaCentroMantenimientoDataTable : global::System.Data.TypedTableBase<VistaCentroMantenimientoRow> {
+            
+            private global::System.Data.DataColumn columnIdCentro;
+            
+            private global::System.Data.DataColumn columnTipoCentro;
+            
+            private global::System.Data.DataColumn columnIdTercero;
+            
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnCorreo;
+            
+            private global::System.Data.DataColumn columnTelefono;
+            
+            private global::System.Data.DataColumn columnProvincia;
+            
+            private global::System.Data.DataColumn columnCiudad;
+            
+            private global::System.Data.DataColumn columnMunicipio;
+            
+            private global::System.Data.DataColumn columnSector;
+            
+            private global::System.Data.DataColumn columnDireccion;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoDataTable() {
+                this.TableName = "VistaCentroMantenimiento";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal VistaCentroMantenimientoDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected VistaCentroMantenimientoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn IdCentroColumn {
+                get {
+                    return this.columnIdCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TipoCentroColumn {
+                get {
+                    return this.columnTipoCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn IdTerceroColumn {
+                get {
+                    return this.columnIdTercero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NombreColumn {
+                get {
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CorreoColumn {
+                get {
+                    return this.columnCorreo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TelefonoColumn {
+                get {
+                    return this.columnTelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ProvinciaColumn {
+                get {
+                    return this.columnProvincia;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CiudadColumn {
+                get {
+                    return this.columnCiudad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MunicipioColumn {
+                get {
+                    return this.columnMunicipio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn SectorColumn {
+                get {
+                    return this.columnSector;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DireccionColumn {
+                get {
+                    return this.columnDireccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoRow this[int index] {
+                get {
+                    return ((VistaCentroMantenimientoRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event VistaCentroMantenimientoRowChangeEventHandler VistaCentroMantenimientoRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event VistaCentroMantenimientoRowChangeEventHandler VistaCentroMantenimientoRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event VistaCentroMantenimientoRowChangeEventHandler VistaCentroMantenimientoRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event VistaCentroMantenimientoRowChangeEventHandler VistaCentroMantenimientoRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddVistaCentroMantenimientoRow(VistaCentroMantenimientoRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoRow AddVistaCentroMantenimientoRow(int IdCentro, string TipoCentro, int IdTercero, string Nombre, string Correo, string Telefono, string Provincia, string Ciudad, string Municipio, string Sector, string Direccion, bool Estado) {
+                VistaCentroMantenimientoRow rowVistaCentroMantenimientoRow = ((VistaCentroMantenimientoRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IdCentro,
+                        TipoCentro,
+                        IdTercero,
+                        Nombre,
+                        Correo,
+                        Telefono,
+                        Provincia,
+                        Ciudad,
+                        Municipio,
+                        Sector,
+                        Direccion,
+                        Estado};
+                rowVistaCentroMantenimientoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVistaCentroMantenimientoRow);
+                return rowVistaCentroMantenimientoRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VistaCentroMantenimientoDataTable cln = ((VistaCentroMantenimientoDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VistaCentroMantenimientoDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnIdCentro = base.Columns["IdCentro"];
+                this.columnTipoCentro = base.Columns["TipoCentro"];
+                this.columnIdTercero = base.Columns["IdTercero"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnCorreo = base.Columns["Correo"];
+                this.columnTelefono = base.Columns["Telefono"];
+                this.columnProvincia = base.Columns["Provincia"];
+                this.columnCiudad = base.Columns["Ciudad"];
+                this.columnMunicipio = base.Columns["Municipio"];
+                this.columnSector = base.Columns["Sector"];
+                this.columnDireccion = base.Columns["Direccion"];
+                this.columnEstado = base.Columns["Estado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnIdCentro = new global::System.Data.DataColumn("IdCentro", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdCentro);
+                this.columnTipoCentro = new global::System.Data.DataColumn("TipoCentro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTipoCentro);
+                this.columnIdTercero = new global::System.Data.DataColumn("IdTercero", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdTercero);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreo);
+                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefono);
+                this.columnProvincia = new global::System.Data.DataColumn("Provincia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProvincia);
+                this.columnCiudad = new global::System.Data.DataColumn("Ciudad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCiudad);
+                this.columnMunicipio = new global::System.Data.DataColumn("Municipio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMunicipio);
+                this.columnSector = new global::System.Data.DataColumn("Sector", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSector);
+                this.columnDireccion = new global::System.Data.DataColumn("Direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDireccion);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columnIdCentro.AllowDBNull = false;
+                this.columnTipoCentro.AllowDBNull = false;
+                this.columnTipoCentro.MaxLength = 50;
+                this.columnIdTercero.AllowDBNull = false;
+                this.columnNombre.MaxLength = 50;
+                this.columnCorreo.AllowDBNull = false;
+                this.columnCorreo.MaxLength = 50;
+                this.columnTelefono.AllowDBNull = false;
+                this.columnTelefono.MaxLength = 50;
+                this.columnProvincia.AllowDBNull = false;
+                this.columnProvincia.MaxLength = 50;
+                this.columnCiudad.AllowDBNull = false;
+                this.columnCiudad.MaxLength = 50;
+                this.columnMunicipio.AllowDBNull = false;
+                this.columnMunicipio.MaxLength = 50;
+                this.columnSector.AllowDBNull = false;
+                this.columnSector.MaxLength = 50;
+                this.columnDireccion.AllowDBNull = false;
+                this.columnDireccion.MaxLength = 250;
+                this.columnEstado.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoRow NewVistaCentroMantenimientoRow() {
+                return ((VistaCentroMantenimientoRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VistaCentroMantenimientoRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VistaCentroMantenimientoRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VistaCentroMantenimientoRowChanged != null)) {
+                    this.VistaCentroMantenimientoRowChanged(this, new VistaCentroMantenimientoRowChangeEvent(((VistaCentroMantenimientoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VistaCentroMantenimientoRowChanging != null)) {
+                    this.VistaCentroMantenimientoRowChanging(this, new VistaCentroMantenimientoRowChangeEvent(((VistaCentroMantenimientoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VistaCentroMantenimientoRowDeleted != null)) {
+                    this.VistaCentroMantenimientoRowDeleted(this, new VistaCentroMantenimientoRowChangeEvent(((VistaCentroMantenimientoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VistaCentroMantenimientoRowDeleting != null)) {
+                    this.VistaCentroMantenimientoRowDeleting(this, new VistaCentroMantenimientoRowChangeEvent(((VistaCentroMantenimientoRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveVistaCentroMantenimientoRow(VistaCentroMantenimientoRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                MatrizDataSet ds = new MatrizDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VistaCentroMantenimientoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -17597,6 +18148,17 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Fecha {
+                get {
+                    return ((global::System.DateTime)(this[this.tableVistaOrdenVenta.FechaColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.FechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Usuario {
                 get {
                     return ((string)(this[this.tableVistaOrdenVenta.UsuarioColumn]));
@@ -17635,6 +18197,28 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CorreoCentro {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.CorreoCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.CorreoCentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TelefonoCentro {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.TelefonoCentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DireccionCentro {
                 get {
                     try {
@@ -17663,6 +18247,28 @@ namespace Vistas {
                 }
                 set {
                     this[this.tableVistaOrdenVenta.ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TelefonoCliente {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoClienteColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.TelefonoClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CorreoCliente {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.CorreoClienteColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.CorreoClienteColumn] = value;
                 }
             }
             
@@ -17716,23 +18322,23 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CorreoCentro {
+            public string TelefonoEncargado {
                 get {
-                    return ((string)(this[this.tableVistaOrdenVenta.CorreoCentroColumn]));
+                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoEncargadoColumn]));
                 }
                 set {
-                    this[this.tableVistaOrdenVenta.CorreoCentroColumn] = value;
+                    this[this.tableVistaOrdenVenta.TelefonoEncargadoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string TelefonoCentro {
+            public string CorreoEncargado {
                 get {
-                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoCentroColumn]));
+                    return ((string)(this[this.tableVistaOrdenVenta.CorreoEncargadoColumn]));
                 }
                 set {
-                    this[this.tableVistaOrdenVenta.TelefonoCentroColumn] = value;
+                    this[this.tableVistaOrdenVenta.CorreoEncargadoColumn] = value;
                 }
             }
             
@@ -17806,6 +18412,171 @@ namespace Vistas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetEncargadoNull() {
                 this[this.tableVistaOrdenVenta.EncargadoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VistaCentroMantenimientoRow : global::System.Data.DataRow {
+            
+            private VistaCentroMantenimientoDataTable tableVistaCentroMantenimiento;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal VistaCentroMantenimientoRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVistaCentroMantenimiento = ((VistaCentroMantenimientoDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int IdCentro {
+                get {
+                    return ((int)(this[this.tableVistaCentroMantenimiento.IdCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.IdCentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TipoCentro {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.TipoCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.TipoCentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int IdTercero {
+                get {
+                    return ((int)(this[this.tableVistaCentroMantenimiento.IdTerceroColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.IdTerceroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Nombre {
+                get {
+                    try {
+                        return ((string)(this[this.tableVistaCentroMantenimiento.NombreColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'VistaCentroMantenimiento\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Correo {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.CorreoColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.CorreoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Telefono {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.TelefonoColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.TelefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Provincia {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.ProvinciaColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.ProvinciaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Ciudad {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.CiudadColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.CiudadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Municipio {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.MunicipioColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.MunicipioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Sector {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.SectorColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.SectorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string Direccion {
+                get {
+                    return ((string)(this[this.tableVistaCentroMantenimiento.DireccionColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.DireccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Estado {
+                get {
+                    return ((bool)(this[this.tableVistaCentroMantenimiento.EstadoColumn]));
+                }
+                set {
+                    this[this.tableVistaCentroMantenimiento.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableVistaCentroMantenimiento.NombreColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetNombreNull() {
+                this[this.tableVistaCentroMantenimiento.NombreColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -19232,6 +20003,40 @@ namespace Vistas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public VistaOrdenVentaRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class VistaCentroMantenimientoRowChangeEvent : global::System.EventArgs {
+            
+            private VistaCentroMantenimientoRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoRowChangeEvent(VistaCentroMantenimientoRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public VistaCentroMantenimientoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -30119,16 +30924,21 @@ FROM            Unidad AS U INNER JOIN
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "VistaOrdenVenta";
             tableMapping.ColumnMappings.Add("NumOrden", "NumOrden");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
             tableMapping.ColumnMappings.Add("IdCentro", "IdCentro");
             tableMapping.ColumnMappings.Add("Centro", "Centro");
+            tableMapping.ColumnMappings.Add("CorreoCentro", "CorreoCentro");
+            tableMapping.ColumnMappings.Add("TelefonoCentro", "TelefonoCentro");
             tableMapping.ColumnMappings.Add("DireccionCentro", "DireccionCentro");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
+            tableMapping.ColumnMappings.Add("TelefonoCliente", "TelefonoCliente");
+            tableMapping.ColumnMappings.Add("CorreoCliente", "CorreoCliente");
             tableMapping.ColumnMappings.Add("Obra", "Obra");
             tableMapping.ColumnMappings.Add("DireccionObra", "DireccionObra");
             tableMapping.ColumnMappings.Add("Encargado", "Encargado");
-            tableMapping.ColumnMappings.Add("CorreoCentro", "CorreoCentro");
-            tableMapping.ColumnMappings.Add("TelefonoCentro", "TelefonoCentro");
+            tableMapping.ColumnMappings.Add("TelefonoEncargado", "TelefonoEncargado");
+            tableMapping.ColumnMappings.Add("CorreoEncargado", "CorreoEncargado");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -30145,9 +30955,10 @@ FROM            Unidad AS U INNER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        NumOrden, Usuario, IdCentro, Centro, CorreoCentro, TelefonoCentro, " +
-                "DireccionCentro, Cliente, Obra, DireccionObra, Encargado\r\nFROM            VistaO" +
-                "rdenVenta";
+            this._commandCollection[0].CommandText = "SELECT        NumOrden, Fecha, Usuario, IdCentro, Centro, CorreoCentro, TelefonoC" +
+                "entro, DireccionCentro, Cliente, TelefonoCliente, CorreoCliente, Obra, Direccion" +
+                "Obra, Encargado, TelefonoEncargado, CorreoEncargado\r\nFROM            VistaOrdenV" +
+                "enta";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -30171,6 +30982,186 @@ FROM            Unidad AS U INNER JOIN
         public virtual MatrizDataSet.VistaOrdenVentaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             MatrizDataSet.VistaOrdenVentaDataTable dataTable = new MatrizDataSet.VistaOrdenVentaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VistaCentroMantenimientoTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public VistaCentroMantenimientoTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VistaCentroMantenimiento";
+            tableMapping.ColumnMappings.Add("IdCentro", "IdCentro");
+            tableMapping.ColumnMappings.Add("TipoCentro", "TipoCentro");
+            tableMapping.ColumnMappings.Add("IdTercero", "IdTercero");
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("Correo", "Correo");
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
+            tableMapping.ColumnMappings.Add("Provincia", "Provincia");
+            tableMapping.ColumnMappings.Add("Ciudad", "Ciudad");
+            tableMapping.ColumnMappings.Add("Municipio", "Municipio");
+            tableMapping.ColumnMappings.Add("Sector", "Sector");
+            tableMapping.ColumnMappings.Add("Direccion", "Direccion");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Vistas.Properties.Settings.Default.CopernicoConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        IdCentro, TipoCentro, IdTercero, Nombre, Correo, Telefono, Provinci" +
+                "a, Ciudad, Municipio, Sector, Direccion, Estado\r\nFROM            VistaCentroMant" +
+                "enimiento";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(MatrizDataSet.VistaCentroMantenimientoDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual MatrizDataSet.VistaCentroMantenimientoDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            MatrizDataSet.VistaCentroMantenimientoDataTable dataTable = new MatrizDataSet.VistaCentroMantenimientoDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -30929,15 +31920,6 @@ FROM            Unidad AS U INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._ciudadTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._ciudadTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._municipioTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Municipio.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -31001,6 +31983,15 @@ FROM            Unidad AS U INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._subGrupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._estadoActivoFijoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.EstadoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -31037,12 +32028,12 @@ FROM            Unidad AS U INNER JOIN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._subGrupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._ciudadTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(updatedRows));
+                    result = (result + this._ciudadTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -31152,14 +32143,6 @@ FROM            Unidad AS U INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._ciudadTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._ciudadTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._municipioTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Municipio.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -31216,6 +32199,14 @@ FROM            Unidad AS U INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._subGrupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._estadoActivoFijoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.EstadoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -31248,11 +32239,11 @@ FROM            Unidad AS U INNER JOIN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._subGrupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._ciudadTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(addedRows));
+                    result = (result + this._ciudadTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -31266,11 +32257,11 @@ FROM            Unidad AS U INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(MatrizDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._subGrupoActivoFijoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._ciudadTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(deletedRows));
+                    result = (result + this._ciudadTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -31303,6 +32294,14 @@ FROM            Unidad AS U INNER JOIN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._estadoActivoFijoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._subGrupoActivoFijoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.SubGrupoActivoFijo.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._subGrupoActivoFijoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -31359,14 +32358,6 @@ FROM            Unidad AS U INNER JOIN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._municipioTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._ciudadTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Ciudad.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._ciudadTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

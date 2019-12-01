@@ -134,5 +134,12 @@ namespace Vistas.Formularios
             instancia.MdiParent = this;
             instancia.Show();
         }
+
+        private void menCentro_Click(object sender, EventArgs e)
+        {
+            Centro instancia = Centro.ObtenerInstancia();
+            instancia.MdiParent = this;
+            instancia.Show();
+        }
     }
 }
