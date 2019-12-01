@@ -14076,10 +14076,6 @@ namespace Vistas {
             
             private global::System.Data.DataColumn columnCentro;
             
-            private global::System.Data.DataColumn columnCorreo;
-            
-            private global::System.Data.DataColumn columnTelefono;
-            
             private global::System.Data.DataColumn columnDireccionCentro;
             
             private global::System.Data.DataColumn columnCliente;
@@ -14089,6 +14085,10 @@ namespace Vistas {
             private global::System.Data.DataColumn columnDireccionObra;
             
             private global::System.Data.DataColumn columnEncargado;
+            
+            private global::System.Data.DataColumn columnCorreoCentro;
+            
+            private global::System.Data.DataColumn columnTelefonoCentro;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -14157,22 +14157,6 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CorreoColumn {
-                get {
-                    return this.columnCorreo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn TelefonoColumn {
-                get {
-                    return this.columnTelefono;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DireccionCentroColumn {
                 get {
                     return this.columnDireccionCentro;
@@ -14213,6 +14197,22 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CorreoCentroColumn {
+                get {
+                    return this.columnCorreoCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TelefonoCentroColumn {
+                get {
+                    return this.columnTelefonoCentro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -14248,20 +14248,20 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public VistaOrdenVentaRow AddVistaOrdenVentaRow(int NumOrden, string Usuario, int IdCentro, string Centro, string Correo, string Telefono, string DireccionCentro, string Cliente, string Obra, string DireccionObra, string Encargado) {
+            public VistaOrdenVentaRow AddVistaOrdenVentaRow(int NumOrden, string Usuario, int IdCentro, string Centro, string DireccionCentro, string Cliente, string Obra, string DireccionObra, string Encargado, string CorreoCentro, string TelefonoCentro) {
                 VistaOrdenVentaRow rowVistaOrdenVentaRow = ((VistaOrdenVentaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NumOrden,
                         Usuario,
                         IdCentro,
                         Centro,
-                        Correo,
-                        Telefono,
                         DireccionCentro,
                         Cliente,
                         Obra,
                         DireccionObra,
-                        Encargado};
+                        Encargado,
+                        CorreoCentro,
+                        TelefonoCentro};
                 rowVistaOrdenVentaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVistaOrdenVentaRow);
                 return rowVistaOrdenVentaRow;
@@ -14288,13 +14288,13 @@ namespace Vistas {
                 this.columnUsuario = base.Columns["Usuario"];
                 this.columnIdCentro = base.Columns["IdCentro"];
                 this.columnCentro = base.Columns["Centro"];
-                this.columnCorreo = base.Columns["Correo"];
-                this.columnTelefono = base.Columns["Telefono"];
                 this.columnDireccionCentro = base.Columns["DireccionCentro"];
                 this.columnCliente = base.Columns["Cliente"];
                 this.columnObra = base.Columns["Obra"];
                 this.columnDireccionObra = base.Columns["DireccionObra"];
                 this.columnEncargado = base.Columns["Encargado"];
+                this.columnCorreoCentro = base.Columns["CorreoCentro"];
+                this.columnTelefonoCentro = base.Columns["TelefonoCentro"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14308,10 +14308,6 @@ namespace Vistas {
                 base.Columns.Add(this.columnIdCentro);
                 this.columnCentro = new global::System.Data.DataColumn("Centro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCentro);
-                this.columnCorreo = new global::System.Data.DataColumn("Correo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCorreo);
-                this.columnTelefono = new global::System.Data.DataColumn("Telefono", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTelefono);
                 this.columnDireccionCentro = new global::System.Data.DataColumn("DireccionCentro", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDireccionCentro);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
@@ -14322,15 +14318,15 @@ namespace Vistas {
                 base.Columns.Add(this.columnDireccionObra);
                 this.columnEncargado = new global::System.Data.DataColumn("Encargado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEncargado);
+                this.columnCorreoCentro = new global::System.Data.DataColumn("CorreoCentro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCorreoCentro);
+                this.columnTelefonoCentro = new global::System.Data.DataColumn("TelefonoCentro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefonoCentro);
                 this.columnNumOrden.AllowDBNull = false;
                 this.columnUsuario.AllowDBNull = false;
                 this.columnUsuario.MaxLength = 50;
                 this.columnIdCentro.AllowDBNull = false;
                 this.columnCentro.MaxLength = 50;
-                this.columnCorreo.AllowDBNull = false;
-                this.columnCorreo.MaxLength = 50;
-                this.columnTelefono.AllowDBNull = false;
-                this.columnTelefono.MaxLength = 50;
                 this.columnDireccionCentro.ReadOnly = true;
                 this.columnDireccionCentro.MaxLength = 354;
                 this.columnCliente.MaxLength = 50;
@@ -14338,6 +14334,10 @@ namespace Vistas {
                 this.columnDireccionObra.ReadOnly = true;
                 this.columnDireccionObra.MaxLength = 354;
                 this.columnEncargado.MaxLength = 50;
+                this.columnCorreoCentro.AllowDBNull = false;
+                this.columnCorreoCentro.MaxLength = 50;
+                this.columnTelefonoCentro.AllowDBNull = false;
+                this.columnTelefonoCentro.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17635,28 +17635,6 @@ namespace Vistas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Correo {
-                get {
-                    return ((string)(this[this.tableVistaOrdenVenta.CorreoColumn]));
-                }
-                set {
-                    this[this.tableVistaOrdenVenta.CorreoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Telefono {
-                get {
-                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoColumn]));
-                }
-                set {
-                    this[this.tableVistaOrdenVenta.TelefonoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DireccionCentro {
                 get {
                     try {
@@ -17733,6 +17711,28 @@ namespace Vistas {
                 }
                 set {
                     this[this.tableVistaOrdenVenta.EncargadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CorreoCentro {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.CorreoCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.CorreoCentroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string TelefonoCentro {
+                get {
+                    return ((string)(this[this.tableVistaOrdenVenta.TelefonoCentroColumn]));
+                }
+                set {
+                    this[this.tableVistaOrdenVenta.TelefonoCentroColumn] = value;
                 }
             }
             
@@ -30122,13 +30122,13 @@ FROM            Unidad AS U INNER JOIN
             tableMapping.ColumnMappings.Add("Usuario", "Usuario");
             tableMapping.ColumnMappings.Add("IdCentro", "IdCentro");
             tableMapping.ColumnMappings.Add("Centro", "Centro");
-            tableMapping.ColumnMappings.Add("Correo", "Correo");
-            tableMapping.ColumnMappings.Add("Telefono", "Telefono");
             tableMapping.ColumnMappings.Add("DireccionCentro", "DireccionCentro");
             tableMapping.ColumnMappings.Add("Cliente", "Cliente");
             tableMapping.ColumnMappings.Add("Obra", "Obra");
             tableMapping.ColumnMappings.Add("DireccionObra", "DireccionObra");
             tableMapping.ColumnMappings.Add("Encargado", "Encargado");
+            tableMapping.ColumnMappings.Add("CorreoCentro", "CorreoCentro");
+            tableMapping.ColumnMappings.Add("TelefonoCentro", "TelefonoCentro");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -30145,8 +30145,9 @@ FROM            Unidad AS U INNER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        NumOrden, Usuario, IdCentro, Centro, Correo, Telefono, DireccionCen" +
-                "tro, Cliente, Obra, DireccionObra, Encargado\r\nFROM            VistaOrdenVenta";
+            this._commandCollection[0].CommandText = "SELECT        NumOrden, Usuario, IdCentro, Centro, CorreoCentro, TelefonoCentro, " +
+                "DireccionCentro, Cliente, Obra, DireccionObra, Encargado\r\nFROM            VistaO" +
+                "rdenVenta";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

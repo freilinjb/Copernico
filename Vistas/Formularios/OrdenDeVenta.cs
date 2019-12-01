@@ -213,7 +213,7 @@ namespace Vistas.Formularios
             }
             if(e.KeyCode == Keys.F3)
             {
-                Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "OrdenDeVenta", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
+                Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
                 ImprimirForm.Show();
             }
         }

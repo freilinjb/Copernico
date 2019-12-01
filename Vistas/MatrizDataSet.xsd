@@ -1629,10 +1629,10 @@ FROM            Unidad AS U INNER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaOrdenVentaTableAdapter" GeneratorDataComponentClassName="VistaOrdenVentaTableAdapter" Name="VistaOrdenVenta" UserDataComponentName="VistaOrdenVentaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="CopernicoConnectionString (Settings)" DbObjectName="Matriz.dbo.VistaOrdenVenta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="CopernicoConnectionString (Settings)" DbObjectName="Matriz.dbo.VistaOrdenVenta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        NumOrden, Usuario, IdCentro, Centro, Correo, Telefono, DireccionCentro, Cliente, Obra, DireccionObra, Encargado
+                    <CommandText>SELECT        NumOrden, Usuario, IdCentro, Centro, CorreoCentro, TelefonoCentro, DireccionCentro, Cliente, Obra, DireccionObra, Encargado
 FROM            VistaOrdenVenta</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -1644,13 +1644,13 @@ FROM            VistaOrdenVenta</CommandText>
               <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
               <Mapping SourceColumn="IdCentro" DataSetColumn="IdCentro" />
               <Mapping SourceColumn="Centro" DataSetColumn="Centro" />
-              <Mapping SourceColumn="Correo" DataSetColumn="Correo" />
-              <Mapping SourceColumn="Telefono" DataSetColumn="Telefono" />
               <Mapping SourceColumn="DireccionCentro" DataSetColumn="DireccionCentro" />
               <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
               <Mapping SourceColumn="Obra" DataSetColumn="Obra" />
               <Mapping SourceColumn="DireccionObra" DataSetColumn="DireccionObra" />
               <Mapping SourceColumn="Encargado" DataSetColumn="Encargado" />
+              <Mapping SourceColumn="CorreoCentro" DataSetColumn="CorreoCentro" />
+              <Mapping SourceColumn="TelefonoCentro" DataSetColumn="TelefonoCentro" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2658,20 +2658,6 @@ FROM            VistaOrdenVenta</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Telefono" msprop:Generator_ColumnVarNameInTable="columnTelefono" msprop:Generator_ColumnPropNameInRow="Telefono" msprop:Generator_ColumnPropNameInTable="TelefonoColumn" msprop:Generator_UserColumnName="Telefono">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
               <xs:element name="DireccionCentro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDireccionCentro" msprop:Generator_ColumnPropNameInRow="DireccionCentro" msprop:Generator_ColumnPropNameInTable="DireccionCentroColumn" msprop:Generator_UserColumnName="DireccionCentro" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -2701,6 +2687,20 @@ FROM            VistaOrdenVenta</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Encargado" msprop:Generator_ColumnVarNameInTable="columnEncargado" msprop:Generator_ColumnPropNameInRow="Encargado" msprop:Generator_ColumnPropNameInTable="EncargadoColumn" msprop:Generator_UserColumnName="Encargado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CorreoCentro" msprop:Generator_ColumnVarNameInTable="columnCorreoCentro" msprop:Generator_ColumnPropNameInRow="CorreoCentro" msprop:Generator_ColumnPropNameInTable="CorreoCentroColumn" msprop:Generator_UserColumnName="CorreoCentro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TelefonoCentro" msprop:Generator_ColumnVarNameInTable="columnTelefonoCentro" msprop:Generator_ColumnPropNameInRow="TelefonoCentro" msprop:Generator_ColumnPropNameInTable="TelefonoCentroColumn" msprop:Generator_UserColumnName="TelefonoCentro">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
