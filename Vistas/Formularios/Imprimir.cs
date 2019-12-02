@@ -12,7 +12,8 @@ namespace Vistas.Formularios
 {
     public partial class Imprimir : Telerik.WinControls.UI.RadForm
     {
-        private Informes.Informe Informe;
+        public Informes.Informe Informe = new Informes.Informe();
+
         public Imprimir()
         {
             InitializeComponent();
@@ -24,14 +25,32 @@ namespace Vistas.Formularios
 
             ReportDataSource reportDat = new ReportDataSource("ControlDataSet", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaControl").Tables[0]);
 
-            Informe = new Informes.Informe();
+            Informe.reportViewer.LocalReport.ReportEmbeddedResource = $"Vistas.Informes.{NombreInforme}.rdlc";
+            Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
+
+            reportDat = new ReportDataSource(NombreDataSetInforme, ds.Tables[0]);
+            Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
+            Informe.reportViewer.LocalReport.Refresh();
+
+
+        }
+
+        public Imprimir(string NombreDataSetInforme, string NombreInforme, DataSet ds, string NombrerDatasetInformeSecundario, DataSet dsSecundario)
+        {
+            InitializeComponent();
+
+            ReportDataSource reportDat = new ReportDataSource("ControlDataSet", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaControl").Tables[0]);
+
             Informe.reportViewer.LocalReport.ReportEmbeddedResource = $"Vistas.Informes.{NombreInforme}.rdlc";
             Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
 
             reportDat = new ReportDataSource(NombreDataSetInforme, ds.Tables[0]);
             Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
 
+            reportDat = new ReportDataSource(NombrerDatasetInformeSecundario, dsSecundario.Tables[0]);
+            Informe.reportViewer.LocalReport.DataSources.Add(reportDat);
             Informe.reportViewer.LocalReport.Refresh();
+
 
         }
 
@@ -45,6 +64,7 @@ namespace Vistas.Formularios
         {
             if(rdVisualizar.CheckState == CheckState.Checked)
             {
+
                 Informe.ShowDialog();
             }
             if (rdImpresora.CheckState == CheckState.Checked)

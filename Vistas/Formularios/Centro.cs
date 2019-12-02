@@ -166,7 +166,13 @@ namespace Vistas.Formularios
 
                 if (pagePrincipal.SelectedPage.Name == "pageAsignacion")
                 {
+                    ds = Negocios.Utilidades.Ejecutar($"DELETE FROM Precio WHERE IdCentro = {txtCodigo.Text.Trim()}");
 
+                    foreach (var Fila in dataProducto.Rows)
+                    {
+                        Negocios.Utilidades.Ejecutar($"EXEC [RegistrarPrecioDeProducto] {txtCodigo.Text.Trim()},{Fila.Cells["IdProducto"].Value.ToString()},'{Fila.Cells["Precio"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()}");
+
+                    }
                 }
             }
 

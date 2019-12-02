@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using System.Globalization;
+using Microsoft.Reporting.WinForms;
 
 namespace Vistas.Formularios
 {
@@ -121,11 +122,16 @@ namespace Vistas.Formularios
                         RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
                         cbbCliente.Focus();
-                        Negocios.Utilidades.Limpiar(this, errorProvider1);
-                        //cbbProducto.EditorControl.Rows.Clear();
 
-                        Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "OrdenDeVenta",Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
-                        ImprimirForm.Show();
+                        //imprimir    
+
+                        ////cbbProducto.EditorControl.Rows.Clear();
+
+                        Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaOrdenVenta WHERE NumOrden = {txtNumOrden.Text.Trim()}"), "VistaDetalleOrdenDataSet",Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaDetalleOrden WHERE NumOrden = '{txtNumOrden.Text.Trim()}'"));
+
+
+                        ImprimirForm.ShowDialog();
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
 
 
                         if (dataProducto.Rows.Count > 0)
@@ -208,6 +214,7 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.F3)
             {
                 Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar("SELECT * FROM VistaOrdenVenta WHERE NumOrden = 8"));
+
                 ImprimirForm.Show();
             }
         }
