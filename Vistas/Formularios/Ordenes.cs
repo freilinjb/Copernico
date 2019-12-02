@@ -197,12 +197,7 @@ namespace Vistas.Formularios
 
         private void cbbCentro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if (cbbCentro.SelectedIndex != -1)
-            {
-                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT DISTINCT * FROM VistaProducto WHERE IdTercero = (SELECT TOP 1 IdTercero FROM ProductoPorTercero WHERE IdTercero = (SELECT IdTercero FROM Centro WHERE IdTercero = {cbbCentro.SelectedValue}))").Tables[0];
 
-                cbbProducto.EditorControl.ShowColumnHeaders = (cbbProducto.EditorControl.Rows.Count > 0) ? true : false;
-            }
         }
     }
 }
