@@ -93,6 +93,7 @@
     <Compile Include="Entidades\ActivoFijoGeneral.cs" />
     <Compile Include="Entidades\ActivoFijoMaquinaria.cs" />
     <Compile Include="Entidades\Centro.cs" />
+    <Compile Include="Entidades\Conduce.cs" />
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Filtro.cs" />
     <Compile Include="Entidades\Maquinaria.cs" />

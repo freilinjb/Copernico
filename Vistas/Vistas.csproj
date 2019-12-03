@@ -154,6 +154,12 @@
     <Compile Include="Formularios\Imprimir.Designer.cs">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\MConduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MConduce.Designer.cs">
+      <DependentUpon>MConduce.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\OrdenDeCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MConduce.resx">
+      <DependentUpon>MConduce.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\OrdenDeCompra.resx">
       <DependentUpon>OrdenDeCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +359,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -363,9 +375,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
