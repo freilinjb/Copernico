@@ -72,7 +72,7 @@ namespace Vistas.Formularios
 
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
-
+            cbbEstado.SelectedIndex = 0;
         }
 
         public override bool Guardar()

@@ -160,7 +160,6 @@
             this.radGroupBox1.TabIndex = 0;
             this.radGroupBox1.Text = "Datos del Cliente";
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
-            this.radGroupBox1.Click += new System.EventHandler(this.radGroupBox1_Click);
             // 
             // cbbTipoIdentificacion
             // 

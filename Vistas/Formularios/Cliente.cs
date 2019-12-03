@@ -167,16 +167,6 @@ namespace Vistas.Formularios
             }
         }
 
-        private void btGuardar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radGroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lbIngresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Contacto contacto = new Contacto(IdTercero);
@@ -198,7 +188,8 @@ namespace Vistas.Formularios
         {
             if(e.KeyCode == Keys.F1)
             {
-                btGuardar_Click(this, null);
+                Guardar();
+                //btGuardar_Click(this, null);
             }
         }
     }
