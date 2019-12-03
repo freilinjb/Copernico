@@ -141,5 +141,10 @@ namespace Vistas.Formularios
             instancia.MdiParent = this;
             instancia.Show();
         }
+
+        private void radMenuItem19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
