@@ -1712,6 +1712,33 @@ FROM            VistaDetalleOrden</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VistaAlmacenTableAdapter" GeneratorDataComponentClassName="VistaAlmacenTableAdapter" Name="VistaAlmacen" UserDataComponentName="VistaAlmacenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CopernicoConnectionString (Settings)" DbObjectName="Matriz.dbo.VistaAlmacen" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IdAlmacen, Nombre, IdCentro, Centro, Descripcion, Provincia, Ciudad, Municipio, Sector, Direccion, Estado
+FROM            VistaAlmacen</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdAlmacen" DataSetColumn="IdAlmacen" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="IdCentro" DataSetColumn="IdCentro" />
+              <Mapping SourceColumn="Centro" DataSetColumn="Centro" />
+              <Mapping SourceColumn="Descripcion" DataSetColumn="Descripcion" />
+              <Mapping SourceColumn="Provincia" DataSetColumn="Provincia" />
+              <Mapping SourceColumn="Ciudad" DataSetColumn="Ciudad" />
+              <Mapping SourceColumn="Municipio" DataSetColumn="Municipio" />
+              <Mapping SourceColumn="Sector" DataSetColumn="Sector" />
+              <Mapping SourceColumn="Direccion" DataSetColumn="Direccion" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2892,6 +2919,71 @@ FROM            VistaDetalleOrden</CommandText>
               <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:double" />
               <xs:element name="Itbis" msprop:Generator_ColumnVarNameInTable="columnItbis" msprop:Generator_ColumnPropNameInRow="Itbis" msprop:Generator_ColumnPropNameInTable="ItbisColumn" msprop:Generator_UserColumnName="Itbis" type="xs:double" />
               <xs:element name="Importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VistaAlmacen" msprop:Generator_TableClassName="VistaAlmacenDataTable" msprop:Generator_TableVarName="tableVistaAlmacen" msprop:Generator_TablePropName="VistaAlmacen" msprop:Generator_RowDeletingName="VistaAlmacenRowDeleting" msprop:Generator_RowChangingName="VistaAlmacenRowChanging" msprop:Generator_RowEvHandlerName="VistaAlmacenRowChangeEventHandler" msprop:Generator_RowDeletedName="VistaAlmacenRowDeleted" msprop:Generator_UserTableName="VistaAlmacen" msprop:Generator_RowChangedName="VistaAlmacenRowChanged" msprop:Generator_RowEvArgName="VistaAlmacenRowChangeEvent" msprop:Generator_RowClassName="VistaAlmacenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdAlmacen" msprop:Generator_ColumnVarNameInTable="columnIdAlmacen" msprop:Generator_ColumnPropNameInRow="IdAlmacen" msprop:Generator_ColumnPropNameInTable="IdAlmacenColumn" msprop:Generator_UserColumnName="IdAlmacen" type="xs:int" />
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCentro" msprop:Generator_ColumnVarNameInTable="columnIdCentro" msprop:Generator_ColumnPropNameInRow="IdCentro" msprop:Generator_ColumnPropNameInTable="IdCentroColumn" msprop:Generator_UserColumnName="IdCentro" type="xs:int" />
+              <xs:element name="Centro" msprop:Generator_ColumnVarNameInTable="columnCentro" msprop:Generator_ColumnPropNameInRow="Centro" msprop:Generator_ColumnPropNameInTable="CentroColumn" msprop:Generator_UserColumnName="Centro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descripcion" msprop:Generator_ColumnVarNameInTable="columnDescripcion" msprop:Generator_ColumnPropNameInRow="Descripcion" msprop:Generator_ColumnPropNameInTable="DescripcionColumn" msprop:Generator_UserColumnName="Descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Provincia" msprop:Generator_ColumnVarNameInTable="columnProvincia" msprop:Generator_ColumnPropNameInRow="Provincia" msprop:Generator_ColumnPropNameInTable="ProvinciaColumn" msprop:Generator_UserColumnName="Provincia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ciudad" msprop:Generator_ColumnVarNameInTable="columnCiudad" msprop:Generator_ColumnPropNameInRow="Ciudad" msprop:Generator_ColumnPropNameInTable="CiudadColumn" msprop:Generator_UserColumnName="Ciudad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Municipio" msprop:Generator_ColumnVarNameInTable="columnMunicipio" msprop:Generator_ColumnPropNameInRow="Municipio" msprop:Generator_ColumnPropNameInTable="MunicipioColumn" msprop:Generator_UserColumnName="Municipio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sector" msprop:Generator_ColumnVarNameInTable="columnSector" msprop:Generator_ColumnPropNameInRow="Sector" msprop:Generator_ColumnPropNameInTable="SectorColumn" msprop:Generator_UserColumnName="Sector">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

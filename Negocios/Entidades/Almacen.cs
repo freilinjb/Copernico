@@ -35,7 +35,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC [RegistraAlmacen] {IdAlmacen},{IdCentro},'{Nombre}',{IdProvincia},{IdCiudad},{IdMunicipio},{IdSector},'{Descripcion}',{Estado}";
+            return $"EXEC [RegistraAlmacen] {IdAlmacen},{IdCentro},'{Nombre}','{Descripcion}',{IdProvincia},{IdCiudad},{IdMunicipio},{IdSector},'{Descripcion}',{Estado}";
         }
     }
 }
