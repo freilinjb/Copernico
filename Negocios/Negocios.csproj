@@ -92,6 +92,7 @@
     </Compile>
     <Compile Include="Entidades\ActivoFijoGeneral.cs" />
     <Compile Include="Entidades\ActivoFijoMaquinaria.cs" />
+    <Compile Include="Entidades\Almacen.cs" />
     <Compile Include="Entidades\Centro.cs" />
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Filtro.cs" />
