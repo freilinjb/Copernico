@@ -56,7 +56,7 @@
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
-            this.dataCentro = new Telerik.WinControls.UI.RadGridView();
+            this.dataAlmacen = new Telerik.WinControls.UI.RadGridView();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.lbEstatus = new Telerik.WinControls.UI.RadLabelElement();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -84,8 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCentro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCentro.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -367,7 +367,7 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radGroupBox1.Controls.Add(this.dataCentro);
+            this.radGroupBox1.Controls.Add(this.dataAlmacen);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radGroupBox1.HeaderText = "Lista de almace";
             this.radGroupBox1.Location = new System.Drawing.Point(12, 246);
@@ -377,38 +377,39 @@
             this.radGroupBox1.Text = "Lista de almace";
             this.radGroupBox1.ThemeName = "VisualStudio2012Light";
             // 
-            // dataCentro
+            // dataAlmacen
             // 
-            this.dataCentro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataAlmacen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataCentro.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataCentro.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dataCentro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataCentro.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataCentro.Location = new System.Drawing.Point(0, 33);
+            this.dataAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataAlmacen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataAlmacen.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataAlmacen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataAlmacen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataAlmacen.Location = new System.Drawing.Point(0, 33);
             // 
             // 
             // 
-            this.dataCentro.MasterTemplate.AllowAddNewRow = false;
-            this.dataCentro.MasterTemplate.AllowColumnChooser = false;
-            this.dataCentro.MasterTemplate.AllowColumnReorder = false;
-            this.dataCentro.MasterTemplate.AllowDragToGroup = false;
-            this.dataCentro.MasterTemplate.AllowRowResize = false;
-            this.dataCentro.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dataCentro.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataCentro.MasterTemplate.EnableGrouping = false;
-            this.dataCentro.MasterTemplate.EnableSorting = false;
-            this.dataCentro.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataCentro.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dataCentro.Name = "dataCentro";
-            this.dataCentro.ReadOnly = true;
-            this.dataCentro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataCentro.ShowGroupPanel = false;
-            this.dataCentro.Size = new System.Drawing.Size(564, 284);
-            this.dataCentro.TabIndex = 21;
-            this.dataCentro.ThemeName = "VisualStudio2012Light";
+            this.dataAlmacen.MasterTemplate.AllowAddNewRow = false;
+            this.dataAlmacen.MasterTemplate.AllowColumnChooser = false;
+            this.dataAlmacen.MasterTemplate.AllowColumnReorder = false;
+            this.dataAlmacen.MasterTemplate.AllowDragToGroup = false;
+            this.dataAlmacen.MasterTemplate.AllowRowResize = false;
+            this.dataAlmacen.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.dataAlmacen.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataAlmacen.MasterTemplate.EnableGrouping = false;
+            this.dataAlmacen.MasterTemplate.EnableSorting = false;
+            this.dataAlmacen.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataAlmacen.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dataAlmacen.Name = "dataAlmacen";
+            this.dataAlmacen.ReadOnly = true;
+            this.dataAlmacen.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataAlmacen.ShowGroupPanel = false;
+            this.dataAlmacen.Size = new System.Drawing.Size(564, 284);
+            this.dataAlmacen.TabIndex = 21;
+            this.dataAlmacen.ThemeName = "VisualStudio2012Light";
+            this.dataAlmacen.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataAlmacen_CellDoubleClick);
             // 
             // radStatusStrip1
             // 
@@ -457,12 +458,14 @@
             this.Controls.Add(this.radLabel12);
             this.Controls.Add(this.cbbMunicipio);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.KeyPreview = true;
             this.Name = "Almacen";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Almacen";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Almacen_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
@@ -488,8 +491,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataCentro.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataCentro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -524,7 +527,7 @@
         private Negocios.Componentes.TextPersonal txtDescripcion;
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
-        private Telerik.WinControls.UI.RadGridView dataCentro;
+        private Telerik.WinControls.UI.RadGridView dataAlmacen;
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.UI.RadLabelElement lbEstatus;
     }

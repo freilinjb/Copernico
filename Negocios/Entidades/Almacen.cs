@@ -11,23 +11,25 @@ namespace Negocios.Entidades
         public int IdAlmacen;
         public int IdCentro;
         public string Nombre;
+        public string Descripcion;
         public int IdProvincia;
         public int IdCiudad;
         public int IdMunicipio;
         public int IdSector;
-        public string Descripcion;
+        public string Direccion;
         public bool Estado;
 
-        public Almacen(int idAlmacen, int idCentro, string nombre, int idProvincia, int idCiudad, int idMunicipio, int idSector, string descripcion, bool estado)
+        public Almacen(int idAlmacen, int idCentro, string nombre,string descripcion, int idProvincia, int idCiudad, int idMunicipio, int idSector, string direccion, bool estado)
         {
             IdAlmacen = idAlmacen;
             IdCentro = idCentro;
             Nombre = nombre;
+            Descripcion = descripcion;
             IdProvincia = idProvincia;
             IdCiudad = idCiudad;
             IdMunicipio = idMunicipio;
             IdSector = idSector;
-            Descripcion = descripcion;
+            Direccion = direccion;
             Estado = estado;
         }
 
