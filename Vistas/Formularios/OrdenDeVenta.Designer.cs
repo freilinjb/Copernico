@@ -79,7 +79,10 @@
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.cbbObra = new Negocios.Componentes.MultiCbbPersonal();
+            this.orbraMantenimientoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.cbbCliente = new Negocios.Componentes.MultiCbbPersonal();
+            this.vistaClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtEncargado = new Negocios.Componentes.TextPersonal();
             this.txtObra = new Negocios.Componentes.TextPersonal();
             this.txtCliente = new Negocios.Componentes.TextPersonal();
@@ -88,13 +91,13 @@
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             this.cbbCentro = new Negocios.Componentes.cbbPersonal();
+            this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.dataProducto = new Telerik.WinControls.UI.RadGridView();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
@@ -110,30 +113,27 @@
             this.txtNumOrden = new Negocios.Componentes.TextPersonal();
             this.radSeparator6 = new Telerik.WinControls.UI.RadSeparator();
             this.cbbTipoVenta = new Negocios.Componentes.cbbPersonal();
+            this.tipoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radSeparator7 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.cbbFormaPago = new Negocios.Componentes.cbbPersonal();
+            this.formaDePagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbTipoCredito = new Negocios.Componentes.cbbPersonal();
             this.radLabel16 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
             this.txtCantidad = new Negocios.Componentes.TextPersonal();
             this.cbbProducto = new Negocios.Componentes.MultiCbbPersonal();
+            this.vistaProductoCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.txtTotal = new Negocios.Componentes.TextPersonal();
             this.txtItbis = new Negocios.Componentes.TextPersonal();
             this.txtSubTotal = new Negocios.Componentes.TextPersonal();
             this.txtNota = new Negocios.Componentes.TextPersonal();
             this.cbbUnidad = new Negocios.Componentes.cbbPersonal();
-            this.vistaProductoCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.tipoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.formaDePagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orbraMantenimientoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vistaClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unidadProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estadoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaClienteTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaClienteTableAdapter();
             this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
@@ -142,16 +142,19 @@
             this.formaDePagoTableAdapter = new Vistas.MatrizDataSetTableAdapters.FormaDePagoTableAdapter();
             this.orbraMantenimientoVentaTableAdapter = new Vistas.MatrizDataSetTableAdapters.OrbraMantenimientoVentaTableAdapter();
             this.vistaProductoCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaProductoCentroTableAdapter();
-            this.unidadProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unidadProductoTableAdapter = new Vistas.MatrizDataSetTableAdapters.UnidadProductoTableAdapter();
+            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orbraMantenimientoVentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEncargado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCliente)).BeginInit();
@@ -160,13 +163,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).BeginInit();
@@ -182,12 +185,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFormaPago)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formaDePagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
@@ -195,21 +200,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaProductoCentroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItbis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaProductoCentroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVentaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaDePagoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orbraMantenimientoVentaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoVentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoVentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -403,6 +403,16 @@
             this.cbbObra.ValueMember = "IdObra";
             this.cbbObra.SelectedIndexChanged += new System.EventHandler(this.cbbObra_SelectedIndexChanged);
             // 
+            // orbraMantenimientoVentaBindingSource
+            // 
+            this.orbraMantenimientoVentaBindingSource.DataMember = "OrbraMantenimientoVenta";
+            this.orbraMantenimientoVentaBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbbCliente
             // 
             this.cbbCliente.AutoSizeDropDownToBestFit = true;
@@ -548,6 +558,11 @@
             this.cbbCliente.ValueMember = "IdCliente";
             this.cbbCliente.SelectedIndexChanged += new System.EventHandler(this.cbbCliente_SelectedIndexChanged);
             // 
+            // vistaClienteBindingSource
+            // 
+            this.vistaClienteBindingSource.DataMember = "VistaCliente";
+            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
+            // 
             // txtEncargado
             // 
             this.txtEncargado.Correo = false;
@@ -653,6 +668,11 @@
             this.cbbCentro.ValueMember = "IdCentro";
             this.cbbCentro.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbCentro_SelectedIndexChanged);
             // 
+            // vistaCentroBindingSource
+            // 
+            this.vistaCentroBindingSource.DataMember = "VistaCentro";
+            this.vistaCentroBindingSource.DataSource = this.matrizDataSet;
+            // 
             // radSeparator4
             // 
             this.radSeparator4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -707,16 +727,6 @@
             this.radLabel1.TabIndex = 0;
             this.radLabel1.Text = "Cliente";
             // 
-            // radSeparator2
-            // 
-            this.radSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator2.Location = new System.Drawing.Point(12, 308);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(882, 10);
-            this.radSeparator2.TabIndex = 21;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
-            // 
             // radSeparator1
             // 
             this.radSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -753,34 +763,34 @@
             gridViewTextBoxColumn55.FormatString = "{0:0000}";
             gridViewTextBoxColumn55.HeaderText = "Codigo";
             gridViewTextBoxColumn55.Name = "Codigo";
-            gridViewTextBoxColumn55.Width = 95;
+            gridViewTextBoxColumn55.Width = 96;
             gridViewTextBoxColumn56.EnableExpressionEditor = false;
             gridViewTextBoxColumn56.HeaderText = "Descripción";
             gridViewTextBoxColumn56.Name = "Descripcion";
-            gridViewTextBoxColumn56.Width = 290;
+            gridViewTextBoxColumn56.Width = 292;
             gridViewTextBoxColumn57.EnableExpressionEditor = false;
             gridViewTextBoxColumn57.HeaderText = "Unidad";
             gridViewTextBoxColumn57.Name = "Unidad";
-            gridViewTextBoxColumn57.Width = 111;
+            gridViewTextBoxColumn57.Width = 112;
             gridViewTextBoxColumn58.DataType = typeof(float);
             gridViewTextBoxColumn58.EnableExpressionEditor = false;
             gridViewTextBoxColumn58.FormatInfo = new System.Globalization.CultureInfo("es-DO");
             gridViewTextBoxColumn58.FormatString = "{0:C}";
             gridViewTextBoxColumn58.HeaderText = "Precio";
             gridViewTextBoxColumn58.Name = "Precio";
-            gridViewTextBoxColumn58.Width = 107;
+            gridViewTextBoxColumn58.Width = 108;
             gridViewTextBoxColumn59.EnableExpressionEditor = false;
             gridViewTextBoxColumn59.FormatInfo = new System.Globalization.CultureInfo("es-DO");
             gridViewTextBoxColumn59.HeaderText = "Cantidad";
             gridViewTextBoxColumn59.Name = "Cantidad";
-            gridViewTextBoxColumn59.Width = 84;
+            gridViewTextBoxColumn59.Width = 85;
             gridViewTextBoxColumn60.DataType = typeof(float);
             gridViewTextBoxColumn60.EnableExpressionEditor = false;
             gridViewTextBoxColumn60.FormatInfo = new System.Globalization.CultureInfo("es-DO");
             gridViewTextBoxColumn60.FormatString = "{0:C}";
             gridViewTextBoxColumn60.HeaderText = "Itbis";
             gridViewTextBoxColumn60.Name = "Itbis";
-            gridViewTextBoxColumn60.Width = 101;
+            gridViewTextBoxColumn60.Width = 102;
             gridViewTextBoxColumn61.DataType = typeof(float);
             gridViewTextBoxColumn61.EnableExpressionEditor = false;
             gridViewTextBoxColumn61.FormatInfo = new System.Globalization.CultureInfo("es-DO");
@@ -957,6 +967,11 @@
             this.cbbTipoVenta.ValueMember = "IdTipoVenta";
             this.cbbTipoVenta.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbTipoVenta_SelectedIndexChanged);
             // 
+            // tipoVentaBindingSource
+            // 
+            this.tipoVentaBindingSource.DataMember = "TipoVenta";
+            this.tipoVentaBindingSource.DataSource = this.matrizDataSet;
+            // 
             // radSeparator7
             // 
             this.radSeparator7.Location = new System.Drawing.Point(3, 47);
@@ -1017,6 +1032,11 @@
             this.cbbFormaPago.ThemeName = "VisualStudio2012Light";
             this.cbbFormaPago.Validar = true;
             this.cbbFormaPago.ValueMember = "IdFormaDePago";
+            // 
+            // formaDePagoBindingSource
+            // 
+            this.formaDePagoBindingSource.DataMember = "FormaDePago";
+            this.formaDePagoBindingSource.DataSource = this.matrizDataSet;
             // 
             // cbbTipoCredito
             // 
@@ -1178,6 +1198,11 @@
             this.cbbProducto.ValueMember = "IdProducto";
             this.cbbProducto.SelectedIndexChanged += new System.EventHandler(this.cbbProducto_SelectedIndexChanged);
             // 
+            // vistaProductoCentroBindingSource
+            // 
+            this.vistaProductoCentroBindingSource.DataMember = "VistaProductoCentro";
+            this.vistaProductoCentroBindingSource.DataSource = this.matrizDataSet;
+            // 
             // cbbEstado
             // 
             this.cbbEstado.BackColor = System.Drawing.Color.White;
@@ -1278,40 +1303,10 @@
             this.cbbUnidad.Validar = false;
             this.cbbUnidad.ValueMember = "IdUnidad";
             // 
-            // vistaProductoCentroBindingSource
+            // unidadProductoBindingSource
             // 
-            this.vistaProductoCentroBindingSource.DataMember = "VistaProductoCentro";
-            this.vistaProductoCentroBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoVentaBindingSource
-            // 
-            this.tipoVentaBindingSource.DataMember = "TipoVenta";
-            this.tipoVentaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // formaDePagoBindingSource
-            // 
-            this.formaDePagoBindingSource.DataMember = "FormaDePago";
-            this.formaDePagoBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // orbraMantenimientoVentaBindingSource
-            // 
-            this.orbraMantenimientoVentaBindingSource.DataMember = "OrbraMantenimientoVenta";
-            this.orbraMantenimientoVentaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // vistaClienteBindingSource
-            // 
-            this.vistaClienteBindingSource.DataMember = "VistaCliente";
-            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // vistaCentroBindingSource
-            // 
-            this.vistaCentroBindingSource.DataMember = "VistaCentro";
-            this.vistaCentroBindingSource.DataSource = this.matrizDataSet;
+            this.unidadProductoBindingSource.DataMember = "UnidadProducto";
+            this.unidadProductoBindingSource.DataSource = this.matrizDataSet;
             // 
             // estadoVentaBindingSource
             // 
@@ -1346,14 +1341,19 @@
             // 
             this.vistaProductoCentroTableAdapter.ClearBeforeFill = true;
             // 
-            // unidadProductoBindingSource
-            // 
-            this.unidadProductoBindingSource.DataMember = "UnidadProducto";
-            this.unidadProductoBindingSource.DataSource = this.matrizDataSet;
-            // 
             // unidadProductoTableAdapter
             // 
             this.unidadProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // radSeparator2
+            // 
+            this.radSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radSeparator2.Location = new System.Drawing.Point(12, 308);
+            this.radSeparator2.Name = "radSeparator2";
+            this.radSeparator2.Size = new System.Drawing.Size(882, 10);
+            this.radSeparator2.TabIndex = 21;
+            this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
             // OrdenDeVenta
             // 
@@ -1393,9 +1393,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbObra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orbraMantenimientoVentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEncargado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCliente)).EndInit();
@@ -1404,13 +1407,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
@@ -1427,12 +1430,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFormaPago)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.formaDePagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
@@ -1440,21 +1445,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaProductoCentroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItbis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaProductoCentroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVentaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.formaDePagoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orbraMantenimientoVentaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoVentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unidadProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoVentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1469,7 +1469,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadSeparator radSeparator2;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadGridView dataProducto;
         private Telerik.WinControls.UI.RadLabel radLabel6;
@@ -1530,5 +1529,6 @@
         private Negocios.Componentes.cbbPersonal cbbUnidad;
         private System.Windows.Forms.BindingSource unidadProductoBindingSource;
         private MatrizDataSetTableAdapters.UnidadProductoTableAdapter unidadProductoTableAdapter;
+        private Telerik.WinControls.UI.RadSeparator radSeparator2;
     }
 }

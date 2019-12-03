@@ -276,6 +276,9 @@
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Filtro.es-DO.resx">
       <DependentUpon>Filtro.cs</DependentUpon>
     </EmbeddedResource>

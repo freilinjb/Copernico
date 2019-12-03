@@ -16,5 +16,10 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+        private void cbbProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
