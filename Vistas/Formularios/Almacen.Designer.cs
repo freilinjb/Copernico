@@ -42,6 +42,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn1 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Almacen));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
@@ -68,10 +69,10 @@
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.dataAlmacen = new Telerik.WinControls.UI.RadGridView();
+            this.vistaAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.lbEstatus = new Telerik.WinControls.UI.RadLabelElement();
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.vistaAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaAlmacenTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaAlmacenTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
@@ -100,9 +101,9 @@
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaAlmacenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -516,6 +517,16 @@
             this.dataAlmacen.ThemeName = "VisualStudio2012Light";
             this.dataAlmacen.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataAlmacen_CellDoubleClick);
             // 
+            // vistaAlmacenBindingSource
+            // 
+            this.vistaAlmacenBindingSource.DataMember = "VistaAlmacen";
+            this.vistaAlmacenBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // radStatusStrip1
             // 
             this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
@@ -532,16 +543,6 @@
             this.radStatusStrip1.SetSpring(this.lbEstatus, false);
             this.lbEstatus.Text = "Nuevo almacen";
             this.lbEstatus.TextWrap = true;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vistaAlmacenBindingSource
-            // 
-            this.vistaAlmacenBindingSource.DataMember = "VistaAlmacen";
-            this.vistaAlmacenBindingSource.DataSource = this.matrizDataSet;
             // 
             // vistaAlmacenTableAdapter
             // 
@@ -577,6 +578,7 @@
             this.Controls.Add(this.radLabel12);
             this.Controls.Add(this.cbbMunicipio);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Almacen";
             // 
@@ -613,9 +615,9 @@
             this.radGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataAlmacen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaAlmacenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

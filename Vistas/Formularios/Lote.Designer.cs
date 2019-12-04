@@ -41,11 +41,19 @@
             this.radRibbonBarGroup4 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btEmpresa = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup5 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup6 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonBarGroup7 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ribbonTab3 = new Telerik.WinControls.UI.RibbonTab();
             this.ribbonTab4 = new Telerik.WinControls.UI.RibbonTab();
             this.ribbonTab5 = new Telerik.WinControls.UI.RibbonTab();
+            this.ribbonTab7 = new Telerik.WinControls.UI.RibbonTab();
+            this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btAlmacen = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup9 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radRibbonBarGroup10 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
@@ -114,7 +122,8 @@
             this.ribbonTab2,
             this.ribbonTab3,
             this.ribbonTab4,
-            this.ribbonTab5});
+            this.ribbonTab5,
+            this.ribbonTab7});
             // 
             // 
             // 
@@ -128,7 +137,7 @@
             // 
             this.radRibbonBar1.OptionsButton.Text = "Options";
             this.radRibbonBar1.SimplifiedHeight = 100;
-            this.radRibbonBar1.Size = new System.Drawing.Size(767, 161);
+            this.radRibbonBar1.Size = new System.Drawing.Size(998, 161);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.TabIndex = 0;
             this.radRibbonBar1.Text = "Menu principal";
@@ -137,7 +146,7 @@
             // ribbonTab6
             // 
             this.ribbonTab6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup4,
             this.radRibbonBarGroup5,
@@ -166,8 +175,30 @@
             // 
             // radRibbonBarGroup5
             // 
+            this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement3,
+            this.radButtonElement4,
+            this.radButtonElement5});
             this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
             this.radRibbonBarGroup5.Text = "Cliente";
+            // 
+            // radButtonElement3
+            // 
+            this.radButtonElement3.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement3.Image")));
+            this.radButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.radButtonElement3.Name = "radButtonElement3";
+            this.radButtonElement3.Text = "Cliente";
+            this.radButtonElement3.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // radButtonElement4
+            // 
+            this.radButtonElement4.Name = "radButtonElement4";
+            this.radButtonElement4.Text = "radButtonElement4";
+            // 
+            // radButtonElement5
+            // 
+            this.radButtonElement5.Name = "radButtonElement5";
+            this.radButtonElement5.Text = "radButtonElement5";
             // 
             // radRibbonBarGroup6
             // 
@@ -196,9 +227,47 @@
             // ribbonTab5
             // 
             this.ribbonTab5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ribbonTab5.IsSelected = false;
             this.ribbonTab5.Name = "ribbonTab5";
             this.ribbonTab5.Text = "Operaciones de compras";
             this.ribbonTab5.UseMnemonic = false;
+            // 
+            // ribbonTab7
+            // 
+            this.ribbonTab7.IsSelected = true;
+            this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radRibbonBarGroup8,
+            this.radRibbonBarGroup9,
+            this.radRibbonBarGroup10});
+            this.ribbonTab7.Name = "ribbonTab7";
+            this.ribbonTab7.Text = "Control de Inventario";
+            this.ribbonTab7.UseMnemonic = false;
+            // 
+            // radRibbonBarGroup8
+            // 
+            this.radRibbonBarGroup8.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.btAlmacen});
+            this.radRibbonBarGroup8.Name = "radRibbonBarGroup8";
+            this.radRibbonBarGroup8.Text = "Registro de Inventario";
+            // 
+            // btAlmacen
+            // 
+            this.btAlmacen.Alignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btAlmacen.Image = global::Vistas.Properties.Resources.Almacen;
+            this.btAlmacen.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.btAlmacen.Name = "btAlmacen";
+            this.btAlmacen.Text = "Registro de Almacenes";
+            this.btAlmacen.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // radRibbonBarGroup9
+            // 
+            this.radRibbonBarGroup9.Name = "radRibbonBarGroup9";
+            this.radRibbonBarGroup9.Text = "Operaciones de Inventario";
+            // 
+            // radRibbonBarGroup10
+            // 
+            this.radRibbonBarGroup10.Name = "radRibbonBarGroup10";
+            this.radRibbonBarGroup10.Text = "Utilidades de Inventario";
             // 
             // radRibbonFormBehavior1
             // 
@@ -223,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 486);
+            this.ClientSize = new System.Drawing.Size(998, 542);
             this.Controls.Add(this.radRibbonBar1);
             this.FormBehavior = this.radRibbonFormBehavior1;
             this.IconScaling = Telerik.WinControls.Enumerations.ImageScaling.None;
@@ -235,6 +304,7 @@
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Menu principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -262,5 +332,13 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup6;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup7;
         private Telerik.WinControls.UI.RadButtonElement btEmpresa;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement4;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement5;
+        private Telerik.WinControls.UI.RibbonTab ribbonTab7;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup8;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup10;
+        private Telerik.WinControls.UI.RadButtonElement btAlmacen;
     }
 }

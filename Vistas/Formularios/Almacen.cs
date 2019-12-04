@@ -13,6 +13,7 @@ namespace Vistas.Formularios
     public partial class Almacen : FormBase
     {
         private DataSet ds;
+
         public Almacen()
         {
             InitializeComponent();

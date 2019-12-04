@@ -160,6 +160,12 @@
     <Compile Include="Formularios\Imprimir.Designer.cs">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Lote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,9 @@
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Lote.resx">
       <DependentUpon>Lote.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +377,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Almacen.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -120,41 +120,32 @@
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="vistaAlmacenBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>490, 17</value>
-  </metadata>
-  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>362, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
         AAD//wAA//8AAA==
 </value>
   </data>
   <metadata name="visualStudio2012LightTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>147, 17</value>
-  </metadata>
-  <metadata name="vistaAlmacenTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>692, 17</value>
   </metadata>
 </root>
