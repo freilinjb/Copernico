@@ -94,6 +94,7 @@ namespace Vistas.Formularios
                     txtDireccion.Text = dataAlmacen.Rows[dataAlmacen.CurrentRow.Index].Cells["Direccion"].Value.ToString();
                     chEstado.Value = (Convert.ToBoolean(dataAlmacen.Rows[dataAlmacen.CurrentRow.Index].Cells["Estado"].Value.ToString()));
                     lbEstatus.Text = "Modo edicion";
+
                 }
             }
         }

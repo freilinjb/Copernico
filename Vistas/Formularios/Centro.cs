@@ -37,9 +37,9 @@ namespace Vistas.Formularios
         private void Centro_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
-            //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
+            this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaProductoCentro' Puede moverla o quitarla según sea necesario.
-            this.vistaProductoCentroTableAdapter.Fill(this.matrizDataSet.VistaProductoCentro);
+            //this.vistaProductoCentroTableAdapter.Fill(this.matrizDataSet.VistaProductoCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaProductoCentro' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentroMantenimiento' Puede moverla o quitarla según sea necesario.
             this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
@@ -71,6 +71,7 @@ namespace Vistas.Formularios
             cbbSector.DisplayMember = "Sector";
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
+            Negocios.Utilidades.LimpiarRadDataGridView(dataProducto);
 
         }
 
@@ -123,6 +124,7 @@ namespace Vistas.Formularios
 
         private void dataCentro_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
+
             if (dataCentro.Rows.Count > 0)
             {
                 if (RadMessageBox.Show($"Desea editar el Centro {dataCentro.Rows[dataCentro.CurrentRow.Index].Cells["Nombre"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -144,7 +146,38 @@ namespace Vistas.Formularios
                         chEstado.Value = (Convert.ToBoolean(dataCentro.Rows[dataCentro.CurrentRow.Index].Cells["Estado"].Value.ToString()));
 
                     }
-                    this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
+
+                    if (pagePrincipal.SelectedPage.Name == "pageAsignacion")
+                    {
+                        ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdCentro = {txtCodigo.Text.Trim()}");
+
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            foreach (DataRow Fila in ds.Tables[0].Rows)
+                            {
+                                dataProducto.Rows.Add(
+                                    Convert.ToInt32(Fila["IdProducto"].ToString()),
+                                    Convert.ToString(Fila["Producto"].ToString()),
+                                    Convert.ToString(Fila["Familia"].ToString()),
+                                    Convert.ToString(Fila["TipoProducto"].ToString()),
+                                    Convert.ToSingle(Fila["Precio"].ToString()),
+                                    Convert.ToBoolean(Fila["IncluirItbis"].ToString())
+                                    );
+                            }
+                            //foreach (DataRow Fila in ds.Tables[0].Rows)
+                            //{
+                            //    dataProducto.Rows.Add(
+                            //        Convert.ToInt32(Fila.Cells["IdProducto"].Value.ToString()),
+                            //        Fila.Cells["IdProducto"].Value.ToString(),
+                            //        Fila.Cells["Producto"].Value.ToString(),
+                            //        Fila.Cells["Familia"].Value.ToString(),
+                            //        Fila.Cells["TipoProducto"].Value.ToString(),
+                            //        Convert.ToBoolean(Fila.Cells["IncluirItbis"].Value.ToString())
+                            //        );
+                            //}
+                        }
+                    }
+                    //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
                     toolRegistro.Text = "Modo edicion";
                 }
             }
@@ -170,7 +203,20 @@ namespace Vistas.Formularios
 
                     foreach (var Fila in dataProducto.Rows)
                     {
-                        Negocios.Utilidades.Ejecutar($"EXEC [RegistrarPrecioDeProducto] {txtCodigo.Text.Trim()},{Fila.Cells["IdProducto"].Value.ToString()},'{Fila.Cells["Precio"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()}");
+                        Debug.WriteLine("DEPURACION");
+                        ds = Negocios.Utilidades.Ejecutar($"EXEC [RegistrarPrecioDeProducto] {txtCodigo.Text.Trim()},{Fila.Cells["IdProducto"].Value.ToString()},'{Fila.Cells["Precio"].Value.ToString()}'");
+                        //Debug.WriteLine($"EXEC [RegistrarPrecioDeProducto] {txtCodigo.Text.Trim()},{Fila.Cells["IdProducto"].Value.ToString()},'{Fila.Cells["Precio"].Value.ToString()}'");
+                    }
+
+                    if(ds.Tables[0].Rows.Count > 0)
+                    {
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                        cbbProducto.Focus();
+
+                        Negocios.Utilidades.LimpiarRadDataGridView(dataProducto);
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
+                        toolRegistro.Text = "Nuevo Registro";
+                        txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdCentro)+1 AS Mayor FROM Centro").Tables[0].Rows[0]["Mayor"].ToString();
 
                     }
                 }
@@ -179,6 +225,8 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.F2)
             {
                 Negocios.Utilidades.Limpiar(this, errorProvider1);
+                txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdCentro)+1 AS Mayor FROM Centro").Tables[0].Rows[0]["Mayor"].ToString();
+
             }
         }
 
@@ -188,8 +236,34 @@ namespace Vistas.Formularios
             {
                 if(toolRegistro.Text == "Modo edicion")
                 {
-                    dataProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdCentro = {txtCodigo.Text.Trim()}").Tables[0];
-                    this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
+                    ds = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdCentro = {txtCodigo.Text.Trim()}");
+
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow Fila in ds.Tables[0].Rows)
+                        {
+                            dataProducto.Rows.Add(
+                                Convert.ToInt32(Fila["IdProducto"].ToString()),
+                                Convert.ToString(Fila["Producto"].ToString()),
+                                Convert.ToString(Fila["Familia"].ToString()),
+                                Convert.ToString(Fila["TipoProducto"].ToString()),
+                                Convert.ToSingle(Fila["Precio"].ToString()),
+                                Convert.ToBoolean(Fila["IncluirItbis"].ToString())
+                                );
+                        }
+                        //foreach (DataRow Fila in ds.Tables[0].Rows)
+                        //{
+                        //    dataProducto.Rows.Add(
+                        //        Convert.ToInt32(Fila.Cells["IdProducto"].Value.ToString()),
+                        //        Fila.Cells["IdProducto"].Value.ToString(),
+                        //        Fila.Cells["Producto"].Value.ToString(),
+                        //        Fila.Cells["Familia"].Value.ToString(),
+                        //        Fila.Cells["TipoProducto"].Value.ToString(),
+                        //        Convert.ToBoolean(Fila.Cells["IncluirItbis"].Value.ToString())
+                        //        );
+                        //}
+                    }
+                    //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
                 }
                 else if(toolRegistro.Text == "Nuevo Registro")
                 {
@@ -211,12 +285,12 @@ namespace Vistas.Formularios
                     if (cont_fila == 0)
                     {
                         dataProducto.Rows.Add(
-                        txtCodigo.Text.Trim(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Descripcion"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Familia"].Value.ToString(),
                         cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["TipoProducto"].Value.ToString(),
-                        Convert.ToDecimal(txtPrecio.Text)
+                        Convert.ToDecimal(txtPrecio.Text),
+                        Convert.ToBoolean(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IncluirItbis"].Value.ToString())
                         );
 
                         cont_fila++;
@@ -240,12 +314,12 @@ namespace Vistas.Formularios
                         else
                         {
                             dataProducto.Rows.Add(
-                                txtCodigo.Text.Trim(),
-                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
-                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Descripcion"].Value.ToString(),
-                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Familia"].Value.ToString(),
-                                cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["TipoProducto"].Value.ToString(),
-                                Convert.ToDecimal(txtPrecio.Text)
+                            cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString(),
+                            cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Descripcion"].Value.ToString(),
+                            cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["Familia"].Value.ToString(),
+                            cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["TipoProducto"].Value.ToString(),
+                            Convert.ToDecimal(txtPrecio.Text),
+                            Convert.ToBoolean(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IncluirItbis"].Value.ToString())
                             );
 
                             cont_fila++;
@@ -253,6 +327,7 @@ namespace Vistas.Formularios
                     }
                     cbbProducto.Focus();
                     cbbProducto.SelectedIndex = -1;
+                    txtPrecio.Text = null;
                 }
             }
         }
@@ -269,9 +344,26 @@ namespace Vistas.Formularios
                 int IdProducto = Convert.ToInt32(cbbProducto.EditorControl.Rows[cbbProducto.EditorControl.CurrentRow.Index].Cells["IdProducto"].Value.ToString());
                 cbbUnidad.DataSource = Negocios.Utilidades.Ejecutar($"SELECT P.IdProducto, U.IdUnidad,U.Descripcion AS Unidad FROM Unidad U INNER JOIN Producto_VS_Unidad PU ON PU.IdUnidad = U.IdUnidad INNER JOIN Producto P ON P.IdProducto = PU.IdProducto WHERE P.IdProducto = {IdProducto}").Tables[0];
 
-                dataProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdCentro = {txtCodigo.Text.Trim()}").Tables[0];
+                //dataProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaProducto WHERE IdCentro = {txtCodigo.Text.Trim()}").Tables[0];
                 //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
                 //cbbUnidad.DataSource = matrizDataSet.UnidadProducto.DataSet.Tables[0];
+            }
+        }
+
+        private void dataProducto_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                if (dataProducto.RowCount > 0)
+                {
+                    if (RadMessageBox.Show($"Desea editar el Producto {dataProducto.Rows[dataProducto.CurrentRow.Index].Cells["Producto"].Value.ToString()} de este el centro {lbNombre.Text}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    {
+                        dataProducto.Rows.RemoveAt(dataProducto.CurrentRow.Index);
+                        cont_fila--;
+                        cbbProducto.Focus();
+
+                    }
+                }
             }
         }
     }

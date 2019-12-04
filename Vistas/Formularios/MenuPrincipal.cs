@@ -146,5 +146,17 @@ namespace Vistas.Formularios
         {
 
         }
+
+        private void menuCubicacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuProveedor_Click(object sender, EventArgs e)
+        {
+            Proveedor proveedor = Proveedor.ObtenerInstancia();
+            proveedor.MdiParent = this;
+            proveedor.Show();
+        }
     }
 }
