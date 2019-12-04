@@ -160,11 +160,11 @@
     <Compile Include="Formularios\Imprimir.Designer.cs">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Inventario.cs">
+    <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Inventario.Designer.cs">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <Compile Include="Formularios\TipoInventario.Designer.cs">
+      <DependentUpon>TipoInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Lote.cs">
       <SubType>Form</SubType>
@@ -306,8 +306,8 @@
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Inventario.resx">
-      <DependentUpon>Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\TipoInventario.resx">
+      <DependentUpon>TipoInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Lote.resx">
       <DependentUpon>Lote.cs</DependentUpon>

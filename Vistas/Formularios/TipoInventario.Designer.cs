@@ -1,6 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
-    partial class Inventario
+    partial class TipoInventario
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoInventario));
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.pageInventario = new Telerik.WinControls.UI.RadPageViewPage();

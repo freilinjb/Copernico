@@ -9,11 +9,11 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Inventario : FormBase
+    public partial class TipoInventario : FormBase
     {
         private DataSet ds;
 
-        public Inventario()
+        public TipoInventario()
         {
             InitializeComponent();
         }
@@ -58,7 +58,8 @@ namespace Vistas.Formularios
         {
             if(e.KeyCode == Keys.F1)
             {
-                Guardar();
+                if(Guardar())
+                    lbEstatus.Text = "Nuevo registro";
             }
             else if(e.KeyCode == Keys.F2)
             {
