@@ -23,7 +23,7 @@ namespace Vistas.Formularios
 
         private void IdMayor()
         {
-            ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdAlmacen)+1 Mayor FROM Almacen");
+            ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdAlmacen)+1 AS Mayor FROM Almacen");
             txtCodigo.Text = (ds.Tables[0].Rows[0]["Mayor"] == DBNull.Value) ? "1" : ds.Tables[0].Rows[0]["Mayor"].ToString();
         }
 
@@ -31,34 +31,69 @@ namespace Vistas.Formularios
         {
             bool bien = true;
 
-            if(Negocios.Utilidades.Validar(this,errorProvider1) == false)
+            if (pagePrincipal.SelectedPage.Name == "pageAlmacen")
             {
-                Negocios.Entidades.Almacen almacen = new Negocios.Entidades.Almacen(
-                    Convert.ToInt32(txtCodigo.Text.Trim()),
-                    (int)cbbCentro.SelectedValue,
-                    txtNombre.Text.Trim(),
-                    txtDescripcion.Text.Trim(),
-                    (int)cbbProvincia.SelectedValue,
-                    (int)cbbCiudad.SelectedValue,
-                    (int)cbbMunicipio.SelectedValue,
-                    (int)cbbSector.SelectedValue,
-                    txtDireccion.Text,
-                    chEstado.Value);
 
-                ds = Negocios.Utilidades.Ejecutar(almacen.getGuardar());
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (Negocios.Utilidades.Validar(pageAlmacen, errorProvider1) == false)
                 {
+                    Negocios.Entidades.Almacen almacen = new Negocios.Entidades.Almacen(
+                        Convert.ToInt32(txtCodigo.Text.Trim()),
+                        (int)cbbCentro.SelectedValue,
+                        txtNombre.Text.Trim(),
+                        txtDescripcion.Text.Trim(),
+                        (int)cbbProvincia.SelectedValue,
+                        (int)cbbCiudad.SelectedValue,
+                        (int)cbbMunicipio.SelectedValue,
+                        (int)cbbSector.SelectedValue,
+                        txtDireccion.Text,
+                        chEstado.Value);
 
-                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    ds = Negocios.Utilidades.Ejecutar(almacen.getGuardar());
 
-                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
 
-                    lbEstatus.Text = "Nuevo Registro";
-                    //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
-                    this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
 
-                    IdMayor();
+                        Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+                        lbEstatus.Text = "Nuevo Registro";
+                        //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
+                        this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
+
+                        IdMayor();
+                    }
+                }
+            }
+
+            else if (pagePrincipal.SelectedPage.Name == "pageInventario")
+            {
+                if(lbEstatus.Text == "Modo edicion")
+                {
+                    if (Negocios.Utilidades.Validar(pageInventario, errorProvider1) == false)
+                    {
+                        Negocios.Utilidades.Ejecutar($"DELETE Almacen_VS_TipoInventario WHERE IdAlmacen = {txtCodigo.Text.Trim()}");
+
+                        foreach (var Fila in dataInventario.Rows)
+                        {
+                            ds = Negocios.Utilidades.Ejecutar($"EXEC [RegistraAlmacen_VS_TipoInventario] {txtCodigo.Text},{Fila.Cells["IdTipoInventario"].Value.ToString()}");
+
+                        }
+
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                            Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+                            lbEstatus.Text = "Nuevo Registro";
+                            //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
+                            this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
+
+                            IdMayor();
+                        }
+                    }
                 }
             }
 
@@ -67,14 +102,28 @@ namespace Vistas.Formularios
 
         private void Almacen_KeyUp(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.F1)
+            if (e.KeyCode == Keys.F1)
             {
-                Guardar();
+                if(Guardar())
+                {
+                    Negocios.Utilidades.Limpiar(pageAlmacen, errorProvider1);
+                    Negocios.Utilidades.Limpiar(pageInventario, errorProvider1);
+
+                    dataInventario.Enabled = false;
+                    cbbTipoInventario.Enabled = false;
+                    cbbTipoInventario.SelectedIndex = -1;
+                    lbEstatus.Text = "Nuevo Registro";
+                }
             }
-            else if(e.KeyCode == Keys.F2)
+            else if (e.KeyCode == Keys.F2)
             {
                 Negocios.Utilidades.Limpiar(this, errorProvider1);
                 lbEstatus.Text = "Nuevo Registro";
+                dataInventario.Enabled = false;
+                cbbTipoInventario.Enabled = false;
+                cbbTipoInventario.SelectedIndex = -1;
+
+                Negocios.Utilidades.LimpiarRadDataGridView(dataInventario);
             }
         }
 
@@ -94,8 +143,22 @@ namespace Vistas.Formularios
                     cbbSector.Text = dataAlmacen.Rows[dataAlmacen.CurrentRow.Index].Cells["Sector"].Value.ToString();
                     txtDireccion.Text = dataAlmacen.Rows[dataAlmacen.CurrentRow.Index].Cells["Direccion"].Value.ToString();
                     chEstado.Value = (Convert.ToBoolean(dataAlmacen.Rows[dataAlmacen.CurrentRow.Index].Cells["Estado"].Value.ToString()));
+
+
+                    cbbTipoInventario.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario").Tables[0];
+                    cbbTipoInventario.ValueMember = "IdTipoInventario";
+                    cbbTipoInventario.DisplayMember = "Inventario";
+
+
+                    dataInventario.Enabled = true;
+                    cbbTipoInventario.Enabled = true;
+                    cbbTipoInventario.SelectedIndex = -1;
+
                     lbEstatus.Text = "Modo edicion";
 
+
+
+                    dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT TI.IdTipoInventario,TI.Descripcion AS Inventario FROM Almacen_VS_TipoInventario ALT INNER JOIN TipoInventario TI ON TI.IdTipoInventario = ALT.IdTipoInventario WHERE ALT.IdAlmacen = {txtCodigo.Text.Trim()}").Tables[0];
                 }
             }
         }
@@ -124,14 +187,56 @@ namespace Vistas.Formularios
             cbbSector.ValueMember = "IdSector";
             cbbSector.DisplayMember = "Sector";
 
+            lbEstatus.Text = "Nuevo Registro";
+            dataInventario.Enabled = false;
+            cbbTipoInventario.Enabled = false;
+            cbbTipoInventario.SelectedIndex = -1;
+
+
             Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
 
         private void cbbCentro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if(cbbCentro.SelectedIndex != -1)
+            if (cbbCentro.SelectedIndex != -1)
             {
-                txtNombre.Text = $"ALM-{cbbCentro.Text}-{string.Format("{0:00}",Convert.ToInt32(txtCodigo.Text.Trim()))}";
+                txtNombre.Text = $"ALM-{cbbCentro.Text}-{string.Format("{0:00}", Convert.ToInt32(txtCodigo.Text.Trim()))}";
+            }
+        }
+
+        private void cbbTipoInventario_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if(cbbTipoInventario.SelectedIndex != -1)
+                {
+                    bool exists = false;
+
+                    //ds = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario");
+
+                    foreach (var Fila in dataInventario.Rows)
+                    {
+                        if (Fila.Cells["IdTipoInventario"].Value.ToString() == cbbTipoInventario.SelectedValue.ToString())
+                            exists = true;
+                    }
+
+                    if(exists == false)
+                        dataInventario.Rows.Add(Convert.ToInt32(cbbTipoInventario.SelectedValue.ToString()), cbbTipoInventario.Text.Trim());
+                }
+            }
+        }
+
+        private void dataInventario_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (dataInventario.RowCount > 0)
+                {
+                    if (RadMessageBox.Show($"Desea editar el Producto {dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    {
+                        dataInventario.Rows.RemoveAt(dataInventario.CurrentRow.Index);
+                    }
+                }
             }
         }
     }

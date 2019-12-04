@@ -20,13 +20,9 @@ namespace Vistas.Formularios
 
         private void Inventario_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
+            txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdTipoInventario)+1 Mayor FROM TipoInventario").Tables[0].Rows[0]["Mayor"].ToString();
             dataInventario.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario").Tables[0];
-
-            cbbTipoInventario.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario").Tables[0];
-            cbbTipoInventario.ValueMember = "IdTipoInventario";
-            cbbTipoInventario.DisplayMember = "Inventario";
-
-
         }
 
         public override bool Guardar()
@@ -37,14 +33,16 @@ namespace Vistas.Formularios
             {
                 try
                 {
-                    ds = Negocios.Utilidades.Ejecutar($"EXEC RegistroTipoInventarioPorAlmacen {(int)cbbAlmacen.SelectedValue},{(int)cbbTipoInventario.SelectedValue}");
+                    ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarTipoInventario {txtCodigo.Text},'{txtTipoInventario.Text.Trim().ToUpper()}'");
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
 
                         RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-
+                        txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdTipoInventario)+1 Mayor FROM TipoInventario").Tables[0].Rows[0]["Mayor"].ToString();
+                        dataInventario.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario").Tables[0];
                         Negocios.Utilidades.Limpiar(this, errorProvider1);
+                        txtTipoInventario.Text = null;
                     }
                 }
                 catch (Exception ex)
@@ -60,11 +58,24 @@ namespace Vistas.Formularios
         {
             if(e.KeyCode == Keys.F1)
             {
-
+                Guardar();
             }
             else if(e.KeyCode == Keys.F2)
             {
                 Negocios.Utilidades.Limpiar(this, errorProvider1);
+            }
+        }
+
+        private void dataInventario_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            if (dataInventario.Rows.Count > 0)
+            {
+                if (RadMessageBox.Show($"Desea editar el Almacen {dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    txtCodigo.Text = dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["IdTipoInventario"].Value.ToString();
+                    txtTipoInventario.Text = dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString();
+                    lbEstatus.Text = "Modo edicion";
+                }
             }
         }
     }
