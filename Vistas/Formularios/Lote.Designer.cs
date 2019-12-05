@@ -45,7 +45,7 @@
             this.radRibbonBarGroup4 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btEmpresa = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup5 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.btCliente = new Telerik.WinControls.UI.RadButtonElement();
             this.btObra = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup6 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btProveedor = new Telerik.WinControls.UI.RadButtonElement();
@@ -215,18 +215,19 @@
             // radRibbonBarGroup5
             // 
             this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radButtonElement3,
+            this.btCliente,
             this.btObra});
             this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
             this.radRibbonBarGroup5.Text = "Cliente";
             // 
-            // radButtonElement3
+            // btCliente
             // 
-            this.radButtonElement3.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement3.Image")));
-            this.radButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.radButtonElement3.Name = "radButtonElement3";
-            this.radButtonElement3.Text = "Registro de Clientes";
-            this.radButtonElement3.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btCliente.Image = ((System.Drawing.Image)(resources.GetObject("btCliente.Image")));
+            this.btCliente.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.btCliente.Name = "btCliente";
+            this.btCliente.Text = "Registro de Clientes";
+            this.btCliente.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btCliente.Click += new System.EventHandler(this.btCliente_Click);
             // 
             // btObra
             // 
@@ -414,7 +415,7 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup6;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup7;
         private Telerik.WinControls.UI.RadButtonElement btEmpresa;
-        private Telerik.WinControls.UI.RadButtonElement radButtonElement3;
+        private Telerik.WinControls.UI.RadButtonElement btCliente;
         private Telerik.WinControls.UI.RibbonTab ribbonTab7;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup8;
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;

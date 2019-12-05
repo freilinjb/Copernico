@@ -29,5 +29,12 @@ namespace Vistas.Formularios
             obra.MdiParent = this;
             obra.Show();
         }
+
+        private void btCliente_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = Cliente.ObtenerInstancia();
+            cliente.MdiParent = this;
+            cliente.Show();
+        }
     }
 }

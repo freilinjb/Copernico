@@ -46,7 +46,7 @@ namespace Negocios
         }
         public string getGuardar()
         {
-            return ($"EXEC RegistrarCliente {idcliente},'{nombre}','{razonSocial}','{Observacion}',{idTipoIdentificacion},'{identificacion}','{telefono}','{correo}',{idMunicipio},{idProvincia},{idSector},'{direccion}',{idCentro},{estado}");
+            return ($"EXEC RegistrarCliente {idcliente},'{nombre}','{razonSocial}','{Observacion}',{idTipoIdentificacion},'{identificacion}','{telefono}','{correo}',{idMunicipio},{idProvincia},{idSector},'{direccion}',{idCentro},{(estado ? 1 : 0)}");
         }
     }
 }
