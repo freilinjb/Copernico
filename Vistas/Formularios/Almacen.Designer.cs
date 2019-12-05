@@ -208,9 +208,9 @@
             // 
             this.radSeparator3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator3.Location = new System.Drawing.Point(22, 191);
+            this.radSeparator3.Location = new System.Drawing.Point(13, 191);
             this.radSeparator3.Name = "radSeparator3";
-            this.radSeparator3.Size = new System.Drawing.Size(532, 10);
+            this.radSeparator3.Size = new System.Drawing.Size(541, 10);
             this.radSeparator3.TabIndex = 37;
             this.radSeparator3.ThemeName = "VisualStudio2012Light";
             // 

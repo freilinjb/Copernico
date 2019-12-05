@@ -130,6 +130,12 @@
     <Compile Include="Formularios\Almacen.Designer.cs">
       <DependentUpon>Almacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Analisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Analisis.Designer.cs">
+      <DependentUpon>Analisis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Centro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,18 @@
     <Compile Include="Formularios\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Empleado1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleado1.Designer.cs">
+      <DependentUpon>Empleado1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Filtro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +177,18 @@
     </Compile>
     <Compile Include="Formularios\Imprimir.Designer.cs">
       <DependentUpon>Imprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mina.Designer.cs">
+      <DependentUpon>Mina.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
@@ -291,11 +321,20 @@
     <EmbeddedResource Include="Formularios\Almacen.resx">
       <DependentUpon>Almacen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Analisis.resx">
+      <DependentUpon>Analisis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleado1.resx">
+      <DependentUpon>Empleado1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Filtro.es-DO.resx">
       <DependentUpon>Filtro.cs</DependentUpon>
@@ -305,6 +344,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mina.resx">
+      <DependentUpon>Mina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>
@@ -378,6 +423,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Almacen.png" />
+    <None Include="Resources\Factura.png" />
+    <None Include="Resources\Proyecto.png" />
+    <None Include="Resources\Empresa.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

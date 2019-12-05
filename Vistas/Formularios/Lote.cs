@@ -22,5 +22,12 @@ namespace Vistas.Formularios
             instancia.MdiParent = this;
             instancia.Show();
         }
+
+        private void btObra_Click(object sender, EventArgs e)
+        {
+            Obra obra = Obra.ObtenerInstancia();
+            obra.MdiParent = this;
+            obra.Show();
+        }
     }
 }

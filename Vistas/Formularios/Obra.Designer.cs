@@ -56,9 +56,13 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Obra));
             this.txtObra = new Negocios.Componentes.TextPersonal();
             this.cbbCliente = new Negocios.Componentes.MultiCbbPersonal();
+            this.vistaClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.dataObra = new Telerik.WinControls.UI.RadGridView();
+            this.vistaContactoEncargadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtNota = new Negocios.Componentes.TextPersonal();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,9 +75,13 @@
             this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
+            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbCiudad = new Negocios.Componentes.cbbPersonal();
+            this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
+            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
+            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
@@ -82,25 +90,22 @@
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cbbEncargado = new Negocios.Componentes.cbbPersonal();
-            this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vistaClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.ciudadTableAdapter = new Vistas.MatrizDataSetTableAdapters.CiudadTableAdapter();
             this.sectorTableAdapter = new Vistas.MatrizDataSetTableAdapters.SectorTableAdapter();
             this.vistaClienteTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaClienteTableAdapter();
-            this.vistaContactoEncargadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaContactoEncargadoTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaContactoEncargadoTableAdapter();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.txtObra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataObra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -112,9 +117,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
@@ -123,13 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEncargado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -297,6 +300,16 @@
             this.cbbCliente.ValueMember = "IdCliente";
             this.cbbCliente.SelectedIndexChanged += new System.EventHandler(this.cbbCliente_SelectedIndexChanged);
             // 
+            // vistaClienteBindingSource
+            // 
+            this.vistaClienteBindingSource.DataMember = "VistaCliente";
+            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataObra
             // 
             this.dataObra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -402,9 +415,14 @@
             this.dataObra.Name = "dataObra";
             this.dataObra.ReadOnly = true;
             this.dataObra.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataObra.Size = new System.Drawing.Size(574, 193);
+            this.dataObra.Size = new System.Drawing.Size(574, 186);
             this.dataObra.TabIndex = 21;
             this.dataObra.ThemeName = "VisualStudio2012Light";
+            // 
+            // vistaContactoEncargadoBindingSource
+            // 
+            this.vistaContactoEncargadoBindingSource.DataMember = "VistaContactoEncargado";
+            this.vistaContactoEncargadoBindingSource.DataSource = this.matrizDataSet;
             // 
             // txtNota
             // 
@@ -556,6 +574,11 @@
             this.cbbProvincia.Validar = true;
             this.cbbProvincia.ValueMember = "IdProvincia";
             // 
+            // provinciaBindingSource
+            // 
+            this.provinciaBindingSource.DataMember = "Provincia";
+            this.provinciaBindingSource.DataSource = this.matrizDataSet;
+            // 
             // cbbCiudad
             // 
             this.cbbCiudad.BackColor = System.Drawing.Color.White;
@@ -572,6 +595,11 @@
             this.cbbCiudad.ThemeName = "VisualStudio2012Light";
             this.cbbCiudad.Validar = true;
             this.cbbCiudad.ValueMember = "IdCiudad";
+            // 
+            // ciudadBindingSource
+            // 
+            this.ciudadBindingSource.DataMember = "Ciudad";
+            this.ciudadBindingSource.DataSource = this.matrizDataSet;
             // 
             // cbbMunicipio
             // 
@@ -590,6 +618,11 @@
             this.cbbMunicipio.Validar = true;
             this.cbbMunicipio.ValueMember = "IdMunicipio";
             // 
+            // municipioBindingSource
+            // 
+            this.municipioBindingSource.DataMember = "Municipio";
+            this.municipioBindingSource.DataSource = this.matrizDataSet;
+            // 
             // cbbSector
             // 
             this.cbbSector.BackColor = System.Drawing.Color.White;
@@ -606,6 +639,11 @@
             this.cbbSector.ThemeName = "VisualStudio2012Light";
             this.cbbSector.Validar = true;
             this.cbbSector.ValueMember = "IdSector";
+            // 
+            // sectorBindingSource
+            // 
+            this.sectorBindingSource.DataMember = "Sector";
+            this.sectorBindingSource.DataSource = this.matrizDataSet;
             // 
             // radLabel8
             // 
@@ -680,36 +718,6 @@
             this.cbbEncargado.Validar = true;
             this.cbbEncargado.ValueMember = "IdContacto";
             // 
-            // provinciaBindingSource
-            // 
-            this.provinciaBindingSource.DataMember = "Provincia";
-            this.provinciaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ciudadBindingSource
-            // 
-            this.ciudadBindingSource.DataMember = "Ciudad";
-            this.ciudadBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // municipioBindingSource
-            // 
-            this.municipioBindingSource.DataMember = "Municipio";
-            this.municipioBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // sectorBindingSource
-            // 
-            this.sectorBindingSource.DataMember = "Sector";
-            this.sectorBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // vistaClienteBindingSource
-            // 
-            this.vistaClienteBindingSource.DataMember = "VistaCliente";
-            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
-            // 
             // provinciaTableAdapter
             // 
             this.provinciaTableAdapter.ClearBeforeFill = true;
@@ -730,20 +738,24 @@
             // 
             this.vistaClienteTableAdapter.ClearBeforeFill = true;
             // 
-            // vistaContactoEncargadoBindingSource
-            // 
-            this.vistaContactoEncargadoBindingSource.DataMember = "VistaContactoEncargado";
-            this.vistaContactoEncargadoBindingSource.DataSource = this.matrizDataSet;
-            // 
             // vistaContactoEncargadoTableAdapter
             // 
             this.vistaContactoEncargadoTableAdapter.ClearBeforeFill = true;
+            // 
+            // radStatusStrip1
+            // 
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 567);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(595, 26);
+            this.radStatusStrip1.TabIndex = 26;
+            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
             // 
             // Obra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 593);
+            this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radGroupBox3);
             this.Controls.Add(this.cbbEncargado);
             this.Controls.Add(this.txtNota);
@@ -759,6 +771,7 @@
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.cbbCliente);
             this.Controls.Add(this.dataObra);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Obra";
             // 
@@ -772,8 +785,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataObra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -786,9 +802,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
@@ -797,13 +817,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEncargado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -851,5 +865,6 @@
         private MatrizDataSetTableAdapters.VistaClienteTableAdapter vistaClienteTableAdapter;
         private System.Windows.Forms.BindingSource vistaContactoEncargadoBindingSource;
         private MatrizDataSetTableAdapters.VistaContactoEncargadoTableAdapter vistaContactoEncargadoTableAdapter;
+        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
     }
 }
