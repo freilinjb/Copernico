@@ -43,7 +43,7 @@ namespace Vistas.Formularios
         public override bool Guardar()
         {
             bool bien = true;
-
+            
             try
             {
                 if (Utilidades.Validar(this, errorProvider1) == false)

@@ -36,5 +36,12 @@ namespace Vistas.Formularios
             cliente.MdiParent = this;
             cliente.Show();
         }
+
+        private void btMina_Click(object sender, EventArgs e)
+        {
+            Mina mina = Mina.ObtenerInstancia();
+            mina.MdiParent = this;
+            mina.Show();
+        }
     }
 }

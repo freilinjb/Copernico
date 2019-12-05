@@ -417,6 +417,9 @@
     <None Include="Resources\Factura.png" />
     <None Include="Resources\Proyecto.png" />
     <None Include="Resources\Empresa.png" />
+    <None Include="Resources\Cliente.png" />
+    <None Include="Resources\Mina.png" />
+    <None Include="Resources\Centro.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

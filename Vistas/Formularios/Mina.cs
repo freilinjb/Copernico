@@ -14,6 +14,18 @@ namespace Vistas.Formularios
 
         private DataSet ds;
 
+        private static Mina Instancia;
+
+        public static Mina ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Mina();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
         public Mina()
         {
             InitializeComponent();

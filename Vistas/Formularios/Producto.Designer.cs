@@ -127,7 +127,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 40);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pagePrecio;
+            this.pagePrincipal.SelectedPage = this.pageProducto;
             this.pagePrincipal.Size = new System.Drawing.Size(713, 232);
             this.pagePrincipal.TabIndex = 0;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
