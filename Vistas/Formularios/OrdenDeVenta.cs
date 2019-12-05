@@ -159,7 +159,7 @@ namespace Vistas.Formularios
 
         private void cbbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbCliente.SelectedIndex != -1)
+           if (cbbCliente.SelectedIndex != -1)
             {
                 txtCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
                 //cbbCliente.Text = string.Format("{0:000000}", Convert.ToInt32(cbbCliente.Text.Trim()));
