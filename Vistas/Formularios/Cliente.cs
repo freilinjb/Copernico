@@ -102,7 +102,8 @@ namespace Vistas.Formularios
                         Convert.ToInt32(cbbSector.SelectedValue.ToString()),
                         txtDireccion.Text.Trim(),
                         1,
-                        (chEstado.ToggleStateMode == ToggleStateMode.Click)? 1 : 0);
+                        chEstado.Value);
+
                     Debug.WriteLine("Creacion del cliente");
                     Debug.WriteLine(cliente.getGuardar());
 

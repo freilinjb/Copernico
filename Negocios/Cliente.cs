@@ -21,13 +21,13 @@ namespace Negocios
         public int idSector;
         public string direccion;
         public int idCentro;
-        public int estado;
+        public bool estado;
 
         public Cliente()
         {
 
         }
-        public Cliente(int idcliente, string nombre, string razonSocial,string observacion, int idTipoIdentificacion, string identificacion, string telefono, string correo, int idMunicipio, int idProvincia, int idSector, string direccion, int idCentro, int estado)
+        public Cliente(int idcliente, string nombre, string razonSocial,string observacion, int idTipoIdentificacion, string identificacion, string telefono, string correo, int idMunicipio, int idProvincia, int idSector, string direccion, int idCentro, bool estado)
         {
             this.idcliente = idcliente;
             this.nombre = nombre;

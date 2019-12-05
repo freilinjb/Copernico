@@ -154,12 +154,6 @@
     <Compile Include="Formularios\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Empleado1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Empleado1.Designer.cs">
-      <DependentUpon>Empleado1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Entrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,9 +323,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Conduce.resx">
       <DependentUpon>Conduce.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Empleado1.resx">
-      <DependentUpon>Empleado1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Entrada.resx">
       <DependentUpon>Entrada.cs</DependentUpon>
