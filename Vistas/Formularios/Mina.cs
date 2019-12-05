@@ -9,7 +9,7 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Mina : Telerik.WinControls.UI.RadForm
+    public partial class Mina : FormBase
     {
         public Mina()
         {
