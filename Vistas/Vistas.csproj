@@ -420,6 +420,7 @@
     <None Include="Resources\Cliente.png" />
     <None Include="Resources\Mina.png" />
     <None Include="Resources\Centro.png" />
+    <None Include="Resources\Analisis.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

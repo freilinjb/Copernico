@@ -43,6 +43,8 @@ namespace Vistas.Formularios
 
         private void OrdenDeVenta_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
+
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.UnidadProducto' Puede moverla o quitarla según sea necesario.
             this.unidadProductoTableAdapter.Fill(this.matrizDataSet.UnidadProducto);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaProductoCentro' Puede moverla o quitarla según sea necesario.
@@ -50,7 +52,6 @@ namespace Vistas.Formularios
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
             //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
-            RadMessageBox.ThemeName = this.ThemeName;
 
             //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
             this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
@@ -78,81 +79,89 @@ namespace Vistas.Formularios
         public override bool Guardar()
         {
             bool bien = false;
-            errorProvider1.Clear();
-            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+            try
             {
-                if (dataProducto.Rows.Count > 0)
+                errorProvider1.Clear();
+                if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    RadMessageBox.Show("Validado");
-
-                    string IdFormaDePago = (cbbFormaPago.SelectedValue == null) ? "null" : cbbFormaPago.SelectedValue.ToString();
-
-
-                    Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
-                        Convert.ToInt32(txtNumOrden.Text.Trim()),
-                        1,
-                        (int)cbbCentro.SelectedValue,
-                        1,
-                        (int)cbbTipoVenta.SelectedValue,
-                        (int)cbbCliente.SelectedValue,
-                        (int)cbbObra.SelectedValue,
-                        (int)IdContactoEncargado,
-                        txtNumOrdenCompra.Text,
-                        IdFormaDePago,
-                        txtNota.Text.Trim(),
-                        (int)cbbEstado.SelectedValue);
-
-
-                    ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
-
-
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (dataProducto.Rows.Count > 0)
                     {
-                        float subtotal = 0, itbis = 0;
-                        foreach (var Fila in dataProducto.Rows)
+                        RadMessageBox.Show("Validado");
+
+                        string IdFormaDePago = (cbbFormaPago.SelectedValue == null) ? "null" : cbbFormaPago.SelectedValue.ToString();
+
+
+                        Negocios.Entidades.OrdenDeVenta ordenDeVenta = new Negocios.Entidades.OrdenDeVenta(
+                            Convert.ToInt32(txtNumOrden.Text.Trim()),
+                            1,
+                            (int)cbbCentro.SelectedValue,
+                            1,
+                            (int)cbbTipoVenta.SelectedValue,
+                            (int)cbbCliente.SelectedValue,
+                            (int)cbbObra.SelectedValue,
+                            (int)IdContactoEncargado,
+                            txtNumOrdenCompra.Text,
+                            IdFormaDePago,
+                            txtNota.Text.Trim(),
+                            (int)cbbEstado.SelectedValue);
+
+
+                        ds = Negocios.Utilidades.Ejecutar(ordenDeVenta.getGuardar());
+
+
+                        if (ds.Tables[0].Rows.Count > 0)
                         {
-                            int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
-                            subtotal += Convert.ToSingle(Convert.ToSingle(Fila.Cells["Cantidad"].Value.ToString()) * Convert.ToSingle(Fila.Cells["Precio"].Value.ToString()));
-                            itbis += Convert.ToSingle(Fila.Cells["Itbis"].Value.ToString());
-                            //Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
-                            Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
-
-                        }
-
-                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-
-                        cbbCliente.Focus();
-
-                        //imprimir    
-
-                        ////cbbProducto.EditorControl.Rows.Clear();
-
-                        Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaOrdenVenta WHERE NumOrden = {txtNumOrden.Text.Trim()}"), "VistaDetalleOrdenDataSet",Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaDetalleOrden WHERE NumOrden = '{txtNumOrden.Text.Trim()}'"));
-
-
-                        ImprimirForm.ShowDialog();
-                        Negocios.Utilidades.Limpiar(this, errorProvider1);
-
-
-                        if (dataProducto.Rows.Count > 0)
-                        {
-                            for (int i = dataProducto.Rows.Count - 1; i >= 0; i--)
+                            float subtotal = 0, itbis = 0;
+                            foreach (var Fila in dataProducto.Rows)
                             {
-                                dataProducto.Rows.RemoveAt(i);
+                                int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
+                                subtotal += Convert.ToSingle(Convert.ToSingle(Fila.Cells["Cantidad"].Value.ToString()) * Convert.ToSingle(Fila.Cells["Precio"].Value.ToString()));
+                                itbis += Convert.ToSingle(Fila.Cells["Itbis"].Value.ToString());
+                                //Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                                Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+
+                            }
+
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                            cbbCliente.Focus();
+
+                            //imprimir    
+
+                            ////cbbProducto.EditorControl.Rows.Clear();
+
+                            Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaOrdenVenta WHERE NumOrden = {txtNumOrden.Text.Trim()}"), "VistaDetalleOrdenDataSet", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaDetalleOrden WHERE NumOrden = '{txtNumOrden.Text.Trim()}'"));
+
+
+                            ImprimirForm.ShowDialog();
+                            Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+
+                            if (dataProducto.Rows.Count > 0)
+                            {
+                                for (int i = dataProducto.Rows.Count - 1; i >= 0; i--)
+                                {
+                                    dataProducto.Rows.RemoveAt(i);
+                                }
                             }
                         }
                     }
-                }
 
-                else
-                {
-                    RadMessageBox.Show("Aun no ha registrado productos");
-                    cbbProducto.Focus();
+                    else
+                    {
+                        RadMessageBox.Show("Aun no ha registrado productos");
+                        cbbProducto.Focus();
 
+                    }
                 }
+                txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
+
             }
-            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
-
+            catch (Exception ex)
+            {
+                bien = false;
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+            }
             return bien;
         }
 

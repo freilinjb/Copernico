@@ -43,5 +43,17 @@ namespace Vistas.Formularios
             mina.MdiParent = this;
             mina.Show();
         }
+
+        private void radButtonElement3_Click(object sender, EventArgs e)
+        {
+            OrdenDeVenta venta = OrdenDeVenta.ObtenerInstancia();
+            venta.MdiParent = this;
+            venta.Show();
+        }
+
+        private void btAnalisis_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

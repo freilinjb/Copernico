@@ -34,26 +34,38 @@ namespace Vistas.Formularios
 
         private void MasterTemplate_CellValueChanged(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
+            float pasante = 0;
+            float porcentajePasante = 0;
             if(e.Column.Name == "PesoRetenido")
             {
-                Debug.WriteLine("Cambio");
-                e.Row.Cells["Pasante"].Value = (((Single)e.Value * 100)/Convert.ToSingle(txtCantidadInicial.Text.Trim()))/100;
-                e.Row.Cells["Retenido"].Value = (((Single)e.Value * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100;
 
-                //RetenidoAcumulado += (float)e.Row.Cells["Retenido"].Value;
-                e.Row.Cells["RetenidoAcumulado"].Value =  RetenidoAcumulado;
+
+                if (porcentajePasante <= 1)
+                {
+                    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
+                else
+                {
+                    foreach (var File in dataTamiz.Rows)
+                    {
+                        porcentajePasante += (float)File.Cells["Pasante"].Value;
+                        PesoRetenido += (float)File.Cells["PesoRetenido"].Value;
+                    }
+
+                    pasante = (((Single)e.Value * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100;
+                    Debug.WriteLine("Cambio");
+                    e.Row.Cells["Pasante"].Value = pasante;
+                    e.Row.Cells["Retenido"].Value = pasante;
+
+                    //RetenidoAcumulado += (float)e.Row.Cells["Retenido"].Value;
+                    e.Row.Cells["RetenidoAcumulado"].Value = RetenidoAcumulado;
+                    txtCantidadFinal.Text = PesoRetenido.ToString();
+
+                }
+
                 
-            }
-            if(e.Column.Name == "Retenido")
-            {
 
             }
-            PesoRetenido = 0;
-            foreach (var File in dataTamiz.Rows)
-            {
-                PesoRetenido += (float)File.Cells["PesoRetenido"].Value;
-            }
-            txtCantidadFinal.Text = PesoRetenido.ToString();
         }
     }
 }
