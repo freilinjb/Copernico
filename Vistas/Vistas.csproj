@@ -190,11 +190,11 @@
     <Compile Include="Formularios\TipoInventario.Designer.cs">
       <DependentUpon>TipoInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Lote.cs">
+    <Compile Include="Formularios\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Lote.Designer.cs">
-      <DependentUpon>Lote.cs</DependentUpon>
+    <Compile Include="Formularios\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\OrdenDeCompra.cs">
       <SubType>Form</SubType>
@@ -345,8 +345,8 @@
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Lote.resx">
-      <DependentUpon>Lote.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\OrdenDeCompra.resx">
       <DependentUpon>OrdenDeCompra.cs</DependentUpon>

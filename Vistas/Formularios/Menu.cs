@@ -9,9 +9,9 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Lote : FormBase
+    public partial class Menu : FormBase
     {
-        public Lote()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -53,7 +53,9 @@ namespace Vistas.Formularios
 
         private void btAnalisis_Click(object sender, EventArgs e)
         {
-
+            Analisis analisis = Analisis.ObtenerInstancia();
+            analisis.MdiParent = this;
+            analisis.Show();
         }
     }
 }

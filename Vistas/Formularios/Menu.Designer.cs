@@ -1,6 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
-    partial class Lote
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lote));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonBarGroup3 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -68,10 +69,10 @@
             this.ribbonTab9 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup11 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btAnalisis = new Telerik.WinControls.UI.RadButtonElement();
+            this.btFiltro = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup13 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
-            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
-            this.btFiltro = new Telerik.WinControls.UI.RadButtonElement();
+            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -84,6 +85,20 @@
             this.radButtonElement2});
             this.radRibbonBarGroup1.Name = "radRibbonBarGroup1";
             this.radRibbonBarGroup1.Text = "Registro de Inventario";
+            // 
+            // radButtonElement1
+            // 
+            this.radButtonElement1.AutoSize = true;
+            this.radButtonElement1.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.Auto;
+            this.radButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
+            this.radButtonElement1.FlipText = false;
+            this.radButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement1.Image")));
+            this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement1.Name = "radButtonElement1";
+            this.radButtonElement1.Shape = null;
+            this.radButtonElement1.SmallImage = null;
+            this.radButtonElement1.Text = "Registro de Lote";
+            this.radButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // radButtonElement2
             // 
@@ -125,7 +140,8 @@
             // 
             this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radLabelElement1,
-            this.radLabelElement2});
+            this.radLabelElement2,
+            this.commandBarSeparator1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 516);
             this.radStatusStrip1.Name = "radStatusStrip1";
             this.radStatusStrip1.Size = new System.Drawing.Size(1135, 26);
@@ -179,7 +195,7 @@
             // ribbonTab6
             // 
             this.ribbonTab6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbonTab6.IsSelected = false;
+            this.ribbonTab6.IsSelected = true;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup4,
             this.radRibbonBarGroup5,
@@ -384,7 +400,7 @@
             // ribbonTab9
             // 
             this.ribbonTab9.Image = null;
-            this.ribbonTab9.IsSelected = true;
+            this.ribbonTab9.IsSelected = false;
             this.ribbonTab9.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup11,
             this.radRibbonBarGroup13});
@@ -410,29 +426,6 @@
             this.btAnalisis.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.btAnalisis.Click += new System.EventHandler(this.btAnalisis_Click);
             // 
-            // radRibbonBarGroup13
-            // 
-            this.radRibbonBarGroup13.Name = "radRibbonBarGroup13";
-            this.radRibbonBarGroup13.Text = "Informes";
-            // 
-            // radRibbonFormBehavior1
-            // 
-            this.radRibbonFormBehavior1.Form = this;
-            // 
-            // radButtonElement1
-            // 
-            this.radButtonElement1.AutoSize = true;
-            this.radButtonElement1.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.Auto;
-            this.radButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
-            this.radButtonElement1.FlipText = false;
-            this.radButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement1.Image")));
-            this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.radButtonElement1.Name = "radButtonElement1";
-            this.radButtonElement1.Shape = null;
-            this.radButtonElement1.SmallImage = null;
-            this.radButtonElement1.Text = "Registro de Lote";
-            this.radButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
             // btFiltro
             // 
             this.btFiltro.Alignment = System.Drawing.ContentAlignment.BottomCenter;
@@ -442,7 +435,23 @@
             this.btFiltro.Text = "Filtro";
             this.btFiltro.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
-            // Lote
+            // radRibbonBarGroup13
+            // 
+            this.radRibbonBarGroup13.Name = "radRibbonBarGroup13";
+            this.radRibbonBarGroup13.Text = "Informes";
+            // 
+            // radRibbonFormBehavior1
+            // 
+            this.radRibbonFormBehavior1.Form = this;
+            // 
+            // commandBarSeparator1
+            // 
+            this.commandBarSeparator1.Name = "commandBarSeparator1";
+            this.radStatusStrip1.SetSpring(this.commandBarSeparator1, false);
+            this.commandBarSeparator1.Text = "";
+            this.commandBarSeparator1.VisibleInOverflowMenu = false;
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,7 +462,7 @@
             this.IconScaling = Telerik.WinControls.Enumerations.ImageScaling.None;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
-            this.Name = "Lote";
+            this.Name = "Menu";
             // 
             // 
             // 
@@ -512,5 +521,6 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup13;
         private Telerik.WinControls.UI.RadButtonElement btAnalisis;
         private Telerik.WinControls.UI.RadButtonElement btFiltro;
+        private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
     }
 }

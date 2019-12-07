@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
-            Telerik.WinControls.UI.CategoricalAxis categoricalAxis1 = new Telerik.WinControls.UI.CategoricalAxis();
-            Telerik.WinControls.UI.LinearAxis linearAxis1 = new Telerik.WinControls.UI.LinearAxis();
-            Telerik.WinControls.UI.LineSeries lineSeries1 = new Telerik.WinControls.UI.LineSeries();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint1 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint2 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint3 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint4 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint5 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.WinControls.UI.LineSeries lineSeries2 = new Telerik.WinControls.UI.LineSeries();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint6 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint7 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint8 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint9 = new Telerik.Charting.CategoricalDataPoint();
-            Telerik.Charting.CategoricalDataPoint categoricalDataPoint10 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn17 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn18 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.CartesianArea cartesianArea2 = new Telerik.WinControls.UI.CartesianArea();
+            Telerik.WinControls.UI.CategoricalAxis categoricalAxis2 = new Telerik.WinControls.UI.CategoricalAxis();
+            Telerik.WinControls.UI.LinearAxis linearAxis2 = new Telerik.WinControls.UI.LinearAxis();
+            Telerik.WinControls.UI.LineSeries lineSeries3 = new Telerik.WinControls.UI.LineSeries();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint11 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint12 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint13 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint14 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint15 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.WinControls.UI.LineSeries lineSeries4 = new Telerik.WinControls.UI.LineSeries();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint16 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint17 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint18 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint19 = new Telerik.Charting.CategoricalDataPoint();
+            Telerik.Charting.CategoricalDataPoint categoricalDataPoint20 = new Telerik.Charting.CategoricalDataPoint();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Analisis));
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageCentroInformacionGeneral = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radProgressBar3 = new Telerik.WinControls.UI.RadProgressBar();
-            this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
-            this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
             this.dataTamiz = new Telerik.WinControls.UI.RadGridView();
             this.cbbTipoMaterial = new Negocios.Componentes.cbbPersonal();
@@ -85,26 +85,35 @@
             this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             this.pageAsignacion = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
-            this.radRangeSelector1 = new Telerik.WinControls.UI.RadRangeSelector();
+            this.dataMaterialPorcentaje = new Telerik.WinControls.UI.RadGridView();
+            this.rangoSelector = new Telerik.WinControls.UI.RadRangeSelector();
             this.chardAnalisis = new Telerik.WinControls.UI.RadChartView();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolImprimir = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.radRadialGauge1 = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
+            this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.radialGaugeArc1 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
+            this.radialGaugeArc2 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
+            this.radialGaugeNeedle1 = new Telerik.WinControls.UI.Gauges.RadialGaugeNeedle();
+            this.radialGaugeLabels1 = new Telerik.WinControls.UI.Gauges.RadialGaugeLabels();
+            this.radialGaugeSingleLabel1 = new Telerik.WinControls.UI.Gauges.RadialGaugeSingleLabel();
+            this.radProgressBar3 = new Telerik.WinControls.UI.RadProgressBar();
+            this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
+            this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
             this.pageCentroInformacionGeneral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTamiz)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTamiz.MasterTemplate)).BeginInit();
@@ -130,18 +139,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             this.pageAsignacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRangeSelector1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chardAnalisis)).BeginInit();
             this.chardAnalisis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRadialGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // radStatusStrip1
+            // 
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 644);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(820, 26);
+            this.radStatusStrip1.TabIndex = 67;
+            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolImprimir,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(820, 25);
+            this.toolStrip1.TabIndex = 43;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // pagePrincipal
             // 
@@ -155,7 +191,7 @@
             this.pagePrincipal.Location = new System.Drawing.Point(12, 28);
             this.pagePrincipal.Name = "pagePrincipal";
             this.pagePrincipal.SelectedPage = this.pageCentroInformacionGeneral;
-            this.pagePrincipal.Size = new System.Drawing.Size(796, 610);
+            this.pagePrincipal.Size = new System.Drawing.Size(796, 571);
             this.pagePrincipal.TabIndex = 42;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pagePrincipal.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
@@ -164,12 +200,12 @@
             // 
             // pageCentroInformacionGeneral
             // 
-            this.pageCentroInformacionGeneral.Controls.Add(this.radProgressBar3);
-            this.pageCentroInformacionGeneral.Controls.Add(this.radProgressBar2);
-            this.pageCentroInformacionGeneral.Controls.Add(this.radProgressBar1);
+            this.pageCentroInformacionGeneral.Controls.Add(this.radRadialGauge1);
+            this.pageCentroInformacionGeneral.Controls.Add(this.radDateTimePicker1);
             this.pageCentroInformacionGeneral.Controls.Add(this.radSeparator3);
             this.pageCentroInformacionGeneral.Controls.Add(this.dataTamiz);
             this.pageCentroInformacionGeneral.Controls.Add(this.cbbTipoMaterial);
+            this.pageCentroInformacionGeneral.Controls.Add(this.radLabel1);
             this.pageCentroInformacionGeneral.Controls.Add(this.radLabel11);
             this.pageCentroInformacionGeneral.Controls.Add(this.cbbMina);
             this.pageCentroInformacionGeneral.Controls.Add(this.cbbTipoAnalisis);
@@ -193,39 +229,8 @@
             this.pageCentroInformacionGeneral.ItemSize = new System.Drawing.SizeF(394F, 27F);
             this.pageCentroInformacionGeneral.Location = new System.Drawing.Point(5, 33);
             this.pageCentroInformacionGeneral.Name = "pageCentroInformacionGeneral";
-            this.pageCentroInformacionGeneral.Size = new System.Drawing.Size(786, 572);
+            this.pageCentroInformacionGeneral.Size = new System.Drawing.Size(786, 533);
             this.pageCentroInformacionGeneral.Text = "Informacion general";
-            // 
-            // radProgressBar3
-            // 
-            this.radProgressBar3.Location = new System.Drawing.Point(627, 110);
-            this.radProgressBar3.Name = "radProgressBar3";
-            this.radProgressBar3.Size = new System.Drawing.Size(130, 24);
-            this.radProgressBar3.TabIndex = 66;
-            this.radProgressBar3.Text = "Desperdicio";
-            this.radProgressBar3.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar3.Value1 = 50;
-            this.radProgressBar3.Value2 = 35;
-            // 
-            // radProgressBar2
-            // 
-            this.radProgressBar2.Location = new System.Drawing.Point(627, 80);
-            this.radProgressBar2.Name = "radProgressBar2";
-            this.radProgressBar2.Size = new System.Drawing.Size(130, 24);
-            this.radProgressBar2.TabIndex = 66;
-            this.radProgressBar2.Text = "Fino";
-            this.radProgressBar2.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar2.Value1 = 85;
-            // 
-            // radProgressBar1
-            // 
-            this.radProgressBar1.Location = new System.Drawing.Point(627, 50);
-            this.radProgressBar1.Name = "radProgressBar1";
-            this.radProgressBar1.Size = new System.Drawing.Size(130, 24);
-            this.radProgressBar1.TabIndex = 66;
-            this.radProgressBar1.Text = "Grueso";
-            this.radProgressBar1.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar1.Value1 = 35;
             // 
             // radSeparator3
             // 
@@ -257,63 +262,63 @@
             this.dataTamiz.MasterTemplate.AllowDragToGroup = false;
             this.dataTamiz.MasterTemplate.AllowRowResize = false;
             this.dataTamiz.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.DataType = typeof(int);
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FormatString = "{0:000}";
-            gridViewTextBoxColumn1.HeaderText = "No. Tamiz";
-            gridViewTextBoxColumn1.Name = "NumMalla";
-            gridViewTextBoxColumn1.ReadOnly = true;
-            gridViewTextBoxColumn1.Width = 122;
-            gridViewTextBoxColumn2.DataType = typeof(float);
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FormatString = "{0:0.0000 mm}";
-            gridViewTextBoxColumn2.HeaderText = "Tamiz mm";
-            gridViewTextBoxColumn2.Name = "Apertura";
-            gridViewTextBoxColumn2.ReadOnly = true;
-            gridViewTextBoxColumn2.Width = 120;
-            gridViewTextBoxColumn3.DataType = typeof(float);
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.HeaderText = "Peso Retenido (Gr.)";
-            gridViewTextBoxColumn3.Name = "PesoRetenido";
-            gridViewTextBoxColumn3.Width = 125;
-            gridViewTextBoxColumn4.DataType = typeof(float);
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FormatString = "{0:P3}";
-            gridViewTextBoxColumn4.HeaderText = "Retenido %";
-            gridViewTextBoxColumn4.Name = "Retenido";
-            gridViewTextBoxColumn4.ReadOnly = true;
-            gridViewTextBoxColumn4.Width = 135;
-            gridViewTextBoxColumn5.DataType = typeof(float);
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FormatString = "{0:P3}";
-            gridViewTextBoxColumn5.HeaderText = "Retenido Acumulado";
-            gridViewTextBoxColumn5.Name = "RetenidoAcumulado";
-            gridViewTextBoxColumn5.ReadOnly = true;
-            gridViewTextBoxColumn5.Width = 140;
-            gridViewTextBoxColumn6.DataType = typeof(float);
-            gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FormatString = "{0:P3}";
-            gridViewTextBoxColumn6.HeaderText = "Pasante (%)";
-            gridViewTextBoxColumn6.Name = "Pasante";
-            gridViewTextBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn6.Width = 147;
+            gridViewTextBoxColumn10.DataType = typeof(int);
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
+            gridViewTextBoxColumn10.FormatString = "{0:000}";
+            gridViewTextBoxColumn10.HeaderText = "No. Tamiz";
+            gridViewTextBoxColumn10.Name = "NumMalla";
+            gridViewTextBoxColumn10.ReadOnly = true;
+            gridViewTextBoxColumn10.Width = 121;
+            gridViewTextBoxColumn11.DataType = typeof(float);
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
+            gridViewTextBoxColumn11.FormatString = "{0:0.0000 mm}";
+            gridViewTextBoxColumn11.HeaderText = "Tamiz mm";
+            gridViewTextBoxColumn11.Name = "Apertura";
+            gridViewTextBoxColumn11.ReadOnly = true;
+            gridViewTextBoxColumn11.Width = 119;
+            gridViewTextBoxColumn12.DataType = typeof(float);
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
+            gridViewTextBoxColumn12.HeaderText = "Peso Retenido (Gr.)";
+            gridViewTextBoxColumn12.Name = "PesoRetenido";
+            gridViewTextBoxColumn12.Width = 124;
+            gridViewTextBoxColumn13.DataType = typeof(float);
+            gridViewTextBoxColumn13.EnableExpressionEditor = false;
+            gridViewTextBoxColumn13.FormatString = "{0:P3}";
+            gridViewTextBoxColumn13.HeaderText = "Retenido %";
+            gridViewTextBoxColumn13.Name = "Retenido";
+            gridViewTextBoxColumn13.ReadOnly = true;
+            gridViewTextBoxColumn13.Width = 134;
+            gridViewTextBoxColumn14.DataType = typeof(float);
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.FormatString = "{0:P3}";
+            gridViewTextBoxColumn14.HeaderText = "Retenido Acumulado";
+            gridViewTextBoxColumn14.Name = "RetenidoAcumulado";
+            gridViewTextBoxColumn14.ReadOnly = true;
+            gridViewTextBoxColumn14.Width = 139;
+            gridViewTextBoxColumn15.DataType = typeof(float);
+            gridViewTextBoxColumn15.EnableExpressionEditor = false;
+            gridViewTextBoxColumn15.FormatString = "{0:P3}";
+            gridViewTextBoxColumn15.HeaderText = "Pasante (%)";
+            gridViewTextBoxColumn15.Name = "Pasante";
+            gridViewTextBoxColumn15.ReadOnly = true;
+            gridViewTextBoxColumn15.Width = 146;
             this.dataTamiz.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5,
-            gridViewTextBoxColumn6});
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12,
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14,
+            gridViewTextBoxColumn15});
             this.dataTamiz.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataTamiz.MasterTemplate.EnableGrouping = false;
             this.dataTamiz.MasterTemplate.EnableSorting = false;
             this.dataTamiz.MasterTemplate.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.CellSelect;
             this.dataTamiz.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataTamiz.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dataTamiz.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dataTamiz.Name = "dataTamiz";
             this.dataTamiz.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataTamiz.ShowGroupPanel = false;
-            this.dataTamiz.Size = new System.Drawing.Size(783, 353);
+            this.dataTamiz.Size = new System.Drawing.Size(783, 317);
             this.dataTamiz.TabIndex = 64;
             this.dataTamiz.ThemeName = "VisualStudio2012Light";
             this.dataTamiz.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.MasterTemplate_CellValueChanged);
@@ -569,195 +574,182 @@
             // 
             // pageAsignacion
             // 
-            this.pageAsignacion.Controls.Add(this.radSeparator2);
-            this.pageAsignacion.Controls.Add(this.radGridView1);
-            this.pageAsignacion.Controls.Add(this.radRangeSelector1);
+            this.pageAsignacion.Controls.Add(this.tableLayoutPanel2);
             this.pageAsignacion.Controls.Add(this.chardAnalisis);
             this.pageAsignacion.ItemSize = new System.Drawing.SizeF(401F, 27F);
             this.pageAsignacion.Location = new System.Drawing.Point(5, 33);
             this.pageAsignacion.Name = "pageAsignacion";
-            this.pageAsignacion.Size = new System.Drawing.Size(786, 592);
+            this.pageAsignacion.Size = new System.Drawing.Size(786, 533);
             this.pageAsignacion.Text = "Analitica y Estadistica";
             // 
-            // radSeparator2
+            // dataMaterialPorcentaje
             // 
-            this.radSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator2.Location = new System.Drawing.Point(3, 498);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(783, 13);
-            this.radSeparator2.TabIndex = 43;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
-            // 
-            // radGridView1
-            // 
-            this.radGridView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.radGridView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radGridView1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.radGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView1.Location = new System.Drawing.Point(3, 387);
+            this.dataMaterialPorcentaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataMaterialPorcentaje.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataMaterialPorcentaje.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataMaterialPorcentaje.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataMaterialPorcentaje.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataMaterialPorcentaje.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataMaterialPorcentaje.Location = new System.Drawing.Point(3, 3);
             // 
             // 
             // 
-            this.radGridView1.MasterTemplate.AllowAddNewRow = false;
-            this.radGridView1.MasterTemplate.AllowColumnChooser = false;
-            this.radGridView1.MasterTemplate.AllowColumnReorder = false;
-            this.radGridView1.MasterTemplate.AllowDragToGroup = false;
-            this.radGridView1.MasterTemplate.AllowRowResize = false;
-            this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn7.DataType = typeof(int);
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Codigo";
-            gridViewTextBoxColumn7.HeaderText = "Codigo";
-            gridViewTextBoxColumn7.Name = "Codigo";
-            gridViewTextBoxColumn7.Width = 57;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Material";
-            gridViewTextBoxColumn8.HeaderText = "Material";
-            gridViewTextBoxColumn8.Name = "Material";
-            gridViewTextBoxColumn8.Width = 242;
-            gridViewTextBoxColumn9.DataType = typeof(float);
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "Porcentaje";
-            gridViewTextBoxColumn9.HeaderText = "Porcentaje";
-            gridViewTextBoxColumn9.Name = "Porcentaje";
-            gridViewTextBoxColumn9.Width = 81;
-            this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9});
-            this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
-            this.radGridView1.MasterTemplate.EnableGrouping = false;
-            this.radGridView1.MasterTemplate.EnableSorting = false;
-            this.radGridView1.MasterTemplate.ShowRowHeaderColumn = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.radGridView1.Name = "radGridView1";
-            this.radGridView1.ReadOnly = true;
-            this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radGridView1.ShowGroupPanel = false;
-            this.radGridView1.Size = new System.Drawing.Size(377, 105);
-            this.radGridView1.TabIndex = 24;
-            this.radGridView1.ThemeName = "VisualStudio2012Light";
+            this.dataMaterialPorcentaje.MasterTemplate.AllowAddNewRow = false;
+            this.dataMaterialPorcentaje.MasterTemplate.AllowColumnChooser = false;
+            this.dataMaterialPorcentaje.MasterTemplate.AllowColumnReorder = false;
+            this.dataMaterialPorcentaje.MasterTemplate.AllowDragToGroup = false;
+            this.dataMaterialPorcentaje.MasterTemplate.AllowRowResize = false;
+            this.dataMaterialPorcentaje.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn16.DataType = typeof(int);
+            gridViewTextBoxColumn16.EnableExpressionEditor = false;
+            gridViewTextBoxColumn16.FieldName = "Codigo";
+            gridViewTextBoxColumn16.HeaderText = "Codigo";
+            gridViewTextBoxColumn16.Name = "Codigo";
+            gridViewTextBoxColumn16.Width = 58;
+            gridViewTextBoxColumn17.EnableExpressionEditor = false;
+            gridViewTextBoxColumn17.FieldName = "Material";
+            gridViewTextBoxColumn17.HeaderText = "Material";
+            gridViewTextBoxColumn17.Name = "Material";
+            gridViewTextBoxColumn17.Width = 247;
+            gridViewTextBoxColumn18.DataType = typeof(float);
+            gridViewTextBoxColumn18.EnableExpressionEditor = false;
+            gridViewTextBoxColumn18.FieldName = "Porcentaje";
+            gridViewTextBoxColumn18.HeaderText = "Porcentaje";
+            gridViewTextBoxColumn18.Name = "Porcentaje";
+            gridViewTextBoxColumn18.Width = 83;
+            this.dataMaterialPorcentaje.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn16,
+            gridViewTextBoxColumn17,
+            gridViewTextBoxColumn18});
+            this.dataMaterialPorcentaje.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataMaterialPorcentaje.MasterTemplate.EnableGrouping = false;
+            this.dataMaterialPorcentaje.MasterTemplate.EnableSorting = false;
+            this.dataMaterialPorcentaje.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataMaterialPorcentaje.MasterTemplate.ViewDefinition = tableViewDefinition4;
+            this.dataMaterialPorcentaje.Name = "dataMaterialPorcentaje";
+            this.dataMaterialPorcentaje.ReadOnly = true;
+            this.dataMaterialPorcentaje.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataMaterialPorcentaje.ShowGroupPanel = false;
+            this.dataMaterialPorcentaje.Size = new System.Drawing.Size(385, 144);
+            this.dataMaterialPorcentaje.TabIndex = 24;
+            this.dataMaterialPorcentaje.ThemeName = "VisualStudio2012Light";
             // 
-            // radRangeSelector1
+            // rangoSelector
             // 
-            this.radRangeSelector1.AssociatedControl = this.chardAnalisis;
-            this.radRangeSelector1.Location = new System.Drawing.Point(386, 387);
-            this.radRangeSelector1.Name = "radRangeSelector1";
-            this.radRangeSelector1.Size = new System.Drawing.Size(400, 105);
-            this.radRangeSelector1.StartRange = 0F;
-            this.radRangeSelector1.TabIndex = 23;
-            this.radRangeSelector1.ThemeName = "VisualStudio2012Light";
+            this.rangoSelector.AssociatedControl = this.chardAnalisis;
+            this.rangoSelector.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rangoSelector.Location = new System.Drawing.Point(394, 3);
+            this.rangoSelector.Name = "rangoSelector";
+            this.rangoSelector.Size = new System.Drawing.Size(386, 144);
+            this.rangoSelector.StartRange = 0F;
+            this.rangoSelector.TabIndex = 23;
+            this.rangoSelector.ThemeName = "VisualStudio2012Light";
             // 
             // chardAnalisis
             // 
-            cartesianArea1.ShowGrid = true;
-            this.chardAnalisis.AreaDesign = cartesianArea1;
-            categoricalAxis1.IsPrimary = true;
-            categoricalAxis1.LabelRotationAngle = 300D;
-            categoricalAxis1.Title = "";
-            linearAxis1.AxisType = Telerik.Charting.AxisType.Second;
-            linearAxis1.IsPrimary = true;
-            linearAxis1.LabelRotationAngle = 300D;
-            linearAxis1.MajorStep = 10D;
-            linearAxis1.TickOrigin = null;
-            linearAxis1.Title = "";
+            this.chardAnalisis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            cartesianArea2.GridDesign.DrawVerticalFills = false;
+            cartesianArea2.ShowGrid = true;
+            this.chardAnalisis.AreaDesign = cartesianArea2;
+            categoricalAxis2.IsPrimary = true;
+            categoricalAxis2.LabelRotationAngle = 300D;
+            categoricalAxis2.Title = "";
+            linearAxis2.AxisType = Telerik.Charting.AxisType.Second;
+            linearAxis2.IsPrimary = true;
+            linearAxis2.LabelRotationAngle = 300D;
+            linearAxis2.MajorStep = 10D;
+            linearAxis2.TickOrigin = null;
+            linearAxis2.Title = "";
             this.chardAnalisis.Axes.AddRange(new Telerik.WinControls.UI.Axis[] {
-            categoricalAxis1,
-            linearAxis1});
+            categoricalAxis2,
+            linearAxis2});
             this.chardAnalisis.Controls.Add(this.radSeparator1);
             this.chardAnalisis.Location = new System.Drawing.Point(3, 3);
             this.chardAnalisis.Name = "chardAnalisis";
-            categoricalDataPoint1.Category = "A";
-            categoricalDataPoint1.Label = 15D;
-            categoricalDataPoint1.Value = 15D;
-            categoricalDataPoint2.Category = "B";
-            categoricalDataPoint2.Label = 90D;
-            categoricalDataPoint2.Value = 90D;
-            categoricalDataPoint3.Category = "C";
-            categoricalDataPoint3.Label = 63D;
-            categoricalDataPoint3.Value = 63D;
-            categoricalDataPoint4.Category = "D";
-            categoricalDataPoint4.Label = 35D;
-            categoricalDataPoint4.Value = 35D;
-            categoricalDataPoint5.Category = "E";
-            categoricalDataPoint5.Label = 64D;
-            categoricalDataPoint5.Value = 64D;
-            lineSeries1.DataPoints.AddRange(new Telerik.Charting.DataPoint[] {
-            categoricalDataPoint1,
-            categoricalDataPoint2,
-            categoricalDataPoint3,
-            categoricalDataPoint4,
-            categoricalDataPoint5});
-            lineSeries1.HorizontalAxis = categoricalAxis1;
-            lineSeries1.LabelAngle = 90D;
-            lineSeries1.LabelDistanceToPoint = 15D;
-            lineSeries1.ShowLabels = true;
-            lineSeries1.Spline = true;
-            lineSeries1.VerticalAxis = linearAxis1;
-            categoricalDataPoint6.Category = "A";
-            categoricalDataPoint6.Label = 32D;
-            categoricalDataPoint6.Value = 32D;
-            categoricalDataPoint7.Category = "B";
-            categoricalDataPoint7.Label = 78D;
-            categoricalDataPoint7.Value = 78D;
-            categoricalDataPoint8.Category = "C";
-            categoricalDataPoint8.Label = 64D;
-            categoricalDataPoint8.Value = 64D;
-            categoricalDataPoint9.Category = "D";
-            categoricalDataPoint9.Label = 99D;
-            categoricalDataPoint9.Value = 99D;
-            categoricalDataPoint10.Category = "E";
-            categoricalDataPoint10.Label = 79D;
-            categoricalDataPoint10.Value = 79D;
-            lineSeries2.DataPoints.AddRange(new Telerik.Charting.DataPoint[] {
-            categoricalDataPoint6,
-            categoricalDataPoint7,
-            categoricalDataPoint8,
-            categoricalDataPoint9,
-            categoricalDataPoint10});
-            lineSeries2.HorizontalAxis = categoricalAxis1;
-            lineSeries2.LabelAngle = 90D;
-            lineSeries2.LabelDistanceToPoint = 15D;
-            lineSeries2.LegendTitle = null;
-            lineSeries2.Spline = true;
-            lineSeries2.VerticalAxis = linearAxis1;
+            lineSeries3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(212)))), ((int)(((byte)(241)))));
+            lineSeries3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(212)))), ((int)(((byte)(241)))));
+            categoricalDataPoint11.Category = "A";
+            categoricalDataPoint11.Label = 15D;
+            categoricalDataPoint11.Value = 15D;
+            categoricalDataPoint12.Category = "B";
+            categoricalDataPoint12.Label = 90D;
+            categoricalDataPoint12.Value = 90D;
+            categoricalDataPoint13.Category = "C";
+            categoricalDataPoint13.Label = 63D;
+            categoricalDataPoint13.Value = 63D;
+            categoricalDataPoint14.Category = "D";
+            categoricalDataPoint14.Label = 35D;
+            categoricalDataPoint14.Value = 35D;
+            categoricalDataPoint15.Category = "E";
+            categoricalDataPoint15.Label = 64D;
+            categoricalDataPoint15.Value = 64D;
+            lineSeries3.DataPoints.AddRange(new Telerik.Charting.DataPoint[] {
+            categoricalDataPoint11,
+            categoricalDataPoint12,
+            categoricalDataPoint13,
+            categoricalDataPoint14,
+            categoricalDataPoint15});
+            lineSeries3.HorizontalAxis = categoricalAxis2;
+            lineSeries3.LabelAngle = 90D;
+            lineSeries3.LabelDistanceToPoint = 15D;
+            lineSeries3.LegendTitle = null;
+            lineSeries3.ShowLabels = true;
+            lineSeries3.Spline = true;
+            lineSeries3.VerticalAxis = linearAxis2;
+            lineSeries4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            lineSeries4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            categoricalDataPoint16.Category = "A";
+            categoricalDataPoint16.Label = 32D;
+            categoricalDataPoint16.Value = 32D;
+            categoricalDataPoint17.Category = "B";
+            categoricalDataPoint17.Label = 78D;
+            categoricalDataPoint17.Value = 78D;
+            categoricalDataPoint18.Category = "C";
+            categoricalDataPoint18.Label = 64D;
+            categoricalDataPoint18.Value = 64D;
+            categoricalDataPoint19.Category = "D";
+            categoricalDataPoint19.Label = 99D;
+            categoricalDataPoint19.Value = 99D;
+            categoricalDataPoint20.Category = "E";
+            categoricalDataPoint20.Label = 79D;
+            categoricalDataPoint20.Value = 79D;
+            lineSeries4.DataPoints.AddRange(new Telerik.Charting.DataPoint[] {
+            categoricalDataPoint16,
+            categoricalDataPoint17,
+            categoricalDataPoint18,
+            categoricalDataPoint19,
+            categoricalDataPoint20});
+            lineSeries4.HorizontalAxis = categoricalAxis2;
+            lineSeries4.LabelAngle = 90D;
+            lineSeries4.LabelDistanceToPoint = 15D;
+            lineSeries4.LegendTitle = null;
+            lineSeries4.Spline = true;
+            lineSeries4.VerticalAxis = linearAxis2;
             this.chardAnalisis.Series.AddRange(new Telerik.WinControls.UI.ChartSeries[] {
-            lineSeries1,
-            lineSeries2});
+            lineSeries3,
+            lineSeries4});
             this.chardAnalisis.ShowLegend = true;
             this.chardAnalisis.ShowPanZoom = true;
             this.chardAnalisis.ShowTitle = true;
             this.chardAnalisis.ShowToolTip = true;
             this.chardAnalisis.ShowTrackBall = true;
-            this.chardAnalisis.Size = new System.Drawing.Size(780, 382);
+            this.chardAnalisis.Size = new System.Drawing.Size(780, 371);
             this.chardAnalisis.TabIndex = 22;
             this.chardAnalisis.ThemeName = "VisualStudio2012Light";
             // 
             // radSeparator1
             // 
-            this.radSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator1.Location = new System.Drawing.Point(0, 356);
+            this.radSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.radSeparator1.Location = new System.Drawing.Point(3, 355);
             this.radSeparator1.Name = "radSeparator1";
             this.radSeparator1.Size = new System.Drawing.Size(780, 13);
             this.radSeparator1.TabIndex = 43;
             this.radSeparator1.ThemeName = "VisualStudio2012Light";
             // 
-            // toolStrip1
+            // errorProvider1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolImprimir,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton5});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(820, 25);
-            this.toolStrip1.TabIndex = 43;
-            this.toolStrip1.Text = "toolStrip1";
+            this.errorProvider1.ContainerControl = this;
             // 
             // toolImprimir
             // 
@@ -805,23 +797,168 @@
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "toolStripButton5";
             // 
-            // radStatusStrip1
+            // radLabel1
             // 
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 644);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(820, 26);
-            this.radStatusStrip1.TabIndex = 67;
-            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Location = new System.Drawing.Point(566, 3);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(45, 19);
+            this.radLabel1.TabIndex = 44;
+            this.radLabel1.Text = "Fecha";
             // 
-            // errorProvider1
+            // radDateTimePicker1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.radDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.radDateTimePicker1.Location = new System.Drawing.Point(617, 0);
+            this.radDateTimePicker1.Name = "radDateTimePicker1";
+            this.radDateTimePicker1.Size = new System.Drawing.Size(164, 24);
+            this.radDateTimePicker1.TabIndex = 67;
+            this.radDateTimePicker1.TabStop = false;
+            this.radDateTimePicker1.Text = "sábado, 7 de diciembre de 2019";
+            this.radDateTimePicker1.ThemeName = "VisualStudio2012Light";
+            this.radDateTimePicker1.Value = new System.DateTime(2019, 12, 7, 14, 50, 13, 767);
+            // 
+            // radRadialGauge1
+            // 
+            this.radRadialGauge1.BackColor = System.Drawing.Color.White;
+            this.radRadialGauge1.CausesValidation = false;
+            this.radRadialGauge1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radialGaugeArc1,
+            this.radialGaugeArc2,
+            this.radialGaugeNeedle1,
+            this.radialGaugeLabels1,
+            this.radialGaugeSingleLabel1});
+            this.radRadialGauge1.Location = new System.Drawing.Point(530, 42);
+            this.radRadialGauge1.Name = "radRadialGauge1";
+            this.radRadialGauge1.RangeEnd = 5D;
+            this.radRadialGauge1.Size = new System.Drawing.Size(251, 144);
+            this.radRadialGauge1.StartAngle = 205D;
+            this.radRadialGauge1.SweepAngle = 130D;
+            this.radRadialGauge1.TabIndex = 6;
+            this.radRadialGauge1.Text = "radRadialGauge1";
+            this.radRadialGauge1.Value = 4.4F;
+            // 
+            // radialGaugeArc1
+            // 
+            this.radialGaugeArc1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.radialGaugeArc1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.radialGaugeArc1.BindEndRange = true;
+            this.radialGaugeArc1.Name = "radialGaugeArc1";
+            this.radialGaugeArc1.RangeEnd = 4.4000000953674316D;
+            this.radialGaugeArc1.Width = 40D;
+            // 
+            // radialGaugeArc2
+            // 
+            this.radialGaugeArc2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.radialGaugeArc2.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(209)))), ((int)(((byte)(209)))));
+            this.radialGaugeArc2.BindStartRange = true;
+            this.radialGaugeArc2.Name = "radialGaugeArc2";
+            this.radialGaugeArc2.RangeEnd = 50D;
+            this.radialGaugeArc2.RangeStart = 4.4000000953674316D;
+            this.radialGaugeArc2.Text = "Peso Espesifico";
+            this.radialGaugeArc2.Width = 40D;
+            // 
+            // radialGaugeNeedle1
+            // 
+            this.radialGaugeNeedle1.BackLenghtPercentage = 0D;
+            this.radialGaugeNeedle1.BindValue = true;
+            this.radialGaugeNeedle1.InnerPointRadiusPercentage = 4D;
+            this.radialGaugeNeedle1.LenghtPercentage = 96D;
+            this.radialGaugeNeedle1.Name = "radialGaugeNeedle1";
+            this.radialGaugeNeedle1.Thickness = 0.7D;
+            this.radialGaugeNeedle1.Value = 4.4F;
+            // 
+            // radialGaugeLabels1
+            // 
+            this.radialGaugeLabels1.DrawText = false;
+            this.radialGaugeLabels1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.radialGaugeLabels1.LabelRadiusPercentage = 112F;
+            this.radialGaugeLabels1.LabelsCount = 1;
+            this.radialGaugeLabels1.Name = "radialGaugeLabels1";
+            // 
+            // radialGaugeSingleLabel1
+            // 
+            this.radialGaugeSingleLabel1.BindValue = true;
+            this.radialGaugeSingleLabel1.LabelFormat = "n2";
+            this.radialGaugeSingleLabel1.LabelText = "Text";
+            this.radialGaugeSingleLabel1.LocationPercentage = new System.Drawing.SizeF(0F, 0.25F);
+            this.radialGaugeSingleLabel1.Name = "radialGaugeSingleLabel1";
+            // 
+            // radProgressBar3
+            // 
+            this.radProgressBar3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radProgressBar3.Location = new System.Drawing.Point(3, 3);
+            this.radProgressBar3.Name = "radProgressBar3";
+            this.radProgressBar3.Size = new System.Drawing.Size(259, 27);
+            this.radProgressBar3.TabIndex = 68;
+            this.radProgressBar3.Text = "Desperdicio";
+            this.radProgressBar3.ThemeName = "VisualStudio2012Light";
+            this.radProgressBar3.Value1 = 50;
+            this.radProgressBar3.Value2 = 35;
+            // 
+            // radProgressBar2
+            // 
+            this.radProgressBar2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radProgressBar2.Location = new System.Drawing.Point(533, 3);
+            this.radProgressBar2.Name = "radProgressBar2";
+            this.radProgressBar2.Size = new System.Drawing.Size(260, 27);
+            this.radProgressBar2.TabIndex = 69;
+            this.radProgressBar2.Text = "Fino";
+            this.radProgressBar2.ThemeName = "VisualStudio2012Light";
+            this.radProgressBar2.Value1 = 85;
+            // 
+            // radProgressBar1
+            // 
+            this.radProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radProgressBar1.Location = new System.Drawing.Point(268, 3);
+            this.radProgressBar1.Name = "radProgressBar1";
+            this.radProgressBar1.Size = new System.Drawing.Size(259, 27);
+            this.radProgressBar1.TabIndex = 70;
+            this.radProgressBar1.Text = "Grueso";
+            this.radProgressBar1.ThemeName = "VisualStudio2012Light";
+            this.radProgressBar1.Value1 = 35;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.radProgressBar3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.radProgressBar1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.radProgressBar2, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 605);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 33);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.dataMaterialPorcentaje, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.rangoSelector, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 380);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(783, 150);
+            this.tableLayoutPanel2.TabIndex = 44;
             // 
             // Analisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 670);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pagePrincipal);
@@ -832,13 +969,13 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Analisis";
             this.Load += new System.EventHandler(this.Analisis_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).EndInit();
             this.pagePrincipal.ResumeLayout(false);
             this.pageCentroInformacionGeneral.ResumeLayout(false);
             this.pageCentroInformacionGeneral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTamiz.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTamiz)).EndInit();
@@ -864,17 +1001,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             this.pageAsignacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radRangeSelector1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chardAnalisis)).EndInit();
             this.chardAnalisis.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radRadialGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -909,10 +1050,9 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
         private Telerik.WinControls.UI.RadGridView dataTamiz;
         private Telerik.WinControls.UI.RadChartView chardAnalisis;
-        private Telerik.WinControls.UI.RadRangeSelector radRangeSelector1;
+        private Telerik.WinControls.UI.RadRangeSelector rangoSelector;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
-        private Telerik.WinControls.UI.RadGridView radGridView1;
-        private Telerik.WinControls.UI.RadSeparator radSeparator2;
+        private Telerik.WinControls.UI.RadGridView dataMaterialPorcentaje;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolImprimir;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
@@ -922,8 +1062,19 @@
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.Gauges.RadRadialGauge radRadialGauge1;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme2;
+        private Telerik.WinControls.UI.Gauges.RadialGaugeArc radialGaugeArc1;
+        private Telerik.WinControls.UI.Gauges.RadialGaugeArc radialGaugeArc2;
+        private Telerik.WinControls.UI.Gauges.RadialGaugeNeedle radialGaugeNeedle1;
+        private Telerik.WinControls.UI.Gauges.RadialGaugeLabels radialGaugeLabels1;
+        private Telerik.WinControls.UI.Gauges.RadialGaugeSingleLabel radialGaugeSingleLabel1;
         private Telerik.WinControls.UI.RadProgressBar radProgressBar3;
         private Telerik.WinControls.UI.RadProgressBar radProgressBar2;
         private Telerik.WinControls.UI.RadProgressBar radProgressBar1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
