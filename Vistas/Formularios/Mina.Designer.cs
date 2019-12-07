@@ -63,12 +63,13 @@
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.txtDescripcion = new Negocios.Componentes.TextPersonal();
-            this.pagePersmisoAmbiental = new Telerik.WinControls.UI.RadPageViewPage();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
+            this.txtPrecio = new Negocios.Componentes.TextPersonal();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
@@ -99,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +127,6 @@
             this.pagePrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pagePrincipal.Controls.Add(this.pageMina);
-            this.pagePrincipal.Controls.Add(this.pagePersmisoAmbiental);
             this.pagePrincipal.DefaultPage = this.pageMina;
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 34);
@@ -136,11 +138,13 @@
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pagePrincipal.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pagePrincipal.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Center;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pagePrincipal.GetChildAt(0))).ItemFitMode = Telerik.WinControls.UI.StripViewItemFitMode.Fill;
+            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pagePrincipal.GetChildAt(0))).ShowItemCloseButton = false;
             // 
             // pageMina
             // 
             this.pageMina.Controls.Add(this.radSeparator1);
             this.pageMina.Controls.Add(this.radLabel13);
+            this.pageMina.Controls.Add(this.radLabel8);
             this.pageMina.Controls.Add(this.radLabel3);
             this.pageMina.Controls.Add(this.cbbProducto);
             this.pageMina.Controls.Add(this.cbbProveedor);
@@ -157,9 +161,10 @@
             this.pageMina.Controls.Add(this.cbbCiudad);
             this.pageMina.Controls.Add(this.txtDireccion);
             this.pageMina.Controls.Add(this.radLabel7);
+            this.pageMina.Controls.Add(this.txtPrecio);
             this.pageMina.Controls.Add(this.txtNombre);
             this.pageMina.Controls.Add(this.txtDescripcion);
-            this.pageMina.ItemSize = new System.Drawing.SizeF(376F, 27F);
+            this.pageMina.ItemSize = new System.Drawing.SizeF(743F, 27F);
             this.pageMina.Location = new System.Drawing.Point(5, 33);
             this.pageMina.Name = "pageMina";
             this.pageMina.Size = new System.Drawing.Size(733, 198);
@@ -411,14 +416,6 @@
             this.txtDescripcion.ThemeName = "VisualStudio2012Light";
             this.txtDescripcion.Validar = false;
             // 
-            // pagePersmisoAmbiental
-            // 
-            this.pagePersmisoAmbiental.ItemSize = new System.Drawing.SizeF(367F, 27F);
-            this.pagePersmisoAmbiental.Location = new System.Drawing.Point(5, 33);
-            this.pagePersmisoAmbiental.Name = "pagePersmisoAmbiental";
-            this.pagePersmisoAmbiental.Size = new System.Drawing.Size(733, 198);
-            this.pagePersmisoAmbiental.Text = "Permiso ambiental";
-            // 
             // radLabel2
             // 
             this.radLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -521,6 +518,28 @@
             this.radSeparator2.TabIndex = 3;
             this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Correo = false;
+            this.txtPrecio.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Limpiar = true;
+            this.txtPrecio.Location = new System.Drawing.Point(384, 2);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(81, 24);
+            this.txtPrecio.TabIndex = 24;
+            this.txtPrecio.ThemeName = "VisualStudio2012Light";
+            this.txtPrecio.Validar = true;
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel8.Location = new System.Drawing.Point(324, 8);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(45, 18);
+            this.radLabel8.TabIndex = 23;
+            this.radLabel8.Text = "Precio";
+            // 
             // Mina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,6 +593,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -585,7 +606,6 @@
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.UI.RadPageView pagePrincipal;
         private Telerik.WinControls.UI.RadPageViewPage pageMina;
-        private Telerik.WinControls.UI.RadPageViewPage pagePersmisoAmbiental;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Negocios.Componentes.TextPersonal txtCodigo;
         private Telerik.WinControls.UI.RadGridView radGridView1;
@@ -612,5 +632,7 @@
         private Negocios.Componentes.cbbPersonal cbbProducto;
         private Negocios.Componentes.TextPersonal txtDescripcion;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
+        private Telerik.WinControls.UI.RadLabel radLabel8;
+        private Negocios.Componentes.TextPersonal txtPrecio;
     }
 }

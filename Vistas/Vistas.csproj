@@ -184,6 +184,12 @@
     <Compile Include="Formularios\Mina.Designer.cs">
       <DependentUpon>Mina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\PermisoAmbiental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PermisoAmbiental.Designer.cs">
+      <DependentUpon>PermisoAmbiental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mina.resx">
       <DependentUpon>Mina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PermisoAmbiental.resx">
+      <DependentUpon>PermisoAmbiental.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>

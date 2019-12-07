@@ -33,7 +33,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"";
+            return $"[RegistraAnalisis] {IdAnalisis},'{Fecha}',{IdTipoAnalisis},{IdMina},{Banqueta},{HumedadPorcentual},{CantidadInicial},{Peso},{PesoEspesifico}";
         }
     }
 }

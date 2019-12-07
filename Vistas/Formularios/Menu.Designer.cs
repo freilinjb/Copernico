@@ -39,6 +39,7 @@
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement2 = new Telerik.WinControls.UI.RadLabelElement();
+            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radRibbonBar1 = new Telerik.WinControls.UI.RadRibbonBar();
             this.ribbonTab6 = new Telerik.WinControls.UI.RibbonTab();
@@ -71,8 +72,13 @@
             this.btAnalisis = new Telerik.WinControls.UI.RadButtonElement();
             this.btFiltro = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup13 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.ribbonTab10 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
-            this.commandBarSeparator1 = new Telerik.WinControls.UI.CommandBarSeparator();
+            this.contextualTabGroup2 = new Telerik.WinControls.UI.ContextualTabGroup();
+            this.contextualTabGroup1 = new Telerik.WinControls.UI.ContextualTabGroup();
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuHeaderItem1 = new Telerik.WinControls.UI.RadMenuHeaderItem();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -162,6 +168,12 @@
             this.radLabelElement2.Text = "Usuario";
             this.radLabelElement2.TextWrap = true;
             // 
+            // commandBarSeparator1
+            // 
+            this.commandBarSeparator1.Name = "commandBarSeparator1";
+            this.radStatusStrip1.SetSpring(this.commandBarSeparator1, false);
+            this.commandBarSeparator1.VisibleInOverflowMenu = false;
+            // 
             // radRibbonBar1
             // 
             this.radRibbonBar1.CommandTabs.AddRange(new Telerik.WinControls.RadItem[] {
@@ -172,7 +184,11 @@
             this.ribbonTab5,
             this.ribbonTab7,
             this.ribbonTab8,
-            this.ribbonTab9});
+            this.ribbonTab9,
+            this.ribbonTab10});
+            this.radRibbonBar1.ContextualTabGroups.AddRange(new Telerik.WinControls.RadItem[] {
+            this.contextualTabGroup1,
+            this.contextualTabGroup2});
             // 
             // 
             // 
@@ -188,6 +204,10 @@
             this.radRibbonBar1.SimplifiedHeight = 100;
             this.radRibbonBar1.Size = new System.Drawing.Size(1135, 161);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
+            this.radRibbonBar1.StartMenuRightColumnItems.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem1,
+            this.radMenuItem2,
+            this.radMenuHeaderItem1});
             this.radRibbonBar1.TabIndex = 0;
             this.radRibbonBar1.Text = "Centro de Control";
             this.radRibbonBar1.ThemeName = "VisualStudio2012Light";
@@ -310,6 +330,7 @@
             // 
             // radButtonElement6
             // 
+            this.radButtonElement6.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radButtonElement6.Image = global::Vistas.Properties.Resources.Factura;
             this.radButtonElement6.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.radButtonElement6.Name = "radButtonElement6";
@@ -440,16 +461,44 @@
             this.radRibbonBarGroup13.Name = "radRibbonBarGroup13";
             this.radRibbonBarGroup13.Text = "Informes";
             // 
+            // ribbonTab10
+            // 
+            this.ribbonTab10.Name = "ribbonTab10";
+            this.ribbonTab10.Text = "Recursos Humanos";
+            this.ribbonTab10.UseMnemonic = false;
+            // 
             // radRibbonFormBehavior1
             // 
             this.radRibbonFormBehavior1.Form = this;
             // 
-            // commandBarSeparator1
+            // contextualTabGroup2
             // 
-            this.commandBarSeparator1.Name = "commandBarSeparator1";
-            this.radStatusStrip1.SetSpring(this.commandBarSeparator1, false);
-            this.commandBarSeparator1.Text = "";
-            this.commandBarSeparator1.VisibleInOverflowMenu = false;
+            this.contextualTabGroup2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(219)))), ((int)(((byte)(130)))));
+            this.contextualTabGroup2.Name = "contextualTabGroup2";
+            this.contextualTabGroup2.Text = "contextualTabGroup2";
+            this.contextualTabGroup2.UseCompatibleTextRendering = false;
+            // 
+            // contextualTabGroup1
+            // 
+            this.contextualTabGroup1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(226)))), ((int)(((byte)(142)))));
+            this.contextualTabGroup1.Name = "contextualTabGroup1";
+            this.contextualTabGroup1.Text = "contextualTabGroup1";
+            this.contextualTabGroup1.UseCompatibleTextRendering = false;
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Text = "radMenuItem1";
+            // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Text = "radMenuItem2";
+            // 
+            // radMenuHeaderItem1
+            // 
+            this.radMenuHeaderItem1.Name = "radMenuHeaderItem1";
+            this.radMenuHeaderItem1.Text = "radMenuHeaderItem1";
             // 
             // Menu
             // 
@@ -522,5 +571,11 @@
         private Telerik.WinControls.UI.RadButtonElement btAnalisis;
         private Telerik.WinControls.UI.RadButtonElement btFiltro;
         private Telerik.WinControls.UI.CommandBarSeparator commandBarSeparator1;
+        private Telerik.WinControls.UI.RibbonTab ribbonTab10;
+        private Telerik.WinControls.UI.ContextualTabGroup contextualTabGroup1;
+        private Telerik.WinControls.UI.ContextualTabGroup contextualTabGroup2;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
+        private Telerik.WinControls.UI.RadMenuHeaderItem radMenuHeaderItem1;
     }
 }

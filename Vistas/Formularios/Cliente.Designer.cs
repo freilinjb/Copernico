@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.Data.SortDescriptor sortDescriptor2 = new Telerik.WinControls.Data.SortDescriptor();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
@@ -44,6 +44,7 @@
             this.cbbTipoIdentificacion = new Negocios.Componentes.cbbPersonal();
             this.tipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
             this.txtRasonSocial = new Negocios.Componentes.TextPersonal();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
@@ -83,6 +84,12 @@
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.toolMenu = new System.Windows.Forms.ToolStrip();
+            this.toolNuevo = new System.Windows.Forms.ToolStripButton();
+            this.toolGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolImprimir = new System.Windows.Forms.ToolStripButton();
+            this.toolCancelar = new System.Windows.Forms.ToolStripButton();
+            this.toolRecargar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
@@ -96,18 +103,12 @@
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             this.chLimiteDeCredito = new Telerik.WinControls.UI.RadCheckBox();
             this.cbbTipoCredito = new Negocios.Componentes.cbbPersonal();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolNuevo = new System.Windows.Forms.ToolStripButton();
-            this.toolGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolImprimir = new System.Windows.Forms.ToolStripButton();
-            this.toolCancelar = new System.Windows.Forms.ToolStripButton();
-            this.toolRecargar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
@@ -160,7 +161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chLimiteDeCredito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,6 +211,14 @@
             // 
             this.matrizDataSet.DataSetName = "MatrizDataSet";
             this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(272, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 114);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // txtIdentificacion
             // 
@@ -541,46 +549,46 @@
             this.dataContacto.MasterTemplate.AllowEditRow = false;
             this.dataContacto.MasterTemplate.AllowRowResize = false;
             this.dataContacto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.HeaderText = "IdContacto";
-            gridViewTextBoxColumn7.IsVisible = false;
-            gridViewTextBoxColumn7.Name = "IdContacto";
-            gridViewTextBoxColumn7.Width = 56;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.HeaderText = "Nombre";
-            gridViewTextBoxColumn8.Name = "Nombre";
-            gridViewTextBoxColumn8.Width = 114;
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.HeaderText = "Telefono";
-            gridViewTextBoxColumn9.Name = "Telefono";
-            gridViewTextBoxColumn9.Width = 125;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.HeaderText = "Correo";
-            gridViewTextBoxColumn10.Name = "Correo";
-            gridViewTextBoxColumn10.Width = 111;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.HeaderText = "Departamento";
-            gridViewTextBoxColumn11.Name = "Departamento";
-            gridViewTextBoxColumn11.Width = 77;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.HeaderText = "Puesto";
-            gridViewTextBoxColumn12.Name = "Puesto";
-            gridViewTextBoxColumn12.Width = 63;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.HeaderText = "IdContacto";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "IdContacto";
+            gridViewTextBoxColumn1.Width = 56;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.HeaderText = "Nombre";
+            gridViewTextBoxColumn2.Name = "Nombre";
+            gridViewTextBoxColumn2.Width = 115;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.HeaderText = "Telefono";
+            gridViewTextBoxColumn3.Name = "Telefono";
+            gridViewTextBoxColumn3.Width = 126;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.HeaderText = "Correo";
+            gridViewTextBoxColumn4.Name = "Correo";
+            gridViewTextBoxColumn4.Width = 112;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.HeaderText = "Departamento";
+            gridViewTextBoxColumn5.Name = "Departamento";
+            gridViewTextBoxColumn5.Width = 78;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.HeaderText = "Puesto";
+            gridViewTextBoxColumn6.Name = "Puesto";
+            gridViewTextBoxColumn6.Width = 64;
             this.dataContacto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8,
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
             this.dataContacto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataContacto.MasterTemplate.ShowGroupedColumns = true;
             this.dataContacto.MasterTemplate.ShowRowHeaderColumn = false;
-            sortDescriptor2.Direction = System.ComponentModel.ListSortDirection.Descending;
-            sortDescriptor2.PropertyName = "column3";
+            sortDescriptor1.Direction = System.ComponentModel.ListSortDirection.Descending;
+            sortDescriptor1.PropertyName = "column3";
             this.dataContacto.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
-            sortDescriptor2});
-            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            sortDescriptor1});
+            this.dataContacto.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataContacto.Name = "dataContacto";
             this.dataContacto.ReadOnly = true;
             this.dataContacto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -678,13 +686,67 @@
             this.toolMenu.TabIndex = 13;
             this.toolMenu.Text = "toolStrip1";
             // 
+            // toolNuevo
+            // 
+            this.toolNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolNuevo.Image = ((System.Drawing.Image)(resources.GetObject("toolNuevo.Image")));
+            this.toolNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolNuevo.Name = "toolNuevo";
+            this.toolNuevo.Size = new System.Drawing.Size(23, 22);
+            this.toolNuevo.Text = "Nuevo Cliente";
+            // 
+            // toolGuardar
+            // 
+            this.toolGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolGuardar.Image = ((System.Drawing.Image)(resources.GetObject("toolGuardar.Image")));
+            this.toolGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolGuardar.Name = "toolGuardar";
+            this.toolGuardar.Size = new System.Drawing.Size(23, 22);
+            this.toolGuardar.Text = "Guardar";
+            // 
+            // toolImprimir
+            // 
+            this.toolImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolImprimir.Image = ((System.Drawing.Image)(resources.GetObject("toolImprimir.Image")));
+            this.toolImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolImprimir.Name = "toolImprimir";
+            this.toolImprimir.Size = new System.Drawing.Size(23, 22);
+            this.toolImprimir.Text = "Imprimir";
+            // 
+            // toolCancelar
+            // 
+            this.toolCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolCancelar.Image")));
+            this.toolCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolCancelar.Name = "toolCancelar";
+            this.toolCancelar.Size = new System.Drawing.Size(23, 22);
+            this.toolCancelar.Text = "Cancelar";
+            // 
+            // toolRecargar
+            // 
+            this.toolRecargar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolRecargar.Image = ((System.Drawing.Image)(resources.GetObject("toolRecargar.Image")));
+            this.toolRecargar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolRecargar.Name = "toolRecargar";
+            this.toolRecargar.Size = new System.Drawing.Size(23, 22);
+            this.toolRecargar.Text = "Recargar";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // radStatusStrip1
             // 
             this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.toolRegistro});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 548);
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 545);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(940, 23);
+            this.radStatusStrip1.Size = new System.Drawing.Size(940, 26);
             this.radStatusStrip1.TabIndex = 22;
             this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
             // 
@@ -830,68 +892,6 @@
             this.cbbTipoCredito.ThemeName = "VisualStudio2012Light";
             this.cbbTipoCredito.Validar = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(272, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 114);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // toolNuevo
-            // 
-            this.toolNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolNuevo.Image = ((System.Drawing.Image)(resources.GetObject("toolNuevo.Image")));
-            this.toolNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolNuevo.Name = "toolNuevo";
-            this.toolNuevo.Size = new System.Drawing.Size(23, 22);
-            this.toolNuevo.Text = "Nuevo Cliente";
-            // 
-            // toolGuardar
-            // 
-            this.toolGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolGuardar.Image = ((System.Drawing.Image)(resources.GetObject("toolGuardar.Image")));
-            this.toolGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolGuardar.Name = "toolGuardar";
-            this.toolGuardar.Size = new System.Drawing.Size(23, 22);
-            this.toolGuardar.Text = "Guardar";
-            // 
-            // toolImprimir
-            // 
-            this.toolImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolImprimir.Image = ((System.Drawing.Image)(resources.GetObject("toolImprimir.Image")));
-            this.toolImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolImprimir.Name = "toolImprimir";
-            this.toolImprimir.Size = new System.Drawing.Size(23, 22);
-            this.toolImprimir.Text = "Imprimir";
-            // 
-            // toolCancelar
-            // 
-            this.toolCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolCancelar.Image")));
-            this.toolCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolCancelar.Name = "toolCancelar";
-            this.toolCancelar.Size = new System.Drawing.Size(23, 22);
-            this.toolCancelar.Text = "Cancelar";
-            // 
-            // toolRecargar
-            // 
-            this.toolRecargar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolRecargar.Image = ((System.Drawing.Image)(resources.GetObject("toolRecargar.Image")));
-            this.toolRecargar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolRecargar.Name = "toolRecargar";
-            this.toolRecargar.Size = new System.Drawing.Size(23, 22);
-            this.toolRecargar.Text = "Recargar";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -921,6 +921,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoIdentificacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRasonSocial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
@@ -979,7 +980,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chLimiteDeCredito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

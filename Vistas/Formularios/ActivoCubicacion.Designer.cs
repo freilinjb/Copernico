@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -37,15 +44,11 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.pageGeneral = new Telerik.WinControls.UI.RadPageViewPage();
+            this.cbbMotor = new Negocios.Componentes.MultiCbbPersonal();
+            this.vistaMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.txtBotellaLargo = new Negocios.Componentes.TextPersonal();
@@ -76,7 +79,6 @@
             this.cbbEstatus = new Negocios.Componentes.cbbPersonal();
             this.cbbPropietario = new Negocios.Componentes.cbbPersonal();
             this.vistaPropietarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
             this.cbbAnio = new Negocios.Componentes.cbbPersonal();
             this.cbbColor = new Negocios.Componentes.cbbPersonal();
             this.colorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -87,6 +89,7 @@
             this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
             this.cbbMarca = new Negocios.Componentes.cbbPersonal();
             this.marcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
             this.cbbSubGrupo = new Negocios.Componentes.cbbPersonal();
             this.subGrupoActivoFijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -96,11 +99,9 @@
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
             this.txtChasis = new Negocios.Componentes.TextPersonal();
-            this.txtDescripcion = new Negocios.Componentes.TextPersonal();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
@@ -110,6 +111,7 @@
             this.pagEspecificacionesTecnicas = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGroupBox4 = new Telerik.WinControls.UI.RadGroupBox();
             this.txtTanqueCombustible = new Negocios.Componentes.TextPersonal();
+            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.cbbTipoDeTransmicion = new Negocios.Componentes.cbbPersonal();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.cbbTipoEmbrague = new Negocios.Componentes.cbbPersonal();
@@ -125,6 +127,8 @@
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel32 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.txtDescripcion = new Negocios.Componentes.TextPersonal();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtActivoFijo = new Negocios.Componentes.TextPersonal();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
@@ -137,14 +141,15 @@
             this.colorTableAdapter = new Vistas.MatrizDataSetTableAdapters.ColorTableAdapter();
             this.vistaPropietarioTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaPropietarioTableAdapter();
             this.departamentoTableAdapter = new Vistas.MatrizDataSetTableAdapters.DepartamentoTableAdapter();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
-            this.cbbMotor = new Negocios.Componentes.MultiCbbPersonal();
-            this.vistaMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaMotorTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaMotorTableAdapter();
-            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.pageGeneral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
@@ -176,7 +181,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPropietario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaPropietarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAnio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.colorBindingSource)).BeginInit();
@@ -187,6 +191,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSubGrupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subGrupoActivoFijoBindingSource)).BeginInit();
@@ -196,11 +201,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChasis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             this.radPageViewPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
@@ -212,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox4)).BeginInit();
             this.radGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTanqueCombustible)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoDeTransmicion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoEmbrague)).BeginInit();
@@ -227,16 +231,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtActivoFijo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,6 +286,104 @@
             this.pageGeneral.Name = "pageGeneral";
             this.pageGeneral.Size = new System.Drawing.Size(679, 340);
             this.pageGeneral.Text = "Información General";
+            // 
+            // cbbMotor
+            // 
+            this.cbbMotor.AutoFilter = true;
+            this.cbbMotor.AutoSizeDropDownToBestFit = true;
+            this.cbbMotor.DataSource = this.vistaMotorBindingSource;
+            this.cbbMotor.DisplayMember = "Motor";
+            this.cbbMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            // 
+            // cbbMotor.NestedRadGridView
+            // 
+            this.cbbMotor.EditorControl.BackColor = System.Drawing.SystemColors.Window;
+            this.cbbMotor.EditorControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbbMotor.EditorControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.cbbMotor.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cbbMotor.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbbMotor.EditorControl.Location = new System.Drawing.Point(0, 0);
+            // 
+            // 
+            // 
+            this.cbbMotor.EditorControl.MasterTemplate.AllowAddNewRow = false;
+            this.cbbMotor.EditorControl.MasterTemplate.AllowCellContextMenu = false;
+            this.cbbMotor.EditorControl.MasterTemplate.AllowColumnChooser = false;
+            gridViewDecimalColumn1.DataType = typeof(int);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "IdMotor";
+            gridViewDecimalColumn1.HeaderText = "Codigo";
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "IdMotor";
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Motor";
+            gridViewTextBoxColumn1.HeaderText = "Motor";
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "Motor";
+            gridViewTextBoxColumn1.Width = 185;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "TipoMotor";
+            gridViewTextBoxColumn2.HeaderText = "TipoMotor";
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "TipoMotor";
+            gridViewTextBoxColumn2.Width = 88;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Marca";
+            gridViewTextBoxColumn3.HeaderText = "Marca";
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Marca";
+            gridViewTextBoxColumn3.Width = 91;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Modelo";
+            gridViewTextBoxColumn4.HeaderText = "Modelo";
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "Modelo";
+            gridViewTextBoxColumn4.Width = 66;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Cilindrado";
+            gridViewTextBoxColumn5.HeaderText = "Cilindrado";
+            gridViewTextBoxColumn5.IsAutoGenerated = true;
+            gridViewTextBoxColumn5.Name = "Cilindrado";
+            gridViewTextBoxColumn5.Width = 192;
+            this.cbbMotor.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewDecimalColumn1,
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5});
+            this.cbbMotor.EditorControl.MasterTemplate.DataSource = this.vistaMotorBindingSource;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableAlternatingRowColor = true;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableFiltering = true;
+            this.cbbMotor.EditorControl.MasterTemplate.EnableGrouping = false;
+            this.cbbMotor.EditorControl.MasterTemplate.ShowFilteringRow = false;
+            this.cbbMotor.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.cbbMotor.EditorControl.Name = "NestedRadGridView";
+            this.cbbMotor.EditorControl.ReadOnly = true;
+            this.cbbMotor.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cbbMotor.EditorControl.ShowGroupPanel = false;
+            this.cbbMotor.EditorControl.Size = new System.Drawing.Size(240, 150);
+            this.cbbMotor.EditorControl.TabIndex = 0;
+            this.cbbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMotor.Limpiar = true;
+            this.cbbMotor.Location = new System.Drawing.Point(94, 208);
+            this.cbbMotor.Name = "cbbMotor";
+            this.cbbMotor.Size = new System.Drawing.Size(227, 23);
+            this.cbbMotor.TabIndex = 63;
+            this.cbbMotor.TabStop = false;
+            this.cbbMotor.ThemeName = "VisualStudio2012Light";
+            this.cbbMotor.Validar = true;
+            this.cbbMotor.ValueMember = "IdMotor";
+            // 
+            // vistaMotorBindingSource
+            // 
+            this.vistaMotorBindingSource.DataMember = "VistaMotor";
+            this.vistaMotorBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // radSeparator4
             // 
@@ -694,11 +792,6 @@
             this.vistaPropietarioBindingSource.DataMember = "VistaPropietario";
             this.vistaPropietarioBindingSource.DataSource = this.matrizDataSet;
             // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // cbbAnio
             // 
             this.cbbAnio.BackColor = System.Drawing.Color.White;
@@ -812,6 +905,15 @@
             this.marcaBindingSource.DataMember = "Marca";
             this.marcaBindingSource.DataSource = this.matrizDataSet;
             // 
+            // radLabel20
+            // 
+            this.radLabel20.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.radLabel20.Location = new System.Drawing.Point(47, 212);
+            this.radLabel20.Name = "radLabel20";
+            this.radLabel20.Size = new System.Drawing.Size(41, 19);
+            this.radLabel20.TabIndex = 31;
+            this.radLabel20.Text = "Motor";
+            // 
             // radLabel17
             // 
             this.radLabel17.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -909,19 +1011,6 @@
             this.txtChasis.ThemeName = "VisualStudio2012Light";
             this.txtChasis.Validar = false;
             // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Correo = false;
-            this.txtDescripcion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Limpiar = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(317, 9);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(393, 24);
-            this.txtDescripcion.TabIndex = 0;
-            this.txtDescripcion.ThemeName = "VisualStudio2012Light";
-            this.txtDescripcion.Validar = true;
-            // 
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -949,16 +1038,6 @@
             this.radLabel3.Size = new System.Drawing.Size(41, 19);
             this.radLabel3.TabIndex = 36;
             this.radLabel3.Text = "Grupo";
-            // 
-            // radLabel2
-            // 
-            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel2.Location = new System.Drawing.Point(241, 14);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(70, 19);
-            this.radLabel2.TabIndex = 38;
-            this.radLabel2.Text = "Descripción";
-            this.radLabel2.ThemeName = "VisualStudio2012Light";
             // 
             // radPageViewPage2
             // 
@@ -1138,6 +1217,19 @@
             this.txtTanqueCombustible.TabIndex = 5;
             this.txtTanqueCombustible.ThemeName = "VisualStudio2012Light";
             this.txtTanqueCombustible.Validar = false;
+            // 
+            // textPersonal1
+            // 
+            this.textPersonal1.Correo = false;
+            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPersonal1.Limpiar = false;
+            this.textPersonal1.Location = new System.Drawing.Point(116, 21);
+            this.textPersonal1.Name = "textPersonal1";
+            this.textPersonal1.Size = new System.Drawing.Size(206, 24);
+            this.textPersonal1.TabIndex = 5;
+            this.textPersonal1.ThemeName = "VisualStudio2012Light";
+            this.textPersonal1.Validar = false;
             // 
             // cbbTipoDeTransmicion
             // 
@@ -1330,6 +1422,29 @@
             this.radLabel10.Text = "Motor";
             this.radLabel10.ThemeName = "VisualStudio2012Light";
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Correo = false;
+            this.txtDescripcion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Limpiar = true;
+            this.txtDescripcion.Location = new System.Drawing.Point(317, 9);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(393, 24);
+            this.txtDescripcion.TabIndex = 0;
+            this.txtDescripcion.ThemeName = "VisualStudio2012Light";
+            this.txtDescripcion.Validar = true;
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.radLabel2.Location = new System.Drawing.Point(241, 14);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(70, 19);
+            this.radLabel2.TabIndex = 38;
+            this.radLabel2.Text = "Descripción";
+            this.radLabel2.ThemeName = "VisualStudio2012Light";
+            // 
             // departamentoBindingSource
             // 
             this.departamentoBindingSource.DataMember = "Departamento";
@@ -1389,124 +1504,9 @@
             // 
             this.departamentoTableAdapter.ClearBeforeFill = true;
             // 
-            // textPersonal1
-            // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal1.Limpiar = false;
-            this.textPersonal1.Location = new System.Drawing.Point(116, 21);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.Size = new System.Drawing.Size(206, 24);
-            this.textPersonal1.TabIndex = 5;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = false;
-            // 
-            // cbbMotor
-            // 
-            this.cbbMotor.AutoFilter = true;
-            this.cbbMotor.AutoSizeDropDownToBestFit = true;
-            this.cbbMotor.DataSource = this.vistaMotorBindingSource;
-            this.cbbMotor.DisplayMember = "Motor";
-            this.cbbMotor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            // 
-            // cbbMotor.NestedRadGridView
-            // 
-            this.cbbMotor.EditorControl.BackColor = System.Drawing.SystemColors.Window;
-            this.cbbMotor.EditorControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cbbMotor.EditorControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.cbbMotor.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.cbbMotor.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbbMotor.EditorControl.Location = new System.Drawing.Point(0, 0);
-            // 
-            // 
-            // 
-            this.cbbMotor.EditorControl.MasterTemplate.AllowAddNewRow = false;
-            this.cbbMotor.EditorControl.MasterTemplate.AllowCellContextMenu = false;
-            this.cbbMotor.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewDecimalColumn1.DataType = typeof(int);
-            gridViewDecimalColumn1.EnableExpressionEditor = false;
-            gridViewDecimalColumn1.FieldName = "IdMotor";
-            gridViewDecimalColumn1.HeaderText = "Codigo";
-            gridViewDecimalColumn1.IsAutoGenerated = true;
-            gridViewDecimalColumn1.Name = "IdMotor";
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "Motor";
-            gridViewTextBoxColumn1.HeaderText = "Motor";
-            gridViewTextBoxColumn1.IsAutoGenerated = true;
-            gridViewTextBoxColumn1.Name = "Motor";
-            gridViewTextBoxColumn1.Width = 185;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "TipoMotor";
-            gridViewTextBoxColumn2.HeaderText = "TipoMotor";
-            gridViewTextBoxColumn2.IsAutoGenerated = true;
-            gridViewTextBoxColumn2.Name = "TipoMotor";
-            gridViewTextBoxColumn2.Width = 88;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Marca";
-            gridViewTextBoxColumn3.HeaderText = "Marca";
-            gridViewTextBoxColumn3.IsAutoGenerated = true;
-            gridViewTextBoxColumn3.Name = "Marca";
-            gridViewTextBoxColumn3.Width = 91;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Modelo";
-            gridViewTextBoxColumn4.HeaderText = "Modelo";
-            gridViewTextBoxColumn4.IsAutoGenerated = true;
-            gridViewTextBoxColumn4.Name = "Modelo";
-            gridViewTextBoxColumn4.Width = 66;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "Cilindrado";
-            gridViewTextBoxColumn5.HeaderText = "Cilindrado";
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "Cilindrado";
-            gridViewTextBoxColumn5.Width = 192;
-            this.cbbMotor.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn1,
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4,
-            gridViewTextBoxColumn5});
-            this.cbbMotor.EditorControl.MasterTemplate.DataSource = this.vistaMotorBindingSource;
-            this.cbbMotor.EditorControl.MasterTemplate.EnableAlternatingRowColor = true;
-            this.cbbMotor.EditorControl.MasterTemplate.EnableFiltering = true;
-            this.cbbMotor.EditorControl.MasterTemplate.EnableGrouping = false;
-            this.cbbMotor.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.cbbMotor.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.cbbMotor.EditorControl.Name = "NestedRadGridView";
-            this.cbbMotor.EditorControl.ReadOnly = true;
-            this.cbbMotor.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cbbMotor.EditorControl.ShowGroupPanel = false;
-            this.cbbMotor.EditorControl.Size = new System.Drawing.Size(240, 150);
-            this.cbbMotor.EditorControl.TabIndex = 0;
-            this.cbbMotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMotor.Limpiar = true;
-            this.cbbMotor.Location = new System.Drawing.Point(94, 208);
-            this.cbbMotor.Name = "cbbMotor";
-            this.cbbMotor.Size = new System.Drawing.Size(227, 23);
-            this.cbbMotor.TabIndex = 63;
-            this.cbbMotor.TabStop = false;
-            this.cbbMotor.ThemeName = "VisualStudio2012Light";
-            this.cbbMotor.Validar = true;
-            this.cbbMotor.ValueMember = "IdMotor";
-            // 
-            // vistaMotorBindingSource
-            // 
-            this.vistaMotorBindingSource.DataMember = "VistaMotor";
-            this.vistaMotorBindingSource.DataSource = this.matrizDataSet;
-            // 
             // vistaMotorTableAdapter
             // 
             this.vistaMotorTableAdapter.ClearBeforeFill = true;
-            // 
-            // radLabel20
-            // 
-            this.radLabel20.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radLabel20.Location = new System.Drawing.Point(47, 212);
-            this.radLabel20.Name = "radLabel20";
-            this.radLabel20.Size = new System.Drawing.Size(41, 19);
-            this.radLabel20.TabIndex = 31;
-            this.radLabel20.Text = "Motor";
             // 
             // ActivoCubicacion
             // 
@@ -1531,6 +1531,11 @@
             this.radPageView1.ResumeLayout(false);
             this.pageGeneral.ResumeLayout(false);
             this.pageGeneral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
@@ -1563,7 +1568,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPropietario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaPropietarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAnio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.colorBindingSource)).EndInit();
@@ -1574,6 +1578,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMarca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marcaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSubGrupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subGrupoActivoFijoBindingSource)).EndInit();
@@ -1583,11 +1588,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtChasis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             this.radPageViewPage2.ResumeLayout(false);
             this.radPageViewPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
@@ -1601,6 +1604,7 @@
             this.radGroupBox4.ResumeLayout(false);
             this.radGroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTanqueCombustible)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoDeTransmicion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoEmbrague)).EndInit();
@@ -1616,16 +1620,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.departamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtActivoFijo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor.EditorControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMotor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaMotorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

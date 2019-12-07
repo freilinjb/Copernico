@@ -39,6 +39,7 @@ namespace Vistas.Formularios
         }
         private void Mina_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
 
             IdMayor();
 
@@ -53,9 +54,9 @@ namespace Vistas.Formularios
 
             toolRegistro.Text = "Nuevo Registro";
 
-            cbbProveedor.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoCentro,Descripcion AS Tipo FROM TipoCentro").Tables[0];
-            cbbProveedor.ValueMember = "IdTipoCentro";
-            cbbProveedor.DisplayMember = "Tipo";
+            cbbProveedor.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdProveedor,RazonSocial FROM VistaProveedor").Tables[0];
+            cbbProveedor.ValueMember = "IdProveedor";
+            cbbProveedor.DisplayMember = "RazonSocial";
 
             cbbProvincia.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdProvincia,Descripcion AS Provincia FROM Provincia").Tables[0];
             cbbProvincia.ValueMember = "IdProvincia";
@@ -77,6 +78,12 @@ namespace Vistas.Formularios
             cbbProducto.ValueMember = "IdProducto";
             cbbProducto.DisplayMember = "Producto";
 
+            cbbEstado.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoMina,Descripcion AS Estado FROM EstadoMina").Tables[0];
+            cbbEstado.ValueMember = "IdEstadoMina";
+            cbbEstado.DisplayMember = "Estado";
+
+            cbbEstado.SelectedIndex = 0;
+
             Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
 
@@ -84,9 +91,10 @@ namespace Vistas.Formularios
         {
             bool bien = true;
 
-            if(pagePrincipal.SelectedPage.Name == pageMina.Name)
+            try
             {
-                try
+
+                if (pagePrincipal.SelectedPage.Name == pageMina.Name)
                 {
                     if (Negocios.Utilidades.Validar(pageMina, errorProvider1) == false)
                     {
@@ -94,6 +102,7 @@ namespace Vistas.Formularios
                             Convert.ToInt32(txtCodigo.Text.Trim()),
                             (int)cbbProveedor.SelectedValue,
                             (int)cbbProducto.SelectedValue,
+                            Convert.ToSingle(txtPrecio.Text.Trim()),
                             txtNombre.Text.Trim(),
                             txtDescripcion.Text.Trim(),
                             (int)cbbProvincia.SelectedValue,
@@ -112,28 +121,23 @@ namespace Vistas.Formularios
 
                             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
-                            txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdCentro)+1 AS Mayor FROM Centro").Tables[0].Rows[0]["Mayor"].ToString();
                             toolRegistro.Text = "Nuevo Registro";
                             IdMayor();
                             //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
                         }
 
                     }
-
-                }
-                catch (Exception ex)
-                {
-                    RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
-                    bien = false;
                 }
             }
-
-            else if(pagePrincipal.SelectedPage.Name == pagePersmisoAmbiental.Name)
+            catch (Exception ex)
             {
-
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                bien = false;
             }
+
             return bien;
         }
+
         private void Mina_KeyUp(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.F1)
@@ -142,14 +146,8 @@ namespace Vistas.Formularios
                 {
                     Guardar();
                 }
-                else if(pagePrincipal.SelectedPage.Name == pagePersmisoAmbiental.Name)
-                {
-                    if (Negocios.Utilidades.Validar(pagePersmisoAmbiental, errorProvider1) == false)
-                    {
-
-                    }
-                }
             }
+
             else if(e.KeyCode == Keys.F2)
             {
                 Negocios.Utilidades.Limpiar(this, errorProvider1);

@@ -189,7 +189,7 @@
             this.radPageView1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.radPageView1.Location = new System.Drawing.Point(12, 342);
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.radPageViewPage2;
+            this.radPageView1.SelectedPage = this.radPageViewPage3;
             this.radPageView1.Size = new System.Drawing.Size(1063, 390);
             this.radPageView1.TabIndex = 2;
             this.radPageView1.ThemeName = "VisualStudio2012Light";
