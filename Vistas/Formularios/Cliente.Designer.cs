@@ -100,9 +100,9 @@
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.chCredito = new Telerik.WinControls.UI.RadCheckBox();
-            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             this.chLimiteDeCredito = new Telerik.WinControls.UI.RadCheckBox();
             this.cbbTipoCredito = new Negocios.Componentes.cbbPersonal();
+            this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIdentificacion)).BeginInit();
@@ -158,9 +158,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chCredito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chLimiteDeCredito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -858,15 +858,6 @@
             this.chCredito.TabIndex = 0;
             this.chCredito.ThemeName = "VisualStudio2012Light";
             // 
-            // radLabel12
-            // 
-            this.radLabel12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radLabel12.Location = new System.Drawing.Point(226, 77);
-            this.radLabel12.Name = "radLabel12";
-            this.radLabel12.Size = new System.Drawing.Size(88, 21);
-            this.radLabel12.TabIndex = 25;
-            this.radLabel12.Text = "Diaz de Plazo";
-            // 
             // chLimiteDeCredito
             // 
             this.chLimiteDeCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -891,6 +882,15 @@
             this.cbbTipoCredito.TabIndex = 26;
             this.cbbTipoCredito.ThemeName = "VisualStudio2012Light";
             this.cbbTipoCredito.Validar = false;
+            // 
+            // radLabel12
+            // 
+            this.radLabel12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radLabel12.Location = new System.Drawing.Point(226, 77);
+            this.radLabel12.Name = "radLabel12";
+            this.radLabel12.Size = new System.Drawing.Size(88, 21);
+            this.radLabel12.TabIndex = 25;
+            this.radLabel12.Text = "Diaz de Plazo";
             // 
             // Cliente
             // 
@@ -977,9 +977,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chCredito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chLimiteDeCredito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoCredito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1047,10 +1047,10 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox5;
         private Telerik.WinControls.UI.RadCheckBox chLimiteDeCredito;
         private Telerik.WinControls.UI.RadLabel radLabel13;
-        private Telerik.WinControls.UI.RadLabel radLabel12;
-        private Negocios.Componentes.cbbPersonal cbbTipoCredito;
         private Telerik.WinControls.UI.RadCheckBox chCredito;
         private Negocios.Componentes.TextPersonal textPersonal1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private Telerik.WinControls.UI.RadLabel radLabel12;
+        private Negocios.Componentes.cbbPersonal cbbTipoCredito;
     }
 }

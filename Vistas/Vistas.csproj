@@ -118,6 +118,12 @@
     <Compile Include="Centro.Designer.cs">
       <DependentUpon>Centro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Actividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Actividad.Designer.cs">
+      <DependentUpon>Actividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ActivoCubicacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Centro.resx">
       <DependentUpon>Centro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Actividad.resx">
+      <DependentUpon>Actividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActivoCubicacion.resx">
       <DependentUpon>ActivoCubicacion.cs</DependentUpon>

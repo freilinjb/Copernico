@@ -19,6 +19,7 @@ namespace Vistas.Formularios
 
         private DataSet ds;
 
+
         public static Analisis ObtenerInstancia()
         {
             if (Instancia == null || Instancia.IsDisposed)
@@ -34,14 +35,25 @@ namespace Vistas.Formularios
             InitializeComponent();
         }
 
+
         private void Analisis_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
+
+            IdMayor();
+
             ds = Negocios.Utilidades.Ejecutar("SELECT NumMalla,Apertura FROM Tamiz");
 
             foreach(DataRow File in ds.Tables[0].Rows)
             {
                 dataTamiz.Rows.Add(Convert.ToSingle(File["NumMalla"].ToString()), Convert.ToSingle(File["Apertura"].ToString()), 0, 0, 0, 0);
             }
+        }
+
+        private void IdMayor()
+        {
+            ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdAnalisis)+1 AS Mayor FROM Analisis");
+            txtCodigo.Text = (ds.Tables[0].Rows[0]["Mayor"] == DBNull.Value) ? "1" : ds.Tables[0].Rows[0]["Mayor"].ToString();
         }
 
         private void MasterTemplate_CellValueChanged(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
@@ -83,6 +95,50 @@ namespace Vistas.Formularios
                 //{
                 //    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 //}
+            }
+        }
+
+        public override bool Guardar()
+        {
+            bool bien = true;
+
+            try
+            {
+                if (pagePrincipal.SelectedPage.Name == pageInformacionGeneral.Name)
+                {
+                    Negocios.Entidades.Analisis analisis = new Negocios.Entidades.Analisis(
+                        Convert.ToInt32(txtCodigo.Text.Trim()),
+                        txtFecha.Text,
+                        (int)cbbTipoAnalisis.SelectedValue,
+                        (int)cbbMina.SelectedValue,
+                        txtBanqueta.Text.Trim(),
+                        Convert.ToSingle(txtHumedad.Text.Trim()),
+                        Convert.ToSingle(txtCantidadFinal.Text.Trim()));
+
+                    ds = Negocios.Utilidades.Ejecutar(analisis.getGuardar());
+                }
+
+                else if(pageInformacionGeneral.Name == pageEstadistica.Name)
+                {
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                bien = false;
+            }
+            return bien;
+        }
+
+        private void Analisis_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(Guardar())
+            {
+                RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                Negocios.Utilidades.Limpiar(this, errorProvider1);
+                toolRegistro.Text = "Nuevo Registro";
             }
         }
     }

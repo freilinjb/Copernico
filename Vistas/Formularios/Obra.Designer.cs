@@ -57,39 +57,13 @@
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn2 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Obra));
-            this.txtObra = new Negocios.Componentes.TextPersonal();
-            this.cbbCliente = new Negocios.Componentes.MultiCbbPersonal();
             this.vistaClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.dataObra = new Telerik.WinControls.UI.RadGridView();
             this.vistaContactoEncargadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtNota = new Negocios.Componentes.TextPersonal();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.lbCliente = new System.Windows.Forms.Label();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
-            this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
-            this.txtDireccion = new Negocios.Componentes.TextPersonal();
-            this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
             this.provinciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbCiudad = new Negocios.Componentes.cbbPersonal();
             this.ciudadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
             this.municipioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cbbSector = new Negocios.Componentes.cbbPersonal();
             this.sectorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
-            this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbbEncargado = new Negocios.Componentes.cbbPersonal();
             this.provinciaTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProvinciaTableAdapter();
             this.municipioTableAdapter = new Vistas.MatrizDataSetTableAdapters.MunicipioTableAdapter();
             this.ciudadTableAdapter = new Vistas.MatrizDataSetTableAdapters.CiudadTableAdapter();
@@ -97,44 +71,382 @@
             this.vistaClienteTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaClienteTableAdapter();
             this.vistaContactoEncargadoTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaContactoEncargadoTableAdapter();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).BeginInit();
+            this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
+            this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
+            this.txtDireccion = new Negocios.Componentes.TextPersonal();
+            this.cbbProvincia = new Negocios.Componentes.cbbPersonal();
+            this.cbbCiudad = new Negocios.Componentes.cbbPersonal();
+            this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
+            this.cbbSector = new Negocios.Componentes.cbbPersonal();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbEncargado = new Negocios.Componentes.cbbPersonal();
+            this.txtNota = new Negocios.Componentes.TextPersonal();
+            this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
+            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
+            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
+            this.lbCliente = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtObra = new Negocios.Componentes.TextPersonal();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbCliente = new Negocios.Componentes.MultiCbbPersonal();
+            this.dataObra = new Telerik.WinControls.UI.RadGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataObra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEncargado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataObra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // vistaClienteBindingSource
+            // 
+            this.vistaClienteBindingSource.DataMember = "VistaCliente";
+            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vistaContactoEncargadoBindingSource
+            // 
+            this.vistaContactoEncargadoBindingSource.DataMember = "VistaContactoEncargado";
+            this.vistaContactoEncargadoBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // provinciaBindingSource
+            // 
+            this.provinciaBindingSource.DataMember = "Provincia";
+            this.provinciaBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // ciudadBindingSource
+            // 
+            this.ciudadBindingSource.DataMember = "Ciudad";
+            this.ciudadBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // municipioBindingSource
+            // 
+            this.municipioBindingSource.DataMember = "Municipio";
+            this.municipioBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // sectorBindingSource
+            // 
+            this.sectorBindingSource.DataMember = "Sector";
+            this.sectorBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // provinciaTableAdapter
+            // 
+            this.provinciaTableAdapter.ClearBeforeFill = true;
+            // 
+            // municipioTableAdapter
+            // 
+            this.municipioTableAdapter.ClearBeforeFill = true;
+            // 
+            // ciudadTableAdapter
+            // 
+            this.ciudadTableAdapter.ClearBeforeFill = true;
+            // 
+            // sectorTableAdapter
+            // 
+            this.sectorTableAdapter.ClearBeforeFill = true;
+            // 
+            // vistaClienteTableAdapter
+            // 
+            this.vistaClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // vistaContactoEncargadoTableAdapter
+            // 
+            this.vistaContactoEncargadoTableAdapter.ClearBeforeFill = true;
+            // 
+            // radStatusStrip1
+            // 
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 567);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(595, 26);
+            this.radStatusStrip1.TabIndex = 26;
+            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            // 
+            // radGroupBox3
+            // 
+            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Controls.Add(this.chEstado);
+            this.radGroupBox3.Controls.Add(this.txtDireccion);
+            this.radGroupBox3.Controls.Add(this.cbbProvincia);
+            this.radGroupBox3.Controls.Add(this.cbbCiudad);
+            this.radGroupBox3.Controls.Add(this.cbbMunicipio);
+            this.radGroupBox3.Controls.Add(this.cbbSector);
+            this.radGroupBox3.Controls.Add(this.radLabel8);
+            this.radGroupBox3.Controls.Add(this.radLabel5);
+            this.radGroupBox3.Controls.Add(this.radLabel9);
+            this.radGroupBox3.Controls.Add(this.radLabel10);
+            this.radGroupBox3.HeaderText = "Localidad";
+            this.radGroupBox3.Location = new System.Drawing.Point(12, 136);
+            this.radGroupBox3.Name = "radGroupBox3";
+            this.radGroupBox3.Size = new System.Drawing.Size(572, 134);
+            this.radGroupBox3.TabIndex = 25;
+            this.radGroupBox3.Text = "Localidad";
+            this.radGroupBox3.ThemeName = "VisualStudio2012Light";
+            // 
+            // chEstado
+            // 
+            this.chEstado.Location = new System.Drawing.Point(485, 111);
+            this.chEstado.Name = "chEstado";
+            this.chEstado.OffText = "Inactivo";
+            this.chEstado.OnText = "Activo";
+            this.chEstado.Size = new System.Drawing.Size(71, 20);
+            this.chEstado.TabIndex = 27;
+            this.chEstado.ThemeName = "VisualStudio2012Light";
+            this.chEstado.ThumbTickness = 15;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Correo = false;
+            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Limpiar = true;
+            this.txtDireccion.Location = new System.Drawing.Point(10, 81);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.NullText = "Direcicon";
+            this.txtDireccion.Size = new System.Drawing.Size(546, 24);
+            this.txtDireccion.TabIndex = 26;
+            this.txtDireccion.ThemeName = "VisualStudio2012Light";
+            this.txtDireccion.Validar = true;
+            // 
+            // cbbProvincia
+            // 
+            this.cbbProvincia.BackColor = System.Drawing.Color.White;
+            this.cbbProvincia.Correo = false;
+            this.cbbProvincia.DataSource = this.provinciaBindingSource;
+            this.cbbProvincia.DisplayMember = "Descripcion";
+            this.cbbProvincia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbProvincia.Limpiar = true;
+            this.cbbProvincia.Location = new System.Drawing.Point(75, 21);
+            this.cbbProvincia.Name = "cbbProvincia";
+            this.cbbProvincia.Size = new System.Drawing.Size(196, 23);
+            this.cbbProvincia.TabIndex = 13;
+            this.cbbProvincia.ThemeName = "VisualStudio2012Light";
+            this.cbbProvincia.Validar = true;
+            this.cbbProvincia.ValueMember = "IdProvincia";
+            // 
+            // cbbCiudad
+            // 
+            this.cbbCiudad.BackColor = System.Drawing.Color.White;
+            this.cbbCiudad.Correo = false;
+            this.cbbCiudad.DataSource = this.ciudadBindingSource;
+            this.cbbCiudad.DisplayMember = "Descripcion";
+            this.cbbCiudad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCiudad.Limpiar = true;
+            this.cbbCiudad.Location = new System.Drawing.Point(360, 18);
+            this.cbbCiudad.Name = "cbbCiudad";
+            this.cbbCiudad.Size = new System.Drawing.Size(196, 23);
+            this.cbbCiudad.TabIndex = 14;
+            this.cbbCiudad.ThemeName = "VisualStudio2012Light";
+            this.cbbCiudad.Validar = true;
+            this.cbbCiudad.ValueMember = "IdCiudad";
+            // 
+            // cbbMunicipio
+            // 
+            this.cbbMunicipio.BackColor = System.Drawing.Color.White;
+            this.cbbMunicipio.Correo = false;
+            this.cbbMunicipio.DataSource = this.municipioBindingSource;
+            this.cbbMunicipio.DisplayMember = "Descripcion";
+            this.cbbMunicipio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMunicipio.Limpiar = true;
+            this.cbbMunicipio.Location = new System.Drawing.Point(75, 52);
+            this.cbbMunicipio.Name = "cbbMunicipio";
+            this.cbbMunicipio.Size = new System.Drawing.Size(196, 23);
+            this.cbbMunicipio.TabIndex = 15;
+            this.cbbMunicipio.ThemeName = "VisualStudio2012Light";
+            this.cbbMunicipio.Validar = true;
+            this.cbbMunicipio.ValueMember = "IdMunicipio";
+            // 
+            // cbbSector
+            // 
+            this.cbbSector.BackColor = System.Drawing.Color.White;
+            this.cbbSector.Correo = false;
+            this.cbbSector.DataSource = this.sectorBindingSource;
+            this.cbbSector.DisplayMember = "Descripcion";
+            this.cbbSector.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSector.Limpiar = true;
+            this.cbbSector.Location = new System.Drawing.Point(360, 47);
+            this.cbbSector.Name = "cbbSector";
+            this.cbbSector.Size = new System.Drawing.Size(196, 23);
+            this.cbbSector.TabIndex = 16;
+            this.cbbSector.ThemeName = "VisualStudio2012Light";
+            this.cbbSector.Validar = true;
+            this.cbbSector.ValueMember = "IdSector";
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel8.Location = new System.Drawing.Point(312, 53);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(42, 17);
+            this.radLabel8.TabIndex = 12;
+            this.radLabel8.Text = "Sector";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(308, 24);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(46, 17);
+            this.radLabel5.TabIndex = 10;
+            this.radLabel5.Text = "Ciudad";
+            // 
+            // radLabel9
+            // 
+            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel9.Location = new System.Drawing.Point(10, 58);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(59, 17);
+            this.radLabel9.TabIndex = 11;
+            this.radLabel9.Text = "Municipio";
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel10.Location = new System.Drawing.Point(12, 27);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(57, 17);
+            this.radLabel10.TabIndex = 9;
+            this.radLabel10.Text = "Provincia";
+            // 
+            // cbbEncargado
+            // 
+            this.cbbEncargado.BackColor = System.Drawing.Color.White;
+            this.cbbEncargado.Correo = false;
+            this.cbbEncargado.DataSource = this.vistaContactoEncargadoBindingSource;
+            this.cbbEncargado.DisplayMember = "Nombre";
+            this.cbbEncargado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEncargado.Limpiar = true;
+            this.cbbEncargado.Location = new System.Drawing.Point(106, 105);
+            this.cbbEncargado.Name = "cbbEncargado";
+            this.cbbEncargado.Size = new System.Drawing.Size(187, 23);
+            this.cbbEncargado.TabIndex = 13;
+            this.cbbEncargado.ThemeName = "VisualStudio2012Light";
+            this.cbbEncargado.Validar = true;
+            this.cbbEncargado.ValueMember = "IdContacto";
+            // 
+            // txtNota
+            // 
+            this.txtNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNota.Correo = false;
+            this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNota.Limpiar = false;
+            this.txtNota.Location = new System.Drawing.Point(9, 288);
+            this.txtNota.Multiline = true;
+            this.txtNota.Name = "txtNota";
+            this.txtNota.NullText = "Nota";
+            // 
+            // 
+            // 
+            this.txtNota.RootElement.StretchVertically = true;
+            this.txtNota.Size = new System.Drawing.Size(574, 65);
+            this.txtNota.TabIndex = 19;
+            this.txtNota.ThemeName = "VisualStudio2012Light";
+            this.txtNota.Validar = false;
+            // 
+            // radSeparator4
+            // 
+            this.radSeparator4.Location = new System.Drawing.Point(10, 278);
+            this.radSeparator4.Name = "radSeparator4";
+            this.radSeparator4.Size = new System.Drawing.Size(574, 10);
+            this.radSeparator4.TabIndex = 24;
+            this.radSeparator4.ThemeName = "VisualStudio2012Light";
+            // 
+            // radSeparator1
+            // 
+            this.radSeparator1.Location = new System.Drawing.Point(10, 574);
+            this.radSeparator1.Name = "radSeparator1";
+            this.radSeparator1.Size = new System.Drawing.Size(574, 10);
+            this.radSeparator1.TabIndex = 24;
+            this.radSeparator1.ThemeName = "VisualStudio2012Light";
+            // 
+            // radSeparator3
+            // 
+            this.radSeparator3.Location = new System.Drawing.Point(4, 27);
+            this.radSeparator3.Name = "radSeparator3";
+            this.radSeparator3.Size = new System.Drawing.Size(582, 10);
+            this.radSeparator3.TabIndex = 24;
+            this.radSeparator3.ThemeName = "VisualStudio2012Light";
+            // 
+            // radSeparator2
+            // 
+            this.radSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radSeparator2.Location = new System.Drawing.Point(10, 359);
+            this.radSeparator2.Name = "radSeparator2";
+            this.radSeparator2.Size = new System.Drawing.Size(574, 10);
+            this.radSeparator2.TabIndex = 24;
+            this.radSeparator2.ThemeName = "VisualStudio2012Light";
+            // 
+            // lbCliente
+            // 
+            this.lbCliente.BackColor = System.Drawing.Color.LightGray;
+            this.lbCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbCliente.Location = new System.Drawing.Point(141, 46);
+            this.lbCliente.Name = "lbCliente";
+            this.lbCliente.Size = new System.Drawing.Size(445, 23);
+            this.lbCliente.TabIndex = 23;
+            this.lbCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(595, 24);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Registro de Obra/Proyecto";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtObra
             // 
@@ -148,6 +460,33 @@
             this.txtObra.TabIndex = 20;
             this.txtObra.ThemeName = "VisualStudio2012Light";
             this.txtObra.Validar = true;
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radLabel4.Location = new System.Drawing.Point(24, 109);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(76, 21);
+            this.radLabel4.TabIndex = 17;
+            this.radLabel4.Text = "Ing. Acargo";
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radLabel2.Location = new System.Drawing.Point(24, 79);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(37, 21);
+            this.radLabel2.TabIndex = 17;
+            this.radLabel2.Text = "Obra";
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radLabel1.Location = new System.Drawing.Point(22, 43);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(49, 21);
+            this.radLabel1.TabIndex = 17;
+            this.radLabel1.Text = "Cliente";
             // 
             // cbbCliente
             // 
@@ -300,16 +639,6 @@
             this.cbbCliente.ValueMember = "IdCliente";
             this.cbbCliente.SelectedIndexChanged += new System.EventHandler(this.cbbCliente_SelectedIndexChanged);
             // 
-            // vistaClienteBindingSource
-            // 
-            this.vistaClienteBindingSource.DataMember = "VistaCliente";
-            this.vistaClienteBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataObra
             // 
             this.dataObra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -419,336 +748,9 @@
             this.dataObra.TabIndex = 21;
             this.dataObra.ThemeName = "VisualStudio2012Light";
             // 
-            // vistaContactoEncargadoBindingSource
-            // 
-            this.vistaContactoEncargadoBindingSource.DataMember = "VistaContactoEncargado";
-            this.vistaContactoEncargadoBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // txtNota
-            // 
-            this.txtNota.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNota.Correo = false;
-            this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtNota.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNota.Limpiar = false;
-            this.txtNota.Location = new System.Drawing.Point(9, 288);
-            this.txtNota.Multiline = true;
-            this.txtNota.Name = "txtNota";
-            this.txtNota.NullText = "Nota";
-            // 
-            // 
-            // 
-            this.txtNota.RootElement.StretchVertically = true;
-            this.txtNota.Size = new System.Drawing.Size(574, 65);
-            this.txtNota.TabIndex = 19;
-            this.txtNota.ThemeName = "VisualStudio2012Light";
-            this.txtNota.Validar = false;
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radLabel1.Location = new System.Drawing.Point(22, 43);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(49, 21);
-            this.radLabel1.TabIndex = 17;
-            this.radLabel1.Text = "Cliente";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(595, 24);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Registro de Obra/Proyecto";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radLabel2
-            // 
-            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radLabel2.Location = new System.Drawing.Point(24, 79);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(37, 21);
-            this.radLabel2.TabIndex = 17;
-            this.radLabel2.Text = "Obra";
-            // 
-            // radLabel4
-            // 
-            this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radLabel4.Location = new System.Drawing.Point(24, 109);
-            this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(76, 21);
-            this.radLabel4.TabIndex = 17;
-            this.radLabel4.Text = "Ing. Acargo";
-            // 
-            // lbCliente
-            // 
-            this.lbCliente.BackColor = System.Drawing.Color.LightGray;
-            this.lbCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbCliente.Location = new System.Drawing.Point(141, 46);
-            this.lbCliente.Name = "lbCliente";
-            this.lbCliente.Size = new System.Drawing.Size(445, 23);
-            this.lbCliente.TabIndex = 23;
-            this.lbCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radSeparator2
-            // 
-            this.radSeparator2.Location = new System.Drawing.Point(10, 359);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(574, 10);
-            this.radSeparator2.TabIndex = 24;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator1
-            // 
-            this.radSeparator1.Location = new System.Drawing.Point(10, 574);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(574, 10);
-            this.radSeparator1.TabIndex = 24;
-            this.radSeparator1.ThemeName = "VisualStudio2012Light";
-            // 
-            // radGroupBox3
-            // 
-            this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox3.Controls.Add(this.chEstado);
-            this.radGroupBox3.Controls.Add(this.txtDireccion);
-            this.radGroupBox3.Controls.Add(this.cbbProvincia);
-            this.radGroupBox3.Controls.Add(this.cbbCiudad);
-            this.radGroupBox3.Controls.Add(this.cbbMunicipio);
-            this.radGroupBox3.Controls.Add(this.cbbSector);
-            this.radGroupBox3.Controls.Add(this.radLabel8);
-            this.radGroupBox3.Controls.Add(this.radLabel5);
-            this.radGroupBox3.Controls.Add(this.radLabel9);
-            this.radGroupBox3.Controls.Add(this.radLabel10);
-            this.radGroupBox3.HeaderText = "Localidad";
-            this.radGroupBox3.Location = new System.Drawing.Point(12, 136);
-            this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(572, 134);
-            this.radGroupBox3.TabIndex = 25;
-            this.radGroupBox3.Text = "Localidad";
-            this.radGroupBox3.ThemeName = "VisualStudio2012Light";
-            // 
-            // chEstado
-            // 
-            this.chEstado.Location = new System.Drawing.Point(485, 111);
-            this.chEstado.Name = "chEstado";
-            this.chEstado.OffText = "Inactivo";
-            this.chEstado.OnText = "Activo";
-            this.chEstado.Size = new System.Drawing.Size(71, 20);
-            this.chEstado.TabIndex = 27;
-            this.chEstado.ThemeName = "VisualStudio2012Light";
-            this.chEstado.ThumbTickness = 15;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Correo = false;
-            this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Limpiar = true;
-            this.txtDireccion.Location = new System.Drawing.Point(10, 81);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.NullText = "Direcicon";
-            this.txtDireccion.Size = new System.Drawing.Size(546, 24);
-            this.txtDireccion.TabIndex = 26;
-            this.txtDireccion.ThemeName = "VisualStudio2012Light";
-            this.txtDireccion.Validar = true;
-            // 
-            // cbbProvincia
-            // 
-            this.cbbProvincia.BackColor = System.Drawing.Color.White;
-            this.cbbProvincia.Correo = false;
-            this.cbbProvincia.DataSource = this.provinciaBindingSource;
-            this.cbbProvincia.DisplayMember = "Descripcion";
-            this.cbbProvincia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbProvincia.Limpiar = true;
-            this.cbbProvincia.Location = new System.Drawing.Point(75, 21);
-            this.cbbProvincia.Name = "cbbProvincia";
-            this.cbbProvincia.Size = new System.Drawing.Size(196, 23);
-            this.cbbProvincia.TabIndex = 13;
-            this.cbbProvincia.ThemeName = "VisualStudio2012Light";
-            this.cbbProvincia.Validar = true;
-            this.cbbProvincia.ValueMember = "IdProvincia";
-            // 
-            // provinciaBindingSource
-            // 
-            this.provinciaBindingSource.DataMember = "Provincia";
-            this.provinciaBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // cbbCiudad
-            // 
-            this.cbbCiudad.BackColor = System.Drawing.Color.White;
-            this.cbbCiudad.Correo = false;
-            this.cbbCiudad.DataSource = this.ciudadBindingSource;
-            this.cbbCiudad.DisplayMember = "Descripcion";
-            this.cbbCiudad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCiudad.Limpiar = true;
-            this.cbbCiudad.Location = new System.Drawing.Point(360, 18);
-            this.cbbCiudad.Name = "cbbCiudad";
-            this.cbbCiudad.Size = new System.Drawing.Size(196, 23);
-            this.cbbCiudad.TabIndex = 14;
-            this.cbbCiudad.ThemeName = "VisualStudio2012Light";
-            this.cbbCiudad.Validar = true;
-            this.cbbCiudad.ValueMember = "IdCiudad";
-            // 
-            // ciudadBindingSource
-            // 
-            this.ciudadBindingSource.DataMember = "Ciudad";
-            this.ciudadBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // cbbMunicipio
-            // 
-            this.cbbMunicipio.BackColor = System.Drawing.Color.White;
-            this.cbbMunicipio.Correo = false;
-            this.cbbMunicipio.DataSource = this.municipioBindingSource;
-            this.cbbMunicipio.DisplayMember = "Descripcion";
-            this.cbbMunicipio.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMunicipio.Limpiar = true;
-            this.cbbMunicipio.Location = new System.Drawing.Point(75, 52);
-            this.cbbMunicipio.Name = "cbbMunicipio";
-            this.cbbMunicipio.Size = new System.Drawing.Size(196, 23);
-            this.cbbMunicipio.TabIndex = 15;
-            this.cbbMunicipio.ThemeName = "VisualStudio2012Light";
-            this.cbbMunicipio.Validar = true;
-            this.cbbMunicipio.ValueMember = "IdMunicipio";
-            // 
-            // municipioBindingSource
-            // 
-            this.municipioBindingSource.DataMember = "Municipio";
-            this.municipioBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // cbbSector
-            // 
-            this.cbbSector.BackColor = System.Drawing.Color.White;
-            this.cbbSector.Correo = false;
-            this.cbbSector.DataSource = this.sectorBindingSource;
-            this.cbbSector.DisplayMember = "Descripcion";
-            this.cbbSector.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSector.Limpiar = true;
-            this.cbbSector.Location = new System.Drawing.Point(360, 47);
-            this.cbbSector.Name = "cbbSector";
-            this.cbbSector.Size = new System.Drawing.Size(196, 23);
-            this.cbbSector.TabIndex = 16;
-            this.cbbSector.ThemeName = "VisualStudio2012Light";
-            this.cbbSector.Validar = true;
-            this.cbbSector.ValueMember = "IdSector";
-            // 
-            // sectorBindingSource
-            // 
-            this.sectorBindingSource.DataMember = "Sector";
-            this.sectorBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // radLabel8
-            // 
-            this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel8.Location = new System.Drawing.Point(312, 53);
-            this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(42, 17);
-            this.radLabel8.TabIndex = 12;
-            this.radLabel8.Text = "Sector";
-            // 
-            // radLabel5
-            // 
-            this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(308, 24);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(46, 17);
-            this.radLabel5.TabIndex = 10;
-            this.radLabel5.Text = "Ciudad";
-            // 
-            // radLabel9
-            // 
-            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(10, 58);
-            this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(59, 17);
-            this.radLabel9.TabIndex = 11;
-            this.radLabel9.Text = "Municipio";
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(12, 27);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(57, 17);
-            this.radLabel10.TabIndex = 9;
-            this.radLabel10.Text = "Provincia";
-            // 
-            // radSeparator3
-            // 
-            this.radSeparator3.Location = new System.Drawing.Point(4, 27);
-            this.radSeparator3.Name = "radSeparator3";
-            this.radSeparator3.Size = new System.Drawing.Size(582, 10);
-            this.radSeparator3.TabIndex = 24;
-            this.radSeparator3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator4
-            // 
-            this.radSeparator4.Location = new System.Drawing.Point(10, 278);
-            this.radSeparator4.Name = "radSeparator4";
-            this.radSeparator4.Size = new System.Drawing.Size(574, 10);
-            this.radSeparator4.TabIndex = 24;
-            this.radSeparator4.ThemeName = "VisualStudio2012Light";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // cbbEncargado
-            // 
-            this.cbbEncargado.BackColor = System.Drawing.Color.White;
-            this.cbbEncargado.Correo = false;
-            this.cbbEncargado.DataSource = this.vistaContactoEncargadoBindingSource;
-            this.cbbEncargado.DisplayMember = "Nombre";
-            this.cbbEncargado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbEncargado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbEncargado.Limpiar = true;
-            this.cbbEncargado.Location = new System.Drawing.Point(106, 105);
-            this.cbbEncargado.Name = "cbbEncargado";
-            this.cbbEncargado.Size = new System.Drawing.Size(187, 23);
-            this.cbbEncargado.TabIndex = 13;
-            this.cbbEncargado.ThemeName = "VisualStudio2012Light";
-            this.cbbEncargado.Validar = true;
-            this.cbbEncargado.ValueMember = "IdContacto";
-            // 
-            // provinciaTableAdapter
-            // 
-            this.provinciaTableAdapter.ClearBeforeFill = true;
-            // 
-            // municipioTableAdapter
-            // 
-            this.municipioTableAdapter.ClearBeforeFill = true;
-            // 
-            // ciudadTableAdapter
-            // 
-            this.ciudadTableAdapter.ClearBeforeFill = true;
-            // 
-            // sectorTableAdapter
-            // 
-            this.sectorTableAdapter.ClearBeforeFill = true;
-            // 
-            // vistaClienteTableAdapter
-            // 
-            this.vistaClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // vistaContactoEncargadoTableAdapter
-            // 
-            this.vistaContactoEncargadoTableAdapter.ClearBeforeFill = true;
-            // 
-            // radStatusStrip1
-            // 
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 567);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(595, 26);
-            this.radStatusStrip1.TabIndex = 26;
-            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
             // 
             // Obra
             // 
@@ -781,43 +783,43 @@
             this.Text = "Obra";
             this.Load += new System.EventHandler(this.Obra_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Obra_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.txtObra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataObra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaContactoEncargadoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProvincia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provinciaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ciudadBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.municipioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sectorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEncargado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente.EditorControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataObra.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataObra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

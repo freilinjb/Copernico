@@ -9,9 +9,9 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class ActivoFijo : FormBase
+    public partial class Actividad : FormBase
     {
-        public ActivoFijo()
+        public Actividad()
         {
             InitializeComponent();
         }

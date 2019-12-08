@@ -15,10 +15,8 @@ namespace Negocios.Entidades
         public string Banqueta;
         public float HumedadPorcentual;
         public float CantidadInicial;
-        public float Peso;
-        public float PesoEspesifico;
 
-        public Analisis(int idAnalisis, string fecha, int idTipoAnalisis, int idMina, string banqueta, float humedadPorcentual, float cantidadInicial, float peso, float pesoEspesifico)
+        public Analisis(int idAnalisis, string fecha, int idTipoAnalisis, int idMina, string banqueta, float humedadPorcentual, float cantidadInicial)
         {
             IdAnalisis = idAnalisis;
             Fecha = fecha;
@@ -27,13 +25,11 @@ namespace Negocios.Entidades
             Banqueta = banqueta;
             HumedadPorcentual = humedadPorcentual;
             CantidadInicial = cantidadInicial;
-            Peso = peso;
-            PesoEspesifico = pesoEspesifico;
         }
 
         public string getGuardar()
         {
-            return $"[RegistraAnalisis] {IdAnalisis},'{Fecha}',{IdTipoAnalisis},{IdMina},{Banqueta},{HumedadPorcentual},{CantidadInicial},{Peso},{PesoEspesifico}";
+            return $"[RegistraAnalisis] {IdAnalisis},'{Fecha}',{IdTipoAnalisis},{IdMina},'{Banqueta}',{HumedadPorcentual},{CantidadInicial}";
         }
     }
 }
