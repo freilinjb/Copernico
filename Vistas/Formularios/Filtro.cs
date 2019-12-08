@@ -39,6 +39,10 @@ namespace Vistas.Formularios
             this.tamizTableAdapter.Fill(this.matrizDataSet.Tamiz);
             cbbUnidad.SelectedIndex = 0;
 
+            cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia from Producto P INNER JOIN Familia F ON F.IdFamilia = P.IdFamilia WHERE F.IdFamilia = 1").Tables[0];
+            cbbProducto.ValueMember = "IdProducto";
+            cbbProducto.DisplayMember = "Producto";
+
             Utilidades.Limpiar(this, errorProvider1);
             cbbTamizFinal.DataSource = null;
             cbbTamizInicial.SelectedIndex = 0;
@@ -68,7 +72,7 @@ namespace Vistas.Formularios
                         Convert.ToInt32(txtNumFiltro.Text.Trim()),
                         Convert.ToInt32(cbbTamizInicial.SelectedValue.ToString()),
                         Convert.ToInt32(cbbTamizFinal.SelectedValue.ToString()),
-                        txtDescripcion.Text.Trim()
+                        (int)cbbProducto.SelectedValue
                         );
 
                     ds = Utilidades.Ejecutar(filtro.getGuardar());

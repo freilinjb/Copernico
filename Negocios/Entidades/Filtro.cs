@@ -11,19 +11,19 @@ namespace Negocios.Entidades
         public int IdFiltro;
         public int NumMallaInicial;
         public int NumMallaFinal;
-        public string Descripcion;
+        public int IdProducto;
 
-        public Filtro(int idFiltro, int numMallaInicial, int numMallaFinal, string descripcion)
+        public Filtro(int idFiltro, int numMallaInicial, int numMallaFinal, int idProducto)
         {
             IdFiltro = idFiltro;
             NumMallaInicial = numMallaInicial;
             NumMallaFinal = numMallaFinal;
-            Descripcion = descripcion;
+            IdProducto = idProducto;
         }
 
         public string getGuardar()
         {
-            return $"EXEC RegistrarFiltro {IdFiltro},{NumMallaInicial},{NumMallaFinal},'{Descripcion}'";
+            return $"EXEC RegistrarFiltro {IdFiltro},{NumMallaInicial},{NumMallaFinal},{IdProducto}";
         }
     }
 }

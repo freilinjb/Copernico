@@ -40,7 +40,18 @@ namespace Vistas.Formularios
         {
             RadMessageBox.ThemeName = this.ThemeName;
 
-            IdMayor();
+            cbbTipoAnalisis.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoAnalisis,Descripcion AS TipoAnalisis FROM TipoAnalisis").Tables[0];
+            cbbTipoAnalisis.ValueMember = "IdTipoAnalisis";
+            cbbTipoAnalisis.DisplayMember = "TipoAnalisis";
+
+            cbbMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdMina,T.Nombre AS Mina FROM Mina M INNER JOIN Tercero T ON T.IdTercero = M.IdTercero INNER JOIN EstadoMina EM ON EM.IdEstadoMina = M.IdEstadoMina WHERE EM.IdEstadoMina = 1").Tables[0];
+            cbbMina.ValueMember = "IdMina";
+            cbbMina.DisplayMember = "Mina";
+
+            cbbTipoMaterial.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoMateriaPrima,Descripcion AS TipoMateriaPrima FROM TipoMateriaPrima").Tables[0];
+            cbbTipoMaterial.ValueMember = "IdTipoMateriaPrima";
+            cbbTipoMaterial.DisplayMember = "TipoMateriaPrima";
+
 
             ds = Negocios.Utilidades.Ejecutar("SELECT NumMalla,Apertura FROM Tamiz");
 
@@ -48,6 +59,11 @@ namespace Vistas.Formularios
             {
                 dataTamiz.Rows.Add(Convert.ToSingle(File["NumMalla"].ToString()), Convert.ToSingle(File["Apertura"].ToString()), 0, 0, 0, 0);
             }
+
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+            IdMayor();
+
         }
 
         private void IdMayor()
@@ -115,7 +131,8 @@ namespace Vistas.Formularios
                             (int)cbbMina.SelectedValue,
                             txtBanqueta.Text.Trim(),
                             Convert.ToSingle(txtHumedad.Text.Trim()),
-                            Convert.ToSingle(txtCantidadFinal.Text.Trim()));
+                            Convert.ToSingle(txtCantidadFinal.Text.Trim()),
+                            txtObservacion.Text.Trim());
 
                         if (Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
                             bien = true;
@@ -139,11 +156,15 @@ namespace Vistas.Formularios
 
         private void Analisis_KeyUp(object sender, KeyEventArgs e)
         {
-            if(Guardar())
+            if(e.KeyCode == Keys.F1)
             {
-                RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-                Negocios.Utilidades.Limpiar(this, errorProvider1);
-                toolRegistro.Text = "Nuevo Registro";
+                if (Guardar())
+                {
+                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    IdMayor();
+                    toolRegistro.Text = "Nuevo Registro";
+                }
             }
         }
     }

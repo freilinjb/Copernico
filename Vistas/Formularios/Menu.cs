@@ -57,5 +57,26 @@ namespace Vistas.Formularios
             analisis.MdiParent = this;
             analisis.Show();
         }
+
+        private void btFiltro_Click(object sender, EventArgs e)
+        {
+            Filtro filtro = Filtro.ObtenerInstancia();
+            filtro.MdiParent = this;
+            filtro.Show();
+        }
+
+        private void btProducto_Click(object sender, EventArgs e)
+        {
+            Producto producto = Producto.ObtenerInstancia();
+            producto.MdiParent = this;
+            producto.Show();
+        }
+
+        private void btProveedor_Click(object sender, EventArgs e)
+        {
+            Proveedor proveedor = Proveedor.ObtenerInstancia();
+            proveedor.MdiParent = this;
+            proveedor.Show();
+        }
     }
 }

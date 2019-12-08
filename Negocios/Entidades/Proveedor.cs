@@ -52,7 +52,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC RegistrarProveedor {IdProveedor},'{Nombre}','{RazonSocial}','{Correo}',{Telefono},'{IdTipoIdentificacion}','{Identificacion}',{IdRubro},{IdMunicipio},{IdProvincia},'{IdSector}','{Direccion}','{Observacion}',{IdCentro},{Estado}";
+            return $"EXEC RegistrarProveedor {IdProveedor},'{Nombre}','{RazonSocial}','{Correo}','{Telefono}','{IdTipoIdentificacion}','{Identificacion}',{IdRubro},{IdMunicipio},{IdProvincia},'{IdSector}','{Direccion}','{Observacion}',{IdCentro},{Estado}";
         }
     }
 }

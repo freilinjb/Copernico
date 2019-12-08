@@ -30,27 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filtro));
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn12 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn13 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition5 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn14 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn15 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition6 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn1 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn2 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn3 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn4 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn5 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn6 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn7 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn8 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn9 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn16 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn17 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn18 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn19 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn20 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn10 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn11 = new Telerik.WinControls.UI.GridViewDecimalColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn21 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewDecimalColumn gridViewDecimalColumn22 = new Telerik.WinControls.UI.GridViewDecimalColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition8 = new Telerik.WinControls.UI.TableViewDefinition();
             this.cbbTamizInicial = new Negocios.Componentes.MultiCbbPersonal();
             this.tamizBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
@@ -60,7 +61,6 @@
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
             this.cbbUnd = new Negocios.Componentes.cbbPersonal();
-            this.txtDescripcion = new Negocios.Componentes.TextPersonal();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
@@ -88,6 +88,7 @@
             this.tamizTableAdapter = new Vistas.MatrizDataSetTableAdapters.TamizTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.vistaFiltroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaFiltroTableAdapter();
+            this.cbbProducto = new Negocios.Componentes.cbbPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTamizInicial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTamizInicial.EditorControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTamizInicial.EditorControl.MasterTemplate)).BeginInit();
@@ -103,7 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
@@ -133,6 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,34 +155,34 @@
             this.cbbTamizInicial.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.cbbTamizInicial.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.cbbTamizInicial.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewDecimalColumn12.DataType = typeof(double);
-            gridViewDecimalColumn12.EnableExpressionEditor = false;
-            gridViewDecimalColumn12.FieldName = "NumMalla";
-            resources.ApplyResources(gridViewDecimalColumn12, "gridViewDecimalColumn12");
-            gridViewDecimalColumn12.IsAutoGenerated = true;
-            gridViewDecimalColumn12.Name = "NumMalla";
-            gridViewDecimalColumn12.Width = 61;
-            gridViewDecimalColumn13.DataType = typeof(double);
-            gridViewDecimalColumn13.EnableExpressionEditor = false;
-            gridViewDecimalColumn13.FieldName = "Apertura";
-            resources.ApplyResources(gridViewDecimalColumn13, "gridViewDecimalColumn13");
-            gridViewDecimalColumn13.IsAutoGenerated = true;
-            gridViewDecimalColumn13.Name = "Apertura";
-            gridViewDecimalColumn13.Width = 71;
-            gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "Unidad";
-            resources.ApplyResources(gridViewTextBoxColumn5, "gridViewTextBoxColumn5");
-            gridViewTextBoxColumn5.IsAutoGenerated = true;
-            gridViewTextBoxColumn5.Name = "Unidad";
-            gridViewTextBoxColumn5.Width = 118;
+            gridViewDecimalColumn1.DataType = typeof(double);
+            gridViewDecimalColumn1.EnableExpressionEditor = false;
+            gridViewDecimalColumn1.FieldName = "NumMalla";
+            resources.ApplyResources(gridViewDecimalColumn1, "gridViewDecimalColumn1");
+            gridViewDecimalColumn1.IsAutoGenerated = true;
+            gridViewDecimalColumn1.Name = "NumMalla";
+            gridViewDecimalColumn1.Width = 61;
+            gridViewDecimalColumn2.DataType = typeof(double);
+            gridViewDecimalColumn2.EnableExpressionEditor = false;
+            gridViewDecimalColumn2.FieldName = "Apertura";
+            resources.ApplyResources(gridViewDecimalColumn2, "gridViewDecimalColumn2");
+            gridViewDecimalColumn2.IsAutoGenerated = true;
+            gridViewDecimalColumn2.Name = "Apertura";
+            gridViewDecimalColumn2.Width = 71;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "Unidad";
+            resources.ApplyResources(gridViewTextBoxColumn1, "gridViewTextBoxColumn1");
+            gridViewTextBoxColumn1.IsAutoGenerated = true;
+            gridViewTextBoxColumn1.Name = "Unidad";
+            gridViewTextBoxColumn1.Width = 118;
             this.cbbTamizInicial.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn12,
-            gridViewDecimalColumn13,
-            gridViewTextBoxColumn5});
+            gridViewDecimalColumn1,
+            gridViewDecimalColumn2,
+            gridViewTextBoxColumn1});
             this.cbbTamizInicial.EditorControl.MasterTemplate.DataSource = this.tamizBindingSource;
             this.cbbTamizInicial.EditorControl.MasterTemplate.EnableGrouping = false;
             this.cbbTamizInicial.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.cbbTamizInicial.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition5;
+            this.cbbTamizInicial.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.cbbTamizInicial.EditorControl.Name = "NestedRadGridView";
             this.cbbTamizInicial.EditorControl.ReadOnly = true;
             this.cbbTamizInicial.EditorControl.ShowGroupPanel = false;
@@ -221,28 +222,28 @@
             this.cbbTamizFinal.EditorControl.MasterTemplate.AllowAddNewRow = false;
             this.cbbTamizFinal.EditorControl.MasterTemplate.AllowCellContextMenu = false;
             this.cbbTamizFinal.EditorControl.MasterTemplate.AllowColumnChooser = false;
-            gridViewDecimalColumn14.DataType = typeof(double);
-            gridViewDecimalColumn14.FieldName = "NumMalla";
-            resources.ApplyResources(gridViewDecimalColumn14, "gridViewDecimalColumn14");
-            gridViewDecimalColumn14.IsAutoGenerated = true;
-            gridViewDecimalColumn14.Name = "NumMalla";
-            gridViewDecimalColumn15.DataType = typeof(double);
-            gridViewDecimalColumn15.FieldName = "Apertura";
-            resources.ApplyResources(gridViewDecimalColumn15, "gridViewDecimalColumn15");
-            gridViewDecimalColumn15.IsAutoGenerated = true;
-            gridViewDecimalColumn15.Name = "Apertura";
-            gridViewTextBoxColumn6.FieldName = "Unidad";
-            resources.ApplyResources(gridViewTextBoxColumn6, "gridViewTextBoxColumn6");
-            gridViewTextBoxColumn6.IsAutoGenerated = true;
-            gridViewTextBoxColumn6.Name = "Unidad";
+            gridViewDecimalColumn3.DataType = typeof(double);
+            gridViewDecimalColumn3.FieldName = "NumMalla";
+            resources.ApplyResources(gridViewDecimalColumn3, "gridViewDecimalColumn3");
+            gridViewDecimalColumn3.IsAutoGenerated = true;
+            gridViewDecimalColumn3.Name = "NumMalla";
+            gridViewDecimalColumn4.DataType = typeof(double);
+            gridViewDecimalColumn4.FieldName = "Apertura";
+            resources.ApplyResources(gridViewDecimalColumn4, "gridViewDecimalColumn4");
+            gridViewDecimalColumn4.IsAutoGenerated = true;
+            gridViewDecimalColumn4.Name = "Apertura";
+            gridViewTextBoxColumn2.FieldName = "Unidad";
+            resources.ApplyResources(gridViewTextBoxColumn2, "gridViewTextBoxColumn2");
+            gridViewTextBoxColumn2.IsAutoGenerated = true;
+            gridViewTextBoxColumn2.Name = "Unidad";
             this.cbbTamizFinal.EditorControl.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn14,
-            gridViewDecimalColumn15,
-            gridViewTextBoxColumn6});
+            gridViewDecimalColumn3,
+            gridViewDecimalColumn4,
+            gridViewTextBoxColumn2});
             this.cbbTamizFinal.EditorControl.MasterTemplate.DataSource = this.tamizBindingSource;
             this.cbbTamizFinal.EditorControl.MasterTemplate.EnableGrouping = false;
             this.cbbTamizFinal.EditorControl.MasterTemplate.ShowFilteringRow = false;
-            this.cbbTamizFinal.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition6;
+            this.cbbTamizFinal.EditorControl.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.cbbTamizFinal.EditorControl.Name = "NestedRadGridView";
             this.cbbTamizFinal.EditorControl.ReadOnly = true;
             this.cbbTamizFinal.EditorControl.ShowGroupPanel = false;
@@ -262,7 +263,7 @@
             this.radPageView1.ItemSizeMode = ((Telerik.WinControls.UI.PageViewItemSizeMode)((Telerik.WinControls.UI.PageViewItemSizeMode.EqualWidth | Telerik.WinControls.UI.PageViewItemSizeMode.EqualHeight)));
             resources.ApplyResources(this.radPageView1, "radPageView1");
             this.radPageView1.Name = "radPageView1";
-            this.radPageView1.SelectedPage = this.pageTamiz;
+            this.radPageView1.SelectedPage = this.radPageViewPage1;
             this.radPageView1.ThemeName = "VisualStudio2012Light";
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).ShowItemPinButton = false;
             ((Telerik.WinControls.UI.RadPageViewStripElement)(this.radPageView1.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
@@ -288,8 +289,8 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.cbbProducto);
             this.radGroupBox2.Controls.Add(this.cbbUnd);
-            this.radGroupBox2.Controls.Add(this.txtDescripcion);
             this.radGroupBox2.Controls.Add(this.cbbTamizFinal);
             this.radGroupBox2.Controls.Add(this.cbbTamizInicial);
             this.radGroupBox2.Controls.Add(this.radLabel10);
@@ -308,22 +309,12 @@
             this.cbbUnd.Correo = false;
             this.cbbUnd.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             resources.ApplyResources(this.cbbUnd, "cbbUnd");
-            radListDataItem3.Text = "Milimetro";
-            this.cbbUnd.Items.Add(radListDataItem3);
+            radListDataItem2.Text = "Milimetro";
+            this.cbbUnd.Items.Add(radListDataItem2);
             this.cbbUnd.Limpiar = false;
             this.cbbUnd.Name = "cbbUnd";
             this.cbbUnd.ThemeName = "VisualStudio2012Light";
             this.cbbUnd.Validar = false;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Correo = false;
-            this.txtDescripcion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtDescripcion.Limpiar = false;
-            resources.ApplyResources(this.txtDescripcion, "txtDescripcion");
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ThemeName = "VisualStudio2012Light";
-            this.txtDescripcion.Validar = true;
             // 
             // radLabel10
             // 
@@ -383,60 +374,60 @@
             this.dataProducto.MasterTemplate.AllowDragToGroup = false;
             this.dataProducto.MasterTemplate.AllowRowResize = false;
             this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn16.DataType = typeof(int);
-            gridViewDecimalColumn16.EnableExpressionEditor = false;
-            gridViewDecimalColumn16.FieldName = "IdFiltro";
-            resources.ApplyResources(gridViewDecimalColumn16, "gridViewDecimalColumn16");
-            gridViewDecimalColumn16.IsAutoGenerated = true;
-            gridViewDecimalColumn16.Name = "IdFiltro";
-            gridViewDecimalColumn16.Width = 60;
-            gridViewDecimalColumn17.DataType = typeof(double);
-            gridViewDecimalColumn17.EnableExpressionEditor = false;
-            gridViewDecimalColumn17.FieldName = "NumMallaInicial";
-            resources.ApplyResources(gridViewDecimalColumn17, "gridViewDecimalColumn17");
-            gridViewDecimalColumn17.IsAutoGenerated = true;
-            gridViewDecimalColumn17.Name = "NumMallaInicial";
-            gridViewDecimalColumn17.Width = 74;
-            gridViewDecimalColumn18.DataType = typeof(double);
-            gridViewDecimalColumn18.EnableExpressionEditor = false;
-            gridViewDecimalColumn18.FieldName = "AperturaInicial";
-            resources.ApplyResources(gridViewDecimalColumn18, "gridViewDecimalColumn18");
-            gridViewDecimalColumn18.IsAutoGenerated = true;
-            gridViewDecimalColumn18.Name = "AperturaInicial";
-            gridViewDecimalColumn18.Width = 69;
-            gridViewDecimalColumn19.DataType = typeof(double);
-            gridViewDecimalColumn19.EnableExpressionEditor = false;
-            gridViewDecimalColumn19.FieldName = "NumMallaFinal";
-            resources.ApplyResources(gridViewDecimalColumn19, "gridViewDecimalColumn19");
-            gridViewDecimalColumn19.IsAutoGenerated = true;
-            gridViewDecimalColumn19.Name = "NumMallaFinal";
-            gridViewDecimalColumn19.Width = 91;
-            gridViewDecimalColumn20.DataType = typeof(double);
-            gridViewDecimalColumn20.EnableExpressionEditor = false;
-            gridViewDecimalColumn20.FieldName = "AperturaFinal";
-            resources.ApplyResources(gridViewDecimalColumn20, "gridViewDecimalColumn20");
-            gridViewDecimalColumn20.IsAutoGenerated = true;
-            gridViewDecimalColumn20.Name = "AperturaFinal";
-            gridViewDecimalColumn20.Width = 66;
-            gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "Filtro";
-            resources.ApplyResources(gridViewTextBoxColumn7, "gridViewTextBoxColumn7");
-            gridViewTextBoxColumn7.IsAutoGenerated = true;
-            gridViewTextBoxColumn7.Name = "Filtro";
-            gridViewTextBoxColumn7.Width = 226;
+            gridViewDecimalColumn5.DataType = typeof(int);
+            gridViewDecimalColumn5.EnableExpressionEditor = false;
+            gridViewDecimalColumn5.FieldName = "IdFiltro";
+            resources.ApplyResources(gridViewDecimalColumn5, "gridViewDecimalColumn5");
+            gridViewDecimalColumn5.IsAutoGenerated = true;
+            gridViewDecimalColumn5.Name = "IdFiltro";
+            gridViewDecimalColumn5.Width = 60;
+            gridViewDecimalColumn6.DataType = typeof(double);
+            gridViewDecimalColumn6.EnableExpressionEditor = false;
+            gridViewDecimalColumn6.FieldName = "NumMallaInicial";
+            resources.ApplyResources(gridViewDecimalColumn6, "gridViewDecimalColumn6");
+            gridViewDecimalColumn6.IsAutoGenerated = true;
+            gridViewDecimalColumn6.Name = "NumMallaInicial";
+            gridViewDecimalColumn6.Width = 74;
+            gridViewDecimalColumn7.DataType = typeof(double);
+            gridViewDecimalColumn7.EnableExpressionEditor = false;
+            gridViewDecimalColumn7.FieldName = "AperturaInicial";
+            resources.ApplyResources(gridViewDecimalColumn7, "gridViewDecimalColumn7");
+            gridViewDecimalColumn7.IsAutoGenerated = true;
+            gridViewDecimalColumn7.Name = "AperturaInicial";
+            gridViewDecimalColumn7.Width = 69;
+            gridViewDecimalColumn8.DataType = typeof(double);
+            gridViewDecimalColumn8.EnableExpressionEditor = false;
+            gridViewDecimalColumn8.FieldName = "NumMallaFinal";
+            resources.ApplyResources(gridViewDecimalColumn8, "gridViewDecimalColumn8");
+            gridViewDecimalColumn8.IsAutoGenerated = true;
+            gridViewDecimalColumn8.Name = "NumMallaFinal";
+            gridViewDecimalColumn8.Width = 91;
+            gridViewDecimalColumn9.DataType = typeof(double);
+            gridViewDecimalColumn9.EnableExpressionEditor = false;
+            gridViewDecimalColumn9.FieldName = "AperturaFinal";
+            resources.ApplyResources(gridViewDecimalColumn9, "gridViewDecimalColumn9");
+            gridViewDecimalColumn9.IsAutoGenerated = true;
+            gridViewDecimalColumn9.Name = "AperturaFinal";
+            gridViewDecimalColumn9.Width = 66;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Filtro";
+            resources.ApplyResources(gridViewTextBoxColumn3, "gridViewTextBoxColumn3");
+            gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Name = "Filtro";
+            gridViewTextBoxColumn3.Width = 226;
             this.dataProducto.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn16,
-            gridViewDecimalColumn17,
-            gridViewDecimalColumn18,
-            gridViewDecimalColumn19,
-            gridViewDecimalColumn20,
-            gridViewTextBoxColumn7});
+            gridViewDecimalColumn5,
+            gridViewDecimalColumn6,
+            gridViewDecimalColumn7,
+            gridViewDecimalColumn8,
+            gridViewDecimalColumn9,
+            gridViewTextBoxColumn3});
             this.dataProducto.MasterTemplate.DataSource = this.vistaFiltroBindingSource;
             this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataProducto.MasterTemplate.EnableGrouping = false;
             this.dataProducto.MasterTemplate.EnableSorting = false;
             this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition3;
             this.dataProducto.Name = "dataProducto";
             this.dataProducto.ReadOnly = true;
             this.dataProducto.ShowGroupPanel = false;
@@ -500,8 +491,8 @@
             this.cbbUnidad.DisplayMember = "Descripcion";
             this.cbbUnidad.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             resources.ApplyResources(this.cbbUnidad, "cbbUnidad");
-            radListDataItem1.Text = "Milimetro";
-            this.cbbUnidad.Items.Add(radListDataItem1);
+            radListDataItem3.Text = "Milimetro";
+            this.cbbUnidad.Items.Add(radListDataItem3);
             this.cbbUnidad.Limpiar = true;
             this.cbbUnidad.Name = "cbbUnidad";
             this.cbbUnidad.ThemeName = "VisualStudio2012Light";
@@ -566,36 +557,36 @@
             this.radGridView1.MasterTemplate.AllowDragToGroup = false;
             this.radGridView1.MasterTemplate.AllowRowResize = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewDecimalColumn21.DataType = typeof(double);
-            gridViewDecimalColumn21.EnableExpressionEditor = false;
-            gridViewDecimalColumn21.FieldName = "NumMalla";
-            resources.ApplyResources(gridViewDecimalColumn21, "gridViewDecimalColumn21");
-            gridViewDecimalColumn21.IsAutoGenerated = true;
-            gridViewDecimalColumn21.Name = "NumMalla";
-            gridViewDecimalColumn21.Width = 129;
-            gridViewDecimalColumn22.DataType = typeof(double);
-            gridViewDecimalColumn22.EnableExpressionEditor = false;
-            gridViewDecimalColumn22.FieldName = "Apertura";
-            resources.ApplyResources(gridViewDecimalColumn22, "gridViewDecimalColumn22");
-            gridViewDecimalColumn22.IsAutoGenerated = true;
-            gridViewDecimalColumn22.Name = "Apertura";
-            gridViewDecimalColumn22.Width = 287;
-            gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Unidad";
-            resources.ApplyResources(gridViewTextBoxColumn8, "gridViewTextBoxColumn8");
-            gridViewTextBoxColumn8.IsAutoGenerated = true;
-            gridViewTextBoxColumn8.Name = "Unidad";
-            gridViewTextBoxColumn8.Width = 151;
+            gridViewDecimalColumn10.DataType = typeof(double);
+            gridViewDecimalColumn10.EnableExpressionEditor = false;
+            gridViewDecimalColumn10.FieldName = "NumMalla";
+            resources.ApplyResources(gridViewDecimalColumn10, "gridViewDecimalColumn10");
+            gridViewDecimalColumn10.IsAutoGenerated = true;
+            gridViewDecimalColumn10.Name = "NumMalla";
+            gridViewDecimalColumn10.Width = 129;
+            gridViewDecimalColumn11.DataType = typeof(double);
+            gridViewDecimalColumn11.EnableExpressionEditor = false;
+            gridViewDecimalColumn11.FieldName = "Apertura";
+            resources.ApplyResources(gridViewDecimalColumn11, "gridViewDecimalColumn11");
+            gridViewDecimalColumn11.IsAutoGenerated = true;
+            gridViewDecimalColumn11.Name = "Apertura";
+            gridViewDecimalColumn11.Width = 287;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Unidad";
+            resources.ApplyResources(gridViewTextBoxColumn4, "gridViewTextBoxColumn4");
+            gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Name = "Unidad";
+            gridViewTextBoxColumn4.Width = 151;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewDecimalColumn21,
-            gridViewDecimalColumn22,
-            gridViewTextBoxColumn8});
+            gridViewDecimalColumn10,
+            gridViewDecimalColumn11,
+            gridViewTextBoxColumn4});
             this.radGridView1.MasterTemplate.DataSource = this.tamizBindingSource;
             this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView1.MasterTemplate.EnableGrouping = false;
             this.radGridView1.MasterTemplate.EnableSorting = false;
             this.radGridView1.MasterTemplate.ShowRowHeaderColumn = false;
-            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition8;
+            this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.ReadOnly = true;
             this.radGridView1.ShowGroupPanel = false;
@@ -612,6 +603,19 @@
             // vistaFiltroTableAdapter
             // 
             this.vistaFiltroTableAdapter.ClearBeforeFill = true;
+            // 
+            // cbbProducto
+            // 
+            this.cbbProducto.BackColor = System.Drawing.Color.White;
+            this.cbbProducto.Correo = false;
+            this.cbbProducto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            resources.ApplyResources(this.cbbProducto, "cbbProducto");
+            radListDataItem1.Text = "Milimetro";
+            this.cbbProducto.Items.Add(radListDataItem1);
+            this.cbbProducto.Limpiar = false;
+            this.cbbProducto.Name = "cbbProducto";
+            this.cbbProducto.ThemeName = "VisualStudio2012Light";
+            this.cbbProducto.Validar = false;
             // 
             // Filtro
             // 
@@ -643,7 +647,6 @@
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
@@ -674,6 +677,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -711,12 +715,12 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator2;
         private Negocios.Componentes.MultiCbbPersonal cbbTamizInicial;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private Negocios.Componentes.TextPersonal txtDescripcion;
         private Negocios.Componentes.MultiCbbPersonal cbbTamizFinal;
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private System.Windows.Forms.BindingSource vistaFiltroBindingSource;
         private MatrizDataSetTableAdapters.VistaFiltroTableAdapter vistaFiltroTableAdapter;
         private Negocios.Componentes.cbbPersonal cbbUnd;
         private Telerik.WinControls.UI.RadLabel radLabel11;
+        private Negocios.Componentes.cbbPersonal cbbProducto;
     }
 }

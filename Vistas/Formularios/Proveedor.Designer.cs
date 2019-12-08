@@ -37,6 +37,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Proveedor));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
@@ -732,6 +733,7 @@
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

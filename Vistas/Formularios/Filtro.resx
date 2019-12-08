@@ -134,13 +134,13 @@
   <data name="cbbTamizInicial.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="gridViewDecimalColumn12.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn1.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn13.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn2.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn1.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="cbbTamizInicial.NestedRadGridView.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -183,22 +183,19 @@
   <data name="&gt;&gt;cbbTamizInicial.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="matrizDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>232, 17</value>
-  </metadata>
   <data name="cbbTamizFinal.NestedRadGridView.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="cbbTamizFinal.NestedRadGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="gridViewDecimalColumn14.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn3.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn15.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn4.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn2.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="cbbTamizFinal.NestedRadGridView.Size" type="System.Drawing.Size, System.Drawing">
@@ -237,129 +234,6 @@
   <data name="&gt;&gt;cbbTamizFinal.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;radSeparator1.Name" xml:space="preserve">
-    <value>radSeparator1</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.Parent" xml:space="preserve">
-    <value>radPageViewPage1</value>
-  </data>
-  <data name="&gt;&gt;radSeparator1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox2.Name" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox2.Parent" xml:space="preserve">
-    <value>radPageViewPage1</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox1.Name" xml:space="preserve">
-    <value>radGroupBox1</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox1.Parent" xml:space="preserve">
-    <value>radPageViewPage1</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="radPageViewPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 30</value>
-  </data>
-  <data name="radPageViewPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>583, 429</value>
-  </data>
-  <data name="radPageViewPage1.Text" xml:space="preserve">
-    <value>Filtro general</value>
-  </data>
-  <data name="&gt;&gt;radPageViewPage1.Name" xml:space="preserve">
-    <value>radPageViewPage1</value>
-  </data>
-  <data name="&gt;&gt;radPageViewPage1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radPageViewPage1.Parent" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;radPageViewPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox3.Name" xml:space="preserve">
-    <value>radGroupBox3</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox3.Parent" xml:space="preserve">
-    <value>pageTamiz</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox4.Name" xml:space="preserve">
-    <value>radGroupBox4</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox4.Parent" xml:space="preserve">
-    <value>pageTamiz</value>
-  </data>
-  <data name="&gt;&gt;radGroupBox4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pageTamiz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 30</value>
-  </data>
-  <data name="pageTamiz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>583, 429</value>
-  </data>
-  <data name="pageTamiz.Text" xml:space="preserve">
-    <value>Tamiz</value>
-  </data>
-  <data name="&gt;&gt;pageTamiz.Name" xml:space="preserve">
-    <value>pageTamiz</value>
-  </data>
-  <data name="&gt;&gt;pageTamiz.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;pageTamiz.Parent" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;pageTamiz.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="radPageView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 464</value>
-  </data>
-  <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Name" xml:space="preserve">
-    <value>radPageView1</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="radSeparator1.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 188</value>
   </data>
@@ -379,6 +253,30 @@
     <value>radPageViewPage1</value>
   </data>
   <data name="&gt;&gt;radSeparator1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbbProducto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="cbbProducto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 157</value>
+  </data>
+  <data name="cbbProducto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 25</value>
+  </data>
+  <data name="cbbProducto.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cbbProducto.Name" xml:space="preserve">
+    <value>cbbProducto</value>
+  </data>
+  <data name="&gt;&gt;cbbProducto.Type" xml:space="preserve">
+    <value>Negocios.Componentes.cbbPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cbbProducto.Parent" xml:space="preserve">
+    <value>radGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbbProducto.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="cbbUnd.Font" type="System.Drawing.Font, System.Drawing">
@@ -403,27 +301,6 @@
     <value>radGroupBox2</value>
   </data>
   <data name="&gt;&gt;cbbUnd.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtDescripcion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 155</value>
-  </data>
-  <data name="txtDescripcion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>354, 24</value>
-  </data>
-  <data name="txtDescripcion.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Name" xml:space="preserve">
-    <value>txtDescripcion</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Type" xml:space="preserve">
-    <value>Negocios.Componentes.TextPersonal, Negocios, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.Parent" xml:space="preserve">
-    <value>radGroupBox2</value>
-  </data>
-  <data name="&gt;&gt;txtDescripcion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="radLabel10.Font" type="System.Drawing.Font, System.Drawing">
@@ -433,13 +310,13 @@
     <value>31, 156</value>
   </data>
   <data name="radLabel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 21</value>
+    <value>62, 21</value>
   </data>
   <data name="radLabel10.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="radLabel10.Text" xml:space="preserve">
-    <value>Descripcion</value>
+    <value>Producto</value>
   </data>
   <data name="&gt;&gt;radLabel10.Name" xml:space="preserve">
     <value>radLabel10</value>
@@ -627,22 +504,22 @@
   <data name="dataProducto.Location" type="System.Drawing.Point, System.Drawing">
     <value>-6, 21</value>
   </data>
-  <data name="gridViewDecimalColumn16.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn5.HeaderText" xml:space="preserve">
     <value>Codigo</value>
   </data>
-  <data name="gridViewDecimalColumn17.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn6.HeaderText" xml:space="preserve">
     <value>NumMallaInicial</value>
   </data>
-  <data name="gridViewDecimalColumn18.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn7.HeaderText" xml:space="preserve">
     <value>AperturaInicial</value>
   </data>
-  <data name="gridViewDecimalColumn19.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn8.HeaderText" xml:space="preserve">
     <value>NumMallaFinal</value>
   </data>
-  <data name="gridViewDecimalColumn20.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn9.HeaderText" xml:space="preserve">
     <value>AperturaFinal</value>
   </data>
-  <data name="gridViewTextBoxColumn7.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn3.HeaderText" xml:space="preserve">
     <value>Filtro</value>
   </data>
   <metadata name="vistaFiltroBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -698,6 +575,27 @@
   </data>
   <data name="&gt;&gt;radGroupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="radPageViewPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="radPageViewPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 429</value>
+  </data>
+  <data name="radPageViewPage1.Text" xml:space="preserve">
+    <value>Filtro general</value>
+  </data>
+  <data name="&gt;&gt;radPageViewPage1.Name" xml:space="preserve">
+    <value>radPageViewPage1</value>
+  </data>
+  <data name="&gt;&gt;radPageViewPage1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPageViewPage1.Parent" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;radPageViewPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="radSeparator2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 185</value>
@@ -972,13 +870,13 @@
   <data name="radGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 21</value>
   </data>
-  <data name="gridViewDecimalColumn21.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn10.HeaderText" xml:space="preserve">
     <value>NumMalla</value>
   </data>
-  <data name="gridViewDecimalColumn22.HeaderText" xml:space="preserve">
+  <data name="gridViewDecimalColumn11.HeaderText" xml:space="preserve">
     <value>Apertura</value>
   </data>
-  <data name="gridViewTextBoxColumn8.HeaderText" xml:space="preserve">
+  <data name="gridViewTextBoxColumn4.HeaderText" xml:space="preserve">
     <value>Unidad</value>
   </data>
   <data name="radGridView1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
@@ -1031,6 +929,48 @@
   </data>
   <data name="&gt;&gt;radGroupBox4.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="pageTamiz.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 30</value>
+  </data>
+  <data name="pageTamiz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>583, 429</value>
+  </data>
+  <data name="pageTamiz.Text" xml:space="preserve">
+    <value>Tamiz</value>
+  </data>
+  <data name="&gt;&gt;pageTamiz.Name" xml:space="preserve">
+    <value>pageTamiz</value>
+  </data>
+  <data name="&gt;&gt;pageTamiz.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;pageTamiz.Parent" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;pageTamiz.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radPageView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="radPageView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>593, 464</value>
+  </data>
+  <data name="radPageView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Name" xml:space="preserve">
+    <value>radPageView1</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2019.2.618.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radPageView1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="visualStudio2012LightTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

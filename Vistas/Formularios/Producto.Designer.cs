@@ -37,6 +37,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Producto));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageProducto = new Telerik.WinControls.UI.RadPageViewPage();
@@ -610,6 +611,7 @@
             this.Controls.Add(this.pagePrincipal);
             this.Controls.Add(this.lbNombrer);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Producto";
             // 

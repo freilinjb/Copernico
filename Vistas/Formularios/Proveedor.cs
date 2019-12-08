@@ -81,59 +81,67 @@ namespace Vistas.Formularios
         public override bool Guardar()
         {
             bool bien = true;
-            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+            try
             {
-                Negocios.Entidades.Proveedor proveedor = new Negocios.Entidades.Proveedor(
-                    IdProveedor,
-                    IdTercero,
-                    txtNombre.Text.Trim(),
-                    txtRasonSocial.Text.Trim(),
-                    txtIdentificacion.Text.Trim(),
-                    Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
-                    Convert.ToInt32(cbbRubro.SelectedValue.ToString()),
-                    txtTelefono.Text.Trim(),
-                    txtCorreo.Text.Trim(),
-                    Convert.ToInt32(cbbProvincia.SelectedValue.ToString()),
-                    Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
-                    Convert.ToInt32(cbbSector.SelectedValue.ToString()),
-                    txtDireccion.Text.Trim(),
-                    txtNota.Text.Trim(),
-                    1,
-                    chEstado.ToggleStateMode == ToggleStateMode.Click ? 1 : 0);
-
-                Debug.WriteLine("Creacion del Proveedor");
-                Debug.WriteLine(proveedor.getGuardar());
-
-                ds = Utilidades.Ejecutar(proveedor.getGuardar());
-
-                if (ds.Tables[0].Rows.Count > 0)
+                if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
+                    Negocios.Entidades.Proveedor proveedor = new Negocios.Entidades.Proveedor(
+                        IdProveedor,
+                        IdTercero,
+                        txtNombre.Text.Trim(),
+                        txtRasonSocial.Text.Trim(),
+                        txtIdentificacion.Text.Trim(),
+                        Convert.ToInt32(cbbTipoIdentificacion.SelectedValue.ToString()),
+                        Convert.ToInt32(cbbRubro.SelectedValue.ToString()),
+                        txtTelefono.Text.Trim(),
+                        txtCorreo.Text.Trim(),
+                        Convert.ToInt32(cbbProvincia.SelectedValue.ToString()),
+                        Convert.ToInt32(cbbMunicipio.SelectedValue.ToString()),
+                        Convert.ToInt32(cbbSector.SelectedValue.ToString()),
+                        txtDireccion.Text.Trim(),
+                        txtNota.Text.Trim(),
+                        1,
+                        chEstado.ToggleStateMode == ToggleStateMode.Click ? 1 : 0);
 
-                    if (ContactoGuardar.Count > 0)
+                    Debug.WriteLine("Creacion del Proveedor");
+                    Debug.WriteLine(proveedor.getGuardar());
+
+                    ds = Utilidades.Ejecutar(proveedor.getGuardar());
+
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        for (int i = 0; i < ContactoGuardar.Count; i++)
+                        IdTercero = Convert.ToInt32(ds.Tables[0].Rows[0]["IdTercero"].ToString().Trim());
+
+                        if (ContactoGuardar.Count > 0)
                         {
-                            ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
-                            Debug.WriteLine("Registro Proveedor");
-                            Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
+                            for (int i = 0; i < ContactoGuardar.Count; i++)
+                            {
+                                ContactoGuardar[i].IdTerceroClienteProveedor = IdTercero;
+                                Debug.WriteLine("Registro Proveedor");
+                                Utilidades.Ejecutar(ContactoGuardar[i].getGuardar());
 
+                            }
                         }
+                        else
+                        {
+                            bien = false;
+                        }
+
+                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        Utilidades.Limpiar(this, errorProvider1);
+                        dataContacto.Rows.Clear();
+
+                        IdProveedor = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
+                        this.Text = "Cliente \t\t Codigo:" + IdProveedor;
+                        this.DialogResult = DialogResult.OK;
                     }
-                    else
-                    {
-                        bien = false;
-                    }
-
-                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-
-                    Utilidades.Limpiar(this, errorProvider1);
-                    dataContacto.Rows.Clear();
-
-                    IdProveedor = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdProveedor)+1 AS Mayor FROM Proveedor").Tables[0].Rows[0]["Mayor"].ToString());
-                    this.Text = "Cliente \t\t Codigo:" + IdProveedor;
-                    this.DialogResult = DialogResult.OK;
                 }
+            }
+            catch (Exception ex)
+            {
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                bien = false;
             }
             return bien;
         }
