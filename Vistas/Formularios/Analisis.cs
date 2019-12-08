@@ -40,6 +40,8 @@ namespace Vistas.Formularios
         {
             RadMessageBox.ThemeName = this.ThemeName;
 
+
+            txtFecha.Value = DateTime.Today;
             cbbTipoAnalisis.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoAnalisis,Descripcion AS TipoAnalisis FROM TipoAnalisis").Tables[0];
             cbbTipoAnalisis.ValueMember = "IdTipoAnalisis";
             cbbTipoAnalisis.DisplayMember = "TipoAnalisis";
