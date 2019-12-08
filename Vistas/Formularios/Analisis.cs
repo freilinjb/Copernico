@@ -7,16 +7,31 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using System.Diagnostics;
+using Telerik.WinControls.UI;
+using Telerik.Charting;
 
 namespace Vistas.Formularios
 {
     public partial class Analisis : FormBase
     {
+        private List<Negocios.Entidades.Analisis.ResumenProducto>ListProducto;
+
+        private void CargarProductos()
+        {
+            ListProducto = new List<Negocios.Entidades.Analisis.ResumenProducto>();
+
+            foreach(DataRow File in Negocios.Utilidades.Ejecutar("SELECT F.IdFiltro,P.IdProducto,P.Descripcion AS Producto,F.NumMallaInicial,F.NumMallaFinal FROM Filtro F INNER JOIN Producto P ON P.IdProducto = F.IdProducto").Tables[0].Rows)
+            {
+                ListProducto.Add(new Negocios.Entidades.Analisis.ResumenProducto(
+                    Convert.ToInt32(File["IdProducto"].ToString()),
+                    File["Producto"].ToString(),
+                    Convert.ToInt32(File["NumMallaInicial"].ToString()),
+                    Convert.ToInt32(File["NumMallaFinal"].ToString())));
+
+                Debug.WriteLine($"Agregado a Lista { File["Producto"].ToString()},{File["Producto"].ToString()},{Convert.ToInt32(File["NumMallaInicial"].ToString())},{Convert.ToInt32(File["NumMallaFinal"].ToString())}");
+            }
+        }
         private static Analisis Instancia;
-
-        private float RetenidoAcumulado = 0;
-        float PesoRetenido = 0;
-
         private DataSet ds;
 
 
@@ -56,16 +71,24 @@ namespace Vistas.Formularios
 
 
             ds = Negocios.Utilidades.Ejecutar("SELECT NumMalla,Apertura FROM Tamiz");
-
+            float aleatorio = 0;
+            float pasante = 0;
+            float acumulado = 0;
+            Random random = new Random();
             foreach(DataRow File in ds.Tables[0].Rows)
             {
-                dataTamiz.Rows.Add(Convert.ToSingle(File["NumMalla"].ToString()), Convert.ToSingle(File["Apertura"].ToString()), 0, 0, 0, 0);
+                aleatorio = Convert.ToSingle(random.Next(30, 359) + "." + random.Next(0, 9999));
+                pasante = ((((Single)aleatorio * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100);
+                acumulado += pasante;
+                dataTamiz.Rows.Add(Convert.ToSingle(File["NumMalla"].ToString()), Convert.ToSingle(File["Apertura"].ToString()), aleatorio, pasante, acumulado, (1 - acumulado));
             }
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
+            txtCantidadInicial.Text = "7000";
 
             IdMayor();
 
+            CargarProductos();
         }
 
         private void IdMayor()
@@ -77,10 +100,10 @@ namespace Vistas.Formularios
         private void MasterTemplate_CellValueChanged(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
             float retenido = 0;
-            float porcentajePasante = 0;
             float porcentajeAcumulado = 0;
             if(e.Column.Name == "PesoRetenido")
             {
+                ///Distribulle el porcentaje granulometrico por Tamiz
                 retenido = (((Single)e.Value * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100;
                 Debug.WriteLine("Cambio");
                 e.Row.Cells["Pasante"].Value = retenido;
@@ -88,7 +111,6 @@ namespace Vistas.Formularios
 
                 //RetenidoAcumulado += (float)e.Row.Cells["Retenido"].Value;
                 //e.Row.Cells["RetenidoAcumulado"].Value = RetenidoAcumulado;
-                txtCantidadFinal.Text = PesoRetenido.ToString();
 
                 for(int i = 0; i <= e.RowIndex; i++)
                 {
@@ -97,7 +119,16 @@ namespace Vistas.Formularios
                 e.Row.Cells["Pasante"].Value = (1-porcentajeAcumulado);
                 e.Row.Cells["RetenidoAcumulado"].Value = porcentajeAcumulado;
 
+                txtCantidadFinal.Text = porcentajeAcumulado.ToString();
+                toolPorcentaje.Text = (porcentajeAcumulado * 100).ToString();
 
+
+                //Comparacion de los materiales
+
+                if(porcentajeAcumulado > 1)
+                {
+                    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
 
                 //int index = 0;
                 //foreach (var File in dataTamiz.Rows)
@@ -167,6 +198,60 @@ namespace Vistas.Formularios
                     IdMayor();
                     toolRegistro.Text = "Nuevo Registro";
                 }
+            }
+        }
+
+        private void pagePrincipal_SelectedPageChanged(object sender, EventArgs e)
+        {
+            if(pagePrincipal.SelectedPage.Name == pageEstadistica.Name)
+            {
+                Negocios.Utilidades.LimpiarRadDataGridView(dataMaterialPorcentaje);
+                foreach(var File in dataTamiz.Rows)
+                {
+                    for(int i = 0; i < ListProducto.Count; i++)
+                    {
+                        if((ListProducto[i].NumMallaInicial >= (int)File.Cells["NumMalla"].Value) && (int)File.Cells["NumMalla"].Value <= (ListProducto[i].NumMallaFinal ))
+                        {
+                            ListProducto[i].Porcentaje += (float)File.Cells["Retenido"].Value;
+                        }
+                    }
+                }
+                BarSeries barSeries1 = new BarSeries("Porcentaje", "Producto");
+                PieSeries seriesCircular1 = new PieSeries();
+
+                seriesCircular1.Name = "Productos";
+                barSeries1.Name = "Productos";
+
+                seriesCircular1.ShowLabels = true;
+                barSeries1.ShowLabels = true;
+
+                barSeries1.LegendTitle = "Producto";
+
+                seriesCircular1.LabelFormat = "{0:P3}";
+                barSeries1.LabelFormat = "{0:P3}";
+
+                foreach (var producto in ListProducto)
+                {
+                    if(producto.Porcentaje != 0)
+                    {
+
+                        if(producto.Producto == "GRUESO" || producto.Producto == "FINO")
+                        {
+                            seriesCircular1.DataPoints.Add(new PieDataPoint(producto.Porcentaje, producto.Producto));
+                        }
+                        else
+                        {
+                            barSeries1.DataPoints.Add(new CategoricalDataPoint(producto.Porcentaje, producto.Producto));
+                            dataMaterialPorcentaje.Rows.Add(producto.IdProducto, producto.Producto, producto.Porcentaje);
+                        }
+                    }
+                }
+                this.charBarras.Series.Clear();
+                this.charBarras.Area.View.Palette = KnownPalette.Arctic;
+                this.charCircular.Area.View.Palette = KnownPalette.Arctic;
+                this.charBarras.Series.Add(barSeries1);
+                this.charCircular.Series.Clear();
+                this.charCircular.Series.Add(seriesCircular1);
             }
         }
     }

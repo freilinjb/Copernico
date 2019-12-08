@@ -1,0 +1,55 @@
+﻿'Copernico.exe' (CLR v4.0.30319: DefaultDomain): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: DefaultDomain): 'C:\Users\freil\Source\Repos\freilinjb\Copernico\Copernico\bin\Debug\Copernico.exe' cargado. Símbolos cargados.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\Users\freil\Source\Repos\freilinjb\Copernico\Copernico\bin\Debug\Vistas.dll' cargado. Símbolos cargados.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Telerik.WinControls.UI\v4.0_2019.2.618.40__5bb2a467cbec794e\Telerik.WinControls.UI.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Telerik.WinControls\v4.0_2019.2.618.40__5bb2a467cbec794e\Telerik.WinControls.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\TelerikCommon\v4.0_2019.2.618.40__5bb2a467cbec794e\TelerikCommon.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'Microsoft.GeneratedCode' cargado. 
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Telerik.WinControls.Themes.VisualStudio2012Light\v4.0_2019.2.618.40__5bb2a467cbec794e\Telerik.WinControls.Themes.VisualStudio2012Light.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Telerik.WinControls.GridView\v4.0_2019.2.618.40__5bb2a467cbec794e\Telerik.WinControls.GridView.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\Telerik.WinControls.ChartView\v4.0_2019.2.618.40__5bb2a467cbec794e\Telerik.WinControls.ChartView.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\Users\freil\Source\Repos\freilinjb\Copernico\Copernico\bin\Debug\Negocios.dll' cargado. Símbolos cargados.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\Users\freil\Source\Repos\freilinjb\Copernico\Copernico\bin\Debug\Datos.dll' cargado. Símbolos cargados.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Data.resources\v4.0_4.0.0.0_es_b77a5c561934e089\System.Data.resources.dll' cargado. El módulo se compiló sin símbolos.
+Depuraion: SELECT IdTipoAnalisis,Descripcion AS TipoAnalisis FROM TipoAnalisis
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+Depuraion: SELECT IdMina,T.Nombre AS Mina FROM Mina M INNER JOIN Tercero T ON T.IdTercero = M.IdTercero INNER JOIN EstadoMina EM ON EM.IdEstadoMina = M.IdEstadoMina WHERE EM.IdEstadoMina = 1
+Depuraion: SELECT IdTipoMateriaPrima,Descripcion AS TipoMateriaPrima FROM TipoMateriaPrima
+Depuraion: SELECT NumMalla,Apertura FROM Tamiz
+'Copernico.exe' (CLR v4.0.30319: Copernico.exe): 'C:\Users\freil\Source\Repos\freilinjb\Copernico\Copernico\bin\Debug\Guna.UI.dll' cargado. Se omitió la carga de símbolos. El módulo está optimizado y la opción del depurador 'Sólo mi código' está habilitada.
+Depuraion: SELECT MAX(IdAnalisis)+1 AS Mayor FROM Analisis
+Depuraion: SELECT F.IdFiltro,P.IdProducto,P.Descripcion AS Producto,F.NumMallaInicial,F.NumMallaFinal FROM Filtro F INNER JOIN Producto P ON P.IdProducto = F.IdProducto
+Agregado a Lista GRABA DE 9 A 4,GRABA DE 9 A 4,1,4
+Agregado a Lista GRABA DE 9 A 4,GRABA DE 9 A 4,5,6
+Agregado a Lista GRABA DE 20 A 10,GRABA DE 20 A 10,7,8
+Agregado a Lista GRABA DE 20 A 10,GRABA DE 20 A 10,10,30
+Agregado a Lista GRABA DE 1/4 3/8,GRABA DE 1/4 3/8,35,50
+Agregado a Lista GRABA DE 1/4 3/8,GRABA DE 1/4 3/8,60,200
+Agregado a Lista GRABA DE 1/2 A 3/4,GRABA DE 1/2 A 3/4,200,325
+Agregado a Lista ARENA GRUESA,ARENA GRUESA,325,400
+Agregado a Lista DESPERCIDIO (Material Arcilloso),DESPERCIDIO (Material Arcilloso),325,400
+Agregado a Lista GRUESO,GRUESO,1,200
+Agregado a Lista FINO,FINO,325,400
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+Cambio
+El programa '[9756] Copernico.exe' terminó con código -1 (0xffffffff).

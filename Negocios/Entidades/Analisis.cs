@@ -8,6 +8,23 @@ namespace Negocios.Entidades
 {
     public class Analisis
     {
+        public class ResumenProducto
+        {
+            public int IdProducto;
+            public string Producto;
+            public int NumMallaInicial;
+            public int NumMallaFinal;
+            public float Porcentaje = 0;
+
+            public ResumenProducto(int idProducto, string producto, int numMallaInicial, int numMallaFinal)
+            {
+                IdProducto = idProducto;
+                Producto = producto;
+                NumMallaInicial = numMallaInicial;
+                NumMallaFinal = numMallaFinal;
+            }
+        }
+
         public int IdAnalisis;
         public string Fecha;
         public int IdTipoAnalisis;
