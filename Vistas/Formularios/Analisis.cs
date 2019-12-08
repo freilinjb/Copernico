@@ -100,22 +100,27 @@ namespace Vistas.Formularios
 
         public override bool Guardar()
         {
-            bool bien = true;
+            bool bien = false;
 
             try
             {
                 if (pagePrincipal.SelectedPage.Name == pageInformacionGeneral.Name)
                 {
-                    Negocios.Entidades.Analisis analisis = new Negocios.Entidades.Analisis(
-                        Convert.ToInt32(txtCodigo.Text.Trim()),
-                        txtFecha.Text,
-                        (int)cbbTipoAnalisis.SelectedValue,
-                        (int)cbbMina.SelectedValue,
-                        txtBanqueta.Text.Trim(),
-                        Convert.ToSingle(txtHumedad.Text.Trim()),
-                        Convert.ToSingle(txtCantidadFinal.Text.Trim()));
+                    if(Negocios.Utilidades.Validar(pageInformacionGeneral,errorProvider1) == false)
+                    {
+                        Negocios.Entidades.Analisis analisis = new Negocios.Entidades.Analisis(
+                            Convert.ToInt32(txtCodigo.Text.Trim()),
+                            txtFecha.Text,
+                            (int)cbbTipoAnalisis.SelectedValue,
+                            (int)cbbMina.SelectedValue,
+                            txtBanqueta.Text.Trim(),
+                            Convert.ToSingle(txtHumedad.Text.Trim()),
+                            Convert.ToSingle(txtCantidadFinal.Text.Trim()));
 
-                    ds = Negocios.Utilidades.Ejecutar(analisis.getGuardar());
+                        if (Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
+                            bien = true;
+
+                    }
                 }
 
                 else if(pageInformacionGeneral.Name == pageEstadistica.Name)

@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn1 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
-            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn2 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
-            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn3 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
-            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem1 = new Telerik.WinControls.UI.GanttViewDataItem();
-            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem2 = new Telerik.WinControls.UI.GanttViewDataItem();
-            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem3 = new Telerik.WinControls.UI.GanttViewDataItem();
-            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem1 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
-            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem2 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
-            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem3 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
+            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn4 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
+            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn5 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
+            Telerik.WinControls.UI.GanttViewTextViewColumn ganttViewTextViewColumn6 = new Telerik.WinControls.UI.GanttViewTextViewColumn();
+            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem4 = new Telerik.WinControls.UI.GanttViewDataItem();
+            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem5 = new Telerik.WinControls.UI.GanttViewDataItem();
+            Telerik.WinControls.UI.GanttViewDataItem ganttViewDataItem6 = new Telerik.WinControls.UI.GanttViewDataItem();
+            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem4 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
+            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem5 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
+            Telerik.WinControls.UI.GanttViewLinkDataItem ganttViewLinkDataItem6 = new Telerik.WinControls.UI.GanttViewLinkDataItem();
             this.radGanttView1 = new Telerik.WinControls.UI.RadGanttView();
             ((System.ComponentModel.ISupportInitialize)(this.radGanttView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -44,73 +44,73 @@
             // 
             // radGanttView1
             // 
-            ganttViewTextViewColumn1.DataType = null;
-            ganttViewTextViewColumn1.FieldName = "";
-            ganttViewTextViewColumn1.HeaderText = "";
-            ganttViewTextViewColumn1.Name = "column1";
-            ganttViewTextViewColumn2.DataType = null;
-            ganttViewTextViewColumn2.FieldName = "";
-            ganttViewTextViewColumn2.HeaderText = "";
-            ganttViewTextViewColumn2.Name = "column2";
-            ganttViewTextViewColumn3.DataType = null;
-            ganttViewTextViewColumn3.FieldName = "";
-            ganttViewTextViewColumn3.HeaderText = "";
-            ganttViewTextViewColumn3.Name = "column3";
+            ganttViewTextViewColumn4.DataType = null;
+            ganttViewTextViewColumn4.FieldName = "";
+            ganttViewTextViewColumn4.HeaderText = "";
+            ganttViewTextViewColumn4.Name = "column1";
+            ganttViewTextViewColumn5.DataType = null;
+            ganttViewTextViewColumn5.FieldName = "";
+            ganttViewTextViewColumn5.HeaderText = "";
+            ganttViewTextViewColumn5.Name = "column2";
+            ganttViewTextViewColumn6.DataType = null;
+            ganttViewTextViewColumn6.FieldName = "";
+            ganttViewTextViewColumn6.HeaderText = "";
+            ganttViewTextViewColumn6.Name = "column3";
             this.radGanttView1.Columns.AddRange(new Telerik.WinControls.UI.GanttViewTextViewColumn[] {
-            ganttViewTextViewColumn1,
-            ganttViewTextViewColumn2,
-            ganttViewTextViewColumn3});
+            ganttViewTextViewColumn4,
+            ganttViewTextViewColumn5,
+            ganttViewTextViewColumn6});
             this.radGanttView1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            ganttViewDataItem1.End = new System.DateTime(((long)(0)));
-            ganttViewDataItem1.Expanded = true;
-            ganttViewDataItem1.Progress = new decimal(new int[] {
+            ganttViewDataItem4.End = new System.DateTime(((long)(0)));
+            ganttViewDataItem4.Expanded = true;
+            ganttViewDataItem4.Progress = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            ganttViewDataItem1.Start = new System.DateTime(((long)(0)));
-            ganttViewDataItem1.Title = null;
-            ganttViewDataItem1.Visible = true;
-            ganttViewDataItem2.End = new System.DateTime(((long)(0)));
-            ganttViewDataItem2.Expanded = true;
-            ganttViewDataItem2.Progress = new decimal(new int[] {
+            ganttViewDataItem4.Start = new System.DateTime(((long)(0)));
+            ganttViewDataItem4.Title = null;
+            ganttViewDataItem4.Visible = true;
+            ganttViewDataItem5.End = new System.DateTime(((long)(0)));
+            ganttViewDataItem5.Expanded = true;
+            ganttViewDataItem5.Progress = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            ganttViewDataItem2.Start = new System.DateTime(((long)(0)));
-            ganttViewDataItem2.Title = null;
-            ganttViewDataItem2.Visible = true;
-            ganttViewDataItem3.End = new System.DateTime(((long)(0)));
-            ganttViewDataItem3.Expanded = true;
-            ganttViewDataItem3.Progress = new decimal(new int[] {
+            ganttViewDataItem5.Start = new System.DateTime(((long)(0)));
+            ganttViewDataItem5.Title = null;
+            ganttViewDataItem5.Visible = true;
+            ganttViewDataItem6.End = new System.DateTime(((long)(0)));
+            ganttViewDataItem6.Expanded = true;
+            ganttViewDataItem6.Progress = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            ganttViewDataItem3.Start = new System.DateTime(((long)(0)));
-            ganttViewDataItem3.Title = null;
-            ganttViewDataItem3.Visible = true;
+            ganttViewDataItem6.Start = new System.DateTime(((long)(0)));
+            ganttViewDataItem6.Title = null;
+            ganttViewDataItem6.Visible = true;
             this.radGanttView1.Items.AddRange(new Telerik.WinControls.UI.GanttViewDataItem[] {
-            ganttViewDataItem1,
-            ganttViewDataItem2,
-            ganttViewDataItem3});
-            ganttViewLinkDataItem1.EndItem = null;
-            ganttViewLinkDataItem1.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
-            ganttViewLinkDataItem1.Selected = false;
-            ganttViewLinkDataItem1.StartItem = null;
-            ganttViewLinkDataItem2.EndItem = null;
-            ganttViewLinkDataItem2.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
-            ganttViewLinkDataItem2.Selected = false;
-            ganttViewLinkDataItem2.StartItem = null;
-            ganttViewLinkDataItem3.EndItem = null;
-            ganttViewLinkDataItem3.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
-            ganttViewLinkDataItem3.Selected = false;
-            ganttViewLinkDataItem3.StartItem = null;
+            ganttViewDataItem4,
+            ganttViewDataItem5,
+            ganttViewDataItem6});
+            ganttViewLinkDataItem4.EndItem = null;
+            ganttViewLinkDataItem4.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
+            ganttViewLinkDataItem4.Selected = false;
+            ganttViewLinkDataItem4.StartItem = null;
+            ganttViewLinkDataItem5.EndItem = null;
+            ganttViewLinkDataItem5.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
+            ganttViewLinkDataItem5.Selected = false;
+            ganttViewLinkDataItem5.StartItem = null;
+            ganttViewLinkDataItem6.EndItem = null;
+            ganttViewLinkDataItem6.LinkType = Telerik.WinControls.UI.TasksLinkType.FinishToFinish;
+            ganttViewLinkDataItem6.Selected = false;
+            ganttViewLinkDataItem6.StartItem = null;
             this.radGanttView1.Links.AddRange(new Telerik.WinControls.UI.GanttViewLinkDataItem[] {
-            ganttViewLinkDataItem1,
-            ganttViewLinkDataItem2,
-            ganttViewLinkDataItem3});
+            ganttViewLinkDataItem4,
+            ganttViewLinkDataItem5,
+            ganttViewLinkDataItem6});
             this.radGanttView1.Location = new System.Drawing.Point(12, 12);
             this.radGanttView1.Name = "radGanttView1";
             this.radGanttView1.Size = new System.Drawing.Size(743, 546);
