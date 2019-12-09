@@ -78,5 +78,12 @@ namespace Vistas.Formularios
             proveedor.MdiParent = this;
             proveedor.Show();
         }
+
+        private void btAlmacen_Click(object sender, EventArgs e)
+        {
+            Almacen almacen = Almacen.ObtenerInstancia();
+            almacen.MdiParent = this;
+            almacen.Show();
+        }
     }
 }

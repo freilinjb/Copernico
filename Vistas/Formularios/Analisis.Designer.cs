@@ -64,6 +64,7 @@
             Telerik.WinControls.Data.SortDescriptor sortDescriptor1 = new Telerik.WinControls.Data.SortDescriptor();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
@@ -107,11 +108,6 @@
             this.dataMaterialPorcentaje = new Telerik.WinControls.UI.RadGridView();
             this.rangoSelector = new Telerik.WinControls.UI.RadRangeSelector();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.visualStudio2012LightTheme2 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.radProgressBar3 = new Telerik.WinControls.UI.RadProgressBar();
-            this.radProgressBar2 = new Telerik.WinControls.UI.RadProgressBar();
-            this.radProgressBar1 = new Telerik.WinControls.UI.RadProgressBar();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
@@ -150,10 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,8 +254,8 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 28);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pageEstadistica;
-            this.pagePrincipal.Size = new System.Drawing.Size(796, 571);
+            this.pagePrincipal.SelectedPage = this.pageInformacionGeneral;
+            this.pagePrincipal.Size = new System.Drawing.Size(796, 609);
             this.pagePrincipal.TabIndex = 42;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
             this.pagePrincipal.SelectedPageChanged += new System.EventHandler(this.pagePrincipal_SelectedPageChanged);
@@ -299,7 +291,7 @@
             this.pageInformacionGeneral.ItemSize = new System.Drawing.SizeF(394F, 27F);
             this.pageInformacionGeneral.Location = new System.Drawing.Point(5, 33);
             this.pageInformacionGeneral.Name = "pageInformacionGeneral";
-            this.pageInformacionGeneral.Size = new System.Drawing.Size(786, 533);
+            this.pageInformacionGeneral.Size = new System.Drawing.Size(786, 571);
             this.pageInformacionGeneral.Text = "Informacion general";
             // 
             // txtFecha
@@ -401,7 +393,7 @@
             this.dataTamiz.Name = "dataTamiz";
             this.dataTamiz.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataTamiz.ShowGroupPanel = false;
-            this.dataTamiz.Size = new System.Drawing.Size(783, 321);
+            this.dataTamiz.Size = new System.Drawing.Size(783, 359);
             this.dataTamiz.TabIndex = 64;
             this.dataTamiz.ThemeName = "VisualStudio2012Light";
             this.dataTamiz.CellValueChanged += new Telerik.WinControls.UI.GridViewCellEventHandler(this.MasterTemplate_CellValueChanged);
@@ -519,7 +511,6 @@
             this.txtCantidadFinal.Name = "txtCantidadFinal";
             this.txtCantidadFinal.Size = new System.Drawing.Size(118, 24);
             this.txtCantidadFinal.TabIndex = 56;
-            this.txtCantidadFinal.Text = "7000";
             this.txtCantidadFinal.ThemeName = "VisualStudio2012Light";
             this.txtCantidadFinal.Validar = false;
             // 
@@ -602,7 +593,7 @@
             this.txtObservacion.Size = new System.Drawing.Size(777, 24);
             this.txtObservacion.TabIndex = 53;
             this.txtObservacion.ThemeName = "VisualStudio2012Light";
-            this.txtObservacion.Validar = true;
+            this.txtObservacion.Validar = false;
             // 
             // radLabel17
             // 
@@ -901,64 +892,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // radProgressBar3
-            // 
-            this.radProgressBar3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radProgressBar3.Location = new System.Drawing.Point(3, 3);
-            this.radProgressBar3.Name = "radProgressBar3";
-            this.radProgressBar3.Size = new System.Drawing.Size(259, 27);
-            this.radProgressBar3.TabIndex = 68;
-            this.radProgressBar3.Text = "Desperdicio";
-            this.radProgressBar3.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar3.Value1 = 50;
-            this.radProgressBar3.Value2 = 35;
-            // 
-            // radProgressBar2
-            // 
-            this.radProgressBar2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radProgressBar2.Location = new System.Drawing.Point(533, 3);
-            this.radProgressBar2.Name = "radProgressBar2";
-            this.radProgressBar2.Size = new System.Drawing.Size(260, 27);
-            this.radProgressBar2.TabIndex = 69;
-            this.radProgressBar2.Text = "Fino";
-            this.radProgressBar2.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar2.Value1 = 85;
-            // 
-            // radProgressBar1
-            // 
-            this.radProgressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radProgressBar1.Location = new System.Drawing.Point(268, 3);
-            this.radProgressBar1.Name = "radProgressBar1";
-            this.radProgressBar1.Size = new System.Drawing.Size(259, 27);
-            this.radProgressBar1.TabIndex = 70;
-            this.radProgressBar1.Text = "Grueso";
-            this.radProgressBar1.ThemeName = "VisualStudio2012Light";
-            this.radProgressBar1.Value1 = 35;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.radProgressBar3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.radProgressBar1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.radProgressBar2, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 605);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 33);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
             // Analisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 670);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pagePrincipal);
@@ -1011,10 +949,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radProgressBar1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1057,10 +991,6 @@
         private Telerik.WinControls.UI.RadDateTimePicker txtFecha;
         private Telerik.WinControls.UI.RadLabel radLabel1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme2;
-        private Telerik.WinControls.UI.RadProgressBar radProgressBar3;
-        private Telerik.WinControls.UI.RadProgressBar radProgressBar2;
-        private Telerik.WinControls.UI.RadProgressBar radProgressBar1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Negocios.Componentes.TextPersonal txtCantidadFinal;
         private Telerik.WinControls.UI.RadLabel radLabel2;

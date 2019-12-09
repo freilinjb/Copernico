@@ -164,12 +164,23 @@ namespace Vistas.Formularios
                             (int)cbbMina.SelectedValue,
                             txtBanqueta.Text.Trim(),
                             Convert.ToSingle(txtHumedad.Text.Trim()),
-                            Convert.ToSingle(txtCantidadFinal.Text.Trim()),
+                            Convert.ToSingle(txtCantidadInicial.Text.Trim()),
                             txtObservacion.Text.Trim());
 
+                        Debug.WriteLine("ANALISIS DEPURACION: "+analisis.getGuardar());
                         if (Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
-                            bien = true;
+                        {
+                            Negocios.Utilidades.Ejecutar($"DELETE FROM Analisis_VS_Tamiz WHERE IdAnalisis={txtCodigo.Text.Trim()}");
+                            foreach (var Fila in dataTamiz.Rows)
+                            {
+                                Negocios.Utilidades.Ejecutar($"EXEC [RegistrarAnalizisPorTamiz] {txtCodigo.Text.Trim()},{Fila.Cells["NumMalla"].Value.ToString()},{Fila.Cells["PesoRetenido"].Value.ToString()};");
+                            }
+                        }
 
+                        if(Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
+                        {
+                            bien = true
+                        }
                     }
                 }
 
@@ -197,6 +208,11 @@ namespace Vistas.Formularios
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     IdMayor();
                     toolRegistro.Text = "Nuevo Registro";
+
+                    for (int i = 0; i < dataTamiz.Rows.Count; i++)
+                    {
+                        dataTamiz.Rows[i].Cells["PesoRetenido"].Value = 0;
+                    }
                 }
             }
         }

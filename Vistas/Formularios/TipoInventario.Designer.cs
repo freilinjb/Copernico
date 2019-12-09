@@ -33,89 +33,77 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TipoInventario));
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.pageInventario = new Telerik.WinControls.UI.RadPageViewPage();
-            this.txtTipoInventario = new Negocios.Componentes.TextPersonal();
-            this.txtCodigo = new Negocios.Componentes.TextPersonal();
-            this.dataInventario = new Telerik.WinControls.UI.RadGridView();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
-            this.pageAsignacion = new Telerik.WinControls.UI.RadPageView();
-            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.lbEstatus = new Telerik.WinControls.UI.RadLabelElement();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.pageInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTipoInventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radStatusStrip2 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
+            this.dataInventario = new Telerik.WinControls.UI.RadGridView();
+            this.panelInformacion = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.txtNombre = new Negocios.Componentes.TextPersonal();
+            this.txtCodigo = new Negocios.Componentes.TextPersonal();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pageAsignacion)).BeginInit();
-            this.pageAsignacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelInformacion)).BeginInit();
+            this.panelInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // errorProvider1
+            // radSeparator1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.radSeparator1.Location = new System.Drawing.Point(11, 109);
+            this.radSeparator1.Name = "radSeparator1";
+            this.radSeparator1.Size = new System.Drawing.Size(412, 10);
+            this.radSeparator1.TabIndex = 46;
+            this.radSeparator1.ThemeName = "VisualStudio2012Light";
             // 
-            // pageInventario
+            // radLabel2
             // 
-            this.pageInventario.Controls.Add(this.txtTipoInventario);
-            this.pageInventario.Controls.Add(this.txtCodigo);
-            this.pageInventario.Controls.Add(this.dataInventario);
-            this.pageInventario.Controls.Add(this.radSeparator1);
-            this.pageInventario.Controls.Add(this.radSeparator2);
-            this.pageInventario.Controls.Add(this.radLabel5);
-            this.pageInventario.Controls.Add(this.radLabel13);
-            this.pageInventario.ItemSize = new System.Drawing.SizeF(408F, 27F);
-            this.pageInventario.Location = new System.Drawing.Point(5, 33);
-            this.pageInventario.Name = "pageInventario";
-            this.pageInventario.Size = new System.Drawing.Size(398, 342);
-            this.pageInventario.Text = "Registro de Tipo de Inventario";
+            this.radLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(11, 9);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(49, 18);
+            this.radLabel2.TabIndex = 41;
+            this.radLabel2.Text = "Codigo";
             // 
-            // txtTipoInventario
+            // radStatusStrip2
             // 
-            this.txtTipoInventario.Correo = false;
-            this.txtTipoInventario.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtTipoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoInventario.Limpiar = false;
-            this.txtTipoInventario.Location = new System.Drawing.Point(105, 44);
-            this.txtTipoInventario.Name = "txtTipoInventario";
-            this.txtTipoInventario.Size = new System.Drawing.Size(277, 24);
-            this.txtTipoInventario.TabIndex = 37;
-            this.txtTipoInventario.ThemeName = "VisualStudio2012Light";
-            this.txtTipoInventario.Validar = true;
+            this.radStatusStrip2.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.toolRegistro});
+            this.radStatusStrip2.Location = new System.Drawing.Point(0, 398);
+            this.radStatusStrip2.Name = "radStatusStrip2";
+            this.radStatusStrip2.Size = new System.Drawing.Size(411, 26);
+            this.radStatusStrip2.TabIndex = 45;
+            this.radStatusStrip2.ThemeName = "VisualStudio2012Light";
             // 
-            // txtCodigo
+            // toolRegistro
             // 
-            this.txtCodigo.Correo = false;
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Limpiar = false;
-            this.txtCodigo.Location = new System.Drawing.Point(105, 14);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(66, 24);
-            this.txtCodigo.TabIndex = 37;
-            this.txtCodigo.ThemeName = "VisualStudio2012Light";
-            this.txtCodigo.Validar = true;
+            this.toolRegistro.Name = "toolRegistro";
+            this.radStatusStrip2.SetSpring(this.toolRegistro, false);
+            this.toolRegistro.Text = "Nuevo Registro";
+            this.toolRegistro.TextWrap = true;
+            this.toolRegistro.UseCompatibleTextRendering = false;
             // 
             // dataInventario
             // 
+            this.dataInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.dataInventario.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataInventario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dataInventario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.dataInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataInventario.Location = new System.Drawing.Point(4, 103);
+            this.dataInventario.Location = new System.Drawing.Point(12, 125);
             // 
             // 
             // 
@@ -127,14 +115,14 @@
             this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "IdTipoInventario";
-            gridViewTextBoxColumn1.HeaderText = "IdTipoInventario";
+            gridViewTextBoxColumn1.HeaderText = "Codigo";
             gridViewTextBoxColumn1.Name = "IdTipoInventario";
-            gridViewTextBoxColumn1.Width = 131;
+            gridViewTextBoxColumn1.Width = 78;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FieldName = "Inventario";
             gridViewTextBoxColumn2.HeaderText = "Inventario";
             gridViewTextBoxColumn2.Name = "Inventario";
-            gridViewTextBoxColumn2.Width = 249;
+            gridViewTextBoxColumn2.Width = 311;
             this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2});
@@ -147,86 +135,71 @@
             this.dataInventario.ReadOnly = true;
             this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataInventario.ShowGroupPanel = false;
-            this.dataInventario.Size = new System.Drawing.Size(378, 236);
-            this.dataInventario.TabIndex = 36;
+            this.dataInventario.Size = new System.Drawing.Size(387, 261);
+            this.dataInventario.TabIndex = 43;
             this.dataInventario.ThemeName = "VisualStudio2012Light";
             this.dataInventario.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataInventario_CellDoubleClick);
             // 
-            // radSeparator1
+            // panelInformacion
             // 
-            this.radSeparator1.Location = new System.Drawing.Point(4, 0);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(378, 10);
-            this.radSeparator1.TabIndex = 35;
-            this.radSeparator1.ThemeName = "VisualStudio2012Light";
+            this.panelInformacion.Controls.Add(this.radLabel3);
+            this.panelInformacion.Controls.Add(this.txtNombre);
+            this.panelInformacion.Location = new System.Drawing.Point(12, 33);
+            this.panelInformacion.Name = "panelInformacion";
+            this.panelInformacion.Size = new System.Drawing.Size(387, 70);
+            this.panelInformacion.TabIndex = 44;
+            this.panelInformacion.ThemeName = "VisualStudio2012Light";
             // 
-            // radSeparator2
+            // radLabel3
             // 
-            this.radSeparator2.Location = new System.Drawing.Point(4, 87);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(378, 10);
-            this.radSeparator2.TabIndex = 35;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
+            this.radLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(12, 9);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(54, 18);
+            this.radLabel3.TabIndex = 2;
+            this.radLabel3.Text = "Nombre";
             // 
-            // radLabel5
+            // txtNombre
             // 
-            this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(4, 47);
-            this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(95, 18);
-            this.radLabel5.TabIndex = 24;
-            this.radLabel5.Text = "Tipo Inventario";
+            this.txtNombre.Correo = false;
+            this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Limpiar = true;
+            this.txtNombre.Location = new System.Drawing.Point(72, 3);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(168, 24);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.ThemeName = "VisualStudio2012Light";
+            this.txtNombre.Validar = true;
             // 
-            // radLabel13
+            // txtCodigo
             // 
-            this.radLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel13.Location = new System.Drawing.Point(40, 17);
-            this.radLabel13.Name = "radLabel13";
-            this.radLabel13.Size = new System.Drawing.Size(49, 18);
-            this.radLabel13.TabIndex = 19;
-            this.radLabel13.Text = "Codigo";
+            this.txtCodigo.Correo = false;
+            this.txtCodigo.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Limpiar = false;
+            this.txtCodigo.Location = new System.Drawing.Point(71, 3);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(70, 24);
+            this.txtCodigo.TabIndex = 42;
+            this.txtCodigo.ThemeName = "VisualStudio2012Light";
+            this.txtCodigo.Validar = true;
             // 
-            // pageAsignacion
+            // errorProvider1
             // 
-            this.pageAsignacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pageAsignacion.Controls.Add(this.pageInventario);
-            this.pageAsignacion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pageAsignacion.Location = new System.Drawing.Point(12, 12);
-            this.pageAsignacion.Name = "pageAsignacion";
-            this.pageAsignacion.SelectedPage = this.pageInventario;
-            this.pageAsignacion.Size = new System.Drawing.Size(408, 380);
-            this.pageAsignacion.TabIndex = 39;
-            this.pageAsignacion.ThemeName = "VisualStudio2012Light";
-            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pageAsignacion.GetChildAt(0))).StripButtons = Telerik.WinControls.UI.StripViewButtons.None;
-            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pageAsignacion.GetChildAt(0))).ItemAlignment = Telerik.WinControls.UI.StripViewItemAlignment.Center;
-            ((Telerik.WinControls.UI.RadPageViewStripElement)(this.pageAsignacion.GetChildAt(0))).ItemFitMode = Telerik.WinControls.UI.StripViewItemFitMode.Fill;
+            this.errorProvider1.ContainerControl = this;
             // 
-            // radStatusStrip1
-            // 
-            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.lbEstatus});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 398);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(411, 26);
-            this.radStatusStrip1.TabIndex = 40;
-            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
-            // 
-            // lbEstatus
-            // 
-            this.lbEstatus.Name = "lbEstatus";
-            this.radStatusStrip1.SetSpring(this.lbEstatus, false);
-            this.lbEstatus.Text = "Nuevo almacen";
-            this.lbEstatus.TextWrap = true;
-            this.lbEstatus.UseCompatibleTextRendering = false;
-            // 
-            // Inventario
+            // TipoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(411, 424);
-            this.Controls.Add(this.radStatusStrip1);
-            this.Controls.Add(this.pageAsignacion);
+            this.Controls.Add(this.radSeparator1);
+            this.Controls.Add(this.radLabel2);
+            this.Controls.Add(this.radStatusStrip2);
+            this.Controls.Add(this.dataInventario);
+            this.Controls.Add(this.panelInformacion);
+            this.Controls.Add(this.txtCodigo);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -234,7 +207,7 @@
             this.MaximumSize = new System.Drawing.Size(419, 457);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(419, 457);
-            this.Name = "Inventario";
+            this.Name = "TipoInventario";
             // 
             // 
             // 
@@ -243,20 +216,18 @@
             this.Text = "Tipo de inventario";
             this.Load += new System.EventHandler(this.Inventario_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Inventario_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.pageInventario.ResumeLayout(false);
-            this.pageInventario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTipoInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pageAsignacion)).EndInit();
-            this.pageAsignacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelInformacion)).EndInit();
+            this.panelInformacion.ResumeLayout(false);
+            this.panelInformacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,16 +237,14 @@
         #endregion
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private Telerik.WinControls.UI.RadPageView pageAsignacion;
-        private Telerik.WinControls.UI.RadPageViewPage pageInventario;
-        private Telerik.WinControls.UI.RadGridView dataInventario;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
-        private Telerik.WinControls.UI.RadSeparator radSeparator2;
-        private Telerik.WinControls.UI.RadLabel radLabel5;
-        private Telerik.WinControls.UI.RadLabel radLabel13;
-        private Negocios.Componentes.TextPersonal txtTipoInventario;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip2;
+        private Telerik.WinControls.UI.RadLabelElement toolRegistro;
+        private Telerik.WinControls.UI.RadGridView dataInventario;
+        private Telerik.WinControls.UI.RadPanel panelInformacion;
+        private Telerik.WinControls.UI.RadLabel radLabel3;
+        private Negocios.Componentes.TextPersonal txtNombre;
         private Negocios.Componentes.TextPersonal txtCodigo;
-        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
-        private Telerik.WinControls.UI.RadLabelElement lbEstatus;
     }
 }

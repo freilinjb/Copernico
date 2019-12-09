@@ -14,11 +14,21 @@ namespace Vistas.Formularios
     {
         private DataSet ds;
 
-        public Almacen()
+        private static Almacen Instancia;
+
+        public static Almacen ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Almacen();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+        private Almacen()
         {
             InitializeComponent();
-            RadMessageBox.ThemeName = this.ThemeName;
-            IdMayor();
         }
 
         private void IdMayor()
@@ -165,6 +175,9 @@ namespace Vistas.Formularios
 
         private void Almacen_Load(object sender, EventArgs e)
         {
+            RadMessageBox.ThemeName = this.ThemeName;
+            IdMayor();
+
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaAlmacen' Puede moverla o quitarla según sea necesario.
             this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
             cbbCentro.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdCentro,Nombre AS Centro FROM VistaCentro").Tables[0];

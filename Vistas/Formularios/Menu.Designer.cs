@@ -220,7 +220,7 @@
             // ribbonTab6
             // 
             this.ribbonTab6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup4,
             this.radRibbonBarGroup5,
@@ -404,7 +404,7 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = false;
+            this.ribbonTab7.IsSelected = true;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup8,
             this.radRibbonBarGroup9,
@@ -428,6 +428,7 @@
             this.btAlmacen.Name = "btAlmacen";
             this.btAlmacen.Text = "Registro de Almacenes";
             this.btAlmacen.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btAlmacen.Click += new System.EventHandler(this.btAlmacen_Click);
             // 
             // radRibbonBarGroup9
             // 
@@ -450,7 +451,7 @@
             // ribbonTab9
             // 
             this.ribbonTab9.Image = null;
-            this.ribbonTab9.IsSelected = true;
+            this.ribbonTab9.IsSelected = false;
             this.ribbonTab9.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup11,
             this.radRibbonBarGroup13});

@@ -178,6 +178,12 @@
     <Compile Include="Formularios\Filtro.Designer.cs">
       <DependentUpon>Filtro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\GrupoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GrupoInventario.Designer.cs">
+      <DependentUpon>GrupoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Imprimir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,12 @@
     </Compile>
     <Compile Include="Formularios\PermisoAmbiental.Designer.cs">
       <DependentUpon>PermisoAmbiental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Pedido.Designer.cs">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
@@ -357,6 +369,9 @@
     <EmbeddedResource Include="Formularios\Filtro.resx">
       <DependentUpon>Filtro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GrupoInventario.resx">
+      <DependentUpon>GrupoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PermisoAmbiental.resx">
       <DependentUpon>PermisoAmbiental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pedido.resx">
+      <DependentUpon>Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>

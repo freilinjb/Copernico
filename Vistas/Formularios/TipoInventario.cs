@@ -33,7 +33,7 @@ namespace Vistas.Formularios
             {
                 try
                 {
-                    ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarTipoInventario {txtCodigo.Text},'{txtTipoInventario.Text.Trim().ToUpper()}'");
+                    ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarTipoInventario {txtCodigo.Text},'{txtNombre.Text.Trim().ToUpper()}'");
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -42,7 +42,7 @@ namespace Vistas.Formularios
                         txtCodigo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdTipoInventario)+1 Mayor FROM TipoInventario").Tables[0].Rows[0]["Mayor"].ToString();
                         dataInventario.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoInventario,Descripcion AS Inventario FROM TipoInventario").Tables[0];
                         Negocios.Utilidades.Limpiar(this, errorProvider1);
-                        txtTipoInventario.Text = null;
+                        txtNombre.Text = null;
                     }
                 }
                 catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.F1)
             {
                 if(Guardar())
-                    lbEstatus.Text = "Nuevo registro";
+                    toolRegistro.Text = "Nuevo registro";
             }
             else if(e.KeyCode == Keys.F2)
             {
@@ -74,8 +74,8 @@ namespace Vistas.Formularios
                 if (RadMessageBox.Show($"Desea editar el Almacen {dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
                     txtCodigo.Text = dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["IdTipoInventario"].Value.ToString();
-                    txtTipoInventario.Text = dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString();
-                    lbEstatus.Text = "Modo edicion";
+                    txtNombre.Text = dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString();
+                    toolRegistro.Text = "Modo edicion";
                 }
             }
         }
