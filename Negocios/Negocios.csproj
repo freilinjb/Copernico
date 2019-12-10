@@ -101,6 +101,7 @@
     <Compile Include="Entidades\Mina.cs" />
     <Compile Include="Entidades\Obra.cs" />
     <Compile Include="Entidades\OrdenDeVenta.cs" />
+    <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Usuario.cs" />

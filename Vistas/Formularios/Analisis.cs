@@ -99,51 +99,58 @@ namespace Vistas.Formularios
 
         private void MasterTemplate_CellValueChanged(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
-            float retenido = 0;
-            float porcentajeAcumulado = 0;
-            if(e.Column.Name == "PesoRetenido")
+            try
             {
-                ///Distribulle el porcentaje granulometrico por Tamiz
-                retenido = (((Single)e.Value * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100;
-                Debug.WriteLine("Cambio");
-                e.Row.Cells["Pasante"].Value = retenido;
-                e.Row.Cells["Retenido"].Value = retenido;
-
-                //RetenidoAcumulado += (float)e.Row.Cells["Retenido"].Value;
-                //e.Row.Cells["RetenidoAcumulado"].Value = RetenidoAcumulado;
-
-                for(int i = 0; i <= e.RowIndex; i++)
+                float retenido = 0;
+                float porcentajeAcumulado = 0;
+                if (e.Column.Name == "PesoRetenido")
                 {
-                    porcentajeAcumulado += (float)dataTamiz.Rows[i].Cells["Retenido"].Value;
+                    ///Distribulle el porcentaje granulometrico por Tamiz
+                    retenido = (((Single)e.Value * 100) / Convert.ToSingle(txtCantidadInicial.Text.Trim())) / 100;
+                    Debug.WriteLine("Cambio");
+                    e.Row.Cells["Pasante"].Value = retenido;
+                    e.Row.Cells["Retenido"].Value = retenido;
+
+                    //RetenidoAcumulado += (float)e.Row.Cells["Retenido"].Value;
+                    //e.Row.Cells["RetenidoAcumulado"].Value = RetenidoAcumulado;
+
+                    for (int i = 0; i <= e.RowIndex; i++)
+                    {
+                        porcentajeAcumulado += (float)dataTamiz.Rows[i].Cells["Retenido"].Value;
+                    }
+                    e.Row.Cells["Pasante"].Value = (1 - porcentajeAcumulado);
+                    e.Row.Cells["RetenidoAcumulado"].Value = porcentajeAcumulado;
+
+                    txtCantidadFinal.Text = porcentajeAcumulado.ToString();
+                    toolPorcentaje.Text = (porcentajeAcumulado * 100).ToString();
+
+
+                    //Comparacion de los materiales
+
+                    if (porcentajeAcumulado > 1)
+                    {
+                        RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    }
+
+                    //int index = 0;
+                    //foreach (var File in dataTamiz.Rows)
+                    //{
+                    //    porcentajePasante += (float)File.Cells["Pasante"].Value;
+                    //    PesoRetenido += (float)File.Cells["PesoRetenido"].Value;
+                    //    porcentajeAcumulado += (float)File.Cells["Pasante"].Value;
+                    //    dataTamiz.Rows[index].Cells["RetenidoAcumulado"].Value = porcentajeAcumulado;
+                    //    dataTamiz.Rows[index].Cells["Pasante"].Value = porcentajeAcumulado;
+                    //}
+
+                    //if (porcentajePasante > 1)
+                    //{
+                    //    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                    //}
                 }
-                e.Row.Cells["Pasante"].Value = (1-porcentajeAcumulado);
-                e.Row.Cells["RetenidoAcumulado"].Value = porcentajeAcumulado;
-
-                txtCantidadFinal.Text = porcentajeAcumulado.ToString();
-                toolPorcentaje.Text = (porcentajeAcumulado * 100).ToString();
-
-
-                //Comparacion de los materiales
-
-                if(porcentajeAcumulado > 1)
-                {
-                    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                }
-
-                //int index = 0;
-                //foreach (var File in dataTamiz.Rows)
-                //{
-                //    porcentajePasante += (float)File.Cells["Pasante"].Value;
-                //    PesoRetenido += (float)File.Cells["PesoRetenido"].Value;
-                //    porcentajeAcumulado += (float)File.Cells["Pasante"].Value;
-                //    dataTamiz.Rows[index].Cells["RetenidoAcumulado"].Value = porcentajeAcumulado;
-                //    dataTamiz.Rows[index].Cells["Pasante"].Value = porcentajeAcumulado;
-                //}
-
-                //if (porcentajePasante > 1)
-                //{
-                //    RadMessageBox.Show("REVISAR EL PORCENTAJE GRANULOMETRICO, SOBREPASA LA CANTIDAD INICIAL!!", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
-                //}
+            }
+            catch(Exception ex)
+            {
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
             }
         }
 
@@ -179,7 +186,7 @@ namespace Vistas.Formularios
 
                         if(Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
                         {
-                            bien = true
+                            bien = true;
                         }
                     }
                 }
@@ -206,6 +213,7 @@ namespace Vistas.Formularios
                 {
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    txtCantidadInicial.Text = "0";
                     IdMayor();
                     toolRegistro.Text = "Nuevo Registro";
 
