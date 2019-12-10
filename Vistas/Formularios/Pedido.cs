@@ -91,9 +91,18 @@ namespace Vistas.Formularios
 
         private void Pedido_Load(object sender, EventArgs e)
         {
-            cbbTipoRequisicion.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoProducto,Descripcion AS Requisicion FROM TipoProducto").Tables[0];
-            cbbTipoRequisicion.DisplayMember = "Requisicion";
-            cbbTipoRequisicion.ValueMember = "IdTipoProducto";
+            cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar("SELECT A.IdAlmacen,A.Descripcion AS Almacen FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = 1").Tables[0];
+            cbbAlmacen.DisplayMember = "Almacen";
+            cbbAlmacen.ValueMember = "IdAlmacen";
+
+            if(cbbAlmacen.Items.Count > 0)
+            {
+                cbbAlmacen.SelectedIndex = 0;
+                //cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = 1").Tables[0];
+                //cbbInventario.ValueMember = "IdInventario";
+                //cbbInventario.DisplayMember = "Inventario";
+
+            }
 
             cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto ").Tables[0];
             cbbProducto.ValueMember = "IdProducto";
@@ -129,11 +138,13 @@ namespace Vistas.Formularios
                     if (dataProducto.Rows.Count > 0)
                     {
 
-                        Negocios.Entidades.Pedido pedido = new Negocios.Entidades.Pedido(
+                        Negocios.Entidades.PedidoDeProducto pedido = new Negocios.Entidades.PedidoDeProducto(
                             Convert.ToInt32(txtNumOrden.Text.Trim()),
                             1,
                             1,
                             (int)cbbTipoPedido.SelectedValue,
+                            (int)cbbAlmacen.SelectedValue,
+                            (int)cbbInventario.SelectedValue,
                             txtNota.Text.Trim(),
                             (int)cbbEstado.SelectedValue);
 
@@ -143,14 +154,11 @@ namespace Vistas.Formularios
 
                         if (ds.Tables[0].Rows.Count > 0)
                         {
-                            float subtotal = 0, itbis = 0;
                             foreach (var Fila in dataProducto.Rows)
                             {
                                 int ordenventa = Convert.ToInt32(dataProducto.Rows[dataProducto.CurrentRow.Index].Cells[0].Value.ToString());
-                                subtotal += Convert.ToSingle(Convert.ToSingle(Fila.Cells["Cantidad"].Value.ToString()) * Convert.ToSingle(Fila.Cells["Precio"].Value.ToString()));
-                                itbis += Convert.ToSingle(Fila.Cells["Itbis"].Value.ToString());
                                 //Debug.WriteLine($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
-                                Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},{Fila.Cells["Itbis"].Value.ToString()},{Fila.Cells["Precio"].Value.ToString()};");
+                                Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetalleOrden] {txtNumOrden.Text.Trim()},{Fila.Cells["Codigo"].Value.ToString()},'{Fila.Cells["Descripcion"].Value.ToString()}','{Fila.Cells["Unidad"].Value.ToString()}',{Fila.Cells["Cantidad"].Value.ToString()},0,0;");
                             }
 
 
@@ -203,6 +211,32 @@ namespace Vistas.Formularios
                     IdMayor();
                     toolRegistro.Text = "Nuevo Registro";
                 }
+            }
+        }
+
+        private void cbbTipoRequisicion_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            //if(cbbTipoRequisicion.SelectedIndex != -1)
+            //{
+            //    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT U.IdUnidad,P.IdProducto,U.Descripcion AS Unidad FROM Unidad U INNER JOIN Producto_VS_Unidad PU ON PU.IdUnidad = U.IdUnidad INNER JOIN Producto P ON P.IdProducto = PU.IdProducto WHERE IdTipoProducto  = 2").Tables[0];
+            //}
+        }
+
+        private void cbbAlmacen_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (cbbAlmacen.SelectedIndex > -1)
+            {
+                cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = 1").Tables[0]; ;
+                cbbInventario.ValueMember = "IdInventario";
+                cbbInventario.DisplayMember = "Inventario";
+
+                //ds = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = {cbbAlmacen.SelectedValue}");
+                //if (ds.Tables[0].Rows.Count > 0)
+                //{
+                //    cbbInventario.DataSource = ds.Tables[0];
+                //    cbbInventario.ValueMember = "IdInventario";
+                //    cbbInventario.DisplayMember = "Inventario";
+                //}
             }
         }
     }
