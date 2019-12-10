@@ -23,6 +23,7 @@ namespace Vistas.Formularios
             InitializeComponent();
 
             IdMayor();
+            txtFecha.Value = DateTime.Today;
         }
 
         private void IdMayor()

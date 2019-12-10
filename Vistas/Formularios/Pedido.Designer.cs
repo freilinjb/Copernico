@@ -59,7 +59,7 @@
             this.cbbProducto = new Negocios.Componentes.MultiCbbPersonal();
             this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.fecha = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.txtFecha = new Telerik.WinControls.UI.RadDateTimePicker();
             this.txtNumOrden = new Negocios.Componentes.TextPersonal();
             this.radSeparator6 = new Telerik.WinControls.UI.RadSeparator();
             this.radSeparator7 = new Telerik.WinControls.UI.RadSeparator();
@@ -92,7 +92,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator7)).BeginInit();
@@ -241,7 +241,7 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this.radGroupBox2.Controls.Add(this.fecha);
+            this.radGroupBox2.Controls.Add(this.txtFecha);
             this.radGroupBox2.Controls.Add(this.txtNumOrden);
             this.radGroupBox2.Controls.Add(this.radSeparator6);
             this.radGroupBox2.Controls.Add(this.radSeparator7);
@@ -256,17 +256,17 @@
             this.radGroupBox2.Text = "Configuracion de orden";
             this.radGroupBox2.ThemeName = "VisualStudio2012Light";
             // 
-            // fecha
+            // txtFecha
             // 
-            this.fecha.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.fecha.Location = new System.Drawing.Point(143, 62);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(281, 24);
-            this.fecha.TabIndex = 30;
-            this.fecha.TabStop = false;
-            this.fecha.Text = "sábado, 16 de noviembre de 2019";
-            this.fecha.ThemeName = "VisualStudio2012Light";
-            this.fecha.Value = new System.DateTime(2019, 11, 16, 22, 13, 24, 47);
+            this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtFecha.Location = new System.Drawing.Point(143, 62);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(281, 24);
+            this.txtFecha.TabIndex = 30;
+            this.txtFecha.TabStop = false;
+            this.txtFecha.Text = "sábado, 16 de noviembre de 2019";
+            this.txtFecha.ThemeName = "VisualStudio2012Light";
+            this.txtFecha.Value = new System.DateTime(2019, 11, 16, 22, 13, 24, 47);
             // 
             // txtNumOrden
             // 
@@ -749,7 +749,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator7)).EndInit();
@@ -790,7 +790,7 @@
         private Negocios.Componentes.MultiCbbPersonal cbbProducto;
         private Negocios.Componentes.cbbPersonal cbbEstado;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
-        private Telerik.WinControls.UI.RadDateTimePicker fecha;
+        private Telerik.WinControls.UI.RadDateTimePicker txtFecha;
         private Negocios.Componentes.TextPersonal txtNumOrden;
         private Telerik.WinControls.UI.RadSeparator radSeparator6;
         private Telerik.WinControls.UI.RadSeparator radSeparator7;
