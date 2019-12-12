@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonBarGroup3 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -38,9 +37,6 @@
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radRibbonBarGroup14 = new Telerik.WinControls.UI.RadRibbonBarGroup();
-            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
-            this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
-            this.radButtonElement7 = new Telerik.WinControls.UI.RadButtonElement();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.radLabelElement2 = new Telerik.WinControls.UI.RadLabelElement();
@@ -69,8 +65,10 @@
             this.ribbonTab7 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btAlmacen = new Telerik.WinControls.UI.RadButtonElement();
+            this.btInventario = new Telerik.WinControls.UI.RadButtonElement();
             this.radRibbonBarGroup9 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radRibbonBarGroup10 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btActivoFijo = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab8 = new Telerik.WinControls.UI.RibbonTab();
             this.ribbonTab9 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup11 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -86,7 +84,10 @@
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuHeaderItem1 = new Telerik.WinControls.UI.RadMenuHeaderItem();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
-            this.btActivoFijo = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement7 = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -99,20 +100,6 @@
             this.radButtonElement2});
             this.radRibbonBarGroup1.Name = "radRibbonBarGroup1";
             this.radRibbonBarGroup1.Text = "Registro de Inventario";
-            // 
-            // radButtonElement1
-            // 
-            this.radButtonElement1.AutoSize = true;
-            this.radButtonElement1.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.Auto;
-            this.radButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
-            this.radButtonElement1.FlipText = false;
-            this.radButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement1.Image")));
-            this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.radButtonElement1.Name = "radButtonElement1";
-            this.radButtonElement1.Shape = null;
-            this.radButtonElement1.SmallImage = null;
-            this.radButtonElement1.Text = "Registro de Lote";
-            this.radButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // radButtonElement2
             // 
@@ -164,37 +151,6 @@
             this.radRibbonBarGroup14.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.radRibbonBarGroup14.Text = "Control";
             this.radRibbonBarGroup14.UseCompatibleTextRendering = false;
-            // 
-            // radButtonElement4
-            // 
-            this.radButtonElement4.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
-            this.radButtonElement4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radButtonElement4.Image = global::Vistas.Properties.Resources.Empresa;
-            this.radButtonElement4.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.radButtonElement4.Name = "radButtonElement4";
-            this.radButtonElement4.Text = "Datos Empresa";
-            this.radButtonElement4.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.radButtonElement4.UseCompatibleTextRendering = false;
-            // 
-            // radButtonElement5
-            // 
-            this.radButtonElement5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radButtonElement5.Image = global::Vistas.Properties.Resources.Centro;
-            this.radButtonElement5.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.radButtonElement5.Name = "radButtonElement5";
-            this.radButtonElement5.Text = "Centro";
-            this.radButtonElement5.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.radButtonElement5.UseCompatibleTextRendering = false;
-            // 
-            // radButtonElement7
-            // 
-            this.radButtonElement7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.radButtonElement7.Image = global::Vistas.Properties.Resources.Producto;
-            this.radButtonElement7.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.radButtonElement7.Name = "radButtonElement7";
-            this.radButtonElement7.Text = "Producto";
-            this.radButtonElement7.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.radButtonElement7.UseCompatibleTextRendering = false;
             // 
             // radStatusStrip1
             // 
@@ -466,7 +422,8 @@
             // radRibbonBarGroup8
             // 
             this.radRibbonBarGroup8.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.btAlmacen});
+            this.btAlmacen,
+            this.btInventario});
             this.radRibbonBarGroup8.Name = "radRibbonBarGroup8";
             this.radRibbonBarGroup8.Text = "Registro de Inventario";
             // 
@@ -480,6 +437,15 @@
             this.btAlmacen.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.btAlmacen.Click += new System.EventHandler(this.btAlmacen_Click);
             // 
+            // btInventario
+            // 
+            this.btInventario.Image = global::Vistas.Properties.Resources.Inventario;
+            this.btInventario.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.btInventario.Name = "btInventario";
+            this.btInventario.Text = "Inventario";
+            this.btInventario.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btInventario.Click += new System.EventHandler(this.btInventario_Click);
+            // 
             // radRibbonBarGroup9
             // 
             this.radRibbonBarGroup9.Name = "radRibbonBarGroup9";
@@ -491,6 +457,14 @@
             this.btActivoFijo});
             this.radRibbonBarGroup10.Name = "radRibbonBarGroup10";
             this.radRibbonBarGroup10.Text = "Utilidades de Inventario";
+            // 
+            // btActivoFijo
+            // 
+            this.btActivoFijo.Alignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActivoFijo.Name = "btActivoFijo";
+            this.btActivoFijo.Text = "Activos Fijos";
+            this.btActivoFijo.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActivoFijo.Click += new System.EventHandler(this.btActivoFijo_Click);
             // 
             // ribbonTab8
             // 
@@ -567,7 +541,7 @@
             // btEmpleado
             // 
             this.btEmpleado.Name = "btEmpleado";
-            this.btEmpleado.Text = "Empleaedo";
+            this.btEmpleado.Text = "Empleado";
             this.btEmpleado.Click += new System.EventHandler(this.btEmpleado_Click);
             // 
             // contextualTabGroup1
@@ -603,13 +577,50 @@
             // 
             this.radRibbonFormBehavior1.Form = this;
             // 
-            // btActivoFijo
+            // radButtonElement1
             // 
-            this.btActivoFijo.Alignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.btActivoFijo.Name = "btActivoFijo";
-            this.btActivoFijo.Text = "Activos Fijos";
-            this.btActivoFijo.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
-            this.btActivoFijo.Click += new System.EventHandler(this.btActivoFijo_Click);
+            this.radButtonElement1.AutoSize = true;
+            this.radButtonElement1.AutoSizeMode = Telerik.WinControls.RadAutoSizeMode.Auto;
+            this.radButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
+            this.radButtonElement1.FlipText = false;
+            this.radButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement1.Image")));
+            this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement1.Name = "radButtonElement1";
+            this.radButtonElement1.Shape = null;
+            this.radButtonElement1.SmallImage = null;
+            this.radButtonElement1.Text = "Registro de Lote";
+            this.radButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // radButtonElement4
+            // 
+            this.radButtonElement4.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
+            this.radButtonElement4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radButtonElement4.Image = global::Vistas.Properties.Resources.Empresa;
+            this.radButtonElement4.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.radButtonElement4.Name = "radButtonElement4";
+            this.radButtonElement4.Text = "Datos Empresa";
+            this.radButtonElement4.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.radButtonElement4.UseCompatibleTextRendering = false;
+            // 
+            // radButtonElement5
+            // 
+            this.radButtonElement5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radButtonElement5.Image = global::Vistas.Properties.Resources.Centro;
+            this.radButtonElement5.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.radButtonElement5.Name = "radButtonElement5";
+            this.radButtonElement5.Text = "Centro";
+            this.radButtonElement5.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.radButtonElement5.UseCompatibleTextRendering = false;
+            // 
+            // radButtonElement7
+            // 
+            this.radButtonElement7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.radButtonElement7.Image = global::Vistas.Properties.Resources.Producto;
+            this.radButtonElement7.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.radButtonElement7.Name = "radButtonElement7";
+            this.radButtonElement7.Text = "Producto";
+            this.radButtonElement7.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.radButtonElement7.UseCompatibleTextRendering = false;
             // 
             // Menu
             // 
@@ -696,5 +707,6 @@
         private Telerik.WinControls.UI.RadButtonElement btEmpleado;
         private Telerik.WinControls.UI.RadRibbonBarGroup btCubicacion;
         private Telerik.WinControls.UI.RadButtonElement btActivoFijo;
+        private Telerik.WinControls.UI.RadButtonElement btInventario;
     }
 }

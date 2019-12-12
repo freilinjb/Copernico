@@ -121,5 +121,12 @@ namespace Vistas.Formularios
             activo.MdiParent = this;
             activo.Show();
         }
+
+        private void btInventario_Click(object sender, EventArgs e)
+        {
+            Inventario inventario = Inventario.ObtenerInstancia();
+            inventario.MdiParent = this;
+            inventario.Show();
+        }
     }
 }
