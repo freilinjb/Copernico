@@ -43,7 +43,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarActivoFijo] {IdActivoFijo},{IdMaquinaria},'{Nombre}',{IdMarca},{IdModelo},{IdMotor},{IdColor},{Anio},{IdPropietario},'{Placa}',{IdEstadoMaquinaria},{IdEstadoActivoFijo},{IdGrupoActivoFijo},{IdSubGrupoActivoFijo}";
+            return $"EXEC [RegistrarActivoFijoEquipo] {IdActivoFijo},{IdMaquinaria},'{Nombre}',{IdMarca},{IdModelo},{IdMotor},{IdColor},{Anio},{IdPropietario},'{Placa}',{IdEstadoMaquinaria},{IdEstadoActivoFijo},{IdGrupoActivoFijo},{IdSubGrupoActivoFijo}";
         }
     }
 }

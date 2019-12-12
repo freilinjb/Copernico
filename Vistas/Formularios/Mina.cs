@@ -26,7 +26,7 @@ namespace Vistas.Formularios
             return Instancia;
         }
 
-        public Mina()
+        private Mina()
         {
             InitializeComponent();
         }

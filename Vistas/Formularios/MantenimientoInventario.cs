@@ -9,11 +9,16 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Inventario : FormBase
+    public partial class MantenimientoInventario : FormBase
     {
-        public Inventario()
+        public MantenimientoInventario()
         {
             InitializeComponent();
+        }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            //dataInventario
         }
     }
 }

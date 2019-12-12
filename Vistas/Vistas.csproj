@@ -196,6 +196,12 @@
     <Compile Include="Formularios\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\MantenimientoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\MantenimientoInventario.Designer.cs">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,12 @@
     <Compile Include="Formularios\Obra.Designer.cs">
       <DependentUpon>Obra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Impresor.cs" />
     <Compile Include="Informes\Informe.cs">
       <SubType>Form</SubType>
@@ -378,6 +390,9 @@
     <EmbeddedResource Include="Formularios\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\MantenimientoInventario.resx">
+      <DependentUpon>MantenimientoInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mina.resx">
       <DependentUpon>Mina.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Obra.resx">
       <DependentUpon>Obra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\Conduce.rdlc" />
     <EmbeddedResource Include="Informes\Informe.resx">

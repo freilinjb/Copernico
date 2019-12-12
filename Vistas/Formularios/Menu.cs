@@ -85,5 +85,34 @@ namespace Vistas.Formularios
             almacen.MdiParent = this;
             almacen.Show();
         }
+
+        private void radButtonElement3_Click_1(object sender, EventArgs e)
+        {
+            Pedido pedido = Pedido.ObtenerInstancia();
+            pedido.MdiParent = this;
+            pedido.Show();
+        }
+
+        private void btCubicacion_Click(object sender, EventArgs e)
+        {
+            ActivoCubicacion activoCubicacion = ActivoCubicacion.ObtenerInstancia();
+            activoCubicacion.MdiParent = this;
+            activoCubicacion.Show();
+
+        }
+
+        private void btEmpleado_Click(object sender, EventArgs e)
+        {
+            Empleado empleado = new Empleado();
+            empleado.MdiParent = this;
+            empleado.Show();
+        }
+
+        private void btCubicacion_Click_1(object sender, EventArgs e)
+        {
+            ActivoCubicacion activoCubicacion = ActivoCubicacion.ObtenerInstancia();
+            activoCubicacion.MdiParent = this;
+            activoCubicacion.Show();
+        }
     }
 }

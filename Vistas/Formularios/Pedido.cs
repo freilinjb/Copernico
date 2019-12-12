@@ -18,7 +18,20 @@ namespace Vistas.Formularios
         private int num_fila = 0;
         private bool existe = false;
 
-        public Pedido()
+        private static Pedido Instancia;
+
+        public static Pedido ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Pedido();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+
+        private Pedido()
         {
             InitializeComponent();
 
@@ -104,9 +117,9 @@ namespace Vistas.Formularios
 
             }
 
-            cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto ").Tables[0];
-            cbbProducto.ValueMember = "IdProducto";
-            cbbProducto.DisplayMember = "Producto";
+            //cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto ").Tables[0];
+            //cbbProducto.ValueMember = "IdProducto";
+            //cbbProducto.DisplayMember = "Producto";
 
             cbbTipoPedido.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoPedido,Descripcion AS TipoPedido FROM TipoPedido").Tables[0];
             cbbTipoPedido.ValueMember = "IdTipoPedido";
@@ -209,17 +222,9 @@ namespace Vistas.Formularios
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     IdMayor();
-                    toolRegistro.Text = "Nuevo Registro";
+                    toolRegistro.Text = "Nuevo Pedido";
                 }
             }
-        }
-
-        private void cbbTipoRequisicion_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
-            //if(cbbTipoRequisicion.SelectedIndex != -1)
-            //{
-            //    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT U.IdUnidad,P.IdProducto,U.Descripcion AS Unidad FROM Unidad U INNER JOIN Producto_VS_Unidad PU ON PU.IdUnidad = U.IdUnidad INNER JOIN Producto P ON P.IdProducto = PU.IdProducto WHERE IdTipoProducto  = 2").Tables[0];
-            //}
         }
 
         private void cbbAlmacen_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
@@ -237,6 +242,26 @@ namespace Vistas.Formularios
                 //    cbbInventario.ValueMember = "IdInventario";
                 //    cbbInventario.DisplayMember = "Inventario";
                 //}
+            }
+        }
+
+        private void cbbTipoPedido_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if (cbbTipoPedido.SelectedIndex > -1)
+            {
+                if (cbbTipoPedido.SelectedIndex == 1)
+                {
+                    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto WHERE TP.IdTipoProducto = 2").Tables[0];
+                    cbbProducto.ValueMember = "IdProducto";
+                    cbbProducto.DisplayMember = "Producto";
+                }
+
+                else
+                {
+                    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto WHERE TP.IdTipoProducto = 1").Tables[0];
+                    cbbProducto.ValueMember = "IdProducto";
+                    cbbProducto.DisplayMember = "Producto";
+                }
             }
         }
     }

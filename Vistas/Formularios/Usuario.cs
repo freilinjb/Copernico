@@ -9,9 +9,9 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class Inventario : FormBase
+    public partial class Usuario : FormBase
     {
-        public Inventario()
+        public Usuario()
         {
             InitializeComponent();
         }
