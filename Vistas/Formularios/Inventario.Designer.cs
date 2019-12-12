@@ -29,7 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition7 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
             this.dataInventario = new Telerik.WinControls.UI.RadGridView();
@@ -52,7 +58,6 @@
             this.cbbPersonal3 = new Negocios.Componentes.cbbPersonal();
             this.cbbPersonal1 = new Negocios.Componentes.cbbPersonal();
             this.cbbProducto = new Negocios.Componentes.cbbPersonal();
-            this.cbbPersonal4 = new Negocios.Componentes.cbbPersonal();
             this.cbbInventario = new Negocios.Componentes.cbbPersonal();
             this.cbbPersonal2 = new Negocios.Componentes.cbbPersonal();
             this.cbbAlmacen = new Negocios.Componentes.cbbPersonal();
@@ -88,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).BeginInit();
@@ -140,11 +144,45 @@
             this.dataInventario.MasterTemplate.AllowDragToGroup = false;
             this.dataInventario.MasterTemplate.AllowRowResize = false;
             this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn7.FieldName = "IdInventario";
+            gridViewTextBoxColumn7.HeaderText = "Codigo";
+            gridViewTextBoxColumn7.Name = "IdInventario";
+            gridViewTextBoxColumn7.Width = 393;
+            gridViewTextBoxColumn8.FieldName = "Descripcion";
+            gridViewTextBoxColumn8.HeaderText = "Descripcion";
+            gridViewTextBoxColumn8.Name = "Descripcion";
+            gridViewTextBoxColumn8.Width = 33;
+            gridViewTextBoxColumn9.DataType = typeof(float);
+            gridViewTextBoxColumn9.FieldName = "Stock";
+            gridViewTextBoxColumn9.HeaderText = "Stock";
+            gridViewTextBoxColumn9.Name = "Stock";
+            gridViewTextBoxColumn9.Width = 37;
+            gridViewTextBoxColumn10.DataType = typeof(float);
+            gridViewTextBoxColumn10.FieldName = "StockPromedio";
+            gridViewTextBoxColumn10.HeaderText = "StockPromedio";
+            gridViewTextBoxColumn10.Name = "StockPromedio";
+            gridViewTextBoxColumn10.Width = 39;
+            gridViewTextBoxColumn11.DataType = typeof(float);
+            gridViewTextBoxColumn11.FieldName = "StockMinimo";
+            gridViewTextBoxColumn11.HeaderText = "StockMinimo";
+            gridViewTextBoxColumn11.Name = "StockMinimo";
+            gridViewTextBoxColumn11.Width = 42;
+            gridViewTextBoxColumn12.FieldName = "Estado";
+            gridViewTextBoxColumn12.HeaderText = "Estado";
+            gridViewTextBoxColumn12.Name = "Estado";
+            gridViewTextBoxColumn12.Width = 47;
+            this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9,
+            gridViewTextBoxColumn10,
+            gridViewTextBoxColumn11,
+            gridViewTextBoxColumn12});
             this.dataInventario.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataInventario.MasterTemplate.EnableGrouping = false;
             this.dataInventario.MasterTemplate.EnableSorting = false;
             this.dataInventario.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition7;
+            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dataInventario.Name = "dataInventario";
             this.dataInventario.ReadOnly = true;
             this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -173,7 +211,6 @@
             this.radPanel1.Controls.Add(this.cbbPersonal3);
             this.radPanel1.Controls.Add(this.cbbPersonal1);
             this.radPanel1.Controls.Add(this.cbbProducto);
-            this.radPanel1.Controls.Add(this.cbbPersonal4);
             this.radPanel1.Controls.Add(this.cbbInventario);
             this.radPanel1.Controls.Add(this.cbbPersonal2);
             this.radPanel1.Controls.Add(this.cbbAlmacen);
@@ -210,9 +247,9 @@
             this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel4.Location = new System.Drawing.Point(12, 146);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(60, 18);
+            this.radLabel4.Size = new System.Drawing.Size(106, 18);
             this.radLabel4.TabIndex = 2;
-            this.radLabel4.Text = "Producto";
+            this.radLabel4.Text = "Producto/Equipo";
             // 
             // radSeparator3
             // 
@@ -369,29 +406,13 @@
             this.cbbProducto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProducto.Limpiar = true;
-            this.cbbProducto.Location = new System.Drawing.Point(78, 139);
+            this.cbbProducto.Location = new System.Drawing.Point(124, 139);
             this.cbbProducto.Name = "cbbProducto";
-            this.cbbProducto.Size = new System.Drawing.Size(168, 25);
+            this.cbbProducto.Size = new System.Drawing.Size(122, 25);
             this.cbbProducto.TabIndex = 4;
             this.cbbProducto.ThemeName = "VisualStudio2012Light";
             this.cbbProducto.Validar = true;
             this.cbbProducto.ValueMember = "IdTipoProducto";
-            // 
-            // cbbPersonal4
-            // 
-            this.cbbPersonal4.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal4.Correo = false;
-            this.cbbPersonal4.DisplayMember = "Descripcion";
-            this.cbbPersonal4.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal4.Limpiar = true;
-            this.cbbPersonal4.Location = new System.Drawing.Point(78, 139);
-            this.cbbPersonal4.Name = "cbbPersonal4";
-            this.cbbPersonal4.Size = new System.Drawing.Size(168, 25);
-            this.cbbPersonal4.TabIndex = 4;
-            this.cbbPersonal4.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal4.Validar = true;
-            this.cbbPersonal4.ValueMember = "IdTipoProducto";
             // 
             // cbbInventario
             // 
@@ -564,7 +585,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).EndInit();
@@ -599,7 +619,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private Negocios.Componentes.cbbPersonal cbbProducto;
-        private Negocios.Componentes.cbbPersonal cbbPersonal4;
         private Negocios.Componentes.cbbPersonal cbbInventario;
         private Negocios.Componentes.cbbPersonal cbbPersonal2;
         private Negocios.Componentes.cbbPersonal cbbAlmacen;
