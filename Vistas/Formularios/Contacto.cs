@@ -14,7 +14,7 @@ namespace Vistas.Formularios
 {
     public partial class Contacto : FormBase
     {
-        private DataSet ds;
+        //private DataSet ds;
         public Negocios.Entidades.Contacto ct;
 
         public Contacto()

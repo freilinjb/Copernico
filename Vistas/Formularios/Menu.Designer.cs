@@ -59,6 +59,7 @@
             this.btProveedor = new Telerik.WinControls.UI.RadButtonElement();
             this.btMina = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab3 = new Telerik.WinControls.UI.RibbonTab();
+            this.btCubicacion = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup12 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement6 = new Telerik.WinControls.UI.RadButtonElement();
@@ -85,7 +86,7 @@
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuHeaderItem1 = new Telerik.WinControls.UI.RadMenuHeaderItem();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
-            this.btCubicacion = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btActivoFijo = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -386,12 +387,18 @@
             // ribbonTab3
             // 
             this.ribbonTab3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.btCubicacion});
             this.ribbonTab3.Name = "ribbonTab3";
             this.ribbonTab3.Text = "Control de seguridad";
             this.ribbonTab3.UseMnemonic = false;
+            // 
+            // btCubicacion
+            // 
+            this.btCubicacion.Name = "btCubicacion";
+            this.btCubicacion.Text = "Cubicacion";
+            this.btCubicacion.Click += new System.EventHandler(this.btCubicacion_Click_1);
             // 
             // ribbonTab2
             // 
@@ -447,7 +454,7 @@
             // 
             // ribbonTab7
             // 
-            this.ribbonTab7.IsSelected = false;
+            this.ribbonTab7.IsSelected = true;
             this.ribbonTab7.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup8,
             this.radRibbonBarGroup9,
@@ -480,6 +487,8 @@
             // 
             // radRibbonBarGroup10
             // 
+            this.radRibbonBarGroup10.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.btActivoFijo});
             this.radRibbonBarGroup10.Name = "radRibbonBarGroup10";
             this.radRibbonBarGroup10.Text = "Utilidades de Inventario";
             // 
@@ -594,11 +603,13 @@
             // 
             this.radRibbonFormBehavior1.Form = this;
             // 
-            // btCubicacion
+            // btActivoFijo
             // 
-            this.btCubicacion.Name = "btCubicacion";
-            this.btCubicacion.Text = "Cubicacion";
-            this.btCubicacion.Click += new System.EventHandler(this.btCubicacion_Click_1);
+            this.btActivoFijo.Alignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActivoFijo.Name = "btActivoFijo";
+            this.btActivoFijo.Text = "Activos Fijos";
+            this.btActivoFijo.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btActivoFijo.Click += new System.EventHandler(this.btActivoFijo_Click);
             // 
             // Menu
             // 
@@ -684,5 +695,6 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup15;
         private Telerik.WinControls.UI.RadButtonElement btEmpleado;
         private Telerik.WinControls.UI.RadRibbonBarGroup btCubicacion;
+        private Telerik.WinControls.UI.RadButtonElement btActivoFijo;
     }
 }

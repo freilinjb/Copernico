@@ -17,7 +17,7 @@ namespace Copernico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vistas.Formularios.ActivoFijo());
+            Application.Run(new Vistas.Formularios.Menu());
         }
     }
 }

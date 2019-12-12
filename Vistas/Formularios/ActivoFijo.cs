@@ -13,6 +13,20 @@ namespace Vistas.Formularios
     {
         private DataSet ds;
 
+        private static ActivoFijo Instancia;
+
+
+        public static ActivoFijo ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new ActivoFijo();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+
         public ActivoFijo()
         {
             InitializeComponent();
@@ -21,6 +35,14 @@ namespace Vistas.Formularios
 
         private void ActivoFijo_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaMotor' Puede moverla o quitarla según sea necesario.
+            this.vistaMotorTableAdapter.Fill(this.matrizDataSet.VistaMotor);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Color' Puede moverla o quitarla según sea necesario.
+            this.colorTableAdapter.Fill(this.matrizDataSet.Color);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Modelo' Puede moverla o quitarla según sea necesario.
+            this.modeloTableAdapter.Fill(this.matrizDataSet.Modelo);
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Marca' Puede moverla o quitarla según sea necesario.
+            this.marcaTableAdapter.Fill(this.matrizDataSet.Marca);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.GrupoActivoFijo' Puede moverla o quitarla según sea necesario.
             this.grupoActivoFijoTableAdapter.Fill(this.matrizDataSet.GrupoActivoFijo);
 
@@ -30,6 +52,9 @@ namespace Vistas.Formularios
             dataActivoFijo.DataSource = Negocios.Utilidades.Ejecutar("select AF.IdActivoFijo,T.Nombre,GA.Descripcion AS Grupo,SG.Descripcion AS SubGrupo,EA.Descripcion AS Estado from ActivoFijo AF INNER JOIN GrupoActivoFijo GA ON GA.IdGrupoActivoFijo = AF.IdGrupoActivoFijo INNER JOIN SubGrupoActivoFijo SG ON SG.IdSubGrupoActivoFijo = AF.IdSubGrupoActivoFijo INNER JOIN EstadoActivoFijo EA ON EA.IdEstadoActivoFijo = AF.IdEstadoActivoFijo INNER JOIN Tercero T ON T.IdTercero = AF.IdTercero").Tables[0];
             IdMayor();
             //Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+            for (int i = DateTime.Today.Year; i >= 1985; i--)
+                cbbAnio.Items.Add(i.ToString());
         }
 
         private void IdMayor()
@@ -46,6 +71,7 @@ namespace Vistas.Formularios
                 cbbSubGrupo.ValueMember = "IdSubGrupoActivoFijo";
                 cbbSubGrupo.DisplayMember = "SubGrupo";
 
+
             }
         }
 
@@ -53,34 +79,42 @@ namespace Vistas.Formularios
         {
             bool bien = true;
 
-            if (pagePrincipal.SelectedPage.Name == pageActivoFijo.Name)
+            if (pagePrincipal.SelectedPage.Name == pageActivoFijo.Name || pagePrincipal.SelectedPage.Name == pageEspesificacion.Name)
             {
                 try
                 {
-                    if (Negocios.Utilidades.Validar(pageActivoFijo, errorProvider1) == false)
+                    if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                     {
+                        //Negocios.Entidades.ActivoFijoGeneral activo = new Negocios.Entidades.ActivoFijoGeneral(
+                        //    Convert.ToInt32(txtCodigo.Text.Trim()),
+                        //    (int)cbbGrupo.SelectedValue,
+                        //    (int)cbbSubGrupo.SelectedValue,
+                        //    txtNombre.Text.Trim(),
+                        //    1);
+
                         Negocios.Entidades.ActivoFijoGeneral activo = new Negocios.Entidades.ActivoFijoGeneral(
                             Convert.ToInt32(txtCodigo.Text.Trim()),
-                            (int)cbbGrupo.SelectedValue,
-                            (int)cbbSubGrupo.SelectedValue,
                             txtNombre.Text.Trim(),
-                            1);
+                            (int)cbbMarca.SelectedValue,
+                            (int)cbbModelo.SelectedValue,
+                            (int)cbbMotor.SelectedValue,
+                            (int)cbbColor.SelectedValue,
+                            Convert.ToInt32(cbbAnio.Text.Trim()),
+                            1,
+                            (int)cbbGrupo.SelectedValue,
+                            (int)cbbSubGrupo.SelectedValue);
 
-                        ds = Negocios.Utilidades.Ejecutar(activo.getGuardar());
+                        ds = Negocios.Utilidades.Ejecutar(activo.getGuardar2());
 
                         if (ds.Tables[0].Rows.Count > 0)
                         {
 
                             RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-
-                            Negocios.Utilidades.Limpiar(this, errorProvider1);
-
-                            lbEstatus.Text = "Nuevo Registro";
-                            //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
-                            dataActivoFijo.DataSource = Negocios.Utilidades.Ejecutar("select AF.IdActivoFijo,T.Nombre,GA.Descripcion AS Grupo,SG.Descripcion AS SubGrupo,EA.Descripcion AS Estado from ActivoFijo AF INNER JOIN GrupoActivoFijo GA ON GA.IdGrupoActivoFijo = AF.IdGrupoActivoFijo INNER JOIN SubGrupoActivoFijo SG ON SG.IdSubGrupoActivoFijo = AF.IdSubGrupoActivoFijo INNER JOIN EstadoActivoFijo EA ON EA.IdEstadoActivoFijo = AF.IdEstadoActivoFijo INNER JOIN Tercero T ON T.IdTercero = AF.IdTercero").Tables[0];
-
-                            IdMayor();
                         }
+                    }
+                    else if(pagePrincipal.SelectedPage.Name == pageEspesificacion.Name)
+                    {
+
                     }
                 }
                 catch (Exception ex)
@@ -96,7 +130,14 @@ namespace Vistas.Formularios
         {
             if(e.KeyCode == Keys.F1)
             {
-
+                if(Guardar())
+                {
+                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    lbEstatus.Text = "Nuevo Registro";
+                    //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
+                    dataActivoFijo.DataSource = Negocios.Utilidades.Ejecutar("select AF.IdActivoFijo,T.Nombre,GA.Descripcion AS Grupo,SG.Descripcion AS SubGrupo,EA.Descripcion AS Estado from ActivoFijo AF INNER JOIN GrupoActivoFijo GA ON GA.IdGrupoActivoFijo = AF.IdGrupoActivoFijo INNER JOIN SubGrupoActivoFijo SG ON SG.IdSubGrupoActivoFijo = AF.IdSubGrupoActivoFijo INNER JOIN EstadoActivoFijo EA ON EA.IdEstadoActivoFijo = AF.IdEstadoActivoFijo INNER JOIN Tercero T ON T.IdTercero = AF.IdTercero").Tables[0];
+                    IdMayor();
+                }
             }
         }
     }

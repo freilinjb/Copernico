@@ -114,5 +114,12 @@ namespace Vistas.Formularios
             activoCubicacion.MdiParent = this;
             activoCubicacion.Show();
         }
+
+        private void btActivoFijo_Click(object sender, EventArgs e)
+        {
+            ActivoFijo activo = ActivoFijo.ObtenerInstancia();
+            activo.MdiParent = this;
+            activo.Show();
+        }
     }
 }
