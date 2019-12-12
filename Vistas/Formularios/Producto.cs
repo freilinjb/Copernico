@@ -33,6 +33,8 @@ namespace Vistas.Formularios
 
         private void Producto_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Rubro' Puede moverla o quitarla según sea necesario.
+            this.rubroTableAdapter.Fill(this.matrizDataSet.Rubro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Producto' Puede moverla o quitarla según sea necesario.
@@ -66,6 +68,7 @@ namespace Vistas.Formularios
                         Convert.ToInt32(txtIdProducto.Text.Trim()),
                         (int)cbbTipoProducto.SelectedValue,
                         (int)cbbFamilia.SelectedValue,
+                        (int)cbbRubro.SelectedValue,
                         txtNombre.Text.Trim(),
                         chItbis.Value,
                         txtNota.Text.Trim(),

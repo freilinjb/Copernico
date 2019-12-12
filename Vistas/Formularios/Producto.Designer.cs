@@ -79,6 +79,10 @@
             this.productoTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProductoTableAdapter();
             this.lbNombrer = new Negocios.Componentes.TextPersonal();
             this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbRubro = new Negocios.Componentes.cbbPersonal();
+            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
             this.pageProducto.SuspendLayout();
@@ -116,6 +120,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,9 +150,11 @@
             this.pageProducto.Controls.Add(this.cbbEstado);
             this.pageProducto.Controls.Add(this.radSeparator1);
             this.pageProducto.Controls.Add(this.cbbFamilia);
+            this.pageProducto.Controls.Add(this.cbbRubro);
             this.pageProducto.Controls.Add(this.cbbTipoProducto);
             this.pageProducto.Controls.Add(this.txtNota);
             this.pageProducto.Controls.Add(this.txtNombre);
+            this.pageProducto.Controls.Add(this.radLabel9);
             this.pageProducto.Controls.Add(this.radLabel7);
             this.pageProducto.Controls.Add(this.radLabel6);
             this.pageProducto.Controls.Add(this.radLabel5);
@@ -271,7 +280,7 @@
             this.txtNota.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNota.Limpiar = true;
-            this.txtNota.Location = new System.Drawing.Point(268, 63);
+            this.txtNota.Location = new System.Drawing.Point(268, 94);
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.NullText = "Nota";
@@ -279,7 +288,7 @@
             // 
             // 
             this.txtNota.RootElement.StretchVertically = true;
-            this.txtNota.Size = new System.Drawing.Size(432, 116);
+            this.txtNota.Size = new System.Drawing.Size(432, 85);
             this.txtNota.TabIndex = 3;
             this.txtNota.ThemeName = "VisualStudio2012Light";
             this.txtNota.Validar = true;
@@ -596,6 +605,41 @@
             // 
             this.vistaCentroTableAdapter.ClearBeforeFill = true;
             // 
+            // radLabel9
+            // 
+            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel9.Location = new System.Drawing.Point(358, 69);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(44, 19);
+            this.radLabel9.TabIndex = 2;
+            this.radLabel9.Text = "Rubro";
+            // 
+            // cbbRubro
+            // 
+            this.cbbRubro.BackColor = System.Drawing.Color.White;
+            this.cbbRubro.Correo = false;
+            this.cbbRubro.DataSource = this.rubroBindingSource;
+            this.cbbRubro.DisplayMember = "Descripcion";
+            this.cbbRubro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbRubro.Limpiar = true;
+            this.cbbRubro.Location = new System.Drawing.Point(408, 63);
+            this.cbbRubro.Name = "cbbRubro";
+            this.cbbRubro.Size = new System.Drawing.Size(292, 25);
+            this.cbbRubro.TabIndex = 4;
+            this.cbbRubro.ThemeName = "VisualStudio2012Light";
+            this.cbbRubro.Validar = true;
+            this.cbbRubro.ValueMember = "IdRubro";
+            // 
+            // rubroBindingSource
+            // 
+            this.rubroBindingSource.DataMember = "Rubro";
+            this.rubroBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // rubroTableAdapter
+            // 
+            this.rubroTableAdapter.ClearBeforeFill = true;
+            // 
             // Producto
             // 
             this.AcceptButton = this.btSiguiente;
@@ -660,6 +704,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -709,5 +756,9 @@
         private Negocios.Componentes.TextPersonal lbNombrer;
         private System.Windows.Forms.BindingSource vistaCentroBindingSource;
         private MatrizDataSetTableAdapters.VistaCentroTableAdapter vistaCentroTableAdapter;
+        private Negocios.Componentes.cbbPersonal cbbRubro;
+        private Telerik.WinControls.UI.RadLabel radLabel9;
+        private System.Windows.Forms.BindingSource rubroBindingSource;
+        private MatrizDataSetTableAdapters.RubroTableAdapter rubroTableAdapter;
     }
 }

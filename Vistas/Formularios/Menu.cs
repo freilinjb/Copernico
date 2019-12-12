@@ -128,5 +128,12 @@ namespace Vistas.Formularios
             inventario.MdiParent = this;
             inventario.Show();
         }
+
+        private void btCentro_Click(object sender, EventArgs e)
+        {
+            Centro centro = Centro.ObtenerInstancia();
+            centro.MdiParent = this;
+            centro.Show();
+        }
     }
 }

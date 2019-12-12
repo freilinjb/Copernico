@@ -11,16 +11,18 @@ namespace Negocios.Entidades
         public int IdProducto;
         public int IdTipoProducto;
         public int IdFamilia;
+        public int IdRubro;
         public string Nombre;
         public bool Itbis;
         public string Nota;
         public int IdEstado;
 
-        public Producto(int idProducto,int idTipoProducto, int idFamilia, string nombre, bool itbis, string nota, int idEstado)
+        public Producto(int idProducto,int idTipoProducto, int idFamilia,int idRubro, string nombre, bool itbis, string nota, int idEstado)
         {
             IdProducto = idProducto;
             IdTipoProducto = idTipoProducto;
             IdFamilia = idFamilia;
+            IdRubro = idRubro;
             Nombre = nombre;
             Itbis = itbis;
             Nota = nota;
@@ -31,7 +33,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarProducto] {IdProducto},{IdTipoProducto},{IdFamilia},'{Nombre}',{(Itbis ? 1 : 0)},'{Nota}',{IdEstado}";
+            return $"EXEC [RegistrarProducto] {IdProducto},{IdTipoProducto},{IdFamilia},{IdRubro},'{Nombre}',{(Itbis ? 1 : 0)},'{Nota}',{IdEstado}";
         }
     }
 }

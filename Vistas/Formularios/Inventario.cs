@@ -31,6 +31,8 @@ namespace Vistas.Formularios
 
         private void Inventario_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaAlmacen' Puede moverla o quitarla según sea necesario.
+            this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             //cbbCentro.DataSource = Negocios.Utilidades.Ejecutar("SELECT C.IdCentro,T.Nombre FROM Centro C INNER JOIN Tercero T ON C.IdTercero = T.IdTercero").Tables[0];
@@ -55,9 +57,19 @@ namespace Vistas.Formularios
         {
             if(cbbCentro.SelectedIndex != -1)
             {
-                cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar($"SELECT A.IdAlmacen,A.Descripcion AS Almacen FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = {cbbCentro.SelectedValue}").Tables[0];
+                cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar($"SELECT A.IdAlmacen,A.Descripcion AS Nombre FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = {cbbCentro.SelectedValue}").Tables[0];
                 cbbAlmacen.ValueMember = "IdAlmacen";
-                cbbAlmacen.DisplayMember = "Almacen";
+                cbbAlmacen.DisplayMember = "Nombre";
+            }
+        }
+
+        private void cbbAlmacen_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if(cbbAlmacen.SelectedIndex != -1)
+            {
+                cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT ALT.IdTipoInventario,TI.Descripcion AS Inventario FROM Almacen A INNER JOIN Almacen_VS_TipoInventario ALT ON ALT.IdAlmacen = A.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = ALT.IdTipoInventario WHERE A.IdAlmacen = {cbbAlmacen.SelectedValue}").Tables[0];
+                cbbInventario.ValueMember = "IdTipoInventario";
+                cbbInventario.DisplayMember = "Inventario";
             }
         }
     }
