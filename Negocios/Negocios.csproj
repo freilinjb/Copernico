@@ -96,6 +96,7 @@
     <Compile Include="Entidades\Analisis.cs" />
     <Compile Include="Entidades\Centro.cs" />
     <Compile Include="Entidades\Contacto.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Filtro.cs" />
     <Compile Include="Entidades\IventarioProducto.cs" />
     <Compile Include="Entidades\Maquinaria.cs" />

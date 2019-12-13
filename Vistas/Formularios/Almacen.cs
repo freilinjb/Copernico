@@ -123,6 +123,8 @@ namespace Vistas.Formularios
                     cbbTipoInventario.Enabled = false;
                     cbbTipoInventario.SelectedIndex = -1;
                     lbEstatus.Text = "Nuevo Registro";
+                    Negocios.Utilidades.LimpiarRadDataGridView(dataInventario);
+
                 }
             }
             else if (e.KeyCode == Keys.F2)

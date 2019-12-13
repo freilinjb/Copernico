@@ -104,6 +104,8 @@ namespace Vistas.Formularios
 
         private void Pedido_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Rubro' Puede moverla o quitarla según sea necesario.
+            this.rubroTableAdapter.Fill(this.matrizDataSet.Rubro);
             cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar("SELECT A.IdAlmacen,A.Descripcion AS Almacen FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = 1").Tables[0];
             cbbAlmacen.DisplayMember = "Almacen";
             cbbAlmacen.ValueMember = "IdAlmacen";
@@ -124,6 +126,7 @@ namespace Vistas.Formularios
             cbbTipoPedido.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoPedido,Descripcion AS TipoPedido FROM TipoPedido").Tables[0];
             cbbTipoPedido.ValueMember = "IdTipoPedido";
             cbbTipoPedido.DisplayMember = "TipoPedido";
+
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
@@ -157,9 +160,9 @@ namespace Vistas.Formularios
                             1,
                             (int)cbbTipoPedido.SelectedValue,
                             (int)cbbAlmacen.SelectedValue,
-                            (int)cbbInventario.SelectedValue,
+                            1,
                             txtNota.Text.Trim(),
-                            (int)cbbEstado.SelectedValue);
+                            0);
 
 
                         ds = Negocios.Utilidades.Ejecutar(pedido.getGuardar());
@@ -227,41 +230,13 @@ namespace Vistas.Formularios
             }
         }
 
-        private void cbbAlmacen_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        private void cbbRubro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
         {
-            if (cbbAlmacen.SelectedIndex > -1)
+            if(cbbRubro.SelectedIndex > -1)
             {
-                cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = 1").Tables[0]; ;
-                cbbInventario.ValueMember = "IdInventario";
-                cbbInventario.DisplayMember = "Inventario";
-
-                //ds = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = {cbbAlmacen.SelectedValue}");
-                //if (ds.Tables[0].Rows.Count > 0)
-                //{
-                //    cbbInventario.DataSource = ds.Tables[0];
-                //    cbbInventario.ValueMember = "IdInventario";
-                //    cbbInventario.DisplayMember = "Inventario";
-                //}
-            }
-        }
-
-        private void cbbTipoPedido_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
-        {
-            if (cbbTipoPedido.SelectedIndex > -1)
-            {
-                if (cbbTipoPedido.SelectedIndex == 1)
-                {
-                    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto WHERE TP.IdTipoProducto = 2").Tables[0];
-                    cbbProducto.ValueMember = "IdProducto";
-                    cbbProducto.DisplayMember = "Producto";
-                }
-
-                else
-                {
-                    cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto WHERE TP.IdTipoProducto = 1").Tables[0];
-                    cbbProducto.ValueMember = "IdProducto";
-                    cbbProducto.DisplayMember = "Producto";
-                }
+                cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto WHERE P.IdRubro = {cbbRubro.SelectedValue}").Tables[0];
+                cbbProducto.ValueMember = "IdProducto";
+                cbbProducto.DisplayMember = "Producto";
             }
         }
     }

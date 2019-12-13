@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoInventario));
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.toolMenu = new System.Windows.Forms.ToolStrip();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolImprimir = new System.Windows.Forms.ToolStripButton();
             this.toolCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolRecargar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btBusqueda = new Telerik.WinControls.UI.RadButton();
             this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
@@ -91,83 +91,6 @@
             this.toolMenu.Size = new System.Drawing.Size(1091, 39);
             this.toolMenu.TabIndex = 37;
             this.toolMenu.Text = "toolStrip1";
-            // 
-            // radSeparator1
-            // 
-            this.radSeparator1.Location = new System.Drawing.Point(12, 86);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(1066, 10);
-            this.radSeparator1.TabIndex = 35;
-            this.radSeparator1.ThemeName = "VisualStudio2012Light";
-            // 
-            // dataProducto
-            // 
-            this.dataProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataProducto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dataProducto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataProducto.Location = new System.Drawing.Point(12, 102);
-            // 
-            // 
-            // 
-            this.dataProducto.MasterTemplate.AllowAddNewRow = false;
-            this.dataProducto.MasterTemplate.AllowColumnChooser = false;
-            this.dataProducto.MasterTemplate.AllowColumnReorder = false;
-            this.dataProducto.MasterTemplate.AllowDragToGroup = false;
-            this.dataProducto.MasterTemplate.AllowRowResize = false;
-            this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataProducto.MasterTemplate.EnableGrouping = false;
-            this.dataProducto.MasterTemplate.EnableSorting = false;
-            this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition2;
-            this.dataProducto.Name = "dataProducto";
-            this.dataProducto.ReadOnly = true;
-            this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataProducto.ShowGroupPanel = false;
-            this.dataProducto.Size = new System.Drawing.Size(1067, 546);
-            this.dataProducto.TabIndex = 32;
-            this.dataProducto.ThemeName = "VisualStudio2012Light";
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.AutoSize = false;
-            this.radLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.radLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.radLabel1.ForeColor = System.Drawing.Color.White;
-            this.radLabel1.Location = new System.Drawing.Point(0, 0);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(1091, 18);
-            this.radLabel1.TabIndex = 31;
-            this.radLabel1.Text = "Mantenimiento de Inventario";
-            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // radStatusStrip1
-            // 
-            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.toolRegistro});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 596);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1091, 23);
-            this.radStatusStrip1.TabIndex = 29;
-            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
-            // 
-            // toolRegistro
-            // 
-            this.toolRegistro.Name = "toolRegistro";
-            this.radStatusStrip1.SetSpring(this.toolRegistro, false);
-            this.toolRegistro.Text = "Nuevo Registro";
-            this.toolRegistro.TextWrap = true;
-            this.toolRegistro.UseCompatibleTextRendering = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // toolNuevo
             // 
@@ -224,6 +147,83 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 36);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // radSeparator1
+            // 
+            this.radSeparator1.Location = new System.Drawing.Point(12, 86);
+            this.radSeparator1.Name = "radSeparator1";
+            this.radSeparator1.Size = new System.Drawing.Size(1066, 10);
+            this.radSeparator1.TabIndex = 35;
+            this.radSeparator1.ThemeName = "VisualStudio2012Light";
+            // 
+            // dataProducto
+            // 
+            this.dataProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataProducto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataProducto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataProducto.Location = new System.Drawing.Point(12, 102);
+            // 
+            // 
+            // 
+            this.dataProducto.MasterTemplate.AllowAddNewRow = false;
+            this.dataProducto.MasterTemplate.AllowColumnChooser = false;
+            this.dataProducto.MasterTemplate.AllowColumnReorder = false;
+            this.dataProducto.MasterTemplate.AllowDragToGroup = false;
+            this.dataProducto.MasterTemplate.AllowRowResize = false;
+            this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataProducto.MasterTemplate.EnableGrouping = false;
+            this.dataProducto.MasterTemplate.EnableSorting = false;
+            this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dataProducto.Name = "dataProducto";
+            this.dataProducto.ReadOnly = true;
+            this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataProducto.ShowGroupPanel = false;
+            this.dataProducto.Size = new System.Drawing.Size(1067, 546);
+            this.dataProducto.TabIndex = 32;
+            this.dataProducto.ThemeName = "VisualStudio2012Light";
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.AutoSize = false;
+            this.radLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.radLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.radLabel1.ForeColor = System.Drawing.Color.White;
+            this.radLabel1.Location = new System.Drawing.Point(0, 0);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(1091, 18);
+            this.radLabel1.TabIndex = 31;
+            this.radLabel1.Text = "Mantenimiento de Inventario";
+            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // radStatusStrip1
+            // 
+            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.toolRegistro});
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 593);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(1091, 26);
+            this.radStatusStrip1.TabIndex = 29;
+            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            // 
+            // toolRegistro
+            // 
+            this.toolRegistro.Name = "toolRegistro";
+            this.radStatusStrip1.SetSpring(this.toolRegistro, false);
+            this.toolRegistro.Text = "Nuevo Registro";
+            this.toolRegistro.TextWrap = true;
+            this.toolRegistro.UseCompatibleTextRendering = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // btBusqueda
             // 

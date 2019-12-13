@@ -32,16 +32,16 @@
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
-            this.txtNombre = new Negocios.Componentes.TextPersonal();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.txtUsuario = new Negocios.Componentes.TextPersonal();
+            this.txtClave = new Negocios.Componentes.TextPersonal();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.btIniciarSeccion = new Telerik.WinControls.UI.RadButton();
             this.btCancelar = new Telerik.WinControls.UI.RadButton();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btIniciarSeccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).BeginInit();
@@ -58,44 +58,47 @@
             this.radLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel3.Location = new System.Drawing.Point(12, 80);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(54, 18);
+            this.radLabel3.Size = new System.Drawing.Size(53, 18);
             this.radLabel3.TabIndex = 25;
-            this.radLabel3.Text = "Nombre";
+            this.radLabel3.Text = "Usuario";
             // 
-            // txtNombre
+            // txtUsuario
             // 
-            this.txtNombre.Correo = false;
-            this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Limpiar = true;
-            this.txtNombre.Location = new System.Drawing.Point(12, 104);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(264, 24);
-            this.txtNombre.TabIndex = 26;
-            this.txtNombre.ThemeName = "VisualStudio2012Light";
-            this.txtNombre.Validar = true;
+            this.txtUsuario.Correo = false;
+            this.txtUsuario.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Limpiar = true;
+            this.txtUsuario.Location = new System.Drawing.Point(12, 104);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.NullText = "Ingrese el nombrer de usuario";
+            this.txtUsuario.Size = new System.Drawing.Size(264, 24);
+            this.txtUsuario.TabIndex = 26;
+            this.txtUsuario.ThemeName = "VisualStudio2012Light";
+            this.txtUsuario.Validar = true;
             // 
-            // textPersonal1
+            // txtClave
             // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal1.Limpiar = true;
-            this.textPersonal1.Location = new System.Drawing.Point(12, 158);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.Size = new System.Drawing.Size(264, 24);
-            this.textPersonal1.TabIndex = 26;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = true;
+            this.txtClave.Correo = false;
+            this.txtClave.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.Limpiar = true;
+            this.txtClave.Location = new System.Drawing.Point(12, 158);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.NullText = "Ingrese la contraseña";
+            this.txtClave.PasswordChar = '•';
+            this.txtClave.Size = new System.Drawing.Size(264, 24);
+            this.txtClave.TabIndex = 26;
+            this.txtClave.ThemeName = "VisualStudio2012Light";
+            this.txtClave.Validar = true;
             // 
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.Location = new System.Drawing.Point(12, 134);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(54, 18);
+            this.radLabel1.Size = new System.Drawing.Size(76, 18);
             this.radLabel1.TabIndex = 25;
-            this.radLabel1.Text = "Nombre";
+            this.radLabel1.Text = "Contraseña";
             // 
             // btIniciarSeccion
             // 
@@ -115,6 +118,7 @@
             this.btCancelar.TabIndex = 27;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.ThemeName = "VisualStudio2012Light";
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // radSeparator1
             // 
@@ -134,8 +138,8 @@
             this.Controls.Add(this.btIniciarSeccion);
             this.Controls.Add(this.radLabel1);
             this.Controls.Add(this.radLabel3);
-            this.Controls.Add(this.textPersonal1);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtUsuario);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.KeyPreview = true;
             this.Name = "Login";
@@ -147,8 +151,8 @@
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtClave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btIniciarSeccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCancelar)).EndInit();
@@ -164,9 +168,9 @@
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.UI.RadLabel radLabel3;
-        private Negocios.Componentes.TextPersonal txtNombre;
+        private Negocios.Componentes.TextPersonal txtUsuario;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.TextPersonal txtClave;
         private Telerik.WinControls.UI.RadButton btCancelar;
         private Telerik.WinControls.UI.RadButton btIniciarSeccion;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;

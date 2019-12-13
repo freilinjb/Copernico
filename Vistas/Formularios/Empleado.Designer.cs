@@ -34,7 +34,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
-            this.radDateTimePicker1 = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Foto = new System.Windows.Forms.PictureBox();
+            this.txtFechNacimiento = new Telerik.WinControls.UI.RadDateTimePicker();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtNota = new Negocios.Componentes.TextPersonal();
@@ -44,6 +46,9 @@
             this.cbbEstadoCivil = new Negocios.Componentes.cbbPersonal();
             this.txtCorreo = new Negocios.Componentes.TextPersonal();
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
+            this.lbNombreCompleto = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
@@ -51,7 +56,7 @@
             this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
-            this.textPersonal6 = new Negocios.Componentes.TextPersonal();
+            this.txtCelular = new Negocios.Componentes.TextPersonal();
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.txtTelefono = new Negocios.Componentes.TextPersonal();
             this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
@@ -60,37 +65,36 @@
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel15 = new Telerik.WinControls.UI.RadLabel();
-            this.Foto = new System.Windows.Forms.PictureBox();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.txtIdentificacion = new Negocios.Componentes.TextPersonal();
-            this.c = new Negocios.Componentes.TextPersonal();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.txtApodo = new Negocios.Componentes.TextPersonal();
             this.txtApellido = new Negocios.Componentes.TextPersonal();
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radPageViewPage2 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.pageHorario = new Telerik.WinControls.UI.RadPageViewPage();
-            this.radLabel18 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
-            this.cbbPersonal1 = new Negocios.Componentes.cbbPersonal();
-            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
-            this.cbbPersonal2 = new Negocios.Componentes.cbbPersonal();
             this.txtFechaIngreso = new Telerik.WinControls.UI.RadDateTimePicker();
+            this.cbbTurno = new Negocios.Componentes.cbbPersonal();
+            this.cbbNomina = new Negocios.Componentes.cbbPersonal();
+            this.radLabel24 = new Telerik.WinControls.UI.RadLabel();
+            this.txtPuesto = new Negocios.Componentes.cbbPersonal();
+            this.radLabel23 = new Telerik.WinControls.UI.RadLabel();
             this.Fecha = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbDepartamento = new Negocios.Componentes.cbbPersonal();
+            this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbbTipoIndentificacion = new Negocios.Componentes.cbbPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFechNacimiento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).BeginInit();
@@ -98,6 +102,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbNombreCompleto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
@@ -105,7 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCelular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
@@ -114,31 +121,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApodo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.radPageViewPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFechaIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTurno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNomina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPuesto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIndentificacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,17 +180,18 @@
             this.radPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPanel1.Controls.Add(this.panel1);
-            this.radPanel1.Controls.Add(this.radDateTimePicker1);
+            this.radPanel1.Controls.Add(this.txtFechNacimiento);
             this.radPanel1.Controls.Add(this.linkLabel2);
             this.radPanel1.Controls.Add(this.linkLabel1);
             this.radPanel1.Controls.Add(this.txtNota);
             this.radPanel1.Controls.Add(this.cbbSexo);
             this.radPanel1.Controls.Add(this.cbbCiudad);
             this.radPanel1.Controls.Add(this.cbbProvincia);
+            this.radPanel1.Controls.Add(this.cbbTipoIndentificacion);
             this.radPanel1.Controls.Add(this.cbbEstadoCivil);
             this.radPanel1.Controls.Add(this.txtCorreo);
             this.radPanel1.Controls.Add(this.cbbMunicipio);
-            this.radPanel1.Controls.Add(this.radLabel18);
+            this.radPanel1.Controls.Add(this.lbNombreCompleto);
             this.radPanel1.Controls.Add(this.radLabel21);
             this.radPanel1.Controls.Add(this.radLabel22);
             this.radPanel1.Controls.Add(this.radLabel5);
@@ -194,7 +201,7 @@
             this.radPanel1.Controls.Add(this.radLabel11);
             this.radPanel1.Controls.Add(this.radLabel1);
             this.radPanel1.Controls.Add(this.radLabel4);
-            this.radPanel1.Controls.Add(this.textPersonal6);
+            this.radPanel1.Controls.Add(this.txtCelular);
             this.radPanel1.Controls.Add(this.txtDireccion);
             this.radPanel1.Controls.Add(this.txtTelefono);
             this.radPanel1.Controls.Add(this.radLabel10);
@@ -209,7 +216,6 @@
             this.radPanel1.Controls.Add(this.radLabel8);
             this.radPanel1.Controls.Add(this.radLabel9);
             this.radPanel1.Controls.Add(this.txtIdentificacion);
-            this.radPanel1.Controls.Add(this.c);
             this.radPanel1.Controls.Add(this.txtNombre);
             this.radPanel1.Controls.Add(this.txtApodo);
             this.radPanel1.Controls.Add(this.txtApellido);
@@ -219,20 +225,38 @@
             this.radPanel1.TabIndex = 12;
             this.radPanel1.ThemeName = "VisualStudio2012Light";
             // 
-            // radDateTimePicker1
+            // panel1
             // 
-            this.radDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.radDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.radDateTimePicker1.Location = new System.Drawing.Point(691, 260);
-            this.radDateTimePicker1.MaxDate = new System.DateTime(2019, 12, 25, 23, 59, 59, 0);
-            this.radDateTimePicker1.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
-            this.radDateTimePicker1.Name = "radDateTimePicker1";
-            this.radDateTimePicker1.Size = new System.Drawing.Size(186, 24);
-            this.radDateTimePicker1.TabIndex = 18;
-            this.radDateTimePicker1.TabStop = false;
-            this.radDateTimePicker1.Text = "12/12/2019";
-            this.radDateTimePicker1.ThemeName = "VisualStudio2012Light";
-            this.radDateTimePicker1.Value = new System.DateTime(2019, 12, 12, 7, 26, 16, 824);
+            this.panel1.Controls.Add(this.Foto);
+            this.panel1.Location = new System.Drawing.Point(8, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 218);
+            this.panel1.TabIndex = 0;
+            // 
+            // Foto
+            // 
+            this.Foto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Foto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Foto.Location = new System.Drawing.Point(0, 0);
+            this.Foto.Name = "Foto";
+            this.Foto.Size = new System.Drawing.Size(200, 218);
+            this.Foto.TabIndex = 2;
+            this.Foto.TabStop = false;
+            // 
+            // txtFechNacimiento
+            // 
+            this.txtFechNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFechNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtFechNacimiento.Location = new System.Drawing.Point(691, 260);
+            this.txtFechNacimiento.MaxDate = new System.DateTime(2019, 12, 25, 23, 59, 59, 0);
+            this.txtFechNacimiento.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
+            this.txtFechNacimiento.Name = "txtFechNacimiento";
+            this.txtFechNacimiento.Size = new System.Drawing.Size(186, 24);
+            this.txtFechNacimiento.TabIndex = 18;
+            this.txtFechNacimiento.TabStop = false;
+            this.txtFechNacimiento.Text = "12/12/2019";
+            this.txtFechNacimiento.ThemeName = "VisualStudio2012Light";
+            this.txtFechNacimiento.Value = new System.DateTime(2019, 12, 12, 7, 26, 16, 824);
             // 
             // linkLabel2
             // 
@@ -369,6 +393,36 @@
             this.cbbMunicipio.Validar = true;
             this.cbbMunicipio.ValueMember = "IdMunicipio";
             // 
+            // lbNombreCompleto
+            // 
+            this.lbNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.lbNombreCompleto.ForeColor = System.Drawing.Color.Gray;
+            this.lbNombreCompleto.Location = new System.Drawing.Point(309, 3);
+            this.lbNombreCompleto.Name = "lbNombreCompleto";
+            this.lbNombreCompleto.Size = new System.Drawing.Size(153, 27);
+            this.lbNombreCompleto.TabIndex = 10;
+            this.lbNombreCompleto.Text = "Nombre completo";
+            // 
+            // radLabel21
+            // 
+            this.radLabel21.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.radLabel21.ForeColor = System.Drawing.Color.Gray;
+            this.radLabel21.Location = new System.Drawing.Point(8, 3);
+            this.radLabel21.Name = "radLabel21";
+            this.radLabel21.Size = new System.Drawing.Size(69, 27);
+            this.radLabel21.TabIndex = 10;
+            this.radLabel21.Text = "Codigo:";
+            // 
+            // radLabel22
+            // 
+            this.radLabel22.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.radLabel22.ForeColor = System.Drawing.Color.Black;
+            this.radLabel22.Location = new System.Drawing.Point(83, 3);
+            this.radLabel22.Name = "radLabel22";
+            this.radLabel22.Size = new System.Drawing.Size(56, 27);
+            this.radLabel22.TabIndex = 10;
+            this.radLabel22.Text = "00001";
+            // 
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 13F);
@@ -440,19 +494,19 @@
             this.radLabel4.TabIndex = 5;
             this.radLabel4.Text = "Sector";
             // 
-            // textPersonal6
+            // txtCelular
             // 
-            this.textPersonal6.Correo = false;
-            this.textPersonal6.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal6.Limpiar = true;
-            this.textPersonal6.Location = new System.Drawing.Point(691, 50);
-            this.textPersonal6.Name = "textPersonal6";
-            this.textPersonal6.NullText = "Ejemplo: 809-111-9999";
-            this.textPersonal6.Size = new System.Drawing.Size(186, 24);
-            this.textPersonal6.TabIndex = 11;
-            this.textPersonal6.ThemeName = "VisualStudio2012Light";
-            this.textPersonal6.Validar = true;
+            this.txtCelular.Correo = false;
+            this.txtCelular.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtCelular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Limpiar = true;
+            this.txtCelular.Location = new System.Drawing.Point(691, 50);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.NullText = "Ejemplo: 809-111-9999";
+            this.txtCelular.Size = new System.Drawing.Size(186, 24);
+            this.txtCelular.TabIndex = 11;
+            this.txtCelular.ThemeName = "VisualStudio2012Light";
+            this.txtCelular.Validar = true;
             // 
             // txtDireccion
             // 
@@ -535,16 +589,6 @@
             this.radLabel15.TabIndex = 10;
             this.radLabel15.Text = "Telefono Fijo";
             // 
-            // Foto
-            // 
-            this.Foto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Foto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Foto.Location = new System.Drawing.Point(0, 0);
-            this.Foto.Name = "Foto";
-            this.Foto.Size = new System.Drawing.Size(200, 218);
-            this.Foto.TabIndex = 2;
-            this.Foto.TabStop = false;
-            // 
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -603,19 +647,6 @@
             this.txtIdentificacion.ThemeName = "VisualStudio2012Light";
             this.txtIdentificacion.Validar = true;
             // 
-            // c
-            // 
-            this.c.Correo = false;
-            this.c.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.c.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c.Limpiar = true;
-            this.c.Location = new System.Drawing.Point(349, 204);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(186, 24);
-            this.c.TabIndex = 1;
-            this.c.ThemeName = "VisualStudio2012Light";
-            this.c.Validar = true;
-            // 
             // txtNombre
             // 
             this.txtNombre.Correo = false;
@@ -660,8 +691,6 @@
             this.radPageView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPageView1.Controls.Add(this.radPageViewPage1);
-            this.radPageView1.Controls.Add(this.radPageViewPage2);
-            this.radPageView1.Controls.Add(this.pageHorario);
             this.radPageView1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.radPageView1.Location = new System.Drawing.Point(12, 342);
             this.radPageView1.Name = "radPageView1";
@@ -675,92 +704,20 @@
             // radPageViewPage1
             // 
             this.radPageViewPage1.Controls.Add(this.txtFechaIngreso);
-            this.radPageViewPage1.Controls.Add(this.cbbPersonal2);
+            this.radPageViewPage1.Controls.Add(this.cbbTurno);
+            this.radPageViewPage1.Controls.Add(this.cbbNomina);
+            this.radPageViewPage1.Controls.Add(this.radLabel24);
+            this.radPageViewPage1.Controls.Add(this.txtPuesto);
+            this.radPageViewPage1.Controls.Add(this.radLabel23);
             this.radPageViewPage1.Controls.Add(this.Fecha);
             this.radPageViewPage1.Controls.Add(this.radLabel20);
-            this.radPageViewPage1.Controls.Add(this.cbbPersonal1);
+            this.radPageViewPage1.Controls.Add(this.cbbDepartamento);
             this.radPageViewPage1.Controls.Add(this.radLabel19);
-            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(295F, 27F);
+            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(1065F, 27F);
             this.radPageViewPage1.Location = new System.Drawing.Point(5, 33);
             this.radPageViewPage1.Name = "radPageViewPage1";
             this.radPageViewPage1.Size = new System.Drawing.Size(1055, 352);
             this.radPageViewPage1.Text = "Puesto de trabajo";
-            // 
-            // radPageViewPage2
-            // 
-            this.radPageViewPage2.ItemSize = new System.Drawing.SizeF(231F, 27F);
-            this.radPageViewPage2.Location = new System.Drawing.Point(5, 33);
-            this.radPageViewPage2.Name = "radPageViewPage2";
-            this.radPageViewPage2.Size = new System.Drawing.Size(1055, 352);
-            this.radPageViewPage2.Text = "Seguro";
-            // 
-            // pageHorario
-            // 
-            this.pageHorario.ItemSize = new System.Drawing.SizeF(234F, 27F);
-            this.pageHorario.Location = new System.Drawing.Point(5, 33);
-            this.pageHorario.Name = "pageHorario";
-            this.pageHorario.Size = new System.Drawing.Size(1055, 352);
-            this.pageHorario.Text = "Horario";
-            // 
-            // radLabel18
-            // 
-            this.radLabel18.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radLabel18.ForeColor = System.Drawing.Color.Gray;
-            this.radLabel18.Location = new System.Drawing.Point(309, 3);
-            this.radLabel18.Name = "radLabel18";
-            this.radLabel18.Size = new System.Drawing.Size(153, 27);
-            this.radLabel18.TabIndex = 10;
-            this.radLabel18.Text = "Nombre completo";
-            // 
-            // radLabel19
-            // 
-            this.radLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel19.Location = new System.Drawing.Point(15, 39);
-            this.radLabel19.Name = "radLabel19";
-            this.radLabel19.Size = new System.Drawing.Size(85, 17);
-            this.radLabel19.TabIndex = 0;
-            this.radLabel19.Text = "Departamento";
-            // 
-            // cbbPersonal1
-            // 
-            this.cbbPersonal1.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal1.Correo = false;
-            this.cbbPersonal1.DisplayMember = "Descripcion";
-            this.cbbPersonal1.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal1.Limpiar = true;
-            this.cbbPersonal1.Location = new System.Drawing.Point(106, 33);
-            this.cbbPersonal1.Name = "cbbPersonal1";
-            this.cbbPersonal1.Size = new System.Drawing.Size(113, 23);
-            this.cbbPersonal1.TabIndex = 8;
-            this.cbbPersonal1.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal1.Validar = true;
-            this.cbbPersonal1.ValueMember = "IdMunicipio";
-            // 
-            // radLabel20
-            // 
-            this.radLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel20.Location = new System.Drawing.Point(15, 68);
-            this.radLabel20.Name = "radLabel20";
-            this.radLabel20.Size = new System.Drawing.Size(72, 17);
-            this.radLabel20.TabIndex = 0;
-            this.radLabel20.Text = "Estado Civil";
-            // 
-            // cbbPersonal2
-            // 
-            this.cbbPersonal2.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal2.Correo = false;
-            this.cbbPersonal2.DisplayMember = "Descripcion";
-            this.cbbPersonal2.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal2.Limpiar = true;
-            this.cbbPersonal2.Location = new System.Drawing.Point(106, 62);
-            this.cbbPersonal2.Name = "cbbPersonal2";
-            this.cbbPersonal2.Size = new System.Drawing.Size(113, 23);
-            this.cbbPersonal2.TabIndex = 8;
-            this.cbbPersonal2.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal2.Validar = true;
-            this.cbbPersonal2.ValueMember = "IdMunicipio";
             // 
             // txtFechaIngreso
             // 
@@ -770,12 +727,78 @@
             this.txtFechaIngreso.MaxDate = new System.DateTime(2019, 12, 25, 23, 59, 59, 0);
             this.txtFechaIngreso.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
             this.txtFechaIngreso.Name = "txtFechaIngreso";
-            this.txtFechaIngreso.Size = new System.Drawing.Size(115, 24);
+            this.txtFechaIngreso.Size = new System.Drawing.Size(194, 24);
             this.txtFechaIngreso.TabIndex = 18;
             this.txtFechaIngreso.TabStop = false;
             this.txtFechaIngreso.Text = "12/12/2019";
             this.txtFechaIngreso.ThemeName = "VisualStudio2012Light";
             this.txtFechaIngreso.Value = new System.DateTime(2019, 12, 12, 7, 26, 16, 824);
+            // 
+            // cbbTurno
+            // 
+            this.cbbTurno.BackColor = System.Drawing.Color.White;
+            this.cbbTurno.Correo = false;
+            this.cbbTurno.DisplayMember = "Descripcion";
+            this.cbbTurno.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTurno.Limpiar = true;
+            this.cbbTurno.Location = new System.Drawing.Point(106, 120);
+            this.cbbTurno.Name = "cbbTurno";
+            this.cbbTurno.Size = new System.Drawing.Size(192, 23);
+            this.cbbTurno.TabIndex = 8;
+            this.cbbTurno.ThemeName = "VisualStudio2012Light";
+            this.cbbTurno.Validar = true;
+            this.cbbTurno.ValueMember = "IdMunicipio";
+            // 
+            // cbbNomina
+            // 
+            this.cbbNomina.BackColor = System.Drawing.Color.White;
+            this.cbbNomina.Correo = false;
+            this.cbbNomina.DisplayMember = "Descripcion";
+            this.cbbNomina.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbNomina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNomina.Limpiar = true;
+            this.cbbNomina.Location = new System.Drawing.Point(106, 91);
+            this.cbbNomina.Name = "cbbNomina";
+            this.cbbNomina.Size = new System.Drawing.Size(192, 23);
+            this.cbbNomina.TabIndex = 8;
+            this.cbbNomina.ThemeName = "VisualStudio2012Light";
+            this.cbbNomina.Validar = true;
+            this.cbbNomina.ValueMember = "IdMunicipio";
+            // 
+            // radLabel24
+            // 
+            this.radLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel24.Location = new System.Drawing.Point(15, 126);
+            this.radLabel24.Name = "radLabel24";
+            this.radLabel24.Size = new System.Drawing.Size(39, 17);
+            this.radLabel24.TabIndex = 0;
+            this.radLabel24.Text = "Turno";
+            // 
+            // txtPuesto
+            // 
+            this.txtPuesto.BackColor = System.Drawing.Color.White;
+            this.txtPuesto.Correo = false;
+            this.txtPuesto.DisplayMember = "Descripcion";
+            this.txtPuesto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.txtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuesto.Limpiar = true;
+            this.txtPuesto.Location = new System.Drawing.Point(106, 62);
+            this.txtPuesto.Name = "txtPuesto";
+            this.txtPuesto.Size = new System.Drawing.Size(192, 23);
+            this.txtPuesto.TabIndex = 8;
+            this.txtPuesto.ThemeName = "VisualStudio2012Light";
+            this.txtPuesto.Validar = true;
+            this.txtPuesto.ValueMember = "IdMunicipio";
+            // 
+            // radLabel23
+            // 
+            this.radLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel23.Location = new System.Drawing.Point(15, 97);
+            this.radLabel23.Name = "radLabel23";
+            this.radLabel23.Size = new System.Drawing.Size(49, 17);
+            this.radLabel23.TabIndex = 0;
+            this.radLabel23.Text = "Nomina";
             // 
             // Fecha
             // 
@@ -786,37 +809,59 @@
             this.Fecha.TabIndex = 0;
             this.Fecha.Text = "Fecha";
             // 
-            // radLabel21
+            // radLabel20
             // 
-            this.radLabel21.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radLabel21.ForeColor = System.Drawing.Color.Gray;
-            this.radLabel21.Location = new System.Drawing.Point(8, 3);
-            this.radLabel21.Name = "radLabel21";
-            this.radLabel21.Size = new System.Drawing.Size(69, 27);
-            this.radLabel21.TabIndex = 10;
-            this.radLabel21.Text = "Codigo:";
+            this.radLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel20.Location = new System.Drawing.Point(15, 68);
+            this.radLabel20.Name = "radLabel20";
+            this.radLabel20.Size = new System.Drawing.Size(45, 17);
+            this.radLabel20.TabIndex = 0;
+            this.radLabel20.Text = "Puesto";
             // 
-            // radLabel22
+            // cbbDepartamento
             // 
-            this.radLabel22.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radLabel22.ForeColor = System.Drawing.Color.Black;
-            this.radLabel22.Location = new System.Drawing.Point(83, 3);
-            this.radLabel22.Name = "radLabel22";
-            this.radLabel22.Size = new System.Drawing.Size(56, 27);
-            this.radLabel22.TabIndex = 10;
-            this.radLabel22.Text = "00001";
+            this.cbbDepartamento.BackColor = System.Drawing.Color.White;
+            this.cbbDepartamento.Correo = false;
+            this.cbbDepartamento.DisplayMember = "Descripcion";
+            this.cbbDepartamento.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbDepartamento.Limpiar = true;
+            this.cbbDepartamento.Location = new System.Drawing.Point(106, 33);
+            this.cbbDepartamento.Name = "cbbDepartamento";
+            this.cbbDepartamento.Size = new System.Drawing.Size(192, 23);
+            this.cbbDepartamento.TabIndex = 8;
+            this.cbbDepartamento.ThemeName = "VisualStudio2012Light";
+            this.cbbDepartamento.Validar = true;
+            this.cbbDepartamento.ValueMember = "IdMunicipio";
             // 
-            // panel1
+            // radLabel19
             // 
-            this.panel1.Controls.Add(this.Foto);
-            this.panel1.Location = new System.Drawing.Point(8, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 218);
-            this.panel1.TabIndex = 0;
+            this.radLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel19.Location = new System.Drawing.Point(15, 39);
+            this.radLabel19.Name = "radLabel19";
+            this.radLabel19.Size = new System.Drawing.Size(85, 17);
+            this.radLabel19.TabIndex = 0;
+            this.radLabel19.Text = "Departamento";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // cbbTipoIndentificacion
+            // 
+            this.cbbTipoIndentificacion.BackColor = System.Drawing.Color.White;
+            this.cbbTipoIndentificacion.Correo = false;
+            this.cbbTipoIndentificacion.DisplayMember = "Descripcion";
+            this.cbbTipoIndentificacion.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoIndentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoIndentificacion.Limpiar = true;
+            this.cbbTipoIndentificacion.Location = new System.Drawing.Point(349, 205);
+            this.cbbTipoIndentificacion.Name = "cbbTipoIndentificacion";
+            this.cbbTipoIndentificacion.Size = new System.Drawing.Size(186, 23);
+            this.cbbTipoIndentificacion.TabIndex = 8;
+            this.cbbTipoIndentificacion.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoIndentificacion.Validar = true;
+            this.cbbTipoIndentificacion.ValueMember = "IdMunicipio";
             // 
             // Empleado
             // 
@@ -840,7 +885,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radDateTimePicker1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFechNacimiento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSexo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).EndInit();
@@ -848,6 +895,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstadoCivil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbNombreCompleto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
@@ -855,7 +905,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCelular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
@@ -864,14 +914,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Foto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.c)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApodo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido)).EndInit();
@@ -879,17 +927,18 @@
             this.radPageView1.ResumeLayout(false);
             this.radPageViewPage1.ResumeLayout(false);
             this.radPageViewPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFechaIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTurno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbNomina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPuesto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Fecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDepartamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoIndentificacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -906,9 +955,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadPageView radPageView1;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
-        private Telerik.WinControls.UI.RadPageViewPage radPageViewPage2;
-        private Telerik.WinControls.UI.RadPageViewPage pageHorario;
-        private Negocios.Componentes.TextPersonal c;
         private Negocios.Componentes.TextPersonal txtApodo;
         private Telerik.WinControls.UI.RadLabel radLabel6;
         private Telerik.WinControls.UI.RadLabel radLabel7;
@@ -928,7 +974,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel14;
         private Negocios.Componentes.TextPersonal txtTelefono;
         private Telerik.WinControls.UI.RadLabel radLabel15;
-        private Negocios.Componentes.TextPersonal textPersonal6;
+        private Negocios.Componentes.TextPersonal txtCelular;
         private Telerik.WinControls.UI.RadLabel radLabel16;
         private Negocios.Componentes.TextPersonal txtNota;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -938,14 +984,14 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private Negocios.Componentes.cbbPersonal cbbSexo;
         private Negocios.Componentes.cbbPersonal cbbEstadoCivil;
-        private Telerik.WinControls.UI.RadDateTimePicker radDateTimePicker1;
+        private Telerik.WinControls.UI.RadDateTimePicker txtFechNacimiento;
         private Telerik.WinControls.UI.RadLabel radLabel13;
         private Negocios.Componentes.cbbPersonal cbbCiudad;
         private Telerik.WinControls.UI.RadLabel radLabel17;
-        private Telerik.WinControls.UI.RadLabel radLabel18;
-        private Negocios.Componentes.cbbPersonal cbbPersonal1;
+        private Telerik.WinControls.UI.RadLabel lbNombreCompleto;
+        private Negocios.Componentes.cbbPersonal cbbDepartamento;
         private Telerik.WinControls.UI.RadLabel radLabel19;
-        private Negocios.Componentes.cbbPersonal cbbPersonal2;
+        private Negocios.Componentes.cbbPersonal txtPuesto;
         private Telerik.WinControls.UI.RadLabel radLabel20;
         private Telerik.WinControls.UI.RadDateTimePicker txtFechaIngreso;
         private Telerik.WinControls.UI.RadLabel Fecha;
@@ -953,5 +999,10 @@
         private Telerik.WinControls.UI.RadLabel radLabel22;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Negocios.Componentes.cbbPersonal cbbTurno;
+        private Negocios.Componentes.cbbPersonal cbbNomina;
+        private Telerik.WinControls.UI.RadLabel radLabel24;
+        private Telerik.WinControls.UI.RadLabel radLabel23;
+        private Negocios.Componentes.cbbPersonal cbbTipoIndentificacion;
     }
 }

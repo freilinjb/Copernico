@@ -134,7 +134,6 @@ namespace Vistas.Formularios
                 {
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     lbEstatus.Text = "Nuevo Registro";
-                    //this.vistaCentroMantenimientoTableAdapter.Fill(this.matrizDataSet.VistaCentroMantenimiento);
                     dataActivoFijo.DataSource = Negocios.Utilidades.Ejecutar("select AF.IdActivoFijo,T.Nombre,GA.Descripcion AS Grupo,SG.Descripcion AS SubGrupo,EA.Descripcion AS Estado from ActivoFijo AF INNER JOIN GrupoActivoFijo GA ON GA.IdGrupoActivoFijo = AF.IdGrupoActivoFijo INNER JOIN SubGrupoActivoFijo SG ON SG.IdSubGrupoActivoFijo = AF.IdSubGrupoActivoFijo INNER JOIN EstadoActivoFijo EA ON EA.IdEstadoActivoFijo = AF.IdEstadoActivoFijo INNER JOIN Tercero T ON T.IdTercero = AF.IdTercero").Tables[0];
                     IdMayor();
                 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn15 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn16 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.vistaAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
             this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,9 +67,9 @@
             this.txtStockPromedio = new Negocios.Componentes.TextPersonal();
             this.txtStockActual = new Negocios.Componentes.TextPersonal();
             this.cbbProducto = new Negocios.Componentes.cbbPersonal();
+            this.productoMaterialConstruccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbUnidad = new Negocios.Componentes.cbbPersonal();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.productoMaterialConstruccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productoMaterialConstruccionTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProductoMaterialConstruccionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.vistaAlmacenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
@@ -98,9 +98,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStockPromedio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoMaterialConstruccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoMaterialConstruccionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,70 +166,69 @@
             this.dataInventario.MasterTemplate.AllowRowResize = false;
             this.dataInventario.MasterTemplate.AllowSearchRow = true;
             this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn9.DataType = typeof(int);
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "IdInventario";
-            gridViewTextBoxColumn9.HeaderText = "Codigo";
-            gridViewTextBoxColumn9.Name = "IdInventario";
-            gridViewTextBoxColumn9.Width = 51;
-            gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "Inventario";
-            gridViewTextBoxColumn10.HeaderText = "Inventario";
-            gridViewTextBoxColumn10.Name = "Inventario";
-            gridViewTextBoxColumn10.Width = 100;
-            gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "Descripcion";
-            gridViewTextBoxColumn11.HeaderText = "Descripcion";
-            gridViewTextBoxColumn11.Name = "Descripcion";
-            gridViewTextBoxColumn11.Width = 248;
-            gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "Unidad";
-            gridViewTextBoxColumn12.HeaderText = "Unidad";
-            gridViewTextBoxColumn12.Name = "Unidad";
-            gridViewTextBoxColumn12.Width = 51;
-            gridViewTextBoxColumn13.DataType = typeof(float);
-            gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "Stock";
-            gridViewTextBoxColumn13.HeaderText = "Stock";
-            gridViewTextBoxColumn13.Name = "Stock";
-            gridViewTextBoxColumn13.Width = 65;
-            gridViewTextBoxColumn14.DataType = typeof(float);
-            gridViewTextBoxColumn14.EnableExpressionEditor = false;
-            gridViewTextBoxColumn14.FieldName = "StockPromedio";
-            gridViewTextBoxColumn14.HeaderText = "StockPromedio";
-            gridViewTextBoxColumn14.IsVisible = false;
-            gridViewTextBoxColumn14.Name = "StockPromedio";
-            gridViewTextBoxColumn14.Width = 73;
-            gridViewTextBoxColumn15.DataType = typeof(float);
-            gridViewTextBoxColumn15.EnableExpressionEditor = false;
-            gridViewTextBoxColumn15.FieldName = "StockMinimo";
-            gridViewTextBoxColumn15.HeaderText = "StockMinimo";
-            gridViewTextBoxColumn15.IsVisible = false;
-            gridViewTextBoxColumn15.Name = "StockMinimo";
-            gridViewTextBoxColumn15.Width = 77;
-            gridViewTextBoxColumn16.EnableExpressionEditor = false;
-            gridViewTextBoxColumn16.FieldName = "Estado";
-            gridViewTextBoxColumn16.HeaderText = "Estado";
-            gridViewTextBoxColumn16.Name = "Estado";
-            gridViewTextBoxColumn16.Width = 79;
+            gridViewTextBoxColumn1.DataType = typeof(int);
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "IdInventario";
+            gridViewTextBoxColumn1.HeaderText = "Codigo";
+            gridViewTextBoxColumn1.Name = "IdInventario";
+            gridViewTextBoxColumn1.Width = 51;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Inventario";
+            gridViewTextBoxColumn2.HeaderText = "Inventario";
+            gridViewTextBoxColumn2.Name = "Inventario";
+            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Descripcion";
+            gridViewTextBoxColumn3.HeaderText = "Descripcion";
+            gridViewTextBoxColumn3.Name = "Descripcion";
+            gridViewTextBoxColumn3.Width = 248;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Unidad";
+            gridViewTextBoxColumn4.HeaderText = "Unidad";
+            gridViewTextBoxColumn4.Name = "Unidad";
+            gridViewTextBoxColumn4.Width = 51;
+            gridViewTextBoxColumn5.DataType = typeof(float);
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Stock";
+            gridViewTextBoxColumn5.HeaderText = "Stock";
+            gridViewTextBoxColumn5.Name = "Stock";
+            gridViewTextBoxColumn5.Width = 65;
+            gridViewTextBoxColumn6.DataType = typeof(float);
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "StockPromedio";
+            gridViewTextBoxColumn6.HeaderText = "StockPromedio";
+            gridViewTextBoxColumn6.IsVisible = false;
+            gridViewTextBoxColumn6.Name = "StockPromedio";
+            gridViewTextBoxColumn6.Width = 73;
+            gridViewTextBoxColumn7.DataType = typeof(float);
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "StockMinimo";
+            gridViewTextBoxColumn7.HeaderText = "StockMinimo";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "StockMinimo";
+            gridViewTextBoxColumn7.Width = 77;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "Estado";
+            gridViewTextBoxColumn8.HeaderText = "Estado";
+            gridViewTextBoxColumn8.Name = "Estado";
+            gridViewTextBoxColumn8.Width = 79;
             this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn9,
-            gridViewTextBoxColumn10,
-            gridViewTextBoxColumn11,
-            gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13,
-            gridViewTextBoxColumn14,
-            gridViewTextBoxColumn15,
-            gridViewTextBoxColumn16});
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.dataInventario.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataInventario.MasterTemplate.EnableGrouping = false;
             this.dataInventario.MasterTemplate.EnableSorting = false;
             this.dataInventario.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataInventario.Name = "dataInventario";
             this.dataInventario.ReadOnly = true;
             this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataInventario.ShowGroupPanel = false;
             this.dataInventario.Size = new System.Drawing.Size(588, 337);
             this.dataInventario.TabIndex = 32;
             this.dataInventario.ThemeName = "VisualStudio2012Light";
@@ -490,6 +489,11 @@
             this.cbbProducto.ValueMember = "IdProducto";
             this.cbbProducto.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbProducto_SelectedIndexChanged);
             // 
+            // productoMaterialConstruccionBindingSource
+            // 
+            this.productoMaterialConstruccionBindingSource.DataMember = "ProductoMaterialConstruccion";
+            this.productoMaterialConstruccionBindingSource.DataSource = this.matrizDataSet;
+            // 
             // cbbUnidad
             // 
             this.cbbUnidad.BackColor = System.Drawing.Color.White;
@@ -509,11 +513,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // productoMaterialConstruccionBindingSource
-            // 
-            this.productoMaterialConstruccionBindingSource.DataMember = "ProductoMaterialConstruccion";
-            this.productoMaterialConstruccionBindingSource.DataSource = this.matrizDataSet;
             // 
             // productoMaterialConstruccionTableAdapter
             // 
@@ -569,9 +568,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStockPromedio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoMaterialConstruccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoMaterialConstruccionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
