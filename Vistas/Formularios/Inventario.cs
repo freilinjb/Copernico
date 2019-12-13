@@ -38,12 +38,25 @@ namespace Vistas.Formularios
 
         private void Inventario_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.ProductoMaterialConstruccion' Puede moverla o quitarla según sea necesario.
+            this.productoMaterialConstruccionTableAdapter.Fill(this.matrizDataSet.ProductoMaterialConstruccion);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaAlmacen' Puede moverla o quitarla según sea necesario.
             this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
 
             IdMayor();
+            dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario WHERE IdCentro = 2").Tables[0];
+            cbbEstado.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoInventario,Descripcion AS Estado FROM EstadoInventario").Tables[0];
+            cbbEstado.ValueMember = "IdEstadoInventario";
+            cbbEstado.DisplayMember = "Estado";
+
+
+            cbbProducto.DataSource = Negocios.Utilidades.Ejecutar($"SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia FROM Producto P INNER JOIN Familia F ON F.IdFamilia = P.IdFamilia INNER JOIN Rubro R ON R.IdRubro = P.IdRubro WHERE R.IdRubro = 33").Tables[0];
+            cbbProducto.ValueMember = "IdProducto";
+            cbbProducto.DisplayMember = "Producto";
+
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
 
         }
 
@@ -75,16 +88,20 @@ namespace Vistas.Formularios
                 errorProvider1.Clear();
                 if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    Negocios.Entidades.IventarioProducto pedido = new Negocios.Entidades.IventarioProducto(
+                    Negocios.Entidades.IventarioProducto iventario = new Negocios.Entidades.IventarioProducto(
                         Convert.ToInt32(txtCodigo.Text.Trim()),
                         (int)cbbInventario.SelectedValue,
                         (int)cbbAlmacen.SelectedValue,
                         (int)cbbProducto.SelectedValue,
+                        (int)cbbUnidad.SelectedValue,
                         Convert.ToSingle(txtStockActual.Text.Trim()),
                         Convert.ToSingle(txtStockPromedio.Text.Trim()),
                         Convert.ToSingle(txtStockMinimo.Text.Trim()),
                         (int)cbbEstado.SelectedValue);
 
+                    ds = Negocios.Utilidades.Ejecutar(iventario.getGuardar());
+                    if (ds.Tables[0].Rows.Count > 0)
+                        bien = true;
                 }
             }
             catch (Exception ex)
@@ -102,8 +119,10 @@ namespace Vistas.Formularios
                 if (Guardar())
                 {
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario WHERE IdCentro = 2").Tables[0];
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     IdMayor();
+                    dataInventario.Refresh();
                     toolRegistro.Text = "Nuevo Pedido";
                 }
             }
@@ -114,6 +133,16 @@ namespace Vistas.Formularios
             if(e.KeyCode == Keys.Enter)
             {
 
+            }
+        }
+
+        private void cbbProducto_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            if(cbbProducto.SelectedIndex != -1)
+            {
+                cbbUnidad.DataSource = Negocios.Utilidades.Ejecutar($"SELECT U.IdUnidad,U.Descripcion AS Unidad,PU.IdProducto FROM Unidad U INNER JOIN Producto_VS_Unidad PU ON PU.IdUnidad = U.IdUnidad INNER JOIN Producto P ON P.IdProducto = PU.IdProducto WHERE PU.IdProducto = {cbbProducto.SelectedValue}").Tables[0];
+                cbbUnidad.ValueMember = "IdUnidad";
+                cbbUnidad.DisplayMember = "Unidad";
             }
         }
     }

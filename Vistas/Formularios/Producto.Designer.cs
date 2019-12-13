@@ -49,10 +49,13 @@
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.cbbFamilia = new Negocios.Componentes.cbbPersonal();
             this.familiaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbbRubro = new Negocios.Componentes.cbbPersonal();
+            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbTipoProducto = new Negocios.Componentes.cbbPersonal();
             this.tipoProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtNota = new Negocios.Componentes.TextPersonal();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
+            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
@@ -79,9 +82,6 @@
             this.productoTableAdapter = new Vistas.MatrizDataSetTableAdapters.ProductoTableAdapter();
             this.lbNombrer = new Negocios.Componentes.TextPersonal();
             this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
-            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.cbbRubro = new Negocios.Componentes.cbbPersonal();
-            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
@@ -94,10 +94,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFamilia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.familiaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
@@ -120,9 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,7 +135,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 40);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pageProducto;
+            this.pagePrincipal.SelectedPage = this.pagePrecio;
             this.pagePrincipal.Size = new System.Drawing.Size(713, 232);
             this.pagePrincipal.TabIndex = 0;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -252,6 +252,28 @@
             this.familiaBindingSource.DataMember = "Familia";
             this.familiaBindingSource.DataSource = this.matrizDataSet;
             // 
+            // cbbRubro
+            // 
+            this.cbbRubro.BackColor = System.Drawing.Color.White;
+            this.cbbRubro.Correo = false;
+            this.cbbRubro.DataSource = this.rubroBindingSource;
+            this.cbbRubro.DisplayMember = "Descripcion";
+            this.cbbRubro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbRubro.Limpiar = true;
+            this.cbbRubro.Location = new System.Drawing.Point(408, 63);
+            this.cbbRubro.Name = "cbbRubro";
+            this.cbbRubro.Size = new System.Drawing.Size(292, 25);
+            this.cbbRubro.TabIndex = 4;
+            this.cbbRubro.ThemeName = "VisualStudio2012Light";
+            this.cbbRubro.Validar = true;
+            this.cbbRubro.ValueMember = "IdRubro";
+            // 
+            // rubroBindingSource
+            // 
+            this.rubroBindingSource.DataMember = "Rubro";
+            this.rubroBindingSource.DataSource = this.matrizDataSet;
+            // 
             // cbbTipoProducto
             // 
             this.cbbTipoProducto.BackColor = System.Drawing.Color.White;
@@ -306,6 +328,15 @@
             this.txtNombre.ThemeName = "VisualStudio2012Light";
             this.txtNombre.Validar = true;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
+            // radLabel9
+            // 
+            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel9.Location = new System.Drawing.Point(358, 69);
+            this.radLabel9.Name = "radLabel9";
+            this.radLabel9.Size = new System.Drawing.Size(44, 19);
+            this.radLabel9.TabIndex = 2;
+            this.radLabel9.Text = "Rubro";
             // 
             // radLabel7
             // 
@@ -605,37 +636,6 @@
             // 
             this.vistaCentroTableAdapter.ClearBeforeFill = true;
             // 
-            // radLabel9
-            // 
-            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(358, 69);
-            this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(44, 19);
-            this.radLabel9.TabIndex = 2;
-            this.radLabel9.Text = "Rubro";
-            // 
-            // cbbRubro
-            // 
-            this.cbbRubro.BackColor = System.Drawing.Color.White;
-            this.cbbRubro.Correo = false;
-            this.cbbRubro.DataSource = this.rubroBindingSource;
-            this.cbbRubro.DisplayMember = "Descripcion";
-            this.cbbRubro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbRubro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbRubro.Limpiar = true;
-            this.cbbRubro.Location = new System.Drawing.Point(408, 63);
-            this.cbbRubro.Name = "cbbRubro";
-            this.cbbRubro.Size = new System.Drawing.Size(292, 25);
-            this.cbbRubro.TabIndex = 4;
-            this.cbbRubro.ThemeName = "VisualStudio2012Light";
-            this.cbbRubro.Validar = true;
-            this.cbbRubro.ValueMember = "IdRubro";
-            // 
-            // rubroBindingSource
-            // 
-            this.rubroBindingSource.DataMember = "Rubro";
-            this.rubroBindingSource.DataSource = this.matrizDataSet;
-            // 
             // rubroTableAdapter
             // 
             this.rubroTableAdapter.ClearBeforeFill = true;
@@ -677,10 +677,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbFamilia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.familiaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoProductoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNota)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
@@ -704,9 +707,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIdProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombrer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

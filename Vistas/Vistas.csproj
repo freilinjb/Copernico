@@ -250,12 +250,6 @@
     <Compile Include="Formularios\OrdenDeVenta.Designer.cs">
       <DependentUpon>OrdenDeVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ordenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Ordenes.Designer.cs">
-      <DependentUpon>Ordenes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,9 +416,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\OrdenDeVenta.resx">
       <DependentUpon>OrdenDeVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ordenes.resx">
-      <DependentUpon>Ordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Producto.resx">
       <DependentUpon>Producto.cs</DependentUpon>

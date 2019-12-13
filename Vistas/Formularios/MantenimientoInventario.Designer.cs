@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoInventario));
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.textPersonal1 = new Negocios.Componentes.TextPersonal();
@@ -124,7 +124,7 @@
             this.dataProducto.MasterTemplate.EnableGrouping = false;
             this.dataProducto.MasterTemplate.EnableSorting = false;
             this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.dataProducto.Name = "dataProducto";
             this.dataProducto.ReadOnly = true;
             this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
