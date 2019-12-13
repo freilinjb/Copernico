@@ -45,6 +45,7 @@
             this.pageMina = new Telerik.WinControls.UI.RadPageViewPage();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.cbbProducto = new Negocios.Componentes.cbbPersonal();
             this.cbbProveedor = new Negocios.Componentes.cbbPersonal();
@@ -61,6 +62,7 @@
             this.cbbCiudad = new Negocios.Componentes.cbbPersonal();
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
+            this.txtPrecio = new Negocios.Componentes.TextPersonal();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.txtDescripcion = new Negocios.Componentes.TextPersonal();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
@@ -68,14 +70,13 @@
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
-            this.txtPrecio = new Negocios.Componentes.TextPersonal();
-            this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
             this.pageMina.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProveedor)).BeginInit();
@@ -92,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -100,8 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,11 +181,20 @@
             // radLabel13
             // 
             this.radLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel13.Location = new System.Drawing.Point(11, 39);
+            this.radLabel13.Location = new System.Drawing.Point(26, 39);
             this.radLabel13.Name = "radLabel13";
             this.radLabel13.Size = new System.Drawing.Size(69, 18);
             this.radLabel13.TabIndex = 14;
             this.radLabel13.Text = "Proveedor";
+            // 
+            // radLabel8
+            // 
+            this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel8.Location = new System.Drawing.Point(315, 9);
+            this.radLabel8.Name = "radLabel8";
+            this.radLabel8.Size = new System.Drawing.Size(45, 18);
+            this.radLabel8.TabIndex = 23;
+            this.radLabel8.Text = "Precio";
             // 
             // radLabel3
             // 
@@ -204,7 +213,7 @@
             this.cbbProducto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProducto.Limpiar = true;
-            this.cbbProducto.Location = new System.Drawing.Point(86, 63);
+            this.cbbProducto.Location = new System.Drawing.Point(102, 63);
             this.cbbProducto.Name = "cbbProducto";
             this.cbbProducto.Size = new System.Drawing.Size(168, 25);
             this.cbbProducto.TabIndex = 31;
@@ -220,7 +229,7 @@
             this.cbbProveedor.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProveedor.Limpiar = true;
-            this.cbbProveedor.Location = new System.Drawing.Point(86, 32);
+            this.cbbProveedor.Location = new System.Drawing.Point(102, 32);
             this.cbbProveedor.Name = "cbbProveedor";
             this.cbbProveedor.Size = new System.Drawing.Size(168, 25);
             this.cbbProveedor.TabIndex = 31;
@@ -231,7 +240,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(332, 101);
+            this.radLabel4.Location = new System.Drawing.Point(315, 101);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(46, 18);
             this.radLabel4.TabIndex = 22;
@@ -249,7 +258,7 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(18, 101);
+            this.radLabel5.Location = new System.Drawing.Point(26, 101);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(62, 18);
             this.radLabel5.TabIndex = 19;
@@ -290,7 +299,7 @@
             // radLabel9
             // 
             this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(20, 70);
+            this.radLabel9.Location = new System.Drawing.Point(26, 70);
             this.radLabel9.Name = "radLabel9";
             this.radLabel9.Size = new System.Drawing.Size(60, 18);
             this.radLabel9.TabIndex = 18;
@@ -299,7 +308,7 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(328, 38);
+            this.radLabel6.Location = new System.Drawing.Point(315, 39);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(51, 19);
             this.radLabel6.TabIndex = 20;
@@ -324,7 +333,7 @@
             // radLabel12
             // 
             this.radLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel12.Location = new System.Drawing.Point(18, 131);
+            this.radLabel12.Location = new System.Drawing.Point(26, 128);
             this.radLabel12.Name = "radLabel12";
             this.radLabel12.Size = new System.Drawing.Size(64, 19);
             this.radLabel12.TabIndex = 17;
@@ -338,7 +347,7 @@
             this.cbbProvincia.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProvincia.Limpiar = true;
-            this.cbbProvincia.Location = new System.Drawing.Point(86, 94);
+            this.cbbProvincia.Location = new System.Drawing.Point(102, 94);
             this.cbbProvincia.Name = "cbbProvincia";
             this.cbbProvincia.Size = new System.Drawing.Size(168, 25);
             this.cbbProvincia.TabIndex = 29;
@@ -368,14 +377,14 @@
             this.txtDireccion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Limpiar = true;
-            this.txtDireccion.Location = new System.Drawing.Point(86, 125);
+            this.txtDireccion.Location = new System.Drawing.Point(102, 125);
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             // 
             // 
             // 
             this.txtDireccion.RootElement.StretchVertically = true;
-            this.txtDireccion.Size = new System.Drawing.Size(466, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(450, 25);
             this.txtDireccion.TabIndex = 25;
             this.txtDireccion.ThemeName = "VisualStudio2012Light";
             this.txtDireccion.Validar = true;
@@ -389,13 +398,26 @@
             this.radLabel7.TabIndex = 15;
             this.radLabel7.Text = "Municipio";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Correo = false;
+            this.txtPrecio.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Limpiar = true;
+            this.txtPrecio.Location = new System.Drawing.Point(384, 2);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(81, 24);
+            this.txtPrecio.TabIndex = 24;
+            this.txtPrecio.ThemeName = "VisualStudio2012Light";
+            this.txtPrecio.Validar = true;
+            // 
             // txtNombre
             // 
             this.txtNombre.Correo = false;
             this.txtNombre.estados = Negocios.Componentes.TextPersonal.Estados.Default;
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Limpiar = true;
-            this.txtNombre.Location = new System.Drawing.Point(86, 3);
+            this.txtNombre.Location = new System.Drawing.Point(102, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(168, 24);
             this.txtNombre.TabIndex = 24;
@@ -518,28 +540,6 @@
             this.radSeparator2.TabIndex = 3;
             this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Correo = false;
-            this.txtPrecio.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Limpiar = true;
-            this.txtPrecio.Location = new System.Drawing.Point(384, 2);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(81, 24);
-            this.txtPrecio.TabIndex = 24;
-            this.txtPrecio.ThemeName = "VisualStudio2012Light";
-            this.txtPrecio.Validar = true;
-            // 
-            // radLabel8
-            // 
-            this.radLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel8.Location = new System.Drawing.Point(324, 8);
-            this.radLabel8.Name = "radLabel8";
-            this.radLabel8.Size = new System.Drawing.Size(45, 18);
-            this.radLabel8.TabIndex = 23;
-            this.radLabel8.Text = "Precio";
-            // 
             // Mina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,6 +569,7 @@
             this.pageMina.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProveedor)).EndInit();
@@ -585,6 +586,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbCiudad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -593,8 +595,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

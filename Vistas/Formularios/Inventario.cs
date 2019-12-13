@@ -11,6 +11,7 @@ namespace Vistas.Formularios
 {
     public partial class Inventario : FormBase
     {
+        private DataSet ds;
 
         private static Inventario Instancia;
 
@@ -24,9 +25,15 @@ namespace Vistas.Formularios
             return Instancia;
         }
 
-        public Inventario()
+        private Inventario()
         {
             InitializeComponent();
+        }
+
+        private void IdMayor()
+        {
+            ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdInventario)+1 AS Mayor FROM Inventario");
+            txtCodigo.Text = (ds.Tables[0].Rows[0]["Mayor"] == DBNull.Value) ? "1" : ds.Tables[0].Rows[0]["Mayor"].ToString();
         }
 
         private void Inventario_Load(object sender, EventArgs e)
@@ -35,22 +42,9 @@ namespace Vistas.Formularios
             this.vistaAlmacenTableAdapter.Fill(this.matrizDataSet.VistaAlmacen);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
-            //cbbCentro.DataSource = Negocios.Utilidades.Ejecutar("SELECT C.IdCentro,T.Nombre FROM Centro C INNER JOIN Tercero T ON C.IdTercero = T.IdTercero").Tables[0];
-            //cbbCentro.ValueMember = "IdCentro";
-            //cbbCentro.DisplayMember = "Centro";
 
-            //cbbCentro.SelectedIndex = 0;
+            IdMayor();
 
-
-            //cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar($"SELECT A.IdAlmacen,A.Descripcion AS Almacen FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = {cbbCentro.SelectedValue}").Tables[0];
-            //cbbAlmacen.ValueMember = "IdAlmacen";
-            //cbbAlmacen.DisplayMember = "Almacen";
-
-            //cbbAlmacen.SelectedIndex = 0;
-
-            //cbbCentro.DataSource = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = {cbbAlmacen.SelectedValue}").Tables[0];
-            //cbbCentro.ValueMember = "IdInventario";
-            //cbbCentro.DisplayMember = "Inventario";
         }
 
         private void cbbCentro_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
@@ -70,6 +64,56 @@ namespace Vistas.Formularios
                 cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT ALT.IdTipoInventario,TI.Descripcion AS Inventario FROM Almacen A INNER JOIN Almacen_VS_TipoInventario ALT ON ALT.IdAlmacen = A.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = ALT.IdTipoInventario WHERE A.IdAlmacen = {cbbAlmacen.SelectedValue}").Tables[0];
                 cbbInventario.ValueMember = "IdTipoInventario";
                 cbbInventario.DisplayMember = "Inventario";
+            }
+        }
+        public override bool Guardar()
+        {
+            bool bien = false;
+            try
+
+            {
+                errorProvider1.Clear();
+                if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+                {
+                    Negocios.Entidades.IventarioProducto pedido = new Negocios.Entidades.IventarioProducto(
+                        Convert.ToInt32(txtCodigo.Text.Trim()),
+                        (int)cbbInventario.SelectedValue,
+                        (int)cbbAlmacen.SelectedValue,
+                        (int)cbbProducto.SelectedValue,
+                        Convert.ToSingle(txtStockActual.Text.Trim()),
+                        Convert.ToSingle(txtStockPromedio.Text.Trim()),
+                        Convert.ToSingle(txtStockMinimo.Text.Trim()),
+                        (int)cbbEstado.SelectedValue);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                bien = false;
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+            }
+            return bien;
+        }
+
+        private void Inventario_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                if (Guardar())
+                {
+                    RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    IdMayor();
+                    toolRegistro.Text = "Nuevo Pedido";
+                }
+            }
+        }
+
+        private void txtStockActual_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+
             }
         }
     }

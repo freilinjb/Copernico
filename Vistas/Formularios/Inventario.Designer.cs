@@ -44,25 +44,19 @@
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
-            this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
-            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
-            this.cbbPersonal3 = new Negocios.Componentes.cbbPersonal();
-            this.cbbPersonal1 = new Negocios.Componentes.cbbPersonal();
+            this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.cbbProducto = new Negocios.Componentes.cbbPersonal();
             this.cbbInventario = new Negocios.Componentes.cbbPersonal();
-            this.cbbPersonal2 = new Negocios.Componentes.cbbPersonal();
             this.cbbAlmacen = new Negocios.Componentes.cbbPersonal();
             this.cbbCentro = new Negocios.Componentes.cbbPersonal();
-            this.StockMinimo = new Negocios.Componentes.TextPersonal();
+            this.txtStockMinimo = new Negocios.Componentes.TextPersonal();
             this.txtStockPromedio = new Negocios.Componentes.TextPersonal();
             this.txtStockActual = new Negocios.Componentes.TextPersonal();
             this.matrizDataSet = new Vistas.MatrizDataSet();
@@ -70,6 +64,8 @@
             this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
             this.vistaAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vistaAlmacenTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaAlmacenTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).BeginInit();
@@ -79,30 +75,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbInventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StockMinimo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStockMinimo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockPromedio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaAlmacenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,7 +125,7 @@
             this.dataInventario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.dataInventario.ForeColor = System.Drawing.SystemColors.ControlText;
             this.dataInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataInventario.Location = new System.Drawing.Point(12, 206);
+            this.dataInventario.Location = new System.Drawing.Point(12, 201);
             // 
             // 
             // 
@@ -143,34 +134,42 @@
             this.dataInventario.MasterTemplate.AllowColumnReorder = false;
             this.dataInventario.MasterTemplate.AllowDragToGroup = false;
             this.dataInventario.MasterTemplate.AllowRowResize = false;
+            this.dataInventario.MasterTemplate.AllowSearchRow = true;
             this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "IdInventario";
             gridViewTextBoxColumn7.HeaderText = "Codigo";
             gridViewTextBoxColumn7.Name = "IdInventario";
-            gridViewTextBoxColumn7.Width = 393;
+            gridViewTextBoxColumn7.Width = 84;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
             gridViewTextBoxColumn8.FieldName = "Descripcion";
             gridViewTextBoxColumn8.HeaderText = "Descripcion";
             gridViewTextBoxColumn8.Name = "Descripcion";
-            gridViewTextBoxColumn8.Width = 33;
+            gridViewTextBoxColumn8.Width = 252;
             gridViewTextBoxColumn9.DataType = typeof(float);
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
             gridViewTextBoxColumn9.FieldName = "Stock";
             gridViewTextBoxColumn9.HeaderText = "Stock";
             gridViewTextBoxColumn9.Name = "Stock";
-            gridViewTextBoxColumn9.Width = 37;
+            gridViewTextBoxColumn9.Width = 130;
             gridViewTextBoxColumn10.DataType = typeof(float);
+            gridViewTextBoxColumn10.EnableExpressionEditor = false;
             gridViewTextBoxColumn10.FieldName = "StockPromedio";
             gridViewTextBoxColumn10.HeaderText = "StockPromedio";
+            gridViewTextBoxColumn10.IsVisible = false;
             gridViewTextBoxColumn10.Name = "StockPromedio";
-            gridViewTextBoxColumn10.Width = 39;
+            gridViewTextBoxColumn10.Width = 83;
             gridViewTextBoxColumn11.DataType = typeof(float);
+            gridViewTextBoxColumn11.EnableExpressionEditor = false;
             gridViewTextBoxColumn11.FieldName = "StockMinimo";
             gridViewTextBoxColumn11.HeaderText = "StockMinimo";
             gridViewTextBoxColumn11.Name = "StockMinimo";
-            gridViewTextBoxColumn11.Width = 42;
+            gridViewTextBoxColumn11.Width = 58;
+            gridViewTextBoxColumn12.EnableExpressionEditor = false;
             gridViewTextBoxColumn12.FieldName = "Estado";
             gridViewTextBoxColumn12.HeaderText = "Estado";
             gridViewTextBoxColumn12.Name = "Estado";
-            gridViewTextBoxColumn12.Width = 47;
+            gridViewTextBoxColumn12.Width = 66;
             this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn7,
             gridViewTextBoxColumn8,
@@ -187,7 +186,7 @@
             this.dataInventario.ReadOnly = true;
             this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dataInventario.ShowGroupPanel = false;
-            this.dataInventario.Size = new System.Drawing.Size(585, 332);
+            this.dataInventario.Size = new System.Drawing.Size(585, 337);
             this.dataInventario.TabIndex = 32;
             this.dataInventario.ThemeName = "VisualStudio2012Light";
             // 
@@ -195,32 +194,23 @@
             // 
             this.radPanel1.Controls.Add(this.radLabel14);
             this.radPanel1.Controls.Add(this.radLabel7);
-            this.radPanel1.Controls.Add(this.radLabel4);
             this.radPanel1.Controls.Add(this.radSeparator3);
-            this.radPanel1.Controls.Add(this.radSeparator2);
             this.radPanel1.Controls.Add(this.radSeparator1);
             this.radPanel1.Controls.Add(this.txtCodigo);
-            this.radPanel1.Controls.Add(this.radLabel10);
-            this.radPanel1.Controls.Add(this.radLabel2);
             this.radPanel1.Controls.Add(this.radLabel8);
             this.radPanel1.Controls.Add(this.radLabel13);
             this.radPanel1.Controls.Add(this.radLabel3);
             this.radPanel1.Controls.Add(this.radLabel5);
             this.radPanel1.Controls.Add(this.radLabel6);
-            this.radPanel1.Controls.Add(this.radLabel9);
-            this.radPanel1.Controls.Add(this.cbbPersonal3);
-            this.radPanel1.Controls.Add(this.cbbPersonal1);
-            this.radPanel1.Controls.Add(this.cbbProducto);
+            this.radPanel1.Controls.Add(this.cbbEstado);
             this.radPanel1.Controls.Add(this.cbbInventario);
-            this.radPanel1.Controls.Add(this.cbbPersonal2);
             this.radPanel1.Controls.Add(this.cbbAlmacen);
             this.radPanel1.Controls.Add(this.cbbCentro);
-            this.radPanel1.Controls.Add(this.StockMinimo);
+            this.radPanel1.Controls.Add(this.txtStockMinimo);
             this.radPanel1.Controls.Add(this.txtStockPromedio);
-            this.radPanel1.Controls.Add(this.txtStockActual);
             this.radPanel1.Location = new System.Drawing.Point(12, 12);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(585, 188);
+            this.radPanel1.Size = new System.Drawing.Size(585, 152);
             this.radPanel1.TabIndex = 31;
             this.radPanel1.ThemeName = "VisualStudio2012Light";
             // 
@@ -236,7 +226,7 @@
             // radLabel7
             // 
             this.radLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel7.Location = new System.Drawing.Point(303, 146);
+            this.radLabel7.Location = new System.Drawing.Point(304, 115);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(49, 18);
             this.radLabel7.TabIndex = 2;
@@ -245,7 +235,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(12, 146);
+            this.radLabel4.Location = new System.Drawing.Point(11, 177);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(106, 18);
             this.radLabel4.TabIndex = 2;
@@ -255,21 +245,11 @@
             // 
             this.radSeparator3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator3.Location = new System.Drawing.Point(3, 173);
+            this.radSeparator3.Location = new System.Drawing.Point(11, 139);
             this.radSeparator3.Name = "radSeparator3";
-            this.radSeparator3.Size = new System.Drawing.Size(579, 10);
+            this.radSeparator3.Size = new System.Drawing.Size(557, 10);
             this.radSeparator3.TabIndex = 15;
             this.radSeparator3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator2
-            // 
-            this.radSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator2.Location = new System.Drawing.Point(3, 173);
-            this.radSeparator2.Name = "radSeparator2";
-            this.radSeparator2.Size = new System.Drawing.Size(579, 10);
-            this.radSeparator2.TabIndex = 15;
-            this.radSeparator2.ThemeName = "VisualStudio2012Light";
             // 
             // radSeparator1
             // 
@@ -293,24 +273,6 @@
             this.txtCodigo.TabIndex = 14;
             this.txtCodigo.ThemeName = "VisualStudio2012Light";
             this.txtCodigo.Validar = true;
-            // 
-            // radLabel10
-            // 
-            this.radLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel10.Location = new System.Drawing.Point(12, 84);
-            this.radLabel10.Name = "radLabel10";
-            this.radLabel10.Size = new System.Drawing.Size(59, 18);
-            this.radLabel10.TabIndex = 2;
-            this.radLabel10.Text = "Almacen";
-            // 
-            // radLabel2
-            // 
-            this.radLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel2.Location = new System.Drawing.Point(13, 146);
-            this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(59, 18);
-            this.radLabel2.TabIndex = 2;
-            this.radLabel2.Text = "Almacen";
             // 
             // radLabel8
             // 
@@ -342,7 +304,7 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(303, 115);
+            this.radLabel5.Location = new System.Drawing.Point(304, 84);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(87, 18);
             this.radLabel5.TabIndex = 2;
@@ -351,52 +313,27 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(300, 85);
+            this.radLabel6.Location = new System.Drawing.Point(301, 54);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(100, 18);
             this.radLabel6.TabIndex = 2;
             this.radLabel6.Text = "Stock promedio";
             // 
-            // radLabel9
+            // cbbEstado
             // 
-            this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(300, 55);
-            this.radLabel9.Name = "radLabel9";
-            this.radLabel9.Size = new System.Drawing.Size(80, 18);
-            this.radLabel9.TabIndex = 2;
-            this.radLabel9.Text = "Stock actual";
-            // 
-            // cbbPersonal3
-            // 
-            this.cbbPersonal3.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal3.Correo = false;
-            this.cbbPersonal3.DisplayMember = "Descripcion";
-            this.cbbPersonal3.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal3.Limpiar = true;
-            this.cbbPersonal3.Location = new System.Drawing.Point(409, 139);
-            this.cbbPersonal3.Name = "cbbPersonal3";
-            this.cbbPersonal3.Size = new System.Drawing.Size(168, 25);
-            this.cbbPersonal3.TabIndex = 4;
-            this.cbbPersonal3.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal3.Validar = true;
-            this.cbbPersonal3.ValueMember = "IdTipoProducto";
-            // 
-            // cbbPersonal1
-            // 
-            this.cbbPersonal1.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal1.Correo = false;
-            this.cbbPersonal1.DisplayMember = "Descripcion";
-            this.cbbPersonal1.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal1.Limpiar = true;
-            this.cbbPersonal1.Location = new System.Drawing.Point(409, 139);
-            this.cbbPersonal1.Name = "cbbPersonal1";
-            this.cbbPersonal1.Size = new System.Drawing.Size(168, 25);
-            this.cbbPersonal1.TabIndex = 4;
-            this.cbbPersonal1.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal1.Validar = true;
-            this.cbbPersonal1.ValueMember = "IdTipoProducto";
+            this.cbbEstado.BackColor = System.Drawing.Color.White;
+            this.cbbEstado.Correo = false;
+            this.cbbEstado.DisplayMember = "Descripcion";
+            this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEstado.Limpiar = true;
+            this.cbbEstado.Location = new System.Drawing.Point(410, 108);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(168, 25);
+            this.cbbEstado.TabIndex = 4;
+            this.cbbEstado.ThemeName = "VisualStudio2012Light";
+            this.cbbEstado.Validar = true;
+            this.cbbEstado.ValueMember = "IdTipoProducto";
             // 
             // cbbProducto
             // 
@@ -406,9 +343,9 @@
             this.cbbProducto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProducto.Limpiar = true;
-            this.cbbProducto.Location = new System.Drawing.Point(124, 139);
+            this.cbbProducto.Location = new System.Drawing.Point(123, 170);
             this.cbbProducto.Name = "cbbProducto";
-            this.cbbProducto.Size = new System.Drawing.Size(122, 25);
+            this.cbbProducto.Size = new System.Drawing.Size(362, 25);
             this.cbbProducto.TabIndex = 4;
             this.cbbProducto.ThemeName = "VisualStudio2012Light";
             this.cbbProducto.Validar = true;
@@ -429,22 +366,6 @@
             this.cbbInventario.ThemeName = "VisualStudio2012Light";
             this.cbbInventario.Validar = true;
             this.cbbInventario.ValueMember = "IdTipoProducto";
-            // 
-            // cbbPersonal2
-            // 
-            this.cbbPersonal2.BackColor = System.Drawing.Color.White;
-            this.cbbPersonal2.Correo = false;
-            this.cbbPersonal2.DisplayMember = "Descripcion";
-            this.cbbPersonal2.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbPersonal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbPersonal2.Limpiar = true;
-            this.cbbPersonal2.Location = new System.Drawing.Point(78, 108);
-            this.cbbPersonal2.Name = "cbbPersonal2";
-            this.cbbPersonal2.Size = new System.Drawing.Size(168, 25);
-            this.cbbPersonal2.TabIndex = 4;
-            this.cbbPersonal2.ThemeName = "VisualStudio2012Light";
-            this.cbbPersonal2.Validar = true;
-            this.cbbPersonal2.ValueMember = "IdTipoProducto";
             // 
             // cbbAlmacen
             // 
@@ -482,18 +403,18 @@
             this.cbbCentro.ValueMember = "IdCentro";
             this.cbbCentro.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbCentro_SelectedIndexChanged);
             // 
-            // StockMinimo
+            // txtStockMinimo
             // 
-            this.StockMinimo.Correo = false;
-            this.StockMinimo.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.StockMinimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StockMinimo.Limpiar = true;
-            this.StockMinimo.Location = new System.Drawing.Point(409, 109);
-            this.StockMinimo.Name = "StockMinimo";
-            this.StockMinimo.Size = new System.Drawing.Size(168, 24);
-            this.StockMinimo.TabIndex = 3;
-            this.StockMinimo.ThemeName = "VisualStudio2012Light";
-            this.StockMinimo.Validar = true;
+            this.txtStockMinimo.Correo = false;
+            this.txtStockMinimo.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtStockMinimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStockMinimo.Limpiar = true;
+            this.txtStockMinimo.Location = new System.Drawing.Point(410, 78);
+            this.txtStockMinimo.Name = "txtStockMinimo";
+            this.txtStockMinimo.Size = new System.Drawing.Size(126, 24);
+            this.txtStockMinimo.TabIndex = 3;
+            this.txtStockMinimo.ThemeName = "VisualStudio2012Light";
+            this.txtStockMinimo.Validar = true;
             // 
             // txtStockPromedio
             // 
@@ -501,9 +422,9 @@
             this.txtStockPromedio.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
             this.txtStockPromedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStockPromedio.Limpiar = true;
-            this.txtStockPromedio.Location = new System.Drawing.Point(409, 79);
+            this.txtStockPromedio.Location = new System.Drawing.Point(410, 48);
             this.txtStockPromedio.Name = "txtStockPromedio";
-            this.txtStockPromedio.Size = new System.Drawing.Size(168, 24);
+            this.txtStockPromedio.Size = new System.Drawing.Size(126, 24);
             this.txtStockPromedio.TabIndex = 3;
             this.txtStockPromedio.ThemeName = "VisualStudio2012Light";
             this.txtStockPromedio.Validar = true;
@@ -514,12 +435,14 @@
             this.txtStockActual.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
             this.txtStockActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStockActual.Limpiar = true;
-            this.txtStockActual.Location = new System.Drawing.Point(409, 49);
+            this.txtStockActual.Location = new System.Drawing.Point(491, 171);
             this.txtStockActual.Name = "txtStockActual";
-            this.txtStockActual.Size = new System.Drawing.Size(168, 24);
+            this.txtStockActual.NullText = "Stock actual";
+            this.txtStockActual.Size = new System.Drawing.Size(99, 24);
             this.txtStockActual.TabIndex = 3;
             this.txtStockActual.ThemeName = "VisualStudio2012Light";
             this.txtStockActual.Validar = true;
+            this.txtStockActual.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtStockActual_KeyUp);
             // 
             // matrizDataSet
             // 
@@ -544,6 +467,10 @@
             // 
             this.vistaAlmacenTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,7 +478,10 @@
             this.ClientSize = new System.Drawing.Size(609, 570);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.dataInventario);
+            this.Controls.Add(this.radLabel4);
             this.Controls.Add(this.radPanel1);
+            this.Controls.Add(this.cbbProducto);
+            this.Controls.Add(this.txtStockActual);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.KeyPreview = true;
             this.Name = "Inventario";
@@ -561,6 +491,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Inventario_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Inventario_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).EndInit();
@@ -571,30 +502,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbPersonal2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StockMinimo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStockMinimo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockPromedio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaAlmacenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -607,35 +533,31 @@
         private Telerik.WinControls.UI.RadLabel radLabel14;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadSeparator radSeparator3;
-        private Telerik.WinControls.UI.RadSeparator radSeparator2;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Negocios.Componentes.TextPersonal txtCodigo;
-        private Telerik.WinControls.UI.RadLabel radLabel10;
-        private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel8;
         private Telerik.WinControls.UI.RadLabel radLabel13;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Telerik.WinControls.UI.RadLabel radLabel6;
-        private Telerik.WinControls.UI.RadLabel radLabel9;
         private Negocios.Componentes.cbbPersonal cbbProducto;
         private Negocios.Componentes.cbbPersonal cbbInventario;
-        private Negocios.Componentes.cbbPersonal cbbPersonal2;
         private Negocios.Componentes.cbbPersonal cbbAlmacen;
         private Negocios.Componentes.cbbPersonal cbbCentro;
-        private Negocios.Componentes.TextPersonal StockMinimo;
+        private Negocios.Componentes.TextPersonal txtStockMinimo;
         private Negocios.Componentes.TextPersonal txtStockPromedio;
         private Negocios.Componentes.TextPersonal txtStockActual;
         private Telerik.WinControls.UI.RadGridView dataInventario;
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.UI.RadLabelElement toolRegistro;
         private Telerik.WinControls.UI.RadLabel radLabel7;
-        private Negocios.Componentes.cbbPersonal cbbPersonal3;
-        private Negocios.Componentes.cbbPersonal cbbPersonal1;
+        private Negocios.Componentes.cbbPersonal cbbEstado;
         private MatrizDataSet matrizDataSet;
         private System.Windows.Forms.BindingSource vistaCentroBindingSource;
         private MatrizDataSetTableAdapters.VistaCentroTableAdapter vistaCentroTableAdapter;
         private System.Windows.Forms.BindingSource vistaAlmacenBindingSource;
         private MatrizDataSetTableAdapters.VistaAlmacenTableAdapter vistaAlmacenTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
     }
 }

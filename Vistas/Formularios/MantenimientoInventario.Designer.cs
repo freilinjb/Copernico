@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoInventario));
-            this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
-            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
             this.toolMenu = new System.Windows.Forms.ToolStrip();
+            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
+            this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolImprimir = new System.Windows.Forms.ToolStripButton();
@@ -46,54 +47,58 @@
             this.toolRecargar = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btBusqueda = new Telerik.WinControls.UI.RadButton();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            this.cbbEstado = new Negocios.Componentes.cbbPersonal();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            this.toolMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
-            this.toolMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btBusqueda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolRegistro
+            // textPersonal1
             // 
-            this.toolRegistro.Name = "toolRegistro";
-            this.radStatusStrip1.SetSpring(this.toolRegistro, false);
-            this.toolRegistro.Text = "Nuevo Registro";
-            this.toolRegistro.TextWrap = true;
-            this.toolRegistro.UseCompatibleTextRendering = false;
+            this.textPersonal1.Correo = false;
+            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.textPersonal1.Limpiar = false;
+            this.textPersonal1.Location = new System.Drawing.Point(12, 60);
+            this.textPersonal1.Name = "textPersonal1";
+            this.textPersonal1.NullText = "Informacion a buscar";
+            this.textPersonal1.Size = new System.Drawing.Size(384, 24);
+            this.textPersonal1.TabIndex = 38;
+            this.textPersonal1.ThemeName = "VisualStudio2012Light";
+            this.textPersonal1.Validar = false;
             // 
-            // radStatusStrip1
+            // toolMenu
             // 
-            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.toolRegistro});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 593);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1091, 26);
-            this.radStatusStrip1.TabIndex = 29;
-            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            this.toolMenu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.toolMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolNuevo,
+            this.toolGuardar,
+            this.toolImprimir,
+            this.toolCancelar,
+            this.toolRecargar,
+            this.toolStripButton1});
+            this.toolMenu.Location = new System.Drawing.Point(0, 18);
+            this.toolMenu.Name = "toolMenu";
+            this.toolMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolMenu.Size = new System.Drawing.Size(1091, 39);
+            this.toolMenu.TabIndex = 37;
+            this.toolMenu.Text = "toolStrip1";
             // 
-            // errorProvider1
+            // radSeparator1
             // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.AutoSize = false;
-            this.radLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.radLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.radLabel1.ForeColor = System.Drawing.Color.White;
-            this.radLabel1.Location = new System.Drawing.Point(0, 0);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(1091, 18);
-            this.radLabel1.TabIndex = 31;
-            this.radLabel1.Text = "Mantenimiento de Inventario";
-            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radSeparator1.Location = new System.Drawing.Point(12, 86);
+            this.radSeparator1.Name = "radSeparator1";
+            this.radSeparator1.Size = new System.Drawing.Size(1066, 10);
+            this.radSeparator1.TabIndex = 35;
+            this.radSeparator1.ThemeName = "VisualStudio2012Light";
             // 
             // dataProducto
             // 
@@ -128,31 +133,41 @@
             this.dataProducto.TabIndex = 32;
             this.dataProducto.ThemeName = "VisualStudio2012Light";
             // 
-            // radSeparator1
+            // radLabel1
             // 
-            this.radSeparator1.Location = new System.Drawing.Point(12, 86);
-            this.radSeparator1.Name = "radSeparator1";
-            this.radSeparator1.Size = new System.Drawing.Size(1066, 10);
-            this.radSeparator1.TabIndex = 35;
-            this.radSeparator1.ThemeName = "VisualStudio2012Light";
+            this.radLabel1.AutoSize = false;
+            this.radLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.radLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.radLabel1.ForeColor = System.Drawing.Color.White;
+            this.radLabel1.Location = new System.Drawing.Point(0, 0);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(1091, 18);
+            this.radLabel1.TabIndex = 31;
+            this.radLabel1.Text = "Mantenimiento de Inventario";
+            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // toolMenu
+            // radStatusStrip1
             // 
-            this.toolMenu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.toolMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolNuevo,
-            this.toolGuardar,
-            this.toolImprimir,
-            this.toolCancelar,
-            this.toolRecargar,
-            this.toolStripButton1});
-            this.toolMenu.Location = new System.Drawing.Point(0, 18);
-            this.toolMenu.Name = "toolMenu";
-            this.toolMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolMenu.Size = new System.Drawing.Size(1091, 39);
-            this.toolMenu.TabIndex = 37;
-            this.toolMenu.Text = "toolStrip1";
+            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.toolRegistro});
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 596);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(1091, 23);
+            this.radStatusStrip1.TabIndex = 29;
+            this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
+            // 
+            // toolRegistro
+            // 
+            this.toolRegistro.Name = "toolRegistro";
+            this.radStatusStrip1.SetSpring(this.toolRegistro, false);
+            this.toolRegistro.Text = "Nuevo Registro";
+            this.toolRegistro.TextWrap = true;
+            this.toolRegistro.UseCompatibleTextRendering = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // toolNuevo
             // 
@@ -221,24 +236,28 @@
             this.btBusqueda.Text = "Busqueda";
             this.btBusqueda.ThemeName = "VisualStudio2012Light";
             // 
-            // textPersonal1
+            // cbbEstado
             // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Limpiar = false;
-            this.textPersonal1.Location = new System.Drawing.Point(12, 60);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.NullText = "Informacion a buscar";
-            this.textPersonal1.Size = new System.Drawing.Size(384, 24);
-            this.textPersonal1.TabIndex = 38;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = false;
+            this.cbbEstado.BackColor = System.Drawing.Color.White;
+            this.cbbEstado.Correo = false;
+            this.cbbEstado.DisplayMember = "Descripcion";
+            this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbEstado.Limpiar = true;
+            this.cbbEstado.Location = new System.Drawing.Point(911, 63);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(168, 25);
+            this.cbbEstado.TabIndex = 39;
+            this.cbbEstado.ThemeName = "VisualStudio2012Light";
+            this.cbbEstado.Validar = true;
+            this.cbbEstado.ValueMember = "IdTipoProducto";
             // 
             // MantenimientoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 619);
+            this.Controls.Add(this.cbbEstado);
             this.Controls.Add(this.textPersonal1);
             this.Controls.Add(this.toolMenu);
             this.Controls.Add(this.btBusqueda);
@@ -255,16 +274,17 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Inventario";
             this.Load += new System.EventHandler(this.Inventario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
             this.toolMenu.ResumeLayout(false);
             this.toolMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btBusqueda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,5 +309,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolImprimir;
         private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.cbbPersonal cbbEstado;
     }
 }

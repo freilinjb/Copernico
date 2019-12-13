@@ -270,12 +270,16 @@ namespace Vistas.Formularios
                         }
                     }
                 }
+                this.charBarras.Axes.Clear();
+
+
                 this.charBarras.Series.Clear();
                 this.charBarras.Area.View.Palette = KnownPalette.Arctic;
                 this.charCircular.Area.View.Palette = KnownPalette.Arctic;
                 this.charBarras.Series.Add(barSeries1);
                 this.charCircular.Series.Clear();
                 this.charCircular.Series.Add(seriesCircular1);
+
             }
         }
     }

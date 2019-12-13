@@ -168,7 +168,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 38);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pageInventario;
+            this.pagePrincipal.SelectedPage = this.pageAlmacen;
             this.pagePrincipal.Size = new System.Drawing.Size(567, 241);
             this.pagePrincipal.TabIndex = 40;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -235,7 +235,7 @@
             // radLabel13
             // 
             this.radLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel13.Location = new System.Drawing.Point(39, 24);
+            this.radLabel13.Location = new System.Drawing.Point(22, 24);
             this.radLabel13.Name = "radLabel13";
             this.radLabel13.Size = new System.Drawing.Size(47, 18);
             this.radLabel13.TabIndex = 19;
@@ -275,7 +275,7 @@
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel4.Location = new System.Drawing.Point(334, 92);
+            this.radLabel4.Location = new System.Drawing.Point(317, 92);
             this.radLabel4.Name = "radLabel4";
             this.radLabel4.Size = new System.Drawing.Size(46, 18);
             this.radLabel4.TabIndex = 21;
@@ -284,7 +284,7 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(332, 116);
+            this.radLabel1.Location = new System.Drawing.Point(317, 116);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(49, 18);
             this.radLabel1.TabIndex = 22;
@@ -354,7 +354,7 @@
             // radLabel5
             // 
             this.radLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel5.Location = new System.Drawing.Point(24, 86);
+            this.radLabel5.Location = new System.Drawing.Point(22, 86);
             this.radLabel5.Name = "radLabel5";
             this.radLabel5.Size = new System.Drawing.Size(62, 18);
             this.radLabel5.TabIndex = 24;
@@ -395,7 +395,7 @@
             // radLabel9
             // 
             this.radLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel9.Location = new System.Drawing.Point(32, 56);
+            this.radLabel9.Location = new System.Drawing.Point(22, 56);
             this.radLabel9.Name = "radLabel9";
             this.radLabel9.Size = new System.Drawing.Size(54, 18);
             this.radLabel9.TabIndex = 18;
@@ -420,7 +420,7 @@
             // radLabel6
             // 
             this.radLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel6.Location = new System.Drawing.Point(330, 29);
+            this.radLabel6.Location = new System.Drawing.Point(317, 29);
             this.radLabel6.Name = "radLabel6";
             this.radLabel6.Size = new System.Drawing.Size(51, 19);
             this.radLabel6.TabIndex = 17;
