@@ -48,7 +48,7 @@
             this.cbbMunicipio = new Negocios.Componentes.cbbPersonal();
             this.lbNombreCompleto = new Telerik.WinControls.UI.RadLabel();
             this.radLabel21 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel22 = new Telerik.WinControls.UI.RadLabel();
+            this.lbCodigo = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.cbbSector = new Negocios.Componentes.cbbPersonal();
             this.radLabel14 = new Telerik.WinControls.UI.RadLabel();
@@ -104,7 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombreCompleto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).BeginInit();
@@ -193,7 +193,7 @@
             this.radPanel1.Controls.Add(this.cbbMunicipio);
             this.radPanel1.Controls.Add(this.lbNombreCompleto);
             this.radPanel1.Controls.Add(this.radLabel21);
-            this.radPanel1.Controls.Add(this.radLabel22);
+            this.radPanel1.Controls.Add(this.lbCodigo);
             this.radPanel1.Controls.Add(this.radLabel5);
             this.radPanel1.Controls.Add(this.cbbSector);
             this.radPanel1.Controls.Add(this.radLabel14);
@@ -413,15 +413,15 @@
             this.radLabel21.TabIndex = 10;
             this.radLabel21.Text = "Codigo:";
             // 
-            // radLabel22
+            // lbCodigo
             // 
-            this.radLabel22.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.radLabel22.ForeColor = System.Drawing.Color.Black;
-            this.radLabel22.Location = new System.Drawing.Point(83, 3);
-            this.radLabel22.Name = "radLabel22";
-            this.radLabel22.Size = new System.Drawing.Size(56, 27);
-            this.radLabel22.TabIndex = 10;
-            this.radLabel22.Text = "00001";
+            this.lbCodigo.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.lbCodigo.ForeColor = System.Drawing.Color.Black;
+            this.lbCodigo.Location = new System.Drawing.Point(83, 3);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(56, 27);
+            this.lbCodigo.TabIndex = 10;
+            this.lbCodigo.Text = "00001";
             // 
             // radLabel5
             // 
@@ -897,7 +897,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lbNombreCompleto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lbCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbSector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel14)).EndInit();
@@ -996,7 +996,7 @@
         private Telerik.WinControls.UI.RadDateTimePicker txtFechaIngreso;
         private Telerik.WinControls.UI.RadLabel Fecha;
         private Telerik.WinControls.UI.RadLabel radLabel21;
-        private Telerik.WinControls.UI.RadLabel radLabel22;
+        private Telerik.WinControls.UI.RadLabel lbCodigo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Negocios.Componentes.cbbPersonal cbbTurno;

@@ -50,7 +50,7 @@ namespace Vistas.Formularios
                 {
                     Negocios.Entidades.Obra obra = new Negocios.Entidades.Obra(
                         IdObra,
-                        Convert.ToInt32(cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[0].Value.ToString()),
+                        Convert.ToInt32(cbbCliente.Text),
                         txtObra.Text.Trim(),
                         (int)cbbEncargado.SelectedValue,
                         (int)cbbProvincia.SelectedValue,
@@ -124,7 +124,7 @@ namespace Vistas.Formularios
                 if (cbbCliente.EditorControl.Rows.Count > 0)
                 {
                     if (cbbCliente.Text != null)
-                        lbCliente.Text = cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
+                        lbCliente.Text = (string)cbbCliente.SelectedValue; //cbbCliente.EditorControl.Rows[cbbCliente.EditorControl.CurrentRow.Index].Cells[3].Value.ToString();
 
                     else
                         cbbCliente.Text = null;
@@ -137,6 +137,7 @@ namespace Vistas.Formularios
             if (e.KeyCode == Keys.F1)
             {
                 Guardar();
+                Negocios.Utilidades.Limpiar(this, errorProvider1);
             }
         }
     }

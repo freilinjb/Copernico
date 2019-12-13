@@ -636,7 +636,7 @@
             this.cbbCliente.TabStop = false;
             this.cbbCliente.ThemeName = "VisualStudio2012Light";
             this.cbbCliente.Validar = true;
-            this.cbbCliente.ValueMember = "IdCliente";
+            this.cbbCliente.ValueMember = "RazonSocial";
             this.cbbCliente.SelectedIndexChanged += new System.EventHandler(this.cbbCliente_SelectedIndexChanged);
             // 
             // dataObra

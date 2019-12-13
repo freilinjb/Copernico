@@ -106,18 +106,6 @@ namespace Vistas.Formularios
         {
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Rubro' Puede moverla o quitarla según sea necesario.
             this.rubroTableAdapter.Fill(this.matrizDataSet.Rubro);
-            cbbAlmacen.DataSource = Negocios.Utilidades.Ejecutar("SELECT A.IdAlmacen,A.Descripcion AS Almacen FROM Almacen A INNER JOIN Centro C ON C.IdCentro = A.IdCentro WHERE C.IdCentro = 1").Tables[0];
-            cbbAlmacen.DisplayMember = "Almacen";
-            cbbAlmacen.ValueMember = "IdAlmacen";
-
-            if(cbbAlmacen.Items.Count > 0)
-            {
-                cbbAlmacen.SelectedIndex = 0;
-                //cbbInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT I.IdInventario,TI.Descripcion AS Inventario FROM Inventario I INNER JOIN Almacen A ON A.IdAlmacen = I.IdAlmacen INNER JOIN TipoInventario TI ON TI.IdTipoInventario = I.IdTipoInventario WHERE A.IdAlmacen = 1").Tables[0];
-                //cbbInventario.ValueMember = "IdInventario";
-                //cbbInventario.DisplayMember = "Inventario";
-
-            }
 
             //cbbProducto.DataSource = Negocios.Utilidades.Ejecutar("SELECT P.IdProducto,P.Descripcion AS Producto,F.Descripcion AS Familia,TP.IdTipoProducto,TP.Descripcion AS TipoProducto FROM Producto P INNER JOIN Familia F  ON F.IdFamilia = P.IdFamilia INNER JOIN TipoProducto TP ON TP.IdTipoProducto = P.IdTipoProducto ").Tables[0];
             //cbbProducto.ValueMember = "IdProducto";
@@ -158,11 +146,10 @@ namespace Vistas.Formularios
                             Convert.ToInt32(txtNumOrden.Text.Trim()),
                             1,
                             1,
-                            (int)cbbTipoPedido.SelectedValue,
-                            (int)cbbAlmacen.SelectedValue,
                             1,
+                            (int)cbbTipoPedido.SelectedValue,
                             txtNota.Text.Trim(),
-                            0);
+                            2);
 
 
                         ds = Negocios.Utilidades.Ejecutar(pedido.getGuardar());

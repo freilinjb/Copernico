@@ -61,7 +61,7 @@ namespace Vistas.Formularios
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
-            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM OrdenDeVenta").Tables[0].Rows[0]["Mayor"].ToString();
+            txtNumOrden.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(NumOrden)+1 AS Mayor FROM Orden").Tables[0].Rows[0]["Mayor"].ToString();
 
             cbbTipoCredito.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM TipoCredito").Tables[0];
             cbbTipoCredito.DisplayMember = "Descripcion";

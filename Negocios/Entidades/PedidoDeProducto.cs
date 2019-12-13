@@ -11,27 +11,25 @@ namespace Negocios.Entidades
         public int NumOrde;
         public int IdUsuario;
         public int IdCentro;
+        public int IdTipoOrden;
         public int IdTipoPedido;
-        public int IdAlmacen;
-        public int IdInventario;
         public string Nota;
         public int IdEstado;
 
-        public PedidoDeProducto(int numOrde, int idUsuario, int idCentro, int idTipoPedido,int idAlmacen,int idInventario, string nota, int idEstado)
+        public PedidoDeProducto(int numOrde, int idUsuario, int idCentro,int idTipoOrden, int idTipoPedido, string nota, int idEstado)
         {
             NumOrde = numOrde;
             IdUsuario = idUsuario;
             IdCentro = idCentro;
+            IdTipoOrden = idTipoOrden;
             IdTipoPedido = idTipoPedido;
-            IdAlmacen = idAlmacen;
-            IdInventario = idInventario;
             Nota = nota;
             IdEstado = idEstado;
         }
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarPedidoDeCompra] {NumOrde},{IdUsuario},{IdCentro},{IdTipoPedido},{IdAlmacen},{IdInventario}'{Nota}',{IdEstado}";
+            return $"EXEC [RegistrarPedidoDeCompra] {NumOrde},{IdUsuario},{IdCentro},{IdTipoOrden},{IdTipoPedido},'{Nota}',{IdEstado}";
         }
     }
 }

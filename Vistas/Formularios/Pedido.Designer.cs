@@ -41,6 +41,9 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.toolRegistro = new Telerik.WinControls.UI.RadLabelElement();
             this.cbbUnidad = new Negocios.Componentes.cbbPersonal();
@@ -56,14 +59,10 @@
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.cbbTipoPedido = new Negocios.Componentes.cbbPersonal();
             this.cbbRubro = new Negocios.Componentes.cbbPersonal();
-            this.rubroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.matrizDataSet = new Vistas.MatrizDataSet();
-            this.cbbAlmacen = new Negocios.Componentes.cbbPersonal();
             this.txtCentro = new Negocios.Componentes.TextPersonal();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
-            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
             this.radSeparator2 = new Telerik.WinControls.UI.RadSeparator();
@@ -73,7 +72,8 @@
             this.radSeparator5 = new Telerik.WinControls.UI.RadSeparator();
             this.label4 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.rubroTableAdapter = new Vistas.MatrizDataSetTableAdapters.RubroTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -92,14 +92,10 @@
             this.radGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPedido)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCentro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
@@ -111,6 +107,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
+            // 
+            // rubroBindingSource
+            // 
+            this.rubroBindingSource.DataMember = "Rubro";
+            this.rubroBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rubroTableAdapter
+            // 
+            this.rubroTableAdapter.ClearBeforeFill = true;
             // 
             // radStatusStrip1
             // 
@@ -329,12 +339,10 @@
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
             this.radGroupBox1.Controls.Add(this.cbbTipoPedido);
             this.radGroupBox1.Controls.Add(this.cbbRubro);
-            this.radGroupBox1.Controls.Add(this.cbbAlmacen);
             this.radGroupBox1.Controls.Add(this.txtCentro);
             this.radGroupBox1.Controls.Add(this.radSeparator4);
             this.radGroupBox1.Controls.Add(this.radLabel3);
             this.radGroupBox1.Controls.Add(this.radSeparator3);
-            this.radGroupBox1.Controls.Add(this.radLabel1);
             this.radGroupBox1.Controls.Add(this.radLabel5);
             this.radGroupBox1.Controls.Add(this.radLabel8);
             this.radGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -380,32 +388,6 @@
             this.cbbRubro.ValueMember = "IdRubro";
             this.cbbRubro.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbRubro_SelectedIndexChanged);
             // 
-            // rubroBindingSource
-            // 
-            this.rubroBindingSource.DataMember = "Rubro";
-            this.rubroBindingSource.DataSource = this.matrizDataSet;
-            // 
-            // matrizDataSet
-            // 
-            this.matrizDataSet.DataSetName = "MatrizDataSet";
-            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbbAlmacen
-            // 
-            this.cbbAlmacen.BackColor = System.Drawing.Color.White;
-            this.cbbAlmacen.Correo = false;
-            this.cbbAlmacen.DisplayMember = "Unidad";
-            this.cbbAlmacen.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbAlmacen.Limpiar = true;
-            this.cbbAlmacen.Location = new System.Drawing.Point(139, 94);
-            this.cbbAlmacen.Name = "cbbAlmacen";
-            this.cbbAlmacen.Size = new System.Drawing.Size(281, 25);
-            this.cbbAlmacen.TabIndex = 49;
-            this.cbbAlmacen.ThemeName = "VisualStudio2012Light";
-            this.cbbAlmacen.Validar = true;
-            this.cbbAlmacen.ValueMember = "IdUnidad";
-            // 
             // txtCentro
             // 
             this.txtCentro.Correo = false;
@@ -445,15 +427,6 @@
             this.radSeparator3.Size = new System.Drawing.Size(430, 10);
             this.radSeparator3.TabIndex = 11;
             this.radSeparator3.ThemeName = "VisualStudio2012Light";
-            // 
-            // radLabel1
-            // 
-            this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(11, 101);
-            this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(59, 18);
-            this.radLabel1.TabIndex = 0;
-            this.radLabel1.Text = "Almacen";
             // 
             // radLabel5
             // 
@@ -599,10 +572,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // rubroTableAdapter
-            // 
-            this.rubroTableAdapter.ClearBeforeFill = true;
-            // 
             // Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +599,8 @@
             this.Text = "Solicitud de Pedido";
             this.Load += new System.EventHandler(this.Pedido_Load);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Pedido_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
@@ -650,14 +621,10 @@
             this.radGroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPedido)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbRubro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rubroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCentro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).EndInit();
@@ -701,8 +668,6 @@
         private Negocios.Componentes.cbbPersonal cbbUnidad;
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.UI.RadLabelElement toolRegistro;
-        private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Negocios.Componentes.cbbPersonal cbbAlmacen;
         private Negocios.Componentes.cbbPersonal cbbTipoPedido;
         private Negocios.Componentes.cbbPersonal cbbRubro;
         private Telerik.WinControls.UI.RadLabel radLabel3;
