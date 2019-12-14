@@ -37,6 +37,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.vistaAlmacenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.matrizDataSet = new Vistas.MatrizDataSet();
@@ -171,47 +172,52 @@
             gridViewTextBoxColumn1.FieldName = "IdInventario";
             gridViewTextBoxColumn1.HeaderText = "Codigo";
             gridViewTextBoxColumn1.Name = "IdInventario";
-            gridViewTextBoxColumn1.Width = 51;
+            gridViewTextBoxColumn1.Width = 79;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Inventario";
-            gridViewTextBoxColumn2.HeaderText = "Inventario";
-            gridViewTextBoxColumn2.Name = "Inventario";
-            gridViewTextBoxColumn2.Width = 100;
+            gridViewTextBoxColumn2.FieldName = "Centro";
+            gridViewTextBoxColumn2.HeaderText = "Centro";
+            gridViewTextBoxColumn2.Name = "Centro";
+            gridViewTextBoxColumn2.Width = 95;
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Descripcion";
-            gridViewTextBoxColumn3.HeaderText = "Descripcion";
-            gridViewTextBoxColumn3.Name = "Descripcion";
-            gridViewTextBoxColumn3.Width = 248;
+            gridViewTextBoxColumn3.FieldName = "Inventario";
+            gridViewTextBoxColumn3.HeaderText = "Inventario";
+            gridViewTextBoxColumn3.Name = "Inventario";
+            gridViewTextBoxColumn3.Width = 102;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Unidad";
-            gridViewTextBoxColumn4.HeaderText = "Unidad";
-            gridViewTextBoxColumn4.Name = "Unidad";
-            gridViewTextBoxColumn4.Width = 51;
-            gridViewTextBoxColumn5.DataType = typeof(float);
+            gridViewTextBoxColumn4.FieldName = "Descripcion";
+            gridViewTextBoxColumn4.HeaderText = "Descripcion";
+            gridViewTextBoxColumn4.Name = "Descripcion";
+            gridViewTextBoxColumn4.Width = 165;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "Stock";
-            gridViewTextBoxColumn5.HeaderText = "Stock";
-            gridViewTextBoxColumn5.Name = "Stock";
-            gridViewTextBoxColumn5.Width = 65;
+            gridViewTextBoxColumn5.FieldName = "Unidad";
+            gridViewTextBoxColumn5.HeaderText = "Unidad";
+            gridViewTextBoxColumn5.Name = "Unidad";
+            gridViewTextBoxColumn5.Width = 40;
             gridViewTextBoxColumn6.DataType = typeof(float);
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "StockPromedio";
-            gridViewTextBoxColumn6.HeaderText = "StockPromedio";
-            gridViewTextBoxColumn6.IsVisible = false;
-            gridViewTextBoxColumn6.Name = "StockPromedio";
-            gridViewTextBoxColumn6.Width = 73;
+            gridViewTextBoxColumn6.FieldName = "Stock";
+            gridViewTextBoxColumn6.HeaderText = "Stock";
+            gridViewTextBoxColumn6.Name = "Stock";
+            gridViewTextBoxColumn6.Width = 51;
             gridViewTextBoxColumn7.DataType = typeof(float);
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
-            gridViewTextBoxColumn7.FieldName = "StockMinimo";
-            gridViewTextBoxColumn7.HeaderText = "StockMinimo";
+            gridViewTextBoxColumn7.FieldName = "StockPromedio";
+            gridViewTextBoxColumn7.HeaderText = "StockPromedio";
             gridViewTextBoxColumn7.IsVisible = false;
-            gridViewTextBoxColumn7.Name = "StockMinimo";
-            gridViewTextBoxColumn7.Width = 77;
+            gridViewTextBoxColumn7.Name = "StockPromedio";
+            gridViewTextBoxColumn7.Width = 73;
+            gridViewTextBoxColumn8.DataType = typeof(float);
             gridViewTextBoxColumn8.EnableExpressionEditor = false;
-            gridViewTextBoxColumn8.FieldName = "Estado";
-            gridViewTextBoxColumn8.HeaderText = "Estado";
-            gridViewTextBoxColumn8.Name = "Estado";
-            gridViewTextBoxColumn8.Width = 79;
+            gridViewTextBoxColumn8.FieldName = "StockMinimo";
+            gridViewTextBoxColumn8.HeaderText = "StockMinimo";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "StockMinimo";
+            gridViewTextBoxColumn8.Width = 77;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "Estado";
+            gridViewTextBoxColumn9.HeaderText = "Estado";
+            gridViewTextBoxColumn9.Name = "Estado";
+            gridViewTextBoxColumn9.Width = 63;
             this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -220,9 +226,9 @@
             gridViewTextBoxColumn5,
             gridViewTextBoxColumn6,
             gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8});
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.dataInventario.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataInventario.MasterTemplate.EnableGrouping = false;
             this.dataInventario.MasterTemplate.EnableSorting = false;
             this.dataInventario.MasterTemplate.ShowRowHeaderColumn = false;
             this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition1;

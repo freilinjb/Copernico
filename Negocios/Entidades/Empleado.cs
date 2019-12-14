@@ -57,7 +57,7 @@ namespace Negocios.Entidades
 
         public string getGuardar()
         {
-            return $"EXEC [RegistrarEmpleado] {IdEmpleado},'{Nombre}','{Apellido}','{Apodo}',{IdEstadoCivil},{IdSexo},{IdTipoIdentificacion},'{Identificacion}','{FechaNacimiento}',{IdProvincia},{IdMunicipio},{IdCiudad},{IdSector},{Direccion},{FechaIngreso},{IdTipoContrato},{IdTipoNomina},{IdTipoTurno},{IdDepartamento},{IdPuesto},{IdEstadoEmpleado}";
+            return $"EXEC [RegistrarEmpleado] {IdEmpleado},'{Nombre}','{Apellido}','{Apodo}',{IdEstadoCivil},{IdSexo},{IdTipoIdentificacion},'{Identificacion}','{FechaNacimiento}',{IdProvincia},{IdMunicipio},{IdCiudad},{IdSector},'{Direccion}','{FechaIngreso}',{IdTipoContrato},{IdTipoNomina},{IdTipoTurno},{IdDepartamento},{IdPuesto},{IdEstadoEmpleado}";
         }
     }
 }

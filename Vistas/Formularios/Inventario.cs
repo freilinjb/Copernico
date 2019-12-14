@@ -46,7 +46,7 @@ namespace Vistas.Formularios
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
 
             IdMayor();
-            dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario WHERE IdCentro = 2").Tables[0];
+            dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Centro,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario").Tables[0];
             cbbEstado.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoInventario,Descripcion AS Estado FROM EstadoInventario").Tables[0];
             cbbEstado.ValueMember = "IdEstadoInventario";
             cbbEstado.DisplayMember = "Estado";
@@ -119,7 +119,7 @@ namespace Vistas.Formularios
                 if (Guardar())
                 {
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
-                    dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario WHERE IdCentro = 2").Tables[0];
+                    dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Centro,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario").Tables[0];
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     IdMayor();
                     dataInventario.Refresh();
