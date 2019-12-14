@@ -9,11 +9,16 @@ using Telerik.WinControls;
 
 namespace Vistas.Formularios
 {
-    public partial class MantenimientoInventario : Telerik.WinControls.UI.RadForm
+    public partial class Mantenimiento : Form
     {
-        public MantenimientoInventario()
+        public Mantenimiento()
         {
             InitializeComponent();
+        }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+            //dataInventario
         }
     }
 }

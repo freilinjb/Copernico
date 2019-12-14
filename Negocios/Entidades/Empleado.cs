@@ -15,7 +15,7 @@ namespace Negocios.Entidades
         public int IdEstadoCivil;
         public int IdSexo;
         public int IdTipoIdentificacion;
-        public int Identificacion;
+        public string Identificacion;
         public string FechaNacimiento;
         public int IdProvincia;
         public int IdMunicipio;
@@ -30,7 +30,7 @@ namespace Negocios.Entidades
         public int IdPuesto;
         public int IdEstadoEmpleado;
 
-        public Empleado(int idEmpleado, string nombre, string apellido, string apodo, int idEstadoCivil, int idSexo, int idTipoIdentificacion, int identificacion, string fechaNacimiento, int idProvincia, int idMunicipio, int idCiudad, int idSector, string direccion, string fechaIngreso, int idTipoContrato, int idTipoNomina, int idTipoTurno, int idDepartamento, int idPuesto, int idEstadoEmpleado)
+        public Empleado(int idEmpleado, string nombre, string apellido, string apodo, int idEstadoCivil, int idSexo, int idTipoIdentificacion, string identificacion, string fechaNacimiento, int idProvincia, int idMunicipio, int idCiudad, int idSector, string direccion, string fechaIngreso, int idTipoContrato, int idTipoNomina, int idTipoTurno, int idDepartamento, int idPuesto, int idEstadoEmpleado)
         {
             IdEmpleado = idEmpleado;
             Nombre = nombre;
