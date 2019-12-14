@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            this.components = new System.ComponentModel.Container();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageLote = new Telerik.WinControls.UI.RadPageViewPage();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
+            this.trackGrueso = new Telerik.WinControls.UI.RadTrackBar();
             this.trackFino = new Telerik.WinControls.UI.RadTrackBar();
             this.txtNombre = new Negocios.Componentes.TextPersonal();
             this.radSeparator3 = new Telerik.WinControls.UI.RadSeparator();
@@ -50,19 +52,17 @@
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
             this.chEstado = new Telerik.WinControls.UI.RadToggleSwitch();
             this.pageInventario = new Telerik.WinControls.UI.RadPageViewPage();
-            this.dataInventario = new Telerik.WinControls.UI.RadGridView();
+            this.dataConfiguracion = new Telerik.WinControls.UI.RadGridView();
             this.radSeparator4 = new Telerik.WinControls.UI.RadSeparator();
-            this.radSeparator5 = new Telerik.WinControls.UI.RadSeparator();
-            this.cbbCentro = new Negocios.Componentes.cbbPersonal();
-            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.dataLote = new Telerik.WinControls.UI.RadGridView();
-            this.trackGrueso = new Telerik.WinControls.UI.RadTrackBar();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
             this.pagePrincipal.SuspendLayout();
             this.pageLote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackGrueso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).BeginInit();
@@ -74,15 +74,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).BeginInit();
             this.pageInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataConfiguracion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataConfiguracion.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLote.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackGrueso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +125,7 @@
             this.pageLote.Controls.Add(this.radLabel1);
             this.pageLote.Controls.Add(this.radSeparator1);
             this.pageLote.Controls.Add(this.chEstado);
-            this.pageLote.ItemSize = new System.Drawing.SizeF(224F, 27F);
+            this.pageLote.ItemSize = new System.Drawing.SizeF(276F, 27F);
             this.pageLote.Location = new System.Drawing.Point(5, 33);
             this.pageLote.Name = "pageLote";
             this.pageLote.Size = new System.Drawing.Size(449, 322);
@@ -155,6 +152,20 @@
             this.txtCodigo.TabIndex = 41;
             this.txtCodigo.ThemeName = "VisualStudio2012Light";
             this.txtCodigo.Validar = true;
+            // 
+            // trackGrueso
+            // 
+            this.trackGrueso.LabelStyle = Telerik.WinControls.UI.TrackBarLabelStyle.TopLeft;
+            this.trackGrueso.LargeChange = 5;
+            this.trackGrueso.LargeTickFrequency = 10;
+            this.trackGrueso.Location = new System.Drawing.Point(8, 155);
+            this.trackGrueso.Maximum = 100F;
+            this.trackGrueso.Name = "trackGrueso";
+            this.trackGrueso.Size = new System.Drawing.Size(424, 43);
+            this.trackGrueso.TabIndex = 39;
+            this.trackGrueso.ThemeName = "VisualStudio2012Light";
+            this.trackGrueso.TickStyle = Telerik.WinControls.Enumerations.TickStyles.TopLeft;
+            this.trackGrueso.ValueChanged += new System.EventHandler(this.trackGrueso_ValueChanged);
             // 
             // trackFino
             // 
@@ -272,59 +283,57 @@
             // 
             // pageInventario
             // 
-            this.pageInventario.Controls.Add(this.dataInventario);
+            this.pageInventario.Controls.Add(this.dataConfiguracion);
             this.pageInventario.Controls.Add(this.radSeparator4);
-            this.pageInventario.Controls.Add(this.radSeparator5);
-            this.pageInventario.Controls.Add(this.cbbCentro);
-            this.pageInventario.Controls.Add(this.radLabel3);
-            this.pageInventario.ItemSize = new System.Drawing.SizeF(235F, 27F);
+            this.pageInventario.ItemSize = new System.Drawing.SizeF(183F, 27F);
             this.pageInventario.Location = new System.Drawing.Point(5, 33);
             this.pageInventario.Name = "pageInventario";
             this.pageInventario.Size = new System.Drawing.Size(449, 322);
-            this.pageInventario.Text = "Registro de Tipo de Inventario";
+            this.pageInventario.Text = "Composicion";
             // 
-            // dataInventario
+            // dataConfiguracion
             // 
-            this.dataInventario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataConfiguracion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataInventario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataInventario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dataInventario.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataInventario.Location = new System.Drawing.Point(3, 64);
+            this.dataConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataConfiguracion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataConfiguracion.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataConfiguracion.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataConfiguracion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataConfiguracion.Location = new System.Drawing.Point(3, 16);
             // 
             // 
             // 
-            this.dataInventario.MasterTemplate.AllowAddNewRow = false;
-            this.dataInventario.MasterTemplate.AllowColumnChooser = false;
-            this.dataInventario.MasterTemplate.AllowColumnReorder = false;
-            this.dataInventario.MasterTemplate.AllowDragToGroup = false;
-            this.dataInventario.MasterTemplate.AllowRowResize = false;
-            this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "IdLote";
-            gridViewTextBoxColumn1.HeaderText = "IdTipoInventario";
-            gridViewTextBoxColumn1.Name = "IdLote";
-            gridViewTextBoxColumn1.Width = 153;
-            gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Mina";
-            gridViewTextBoxColumn2.HeaderText = "Inventario";
-            gridViewTextBoxColumn2.Name = "Mina";
-            gridViewTextBoxColumn2.Width = 291;
-            this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2});
-            this.dataInventario.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataInventario.MasterTemplate.EnableSorting = false;
-            this.dataInventario.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dataInventario.Name = "dataInventario";
-            this.dataInventario.ReadOnly = true;
-            this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataInventario.Size = new System.Drawing.Size(442, 223);
-            this.dataInventario.TabIndex = 36;
-            this.dataInventario.ThemeName = "VisualStudio2012Light";
+            this.dataConfiguracion.MasterTemplate.AllowAddNewRow = false;
+            this.dataConfiguracion.MasterTemplate.AllowColumnChooser = false;
+            this.dataConfiguracion.MasterTemplate.AllowColumnReorder = false;
+            this.dataConfiguracion.MasterTemplate.AllowDragToGroup = false;
+            this.dataConfiguracion.MasterTemplate.AllowRowResize = false;
+            this.dataConfiguracion.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "IdLote";
+            gridViewTextBoxColumn5.HeaderText = "Codigo";
+            gridViewTextBoxColumn5.IsVisible = false;
+            gridViewTextBoxColumn5.Name = "IdLote";
+            gridViewTextBoxColumn5.Width = 208;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Mina";
+            gridViewTextBoxColumn6.HeaderText = "Mina";
+            gridViewTextBoxColumn6.Name = "Mina";
+            gridViewTextBoxColumn6.Width = 443;
+            this.dataConfiguracion.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
+            this.dataConfiguracion.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataConfiguracion.MasterTemplate.EnableSorting = false;
+            this.dataConfiguracion.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataConfiguracion.MasterTemplate.ViewDefinition = tableViewDefinition3;
+            this.dataConfiguracion.Name = "dataConfiguracion";
+            this.dataConfiguracion.ReadOnly = true;
+            this.dataConfiguracion.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataConfiguracion.Size = new System.Drawing.Size(442, 303);
+            this.dataConfiguracion.TabIndex = 36;
+            this.dataConfiguracion.ThemeName = "VisualStudio2012Light";
             // 
             // radSeparator4
             // 
@@ -335,41 +344,6 @@
             this.radSeparator4.Size = new System.Drawing.Size(441, 10);
             this.radSeparator4.TabIndex = 35;
             this.radSeparator4.ThemeName = "VisualStudio2012Light";
-            // 
-            // radSeparator5
-            // 
-            this.radSeparator5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radSeparator5.Location = new System.Drawing.Point(3, 48);
-            this.radSeparator5.Name = "radSeparator5";
-            this.radSeparator5.Size = new System.Drawing.Size(443, 10);
-            this.radSeparator5.TabIndex = 35;
-            this.radSeparator5.ThemeName = "VisualStudio2012Light";
-            // 
-            // cbbCentro
-            // 
-            this.cbbCentro.BackColor = System.Drawing.Color.White;
-            this.cbbCentro.Correo = false;
-            this.cbbCentro.DisplayMember = "Descripcion";
-            this.cbbCentro.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbCentro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCentro.Limpiar = true;
-            this.cbbCentro.Location = new System.Drawing.Point(104, 17);
-            this.cbbCentro.Name = "cbbCentro";
-            this.cbbCentro.Size = new System.Drawing.Size(168, 25);
-            this.cbbCentro.TabIndex = 29;
-            this.cbbCentro.ThemeName = "VisualStudio2012Light";
-            this.cbbCentro.Validar = true;
-            this.cbbCentro.ValueMember = "IdTipoProducto";
-            // 
-            // radLabel3
-            // 
-            this.radLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel3.Location = new System.Drawing.Point(3, 23);
-            this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(95, 18);
-            this.radLabel3.TabIndex = 24;
-            this.radLabel3.Text = "Tipo Inventario";
             // 
             // dataLote
             // 
@@ -391,25 +365,25 @@
             this.dataLote.MasterTemplate.AllowDragToGroup = false;
             this.dataLote.MasterTemplate.AllowRowResize = false;
             this.dataLote.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn3.DataType = typeof(int);
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "IdLote";
-            gridViewTextBoxColumn3.HeaderText = "Codigo";
-            gridViewTextBoxColumn3.Name = "IdLote";
-            gridViewTextBoxColumn3.Width = 96;
-            gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "Lote";
-            gridViewTextBoxColumn4.HeaderText = "Lote";
-            gridViewTextBoxColumn4.Name = "Lote";
-            gridViewTextBoxColumn4.Width = 365;
+            gridViewTextBoxColumn7.DataType = typeof(int);
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "IdLote";
+            gridViewTextBoxColumn7.HeaderText = "Codigo";
+            gridViewTextBoxColumn7.Name = "IdLote";
+            gridViewTextBoxColumn7.Width = 96;
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "Lote";
+            gridViewTextBoxColumn8.HeaderText = "Lote";
+            gridViewTextBoxColumn8.Name = "Lote";
+            gridViewTextBoxColumn8.Width = 365;
             this.dataLote.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn3,
-            gridViewTextBoxColumn4});
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8});
             this.dataLote.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataLote.MasterTemplate.EnableGrouping = false;
             this.dataLote.MasterTemplate.EnableSorting = false;
             this.dataLote.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataLote.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.dataLote.MasterTemplate.ViewDefinition = tableViewDefinition4;
             this.dataLote.Name = "dataLote";
             this.dataLote.ReadOnly = true;
             this.dataLote.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -417,20 +391,11 @@
             this.dataLote.Size = new System.Drawing.Size(459, 289);
             this.dataLote.TabIndex = 42;
             this.dataLote.ThemeName = "VisualStudio2012Light";
+            this.dataLote.CellDoubleClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.dataLote_CellDoubleClick);
             // 
-            // trackGrueso
+            // errorProvider1
             // 
-            this.trackGrueso.LabelStyle = Telerik.WinControls.UI.TrackBarLabelStyle.TopLeft;
-            this.trackGrueso.LargeChange = 5;
-            this.trackGrueso.LargeTickFrequency = 10;
-            this.trackGrueso.Location = new System.Drawing.Point(8, 155);
-            this.trackGrueso.Maximum = 100F;
-            this.trackGrueso.Name = "trackGrueso";
-            this.trackGrueso.Size = new System.Drawing.Size(424, 43);
-            this.trackGrueso.TabIndex = 39;
-            this.trackGrueso.ThemeName = "VisualStudio2012Light";
-            this.trackGrueso.TickStyle = Telerik.WinControls.Enumerations.TickStyles.TopLeft;
-            this.trackGrueso.ValueChanged += new System.EventHandler(this.trackGrueso_ValueChanged);
+            this.errorProvider1.ContainerControl = this;
             // 
             // Lote
             // 
@@ -448,6 +413,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Lote";
             this.Load += new System.EventHandler(this.Lote_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Lote_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).EndInit();
             this.pagePrincipal.ResumeLayout(false);
@@ -455,6 +421,7 @@
             this.pageLote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackGrueso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackFino)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator3)).EndInit();
@@ -466,16 +433,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chEstado)).EndInit();
             this.pageInventario.ResumeLayout(false);
-            this.pageInventario.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataConfiguracion.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataConfiguracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radSeparator5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbCentro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLote.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLote)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackGrueso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -489,11 +452,8 @@
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
         private Telerik.WinControls.UI.RadToggleSwitch chEstado;
         private Telerik.WinControls.UI.RadPageViewPage pageInventario;
-        private Telerik.WinControls.UI.RadGridView dataInventario;
+        private Telerik.WinControls.UI.RadGridView dataConfiguracion;
         private Telerik.WinControls.UI.RadSeparator radSeparator4;
-        private Telerik.WinControls.UI.RadSeparator radSeparator5;
-        private Negocios.Componentes.cbbPersonal cbbCentro;
-        private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadTrackBar trackDesperdicio;
         private Telerik.WinControls.UI.RadLabel radLabel2;
@@ -505,5 +465,6 @@
         private Telerik.WinControls.UI.RadLabel radLabel5;
         private Negocios.Componentes.TextPersonal txtCodigo;
         private Telerik.WinControls.UI.RadTrackBar trackGrueso;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

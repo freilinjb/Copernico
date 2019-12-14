@@ -32,6 +32,7 @@ namespace Vistas.Formularios
 
         private void IdMayor()
         {
+            RadMessageBox.ThemeName = this.ThemeName;
             ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdLote)+1 AS Mayor FROM Lote");
             txtCodigo.Text = string.Format("{0:00000}", Convert.ToInt32((ds.Tables[0].Rows[0]["Mayor"] == DBNull.Value) ? "1" : ds.Tables[0].Rows[0]["Mayor"].ToString()));
         }
@@ -44,56 +45,40 @@ namespace Vistas.Formularios
 
         public override bool Guardar()
         {
-             public override bool Guardar()
-        {
             bool bien = false;
 
-            if (Negocios.Utilidades.Validar(radPanel1, errorProvider1) == false)
+            try
             {
-                try
+                if (pagePrincipal.SelectedPage.Name == pageLote.Name)
                 {
-                    Negocios.Entidades.Empleado centro = new Negocios.Entidades.Empleado(
-                    Convert.ToInt32(lbCodigo.Text.Trim()),
-                    txtNombre.Text.Trim(),
-                    txtApellido.Text.Trim(),
-                    txtApodo.Text.Trim(),
-                    (int)cbbEstadoCivil.SelectedValue,
-                    (int)cbbSexo.SelectedValue,
-                    (int)cbbTipoIndentificacion.SelectedValue,
-                    txtIdentificacion.Text.Trim(),
-                    txtFechNacimiento.Text.Trim(),
-                    (int)cbbProvincia.SelectedValue,
-                    (int)cbbCiudad.SelectedValue,
-                    (int)cbbMunicipio.SelectedValue,
-                    (int)cbbSector.SelectedValue,
-                    txtDireccion.Text.Trim(),
-                    txtFechaIngreso.Text.Trim(),
-                    (int)cbbTipoIndentificacion.SelectedValue,
-                    (int)cbbNomina.SelectedValue,
-                    (int)cbbTurno.SelectedValue,
-                    (int)cbbDepartamento.SelectedValue,
-                    (int)cbbPuesto.SelectedValue,
-                    (int)cbbEstado.SelectedValue);
-
-                    ds = Negocios.Utilidades.Ejecutar(centro.getGuardar());
-
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (Negocios.Utilidades.Validar(pageLote, errorProvider1) == false)
                     {
-                        bien = true;
-                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                        Negocios.Entidades.Lote centro = new Negocios.Entidades.Lote(
+                            Convert.ToInt32(txtCodigo.Text.Trim()),
+                            trackFino.Value,
+                            trackGrueso.Value,
+                            0,
+                            chEstado.Value);
 
+                        ds = Negocios.Utilidades.Ejecutar(centro.getGuardar());
+
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            bien = true;
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+
+                        }
                     }
                 }
-                catch (Exception ex)
-                {
-                    RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
-                    bien = false;
-                }
+            }
+            catch (Exception ex)
+            {
+                RadMessageBox.Show("Ha ocurrido un error", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Error, ex.Message);
+                bien = false;
             }
 
             return bien;
         }
-    }
 
         private void trackFino_ValueChanged(object sender, EventArgs e)
         {
@@ -102,12 +87,44 @@ namespace Vistas.Formularios
 
             trackGrueso.Maximum = 100 - temp;
             trackGrueso.Value = trackGrueso.Maximum;
+
+            txtNombre.Text = $"Lote {trackFino.Value}/{trackGrueso.Value}";
         }
 
         private void trackGrueso_ValueChanged(object sender, EventArgs e)
         {
             float temp = Convert.ToSingle(trackGrueso.Value);
             lbPorcentajeGrueso.Text = string.Format("{0:P3}", temp / 100);
+
+            txtNombre.Text = $"Lote {trackFino.Value}/{trackGrueso.Value}";
+
+        }
+
+        private void Lote_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                if(Guardar())
+                {
+                    dataLote.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdLote,Descripcion AS Lote FROM Lote").Tables[0];
+                    Negocios.Utilidades.Limpiar(this, errorProvider1);
+                    trackFino.Value = 0;
+                    trackGrueso.Value = 0;
+                    IdMayor();
+                }
+            }
+        }
+
+        private void dataLote_CellDoubleClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+            if(dataLote.Rows.Count > 0)
+            {
+                if(RadMessageBox.Show($"Desea editar el Centro {dataLote.Rows[dataLote.CurrentRow.Index].Cells["Lote"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    dataConfiguracion.DataSource = Negocios.Utilidades.Ejecutar($"select L.IdLote,T.Nombre AS Mina from Lote L INNER JOIN Composicion C ON C.IdLote = L.IdLote INNER JOIN Mina M ON M.IdMina = C.IdMina INNER JOIN Tercero T ON T.IdTercero = M.IdTercero WHERE L.IdLote = {dataLote.Rows[dataLote.CurrentRow.Index].Cells["IdLote"].Value.ToString()}").Tables[0];
+
+                }
+            }
         }
     }
 }

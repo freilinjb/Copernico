@@ -238,6 +238,12 @@
     <Compile Include="Formularios\Pedido.Designer.cs">
       <DependentUpon>Pedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Planta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Planta.Designer.cs">
+      <DependentUpon>Planta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -422,6 +428,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pedido.resx">
       <DependentUpon>Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Planta.resx">
+      <DependentUpon>Planta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>

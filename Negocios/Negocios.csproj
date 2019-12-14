@@ -107,6 +107,7 @@
     <Compile Include="Entidades\PedidoDeProducto.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\Cubicacion.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>

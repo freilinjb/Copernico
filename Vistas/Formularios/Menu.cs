@@ -142,5 +142,13 @@ namespace Vistas.Formularios
             lote.MdiParent = this;
             lote.Show();
         }
+
+        private void btCubicacion_Click_2(object sender, EventArgs e)
+        {
+            ActivoCubicacion cubicacion = ActivoCubicacion.ObtenerInstancia();
+            cubicacion.MdiParent = this;
+            cubicacion.Show();
+
+        }
     }
 }

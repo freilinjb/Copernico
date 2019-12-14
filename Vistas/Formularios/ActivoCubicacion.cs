@@ -93,11 +93,28 @@ namespace Vistas.Formularios
 
                     if(ds.Tables[0].Rows.Count > 0)
                     {
+                        Negocios.Entidades.Cubicacion cubicacion = new Negocios.Entidades.Cubicacion(
+                            IdMaquinaria,
+                            Convert.ToSingle(txtCajonLargo.Text.Trim()),
+                            Convert.ToSingle(txtCajonAncho.Text.Trim()),
+                            Convert.ToSingle(txtCajonAlto.Text.Trim()),
+                            Convert.ToSingle(txtTablonLargo.Text.Trim()),
+                            Convert.ToSingle(txtTablonAncho.Text.Trim()),
+                            Convert.ToSingle(txtTablonAlto.Text.Trim()),
+                            Convert.ToSingle(txtBotellaLargo.Text.Trim()),
+                            Convert.ToSingle(txtBotellaAncho.Text.Trim()),
+                            Convert.ToSingle(txtBotellaAlto.Text.Trim()),
+                            Convert.ToSingle(txtCapacidadFacturar.Text.Trim()));
 
-                        RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                        ds = Negocios.Utilidades.Ejecutar(cubicacion.getGuardar());
 
-                        Negocios.Utilidades.Limpiar(this, errorProvider1);
-                        txtActivoFijo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdActivoFijo)+1 AS Mayor FROM ActivoFijo").Tables[0].Rows[0]["Mayor"].ToString();
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                            Negocios.Utilidades.Limpiar(this, errorProvider1);
+                            txtActivoFijo.Text = Negocios.Utilidades.Ejecutar("SELECT MAX(IdActivoFijo)+1 AS Mayor FROM ActivoFijo").Tables[0].Rows[0]["Mayor"].ToString();
+                        }
+
                     }
                 }
                 catch(Exception ex)

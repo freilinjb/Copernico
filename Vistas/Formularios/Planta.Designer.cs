@@ -1,6 +1,6 @@
 ﻿namespace Vistas.Formularios
 {
-    partial class Entrada
+    partial class Planta
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,12 @@
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
-            // Entrada
+            // Planta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 570);
-            this.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.Name = "Entrada";
-            // 
-            // 
-            // 
-            this.RootElement.ApplyShapeToControl = true;
-            this.Text = "Entrada";
+            this.Name = "Planta";
+            this.Text = "Planta";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
