@@ -77,6 +77,7 @@
             Telerik.WinControls.UI.GridViewCheckBoxColumn gridViewCheckBoxColumn3 = new Telerik.WinControls.UI.GridViewCheckBoxColumn();
             Telerik.WinControls.UI.GridViewDateTimeColumn gridViewDateTimeColumn1 = new Telerik.WinControls.UI.GridViewDateTimeColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenDeVenta));
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.cbbObra = new Negocios.Componentes.MultiCbbPersonal();
             this.orbraMantenimientoVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -1379,6 +1380,7 @@
             this.Controls.Add(this.radLabel6);
             this.Controls.Add(this.radLabel10);
             this.Controls.Add(this.radLabel7);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "OrdenDeVenta";
             // 

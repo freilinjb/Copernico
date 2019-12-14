@@ -77,7 +77,7 @@ namespace Vistas.Formularios
 
         public override bool Guardar()
         {
-            bool bien = true;
+            bool bien = false;
 
             if (pagePrincipal.SelectedPage.Name == pageActivoFijo.Name || pagePrincipal.SelectedPage.Name == pageEspesificacion.Name)
             {
@@ -108,8 +108,10 @@ namespace Vistas.Formularios
 
                         if (ds.Tables[0].Rows.Count > 0)
                         {
-
+                            if((int)cbbSubGrupo.SelectedValue == 39)
+                                ds = Negocios.Utilidades.Ejecutar($"INSERT INTO Planta(IdLinea,IdActivoFijo) VALUES(14,{ Convert.ToInt32(txtCodigo.Text.Trim())})");
                             RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                            bien = true;
                         }
                     }
                     else if(pagePrincipal.SelectedPage.Name == pageEspesificacion.Name)

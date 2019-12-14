@@ -168,7 +168,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 38);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pageAlmacen;
+            this.pagePrincipal.SelectedPage = this.pageInventario;
             this.pagePrincipal.Size = new System.Drawing.Size(567, 241);
             this.pagePrincipal.TabIndex = 40;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -322,8 +322,8 @@
             this.pageInventario.Controls.Add(this.dataInventario);
             this.pageInventario.Controls.Add(this.radSeparator4);
             this.pageInventario.Controls.Add(this.radSeparator5);
-            this.pageInventario.Controls.Add(this.cbbTipoInventario);
             this.pageInventario.Controls.Add(this.radLabel2);
+            this.pageInventario.Controls.Add(this.cbbTipoInventario);
             this.pageInventario.ItemSize = new System.Drawing.SizeF(313F, 27F);
             this.pageInventario.Location = new System.Drawing.Point(5, 33);
             this.pageInventario.Name = "pageInventario";

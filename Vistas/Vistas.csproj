@@ -178,12 +178,6 @@
     <Compile Include="Formularios\Filtro.Designer.cs">
       <DependentUpon>Filtro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\GrupoInventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\GrupoInventario.Designer.cs">
-      <DependentUpon>GrupoInventario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Imprimir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,9 +393,6 @@
     <EmbeddedResource Include="Formularios\Filtro.resx">
       <DependentUpon>Filtro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\GrupoInventario.resx">
-      <DependentUpon>GrupoInventario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Imprimir.resx">
       <DependentUpon>Imprimir.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,6 +507,11 @@
     <None Include="Resources\proveedor.png" />
     <None Include="Resources\Inventario.png" />
     <None Include="Resources\Lote.png" />
+    <None Include="Resources\Planta.png" />
+    <None Include="Resources\OrdenVenta.png" />
+    <None Include="Resources\ProyeccionProduccion.png" />
+    <None Include="Resources\Produccion.png" />
+    <None Include="Resources\Requisicion.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

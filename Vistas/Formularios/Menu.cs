@@ -150,5 +150,12 @@ namespace Vistas.Formularios
             cubicacion.Show();
 
         }
+
+        private void btPlanta_Click(object sender, EventArgs e)
+        {
+            Planta planta = Planta.ObtenerInstancia();
+            planta.MdiParent = this;
+            planta.Show();
+        }
     }
 }

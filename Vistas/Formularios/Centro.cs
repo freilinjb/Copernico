@@ -12,12 +12,14 @@ namespace Vistas.Formularios
 {
     public partial class Centro : FormBase
     {
-        private static Centro Instancia;
         private DataSet ds;
 
         private int cont_fila = 0;
         private int num_fila = 0;
         private bool existe = false;
+
+        private static Centro Instancia;
+
 
         private Centro()
         {

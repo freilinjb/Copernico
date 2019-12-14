@@ -247,7 +247,7 @@ namespace Vistas.Formularios
             {
                 if (dataInventario.RowCount > 0)
                 {
-                    if (RadMessageBox.Show($"Desea editar el Producto {dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    if (RadMessageBox.Show($"Desea Eliminar el Inventario {dataInventario.Rows[dataInventario.CurrentRow.Index].Cells["Inventario"].Value.ToString()}", "INFORMACION DEL SISTEMA", MessageBoxButtons.YesNo, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                     {
                         dataInventario.Rows.RemoveAt(dataInventario.CurrentRow.Index);
                     }
