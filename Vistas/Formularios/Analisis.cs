@@ -15,6 +15,8 @@ namespace Vistas.Formularios
     public partial class Analisis : FormBase
     {
         private List<Negocios.Entidades.Analisis.ResumenProducto>ListProducto;
+        private float Fino = 0;
+        private float Grueso = 0;
 
         private void CargarProductos()
         {
@@ -187,6 +189,23 @@ namespace Vistas.Formularios
                         if(Negocios.Utilidades.Ejecutar(analisis.getGuardar()).Tables[0].Rows.Count > 0)
                         {
                             bien = true;
+
+                            ds = Negocios.Utilidades.Ejecutar($"SELECT TOP 1 IdLote,Descripcion AS Lote FROM Lote WHERE PorcentajeFino >= {Fino} AND PorcentajeGrueso <= {Grueso}");
+                            if(ds.Tables[0].Rows.Count > 0)
+                            {
+                                string Lote = ds.Tables[0].Rows[0]["Lote"].ToString();
+
+                                ds = Negocios.Utilidades.Ejecutar($"EXEC RegistrarComposicion {ds.Tables[0].Rows[0]["IdLote"]},{cbbMina.SelectedValue}");
+
+                                if(ds.Tables[0].Rows.Count > 0)
+                                {
+                                    RadMessageBox.Show($"Este producto debe almacenarse en el {Lote}", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                                }
+                                else
+                                {
+                                    RadMessageBox.Show($"Debe crear un Lote para la Configuración de este Material", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                                }
+                            }
                         }
                     }
                 }
@@ -259,9 +278,15 @@ namespace Vistas.Formularios
                     if(producto.Porcentaje != 0)
                     {
 
-                        if(producto.Producto == "GRUESO" || producto.Producto == "FINO")
+                        if(producto.Producto == "GRUESO")
                         {
                             seriesCircular1.DataPoints.Add(new PieDataPoint(producto.Porcentaje, producto.Producto));
+                            Grueso += producto.Porcentaje;
+                        }
+                        else if(producto.Producto == "FINO")
+                        {
+                            seriesCircular1.DataPoints.Add(new PieDataPoint(producto.Porcentaje, producto.Producto));
+                            Fino += producto.Porcentaje;
                         }
                         else
                         {
@@ -270,6 +295,8 @@ namespace Vistas.Formularios
                         }
                     }
                 }
+                Grueso = Grueso * 100;
+                Fino = Fino * 100;
                 this.charBarras.Axes.Clear();
 
 
@@ -279,6 +306,9 @@ namespace Vistas.Formularios
                 this.charBarras.Series.Add(barSeries1);
                 this.charCircular.Series.Clear();
                 this.charCircular.Series.Add(seriesCircular1);
+
+                //PARTE DE LA DEPURACION
+                //RadMessageBox.Show($"Fino: {Fino} Grueso: {Grueso}");
 
             }
         }

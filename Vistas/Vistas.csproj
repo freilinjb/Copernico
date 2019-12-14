@@ -202,6 +202,12 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Lote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lote.Designer.cs">
+      <DependentUpon>Lote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Mantenimiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +405,9 @@
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lote.resx">
+      <DependentUpon>Lote.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,6 +506,7 @@
     <None Include="Resources\Producto.png" />
     <None Include="Resources\proveedor.png" />
     <None Include="Resources\Inventario.png" />
+    <None Include="Resources\Lote.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

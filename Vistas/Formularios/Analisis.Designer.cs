@@ -90,15 +90,6 @@
             this.radLabel17 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel19 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel20 = new Telerik.WinControls.UI.RadLabel();
-            this.pageEstadistica = new Telerik.WinControls.UI.RadPageViewPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.charBarras = new Telerik.WinControls.UI.RadChartView();
-            this.charCircular = new Telerik.WinControls.UI.RadChartView();
-            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataMaterialPorcentaje = new Telerik.WinControls.UI.RadGridView();
-            this.rangoSelector = new Telerik.WinControls.UI.RadRangeSelector();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cbbTipoMaterial = new Negocios.Componentes.cbbPersonal();
             this.cbbMina = new Negocios.Componentes.cbbPersonal();
             this.cbbTipoAnalisis = new Negocios.Componentes.cbbPersonal();
@@ -108,6 +99,15 @@
             this.txtBanqueta = new Negocios.Componentes.TextPersonal();
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
             this.txtObservacion = new Negocios.Componentes.TextPersonal();
+            this.pageEstadistica = new Telerik.WinControls.UI.RadPageViewPage();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.charBarras = new Telerik.WinControls.UI.RadChartView();
+            this.charCircular = new Telerik.WinControls.UI.RadChartView();
+            this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataMaterialPorcentaje = new Telerik.WinControls.UI.RadGridView();
+            this.rangoSelector = new Telerik.WinControls.UI.RadRangeSelector();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).BeginInit();
@@ -127,6 +127,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMaterial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoAnalisis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHumedad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadFinal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadInicial)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBanqueta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion)).BeginInit();
             this.pageEstadistica.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.charBarras)).BeginInit();
@@ -137,15 +146,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMaterial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoAnalisis)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHumedad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadFinal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadInicial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBanqueta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -343,40 +343,40 @@
             gridViewTextBoxColumn1.HeaderText = "No. Tamiz";
             gridViewTextBoxColumn1.Name = "NumMalla";
             gridViewTextBoxColumn1.ReadOnly = true;
-            gridViewTextBoxColumn1.Width = 121;
+            gridViewTextBoxColumn1.Width = 122;
             gridViewTextBoxColumn2.DataType = typeof(float);
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
             gridViewTextBoxColumn2.FormatString = "{0:0.0000 mm}";
             gridViewTextBoxColumn2.HeaderText = "Tamiz mm";
             gridViewTextBoxColumn2.Name = "Apertura";
             gridViewTextBoxColumn2.ReadOnly = true;
-            gridViewTextBoxColumn2.Width = 119;
+            gridViewTextBoxColumn2.Width = 120;
             gridViewTextBoxColumn3.DataType = typeof(float);
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
             gridViewTextBoxColumn3.HeaderText = "Peso Retenido (Gr.)";
             gridViewTextBoxColumn3.Name = "PesoRetenido";
-            gridViewTextBoxColumn3.Width = 124;
+            gridViewTextBoxColumn3.Width = 125;
             gridViewTextBoxColumn4.DataType = typeof(float);
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FormatString = "{0:P3}";
             gridViewTextBoxColumn4.HeaderText = "Retenido %";
             gridViewTextBoxColumn4.Name = "Retenido";
             gridViewTextBoxColumn4.ReadOnly = true;
-            gridViewTextBoxColumn4.Width = 134;
+            gridViewTextBoxColumn4.Width = 135;
             gridViewTextBoxColumn5.DataType = typeof(float);
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.FormatString = "{0:P3}";
             gridViewTextBoxColumn5.HeaderText = "Retenido Acumulado";
             gridViewTextBoxColumn5.Name = "RetenidoAcumulado";
             gridViewTextBoxColumn5.ReadOnly = true;
-            gridViewTextBoxColumn5.Width = 139;
+            gridViewTextBoxColumn5.Width = 140;
             gridViewTextBoxColumn6.DataType = typeof(float);
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
             gridViewTextBoxColumn6.FormatString = "{0:P3}";
             gridViewTextBoxColumn6.HeaderText = "Pasante (%)";
             gridViewTextBoxColumn6.Name = "Pasante";
             gridViewTextBoxColumn6.ReadOnly = true;
-            gridViewTextBoxColumn6.Width = 146;
+            gridViewTextBoxColumn6.Width = 147;
             this.dataTamiz.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -488,6 +488,139 @@
             this.radLabel20.Size = new System.Drawing.Size(37, 19);
             this.radLabel20.TabIndex = 43;
             this.radLabel20.Text = "Mina";
+            // 
+            // cbbTipoMaterial
+            // 
+            this.cbbTipoMaterial.BackColor = System.Drawing.Color.White;
+            this.cbbTipoMaterial.Correo = false;
+            this.cbbTipoMaterial.DisplayMember = "Descripcion";
+            this.cbbTipoMaterial.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoMaterial.Limpiar = true;
+            this.cbbTipoMaterial.Location = new System.Drawing.Point(114, 104);
+            this.cbbTipoMaterial.Name = "cbbTipoMaterial";
+            this.cbbTipoMaterial.NullText = "Tipo de Identificacion";
+            this.cbbTipoMaterial.Size = new System.Drawing.Size(118, 23);
+            this.cbbTipoMaterial.TabIndex = 62;
+            this.cbbTipoMaterial.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoMaterial.Validar = true;
+            this.cbbTipoMaterial.ValueMember = "IdTipoIdentificacion";
+            // 
+            // cbbMina
+            // 
+            this.cbbMina.BackColor = System.Drawing.Color.White;
+            this.cbbMina.Correo = false;
+            this.cbbMina.DisplayMember = "Descripcion";
+            this.cbbMina.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbMina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbMina.Limpiar = true;
+            this.cbbMina.Location = new System.Drawing.Point(114, 75);
+            this.cbbMina.Name = "cbbMina";
+            this.cbbMina.NullText = "Tipo de Identificacion";
+            this.cbbMina.Size = new System.Drawing.Size(118, 23);
+            this.cbbMina.TabIndex = 61;
+            this.cbbMina.ThemeName = "VisualStudio2012Light";
+            this.cbbMina.Validar = true;
+            this.cbbMina.ValueMember = "IdTipoIdentificacion";
+            // 
+            // cbbTipoAnalisis
+            // 
+            this.cbbTipoAnalisis.BackColor = System.Drawing.Color.White;
+            this.cbbTipoAnalisis.Correo = false;
+            this.cbbTipoAnalisis.DisplayMember = "Descripcion";
+            this.cbbTipoAnalisis.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoAnalisis.Limpiar = true;
+            this.cbbTipoAnalisis.Location = new System.Drawing.Point(114, 46);
+            this.cbbTipoAnalisis.Name = "cbbTipoAnalisis";
+            this.cbbTipoAnalisis.NullText = "Tipo de Identificacion";
+            this.cbbTipoAnalisis.Size = new System.Drawing.Size(118, 23);
+            this.cbbTipoAnalisis.TabIndex = 60;
+            this.cbbTipoAnalisis.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoAnalisis.Validar = true;
+            this.cbbTipoAnalisis.ValueMember = "IdTipoIdentificacion";
+            // 
+            // txtHumedad
+            // 
+            this.txtHumedad.Correo = false;
+            this.txtHumedad.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtHumedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHumedad.Limpiar = true;
+            this.txtHumedad.Location = new System.Drawing.Point(406, 133);
+            this.txtHumedad.Name = "txtHumedad";
+            this.txtHumedad.NullText = "%";
+            this.txtHumedad.Size = new System.Drawing.Size(118, 24);
+            this.txtHumedad.TabIndex = 57;
+            this.txtHumedad.ThemeName = "VisualStudio2012Light";
+            this.txtHumedad.Validar = true;
+            // 
+            // txtCantidadFinal
+            // 
+            this.txtCantidadFinal.Correo = false;
+            this.txtCantidadFinal.Enabled = false;
+            this.txtCantidadFinal.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtCantidadFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadFinal.Limpiar = true;
+            this.txtCantidadFinal.Location = new System.Drawing.Point(404, 103);
+            this.txtCantidadFinal.Name = "txtCantidadFinal";
+            this.txtCantidadFinal.Size = new System.Drawing.Size(118, 24);
+            this.txtCantidadFinal.TabIndex = 56;
+            this.txtCantidadFinal.ThemeName = "VisualStudio2012Light";
+            this.txtCantidadFinal.Validar = false;
+            // 
+            // txtCantidadInicial
+            // 
+            this.txtCantidadInicial.Correo = false;
+            this.txtCantidadInicial.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtCantidadInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadInicial.Limpiar = true;
+            this.txtCantidadInicial.Location = new System.Drawing.Point(404, 73);
+            this.txtCantidadInicial.Name = "txtCantidadInicial";
+            this.txtCantidadInicial.Size = new System.Drawing.Size(118, 24);
+            this.txtCantidadInicial.TabIndex = 56;
+            this.txtCantidadInicial.Text = "7000";
+            this.txtCantidadInicial.ThemeName = "VisualStudio2012Light";
+            this.txtCantidadInicial.Validar = true;
+            // 
+            // txtBanqueta
+            // 
+            this.txtBanqueta.Correo = false;
+            this.txtBanqueta.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtBanqueta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBanqueta.Limpiar = true;
+            this.txtBanqueta.Location = new System.Drawing.Point(114, 133);
+            this.txtBanqueta.Name = "txtBanqueta";
+            this.txtBanqueta.Size = new System.Drawing.Size(118, 24);
+            this.txtBanqueta.TabIndex = 55;
+            this.txtBanqueta.ThemeName = "VisualStudio2012Light";
+            this.txtBanqueta.Validar = true;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Correo = false;
+            this.txtCodigo.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Limpiar = false;
+            this.txtCodigo.Location = new System.Drawing.Point(60, 3);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(57, 24);
+            this.txtCodigo.TabIndex = 58;
+            this.txtCodigo.ThemeName = "VisualStudio2012Light";
+            this.txtCodigo.Validar = false;
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Correo = false;
+            this.txtObservacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Limpiar = false;
+            this.txtObservacion.Location = new System.Drawing.Point(4, 182);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.NullText = "Observacion";
+            this.txtObservacion.Size = new System.Drawing.Size(777, 24);
+            this.txtObservacion.TabIndex = 53;
+            this.txtObservacion.ThemeName = "VisualStudio2012Light";
+            this.txtObservacion.Validar = false;
             // 
             // pageEstadistica
             // 
@@ -720,14 +853,14 @@
             gridViewTextBoxColumn8.FieldName = "Material";
             gridViewTextBoxColumn8.HeaderText = "Material";
             gridViewTextBoxColumn8.Name = "Material";
-            gridViewTextBoxColumn8.Width = 245;
+            gridViewTextBoxColumn8.Width = 247;
             gridViewTextBoxColumn9.DataType = typeof(float);
             gridViewTextBoxColumn9.EnableExpressionEditor = false;
             gridViewTextBoxColumn9.FieldName = "Porcentaje";
             gridViewTextBoxColumn9.FormatString = "{0:P3}";
             gridViewTextBoxColumn9.HeaderText = "Porcentaje";
             gridViewTextBoxColumn9.Name = "Porcentaje";
-            gridViewTextBoxColumn9.Width = 82;
+            gridViewTextBoxColumn9.Width = 83;
             this.dataMaterialPorcentaje.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn7,
             gridViewTextBoxColumn8,
@@ -763,139 +896,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // cbbTipoMaterial
-            // 
-            this.cbbTipoMaterial.BackColor = System.Drawing.Color.White;
-            this.cbbTipoMaterial.Correo = false;
-            this.cbbTipoMaterial.DisplayMember = "Descripcion";
-            this.cbbTipoMaterial.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbTipoMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoMaterial.Limpiar = true;
-            this.cbbTipoMaterial.Location = new System.Drawing.Point(114, 104);
-            this.cbbTipoMaterial.Name = "cbbTipoMaterial";
-            this.cbbTipoMaterial.NullText = "Tipo de Identificacion";
-            this.cbbTipoMaterial.Size = new System.Drawing.Size(118, 23);
-            this.cbbTipoMaterial.TabIndex = 62;
-            this.cbbTipoMaterial.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoMaterial.Validar = true;
-            this.cbbTipoMaterial.ValueMember = "IdTipoIdentificacion";
-            // 
-            // cbbMina
-            // 
-            this.cbbMina.BackColor = System.Drawing.Color.White;
-            this.cbbMina.Correo = false;
-            this.cbbMina.DisplayMember = "Descripcion";
-            this.cbbMina.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbMina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMina.Limpiar = true;
-            this.cbbMina.Location = new System.Drawing.Point(114, 75);
-            this.cbbMina.Name = "cbbMina";
-            this.cbbMina.NullText = "Tipo de Identificacion";
-            this.cbbMina.Size = new System.Drawing.Size(118, 23);
-            this.cbbMina.TabIndex = 61;
-            this.cbbMina.ThemeName = "VisualStudio2012Light";
-            this.cbbMina.Validar = true;
-            this.cbbMina.ValueMember = "IdTipoIdentificacion";
-            // 
-            // cbbTipoAnalisis
-            // 
-            this.cbbTipoAnalisis.BackColor = System.Drawing.Color.White;
-            this.cbbTipoAnalisis.Correo = false;
-            this.cbbTipoAnalisis.DisplayMember = "Descripcion";
-            this.cbbTipoAnalisis.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbTipoAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoAnalisis.Limpiar = true;
-            this.cbbTipoAnalisis.Location = new System.Drawing.Point(114, 46);
-            this.cbbTipoAnalisis.Name = "cbbTipoAnalisis";
-            this.cbbTipoAnalisis.NullText = "Tipo de Identificacion";
-            this.cbbTipoAnalisis.Size = new System.Drawing.Size(118, 23);
-            this.cbbTipoAnalisis.TabIndex = 60;
-            this.cbbTipoAnalisis.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoAnalisis.Validar = true;
-            this.cbbTipoAnalisis.ValueMember = "IdTipoIdentificacion";
-            // 
-            // txtHumedad
-            // 
-            this.txtHumedad.Correo = false;
-            this.txtHumedad.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtHumedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHumedad.Limpiar = true;
-            this.txtHumedad.Location = new System.Drawing.Point(406, 133);
-            this.txtHumedad.Name = "txtHumedad";
-            this.txtHumedad.NullText = "%";
-            this.txtHumedad.Size = new System.Drawing.Size(118, 24);
-            this.txtHumedad.TabIndex = 57;
-            this.txtHumedad.ThemeName = "VisualStudio2012Light";
-            this.txtHumedad.Validar = true;
-            // 
-            // txtCantidadFinal
-            // 
-            this.txtCantidadFinal.Correo = false;
-            this.txtCantidadFinal.Enabled = false;
-            this.txtCantidadFinal.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.txtCantidadFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadFinal.Limpiar = true;
-            this.txtCantidadFinal.Location = new System.Drawing.Point(404, 103);
-            this.txtCantidadFinal.Name = "txtCantidadFinal";
-            this.txtCantidadFinal.Size = new System.Drawing.Size(118, 24);
-            this.txtCantidadFinal.TabIndex = 56;
-            this.txtCantidadFinal.ThemeName = "VisualStudio2012Light";
-            this.txtCantidadFinal.Validar = false;
-            // 
-            // txtCantidadInicial
-            // 
-            this.txtCantidadInicial.Correo = false;
-            this.txtCantidadInicial.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.txtCantidadInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadInicial.Limpiar = true;
-            this.txtCantidadInicial.Location = new System.Drawing.Point(404, 73);
-            this.txtCantidadInicial.Name = "txtCantidadInicial";
-            this.txtCantidadInicial.Size = new System.Drawing.Size(118, 24);
-            this.txtCantidadInicial.TabIndex = 56;
-            this.txtCantidadInicial.Text = "7000";
-            this.txtCantidadInicial.ThemeName = "VisualStudio2012Light";
-            this.txtCantidadInicial.Validar = true;
-            // 
-            // txtBanqueta
-            // 
-            this.txtBanqueta.Correo = false;
-            this.txtBanqueta.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.txtBanqueta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBanqueta.Limpiar = true;
-            this.txtBanqueta.Location = new System.Drawing.Point(114, 133);
-            this.txtBanqueta.Name = "txtBanqueta";
-            this.txtBanqueta.Size = new System.Drawing.Size(118, 24);
-            this.txtBanqueta.TabIndex = 55;
-            this.txtBanqueta.ThemeName = "VisualStudio2012Light";
-            this.txtBanqueta.Validar = true;
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Correo = false;
-            this.txtCodigo.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Limpiar = false;
-            this.txtCodigo.Location = new System.Drawing.Point(60, 3);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(57, 24);
-            this.txtCodigo.TabIndex = 58;
-            this.txtCodigo.ThemeName = "VisualStudio2012Light";
-            this.txtCodigo.Validar = false;
-            // 
-            // txtObservacion
-            // 
-            this.txtObservacion.Correo = false;
-            this.txtObservacion.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.txtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacion.Limpiar = false;
-            this.txtObservacion.Location = new System.Drawing.Point(4, 182);
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.NullText = "Observacion";
-            this.txtObservacion.Size = new System.Drawing.Size(777, 24);
-            this.txtObservacion.TabIndex = 53;
-            this.txtObservacion.ThemeName = "VisualStudio2012Light";
-            this.txtObservacion.Validar = false;
             // 
             // Analisis
             // 
@@ -935,6 +935,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMaterial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoAnalisis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHumedad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadFinal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadInicial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBanqueta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion)).EndInit();
             this.pageEstadistica.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.charBarras)).EndInit();
@@ -945,15 +954,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataMaterialPorcentaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rangoSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoMaterial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoAnalisis)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHumedad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadFinal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadInicial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBanqueta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

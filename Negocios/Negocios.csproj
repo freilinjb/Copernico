@@ -99,6 +99,7 @@
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Filtro.cs" />
     <Compile Include="Entidades\IventarioProducto.cs" />
+    <Compile Include="Entidades\Lote.cs" />
     <Compile Include="Entidades\Maquinaria.cs" />
     <Compile Include="Entidades\Mina.cs" />
     <Compile Include="Entidades\Obra.cs" />

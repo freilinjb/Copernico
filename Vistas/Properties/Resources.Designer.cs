@@ -133,6 +133,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lote {
+            get {
+                object obj = ResourceManager.GetObject("Lote", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mina {
             get {
                 object obj = ResourceManager.GetObject("Mina", resourceCulture);

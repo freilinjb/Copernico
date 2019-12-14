@@ -103,7 +103,7 @@ namespace Vistas.Formularios
 
         private void btEmpleado_Click(object sender, EventArgs e)
         {
-            Empleado empleado = new Empleado();
+            Empleado empleado = Empleado.ObtenerInstancia();
             empleado.MdiParent = this;
             empleado.Show();
         }
@@ -134,6 +134,13 @@ namespace Vistas.Formularios
             Centro centro = Centro.ObtenerInstancia();
             centro.MdiParent = this;
             centro.Show();
+        }
+
+        private void btLote_Click(object sender, EventArgs e)
+        {
+            Lote lote = Lote.ObtenerInstancia();
+            lote.MdiParent = this;
+            lote.Show();
         }
     }
 }

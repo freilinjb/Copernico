@@ -15,6 +15,18 @@ namespace Vistas.Formularios
     {
         private DataSet ds;
 
+        private static Empleado Instancia;
+
+        public static Empleado ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new Empleado();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
         public Empleado()
         {
             InitializeComponent();
