@@ -100,6 +100,8 @@
             this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement7 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup16 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btPreAsignacion = new Telerik.WinControls.UI.RadButtonElement();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -358,7 +360,7 @@
             // ribbonTab3
             // 
             this.ribbonTab3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ribbonTab3.IsSelected = true;
+            this.ribbonTab3.IsSelected = false;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup41,
             this.radRibbonBarGroup7});
@@ -386,6 +388,7 @@
             // 
             // btAsignacion
             // 
+            this.btAsignacion.Image = global::Vistas.Properties.Resources.ActivosFijos;
             this.btAsignacion.Name = "btAsignacion";
             this.btAsignacion.Text = "Asignacion";
             this.btAsignacion.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
@@ -643,9 +646,10 @@
             // 
             // ribbonTab10
             // 
-            this.ribbonTab10.IsSelected = false;
+            this.ribbonTab10.IsSelected = true;
             this.ribbonTab10.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radRibbonBarGroup15});
+            this.radRibbonBarGroup15,
+            this.radRibbonBarGroup16});
             this.ribbonTab10.Name = "ribbonTab10";
             this.ribbonTab10.Text = "Recursos Humanos";
             this.ribbonTab10.UseMnemonic = false;
@@ -653,12 +657,13 @@
             // radRibbonBarGroup15
             // 
             this.radRibbonBarGroup15.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.btEmpleado});
+            this.btEmpleado,
+            this.btPreAsignacion});
             this.radRibbonBarGroup15.Margin = new System.Windows.Forms.Padding(0);
             this.radRibbonBarGroup15.MaxSize = new System.Drawing.Size(0, 0);
             this.radRibbonBarGroup15.MinSize = new System.Drawing.Size(0, 0);
             this.radRibbonBarGroup15.Name = "radRibbonBarGroup15";
-            this.radRibbonBarGroup15.Text = "Empleado";
+            this.radRibbonBarGroup15.Text = "RRHH";
             this.radRibbonBarGroup15.UseCompatibleTextRendering = false;
             // 
             // btEmpleado
@@ -745,6 +750,17 @@
             this.radButtonElement7.Text = "Producto";
             this.radButtonElement7.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             this.radButtonElement7.UseCompatibleTextRendering = false;
+            // 
+            // radRibbonBarGroup16
+            // 
+            this.radRibbonBarGroup16.Name = "radRibbonBarGroup16";
+            this.radRibbonBarGroup16.Text = "Departamento";
+            // 
+            // btPreAsignacion
+            // 
+            this.btPreAsignacion.Name = "btPreAsignacion";
+            this.btPreAsignacion.Text = "Pre-Asignación";
+            this.btPreAsignacion.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Menu
             // 
@@ -844,5 +860,7 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup7;
         private Telerik.WinControls.UI.RadButtonElement btPermiso;
         private Telerik.WinControls.UI.RadButtonElement btPlanForestacion;
+        private Telerik.WinControls.UI.RadButtonElement btPreAsignacion;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup16;
     }
 }

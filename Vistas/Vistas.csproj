@@ -238,6 +238,12 @@
     <Compile Include="Formularios\Planta.Designer.cs">
       <DependentUpon>Planta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\PreAsignacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PreAsignacion.Designer.cs">
+      <DependentUpon>PreAsignacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +429,9 @@
     <EmbeddedResource Include="Formularios\Planta.resx">
       <DependentUpon>Planta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PreAsignacion.resx">
+      <DependentUpon>PreAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -515,6 +524,7 @@
     <None Include="Resources\PermisoAmbiental.png" />
     <None Include="Resources\Forestacion.png" />
     <None Include="Resources\Cubicacion.png" />
+    <None Include="Resources\ActivosFijos.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
