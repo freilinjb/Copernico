@@ -166,5 +166,12 @@ namespace Vistas.Formularios
             permiso.MdiParent = this;
             permiso.Show();
         }
+
+        private void btPreAsignacion_Click(object sender, EventArgs e)
+        {
+            PreAsignacion preAsignacion = PreAsignacion.ObtenerInstancia();
+            preAsignacion.MdiParent = this;
+            preAsignacion.Show();
+        }
     }
 }

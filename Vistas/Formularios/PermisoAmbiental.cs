@@ -79,6 +79,8 @@ namespace Vistas.Formularios
             cbbEstado.ValueMember = "IdEstadoPermiso";
             cbbEstado.DisplayMember = "Estado";
 
+            
+
         }
 
         private void PermisoAmbiental_KeyUp(object sender, KeyEventArgs e)

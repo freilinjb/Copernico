@@ -35,6 +35,7 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition4 = new Telerik.WinControls.UI.TableViewDefinition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lote));
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.pagePrincipal = new Telerik.WinControls.UI.RadPageView();
             this.pageLote = new Telerik.WinControls.UI.RadPageViewPage();
@@ -101,7 +102,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 12);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.pageLote;
+            this.pagePrincipal.SelectedPage = this.pageInventario;
             this.pagePrincipal.Size = new System.Drawing.Size(459, 360);
             this.pagePrincipal.TabIndex = 41;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -405,6 +406,7 @@
             this.Controls.Add(this.dataLote);
             this.Controls.Add(this.pagePrincipal);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Lote";
             // 

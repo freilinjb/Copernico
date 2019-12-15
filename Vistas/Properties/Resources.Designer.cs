@@ -93,6 +93,16 @@ namespace Vistas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Asignar {
+            get {
+                object obj = ResourceManager.GetObject("Asignar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Centro {
             get {
                 object obj = ResourceManager.GetObject("Centro", resourceCulture);
@@ -116,6 +126,16 @@ namespace Vistas.Properties {
         internal static System.Drawing.Bitmap Cubicacion {
             get {
                 object obj = ResourceManager.GetObject("Cubicacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Empleado {
+            get {
+                object obj = ResourceManager.GetObject("Empleado", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

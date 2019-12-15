@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.Data;
 
 namespace Vistas.Formularios
 {
@@ -13,10 +14,24 @@ namespace Vistas.Formularios
     {
         private DataSet ds;
 
-        public PreAsignacion()
+        private static PreAsignacion Instancia;
+
+        public static PreAsignacion ObtenerInstancia()
+        {
+            if (Instancia == null || Instancia.IsDisposed)
+                Instancia = new PreAsignacion();
+
+            Instancia.BringToFront();
+
+            return Instancia;
+        }
+
+        private PreAsignacion()
         {
             InitializeComponent();
         }
+
+
 
         private void PreAsignacion_Load(object sender, EventArgs e)
         {
@@ -28,6 +43,11 @@ namespace Vistas.Formularios
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
+            GroupDescriptor descriptor = new GroupDescriptor();
+            descriptor.GroupNames.Add("Empleado", ListSortDirection.Ascending);
+            this.dataPreAsignacion.GroupDescriptors.Add(descriptor);
+
+            dataPreAsignacion.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaActivoFijosAsignados").Tables[0];
 
         }
 
@@ -115,6 +135,7 @@ namespace Vistas.Formularios
                 if(Guardar())
                 {
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
+                    dataPreAsignacion.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaActivoFijosAsignados").Tables[0];
                     cbbEmpleado.Focus();
                     Negocios.Utilidades.Limpiar(this,errorProvider1);
                 }
@@ -122,6 +143,32 @@ namespace Vistas.Formularios
             else if(e.KeyCode == Keys.F2)
             {
                 Negocios.Utilidades.Limpiar(this, errorProvider1);
+            }
+        }
+
+        private void pagePrincipal_SelectedPageChanged(object sender, EventArgs e)
+        {
+            if(pagePrincipal.SelectedPage.Name == pageCentro.Name)
+            {
+                if(cbbCentro.SelectedIndex != -1)
+                {
+                    lbDescripcion.Text = cbbCentro.EditorControl.Rows[cbbCentro.EditorControl.CurrentRow.Index].Cells["Centro"].Value.ToString();
+                }
+                else
+                {
+                    lbDescripcion.Text = null;
+                }
+            }
+            else if (pagePrincipal.SelectedPage.Name == pageCentro.Name)
+            {
+                if (cbbEmpleado.SelectedIndex != -1)
+                {
+                    lbDescripcion.Text = $"[{txtNombre.Text} {txtApellido.Text.Trim()}]";
+                }
+                else
+                {
+                    lbDescripcion.Text = null;
+                }
             }
         }
     }

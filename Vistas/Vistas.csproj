@@ -525,6 +525,8 @@
     <None Include="Resources\Forestacion.png" />
     <None Include="Resources\Cubicacion.png" />
     <None Include="Resources\ActivosFijos.png" />
+    <None Include="Resources\Asignar.png" />
+    <None Include="Resources\Empleado.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

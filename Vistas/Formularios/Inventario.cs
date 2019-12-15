@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.Data;
 
 namespace Vistas.Formularios
 {
@@ -46,6 +47,16 @@ namespace Vistas.Formularios
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
 
             IdMayor();
+
+            GroupDescriptor descriptor2 = new GroupDescriptor();
+            descriptor2.GroupNames.Add("Centro", ListSortDirection.Ascending);
+            GroupDescriptor descriptor3 = new GroupDescriptor();
+            descriptor3.GroupNames.Add("Inventario", ListSortDirection.Ascending);
+
+
+            this.dataInventario.GroupDescriptors.Add(descriptor2);
+            this.dataInventario.GroupDescriptors.Add(descriptor3);
+
             dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Centro,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario").Tables[0];
             cbbEstado.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdEstadoInventario,Descripcion AS Estado FROM EstadoInventario").Tables[0];
             cbbEstado.ValueMember = "IdEstadoInventario";
