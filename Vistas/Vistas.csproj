@@ -512,6 +512,9 @@
     <None Include="Resources\ProyeccionProduccion.png" />
     <None Include="Resources\Produccion.png" />
     <None Include="Resources\Requisicion.png" />
+    <None Include="Resources\PermisoAmbiental.png" />
+    <None Include="Resources\Forestacion.png" />
+    <None Include="Resources\Cubicacion.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

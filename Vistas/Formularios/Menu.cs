@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Telerik.WinControls;
 
@@ -49,6 +50,7 @@ namespace Vistas.Formularios
             OrdenDeVenta venta = OrdenDeVenta.ObtenerInstancia();
             venta.MdiParent = this;
             venta.Show();
+
         }
 
         private void btAnalisis_Click(object sender, EventArgs e)
@@ -156,6 +158,13 @@ namespace Vistas.Formularios
             Planta planta = Planta.ObtenerInstancia();
             planta.MdiParent = this;
             planta.Show();
+        }
+
+        private void btPermiso_Click(object sender, EventArgs e)
+        {
+            PermisoAmbiental permiso = PermisoAmbiental.ObtenerInstancia();
+            permiso.MdiParent = this;
+            permiso.Show();
         }
     }
 }

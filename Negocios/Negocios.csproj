@@ -105,6 +105,7 @@
     <Compile Include="Entidades\Obra.cs" />
     <Compile Include="Entidades\OrdenDeVenta.cs" />
     <Compile Include="Entidades\PedidoDeProducto.cs" />
+    <Compile Include="Entidades\PermisoAmbiental.cs" />
     <Compile Include="Entidades\Producto.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Cubicacion.cs" />

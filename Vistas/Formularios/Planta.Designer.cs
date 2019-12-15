@@ -422,6 +422,7 @@
             this.Controls.Add(this.txtPlanta);
             this.Controls.Add(this.pagePrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Planta";
             // 
             // 
@@ -429,6 +430,7 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "Planta";
             this.Load += new System.EventHandler(this.Planta_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Planta_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.dataPlanta.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataPlanta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pagePrincipal)).EndInit();

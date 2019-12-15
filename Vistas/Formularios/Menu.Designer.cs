@@ -58,6 +58,9 @@
             this.radRibbonBarGroup41 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.btCubicacion = new Telerik.WinControls.UI.RadButtonElement();
             this.btAsignacion = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup7 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.btPermiso = new Telerik.WinControls.UI.RadButtonElement();
+            this.btPlanForestacion = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup12 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement6 = new Telerik.WinControls.UI.RadButtonElement();
@@ -232,7 +235,7 @@
             // ribbonTab6
             // 
             this.ribbonTab6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ribbonTab6.IsSelected = true;
+            this.ribbonTab6.IsSelected = false;
             this.ribbonTab6.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup4,
             this.radRibbonBarGroup5,
@@ -355,9 +358,10 @@
             // ribbonTab3
             // 
             this.ribbonTab3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ribbonTab3.IsSelected = false;
+            this.ribbonTab3.IsSelected = true;
             this.ribbonTab3.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radRibbonBarGroup41});
+            this.radRibbonBarGroup41,
+            this.radRibbonBarGroup7});
             this.ribbonTab3.Name = "ribbonTab3";
             this.ribbonTab3.Text = "Control de seguridad";
             this.ribbonTab3.UseMnemonic = false;
@@ -373,6 +377,8 @@
             // 
             // btCubicacion
             // 
+            this.btCubicacion.Image = global::Vistas.Properties.Resources.Cubicacion;
+            this.btCubicacion.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.btCubicacion.Name = "btCubicacion";
             this.btCubicacion.Text = "Cubicacion";
             this.btCubicacion.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
@@ -383,6 +389,31 @@
             this.btAsignacion.Name = "btAsignacion";
             this.btAsignacion.Text = "Asignacion";
             this.btAsignacion.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // radRibbonBarGroup7
+            // 
+            this.radRibbonBarGroup7.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.btPermiso,
+            this.btPlanForestacion});
+            this.radRibbonBarGroup7.Name = "radRibbonBarGroup7";
+            this.radRibbonBarGroup7.Text = "Medio Ambiente";
+            // 
+            // btPermiso
+            // 
+            this.btPermiso.Image = global::Vistas.Properties.Resources.PermisoAmbiental;
+            this.btPermiso.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.btPermiso.Name = "btPermiso";
+            this.btPermiso.Text = "Permisos de explotacion";
+            this.btPermiso.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
+            this.btPermiso.Click += new System.EventHandler(this.btPermiso_Click);
+            // 
+            // btPlanForestacion
+            // 
+            this.btPlanForestacion.Image = global::Vistas.Properties.Resources.Forestacion;
+            this.btPlanForestacion.ImageAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.btPlanForestacion.Name = "btPlanForestacion";
+            this.btPlanForestacion.Text = "Forestación";
+            this.btPlanForestacion.TextAlignment = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // ribbonTab2
             // 
@@ -810,5 +841,8 @@
         private Telerik.WinControls.UI.RadButtonElement btCubicacion;
         private Telerik.WinControls.UI.RadButtonElement btAsignacion;
         private Telerik.WinControls.UI.RadButtonElement btLote;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup7;
+        private Telerik.WinControls.UI.RadButtonElement btPermiso;
+        private Telerik.WinControls.UI.RadButtonElement btPlanForestacion;
     }
 }
