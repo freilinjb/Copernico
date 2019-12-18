@@ -104,6 +104,8 @@ namespace Vistas.Formularios
 
         private void Pedido_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaCentro' Puede moverla o quitarla según sea necesario.
+            this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Rubro' Puede moverla o quitarla según sea necesario.
             this.rubroTableAdapter.Fill(this.matrizDataSet.Rubro);
 
@@ -114,7 +116,6 @@ namespace Vistas.Formularios
             cbbTipoPedido.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdTipoPedido,Descripcion AS TipoPedido FROM TipoPedido").Tables[0];
             cbbTipoPedido.ValueMember = "IdTipoPedido";
             cbbTipoPedido.DisplayMember = "TipoPedido";
-
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
 
@@ -144,8 +145,8 @@ namespace Vistas.Formularios
 
                         Negocios.Entidades.PedidoDeProducto pedido = new Negocios.Entidades.PedidoDeProducto(
                             Convert.ToInt32(txtNumOrden.Text.Trim()),
-                            1,
-                            1,
+                            Login.IdUsuario,
+                            (int)cbbCentro.SelectedValue,
                             1,
                             (int)cbbTipoPedido.SelectedValue,
                             txtNota.Text.Trim(),
@@ -169,7 +170,7 @@ namespace Vistas.Formularios
 
 
 
-                            Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "Orden", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaOrdenVenta WHERE NumOrden = {txtNumOrden.Text.Trim()}"), "VistaDetalleOrdenDataSet", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaDetalleOrden WHERE NumOrden = '{txtNumOrden.Text.Trim()}'"));
+                            Imprimir ImprimirForm = new Imprimir("VistaOrdenVentaDataSet", "OrdenRequisicion", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaOrdenVenta WHERE NumOrden = {txtNumOrden.Text.Trim()}"), "VistaDetalleOrdenDataSet", Negocios.Utilidades.Ejecutar($"SELECT * FROM VistaDetalleOrden WHERE NumOrden = '{txtNumOrden.Text.Trim()}'"));
 
 
                             ImprimirForm.ShowDialog();

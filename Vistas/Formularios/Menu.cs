@@ -173,5 +173,20 @@ namespace Vistas.Formularios
             preAsignacion.MdiParent = this;
             preAsignacion.Show();
         }
+
+        private void btSolicitudTraslado_Click(object sender, EventArgs e)
+        {
+            MantenimientoInventario mantenimientoInventario = MantenimientoInventario.ObtenerInstancia();
+            mantenimientoInventario.MdiParent = this;
+            mantenimientoInventario.Show();
+        }
+
+        private void btProyeccionProduccion_Click(object sender, EventArgs e)
+        {
+            ProyeccionProduccion proyeccion = ProyeccionProduccion.ObtenerInstancia();
+            proyeccion.MdiParent = this;
+            proyeccion.Show();
+
+        }
     }
 }

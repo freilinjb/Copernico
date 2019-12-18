@@ -246,9 +246,22 @@ namespace Vistas.Formularios
 
         private void pagePrincipal_SelectedPageChanged(object sender, EventArgs e)
         {
-            if(pagePrincipal.SelectedPage.Name == pageEstadistica.Name)
+            ListProducto.Clear();
+            foreach (DataRow File in Negocios.Utilidades.Ejecutar("SELECT F.IdFiltro,P.IdProducto,P.Descripcion AS Producto,F.NumMallaInicial,F.NumMallaFinal FROM Filtro F INNER JOIN Producto P ON P.IdProducto = F.IdProducto").Tables[0].Rows)
+            {
+                ListProducto.Add(new Negocios.Entidades.Analisis.ResumenProducto(
+                    Convert.ToInt32(File["IdProducto"].ToString()),
+                    File["Producto"].ToString(),
+                    Convert.ToInt32(File["NumMallaInicial"].ToString()),
+                    Convert.ToInt32(File["NumMallaFinal"].ToString())));
+
+                Debug.WriteLine($"Agregado a Lista { File["Producto"].ToString()},{File["Producto"].ToString()},{Convert.ToInt32(File["NumMallaInicial"].ToString())},{Convert.ToInt32(File["NumMallaFinal"].ToString())}");
+            }
+
+            if (pagePrincipal.SelectedPage.Name == pageEstadistica.Name)
             {
                 Negocios.Utilidades.LimpiarRadDataGridView(dataMaterialPorcentaje);
+
                 foreach(var File in dataTamiz.Rows)
                 {
                     for(int i = 0; i < ListProducto.Count; i++)

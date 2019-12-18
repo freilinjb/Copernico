@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.Data;
 
 namespace Vistas.Formularios
 {
@@ -39,6 +40,7 @@ namespace Vistas.Formularios
         }
         private void Mina_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaMina' Puede moverla o quitarla según sea necesario.
             RadMessageBox.ThemeName = this.ThemeName;
 
             IdMayor();
@@ -82,7 +84,20 @@ namespace Vistas.Formularios
             cbbEstado.ValueMember = "IdEstadoMina";
             cbbEstado.DisplayMember = "Estado";
 
+
             cbbEstado.SelectedIndex = 0;
+
+            dataMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaMina").Tables[0];
+
+            //GroupDescriptor descriptor2 = new GroupDescriptor();
+            //descriptor2.GroupNames.Add("Producto", ListSortDirection.Ascending);
+            //GroupDescriptor descriptor3 = new GroupDescriptor();
+            //descriptor3.GroupNames.Add("MATERIAL PRIMARIO", ListSortDirection.Ascending);
+
+            //this.dataMina.GroupDescriptors.Add(descriptor2);
+            //this.dataMina.GroupDescriptors.Add(descriptor2);
+
+
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
@@ -153,6 +168,8 @@ namespace Vistas.Formularios
                 Negocios.Utilidades.Limpiar(this, errorProvider1);
                 ds = Negocios.Utilidades.Ejecutar("SELECT MAX(IdMina)+1 AS Mayor FROM Mina");
                 txtCodigo.Text = (ds.Tables[0].Rows[0]["Mayor"] == DBNull.Value) ? "1" : ds.Tables[0].Rows[0]["Mayor"].ToString();
+                dataMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaMina").Tables[0];
+
             }
         }
     }

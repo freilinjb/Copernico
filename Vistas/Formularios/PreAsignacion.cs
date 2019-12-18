@@ -79,7 +79,7 @@ namespace Vistas.Formularios
         {
             bool bien = false;
 
-            if (Negocios.Utilidades.Validar(this, errorProvider1) == false)
+            if (Negocios.Utilidades.Validar(pageEmpleado, errorProvider1) == false)
             {
                 try
                 {
@@ -148,28 +148,28 @@ namespace Vistas.Formularios
 
         private void pagePrincipal_SelectedPageChanged(object sender, EventArgs e)
         {
-            if(pagePrincipal.SelectedPage.Name == pageCentro.Name)
-            {
-                if(cbbCentro.SelectedIndex != -1)
-                {
-                    lbDescripcion.Text = cbbCentro.EditorControl.Rows[cbbCentro.EditorControl.CurrentRow.Index].Cells["Centro"].Value.ToString();
-                }
-                else
-                {
-                    lbDescripcion.Text = null;
-                }
-            }
-            else if (pagePrincipal.SelectedPage.Name == pageCentro.Name)
-            {
-                if (cbbEmpleado.SelectedIndex != -1)
-                {
-                    lbDescripcion.Text = $"[{txtNombre.Text} {txtApellido.Text.Trim()}]";
-                }
-                else
-                {
-                    lbDescripcion.Text = null;
-                }
-            }
+            //if(pagePrincipal.SelectedPage.Name == pageCentro.Name)
+            //{
+            //    if(cbbCentro.SelectedIndex != -1)
+            //    {
+            //        lbDescripcion.Text = cbbCentro.EditorControl.Rows[cbbCentro.EditorControl.CurrentRow.Index].Cells["Centro"].Value.ToString();
+            //    }
+            //    else
+            //    {
+            //        lbDescripcion.Text = null;
+            //    }
+            //}
+            //else if (pagePrincipal.SelectedPage.Name == pageEmpleado.Name)
+            //{
+            //    if (cbbEmpleado.SelectedIndex != -1)
+            //    {
+            //        lbDescripcion.Text = $"[{txtNombre.Text} {txtApellido.Text.Trim()}]";
+            //    }
+            //    else
+            //    {
+            //        lbDescripcion.Text = null;
+            //    }
+            //}
         }
     }
 }

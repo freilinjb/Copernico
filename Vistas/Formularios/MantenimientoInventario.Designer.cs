@@ -28,10 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoInventario));
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.cbbEstado = new Negocios.Componentes.cbbPersonal();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
+            this.vistaCentroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.matrizDataSet = new Vistas.MatrizDataSet();
+            this.txtBusqueda = new Negocios.Componentes.TextPersonal();
             this.toolMenu = new System.Windows.Forms.ToolStrip();
             this.toolNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolGuardar = new System.Windows.Forms.ToolStripButton();
@@ -41,15 +53,18 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btBusqueda = new Telerik.WinControls.UI.RadButton();
             this.radSeparator1 = new Telerik.WinControls.UI.RadSeparator();
-            this.dataProducto = new Telerik.WinControls.UI.RadGridView();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
+            this.dataInventario = new Telerik.WinControls.UI.RadGridView();
+            this.vistaCentroTableAdapter = new Vistas.MatrizDataSetTableAdapters.VistaCentroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusqueda)).BeginInit();
             this.toolMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btBusqueda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +72,8 @@
             // 
             this.cbbEstado.BackColor = System.Drawing.Color.White;
             this.cbbEstado.Correo = false;
-            this.cbbEstado.DisplayMember = "Descripcion";
+            this.cbbEstado.DataSource = this.vistaCentroBindingSource;
+            this.cbbEstado.DisplayMember = "Nombre";
             this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbEstado.Limpiar = true;
@@ -67,20 +83,31 @@
             this.cbbEstado.TabIndex = 45;
             this.cbbEstado.ThemeName = "VisualStudio2012Light";
             this.cbbEstado.Validar = true;
-            this.cbbEstado.ValueMember = "IdTipoProducto";
+            this.cbbEstado.ValueMember = "IdCentro";
+            this.cbbEstado.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.cbbEstado_SelectedIndexChanged);
             // 
-            // textPersonal1
+            // vistaCentroBindingSource
             // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Default;
-            this.textPersonal1.Limpiar = false;
-            this.textPersonal1.Location = new System.Drawing.Point(12, 42);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.NullText = "Informacion a buscar";
-            this.textPersonal1.Size = new System.Drawing.Size(384, 24);
-            this.textPersonal1.TabIndex = 44;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = false;
+            this.vistaCentroBindingSource.DataMember = "VistaCentro";
+            this.vistaCentroBindingSource.DataSource = this.matrizDataSet;
+            // 
+            // matrizDataSet
+            // 
+            this.matrizDataSet.DataSetName = "MatrizDataSet";
+            this.matrizDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Correo = false;
+            this.txtBusqueda.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtBusqueda.Limpiar = false;
+            this.txtBusqueda.Location = new System.Drawing.Point(12, 42);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.NullText = "Informacion a buscar";
+            this.txtBusqueda.Size = new System.Drawing.Size(384, 24);
+            this.txtBusqueda.TabIndex = 44;
+            this.txtBusqueda.ThemeName = "VisualStudio2012Light";
+            this.txtBusqueda.Validar = false;
             // 
             // toolMenu
             // 
@@ -175,47 +202,115 @@
             this.radSeparator1.TabIndex = 41;
             this.radSeparator1.ThemeName = "VisualStudio2012Light";
             // 
-            // dataProducto
+            // dataInventario
             // 
-            this.dataProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.dataProducto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataProducto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.dataProducto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dataProducto.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dataProducto.Location = new System.Drawing.Point(12, 84);
+            this.dataInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.dataInventario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataInventario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.dataInventario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataInventario.Location = new System.Drawing.Point(12, 84);
             // 
             // 
             // 
-            this.dataProducto.MasterTemplate.AllowAddNewRow = false;
-            this.dataProducto.MasterTemplate.AllowColumnChooser = false;
-            this.dataProducto.MasterTemplate.AllowColumnReorder = false;
-            this.dataProducto.MasterTemplate.AllowDragToGroup = false;
-            this.dataProducto.MasterTemplate.AllowRowResize = false;
-            this.dataProducto.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            this.dataProducto.MasterTemplate.EnableAlternatingRowColor = true;
-            this.dataProducto.MasterTemplate.EnableGrouping = false;
-            this.dataProducto.MasterTemplate.EnableSorting = false;
-            this.dataProducto.MasterTemplate.ShowRowHeaderColumn = false;
-            this.dataProducto.MasterTemplate.ViewDefinition = tableViewDefinition1;
-            this.dataProducto.Name = "dataProducto";
-            this.dataProducto.ReadOnly = true;
-            this.dataProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataProducto.ShowGroupPanel = false;
-            this.dataProducto.Size = new System.Drawing.Size(1067, 485);
-            this.dataProducto.TabIndex = 40;
-            this.dataProducto.ThemeName = "VisualStudio2012Light";
+            this.dataInventario.MasterTemplate.AllowAddNewRow = false;
+            this.dataInventario.MasterTemplate.AllowColumnChooser = false;
+            this.dataInventario.MasterTemplate.AllowColumnReorder = false;
+            this.dataInventario.MasterTemplate.AllowDragToGroup = false;
+            this.dataInventario.MasterTemplate.AllowRowResize = false;
+            this.dataInventario.MasterTemplate.AllowSearchRow = true;
+            this.dataInventario.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
+            gridViewTextBoxColumn1.DataType = typeof(int);
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "IdInventario";
+            gridViewTextBoxColumn1.HeaderText = "Codigo";
+            gridViewTextBoxColumn1.Name = "IdInventario";
+            gridViewTextBoxColumn1.Width = 143;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "Centro";
+            gridViewTextBoxColumn2.HeaderText = "Centro";
+            gridViewTextBoxColumn2.Name = "Centro";
+            gridViewTextBoxColumn2.Width = 171;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "Inventario";
+            gridViewTextBoxColumn3.HeaderText = "Inventario";
+            gridViewTextBoxColumn3.Name = "Inventario";
+            gridViewTextBoxColumn3.Width = 184;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "Descripcion";
+            gridViewTextBoxColumn4.HeaderText = "Descripcion";
+            gridViewTextBoxColumn4.Name = "Descripcion";
+            gridViewTextBoxColumn4.Width = 298;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "Unidad";
+            gridViewTextBoxColumn5.HeaderText = "Unidad";
+            gridViewTextBoxColumn5.Name = "Unidad";
+            gridViewTextBoxColumn5.Width = 72;
+            gridViewTextBoxColumn6.DataType = typeof(float);
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Stock";
+            gridViewTextBoxColumn6.HeaderText = "Stock";
+            gridViewTextBoxColumn6.Name = "Stock";
+            gridViewTextBoxColumn6.Width = 92;
+            gridViewTextBoxColumn7.DataType = typeof(float);
+            gridViewTextBoxColumn7.EnableExpressionEditor = false;
+            gridViewTextBoxColumn7.FieldName = "StockPromedio";
+            gridViewTextBoxColumn7.HeaderText = "StockPromedio";
+            gridViewTextBoxColumn7.IsVisible = false;
+            gridViewTextBoxColumn7.Name = "StockPromedio";
+            gridViewTextBoxColumn7.Width = 73;
+            gridViewTextBoxColumn8.DataType = typeof(float);
+            gridViewTextBoxColumn8.EnableExpressionEditor = false;
+            gridViewTextBoxColumn8.FieldName = "StockMinimo";
+            gridViewTextBoxColumn8.HeaderText = "StockMinimo";
+            gridViewTextBoxColumn8.IsVisible = false;
+            gridViewTextBoxColumn8.Name = "StockMinimo";
+            gridViewTextBoxColumn8.Width = 77;
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "Estado";
+            gridViewTextBoxColumn9.HeaderText = "Estado";
+            gridViewTextBoxColumn9.Name = "Estado";
+            gridViewTextBoxColumn9.Width = 114;
+            this.dataInventario.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6,
+            gridViewTextBoxColumn7,
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
+            this.dataInventario.MasterTemplate.EnableAlternatingRowColor = true;
+            this.dataInventario.MasterTemplate.EnableSorting = false;
+            this.dataInventario.MasterTemplate.ShowRowHeaderColumn = false;
+            this.dataInventario.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.dataInventario.Name = "dataInventario";
+            this.dataInventario.ReadOnly = true;
+            this.dataInventario.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataInventario.Size = new System.Drawing.Size(1067, 486);
+            this.dataInventario.TabIndex = 46;
+            this.dataInventario.ThemeName = "VisualStudio2012Light";
+            // 
+            // vistaCentroTableAdapter
+            // 
+            this.vistaCentroTableAdapter.ClearBeforeFill = true;
             // 
             // MantenimientoInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 582);
+            this.Controls.Add(this.dataInventario);
             this.Controls.Add(this.cbbEstado);
-            this.Controls.Add(this.textPersonal1);
+            this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.toolMenu);
             this.Controls.Add(this.btBusqueda);
             this.Controls.Add(this.radSeparator1);
-            this.Controls.Add(this.dataProducto);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.Name = "MantenimientoInventario";
             // 
             // 
@@ -223,14 +318,17 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "MantenimientoInventario";
             this.ThemeName = "VisualStudio2012Light";
+            this.Load += new System.EventHandler(this.MantenimientoInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaCentroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrizDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusqueda)).EndInit();
             this.toolMenu.ResumeLayout(false);
             this.toolMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btBusqueda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto.MasterTemplate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataInventario.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,7 +338,7 @@
         #endregion
 
         public Negocios.Componentes.cbbPersonal cbbEstado;
-        public Negocios.Componentes.TextPersonal textPersonal1;
+        public Negocios.Componentes.TextPersonal txtBusqueda;
         public System.Windows.Forms.ToolStrip toolMenu;
         private System.Windows.Forms.ToolStripButton toolNuevo;
         private System.Windows.Forms.ToolStripButton toolGuardar;
@@ -250,7 +348,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         public Telerik.WinControls.UI.RadButton btBusqueda;
         private Telerik.WinControls.UI.RadSeparator radSeparator1;
-        public Telerik.WinControls.UI.RadGridView dataProducto;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
+        private Telerik.WinControls.UI.RadGridView dataInventario;
+        private MatrizDataSet matrizDataSet;
+        private System.Windows.Forms.BindingSource vistaCentroBindingSource;
+        private MatrizDataSetTableAdapters.VistaCentroTableAdapter vistaCentroTableAdapter;
     }
 }

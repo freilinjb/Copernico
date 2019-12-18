@@ -190,6 +190,12 @@
     <Compile Include="Formularios\Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\InventarioActivoFijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\InventarioActivoFijo.Designer.cs">
+      <DependentUpon>InventarioActivoFijo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,12 @@
     </Compile>
     <Compile Include="Formularios\PreAsignacion.Designer.cs">
       <DependentUpon>PreAsignacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ProyeccionProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ProyeccionProduccion.Designer.cs">
+      <DependentUpon>ProyeccionProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\TipoInventario.cs">
       <SubType>Form</SubType>
@@ -405,6 +417,9 @@
     <EmbeddedResource Include="Formularios\Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\InventarioActivoFijo.resx">
+      <DependentUpon>InventarioActivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,6 +446,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PreAsignacion.resx">
       <DependentUpon>PreAsignacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ProyeccionProduccion.resx">
+      <DependentUpon>ProyeccionProduccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\TipoInventario.resx">
       <DependentUpon>TipoInventario.cs</DependentUpon>
@@ -475,6 +493,7 @@
     <EmbeddedResource Include="Informes\Informe.resx">
       <DependentUpon>Informe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\OrdenRequisicion.rdlc" />
     <EmbeddedResource Include="Informes\PedidoDeCompra.rdlc" />
     <EmbeddedResource Include="Informes\OrdenVenta.rdlc" />
     <EmbeddedResource Include="Informes\Orden.rdlc" />

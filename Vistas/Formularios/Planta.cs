@@ -63,7 +63,7 @@ namespace Vistas.Formularios
             {
 
                 Negocios.Utilidades.LimpiarRadDataGridView(dataZaranda);
-                dataZaranda.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdPlanta,IdActivoFijo AS IdZaranda,Zaranda,IdProducto,Producto FROM VistaDetallePlanta WHERE IdPlanta = {dataPlanta.Rows[dataPlanta.CurrentRow.Index].Cells["IdPlanta"].Value}").Tables[0];
+                dataZaranda.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdPlanta,IdActivoFijo AS IdZaranda,Zaranda,IdProducto,Producto,PorcentajeProduccion FROM VistaDetallePlanta WHERE IdPlanta = {dataPlanta.Rows[dataPlanta.CurrentRow.Index].Cells["IdPlanta"].Value}").Tables[0];
                 dataZaranda.Enabled = true;
 
                 cbbZaranda.SelectedIndex = -1;
@@ -86,14 +86,15 @@ namespace Vistas.Formularios
             {
                 if(Negocios.Utilidades.Validar(this, errorProvider1) == false)
                 {
-                    if (cbbZaranda.SelectedIndex != -1 && cbbProducto.SelectedIndex != -1)
+                    if (cbbZaranda.SelectedIndex != -1 && cbbProducto.SelectedIndex != -1 && !string.IsNullOrEmpty(txtPlanta.Text.Trim()))
                     {
                         dataZaranda.Rows.Add(
                             Convert.ToInt32(txtCodigo.Text.Trim()),
                             (int)cbbZaranda.SelectedValue,
                             cbbZaranda.Text,
                             (int)cbbProducto.SelectedValue,
-                            cbbProducto.Text);
+                            cbbProducto.Text,
+                            Convert.ToSingle(txtPorcentaje.Text.Trim())/100);
                     }
                 }
             }
@@ -112,7 +113,7 @@ namespace Vistas.Formularios
                     foreach (var Fila in dataZaranda.Rows)
                     {
                         Debug.WriteLine("DEPURACION");
-                        ds = Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetallePlanta] {txtCodigo.Text.Trim()},{Fila.Cells["IdZaranda"].Value.ToString()},{Fila.Cells["IdProducto"].Value.ToString()}");
+                        ds = Negocios.Utilidades.Ejecutar($"EXEC [RegistrarDetallePlanta] {txtCodigo.Text.Trim()},{Fila.Cells["IdZaranda"].Value.ToString()},{Fila.Cells["IdProducto"].Value.ToString()},{Fila.Cells["PorcentajeProduccion"].Value.ToString()}");
                         //Debug.WriteLine($"EXEC [RegistrarPrecioDeProducto] {txtCodigo.Text.Trim()},{Fila.Cells["IdProducto"].Value.ToString()},'{Fila.Cells["Precio"].Value.ToString()}'");
                     }
 

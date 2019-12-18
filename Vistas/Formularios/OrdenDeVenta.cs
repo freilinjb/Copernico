@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Telerik.WinControls;
 using System.Globalization;
 using Microsoft.Reporting.WinForms;
+using Telerik.WinControls.Data;
 
 namespace Vistas.Formularios
 {
@@ -54,6 +55,14 @@ namespace Vistas.Formularios
             //this.productoTableAdapter.Fill(this.matrizDataSet.Producto);
 
             //this.orbraMantenimientoVentaTableAdapter.Fill(this.matrizDataSet.OrbraMantenimientoVenta);
+
+            this.cbbCliente.AutoFilter = true;
+            FilterDescriptor filter = new FilterDescriptor();
+            filter.PropertyName = this.cbbCliente.DisplayMember;
+            filter.Operator = FilterOperator.Contains;
+
+            this.cbbCliente.EditorControl.MasterTemplate.FilterDescriptors.Add(filter);
+
             this.formaDePagoTableAdapter.Fill(this.matrizDataSet.FormaDePago);
             this.tipoVentaTableAdapter.Fill(this.matrizDataSet.TipoVenta);
             this.vistaCentroTableAdapter.Fill(this.matrizDataSet.VistaCentro);

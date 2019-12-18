@@ -44,7 +44,7 @@ namespace Vistas.Formularios
                         txtFechaEmitida.Value.ToShortDateString(),
                         txtFechaEmitida.Value.ToShortDateString(),
                         (int)cbbMina.SelectedValue,
-                        (int)cbbMina.SelectedValue,
+                        Convert.ToSingle(txtCantidadExplotacion.Text),
                         (int)cbbEstado.SelectedValue);
 
                     ds = Negocios.Utilidades.Ejecutar(permiso.getGuardar());
@@ -66,7 +66,8 @@ namespace Vistas.Formularios
         {
             RadMessageBox.ThemeName = this.ThemeName;
 
-            cbbMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdMina,Mina FROM VistaMina WHERE Estado = 'Abierta'").Tables[0];
+            cbbMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdMina,Mina FROM VistaMina").Tables[0];
+            //cbbMina.DataSource = Negocios.Utilidades.Ejecutar("SELECT IdMina,Mina FROM VistaMina WHERE Estado = 'Abierta'").Tables[0];
             cbbMina.ValueMember = "IdMina";
             cbbMina.DisplayMember = "Mina";
 
@@ -79,8 +80,9 @@ namespace Vistas.Formularios
             cbbEstado.ValueMember = "IdEstadoPermiso";
             cbbEstado.DisplayMember = "Estado";
 
-            
+            dataPermisoMedioAmbiente.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaPermisoAmbiental").Tables[0];
 
+            Negocios.Utilidades.Limpiar(this, errorProvider1);
         }
 
         private void PermisoAmbiental_KeyUp(object sender, KeyEventArgs e)
@@ -92,6 +94,8 @@ namespace Vistas.Formularios
                     RadMessageBox.Show("Se ha guardado exitosamente", "INFORMACION DEL SISTEMA", MessageBoxButtons.OK, RadMessageIcon.Info, MessageBoxDefaultButton.Button1);
                     Negocios.Utilidades.Limpiar(this, errorProvider1);
                     txtCodigo.Focus();
+                    dataPermisoMedioAmbiente.DataSource = Negocios.Utilidades.Ejecutar("SELECT * FROM VistaPermisoAmbiental").Tables[0];
+
                 }
             }
         }

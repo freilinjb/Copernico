@@ -38,12 +38,13 @@
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn10 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn11 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn12 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn13 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn14 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition3 = new Telerik.WinControls.UI.TableViewDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Planta));
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
@@ -67,6 +68,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
+            this.txtPorcentaje = new Negocios.Componentes.TextPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
@@ -92,6 +94,7 @@
             this.radPageViewPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPorcentaje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,7 +222,7 @@
             this.pagePrincipal.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pagePrincipal.Location = new System.Drawing.Point(12, 42);
             this.pagePrincipal.Name = "pagePrincipal";
-            this.pagePrincipal.SelectedPage = this.radPageViewPage1;
+            this.pagePrincipal.SelectedPage = this.pageCentroInformacionGeneral;
             this.pagePrincipal.Size = new System.Drawing.Size(622, 259);
             this.pagePrincipal.TabIndex = 20;
             this.pagePrincipal.ThemeName = "VisualStudio2012Light";
@@ -242,6 +245,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInformacion.Controls.Add(this.dataZaranda);
             this.panelInformacion.Controls.Add(this.cbbZaranda);
+            this.panelInformacion.Controls.Add(this.txtPorcentaje);
             this.panelInformacion.Controls.Add(this.cbbProducto);
             this.panelInformacion.Controls.Add(this.radSeparator2);
             this.panelInformacion.Controls.Add(this.radSeparator1);
@@ -280,7 +284,7 @@
             gridViewTextBoxColumn4.FieldName = "IdPlanta";
             gridViewTextBoxColumn4.HeaderText = "IdPlanta";
             gridViewTextBoxColumn4.Name = "IdPlanta";
-            gridViewTextBoxColumn4.Width = 85;
+            gridViewTextBoxColumn4.Width = 79;
             gridViewTextBoxColumn5.DataType = typeof(int);
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.FieldName = "IdZaranda";
@@ -292,24 +296,32 @@
             gridViewTextBoxColumn6.FieldName = "Zaranda";
             gridViewTextBoxColumn6.HeaderText = "Zaranda";
             gridViewTextBoxColumn6.Name = "Zaranda";
-            gridViewTextBoxColumn6.Width = 232;
+            gridViewTextBoxColumn6.Width = 215;
             gridViewTextBoxColumn7.DataType = typeof(int);
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "IdProducto";
             gridViewTextBoxColumn7.HeaderText = "IdProducto";
             gridViewTextBoxColumn7.Name = "IdProducto";
-            gridViewTextBoxColumn7.Width = 122;
+            gridViewTextBoxColumn7.Width = 86;
             gridViewTextBoxColumn8.EnableExpressionEditor = false;
             gridViewTextBoxColumn8.FieldName = "Producto";
             gridViewTextBoxColumn8.HeaderText = "Producto";
             gridViewTextBoxColumn8.Name = "Producto";
-            gridViewTextBoxColumn8.Width = 161;
+            gridViewTextBoxColumn8.Width = 129;
+            gridViewTextBoxColumn9.DataType = typeof(float);
+            gridViewTextBoxColumn9.EnableExpressionEditor = false;
+            gridViewTextBoxColumn9.FieldName = "PorcentajeProduccion";
+            gridViewTextBoxColumn9.FormatString = "{0:P3}";
+            gridViewTextBoxColumn9.HeaderText = "Porcentaje";
+            gridViewTextBoxColumn9.Name = "PorcentajeProduccion";
+            gridViewTextBoxColumn9.Width = 92;
             this.dataZaranda.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn4,
             gridViewTextBoxColumn5,
             gridViewTextBoxColumn6,
             gridViewTextBoxColumn7,
-            gridViewTextBoxColumn8});
+            gridViewTextBoxColumn8,
+            gridViewTextBoxColumn9});
             this.dataZaranda.MasterTemplate.EnableAlternatingRowColor = true;
             this.dataZaranda.MasterTemplate.EnableGrouping = false;
             this.dataZaranda.MasterTemplate.EnableSorting = false;
@@ -349,7 +361,7 @@
             this.cbbProducto.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
             this.cbbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProducto.Limpiar = true;
-            this.cbbProducto.Location = new System.Drawing.Point(442, 52);
+            this.cbbProducto.Location = new System.Drawing.Point(336, 50);
             this.cbbProducto.Name = "cbbProducto";
             this.cbbProducto.NullText = "Producto";
             this.cbbProducto.Size = new System.Drawing.Size(141, 25);
@@ -387,7 +399,7 @@
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel1.Location = new System.Drawing.Point(316, 59);
+            this.radLabel1.Location = new System.Drawing.Point(210, 57);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(120, 18);
             this.radLabel1.TabIndex = 2;
@@ -451,41 +463,41 @@
             this.radGridView1.MasterTemplate.AllowDragToGroup = false;
             this.radGridView1.MasterTemplate.AllowRowResize = false;
             this.radGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
-            gridViewTextBoxColumn9.DataType = typeof(int);
-            gridViewTextBoxColumn9.EnableExpressionEditor = false;
-            gridViewTextBoxColumn9.FieldName = "IdPlanta";
-            gridViewTextBoxColumn9.HeaderText = "IdPlanta";
-            gridViewTextBoxColumn9.Name = "IdPlanta";
-            gridViewTextBoxColumn9.Width = 85;
             gridViewTextBoxColumn10.DataType = typeof(int);
             gridViewTextBoxColumn10.EnableExpressionEditor = false;
-            gridViewTextBoxColumn10.FieldName = "IdZaranda";
-            gridViewTextBoxColumn10.HeaderText = "IdZaranda";
-            gridViewTextBoxColumn10.IsVisible = false;
-            gridViewTextBoxColumn10.Name = "IdZaranda";
-            gridViewTextBoxColumn10.Width = 108;
+            gridViewTextBoxColumn10.FieldName = "IdPlanta";
+            gridViewTextBoxColumn10.HeaderText = "IdPlanta";
+            gridViewTextBoxColumn10.Name = "IdPlanta";
+            gridViewTextBoxColumn10.Width = 85;
+            gridViewTextBoxColumn11.DataType = typeof(int);
             gridViewTextBoxColumn11.EnableExpressionEditor = false;
-            gridViewTextBoxColumn11.FieldName = "Zaranda";
-            gridViewTextBoxColumn11.HeaderText = "Zaranda";
-            gridViewTextBoxColumn11.Name = "Zaranda";
-            gridViewTextBoxColumn11.Width = 232;
-            gridViewTextBoxColumn12.DataType = typeof(int);
+            gridViewTextBoxColumn11.FieldName = "IdZaranda";
+            gridViewTextBoxColumn11.HeaderText = "IdZaranda";
+            gridViewTextBoxColumn11.IsVisible = false;
+            gridViewTextBoxColumn11.Name = "IdZaranda";
+            gridViewTextBoxColumn11.Width = 108;
             gridViewTextBoxColumn12.EnableExpressionEditor = false;
-            gridViewTextBoxColumn12.FieldName = "IdProducto";
-            gridViewTextBoxColumn12.HeaderText = "IdProducto";
-            gridViewTextBoxColumn12.Name = "IdProducto";
-            gridViewTextBoxColumn12.Width = 122;
+            gridViewTextBoxColumn12.FieldName = "Zaranda";
+            gridViewTextBoxColumn12.HeaderText = "Zaranda";
+            gridViewTextBoxColumn12.Name = "Zaranda";
+            gridViewTextBoxColumn12.Width = 232;
+            gridViewTextBoxColumn13.DataType = typeof(int);
             gridViewTextBoxColumn13.EnableExpressionEditor = false;
-            gridViewTextBoxColumn13.FieldName = "Producto";
-            gridViewTextBoxColumn13.HeaderText = "Producto";
-            gridViewTextBoxColumn13.Name = "Producto";
-            gridViewTextBoxColumn13.Width = 161;
+            gridViewTextBoxColumn13.FieldName = "IdProducto";
+            gridViewTextBoxColumn13.HeaderText = "IdProducto";
+            gridViewTextBoxColumn13.Name = "IdProducto";
+            gridViewTextBoxColumn13.Width = 122;
+            gridViewTextBoxColumn14.EnableExpressionEditor = false;
+            gridViewTextBoxColumn14.FieldName = "Producto";
+            gridViewTextBoxColumn14.HeaderText = "Producto";
+            gridViewTextBoxColumn14.Name = "Producto";
+            gridViewTextBoxColumn14.Width = 161;
             this.radGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
-            gridViewTextBoxColumn9,
             gridViewTextBoxColumn10,
             gridViewTextBoxColumn11,
             gridViewTextBoxColumn12,
-            gridViewTextBoxColumn13});
+            gridViewTextBoxColumn13,
+            gridViewTextBoxColumn14});
             this.radGridView1.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView1.MasterTemplate.EnableGrouping = false;
             this.radGridView1.MasterTemplate.EnableSorting = false;
@@ -498,6 +510,21 @@
             this.radGridView1.Size = new System.Drawing.Size(596, 119);
             this.radGridView1.TabIndex = 46;
             this.radGridView1.ThemeName = "VisualStudio2012Light";
+            // 
+            // txtPorcentaje
+            // 
+            this.txtPorcentaje.Correo = false;
+            this.txtPorcentaje.estados = Negocios.Componentes.TextPersonal.Estados.Default;
+            this.txtPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorcentaje.Limpiar = false;
+            this.txtPorcentaje.Location = new System.Drawing.Point(483, 51);
+            this.txtPorcentaje.Name = "txtPorcentaje";
+            this.txtPorcentaje.NullText = "Porcentaje";
+            this.txtPorcentaje.Size = new System.Drawing.Size(99, 24);
+            this.txtPorcentaje.TabIndex = 23;
+            this.txtPorcentaje.ThemeName = "VisualStudio2012Light";
+            this.txtPorcentaje.Validar = true;
+            this.txtPorcentaje.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbbProducto_KeyUp);
             // 
             // Planta
             // 
@@ -546,6 +573,7 @@
             this.radPageViewPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPorcentaje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -575,5 +603,6 @@
         private Telerik.WinControls.UI.RadLabelElement toolRegistro;
         private Telerik.WinControls.UI.RadPageViewPage radPageViewPage1;
         private Telerik.WinControls.UI.RadGridView radGridView1;
+        private Negocios.Componentes.TextPersonal txtPorcentaje;
     }
 }

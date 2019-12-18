@@ -48,17 +48,17 @@
             this.txtFechaEmitida = new Telerik.WinControls.UI.RadDateTimePicker();
             this.radLabel13 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbTipoPermisoAmbiental = new Negocios.Componentes.cbbPersonal();
+            this.txtCantidadExplotacion = new Negocios.Componentes.TextPersonal();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel12 = new Telerik.WinControls.UI.RadLabel();
-            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbbTipoPermisoAmbiental = new Negocios.Componentes.cbbPersonal();
-            this.textPersonal1 = new Negocios.Componentes.TextPersonal();
-            this.cbbEstado = new Negocios.Componentes.cbbPersonal();
             this.cbbMina = new Negocios.Componentes.cbbPersonal();
+            this.radLabel11 = new Telerik.WinControls.UI.RadLabel();
             this.txtDireccion = new Negocios.Componentes.TextPersonal();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCodigo = new Negocios.Componentes.TextPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.radSeparator2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -71,17 +71,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFechaEmitida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPermisoAmbiental)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadExplotacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPermisoAmbiental)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -107,9 +107,9 @@
             // 
             this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.toolRegistro});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 516);
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 513);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(603, 23);
+            this.radStatusStrip1.Size = new System.Drawing.Size(603, 26);
             this.radStatusStrip1.TabIndex = 23;
             this.radStatusStrip1.ThemeName = "VisualStudio2012Light";
             // 
@@ -143,37 +143,39 @@
             this.dataPermisoMedioAmbiente.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill;
             gridViewTextBoxColumn1.DataType = typeof(int);
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
-            gridViewTextBoxColumn1.FieldName = "IdEmpleado";
-            gridViewTextBoxColumn1.HeaderText = "IdEmpleado";
-            gridViewTextBoxColumn1.Name = "IdEmpleado";
-            gridViewTextBoxColumn1.Width = 90;
+            gridViewTextBoxColumn1.FieldName = "Permiso";
+            gridViewTextBoxColumn1.HeaderText = "NumPermiso";
+            gridViewTextBoxColumn1.Name = "Permiso";
+            gridViewTextBoxColumn1.Width = 70;
             gridViewTextBoxColumn2.EnableExpressionEditor = false;
-            gridViewTextBoxColumn2.FieldName = "Empleado";
-            gridViewTextBoxColumn2.HeaderText = "Empleado";
-            gridViewTextBoxColumn2.Name = "Empleado";
-            gridViewTextBoxColumn2.Width = 153;
+            gridViewTextBoxColumn2.FieldName = "Mina";
+            gridViewTextBoxColumn2.HeaderText = "Mina";
+            gridViewTextBoxColumn2.Name = "Mina";
+            gridViewTextBoxColumn2.Width = 159;
             gridViewTextBoxColumn3.DataType = typeof(System.DateTime);
             gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "Fecha";
-            gridViewTextBoxColumn3.HeaderText = "Fecha";
-            gridViewTextBoxColumn3.Name = "Fecha";
-            gridViewTextBoxColumn3.Width = 77;
-            gridViewTextBoxColumn4.DataType = typeof(int);
+            gridViewTextBoxColumn3.FieldName = "FechaEmitida";
+            gridViewTextBoxColumn3.HeaderText = "FechaEmitida";
+            gridViewTextBoxColumn3.Name = "FechaEmitida";
+            gridViewTextBoxColumn3.Width = 80;
+            gridViewTextBoxColumn4.DataType = typeof(System.DateTime);
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
-            gridViewTextBoxColumn4.FieldName = "IdActivoFijo";
-            gridViewTextBoxColumn4.HeaderText = "IdActivoFijo";
-            gridViewTextBoxColumn4.Name = "IdActivoFijo";
-            gridViewTextBoxColumn4.Width = 74;
+            gridViewTextBoxColumn4.FieldName = "FechaVencimiento";
+            gridViewTextBoxColumn4.HeaderText = "FechaVencimiento";
+            gridViewTextBoxColumn4.Name = "FechaVencimiento";
+            gridViewTextBoxColumn4.Width = 77;
+            gridViewTextBoxColumn5.DataType = typeof(float);
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
-            gridViewTextBoxColumn5.FieldName = "ActivoFijo";
-            gridViewTextBoxColumn5.HeaderText = "ActivoFijo";
-            gridViewTextBoxColumn5.Name = "ActivoFijo";
-            gridViewTextBoxColumn5.Width = 138;
+            gridViewTextBoxColumn5.FieldName = "CantidadAutorizada";
+            gridViewTextBoxColumn5.HeaderText = "Cantidad Autorizada";
+            gridViewTextBoxColumn5.Name = "CantidadAutorizada";
+            gridViewTextBoxColumn5.Width = 144;
+            gridViewTextBoxColumn6.DataType = typeof(float);
             gridViewTextBoxColumn6.EnableExpressionEditor = false;
-            gridViewTextBoxColumn6.FieldName = "Estado";
-            gridViewTextBoxColumn6.HeaderText = "Estado";
-            gridViewTextBoxColumn6.Name = "Estado";
-            gridViewTextBoxColumn6.Width = 53;
+            gridViewTextBoxColumn6.FieldName = "CantidadExplotada";
+            gridViewTextBoxColumn6.HeaderText = "Cantidad Explotada";
+            gridViewTextBoxColumn6.Name = "CantidadExplotada";
+            gridViewTextBoxColumn6.Width = 55;
             this.dataPermisoMedioAmbiente.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
             gridViewTextBoxColumn2,
@@ -201,7 +203,7 @@
             this.panelInformacion.Controls.Add(this.radLabel13);
             this.panelInformacion.Controls.Add(this.radLabel3);
             this.panelInformacion.Controls.Add(this.cbbTipoPermisoAmbiental);
-            this.panelInformacion.Controls.Add(this.textPersonal1);
+            this.panelInformacion.Controls.Add(this.txtCantidadExplotacion);
             this.panelInformacion.Controls.Add(this.radLabel4);
             this.panelInformacion.Controls.Add(this.radLabel1);
             this.panelInformacion.Controls.Add(this.cbbEstado);
@@ -260,6 +262,35 @@
             this.radLabel3.TabIndex = 2;
             this.radLabel3.Text = "TPA";
             // 
+            // cbbTipoPermisoAmbiental
+            // 
+            this.cbbTipoPermisoAmbiental.BackColor = System.Drawing.Color.White;
+            this.cbbTipoPermisoAmbiental.Correo = false;
+            this.cbbTipoPermisoAmbiental.DisplayMember = "Descripcion";
+            this.cbbTipoPermisoAmbiental.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbTipoPermisoAmbiental.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTipoPermisoAmbiental.Limpiar = true;
+            this.cbbTipoPermisoAmbiental.Location = new System.Drawing.Point(114, 3);
+            this.cbbTipoPermisoAmbiental.Name = "cbbTipoPermisoAmbiental";
+            this.cbbTipoPermisoAmbiental.Size = new System.Drawing.Size(168, 25);
+            this.cbbTipoPermisoAmbiental.TabIndex = 4;
+            this.cbbTipoPermisoAmbiental.ThemeName = "VisualStudio2012Light";
+            this.cbbTipoPermisoAmbiental.Validar = true;
+            this.cbbTipoPermisoAmbiental.ValueMember = "IdTipoProducto";
+            // 
+            // txtCantidadExplotacion
+            // 
+            this.txtCantidadExplotacion.Correo = false;
+            this.txtCantidadExplotacion.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
+            this.txtCantidadExplotacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadExplotacion.Limpiar = true;
+            this.txtCantidadExplotacion.Location = new System.Drawing.Point(449, 62);
+            this.txtCantidadExplotacion.Name = "txtCantidadExplotacion";
+            this.txtCantidadExplotacion.Size = new System.Drawing.Size(127, 24);
+            this.txtCantidadExplotacion.TabIndex = 3;
+            this.txtCantidadExplotacion.ThemeName = "VisualStudio2012Light";
+            this.txtCantidadExplotacion.Validar = true;
+            // 
             // radLabel4
             // 
             this.radLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,6 +308,22 @@
             this.radLabel1.Size = new System.Drawing.Size(49, 18);
             this.radLabel1.TabIndex = 2;
             this.radLabel1.Text = "Estado";
+            // 
+            // cbbEstado
+            // 
+            this.cbbEstado.BackColor = System.Drawing.Color.White;
+            this.cbbEstado.Correo = false;
+            this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
+            this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            radListDataItem1.Text = "Disponible";
+            this.cbbEstado.Items.Add(radListDataItem1);
+            this.cbbEstado.Limpiar = true;
+            this.cbbEstado.Location = new System.Drawing.Point(449, 92);
+            this.cbbEstado.Name = "cbbEstado";
+            this.cbbEstado.Size = new System.Drawing.Size(127, 25);
+            this.cbbEstado.TabIndex = 7;
+            this.cbbEstado.ThemeName = "VisualStudio2012Light";
+            this.cbbEstado.Validar = true;
             // 
             // radLabel9
             // 
@@ -296,64 +343,6 @@
             this.radLabel12.TabIndex = 2;
             this.radLabel12.Text = "Dirección";
             // 
-            // radLabel11
-            // 
-            this.radLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radLabel11.Location = new System.Drawing.Point(7, 99);
-            this.radLabel11.Name = "radLabel11";
-            this.radLabel11.Size = new System.Drawing.Size(36, 18);
-            this.radLabel11.TabIndex = 2;
-            this.radLabel11.Text = "Mina";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // cbbTipoPermisoAmbiental
-            // 
-            this.cbbTipoPermisoAmbiental.BackColor = System.Drawing.Color.White;
-            this.cbbTipoPermisoAmbiental.Correo = false;
-            this.cbbTipoPermisoAmbiental.DisplayMember = "Descripcion";
-            this.cbbTipoPermisoAmbiental.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbTipoPermisoAmbiental.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipoPermisoAmbiental.Limpiar = true;
-            this.cbbTipoPermisoAmbiental.Location = new System.Drawing.Point(114, 3);
-            this.cbbTipoPermisoAmbiental.Name = "cbbTipoPermisoAmbiental";
-            this.cbbTipoPermisoAmbiental.Size = new System.Drawing.Size(168, 25);
-            this.cbbTipoPermisoAmbiental.TabIndex = 4;
-            this.cbbTipoPermisoAmbiental.ThemeName = "VisualStudio2012Light";
-            this.cbbTipoPermisoAmbiental.Validar = true;
-            this.cbbTipoPermisoAmbiental.ValueMember = "IdTipoProducto";
-            // 
-            // textPersonal1
-            // 
-            this.textPersonal1.Correo = false;
-            this.textPersonal1.estados = Negocios.Componentes.TextPersonal.Estados.Numeros;
-            this.textPersonal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textPersonal1.Limpiar = true;
-            this.textPersonal1.Location = new System.Drawing.Point(449, 62);
-            this.textPersonal1.Name = "textPersonal1";
-            this.textPersonal1.Size = new System.Drawing.Size(127, 24);
-            this.textPersonal1.TabIndex = 3;
-            this.textPersonal1.ThemeName = "VisualStudio2012Light";
-            this.textPersonal1.Validar = true;
-            // 
-            // cbbEstado
-            // 
-            this.cbbEstado.BackColor = System.Drawing.Color.White;
-            this.cbbEstado.Correo = false;
-            this.cbbEstado.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList;
-            this.cbbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            radListDataItem1.Text = "Disponible";
-            this.cbbEstado.Items.Add(radListDataItem1);
-            this.cbbEstado.Limpiar = true;
-            this.cbbEstado.Location = new System.Drawing.Point(449, 92);
-            this.cbbEstado.Name = "cbbEstado";
-            this.cbbEstado.Size = new System.Drawing.Size(127, 25);
-            this.cbbEstado.TabIndex = 7;
-            this.cbbEstado.ThemeName = "VisualStudio2012Light";
-            this.cbbEstado.Validar = true;
-            // 
             // cbbMina
             // 
             this.cbbMina.BackColor = System.Drawing.Color.White;
@@ -369,6 +358,15 @@
             this.cbbMina.ThemeName = "VisualStudio2012Light";
             this.cbbMina.Validar = true;
             this.cbbMina.ValueMember = "IdTipoProducto";
+            // 
+            // radLabel11
+            // 
+            this.radLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel11.Location = new System.Drawing.Point(7, 99);
+            this.radLabel11.Name = "radLabel11";
+            this.radLabel11.Size = new System.Drawing.Size(36, 18);
+            this.radLabel11.TabIndex = 2;
+            this.radLabel11.Text = "Mina";
             // 
             // txtDireccion
             // 
@@ -387,6 +385,10 @@
             this.txtDireccion.TabIndex = 3;
             this.txtDireccion.ThemeName = "VisualStudio2012Light";
             this.txtDireccion.Validar = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // txtCodigo
             // 
@@ -434,17 +436,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFechaEmitida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPermisoAmbiental)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadExplotacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTipoPermisoAmbiental)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textPersonal1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbEstado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbMina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -474,7 +476,7 @@
         private Negocios.Componentes.cbbPersonal cbbEstado;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private Negocios.Componentes.TextPersonal textPersonal1;
+        private Negocios.Componentes.TextPersonal txtCantidadExplotacion;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadSeparator radSeparator2;
     }
