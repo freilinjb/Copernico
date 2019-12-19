@@ -6,11 +6,14 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
+using Telerik.WinControls.UI;
 
 namespace Vistas.Formularios
 {
     public partial class ActivoFijo : FormBase
     {
+        private RadContextMenu contextMenu;
+
         private DataSet ds;
 
         private static ActivoFijo Instancia;
@@ -33,8 +36,33 @@ namespace Vistas.Formularios
 
         }
 
+        private void Proceso1(object sender, EventArgs e)
+        {
+            ActivoCubicacion activoCubicacion = new ActivoCubicacion(Convert.ToInt32(dataActivoFijo.Rows[dataActivoFijo.CurrentRow.Index].Cells["IdActivoFijo"].Value.ToString()));
+            activoCubicacion.ShowDialog();
+
+        }
+
+        private void Proceso2(object sender, EventArgs e)
+        {
+
+
+        }
+
         private void ActivoFijo_Load(object sender, EventArgs e)
         {
+
+
+            contextMenu = new RadContextMenu();
+            RadMenuItem copyCellItem = new RadMenuItem("Cubicar ActivoFijo");
+            copyCellItem.ForeColor = Color.Red;
+            copyCellItem.Click += Proceso1;
+            RadMenuItem copyRowItem = new RadMenuItem("Asignar Cargos");
+            copyRowItem.Click += Proceso2;
+            contextMenu.Items.Add(copyCellItem);
+            contextMenu.Items.Add(copyRowItem);
+
+
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.VistaMotor' Puede moverla o quitarla según sea necesario.
             this.vistaMotorTableAdapter.Fill(this.matrizDataSet.VistaMotor);
             // TODO: esta línea de código carga datos en la tabla 'matrizDataSet.Color' Puede moverla o quitarla según sea necesario.
@@ -55,6 +83,9 @@ namespace Vistas.Formularios
 
             for (int i = DateTime.Today.Year; i >= 1985; i--)
                 cbbAnio.Items.Add(i.ToString());
+
+
+
         }
 
         private void IdMayor()
@@ -140,6 +171,11 @@ namespace Vistas.Formularios
                     IdMayor();
                 }
             }
+        }
+
+        private void dataActivoFijo_ContextMenuOpening(object sender, ContextMenuOpeningEventArgs e)
+        {
+            e.ContextMenu = contextMenu.DropDown;
         }
     }
 }

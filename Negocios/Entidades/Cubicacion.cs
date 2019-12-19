@@ -20,6 +20,13 @@ namespace Negocios.Entidades
         public float BotellaAlto;
         public float CapacidadFacturar;
 
+        public Cubicacion(int IdMaquinaria)
+        {
+            this.IdMaquinaria = IdMaquinaria;
+
+
+        }
+
         public Cubicacion(int idMaquinaria, float cajonLargo, float cajonAncho, float cajonAlto, float tablonLargo, float tablonAncho, float tablonAlto, float botellaLargo, float botellaAncho, float botellaAlto, float capacidadFacturar)
         {
             IdMaquinaria = idMaquinaria;

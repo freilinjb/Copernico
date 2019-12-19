@@ -59,5 +59,15 @@ namespace Vistas.Formularios
                 dataInventario.DataSource = Negocios.Utilidades.Ejecutar($"SELECT IdInventario,Centro,Inventario,Producto AS Descripcion,Unidad,Stock,StockPromedio,StockMinimo,Estado FROM VistaInventario WHERE IdCentro = {cbbEstado.SelectedValue}").Tables[0];
             }
         }
+
+        private void dataInventario_CellClick(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataInventario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

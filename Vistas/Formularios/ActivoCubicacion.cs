@@ -12,6 +12,9 @@ namespace Vistas.Formularios
     public partial class ActivoCubicacion : FormBase
     {
         private DataSet ds;
+
+        private bool Editando = false;
+        private int IdActivoFijo;
         private static ActivoCubicacion Instancia;
 
         public static ActivoCubicacion ObtenerInstancia()
@@ -24,9 +27,17 @@ namespace Vistas.Formularios
             return Instancia;
         }
 
-        private ActivoCubicacion()
+        public ActivoCubicacion()
         {
             InitializeComponent();
+        }
+
+        public ActivoCubicacion(int IdActivo)
+        {
+            InitializeComponent();
+
+            Editando = true;
+            this.IdActivoFijo = IdActivo;
         }
 
         private void Activo_Load(object sender, EventArgs e)
@@ -58,6 +69,41 @@ namespace Vistas.Formularios
                 cbbAnio.Items.Add(i.ToString());
 
             Negocios.Utilidades.Limpiar(this, errorProvider1);
+
+            if(Editando)
+            {
+
+                ds = Negocios.Utilidades.Ejecutar($"EXEC VisualizarDatosCubicacion {IdActivoFijo}");
+                txtActivoFijo.Text = string.Format("{0:00000}", Convert.ToInt32(ds.Tables[0].Rows[0]["IdActivoFijo"].ToString()));
+                cbbGrupo.Text = ds.Tables[0].Rows[0]["Grupo"].ToString();
+                cbbSubGrupo.Text = ds.Tables[0].Rows[0]["SubGrupo"].ToString();
+                cbbMarca.Text = ds.Tables[0].Rows[0]["Marca"].ToString();
+                cbbModelo.Text = ds.Tables[0].Rows[0]["Modelo"].ToString();
+                cbbColor.Text = ds.Tables[0].Rows[0]["Color"].ToString();
+                cbbAnio.Text = ds.Tables[0].Rows[0]["Año"].ToString();
+                cbbPropietario.Text = ds.Tables[0].Rows[0]["Propietario"].ToString();
+
+
+                txtCajonLargo.Text = ds.Tables[1].Rows[0]["Largo"].ToString();
+                txtCajonAncho.Text = ds.Tables[1].Rows[0]["Ancho"].ToString();
+                txtCajonAlto.Text = ds.Tables[1].Rows[0]["Alto"].ToString();
+                txtCajon.Text = (Convert.ToSingle(txtCajonLargo.Text.Trim()) * Convert.ToSingle(txtCajonAncho.Text.Trim()) * Convert.ToSingle(txtCajonAlto.Text.Trim())).ToString();
+
+                txtTablonLargo.Text = ds.Tables[2].Rows[0]["Largo"].ToString();
+                txtTablonAncho.Text = ds.Tables[2].Rows[0]["Ancho"].ToString();
+                txtTablonAlto.Text = ds.Tables[2].Rows[0]["Alto"].ToString();
+                txtTablon.Text = (Convert.ToSingle(txtTablonLargo.Text.Trim()) * Convert.ToSingle(txtTablonAncho.Text.Trim()) * Convert.ToSingle(txtTablonAlto.Text.Trim())).ToString();
+
+
+                txtBotellaLargo.Text = ds.Tables[3].Rows[0]["Largo"].ToString();
+                txtBotellaAncho.Text = ds.Tables[3].Rows[0]["Ancho"].ToString();
+                txtBotellaAlto.Text = ds.Tables[3].Rows[0]["Alto"].ToString();
+                txtBotella.Text = (Convert.ToSingle(txtBotellaLargo.Text.Trim()) * Convert.ToSingle(txtBotellaAncho.Text.Trim()) * Convert.ToSingle(txtBotellaAlto.Text.Trim())).ToString();
+
+
+
+
+            }
         }
 
         public override bool Guardar()
