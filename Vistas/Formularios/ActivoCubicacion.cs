@@ -117,7 +117,17 @@ namespace Vistas.Formularios
                 try
                 {
 
-                    int IdMaquinaria = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdMaquinaria)+1 AS Mayor FROM Maquinaria").Tables[0].Rows[0]["Mayor"].ToString());
+                    int IdMaquinaria;
+                    if(Editando)
+                    {
+                        IdMaquinaria = Convert.ToInt32(ds.Tables[0].Rows[0]["IdMaquinaria"].ToString());
+                    }
+                    else
+                    {
+                        IdMaquinaria = Convert.ToInt32(Negocios.Utilidades.Ejecutar("SELECT MAX(IdMaquinaria)+1 AS Mayor FROM Maquinaria").Tables[0].Rows[0]["Mayor"].ToString());
+
+                    }
+
 
                     Negocios.Entidades.ActivoFijoMaquinaria vehiculo = new Negocios.Entidades.ActivoFijoMaquinaria(
                         Convert.ToInt32(txtActivoFijo.Text),
